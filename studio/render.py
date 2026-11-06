@@ -232,6 +232,23 @@ function storyMcq(s) {
     L(756, `<div class="opts">${opts}</div>`) +
     L(1268, `<div class="pill hint">${s.hint}</div>`) + ctaBlock(s.cta);
 }
+function fitAll(maxW = 1000) {
+  const fitted = [];
+  document.querySelectorAll('.line > *, .hook > *').forEach(el => {
+    el.style.zoom = '';
+    const prevW = el.style.width;
+    el.style.width = 'max-content';
+    const w = el.offsetWidth;
+    if (w > maxW) {
+      el.style.zoom = (maxW / w).toFixed(3);
+      el.style.marginLeft = el.style.marginRight = 'auto';
+      fitted.push(el.textContent.trim().slice(0, 40) + ' @' + w + 'px');
+    } else {
+      el.style.width = prevW;
+    }
+  });
+  return fitted;
+}
 window.show = async (key) => {
   const st = document.getElementById('stage');
   st.innerHTML = key === 'hook' ? hookScene() : key === 'end' ? endScene()
@@ -239,8 +256,9 @@ window.show = async (key) => {
     : wordScene(+key);
   document.body.offsetHeight;
   await Promise.all([...document.images].map(im => im.decode().catch(() => {})));
+  const fitted = fitAll();
   window.seek(0);
-  return document.getAnimations().length;
+  return fitted;
 };
 window.seek = (ms) => { for (const a of document.getAnimations()) { a.pause(); a.currentTime = ms; } };
 window.ready = async () => {
@@ -273,7 +291,9 @@ def open_page(p, html):
 
 
 def encode_scene(pg, key, dur, path):
-    pg.evaluate(f"show({json.dumps(key)})")
+    fitted = pg.evaluate(f"show({json.dumps(key)})")
+    if fitted:
+        print(f"  shrunk to fit in scene {key}: {fitted}")
     tmp = path[:-4] + ".part.mp4"
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(FPS), "-c:v", "mjpeg", "-i", "-",
            "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-bf", "0", "-g", "60", "-pix_fmt", "yuv420p",
@@ -315,7 +335,7 @@ def build_audio(events, total, out):
                     "-map", "[out]", "-ac", "2", "-ar", "44100", out], check=True)
 
 
-def main(day_json, preview=False, audio_only=False):
+def main(day_json, preview=False, audio_only=False, stories_only=False, fit_check=False):
     d = json.load(open(day_json))
     tag = f"day{d['day']:02d}"
     bdir = os.path.join(HERE, "build", tag)
@@ -327,6 +347,20 @@ def main(day_json, preview=False, audio_only=False):
         return mux(d, bdir, odir, tag)
     with sync_playwright() as p:
         b, pg = open_page(p, html)
+        if stories_only:
+            for k in range(len(d["stories"])):
+                fitted = pg.evaluate(f"show('story{k}')"); pg.evaluate("seek(10000)")
+                if fitted:
+                    print(f"  shrunk to fit in story {k + 1}: {fitted}")
+                pg.screenshot(path=os.path.join(odir, f"{tag}_story{k + 1}.jpg"), type="jpeg", quality=95)
+            b.close(); print("stories done"); return
+        if fit_check:
+            keys = ["hook"] + list(range(len(d["words"]))) + ["end"] + [f"story{k}" for k in range(len(d["stories"]))]
+            for key in keys:
+                fitted = pg.evaluate(f"show({json.dumps(key)})")
+                if fitted:
+                    print(f"  {tag} {key}: {fitted}")
+            b.close(); return
         if preview:
             for key, t in [("hook", 1.3), (0, 4.9), (3, 4.9)] + [(f"story{k}", 10) for k in range(len(d["stories"]))]:
                 pg.evaluate(f"show({json.dumps(key)})"); pg.evaluate(f"seek({t * 1000})")
@@ -334,7 +368,9 @@ def main(day_json, preview=False, audio_only=False):
             print("previews in", bdir)
             b.close(); return
         for k in range(len(d["stories"])):
-            pg.evaluate(f"show('story{k}')"); pg.evaluate("seek(10000)")
+            fitted = pg.evaluate(f"show('story{k}')"); pg.evaluate("seek(10000)")
+            if fitted:
+                print(f"  shrunk to fit in story {k + 1}: {fitted}")
             pg.screenshot(path=os.path.join(odir, f"{tag}_story{k + 1}.jpg"), type="jpeg", quality=95)
         scenes = [("hook", HOOK)] + [(i, WORD) for i in range(len(d["words"]))] + [("end", END)]
         files = []
@@ -365,4 +401,5 @@ def mux(d, bdir, odir, tag, files=None):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], preview="--preview" in sys.argv, audio_only="--audio-only" in sys.argv)
+    main(sys.argv[1], preview="--preview" in sys.argv, audio_only="--audio-only" in sys.argv,
+         stories_only="--stories" in sys.argv, fit_check="--fit-check" in sys.argv)

@@ -67,13 +67,13 @@ write_day(7,
         dict(RECALL, word="debt", ipa="/det/", answer="بدهی"),
         dict(QUIZ, emoji="books", word="knowledge", answer="k"),
         dict(MCQ, word="climb", options=["بالا رفتن", "دویدن", "شنا کردن"], answer=0),
-        dict(ASK, t1="یه فعل که", t2a=f"گذشته{ZW}اش برات", t2b="سخته؟",
+        dict(ASK, t1="یه فعل که", t2a=f"گذشته{ZW}اش", t2b="سخته؟",
              body="ریپلای کن تا تلفظ درستشو\nتو ریلزهای بعدی یادت بدم", example="watched"),
     ])
 
 write_day(8,
-    hook=dict(l1="این ۴ تا کلمه رو", l2a="بدون", l2b="l", l3="بگو!", l3emoji="zipper-mouth_face",
-              sub=f"حرف l این{ZW}جا بی{ZW}صداست", subemoji="shushing_face"),
+    hook=dict(l1="این ۴ تا کلمه رو", l2a="بدون", l2b="L", l3="بگو!", l3emoji="zipper-mouth_face",
+              sub=f"حرف L این{ZW}جا بی{ZW}صداست", subemoji="shushing_face"),
     words=[
         dict(SIL("l"), en="calm", mark=[2], emoji="relieved_face", uni="😌",
              ipa="/kɑːm/", wrong="کالم", right="کام", fa="آرام"),

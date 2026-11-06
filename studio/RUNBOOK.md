@@ -49,8 +49,11 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
 5. **Voice**: `python3 tts.py content/dayNN.json` for each day. Compare the printed phonemes with the IPA.
    If a word is wrong, add `ph="<kokoro phonemes>"` to that word (see vegetable in day02) and rerun.
 
-6. **Preview**: `python3 render.py content/dayNN.json --preview` for the 2 days with the longest words/hooks.
-   Look at `build/dayNN/preview_*.jpg`. Fix any text that overflows or overlaps, then rerun the week file.
+6. **Preview**: `python3 render.py content/dayNN.json --fit-check` for every day. It lists any line wider than the
+   safe area (the renderer shrinks those automatically, but a listed line is better shortened in the week file).
+   Then `python3 render.py content/dayNN.json --preview` for the 2 days with the longest words/hooks and look at
+   `build/dayNN/preview_*.jpg`. Fix anything that overlaps, then rerun the week file.
+   (`--stories` re-renders only a day's 4 story images.)
 
 7. **Render**: `python3 render.py content/dayNN.json` for all 7 days (≈75 s each; run in the background).
    Check each `out/dayNN_reel.mp4` is 1080×1920, ~25.6 s, with audio, and look at one frame per reel.
