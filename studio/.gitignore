@@ -1,0 +1,8 @@
+build/
+out/
+voice/
+node/
+assets/emoji/
+assets/fonts/
+__pycache__/
+*.part.mp4

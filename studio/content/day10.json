@@ -1,0 +1,154 @@
+{
+ "day": 10,
+ "date": "2026-11-12",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "تقریباً",
+  "l2b": "همه",
+  "l3": "اشتباه می‌گن",
+  "l3emoji": "grimacing_face",
+  "sub": "حرف صدادارشون عجیبه!",
+  "subemoji": "eyes"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ای»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "women",
+   "mark": [
+    1
+   ],
+   "emoji": "woman",
+   "uni": "👩",
+   "ipa": "/ˈwɪmɪn/",
+   "wrong": "وومِن",
+   "right": "ویمِن",
+   "fa": "زن‌ها",
+   "tts": "women"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ای»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "busy",
+   "mark": [
+    1
+   ],
+   "emoji": "laptop",
+   "uni": "💻",
+   "ipa": "/ˈbɪzi/",
+   "wrong": "بیوزی",
+   "right": "بیزی",
+   "fa": "سرشلوغ",
+   "tts": "busy"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "bury",
+   "mark": [
+    1
+   ],
+   "emoji": "gem_stone",
+   "uni": "💎",
+   "ipa": "/ˈberi/",
+   "wrong": "بیوری",
+   "right": "بِری",
+   "fa": "دفن کردن",
+   "tts": "bury"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "minute",
+   "mark": [
+    3
+   ],
+   "emoji": "timer_clock",
+   "uni": "⏲️",
+   "ipa": "/ˈmɪnɪt/",
+   "wrong": "مینیوت",
+   "right": "مینِت",
+   "fa": "دقیقه",
+   "tts": "minute"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "honest",
+   "ipa": "/ˈɑːnɪst/",
+   "answer": "صادق"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "watch",
+   "word": "wrist",
+   "answer": "w"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "exhausted",
+   "options": [
+    "خیلی خوشحال",
+    "خیلی گرسنه",
+    "خیلی خسته"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "کدوم کلمه رو",
+   "t2a": "فردا تو ریلز",
+   "t2b": "بیارم؟",
+   "body": "یه کلمه که تلفظش برات سؤاله\nریپلای کن؛ شاید تو ریلز بعدی باشه",
+   "example": "squirrel"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "این ۴ تا کلمه رو تقریباً همه اشتباه می‌گن 😬\nحرف صدادارشون اون‌جوری که فکر می‌کنی خونده نمیشه 👀\n\n👩 women = ویمِن (زن‌ها)\n💻 busy = بیزی (سرشلوغ)\n💎 bury = بِری (دفن کردن)\n⏲️ minute = مینِت (دقیقه)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

@@ -1,0 +1,146 @@
+{
+ "day": 6,
+ "date": "2026-11-08",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "تو این ۴ تا کلمه",
+  "l2a": "حرف",
+  "l2b": "b",
+  "l3": "رو نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "یه قانون ساده یاد بگیر",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "b",
+   "en": "climb",
+   "mark": [
+    4
+   ],
+   "emoji": "person_climbing",
+   "uni": "🧗",
+   "ipa": "/klaɪm/",
+   "wrong": "کلایمب",
+   "right": "کلایم",
+   "fa": "بالا رفتن",
+   "tts": "climb"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "b",
+   "en": "thumb",
+   "mark": [
+    4
+   ],
+   "emoji": "thumbs_up",
+   "uni": "👍",
+   "ipa": "/θʌm/",
+   "wrong": "ثامب",
+   "right": "ثام",
+   "fa": "انگشت شست",
+   "tts": "thumb"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "b",
+   "en": "lamb",
+   "mark": [
+    3
+   ],
+   "emoji": "ewe",
+   "uni": "🐑",
+   "ipa": "/læm/",
+   "wrong": "لَمب",
+   "right": "لَم",
+   "fa": "بره",
+   "tts": "lamb"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "b",
+   "en": "debt",
+   "mark": [
+    2
+   ],
+   "emoji": "money_with_wings",
+   "uni": "💸",
+   "ipa": "/det/",
+   "wrong": "دِبت",
+   "right": "دِت",
+   "fa": "بدهی",
+   "tts": "debt"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "psychology",
+   "ipa": "/saɪˈkɑːlədʒi/",
+   "answer": "روان‌شناسی"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "smiling_face_with_sunglasses",
+   "word": "handsome",
+   "answer": "d"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "geography",
+   "options": [
+    "تاریخ",
+    "ریاضی",
+    "جغرافیا"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "کدوم کلمه رو",
+   "t2a": "فردا تو ریلز",
+   "t2b": "بیارم؟",
+   "body": "یه کلمه که تلفظش برات سؤاله\nریپلای کن؛ شاید تو ریلز بعدی باشه",
+   "example": "though"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "تو این ۴ تا کلمه حرف b رو نخون ❌\nقانون: b بعد از m یا قبل از t معمولاً بی‌صداست 🤫\n\n🧗 climb = کلایم (بالا رفتن)\n👍 thumb = ثام (انگشت شست)\n🐑 lamb = لَم (بره)\n💸 debt = دِت (بدهی)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

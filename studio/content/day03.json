@@ -1,0 +1,146 @@
+{
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "day": 3,
+ "hook": {
+  "l1": "اینا هم",
+  "l2a": "حرف",
+  "l2b": "بی‌صدا",
+  "l3": "دارن!",
+  "l3emoji": "exploding_head",
+  "sub": "جواب تست receipt هم توشه",
+  "subemoji": "receipt"
+ },
+ "words": [
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "en": "listen",
+   "mark": [
+    3
+   ],
+   "tip_en": "t",
+   "emoji": "ear",
+   "uni": "👂",
+   "ipa": "/ˈlɪsən/",
+   "wrong": "لیستِن",
+   "right": "لیسِن",
+   "fa": "گوش دادن",
+   "tts": "listen"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "en": "castle",
+   "mark": [
+    3
+   ],
+   "tip_en": "t",
+   "emoji": "castle",
+   "uni": "🏰",
+   "ipa": "/ˈkæsəl/",
+   "wrong": "کَستِل",
+   "right": "کَسِل",
+   "fa": "قلعه",
+   "tts": "castle"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "en": "autumn",
+   "mark": [
+    5
+   ],
+   "tip_en": "n",
+   "emoji": "fallen_leaf",
+   "uni": "🍂",
+   "ipa": "/ˈɔːtəm/",
+   "wrong": "آتومن",
+   "right": "آتِم",
+   "fa": "پاییز",
+   "tts": "autumn"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "en": "receipt",
+   "mark": [
+    5
+   ],
+   "tip_en": "p",
+   "emoji": "receipt",
+   "uni": "🧾",
+   "ipa": "/rɪˈsiːt/",
+   "wrong": "ریسیپت",
+   "right": "ریسیت",
+   "fa": "رسید خرید",
+   "tts": "receipt"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "comfortable",
+   "ipa": "/ˈkʌmftəbl/",
+   "answer": "راحت"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "christmas_tree",
+   "word": "Christmas",
+   "answer": "t"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "vegetable",
+   "options": [
+    "سبزیجات",
+    "میوه",
+    "گوشت"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "کدوم کلمه‌ی انگلیسی",
+   "t2a": "همیشه",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن تا تلفظ درستشو\nتو ریلزهای بعدی یادت بدم",
+   "example": "colonel"
+  }
+ ],
+ "caption": "اینا هم حرف بی‌صدا دارن 🤯\nجواب تست receipt هم اینجاست 🧾\n\n👂 listen = لیسِن (گوش دادن)\n🏰 castle = کَسِل (قلعه)\n🍂 autumn = آتِم (پاییز)\n🧾 receipt = ریسیت (رسید خرید)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان",
+ "date": "2026-11-05",
+ "reel_slot": "21:00"
+}

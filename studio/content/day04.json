@@ -1,0 +1,158 @@
+{
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "day": 4,
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "ت و س",
+  "l3": "نگو!",
+  "l3emoji": "cross_mark",
+  "sub": "زبونتو بذار بین دندونات",
+  "subemoji": "tongue"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "three",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "keycap_3",
+   "uni": "3️⃣",
+   "ipa": "/θriː/",
+   "wrong": "تری",
+   "right": "ثْری",
+   "fa": "سه",
+   "tts": "three"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "think",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "thought_balloon",
+   "uni": "💭",
+   "ipa": "/θɪŋk/",
+   "wrong": "تینک",
+   "right": "ثینک",
+   "fa": "فکر کردن",
+   "tts": "think"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "month",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "calendar",
+   "uni": "📅",
+   "ipa": "/mʌnθ/",
+   "wrong": "مانت",
+   "right": "مانث",
+   "fa": "یک ماه",
+   "tts": "month"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: نرم، شبیه «ذ»",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "clothes",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "t_shirt",
+   "uni": "👕",
+   "ipa": "/kloʊðz/",
+   "wrong": "کلوتِس",
+   "right": "کلوذز",
+   "fa": "لباس‌ها",
+   "tts": "clothes"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "castle",
+   "ipa": "/ˈkæsəl/",
+   "answer": "قلعه"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "face_with_raised_eyebrow",
+   "word": "doubt",
+   "answer": "b"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "autumn",
+   "options": [
+    "تابستان",
+    "زمستان",
+    "پاییز"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که همیشه",
+   "t2a": "تلفظش برات",
+   "t2b": "سخته؟",
+   "body": "برام ریپلای کن تا تو ریلزهای بعدی\nتلفظ درستشو یادت بدم",
+   "example": "rural"
+  }
+ ],
+ "caption": "صدای th رو با «ت» و «س» نگو ❌\nزبونتو بذار بین دندونات 👅\n\n3️⃣ three = ثْری (سه)\n💭 think = ثینک (فکر کردن)\n📅 month = مانث (یک ماه)\n👕 clothes = کلوذز (لباس‌ها)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان",
+ "date": "2026-11-06",
+ "reel_slot": "21:00"
+}

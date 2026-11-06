@@ -1,0 +1,152 @@
+{
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "day": 2,
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با یه بخش",
+  "l2b": "اضافه",
+  "l3": "می‌گی؟",
+  "l3emoji": "face_with_hand_over_mouth",
+  "sub": "بخش وسطشون خونده نمیشه",
+  "subemoji": "shushing_face"
+ },
+ "words": [
+  {
+   "tip_emoji": "light_bulb",
+   "en": "comfortable",
+   "mark": [
+    4,
+    5
+   ],
+   "tip": "سه بخش: {EN}",
+   "tip_en": "comf·ta·ble",
+   "emoji": "couch_and_lamp",
+   "uni": "🛋️",
+   "ipa": "/ˈkʌmftəbl/",
+   "wrong": "کامفورتِیبِل",
+   "right": "کامفتِبِل",
+   "fa": "راحت",
+   "tts": "comfortable"
+  },
+  {
+   "tip_emoji": "light_bulb",
+   "en": "vegetable",
+   "mark": [
+    3
+   ],
+   "tip": "سه بخش: {EN}",
+   "tip_en": "veg·ta·ble",
+   "emoji": "broccoli",
+   "uni": "🥦",
+   "ipa": "/ˈvedʒtəbl/",
+   "wrong": "وِجِتِیبِل",
+   "right": "وِجتِبِل",
+   "fa": "سبزیجات",
+   "tts": "vegetable",
+   "ph": "vˈɛdʒtəbəl"
+  },
+  {
+   "tip_emoji": "light_bulb",
+   "en": "chocolate",
+   "mark": [
+    4
+   ],
+   "tip": "دو بخش: {EN}",
+   "tip_en": "choc·late",
+   "emoji": "chocolate_bar",
+   "uni": "🍫",
+   "ipa": "/ˈtʃɑːklət/",
+   "wrong": "چاکولِیت",
+   "right": "چاکلِت",
+   "fa": "شکلات",
+   "tts": "chocolate"
+  },
+  {
+   "tip_emoji": "light_bulb",
+   "en": "interesting",
+   "mark": [
+    3
+   ],
+   "tip": "سه بخش: {EN}",
+   "tip_en": "in·tres·ting",
+   "emoji": "face_with_monocle",
+   "uni": "🧐",
+   "ipa": "/ˈɪntrəstɪŋ/",
+   "wrong": "اینتِرِستینگ",
+   "right": "اینترِستینگ",
+   "fa": "جالب",
+   "tts": "interesting"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "island",
+   "ipa": "/ˈaɪlənd/",
+   "answer": "جزیره"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "این کلمه\nچند بخش داره؟",
+   "hint": "راهنما: کمتر از چیزی که فکر می‌کنی!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "briefcase",
+   "word": "business",
+   "answer": "۲ بخش: biz·ness"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "knife",
+   "options": [
+    "چنگال",
+    "چاقو",
+    "بشقاب"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "کدوم کلمه رو",
+   "t2a": "فردا تو ریلز",
+   "t2b": "بیارم؟",
+   "body": "یه کلمه که تلفظش برات سؤاله\nریپلای کن؛ شاید تو ریلز بعدی باشه",
+   "example": "February"
+  }
+ ],
+ "caption": "۴ کلمه که خیلی‌ها با یه بخش اضافه می‌گن 🤭\nبخش وسطشون اصلاً خونده نمیشه 🤫\n\n🛋️ comfortable = کامفتِبِل (راحت)\n🥦 vegetable = وِجتِبِل (سبزیجات)\n🍫 chocolate = چاکلِت (شکلات)\n🧐 interesting = اینترِستینگ (جالب)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان",
+ "date": "2026-11-04",
+ "reel_slot": "21:00"
+}

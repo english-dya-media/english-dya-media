@@ -1,0 +1,161 @@
+{
+ "day": 5,
+ "date": "2026-11-07",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "به",
+  "l2b": "فرانسوی",
+  "l3": "نگو!",
+  "l3emoji": "face_with_raised_eyebrow",
+  "sub": "انگلیسی‌ها یه جور دیگه می‌گن",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "تأکید روی {EN}",
+   "tip_en": "ol",
+   "tip_emoji": "light_bulb",
+   "en": "biology",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "dna",
+   "uni": "🧬",
+   "ipa": "/baɪˈɑːlədʒi/",
+   "wrong": "بیولوژی",
+   "right": "بایالِجی",
+   "fa": "زیست‌شناسی",
+   "tts": "biology"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "تأکید روی {EN}",
+   "tip_en": "nol",
+   "tip_emoji": "light_bulb",
+   "en": "technology",
+   "mark": [
+    4,
+    5,
+    6
+   ],
+   "emoji": "robot",
+   "uni": "🤖",
+   "ipa": "/tekˈnɑːlədʒi/",
+   "wrong": "تکنولوژی",
+   "right": "تِکنالِجی",
+   "fa": "فناوری",
+   "tts": "technology"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "تأکید روی {EN}",
+   "tip_en": "chol",
+   "tip_emoji": "light_bulb",
+   "en": "psychology",
+   "mark": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "emoji": "brain",
+   "uni": "🧠",
+   "ipa": "/saɪˈkɑːlədʒi/",
+   "wrong": "پسیکولوژی",
+   "right": "سایکالِجی",
+   "fa": "روان‌شناسی",
+   "tts": "psychology"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "تأکید روی {EN}",
+   "tip_en": "og",
+   "tip_emoji": "light_bulb",
+   "en": "geography",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "globe_showing_europe-africa",
+   "uni": "🌍",
+   "ipa": "/dʒiˈɑːɡrəfi/",
+   "wrong": "ژئوگرافی",
+   "right": "جی‌آگرِفی",
+   "fa": "جغرافیا",
+   "tts": "geography"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "think",
+   "ipa": "/θɪŋk/",
+   "answer": "فکر کردن"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "flexed_biceps",
+   "word": "muscle",
+   "answer": "c"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "clothes",
+   "options": [
+    "غذا",
+    "لباس‌ها",
+    "کفش"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه‌ی دیگه که",
+   "t2a": "فرانسوی",
+   "t2b": "می‌گیم؟",
+   "body": "ریپلای کن تا تلفظ انگلیسیشو\nتو ریلزهای بعدی بگم",
+   "example": "garage"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "این ۴ تا کلمه رو به فرانسوی نگو 🙅\nانگلیسی‌ها تأکید رو روی بخش دوم می‌ذارن 🔊\n\n🧬 biology = بایالِجی (زیست‌شناسی)\n🤖 technology = تِکنالِجی (فناوری)\n🧠 psychology = سایکالِجی (روان‌شناسی)\n🌍 geography = جی‌آگرِفی (جغرافیا)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

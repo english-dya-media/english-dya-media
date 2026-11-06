@@ -1,0 +1,108 @@
+{
+ "day": 1,
+ "handle": "@english_dya",
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "احتمالاً",
+  "l2b": "اشتباه",
+  "l3": "تلفظ می‌کنی",
+  "l3emoji": "grimacing_face",
+  "sub": "همه‌شون یه حرف بی‌صدا دارن",
+  "subemoji": "shushing_face"
+ },
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "words": [
+  {
+   "en": "island",
+   "silent": [
+    1
+   ],
+   "letter": "s",
+   "emoji": "desert_island",
+   "ipa": "/ˈaɪlənd/",
+   "wrong": "ایزلند",
+   "right": "آیلَند",
+   "fa": "جزیره",
+   "tts": "island"
+  },
+  {
+   "en": "salmon",
+   "silent": [
+    2
+   ],
+   "letter": "l",
+   "emoji": "fish",
+   "ipa": "/ˈsæmən/",
+   "wrong": "سالمون",
+   "right": "سَمِن",
+   "fa": "ماهی آزاد",
+   "tts": "salmon"
+  },
+  {
+   "en": "knife",
+   "silent": [
+    0
+   ],
+   "letter": "k",
+   "emoji": "kitchen_knife",
+   "ipa": "/naɪf/",
+   "wrong": "کِنایف",
+   "right": "نایف",
+   "fa": "چاقو",
+   "tts": "knife"
+  },
+  {
+   "en": "Wednesday",
+   "silent": [
+    2
+   ],
+   "letter": "d",
+   "emoji": "spiral_calendar",
+   "ipa": "/ˈwenzdeɪ/",
+   "wrong": "وِدنِسدی",
+   "right": "وِنزدِی",
+   "fa": "چهارشنبه",
+   "tts": "Wednesday"
+  }
+ ],
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "stories": [
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "emoji": "receipt",
+   "word": "receipt",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "answer": "p",
+   "slot": "13:00"
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "t1": "یه کلمه که همیشه",
+   "t2a": "تلفظش برات",
+   "t2b": "سخته؟",
+   "body": "برام ریپلای کن تا تو ریلزهای بعدی\nتلفظ درستشو یادت بدم",
+   "example_label": "مثلاً:",
+   "example": "comfortable",
+   "cta": "ریپلای کن",
+   "slot": "22:00"
+  }
+ ],
+ "caption": "۴ کلمه که خیلی‌ها اشتباه تلفظشون می‌کنن 😬\nهمه‌شون یه حرف بی‌صدا دارن 🤫\n\n🏝️ island = آیلَند (جزیره)\n🐟 salmon = سَمِن (ماهی آزاد)\n🔪 knife = نایف (چاقو)\n🗓️ Wednesday = وِنزدِی (چهارشنبه)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان",
+ "date": "2026-11-03",
+ "reel_slot": "21:00"
+}

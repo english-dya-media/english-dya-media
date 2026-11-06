@@ -1,0 +1,158 @@
+{
+ "day": 7,
+ "date": "2026-11-09",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "ed آخر این فعل‌ها",
+  "l2a": "رو",
+  "l2b": "«اِد»",
+  "l3": "نخون!",
+  "l3emoji": "warning",
+  "sub": "فقط بعد از t و d «اِد» خونده میشه",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "walked",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "person_walking",
+   "uni": "🚶",
+   "ipa": "/wɔːkt/",
+   "wrong": "واکِد",
+   "right": "واکت",
+   "fa": "راه رفت",
+   "tts": "walked"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «د»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "played",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "video_game",
+   "uni": "🎮",
+   "ipa": "/pleɪd/",
+   "wrong": "پلِیِد",
+   "right": "پلِید",
+   "fa": "بازی کرد",
+   "tts": "played"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "stopped",
+   "mark": [
+    5,
+    6
+   ],
+   "emoji": "stop_sign",
+   "uni": "🛑",
+   "ipa": "/stɑːpt/",
+   "wrong": "استاپِد",
+   "right": "استاپت",
+   "fa": "متوقف شد",
+   "tts": "stopped"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «د»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "cleaned",
+   "mark": [
+    5,
+    6
+   ],
+   "emoji": "sponge",
+   "uni": "🧽",
+   "ipa": "/kliːnd/",
+   "wrong": "کلینِد",
+   "right": "کلیند",
+   "fa": "تمیز کرد",
+   "tts": "cleaned"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "debt",
+   "ipa": "/det/",
+   "answer": "بدهی"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "books",
+   "word": "knowledge",
+   "answer": "k"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "climb",
+   "options": [
+    "بالا رفتن",
+    "دویدن",
+    "شنا کردن"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه فعل که",
+   "t2a": "گذشته‌اش برات",
+   "t2b": "سخته؟",
+   "body": "ریپلای کن تا تلفظ درستشو\nتو ریلزهای بعدی یادت بدم",
+   "example": "watched"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "ed آخر این ۴ فعل رو «اِد» نخون ❌\nفقط بعد از t و d صدای «اِد» میده 💡\n\n🚶 walked = واکت (راه رفت)\n🎮 played = پلِید (بازی کرد)\n🛑 stopped = استاپت (متوقف شد)\n🧽 cleaned = کلیند (تمیز کرد)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

@@ -1,0 +1,146 @@
+{
+ "day": 8,
+ "date": "2026-11-10",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "بدون",
+  "l2b": "l",
+  "l3": "بگو!",
+  "l3emoji": "zipper-mouth_face",
+  "sub": "حرف l این‌جا بی‌صداست",
+  "subemoji": "shushing_face"
+ },
+ "words": [
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "l",
+   "en": "calm",
+   "mark": [
+    2
+   ],
+   "emoji": "relieved_face",
+   "uni": "😌",
+   "ipa": "/kɑːm/",
+   "wrong": "کالم",
+   "right": "کام",
+   "fa": "آرام",
+   "tts": "calm"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "l",
+   "en": "half",
+   "mark": [
+    2
+   ],
+   "emoji": "watermelon",
+   "uni": "🍉",
+   "ipa": "/hæf/",
+   "wrong": "هالف",
+   "right": "هَف",
+   "fa": "نصف",
+   "tts": "half"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "l",
+   "en": "talk",
+   "mark": [
+    2
+   ],
+   "emoji": "speech_balloon",
+   "uni": "💬",
+   "ipa": "/tɔːk/",
+   "wrong": "تالک",
+   "right": "تاک",
+   "fa": "صحبت کردن",
+   "tts": "talk"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "l",
+   "en": "could",
+   "mark": [
+    3
+   ],
+   "emoji": "flexed_biceps",
+   "uni": "💪",
+   "ipa": "/kʊd/",
+   "wrong": "کولد",
+   "right": "کُد",
+   "fa": "می‌تونست",
+   "tts": "could"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "stopped",
+   "ipa": "/stɑːpt/",
+   "answer": "متوقف شد"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "classical_building",
+   "word": "column",
+   "answer": "n"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "played",
+   "options": [
+    "خورد",
+    "خوابید",
+    "بازی کرد"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "کدوم کلمه‌ی انگلیسی",
+   "t2a": "همیشه",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن تا تلفظ درستشو\nتو ریلزهای بعدی یادت بدم",
+   "example": "said"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "حرف l تو این ۴ کلمه خونده نمیشه 🤐\nمثل salmon که روز اول دیدیم 🐟\n\n😌 calm = کام (آرام)\n🍉 half = هَف (نصف)\n💬 talk = تاک (صحبت کردن)\n💪 could = کُد (می‌تونست)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}
