@@ -1,0 +1,39 @@
+{
+ "tag": "trial09",
+ "kind": "vocab",
+ "day": 9,
+ "date": "2026-11-11",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "very scared",
+   "right": "terrified",
+   "note": "یعنی «خیلی ترسیده»",
+   "emoji": "face_screaming_in_fear"
+  },
+  {
+   "wrong": "very cold",
+   "right": "freezing",
+   "note": "یعنی «خیلی سرد، یخ‌زده»",
+   "emoji": "cold_face"
+  },
+  {
+   "wrong": "very small",
+   "right": "tiny",
+   "note": "یعنی «خیلی کوچیک»",
+   "emoji": "ant"
+  },
+  {
+   "wrong": "very angry",
+   "right": "furious",
+   "note": "یعنی «خیلی عصبانی»",
+   "emoji": "pouting_face"
+  }
+ ],
+ "caption": "دیگه نگو very scared یا very angry ❌\nاین کلمه‌ها رو یاد بگیر و حرفه‌ای‌تر حرف بزن 😎 برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

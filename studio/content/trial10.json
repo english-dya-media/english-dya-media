@@ -1,0 +1,33 @@
+{
+ "tag": "trial10",
+ "kind": "mistakes",
+ "day": 10,
+ "date": "2026-11-12",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "She don't like it.",
+   "right": "She doesn't like it.",
+   "note": "برای she و he از doesn't استفاده کن",
+   "emoji": "person_facepalming"
+  },
+  {
+   "wrong": "Say me the truth.",
+   "right": "Tell me the truth.",
+   "note": "«بهم بگو» میشه tell me، نه say me",
+   "emoji": "face_with_tears_of_joy"
+  },
+  {
+   "wrong": "Explain me.",
+   "right": "Explain it to me.",
+   "note": "بعد از explain حرف to لازمه",
+   "emoji": "thinking_face"
+  }
+ ],
+ "caption": "۳ اشتباه رایج تو مکالمه‌ی انگلیسی 🙈\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

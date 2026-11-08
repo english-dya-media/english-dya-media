@@ -29,6 +29,51 @@ MCQ = dict(kind="mcq", kicker="از ریلز دیروز", kicker_emoji="brain", 
 ASK = dict(kind="ask", emoji="speech_balloon", example_label="مثلاً:", cta="ریپلای کن", slot="22:00")
 
 
+# Trial reels (Instagram "Trial Reel": shown to non-followers first; our main lever for new followers).
+# Two a day from day 12 (Tehran time): "a" = vocab at 15:00, "b" = mistakes at 19:00. Rendered by trial_render.py.
+TRIAL_SLOT = "19:00"
+TRIAL_KINDS = {
+    # 3 sentences Persian speakers get wrong: wrong -> right + a one-line why
+    "mistakes": dict(n=3, headline=f"تو هم این{ZW}جوری می{ZW}گی؟", head_emoji="grimacing_face",
+                     end1="هر روز انگلیسی یاد بگیر", end2="بدون اشتباه!", slot="19:00",
+                     tags="#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"),
+    # 4 basic phrases -> the stronger word (very tired -> exhausted) + its Persian meaning
+    "vocab": dict(n=4, headline=f"حرفه{ZW}ای{ZW}تر حرف بزن", head_emoji="smiling_face_with_sunglasses",
+                  end1=f"هر روز کلمه{ZW}ی جدید یاد بگیر", end2=f"حرفه{ZW}ای{ZW}تر حرف بزن", slot="15:00",
+                  tags="#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"),
+}
+
+
+def used_trial_items(skip=None):
+    out = set()
+    for f in sorted(os.listdir(os.path.join(HERE, "content"))):
+        if re.match(r"trial\d+[a-z]?\.json$", f) and f != skip:
+            out |= {it["right"].lower() for it in json.load(open(os.path.join(HERE, "content", f)))["items"]}
+    return out
+
+
+def write_trial(day, kind, items, cap, suffix="", slot=None, headline=None, head_emoji=None):
+    """content/trialNN<suffix>.json, one trial reel. cap = (line 1, line 2) of the caption; hashtags are added.
+    From day 12: write_trial(N, "vocab", ..., suffix="a") and write_trial(N, "mistakes", ..., suffix="b")."""
+    k = TRIAL_KINDS[kind]
+    fn = f"trial{day:02d}{suffix}.json"
+    seen, err = used_trial_items(skip=fn), []
+    if len(items) != k["n"]: err.append(f"{kind} needs {k['n']} items")
+    for it in items:
+        for f in ("wrong", "right", "note", "emoji"):
+            if not it.get(f): err.append(f"item missing {f}")
+        if max(len(it.get("wrong", "")), len(it.get("right", ""))) > 22: err.append(f"'{it.get('wrong')}' / '{it.get('right')}': > 22 chars")
+        if len(it.get("note", "")) > 36: err.append(f"note too long: {it.get('note')}")
+        if it.get("right", "").lower() in seen: err.append(f"'{it['right']}' was already used in a trial reel")
+    if err:
+        raise SystemExit(f"trial{day:02d}: " + "; ".join(err))
+    d = dict(tag=fn[:-5], kind=kind, day=day, date=day_date(day).isoformat(), slot=slot or k["slot"], handle=HANDLE,
+             headline=headline or k["headline"], head_emoji=head_emoji or k["head_emoji"], end1=k["end1"], end2=k["end2"],
+             items=items, caption=f"{cap[0]}\n{cap[1]}\n\n{k['tags']}")
+    json.dump(d, open(os.path.join(HERE, "content", fn), "w"), ensure_ascii=False, indent=1)
+    print(f"{d['tag']} {d['date']} {d['slot']} ({kind}): " + ", ".join(it["right"] for it in items))
+
+
 def SIL(letter):
     """A silent letter: struck through in red."""
     return dict(tip="حرف {EN} خونده نمیشه", tip_en=letter)

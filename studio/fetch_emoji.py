@@ -1,7 +1,7 @@
 """Download the Fluent 3D emoji images (MIT licence, github.com/microsoft/fluentui-emoji) that the
 content files need, into assets/emoji/<key>.png. A key is the Fluent file stem, e.g. "money_with_wings".
 
-python3 fetch_emoji.py            # everything referenced by content/day*.json + renderer basics
+python3 fetch_emoji.py            # everything referenced by content/day*.json, content/trial*.json + renderer basics
 python3 fetch_emoji.py ewe crown  # specific keys
 Exit code 1 if any key could not be found (pick another emoji for it).
 """
@@ -13,7 +13,8 @@ BASE_URL = "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/asse
 # folders whose capitalisation can't be derived from the key
 SPECIAL = {}  # the folder is normally the key with spaces and a capital first letter ("Dna", "Globe showing europe-africa")
 BASICS = ["check_mark_button", "cross_mark", "speaker_high_volume", "shushing_face", "light_bulb",
-          "backhand_index_pointing_down", "sparkles", "thinking_face", "brain", "stopwatch", "speech_balloon"]
+          "backhand_index_pointing_down", "sparkles", "thinking_face", "brain", "stopwatch", "speech_balloon",
+          "grimacing_face", "smiling_face_with_sunglasses"]
 
 
 def needed():
@@ -25,6 +26,9 @@ def needed():
             keys |= {w.get("emoji"), w.get("tip_emoji")}
         for s in d["stories"]:
             keys |= {s.get("emoji"), s.get("kicker_emoji")}
+    for p in glob.glob(os.path.join(HERE, "content", "trial*.json")):
+        d = json.load(open(p))
+        keys |= {d.get("head_emoji")} | {it.get("emoji") for it in d["items"]}
     return sorted(k for k in keys if k)
 
 

@@ -1,0 +1,33 @@
+{
+ "tag": "trial08",
+ "kind": "mistakes",
+ "day": 8,
+ "date": "2026-11-10",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "He is more taller.",
+   "right": "He is taller.",
+   "note": "taller خودش یعنی «بلندتر»",
+   "emoji": "person_shrugging"
+  },
+  {
+   "wrong": "I didn't went.",
+   "right": "I didn't go.",
+   "note": "بعد از didn't فعل ساده میاد",
+   "emoji": "see-no-evil_monkey"
+  },
+  {
+   "wrong": "I go to home.",
+   "right": "I go home.",
+   "note": "قبل از home حرف to نمیاد",
+   "emoji": "house"
+  }
+ ],
+ "caption": "این ۳ تا جمله رو اشتباه نگو ❌\nبرای کسی که همیشه این‌جوری می‌گه بفرست 😅\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

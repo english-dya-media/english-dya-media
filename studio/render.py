@@ -14,9 +14,12 @@ EMO = "file://" + os.path.join(HERE, "assets", "emoji")
 SFX = os.path.join(HERE, "assets", "sfx")
 W, H, FPS = 1080, 1920, 30
 
-HOOK, WORD, END = 2.4, 5.2, 3.0
-T = dict(emoji=0.10, word=0.30, tts1=0.75, wrong=1.25, strike=1.45, silent=1.85,
-         right=2.35, meaning=2.65, repeat=3.05, tts2=3.15)
+# v2 (from week 3): no separate hook scene. The hook rides as a banner on top of every word scene and the
+# first word is on screen and spoken from frame 0, so nobody swipes away during a text-only intro.
+HOOK, WORD, END = 0.0, 4.3, 2.4
+T = dict(emoji=0.0, word=0.0, tts1=0.25, wrong=0.6, strike=0.8, silent=1.1,
+         right=1.5, meaning=1.8, repeat=2.15, tts2=2.25)
+COVER_MS = 2500          # cover frame: word, tip, wrong, right and meaning are all on screen
 
 
 def font_css():
@@ -122,6 +125,12 @@ body{font-family:Vaz,sans-serif;color:var(--txt);}
 .opt{direction:rtl;display:flex;align-items:center;gap:28px;background:rgba(255,255,255,.07);border:2px solid rgba(255,255,255,.22);border-radius:28px;padding:14px 26px;font:800 64px/1.3 Vaz;}
 .opt b{flex:none;width:104px;height:104px;border-radius:52px;background:var(--acc);color:#14162E;display:flex;align-items:center;justify-content:center;font:900 42px Vaz;}
 .bigw{font-family:Pop;font-weight:800;line-height:1.1;color:#fff;text-shadow:0 8px 30px rgba(0,0,0,.35);}
+/* v2 hook banner */
+.bl1{direction:rtl;font:800 52px/1.3 Vaz;color:#fff;text-align:center;}
+.bpill{direction:rtl;display:flex;align-items:center;gap:16px;background:var(--acc);color:#14162E;font:900 70px/1.3 Vaz;
+ padding:8px 40px 12px;border-radius:999px;box-shadow:0 14px 40px rgba(255,212,59,.3);white-space:nowrap;}
+.bpill img{width:76px;height:76px;}
+.bpill .hb{background:var(--bad);color:#fff;border-radius:16px;padding:0 16px;font-family:Pop,Vaz;font-weight:800;}
 @keyframes glowOn{to{color:var(--acc);text-shadow:0 0 28px rgba(255,212,59,.55)}}
 @keyframes popIn{0%{transform:scale(.2) rotate(-10deg);opacity:0}60%{transform:scale(1.1) rotate(3deg);opacity:1}100%{transform:scale(1) rotate(0)}}
 @keyframes popSmall{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.05);opacity:1}100%{transform:scale(1);opacity:1}}
@@ -137,24 +146,32 @@ body{font-family:Vaz,sans-serif;color:var(--txt);}
 """
 
 JS = r"""
-const D = __DATA__, T = __T__, E = n => '__EMO__/' + n + '.png';
+const D = __DATA__, T = __T__, FAST = __FAST__, E = n => '__EMO__/' + n + '.png';
 const ez = 'cubic-bezier(.2,.8,.2,1)', bo = 'cubic-bezier(.2,.9,.3,1.3)';
 const A = (n, d, dl, f = 'ease-out', it = 1) => `animation:${n} ${d}s ${f} ${dl}s ${it} normal both;`;
 const L = (top, inner) => `<div class="line" style="top:${top}px">${inner}</div>`;
+const Y = FAST ? {emo: 716, size: 300, word: 900, tip: 1074, wrong: 1160, right: 1240, mean: 1366, rep: 1470}
+               : {emo: 580, size: 360, word: 792, tip: 966, wrong: 1058, right: 1140, mean: 1268, rep: 1376};
 function header(active) {
-  let h = L(236, `<div class="handle" dir="ltr">${D.handle}</div>`);
-  if (active >= 0) h += L(318, '<div class="prog">' + [0,1,2,3].map(i =>
-      `<span class="${i === active ? 'on' : (i < active ? 'done' : '')}"></span>`).join('') + '</div>');
+  let h = L(FAST ? 206 : 236, `<div class="handle" dir="ltr">${D.handle}</div>`);
+  const dots = '<div class="prog">' + [0,1,2,3].map(i =>
+      `<span class="${i === active ? 'on' : (i < active ? 'done' : '')}"></span>`).join('') + '</div>';
+  if (FAST && active >= 0) {
+    const k = D.hook;
+    h += L(286, `<div class="bl1">${k.l1}</div>`) +
+         L(362, `<div class="bpill">${k.l2a} <span class="hb">${k.l2b}</span> ${k.l3}<img src="${E(k.l3emoji || 'grimacing_face')}"></div>`) +
+         L(500, dots);
+  } else if (active >= 0) h += L(318, dots);
   return h;
 }
 function halo(cy, size) {
   return `<div class="glow" style="top:${cy - 320}px"></div>` +
     `<div class="ring" style="top:${cy - size/2 - 34}px;width:${size + 68}px;height:${size + 68}px;margin-left:-${size/2 + 34}px;${A('spin', 7, 0, 'linear', 'infinite')}"></div>`;
 }
-function emo(name, cy, size, delay, idle = true) {
+function emo(name, cy, size, delay, idle = true, anim = 'popIn') {
   const wrap = `top:${cy - size/2}px;width:${size}px;height:${size}px;margin-left:-${size/2}px;` +
     (idle ? A('bob', 2.6, delay + 0.6, 'ease-in-out', 'infinite') : '');
-  return `<div class="emowrap" style="${wrap}"><img src="${E(name)}" style="${A('popIn', .55, delay, bo)}"></div>`;
+  return `<div class="emowrap" style="${wrap}"><img src="${E(name)}" style="${A(anim, anim === 'punch' ? .4 : .55, delay, anim === 'punch' ? ez : bo)}"></div>`;
 }
 function hookScene() {
   const h = D.hook;
@@ -176,14 +193,15 @@ function wordScene(i) {
   const n = w.en.length, fs = n <= 6 ? 150 : n <= 9 ? 128 : n <= 11 ? 112 : 100;
   const tip = w.tip ? w.tip.replace('{EN}', `<b dir="ltr">${w.tip_en}</b>`) : D.labels.silent.replace('{L}', `<b dir="ltr">${w.letter}</b>`);
   const tipEmo = w.tip_emoji || (glow ? 'light_bulb' : 'shushing_face');
-  return header(i) + halo(580, 360) + emo(w.emoji, 580, 360, T.emoji) +
-    L(792 + (150 - fs) / 2, `<div class="en" dir="ltr" style="font-size:${fs}px;${A('slideUp', .45, T.word, ez)}">${letters}</div>`) +
-    L(966, `<div class="pill ${glow ? 'gpill' : 'spill'}" style="${A('slideUp', .35, T.silent, ez)}">${tip}<img src="${E(tipEmo)}"></div>`) +
-    L(1058, `<div class="row wrong" style="${A('slideUp', .35, T.wrong, ez)}"><img src="${E('cross_mark')}"><span class="lbl">${D.labels.wrong}:</span>` +
+  const first = FAST && i === 0;          // frame 0 of the reel: everything that matters is already on screen
+  return header(i) + halo(Y.emo, Y.size) + emo(w.emoji, Y.emo, Y.size, T.emoji, true, first ? 'punch' : 'popIn') +
+    L(Y.word + (150 - fs) / 2, `<div class="en" dir="ltr" style="font-size:${fs}px;${A(first ? 'punch' : 'slideUp', first ? .4 : .45, T.word, ez)}">${letters}</div>`) +
+    L(Y.tip, `<div class="pill ${glow ? 'gpill' : 'spill'}" style="${A('slideUp', .35, T.silent, ez)}">${tip}<img src="${E(tipEmo)}"></div>`) +
+    L(Y.wrong, `<div class="row wrong" style="${A('slideUp', .35, T.wrong, ez)}"><img src="${E('cross_mark')}"><span class="lbl">${D.labels.wrong}:</span>` +
             `<span class="w">${w.wrong}<i class="wbar" style="${A('strike', .3, T.strike)}"></i></span></div>`) +
-    L(1140, `<div class="row right" style="${A('slideUp', .4, T.right, ez)}"><img src="${E('check_mark_button')}"><span class="r">${w.right}</span><span class="ipa" dir="ltr">${w.ipa}</span></div>`) +
-    L(1268, `<div class="mean" style="${A('popSmall', .4, T.meaning, bo)}">${D.labels.meaning}: <b>${w.fa}</b></div>`) +
-    L(1376, `<div style="${A('fadeIn', .3, T.repeat)}"><div class="pill rep" style="${A('pulse', .5, T.tts2, 'ease-in-out', 2)}">` +
+    L(Y.right, `<div class="row right" style="${A('slideUp', .4, T.right, ez)}"><img src="${E('check_mark_button')}"><span class="r">${w.right}</span><span class="ipa" dir="ltr">${w.ipa}</span></div>`) +
+    L(Y.mean, `<div class="mean" style="${A('popSmall', .4, T.meaning, bo)}">${D.labels.meaning}: <b>${w.fa}</b></div>`) +
+    L(Y.rep, `<div style="${A('fadeIn', .3, T.repeat)}"><div class="pill rep" style="${A('pulse', .5, T.tts2, 'ease-in-out', 2)}">` +
             `<img src="${E('speaker_high_volume')}"><span>${D.labels.repeat}</span></div></div>`);
 }
 function endScene() {
@@ -273,7 +291,7 @@ window.ready = async () => {
 
 def build_html(d, path):
     js = (JS.replace("__DATA__", json.dumps(d, ensure_ascii=False))
-            .replace("__T__", json.dumps(T)).replace("__EMO__", EMO))
+            .replace("__T__", json.dumps(T)).replace("__FAST__", json.dumps(HOOK == 0)).replace("__EMO__", EMO))
     html = ("<!doctype html><html lang='fa'><head><meta charset='utf-8'><style>" + font_css() + CSS +
             "</style></head><body><div id='bg'></div><div id='dots'></div><div id='stage'></div><script>" +
             js + "</script></body></html>")
@@ -309,10 +327,10 @@ def encode_scene(pg, key, dur, path):
 
 
 def audio_events(d, bdir):
-    ev = [(0.0, f"{SFX}/whoosh.wav", 0.35)] + [(0.25 + k * .15, f"{SFX}/pop.wav", 0.30) for k in range(len(d["words"]))]
+    ev = [(0.0, f"{SFX}/whoosh.wav", 0.35)] + [(0.25 + k * .15, f"{SFX}/pop.wav", 0.30) for k in range(len(d["words"]))] if HOOK else []
     t0 = HOOK
     for i in range(len(d["words"])):
-        ev += [(t0, f"{SFX}/whoosh.wav", 0.30), (t0 + T["emoji"], f"{SFX}/pop.wav", 0.32),
+        ev += ([(t0, f"{SFX}/whoosh.wav", 0.30)] if (HOOK or i) else []) + [(t0 + T["emoji"], f"{SFX}/pop.wav", 0.32),
                (t0 + T["tts1"], f"{bdir}/tts_{i}_normal.wav", 1.0), (t0 + T["wrong"], f"{SFX}/boop.wav", 0.30),
                (t0 + T["silent"], f"{SFX}/tick.wav", 0.30), (t0 + T["right"], f"{SFX}/ding.wav", 0.28),
                (t0 + T["tts2"], f"{bdir}/tts_{i}_slow.wav", 1.0)]
@@ -355,16 +373,16 @@ def main(day_json, preview=False, audio_only=False, stories_only=False, fit_chec
                 pg.screenshot(path=os.path.join(odir, f"{tag}_story{k + 1}.jpg"), type="jpeg", quality=95)
             b.close(); print("stories done"); return
         if fit_check:
-            keys = ["hook"] + list(range(len(d["words"]))) + ["end"] + [f"story{k}" for k in range(len(d["stories"]))]
+            keys = (["hook"] if HOOK else []) + list(range(len(d["words"]))) + ["end"] + [f"story{k}" for k in range(len(d["stories"]))]
             for key in keys:
                 fitted = pg.evaluate(f"show({json.dumps(key)})")
                 if fitted:
                     print(f"  {tag} {key}: {fitted}")
             b.close(); return
         if preview:
-            for key, t in [("hook", 1.3), (0, 4.9), (3, 4.9)] + [(f"story{k}", 10) for k in range(len(d["stories"]))]:
+            for key, t in ([("hook", 1.3)] if HOOK else [(0, 0.0)]) + [(0, WORD - .3), (3, WORD - .3)] + [(f"story{k}", 10) for k in range(len(d["stories"]))]:
                 pg.evaluate(f"show({json.dumps(key)})"); pg.evaluate(f"seek({t * 1000})")
-                pg.screenshot(path=os.path.join(bdir, f"preview_{key}.jpg"), type="jpeg", quality=88)
+                pg.screenshot(path=os.path.join(bdir, f"preview_{key}_{t:g}.jpg"), type="jpeg", quality=88)
             print("previews in", bdir)
             b.close(); return
         for k in range(len(d["stories"])):
@@ -372,7 +390,7 @@ def main(day_json, preview=False, audio_only=False, stories_only=False, fit_chec
             if fitted:
                 print(f"  shrunk to fit in story {k + 1}: {fitted}")
             pg.screenshot(path=os.path.join(odir, f"{tag}_story{k + 1}.jpg"), type="jpeg", quality=95)
-        scenes = [("hook", HOOK)] + [(i, WORD) for i in range(len(d["words"]))] + [("end", END)]
+        scenes = ([("hook", HOOK)] if HOOK else []) + [(i, WORD) for i in range(len(d["words"]))] + [("end", END)]
         files = []
         for n, (key, dur) in enumerate(scenes):
             fp = os.path.join(bdir, f"scene{n:02d}.mp4")

@@ -1,0 +1,33 @@
+{
+ "tag": "trial06",
+ "kind": "mistakes",
+ "day": 6,
+ "date": "2026-11-08",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I am agree.",
+   "right": "I agree.",
+   "note": "agree خودش فعله، am نمی‌خواد",
+   "emoji": "handshake"
+  },
+  {
+   "wrong": "I have 25 years old.",
+   "right": "I am 25 years old.",
+   "note": "برای سن از am استفاده کن، نه have",
+   "emoji": "birthday_cake"
+  },
+  {
+   "wrong": "I'm boring.",
+   "right": "I'm bored.",
+   "note": "boring یعنی «خسته‌کننده»! 😅",
+   "emoji": "sleeping_face"
+  }
+ ],
+ "caption": "۳ تا اشتباه که تقریباً همه می‌کنن 😬\nتو کدومشو می‌گفتی؟ برای دوستت بفرست که اونم بدونه 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

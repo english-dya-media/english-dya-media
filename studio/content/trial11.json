@@ -1,0 +1,39 @@
+{
+ "tag": "trial11",
+ "kind": "vocab",
+ "day": 11,
+ "date": "2026-11-13",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "very good",
+   "right": "excellent",
+   "note": "یعنی «عالی»",
+   "emoji": "trophy"
+  },
+  {
+   "wrong": "very funny",
+   "right": "hilarious",
+   "note": "یعنی «خیلی خنده‌دار»",
+   "emoji": "rolling_on_the_floor_laughing"
+  },
+  {
+   "wrong": "very beautiful",
+   "right": "gorgeous",
+   "note": "یعنی «خیلی زیبا»",
+   "emoji": "rose"
+  },
+  {
+   "wrong": "very bad",
+   "right": "terrible",
+   "note": "یعنی «افتضاح»",
+   "emoji": "thumbs_down"
+  }
+ ],
+ "caption": "very good و very bad رو بذار کنار 😅\nاین ۴ تا کلمه خیلی قشنگ‌ترن. سیو کن که یادت نره 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}
