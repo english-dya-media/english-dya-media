@@ -74,6 +74,45 @@ def write_trial(day, kind, items, cap, suffix="", slot=None, headline=None, head
     print(f"{d['tag']} {d['date']} {d['slot']} ({kind}): " + ", ".join(it["right"] for it in items))
 
 
+# Quote reels: one a day at 23:00 Tehran (late-night scrolling). Rendered by quote_render.py.
+QUOTE_SLOT = "23:00"
+QUOTE_TAGS = "#جملات_انگلیسی #متن_انگلیسی_با_ترجمه #جملات_انگیزشی #زبان_انگلیسی #آموزش_زبان_انگلیسی #quotes"
+QUOTE_CTA = f"هر شب یه جمله{ZW}ی انگلیسی با معنی 🤍 فالو کن"
+PALETTES = ["night", "sunset", "mist", "dusk", "mono", "rose", "forest"]
+
+
+def used_quotes(skip=None):
+    out = set()
+    for f in sorted(os.listdir(os.path.join(HERE, "content"))):
+        if re.match(r"quote\d+\.json$", f) and f != skip:
+            out.add(re.sub(r"[^a-z ]", "", json.load(open(os.path.join(HERE, "content", f)))["en"].lower()))
+    return out
+
+
+def write_quote(day, en, fa, words, share, author=None, palette=None, figure=False, trees=False, sea=False):
+    """content/quoteNN.json. words = [(english, persian), ...] (1-2 key words that appear in the quote);
+    share = the caption's last line (a send/save prompt)."""
+    fn = f"quote{day:02d}.json"
+    err = []
+    if len(en) > 110: err.append(f"quote longer than 110 characters ({len(en)})")
+    if len(fa) > 120: err.append(f"Persian longer than 120 characters ({len(fa)})")
+    if not 1 <= len(words) <= 2: err.append("give 1 or 2 key words")
+    for w, m in words:
+        if not re.search(r"\b" + re.escape(w) + r"\b", en, re.I): err.append(f"key word '{w}' is not in the quote")
+        if len(w) + len(m) > 34: err.append(f"key word chip too long: {w} = {m}")
+    if re.sub(r"[^a-z ]", "", en.lower()) in used_quotes(skip=fn): err.append("this quote was already used")
+    if err:
+        raise SystemExit(f"quote{day:02d}: " + "; ".join(err))
+    pal = palette or PALETTES[day % len(PALETTES)]
+    cap = f"“{en}”" + (f" — {author}" if author else "") + f"\n{fa}\n\n" + "\n".join(f"📌 {w} = {m}" for w, m in words)
+    d = dict(tag=fn[:-5], day=day, date=day_date(day).isoformat(), slot=QUOTE_SLOT, handle=HANDLE, en=en, fa=fa, author=author,
+             words=[dict(en=w, fa=m) for w, m in words], cta=QUOTE_CTA,
+             scene=dict(palette=pal, seed=day * 7919 + 13, figure=figure, trees=trees or pal == "forest", sea=sea),
+             caption=f"{cap}\n\n{share}\n\n{QUOTE_TAGS}")
+    json.dump(d, open(os.path.join(HERE, "content", fn), "w"), ensure_ascii=False, indent=1)
+    print(f"{d['tag']} {d['date']} {d['slot']} ({pal}): {en}")
+
+
 def SIL(letter):
     """A silent letter: struck through in red."""
     return dict(tip="حرف {EN} خونده نمیشه", tip_en=letter)

@@ -16,5 +16,12 @@ if [ ! -s assets/fonts/Vazirmatn.woff2 ]; then
   cp node/node_modules/@fontsource/poppins/files/poppins-latin-{600,700,800}-normal.woff2 assets/fonts/
   cp node/node_modules/@fontsource/noto-sans/files/noto-sans-latin{,-ext}-{500,600}-normal.woff2 assets/fonts/
 fi
+if [ ! -s assets/fonts/playfair-display-latin-500-italic.woff2 ]; then     # quote reels
+  mkdir -p node
+  (cd node && { [ -f package.json ] || npm init -y >/dev/null 2>&1; } && npm install --silent @fontsource/playfair-display @fontsource/cormorant-garamond @fontsource/lora)
+  cp node/node_modules/@fontsource/playfair-display/files/playfair-display-latin-{500,600}-italic.woff2 assets/fonts/
+  cp node/node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-{500,600}-italic.woff2 assets/fonts/
+  cp node/node_modules/@fontsource/lora/files/lora-latin-{400,500}-normal.woff2 assets/fonts/
+fi
 python3 fetch_emoji.py
 echo "setup ok"

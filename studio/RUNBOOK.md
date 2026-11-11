@@ -19,6 +19,9 @@ Two scheduled jobs use this file: the **weekly run** (Thursdays, makes and sched
   - 19:00 **trial reel b**, *mistakes*: 3 sentences Persian speakers get wrong (I am agree → I agree) + a one-line why
   - 21:00 **reel**: 4 words on one pronunciation theme (hook banner, 4 words, "which one did you say wrong?")
   - 22:00 story 4, **ask**: invite replies (a word they find hard)
+  - 23:00 **quote reel**: a short English quote on a generated night/sunset landscape, read aloud, then its Persian
+    meaning and 1–2 key words (`quote_render.py`, ~8 s). Made to be sent to friends; the late-night slot is when
+    quote pages get shared most.
 - **Trial reels** are Instagram "Trial Reels": shown only to non-followers at first. They are how new people find the page,
   so they must be useful enough to share or save. Rendered by `trial_render.py` (~17–20 s).
 - The daily reel uses layout **v2** (from day 12): no text-only intro, the first word is on screen and spoken from frame 0,
@@ -63,6 +66,14 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
      what natives say (I don't know → I have no idea). `note` = «یعنی «…» with the Persian meaning.
    - Trial captions: line 1 a hook, line 2 a share or save prompt (برای دوستت بفرست، سیو کن). Never reuse a `right`
      (`write_trial` refuses). Every `emoji` must be a Fluent emoji (step 5).
+   - Quote reels (see `weeks/week02_quotes.py`): for each day `write_quote(N, en, fa, [(word, meaning)], share_line,
+     author=None, palette=None, figure=False, sea=False)`. A short line (≤ 110 characters) in simple English that
+     people would send to a friend: calm, hopeful, about life, effort, people, peace of mind. The Persian is a natural,
+     warm translation (spoken style is fine), not word for word. 1–2 key words a learner should know, with meanings.
+     Use your own lines, common sayings or proverbs, or well-attested lines of long-dead authors (Seneca, Marcus
+     Aurelius, Emerson, Thoreau…). Never song lyrics, film lines or lines from modern books; nothing political or
+     religious; add `author` only when the attribution is certain (proverbs: "Japanese proverb" etc.).
+     The palette rotates by itself; set `figure=True` (a small person on the hill) or `sea=True` on some days for variety.
    - Run `python3 weeks/weekWW.py`. It refuses bad input (lengths, marks, story rules, reused items); fix and rerun.
 
 5. **Images**: `python3 fetch_emoji.py`. If a key is not found, pick another Fluent emoji
@@ -75,13 +86,15 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
 7. **Preview**: `python3 render.py content/dayNN.json --fit-check` for every day. It lists any line wider than the
    safe area (the renderer shrinks those automatically, but a listed line is better shortened in the week file).
    Then `python3 render.py content/dayNN.json --preview` for the 2 days with the longest words/hooks, and
-   `python3 trial_render.py content/trialNNx.json --preview` for one vocab and one mistakes file; look at
+   `python3 trial_render.py content/trialNNx.json --preview` for one vocab and one mistakes file, and
+   `python3 quote_render.py content/quoteNN.json --preview` for the longest quote; look at
    `build/<tag>/prev*.jpg`. Fix anything that overlaps, then rerun the week file.
    (`render.py … --stories` re-renders only a day's 4 story images.)
 
 8. **Render** (run in the background, a few at a time):
    - `python3 render.py content/dayNN.json` for all 7 days (≈60 s each) → `out/dayNN_reel.mp4` (~19.6 s) + 4 stories.
    - `python3 trial_render.py content/trialNNa.json` and `…b.json` for all 14 → `out/trialNNa.mp4` etc. (~45 s each).
+   - `python3 quote_render.py content/quoteNN.json` for all 7 → `out/quoteNN.mp4` (~30 s each).
    Check each video is 1080×1920 with audio, and look at one frame of each kind.
 
 9. **Upload media** to a new branch `media-<first date>` that holds only that week's files. Build it in a fresh,
@@ -91,8 +104,9 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
    mkdir <empty folder> && cd <empty folder> && git init -q && git checkout -q -b $B
    git config user.name english-dya-media && git config user.email english-dya-media@users.noreply.github.com
    git remote add origin https://github.com/english-dya-media/english-dya-media
-   mkdir media && cp <clone>/studio/out/day{12..18}_reel.mp4 <clone>/studio/out/day{12..18}_story*.jpg <clone>/studio/out/trial1[2-8]*.mp4 media/
+   mkdir media && cp <clone>/studio/out/day{12..18}_reel.mp4 <clone>/studio/out/day{12..18}_story*.jpg <clone>/studio/out/trial1[2-8]*.mp4 <clone>/studio/out/quote1[2-8].mp4 media/
    git add media/*story* && git commit -qm "Stories" && git push -q origin $B
+   git add media/quote*.mp4 && git commit -qm "Quote reels" && git push -q origin $B
    git add media/day*_reel.mp4 && git commit -qm "Reels" && git push -q origin $B
    git add media/trial*a.mp4 && git commit -qm "Trial reels a" && git push -q origin $B
    git add media && git commit -qm "Trial reels b" && git push -q origin $B
@@ -102,8 +116,8 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
 10. **Schedule**: `python3 plan.py https://raw.githubusercontent.com/english-dya-media/english-dya-media/<branch>/media N+1 N+7 > build/plan.json`.
     First call Metricool `getScheduledPosts` for that date range: if posts already exist there, don't duplicate them.
     Then call `createScheduledPost` once per item with `blogId: "7830959"`, `date: item.date`, `info: item.info`
-    (49 posts: 7 reels, 14 trial reels, 28 stories). Finally `getScheduledPosts` again: expect all of them PENDING,
-    media copied to static.metricool.com, trial reels with type TRIAL_REEL.
+    (56 posts: 7 reels, 7 quote reels, 14 trial reels, 28 stories). Finally `getScheduledPosts` again: expect all of
+    them PENDING, media copied to static.metricool.com, trial reels with type TRIAL_REEL.
 
 11. **Save**: commit `content/` and `weeks/` to `main` (`git fetch origin main` and rebase first; the daily check also
     pushes to main) and push.
@@ -111,7 +125,8 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
 12. **Clean up**: delete media branches whose last day is before today (their posts are published and Metricool keeps its
     own copy): `git push origin --delete media-YYYY-MM-DD`. Never delete the branch of a week that still has posts to go.
 
-13. **Report** (short, English): the 7 themes with their words, the trial reel topics, first post date/time, anything that failed.
+13. **Report** (short, English): the 7 themes with their words, the trial reel topics, the 7 quotes, first post date/time,
+    anything that failed.
 
 ## Daily check
 
@@ -131,8 +146,8 @@ Monitoring only: no new content. Work in `studio/` (no setup needed). "Now" is t
      `IGRE28` view rate (%, viewers past 3 s).
    - Tag each reel by matching its url with `publicUrl` of the published posts (`getScheduledPosts` over the same 15
      days, or the time if no match: daily reels go out at 21:00 Tehran, trial reels at 15:00/19:00): `dayNN` + kind
-     `reel` for daily reels, `trialNN…` + kind `trial` for trial reels (the media file name says which), anything else
-     kind `promo` with a short tag (e.g. `presenter`).
+     `reel` for daily reels, `trialNN…` + kind `trial` for trial reels, `quoteNN` + kind `quote` for quote reels
+     (23:00 Tehran; the media file name says which), anything else kind `promo` with a short tag (e.g. `presenter`).
    - Write them to `build/today.json` in the format at the top of `growth/update.py` and run
      `python3 growth/update.py build/today.json`. Its report has the month-to-date gain against the 5,000 goal.
 

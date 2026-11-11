@@ -1,6 +1,6 @@
-"""Build the Metricool post list (reel + trial reel + stories per day) for a range of days.
+"""Build the Metricool post list (reel + trial reels + quote reel + stories per day) for a range of days.
 
-python3 plan.py <media base url> <first day> <last day> [--only reel|trial|story] > build/plan.json
+python3 plan.py <media base url> <first day> <last day> [--only reel|trial|quote|story] > build/plan.json
 e.g. python3 plan.py https://raw.githubusercontent.com/english-dya-media/english-dya-media/media-2026-11-14/media 12 18
 
 Each item: {"date": "<ISO with Rome offset>", "label": "...", "info": "<JSON string for createScheduledPost>"}
@@ -14,6 +14,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 TEHRAN, BRAND_TZ = ZoneInfo("Asia/Tehran"), "Europe/Rome"
 V2_FROM_DAY = 12          # daily reels from day 12 use the fast-opening layout (render.py v2, cover at 2.5 s)
 TRIAL_COVER_MS = 3000
+QUOTE_TAIL_MS = 600       # quote reels: cover near the end, when the Persian and the key words are on screen
 
 
 def when(day_iso, hhmm):
@@ -48,6 +49,13 @@ def main(base, first, last, only=None):
             t = json.load(open(tp))
             out.append(item(f"{tag} trial reel {t['tag']} ({t['kind']})", f"{base}/{t['tag']}.mp4", when(t["date"], t["slot"]), "TRIAL_REEL",
                             t["caption"], TRIAL_COVER_MS))
+        qp = os.path.join(HERE, "content", f"quote{n:02d}.json")
+        qv = os.path.join(HERE, "out", f"quote{n:02d}.mp4")
+        if os.path.exists(qp):
+            q = json.load(open(qp))
+            dur = float(os.popen(f"ffprobe -v error -show_entries format=duration -of csv=p=0 {qv}").read() or 8) if os.path.exists(qv) else 8.0
+            out.append(item(f"{tag} quote reel", f"{base}/quote{n:02d}.mp4", when(q["date"], q["slot"]), "REEL", q["caption"],
+                            max(1000, int(dur * 1000) - QUOTE_TAIL_MS)))
     if only:
         out = [x for x in out if f" {only}" in x["label"] and (only != "reel" or "trial" not in x["label"])]
     out.sort(key=lambda x: x["date"])
