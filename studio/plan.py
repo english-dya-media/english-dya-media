@@ -58,7 +58,7 @@ def main(base, first, last, only=None):
             out.append(item(f"{tag} quote reel", f"{base}/quote{n:02d}.mp4", when(q["date"], q["slot"]), "REEL", q["caption"],
                             max(1000, int(dur * 1000) - QUOTE_TAIL_MS), ai=False))
     if only:
-        out = [x for x in out if f" {only}" in x["label"] and (only != "reel" or "trial" not in x["label"])]
+        out = [x for x in out if f" {only}" in x["label"] and (only != "reel" or not any(k in x["label"] for k in ("trial", "quote")))]
     out.sort(key=lambda x: x["date"])
     json.dump(out, sys.stdout, ensure_ascii=False, indent=0)
 
