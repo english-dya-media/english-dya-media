@@ -79,6 +79,10 @@ QUOTE_SLOT = "23:00"
 QUOTE_TAGS = "#جملات_انگلیسی #متن_انگلیسی_با_ترجمه #جملات_انگیزشی #زبان_انگلیسی #آموزش_زبان_انگلیسی #quotes"
 QUOTE_CTA = f"هر شب یه جمله{ZW}ی انگلیسی با معنی 🤍 فالو کن"
 PALETTES = ["night", "sunset", "mist", "dusk", "mono", "rose", "forest"]
+# A different topic every day; the same topic may come back only after a week.
+QUOTE_TOPICS = ["peace of mind", "trying again", "self-belief", "patience", "hard work", "friendship", "love",
+                "family", "time", "kindness", "hope", "change", "happiness", "rest", "courage", "gratitude",
+                "being alone", "dreams", "people", "letting go", "success", "mistakes", "the future", "honesty"]
 
 
 def used_quotes(skip=None):
@@ -89,11 +93,23 @@ def used_quotes(skip=None):
     return out
 
 
-def write_quote(day, en, fa, words, share, author=None, palette=None, figure=False, trees=False, sea=False):
+def recent_topics(day, back=6):
+    out = {}
+    for n in range(day - back, day):
+        p = os.path.join(HERE, "content", f"quote{n:02d}.json")
+        if os.path.exists(p):
+            out[n] = json.load(open(p)).get("topic")
+    return out
+
+
+def write_quote(day, en, fa, words, share, topic, author=None, palette=None, figure=False, trees=False, sea=False):
     """content/quoteNN.json. words = [(english, persian), ...] (1-2 key words that appear in the quote);
-    share = the caption's last line (a send/save prompt)."""
+    share = the caption's last line (a send/save prompt); topic = one of QUOTE_TOPICS, different every day."""
     fn = f"quote{day:02d}.json"
     err = []
+    if topic not in QUOTE_TOPICS: err.append(f"topic '{topic}' is not in QUOTE_TOPICS")
+    used = {n: t for n, t in recent_topics(day).items() if t == topic}
+    if used: err.append(f"topic '{topic}' was used on day {min(used)}; pick another one")
     if len(en) > 110: err.append(f"quote longer than 110 characters ({len(en)})")
     if len(fa) > 120: err.append(f"Persian longer than 120 characters ({len(fa)})")
     if not 1 <= len(words) <= 2: err.append("give 1 or 2 key words")
@@ -105,12 +121,12 @@ def write_quote(day, en, fa, words, share, author=None, palette=None, figure=Fal
         raise SystemExit(f"quote{day:02d}: " + "; ".join(err))
     pal = palette or PALETTES[day % len(PALETTES)]
     cap = f"“{en}”" + (f" — {author}" if author else "") + f"\n{fa}\n\n" + "\n".join(f"📌 {w} = {m}" for w, m in words)
-    d = dict(tag=fn[:-5], day=day, date=day_date(day).isoformat(), slot=QUOTE_SLOT, handle=HANDLE, en=en, fa=fa, author=author,
+    d = dict(tag=fn[:-5], day=day, date=day_date(day).isoformat(), slot=QUOTE_SLOT, handle=HANDLE, topic=topic, en=en, fa=fa, author=author,
              words=[dict(en=w, fa=m) for w, m in words], cta=QUOTE_CTA,
              scene=dict(palette=pal, seed=day * 7919 + 13, figure=figure, trees=trees or pal == "forest", sea=sea),
              caption=f"{cap}\n\n{share}\n{QUOTE_CTA}\n\n{QUOTE_TAGS}")
     json.dump(d, open(os.path.join(HERE, "content", fn), "w"), ensure_ascii=False, indent=1)
-    print(f"{d['tag']} {d['date']} {d['slot']} ({pal}): {en}")
+    print(f"{d['tag']} {d['date']} {d['slot']} [{topic}] ({pal}): {en}")
 
 
 def SIL(letter):

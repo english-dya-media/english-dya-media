@@ -69,7 +69,12 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
    - Trial captions: line 1 a hook, line 2 a share or save prompt (برای دوستت بفرست، سیو کن). Never reuse a `right`
      (`write_trial` refuses). Every `emoji` must be a Fluent emoji (step 5).
    - Quote reels (see `weeks/week02_quotes.py`): for each day `write_quote(N, en, fa, [(word, meaning)], share_line,
-     author=None, palette=None, figure=False, sea=False)`. The word meanings appear only in the caption. A short line (≤ 110 characters) in simple English that
+     topic=..., author=None, palette=None, figure=False, sea=False)`. The word meanings appear only in the caption.
+     **A different topic every day** (owner's request): pick from `QUOTE_TOPICS` in daygen.py (peace of mind, trying
+     again, self-belief, patience, hard work, friendship, love, family, time, kindness, hope, change, happiness, rest,
+     courage, gratitude, being alone, dreams, people, letting go, success, mistakes, the future, honesty); a topic
+     may come back only after 6 days (`write_quote` refuses otherwise). Match the share line to the topic
+     (برای دوستت بفرست، برای مامانت بفرست، سیو کن…). A short line (≤ 110 characters) in simple English that
      people would send to a friend: calm, hopeful, about life, effort, people, peace of mind. The Persian is a natural,
      warm translation (spoken style is fine), not word for word. 1–2 key words a learner should know, with meanings.
      Use your own lines, common sayings or proverbs, or well-attested lines of long-dead authors (Seneca, Marcus
