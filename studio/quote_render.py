@@ -1,5 +1,6 @@
-"""Quote reel (~8-10 s): a short English quote on a generated landscape, read aloud, then its Persian meaning
-and 1-2 key words. Calm, shareable, made for the late-night slot.
+"""Quote reel (~6-8 s): a short English quote on a generated landscape, then its Persian meaning, over calm music
+(no voice: the owner wants music only). The key words and their meanings go in the caption only; in the video they
+are just tinted. Made for the late-night slot.
 
 python3 quote_render.py content/quote12.json [--preview]      ->  out/quote12.mp4
 Content (written by daygen.write_quote): {"tag", "en", "fa", "author", "words": [{"en", "fa"}],
@@ -9,15 +10,41 @@ Palettes: dusk, night, sunset, mist, mono, rose, forest. The scene is drawn from
 import base64, json, os, re, subprocess, sys
 import numpy as np
 import soundfile as sf
-from kokoro_onnx import Kokoro
 from playwright.sync_api import sync_playwright
-from render import font_css, build_audio, HERE, W, H, FPS, FONTS
+from render import font_css, HERE, W, H, FPS, FONTS
 from music import make_music
-from tts import trim
 
-VOICE, SPEED = "af_bella", 0.88
-LEAD, GAP, HOLD = 0.45, 0.35, 4.4        # voice starts at LEAD; Persian appears GAP after it; then HOLD to read
-MINOR = [[45, 48, 52, 55], [41, 45, 48, 52], [48, 52, 55, 59], [43, 47, 50, 55]]   # Am7 Fmaj7 Cmaj7 G
+HOLD = 4.0                               # seconds on screen after the Persian appears
+PROGS = [[[45, 48, 52, 55], [41, 45, 48, 52], [48, 52, 55, 59], [43, 47, 50, 55]],   # Am7 Fmaj7 Cmaj7 G
+         [[41, 45, 48, 52], [43, 47, 50, 55], [40, 43, 47, 50], [45, 48, 52, 55]],   # Fmaj7 G Em7 Am7
+         [[48, 52, 55, 59], [40, 43, 47, 50], [41, 45, 48, 52], [43, 47, 50, 55]],   # Cmaj7 Em7 Fmaj7 G
+         [[38, 41, 45, 48], [43, 47, 50, 53], [48, 52, 55, 59], [45, 48, 52, 55]]]   # Dm7 G7 Cmaj7 Am7
+PATTERNS = [[0, 2, 1, 3, 2, 1, 3, 2], [0, 1, 2, 3, 2, 3, 1, 2], [0, 2, 3, 2, 1, 2, 3, 1], [3, 2, 1, 0, 1, 2, 3, 2]]
+
+
+def music_bed(total, out, day):
+    """Soft music-box arpeggio over a pad, with a stereo room (convolution reverb); a different chord loop per day."""
+    dry = out[:-4] + "_dry.wav"
+    make_music(total + 0.5, [], dry, bpm=62, level_db=-20.0, prog=PROGS[day % 4], pluck_decay=0.9,
+               pattern=PATTERNS[day % 4], pad_gain=0.6)
+    x, sr = sf.read(dry)
+    x = x.mean(1) if x.ndim > 1 else x
+    rng, n = np.random.default_rng(day), int(2.4 * sr)
+    t = np.arange(n) / sr
+    chans = []
+    for _ in range(2):
+        ir = rng.standard_normal(n) * np.exp(-t / 0.85)
+        ir[: int(.012 * sr)] *= np.linspace(0, 1, int(.012 * sr))
+        N = 1 << (len(x) + n - 2).bit_length()
+        y = np.fft.irfft(np.fft.rfft(x, N) * np.fft.rfft(ir, N), N)[: len(x)]
+        y *= np.sqrt(np.mean(x ** 2)) / (np.sqrt(np.mean(y ** 2)) + 1e-9)
+        chans.append(0.68 * x + 0.42 * y)
+    st = np.stack(chans, 1)[: int(total * sr)]
+    fo = int(1.4 * sr)
+    st[-fo:] *= np.linspace(1, 0, fo)[:, None]
+    st *= 10 ** (-17 / 20) / (np.sqrt(np.mean(st ** 2)) + 1e-9)
+    sf.write(out, np.clip(st, -0.97, 0.97).astype(np.float32), sr)
+    return out
 
 
 def serif_css():
@@ -178,8 +205,7 @@ function build() {
     (D.author ? `<div class="au" style="${A('fade', .5, .35)}">— ${D.author}</div>` : '') +
     `<div class="sep" style="${A('grow', .45, T.fa - .25, ez)}"></div>` +
     `<div class="fa" style="${A('up', .6, T.fa, ez)}">${D.fa}</div>` +
-    `<div class="kws" style="${A('up', .5, T.fa + .6, ez)}">` + D.words.map(w => `<span class="kw">${w.en} = <span class="f">${w.fa}</span></span>`).join('') + `</div>` +
-    `<div class="cta" style="${A('fade', .6, T.fa + 1.3)}">${D.cta}</div></div>`;
+    `<div class="cta" style="${A('fade', .6, T.fa + 1.1)}">${D.cta}</div></div>`;
 }
 function fitAll(maxW = 912) {
   document.querySelectorAll('.block > *').forEach(el => { if (el.scrollWidth > maxW) el.style.zoom = (maxW / el.scrollWidth).toFixed(3); });
@@ -202,11 +228,7 @@ window.ready = async () => {
 def main(path, preview=False, serif="Play"):
     d = json.load(open(path))
     bdir = os.path.join(HERE, "build", d["tag"]); os.makedirs(bdir, exist_ok=True)
-    k = Kokoro(os.path.join(HERE, "voice", "kokoro-v1.0.onnx"), os.path.join(HERE, "voice", "voices-v1.0.bin"))
-    x, sr = k.create(d["en"], voice=VOICE, speed=SPEED, lang="en-us")
-    x = trim(np.asarray(x, dtype=np.float32), sr); x = x / (np.max(np.abs(x)) + 1e-9) * 0.85
-    vwav = os.path.join(bdir, "voice.wav"); sf.write(vwav, x, sr); vlen = len(x) / sr
-    fa_t = LEAD + vlen + GAP
+    fa_t = min(4.0, max(2.2, 0.6 + 0.045 * len(d["en"])))          # time to read the English first
     T = dict(fa=round(fa_t, 2), total=round(fa_t + HOLD, 2))
     html = os.path.join(bdir, "q.html")
     js = JS.replace("__DATA__", json.dumps(d, ensure_ascii=False)).replace("__T__", json.dumps(T)).replace("QSERIF", serif)
@@ -230,9 +252,7 @@ def main(path, preview=False, serif="Play"):
         if proc.wait() != 0: raise SystemExit("ffmpeg failed")
         os.replace(tmp, video); b.close()
     total = T["total"]
-    music = make_music(total, [(LEAD, LEAD + vlen)], os.path.join(bdir, "music.wav"), bpm=64, level_db=-22.0, prog=MINOR,
-                       pluck_decay=0.6, pattern=[0, 2, 1, 3, 2, 1, 3, 2], pad_gain=0.75)
-    wav = os.path.join(bdir, "audio.wav"); build_audio([(0.0, music, 1.0), (LEAD, vwav, 1.0)], total, wav)
+    wav = music_bed(total, os.path.join(bdir, "music.wav"), d.get("day", 0))
     out = os.path.join(HERE, "out", f"{d['tag']}.mp4"); tmp = out[:-4] + ".part.mp4"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", video, "-i", wav, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac",
                     "-b:a", "160k", "-ar", "44100", "-ac", "2", "-shortest", "-movflags", "+faststart", tmp], check=True)

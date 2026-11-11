@@ -23,8 +23,9 @@ def when(day_iso, hhmm):
     return datetime(y, mo, d, h, mi, tzinfo=TEHRAN).astimezone(ZoneInfo(BRAND_TZ))
 
 
-def item(label, url, t, kind, text="", cover=1500):
-    ig = {"type": kind, "collaborators": [], "isAiGenerated": kind in ("REEL", "TRIAL_REEL")}
+def item(label, url, t, kind, text="", cover=1500, ai=None):
+    # AI label: reels with the synthetic voice. Quote reels (graphics + music, no voice) are not labelled.
+    ig = {"type": kind, "collaborators": [], "isAiGenerated": kind in ("REEL", "TRIAL_REEL") if ai is None else ai}
     info = {"autoPublish": True, "descendants": [], "draft": False, "firstCommentText": "", "hasNotReadNotes": False,
             "media": [url], "mediaAltText": [], "providers": [{"network": "instagram"}],
             "publicationDate": {"dateTime": t.strftime("%Y-%m-%dT%H:%M:%S"), "timezone": BRAND_TZ},
@@ -55,7 +56,7 @@ def main(base, first, last, only=None):
             q = json.load(open(qp))
             dur = float(os.popen(f"ffprobe -v error -show_entries format=duration -of csv=p=0 {qv}").read() or 8) if os.path.exists(qv) else 8.0
             out.append(item(f"{tag} quote reel", f"{base}/quote{n:02d}.mp4", when(q["date"], q["slot"]), "REEL", q["caption"],
-                            max(1000, int(dur * 1000) - QUOTE_TAIL_MS)))
+                            max(1000, int(dur * 1000) - QUOTE_TAIL_MS), ai=False))
     if only:
         out = [x for x in out if f" {only}" in x["label"] and (only != "reel" or "trial" not in x["label"])]
     out.sort(key=lambda x: x["date"])

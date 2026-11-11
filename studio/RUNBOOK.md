@@ -19,15 +19,16 @@ Two scheduled jobs use this file: the **weekly run** (Thursdays, makes and sched
   - 19:00 **trial reel b**, *mistakes*: 3 sentences Persian speakers get wrong (I am agree → I agree) + a one-line why
   - 21:00 **reel**: 4 words on one pronunciation theme (hook banner, 4 words, "which one did you say wrong?")
   - 22:00 story 4, **ask**: invite replies (a word they find hard)
-  - 23:00 **quote reel**: a short English quote on a generated night/sunset landscape, read aloud, then its Persian
-    meaning and 1–2 key words (`quote_render.py`, ~8 s). Made to be sent to friends; the late-night slot is when
-    quote pages get shared most.
+  - 23:00 **quote reel**: a short English quote on a generated night/sunset landscape, then its Persian meaning, over
+    calm music (`quote_render.py`, ~6–8 s). Owner's choice: **music only, no voice, no word meanings in the video**;
+    the 1–2 key words and their meanings go in the caption only. Made to be sent to friends; the late-night slot is
+    when quote pages get shared most. Not AI-labelled (no synthetic voice).
 - **Trial reels** are Instagram "Trial Reels": shown only to non-followers at first. They are how new people find the page,
   so they must be useful enough to share or save. Rendered by `trial_render.py` (~17–20 s).
 - The daily reel uses layout **v2** (from day 12): no text-only intro, the first word is on screen and spoken from frame 0,
   the hook rides as a banner on top, 19.6 s long. Don't bring back the old 2.4 s hook scene: viewers left during it.
 - Captions are **Persian only**, informal spoken style (می‌گن، نمیشه، خونده نمیشه), with hashtags (added automatically).
-- Reels and trial reels carry Instagram's AI label (the voice is synthetic). `plan.py` sets this.
+- Reels and trial reels carry Instagram's AI label (the voice is synthetic); quote reels don't. `plan.py` sets this.
 - The 7-part story series (`make_story.py`, `story_render.py`) is **paused by the owner**. Don't make or post episodes.
 
 ## Weekly run
@@ -67,7 +68,7 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
    - Trial captions: line 1 a hook, line 2 a share or save prompt (برای دوستت بفرست، سیو کن). Never reuse a `right`
      (`write_trial` refuses). Every `emoji` must be a Fluent emoji (step 5).
    - Quote reels (see `weeks/week02_quotes.py`): for each day `write_quote(N, en, fa, [(word, meaning)], share_line,
-     author=None, palette=None, figure=False, sea=False)`. A short line (≤ 110 characters) in simple English that
+     author=None, palette=None, figure=False, sea=False)`. The word meanings appear only in the caption. A short line (≤ 110 characters) in simple English that
      people would send to a friend: calm, hopeful, about life, effort, people, peace of mind. The Persian is a natural,
      warm translation (spoken style is fine), not word for word. 1–2 key words a learner should know, with meanings.
      Use your own lines, common sayings or proverbs, or well-attested lines of long-dead authors (Seneca, Marcus
