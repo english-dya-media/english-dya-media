@@ -1,6 +1,6 @@
 """Quote reel (~6-8 s): a short English quote on a generated landscape, then its Persian meaning, over calm music
-(no voice: the owner wants music only). The key words and their meanings go in the caption only; in the video they
-are just tinted. Made for the late-night slot.
+(no voice: the owner wants music only). The key words, their meanings and the "follow" line go in the caption only,
+so the video stays clean for people to re-share to their stories. Made for the late-night slot.
 
 python3 quote_render.py content/quote12.json [--preview]      ->  out/quote12.mp4
 Content (written by daygen.write_quote): {"tag", "en", "fa", "author", "words": [{"en", "fa"}],
@@ -204,8 +204,7 @@ function build() {
     `<div class="en" style="font-size:${fs}px;${A('qin', .7, 0, ez)}">“${quoteHtml()}”</div>` +
     (D.author ? `<div class="au" style="${A('fade', .5, .35)}">— ${D.author}</div>` : '') +
     `<div class="sep" style="${A('grow', .45, T.fa - .25, ez)}"></div>` +
-    `<div class="fa" style="${A('up', .6, T.fa, ez)}">${D.fa}</div>` +
-    `<div class="cta" style="${A('fade', .6, T.fa + 1.1)}">${D.cta}</div></div>`;
+    `<div class="fa" style="${A('up', .6, T.fa, ez)}">${D.fa}</div></div>`;     // no follow line: people re-share it to their stories
 }
 function fitAll(maxW = 912) {
   document.querySelectorAll('.block > *').forEach(el => { if (el.scrollWidth > maxW) el.style.zoom = (maxW / el.scrollWidth).toFixed(3); });

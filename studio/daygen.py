@@ -108,7 +108,7 @@ def write_quote(day, en, fa, words, share, author=None, palette=None, figure=Fal
     d = dict(tag=fn[:-5], day=day, date=day_date(day).isoformat(), slot=QUOTE_SLOT, handle=HANDLE, en=en, fa=fa, author=author,
              words=[dict(en=w, fa=m) for w, m in words], cta=QUOTE_CTA,
              scene=dict(palette=pal, seed=day * 7919 + 13, figure=figure, trees=trees or pal == "forest", sea=sea),
-             caption=f"{cap}\n\n{share}\n\n{QUOTE_TAGS}")
+             caption=f"{cap}\n\n{share}\n{QUOTE_CTA}\n\n{QUOTE_TAGS}")
     json.dump(d, open(os.path.join(HERE, "content", fn), "w"), ensure_ascii=False, indent=1)
     print(f"{d['tag']} {d['date']} {d['slot']} ({pal}): {en}")
 

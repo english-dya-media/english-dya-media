@@ -20,8 +20,9 @@ Two scheduled jobs use this file: the **weekly run** (Thursdays, makes and sched
   - 21:00 **reel**: 4 words on one pronunciation theme (hook banner, 4 words, "which one did you say wrong?")
   - 22:00 story 4, **ask**: invite replies (a word they find hard)
   - 23:00 **quote reel**: a short English quote on a generated night/sunset landscape, then its Persian meaning, over
-    calm music (`quote_render.py`, ~6–8 s). Owner's choice: **music only, no voice, no word meanings in the video**;
-    the 1–2 key words and their meanings go in the caption only. Made to be sent to friends; the late-night slot is
+    calm music (`quote_render.py`, ~6–8 s). Owner's choice: **music only, no voice, no word meanings and no "follow"
+    line in the video** (so people re-share it to their stories); the key words, their meanings and the follow line
+    («هر شب یه جمله‌ی انگلیسی با معنی 🤍 فالو کن», added by `write_quote`) go in the caption. Made to be sent to friends; the late-night slot is
     when quote pages get shared most. Not AI-labelled (no synthetic voice).
 - **Trial reels** are Instagram "Trial Reels": shown only to non-followers at first. They are how new people find the page,
   so they must be useful enough to share or save. Rendered by `trial_render.py` (~17–20 s).
