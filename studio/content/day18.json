@@ -1,0 +1,158 @@
+{
+ "day": 18,
+ "date": "2026-11-20",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا فعل رو",
+  "l2a": "با",
+  "l2b": "«اِد»",
+  "l3": "نگو!",
+  "l3emoji": "warning",
+  "sub": "فقط بعد از t و d «اِد» داریم",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "watched",
+   "mark": [
+    5,
+    6
+   ],
+   "emoji": "television",
+   "uni": "📺",
+   "ipa": "/wɑːtʃt/",
+   "wrong": "واچِد",
+   "right": "واچت",
+   "fa": "تماشا کرد",
+   "tts": "watched"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "laughed",
+   "mark": [
+    5,
+    6
+   ],
+   "emoji": "face_with_tears_of_joy",
+   "uni": "😂",
+   "ipa": "/læft/",
+   "wrong": "لافِد",
+   "right": "لَفت",
+   "fa": "خندید",
+   "tts": "laughed"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "asked",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "person_raising_hand",
+   "uni": "🙋",
+   "ipa": "/æskt/",
+   "wrong": "اَسکِد",
+   "right": "اَسکت",
+   "fa": "پرسید",
+   "tts": "asked"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «د»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "lived",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "house",
+   "uni": "🏠",
+   "ipa": "/lɪvd/",
+   "wrong": "لیوِد",
+   "right": "لیود",
+   "fa": "زندگی کرد",
+   "tts": "lived"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "camera",
+   "ipa": "/ˈkæmərə/",
+   "answer": "دوربین"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "guitar",
+   "word": "guitar",
+   "answer": "u"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "درستش کدومه؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "radio",
+   "options": [
+    "رِیدیو",
+    "رادیو",
+    "رادیِو"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "این هفته کدوم کلمه",
+   "t2a": "برات",
+   "t2b": "جدید بود؟",
+   "body": "ریپلای کن؛ هفته‌ی بعد\nکلمه‌های بیشتری میارم",
+   "example": "Hyundai"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "این ۴ تا فعل رو با «اِد» نگو ❌\nیادته؟ فقط بعد از t و d صدای «اِد» میده 💡\n\n📺 watched = واچت (تماشا کرد)\n😂 laughed = لَفت (خندید)\n🙋 asked = اَسکت (پرسید)\n🏠 lived = لیود (زندگی کرد)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

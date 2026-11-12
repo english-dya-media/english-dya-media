@@ -1,0 +1,33 @@
+{
+ "tag": "trial15b",
+ "kind": "mistakes",
+ "day": 15,
+ "date": "2026-11-17",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I very like it.",
+   "right": "I really like it.",
+   "note": "very قبل از فعل نمیاد؛ really بگو",
+   "emoji": "red_heart"
+  },
+  {
+   "wrong": "I forgot it at home.",
+   "right": "I left it at home.",
+   "note": "«جا گذاشتم» میشه left",
+   "emoji": "house"
+  },
+  {
+   "wrong": "I lost the bus.",
+   "right": "I missed the bus.",
+   "note": "اتوبوس رو miss می‌کنی، نه lose",
+   "emoji": "bus"
+  }
+ ],
+ "caption": "۳ اشتباه رایج تو مکالمه‌ی انگلیسی ❌\nتو کدومشو می‌گفتی؟ برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

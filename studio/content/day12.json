@@ -1,0 +1,158 @@
+{
+ "day": 12,
+ "date": "2026-11-14",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«د» و «ز»",
+  "l3": "نگو!",
+  "l3emoji": "cross_mark",
+  "sub": "زبونتو بذار بین دندونات",
+  "subemoji": "tongue"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "mother",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "woman",
+   "uni": "👩",
+   "ipa": "/ˈmʌðər/",
+   "wrong": "مادِر",
+   "right": "مَذِر",
+   "fa": "مادر",
+   "tts": "mother"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "brother",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "boy",
+   "uni": "👦",
+   "ipa": "/ˈbrʌðər/",
+   "wrong": "برادِر",
+   "right": "بْرَذِر",
+   "fa": "برادر",
+   "tts": "brother"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "weather",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "sun_behind_cloud",
+   "uni": "⛅",
+   "ipa": "/ˈweðər/",
+   "wrong": "وِدِر",
+   "right": "وِذِر",
+   "fa": "آب و هوا",
+   "tts": "weather"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "father",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "man",
+   "uni": "👨",
+   "ipa": "/ˈfɑːðər/",
+   "wrong": "فادِر",
+   "right": "فاذِر",
+   "fa": "پدر",
+   "tts": "father"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "foreign",
+   "ipa": "/ˈfɔːrən/",
+   "answer": "خارجی"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "barber_pole",
+   "word": "comb",
+   "answer": "b"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "sign",
+   "options": [
+    "امضا کردن",
+    "خوابیدن",
+    "نوشیدن"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با th که",
+   "t2a": "تلفظش",
+   "t2b": "سخته؟",
+   "body": "ریپلای کن تا تو ریلزهای بعدی\nبا هم تمرینش کنیم",
+   "example": "breathe"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "این ۴ تا کلمه رو با «د» و «ز» نگو ❌\nth این‌جا یه صدای نرمه: زبونتو بذار بین دندونات 👅\n\n👩 mother = مَذِر (مادر)\n👦 brother = بْرَذِر (برادر)\n⛅ weather = وِذِر (آب و هوا)\n👨 father = فاذِر (پدر)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

@@ -1,0 +1,39 @@
+{
+ "tag": "trial12a",
+ "kind": "vocab",
+ "day": 12,
+ "date": "2026-11-14",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "very sad",
+   "right": "miserable",
+   "note": "یعنی «خیلی ناراحت»",
+   "emoji": "crying_face"
+  },
+  {
+   "wrong": "very dirty",
+   "right": "filthy",
+   "note": "یعنی «خیلی کثیف»",
+   "emoji": "wastebasket"
+  },
+  {
+   "wrong": "very clean",
+   "right": "spotless",
+   "note": "یعنی «تمیزِ تمیز»",
+   "emoji": "sparkles"
+  },
+  {
+   "wrong": "very old",
+   "right": "ancient",
+   "note": "یعنی «خیلی قدیمی»",
+   "emoji": "moai"
+  }
+ ],
+ "caption": "به جای very sad و very old اینا رو بگو 😎\nسیو کن که یادت نره 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

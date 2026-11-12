@@ -1,0 +1,39 @@
+{
+ "tag": "trial18a",
+ "kind": "vocab",
+ "day": 18,
+ "date": "2026-11-20",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "No problem.",
+   "right": "No worries!",
+   "note": "یعنی «اشکالی نداره»",
+   "emoji": "ok_hand"
+  },
+  {
+   "wrong": "Of course.",
+   "right": "Absolutely!",
+   "note": "یعنی «حتماً، صد در صد»",
+   "emoji": "thumbs_up"
+  },
+  {
+   "wrong": "I'm sorry.",
+   "right": "My bad!",
+   "note": "یعنی «تقصیر من بود» (خودمونی)",
+   "emoji": "face_with_hand_over_mouth"
+  },
+  {
+   "wrong": "Very good!",
+   "right": "Awesome!",
+   "note": "یعنی «عالیه!»",
+   "emoji": "star-struck"
+  }
+ ],
+ "caption": "این‌جوری بگی، خیلی خودمونی‌تر به نظر میای 😎\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

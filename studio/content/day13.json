@@ -1,0 +1,163 @@
+{
+ "day": 13,
+ "date": "2026-11-15",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم این ۴ تا برند",
+  "l2a": "رو",
+  "l2b": "اشتباه",
+  "l3": "می‌گی!",
+  "l3emoji": "astonished_face",
+  "sub": "انگلیسی‌ها این‌جوری می‌گن",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "{EN} آخر = «ای»",
+   "tip_en": "e",
+   "tip_emoji": "light_bulb",
+   "en": "Nike",
+   "mark": [
+    3
+   ],
+   "emoji": "running_shoe",
+   "uni": "👟",
+   "ipa": "/ˈnaɪki/",
+   "wrong": "نایک",
+   "right": "نایکی",
+   "fa": "برند ورزشی",
+   "ph": "nˈaɪki",
+   "tts": "Nike"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "تأکید روی {EN}",
+   "tip_en": "di",
+   "tip_emoji": "light_bulb",
+   "en": "Adidas",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "soccer_ball",
+   "uni": "⚽",
+   "ipa": "/əˈdiːdəs/",
+   "wrong": "آدیداس",
+   "right": "اِدیدِس",
+   "fa": "برند ورزشی",
+   "ph": "ədˈidəs",
+   "tts": "Adidas"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «هان»",
+   "tip_en": "Hyun",
+   "tip_emoji": "light_bulb",
+   "en": "Hyundai",
+   "mark": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "emoji": "automobile",
+   "uni": "🚗",
+   "ipa": "/ˈhʌndeɪ/",
+   "wrong": "هیوندای",
+   "right": "هاندِی",
+   "fa": "خودروساز کره‌ای",
+   "tts": "Hunday"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «سانگ»",
+   "tip_en": "sung",
+   "tip_emoji": "light_bulb",
+   "en": "Samsung",
+   "mark": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "emoji": "mobile_phone",
+   "uni": "📱",
+   "ipa": "/ˈsæmsʌŋ/",
+   "wrong": "سامسونگ",
+   "right": "سَمسانگ",
+   "fa": "برند موبایل",
+   "tts": "Samsung"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "weather",
+   "ipa": "/ˈweðər/",
+   "answer": "آب و هوا"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "speech_balloon",
+   "word": "answer",
+   "answer": "w"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "brother",
+   "options": [
+    "خواهر",
+    "پدر",
+    "برادر"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "اسم کدوم برند رو",
+   "t2a": "مطمئن",
+   "t2b": "نیستی؟",
+   "body": "ریپلای کن؛ شاید تو\nریلز بعدی باشه",
+   "example": "Porsche"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "اسم این ۴ تا برند رو اشتباه می‌گی 😳\nانگلیسی‌ها این‌جوری تلفظشون می‌کنن 🔊 برای دوستت بفرست\n\n👟 Nike = نایکی (برند ورزشی)\n⚽ Adidas = اِدیدِس (برند ورزشی)\n🚗 Hyundai = هاندِی (خودروساز کره‌ای)\n📱 Samsung = سَمسانگ (برند موبایل)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

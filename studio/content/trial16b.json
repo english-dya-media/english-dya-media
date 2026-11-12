@@ -1,0 +1,33 @@
+{
+ "tag": "trial16b",
+ "kind": "mistakes",
+ "day": 16,
+ "date": "2026-11-18",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Learn me English.",
+   "right": "Teach me English.",
+   "note": "یاد دادن teach، یاد گرفتن learn",
+   "emoji": "books"
+  },
+  {
+   "wrong": "I gave my exam.",
+   "right": "I took my exam.",
+   "note": "«امتحان دادم» میشه took",
+   "emoji": "memo"
+  },
+  {
+   "wrong": "Rain is coming.",
+   "right": "It's raining.",
+   "note": "«بارون میاد» میشه It's raining",
+   "emoji": "cloud_with_rain"
+  }
+ ],
+ "caption": "اینا رو کلمه به کلمه از فارسی ترجمه نکن ❌\nبرای دوستت بفرست که اونم بدونه 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

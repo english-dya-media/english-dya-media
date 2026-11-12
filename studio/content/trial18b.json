@@ -1,0 +1,33 @@
+{
+ "tag": "trial18b",
+ "kind": "mistakes",
+ "day": 18,
+ "date": "2026-11-20",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "We discussed about it.",
+   "right": "We discussed it.",
+   "note": "بعد از discuss حرف about نمیاد",
+   "emoji": "speech_balloon"
+  },
+  {
+   "wrong": "I listen music.",
+   "right": "I listen to music.",
+   "note": "بعد از listen حرف to لازمه",
+   "emoji": "headphone"
+  },
+  {
+   "wrong": "Enter to the room.",
+   "right": "Enter the room.",
+   "note": "بعد از enter حرف to نمیاد",
+   "emoji": "door"
+  }
+ ],
+ "caption": "۳ تا اشتباه که تقریباً همه می‌کنن 😬\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

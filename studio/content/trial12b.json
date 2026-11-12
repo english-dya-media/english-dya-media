@@ -1,0 +1,33 @@
+{
+ "tag": "trial12b",
+ "kind": "mistakes",
+ "day": 12,
+ "date": "2026-11-14",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Open the light.",
+   "right": "Turn on the light.",
+   "note": "چراغ رو turn on می‌کنن، نه open",
+   "emoji": "light_bulb"
+  },
+  {
+   "wrong": "He said me.",
+   "right": "He told me.",
+   "note": "«بهم گفت» میشه told me",
+   "emoji": "speech_balloon"
+  },
+  {
+   "wrong": "She is teacher.",
+   "right": "She is a teacher.",
+   "note": "قبل از شغل a لازمه",
+   "emoji": "woman_teacher"
+  }
+ ],
+ "caption": "۳ تا جمله که از فارسی ترجمه می‌کنیم ❌\nتو کدومشو می‌گفتی؟ برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

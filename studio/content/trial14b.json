@@ -1,0 +1,33 @@
+{
+ "tag": "trial14b",
+ "kind": "mistakes",
+ "day": 14,
+ "date": "2026-11-16",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I went to shopping.",
+   "right": "I went shopping.",
+   "note": "قبل از shopping حرف to نمیاد",
+   "emoji": "shopping_bags"
+  },
+  {
+   "wrong": "I'm married with her.",
+   "right": "I'm married to her.",
+   "note": "married to درسته، نه with",
+   "emoji": "ring"
+  },
+  {
+   "wrong": "Take a photo from me.",
+   "right": "Take a photo of me.",
+   "note": "عکس «از» کسی میشه of",
+   "emoji": "camera_with_flash"
+  }
+ ],
+ "caption": "تو هم این ۳ تا رو این‌جوری می‌گی؟ 🙈\nبرای کسی که همیشه این‌جوری می‌گه بفرست 😅\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

@@ -1,0 +1,154 @@
+{
+ "day": 17,
+ "date": "2026-11-19",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "مثل",
+  "l2b": "فارسی",
+  "l3": "نگو!",
+  "l3emoji": "face_with_raised_eyebrow",
+  "sub": "انگلیسیش یه جور دیگه‌ست",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "radio",
+   "mark": [
+    1
+   ],
+   "emoji": "radio",
+   "uni": "📻",
+   "ipa": "/ˈreɪdioʊ/",
+   "wrong": "رادیو",
+   "right": "رِیدیو",
+   "fa": "رادیو",
+   "tts": "radio"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اَ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "camera",
+   "mark": [
+    1
+   ],
+   "emoji": "camera",
+   "uni": "📷",
+   "ipa": "/ˈkæmərə/",
+   "wrong": "کامِرا",
+   "right": "کَمرا",
+   "fa": "دوربین",
+   "tts": "camera"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "salad",
+   "mark": [
+    3
+   ],
+   "emoji": "green_salad",
+   "uni": "🥗",
+   "ipa": "/ˈsæləd/",
+   "wrong": "سالاد",
+   "right": "سَلِد",
+   "fa": "سالاد",
+   "tts": "salad"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اَ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "piano",
+   "mark": [
+    2
+   ],
+   "emoji": "musical_keyboard",
+   "uni": "🎹",
+   "ipa": "/piˈænoʊ/",
+   "wrong": "پیانو",
+   "right": "پیَنُو",
+   "fa": "پیانو",
+   "tts": "piano"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "knee",
+   "ipa": "/niː/",
+   "answer": "زانو"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "egg",
+   "word": "yolk",
+   "answer": "l"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "knock",
+   "options": [
+    "دویدن",
+    "در زدن",
+    "پریدن"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که فارسی",
+   "t2a": "هم",
+   "t2b": "داریمش؟",
+   "body": "ریپلای کن تا تلفظ انگلیسیشو\nتو ریلزهای بعدی بگم",
+   "example": "pajamas"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "این ۴ تا کلمه رو مثل فارسی نگو 🙅\nتو فارسی هم داریمشون، ولی انگلیسیش فرق داره 🔊\n\n📻 radio = رِیدیو (رادیو)\n📷 camera = کَمرا (دوربین)\n🥗 salad = سَلِد (سالاد)\n🎹 piano = پیَنُو (پیانو)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

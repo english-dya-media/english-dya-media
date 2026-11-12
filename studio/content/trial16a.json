@@ -1,0 +1,39 @@
+{
+ "tag": "trial16a",
+ "kind": "vocab",
+ "day": 16,
+ "date": "2026-11-18",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "very easy",
+   "right": "a piece of cake",
+   "note": "یعنی «خیلی آسون»",
+   "emoji": "shortcake"
+  },
+  {
+   "wrong": "very busy",
+   "right": "swamped",
+   "note": "یعنی «سرم خیلی شلوغه»",
+   "emoji": "laptop"
+  },
+  {
+   "wrong": "very full",
+   "right": "stuffed",
+   "note": "یعنی «خیلی سیر» (بعد از غذا)",
+   "emoji": "pizza"
+  },
+  {
+   "wrong": "very sleepy",
+   "right": "drowsy",
+   "note": "یعنی «خیلی خواب‌آلود»",
+   "emoji": "yawning_face"
+  }
+ ],
+ "caption": "بومی‌ها این‌جوری حرف می‌زنن 😎\nسیو کن که یادت نره 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

@@ -1,0 +1,146 @@
+{
+ "day": 16,
+ "date": "2026-11-18",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "تو این ۴ تا کلمه",
+  "l2a": "حرف",
+  "l2b": "k",
+  "l3": "رو نخون!",
+  "l3emoji": "zipper-mouth_face",
+  "sub": "قانون: kn یعنی «ن»",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "k",
+   "en": "knee",
+   "mark": [
+    0
+   ],
+   "emoji": "leg",
+   "uni": "🦵",
+   "ipa": "/niː/",
+   "wrong": "کْنی",
+   "right": "نی",
+   "fa": "زانو",
+   "tts": "knee"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "k",
+   "en": "know",
+   "mark": [
+    0
+   ],
+   "emoji": "thinking_face",
+   "uni": "🤔",
+   "ipa": "/noʊ/",
+   "wrong": "کْنو",
+   "right": "نُو",
+   "fa": "دونستن",
+   "tts": "know"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "k",
+   "en": "knock",
+   "mark": [
+    0
+   ],
+   "emoji": "door",
+   "uni": "🚪",
+   "ipa": "/nɑːk/",
+   "wrong": "کْناک",
+   "right": "ناک",
+   "fa": "در زدن",
+   "tts": "knock"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "k",
+   "en": "knight",
+   "mark": [
+    0
+   ],
+   "emoji": "horse_face",
+   "uni": "🐴",
+   "ipa": "/naɪt/",
+   "wrong": "کْنایت",
+   "right": "نایت",
+   "fa": "شوالیه",
+   "tts": "knight"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "street",
+   "ipa": "/striːt/",
+   "answer": "خیابان"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "scissors",
+   "word": "scissors",
+   "answer": "c"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "smile",
+   "options": [
+    "لبخند",
+    "گریه",
+    "فریاد"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "کدوم حرف بی‌صدا",
+   "t2a": "بیشتر",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن؛ هفته‌ی بعد\nیه ریلز براش می‌سازم",
+   "example": "wrestle"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "تو این ۴ تا کلمه k رو نخون 🤐\nقانون: kn اول کلمه یعنی «ن» 💡\n\n🦵 knee = نی (زانو)\n🤔 know = نُو (دونستن)\n🚪 knock = ناک (در زدن)\n🐴 knight = نایت (شوالیه)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

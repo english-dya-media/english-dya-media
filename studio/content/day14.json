@@ -1,0 +1,156 @@
+{
+ "day": 14,
+ "date": "2026-11-16",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "s آخر این کلمه‌ها",
+  "l2a": "رو",
+  "l2b": "«س»",
+  "l3": "نخون!",
+  "l3emoji": "warning",
+  "sub": "بیشتر وقتا صدای «ز» میده",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ز»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "dogs",
+   "mark": [
+    3
+   ],
+   "emoji": "dog_face",
+   "uni": "🐶",
+   "ipa": "/dɔːɡz/",
+   "wrong": "داگس",
+   "right": "داگز",
+   "fa": "سگ‌ها",
+   "tts": "dogs"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ز»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "eyes",
+   "mark": [
+    3
+   ],
+   "emoji": "eyes",
+   "uni": "👀",
+   "ipa": "/aɪz/",
+   "wrong": "آیس",
+   "right": "آیز",
+   "fa": "چشم‌ها",
+   "tts": "eyes"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ایز»",
+   "tip_en": "es",
+   "tip_emoji": "light_bulb",
+   "en": "buses",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "bus",
+   "uni": "🚌",
+   "ipa": "/ˈbʌsɪz/",
+   "wrong": "باسس",
+   "right": "باسِز",
+   "fa": "اتوبوس‌ها",
+   "tts": "buses"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ایز»",
+   "tip_en": "es",
+   "tip_emoji": "light_bulb",
+   "en": "oranges",
+   "mark": [
+    5,
+    6
+   ],
+   "emoji": "tangerine",
+   "uni": "🍊",
+   "ipa": "/ˈɔːrɪndʒɪz/",
+   "wrong": "اورنجس",
+   "right": "اورِنجِز",
+   "fa": "پرتقال‌ها",
+   "tts": "oranges"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "Hyundai",
+   "ipa": "/ˈhʌndeɪ/",
+   "answer": "هاندِی"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "palm_tree",
+   "word": "palm",
+   "answer": "l"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "درستش کدومه؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "Nike",
+   "options": [
+    "نایک",
+    "نایکی",
+    "نیک"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه‌ی جمع که",
+   "t2a": "گیجت",
+   "t2b": "می‌کنه؟",
+   "body": "ریپلای کن تا تلفظ درستشو\nتو ریلزهای بعدی یادت بدم",
+   "example": "children"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "s آخر این ۴ کلمه رو «س» نخون ❌\nبعد از صداهای نرم میشه «ز»، بعد از s و ch و j میشه «ایز» 💡\n\n🐶 dogs = داگز (سگ‌ها)\n👀 eyes = آیز (چشم‌ها)\n🚌 buses = باسِز (اتوبوس‌ها)\n🍊 oranges = اورِنجِز (پرتقال‌ها)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

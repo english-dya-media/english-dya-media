@@ -1,0 +1,160 @@
+{
+ "day": 15,
+ "date": "2026-11-17",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«اِ»",
+  "l3": "شروع نکن!",
+  "l3emoji": "cross_mark",
+  "sub": "انگلیسی‌ها مستقیم با s شروع می‌کنن",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "sch",
+   "tip_emoji": "light_bulb",
+   "en": "school",
+   "mark": [
+    0,
+    1,
+    2
+   ],
+   "emoji": "school",
+   "uni": "🏫",
+   "ipa": "/skuːl/",
+   "wrong": "اِسکول",
+   "right": "سْکول",
+   "fa": "مدرسه",
+   "tts": "school"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "str",
+   "tip_emoji": "light_bulb",
+   "en": "street",
+   "mark": [
+    0,
+    1,
+    2
+   ],
+   "emoji": "motorway",
+   "uni": "🛣️",
+   "ipa": "/striːt/",
+   "wrong": "اِستریت",
+   "right": "سْتْریت",
+   "fa": "خیابان",
+   "tts": "street"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "sm",
+   "tip_emoji": "light_bulb",
+   "en": "smile",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "smiling_face_with_smiling_eyes",
+   "uni": "😊",
+   "ipa": "/smaɪl/",
+   "wrong": "اِسمایل",
+   "right": "سْمایل",
+   "fa": "لبخند",
+   "tts": "smile"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "sp",
+   "tip_emoji": "light_bulb",
+   "en": "sport",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "basketball",
+   "uni": "🏀",
+   "ipa": "/spɔːrt/",
+   "wrong": "اِسپُرت",
+   "right": "سْپُرت",
+   "fa": "ورزش",
+   "tts": "sport"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "oranges",
+   "ipa": "/ˈɔːrɪndʒɪz/",
+   "answer": "پرتقال‌ها"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "wrapped_gift",
+   "word": "wrap",
+   "answer": "w"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "eyes",
+   "options": [
+    "گوش‌ها",
+    "دست‌ها",
+    "چشم‌ها"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که با",
+   "t2a": "«اِ»",
+   "t2b": "شروعش می‌کنی؟",
+   "body": "ریپلای کن تا تو ریلزهای بعدی\nتلفظ درستشو بگم",
+   "example": "Spain"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "این ۴ تا کلمه رو با «اِ» شروع نکن ❌\ns اول کلمه بدون «اِ» گفته میشه؛ بلند تکرار کن 🔊\n\n🏫 school = سْکول (مدرسه)\n🛣️ street = سْتْریت (خیابان)\n😊 smile = سْمایل (لبخند)\n🏀 sport = سْپُرت (ورزش)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}
