@@ -1,0 +1,158 @@
+{
+ "day": 61,
+ "date": "2027-01-02",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا فعل رو",
+  "l2a": "با",
+  "l2b": "«اِد»",
+  "l3": "نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "loved میشه «لاوْد»، نه «لاوِد»",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «د»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "loved",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "red_heart",
+   "uni": "❤️",
+   "ipa": "/lʌvd/",
+   "wrong": "لاوِد",
+   "right": "لاوْد",
+   "fa": "دوست داشت",
+   "tts": "loved"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «د»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "rained",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "cloud_with_rain",
+   "uni": "🌧️",
+   "ipa": "/reɪnd/",
+   "wrong": "رِینِد",
+   "right": "رِیند",
+   "fa": "بارون اومد",
+   "tts": "rained"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «د»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "hugged",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "people_hugging",
+   "uni": "🫂",
+   "ipa": "/hʌɡd/",
+   "wrong": "هاگِد",
+   "right": "هاگْد",
+   "fa": "بغل کرد",
+   "tts": "hugged"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «د»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "closed",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "locked",
+   "uni": "🔒",
+   "ipa": "/kloʊzd/",
+   "wrong": "کلوزِد",
+   "right": "کْلُوزد",
+   "fa": "بست؛ بسته",
+   "tts": "closed"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "June",
+   "ipa": "/dʒuːn/",
+   "answer": "ژوئن"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "cookie",
+   "word": "crumb",
+   "answer": "b"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "درستش کدومه؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "February",
+   "options": [
+    "فوریه",
+    "فِبْروئِری",
+    "فِبیوئِری"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "کدوم فعل گذشته",
+   "t2a": "رو",
+   "t2b": "شک داری؟",
+   "body": "ریپلای کن؛ تو ریلزهای بعدی\nتلفظشو می‌گم",
+   "example": "changed"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "hugged رو «هاگِد» نخون ❌\ned این ۴ تا فعل فقط یه «د»ه، بدون «اِ» 💡 سیو کن\n\n❤️ loved = لاوْد (دوست داشت)\n🌧️ rained = رِیند (بارون اومد)\n🫂 hugged = هاگْد (بغل کرد)\n🔒 closed = کْلُوزد (بست؛ بسته)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

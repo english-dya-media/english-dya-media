@@ -1,0 +1,39 @@
+{
+ "tag": "trial80a",
+ "kind": "vocab",
+ "day": 80,
+ "date": "2027-01-21",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "smart and quick",
+   "right": "sharp",
+   "note": "یعنی «تیز، باهوش»",
+   "emoji": "brain"
+  },
+  {
+   "wrong": "naturally talented",
+   "right": "gifted",
+   "note": "یعنی «بااستعداد»",
+   "emoji": "glowing_star"
+  },
+  {
+   "wrong": "has no idea",
+   "right": "clueless",
+   "note": "یعنی «بی‌خبر، گیج»",
+   "emoji": "face_with_spiral_eyes"
+  },
+  {
+   "wrong": "not serious, funny",
+   "right": "silly",
+   "note": "یعنی «بامزه، لوس، احمقانه»",
+   "emoji": "zany_face"
+  }
+ ],
+ "caption": "به جای smart و stupid این ۴ تا رو بگو 🧠\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

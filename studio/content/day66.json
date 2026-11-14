@@ -1,0 +1,159 @@
+{
+ "day": 66,
+ "date": "2027-01-07",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«اِ»",
+  "l3": "شروع نکن!",
+  "l3emoji": "cross_mark",
+  "sub": "st، squ، sl و sc بدون «اِ»",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "st",
+   "tip_emoji": "light_bulb",
+   "en": "station",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "station",
+   "uni": "🚉",
+   "ipa": "/ˈsteɪʃən/",
+   "wrong": "اِستیشن",
+   "right": "سْتِیشِن",
+   "fa": "ایستگاه",
+   "tts": "station"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "squ",
+   "tip_emoji": "light_bulb",
+   "en": "square",
+   "mark": [
+    0,
+    1,
+    2
+   ],
+   "emoji": "red_square",
+   "uni": "🟥",
+   "ipa": "/skwer/",
+   "wrong": "اِسکوئر",
+   "right": "سْکوِر",
+   "fa": "مربع؛ میدان",
+   "tts": "square"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "sl",
+   "tip_emoji": "light_bulb",
+   "en": "slow",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "snail",
+   "uni": "🐌",
+   "ipa": "/sloʊ/",
+   "wrong": "اِسلو",
+   "right": "سْلُو",
+   "fa": "آهسته",
+   "tts": "slow"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "sc",
+   "tip_emoji": "light_bulb",
+   "en": "scarf",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "scarf",
+   "uni": "🧣",
+   "ipa": "/skɑːrf/",
+   "wrong": "اِسکارف",
+   "right": "سْکارف",
+   "fa": "شال گردن",
+   "tts": "scarf"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "horses",
+   "ipa": "/ˈhɔːrsɪz/",
+   "answer": "هُرسیز"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ج» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "t-rex",
+   "word": "giant",
+   "answer": "g"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "pages",
+   "options": [
+    "کتاب‌ها",
+    "صفحه‌ها",
+    "قدم‌ها"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "سخت‌ترین کلمه",
+   "t2a": "برای",
+   "t2b": "تو؟",
+   "body": "ریپلای کن؛ شاید تو\nریلز بعدی باشه",
+   "example": "strength"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "station رو «اِستیشن» نگو ❌\nمستقیم با s شروع کن: «سْتِیشِن» 💡 سیو کن\n\n🚉 station = سْتِیشِن (ایستگاه)\n🟥 square = سْکوِر (مربع؛ میدان)\n🐌 slow = سْلُو (آهسته)\n🧣 scarf = سْکارف (شال گردن)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

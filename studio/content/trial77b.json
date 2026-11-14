@@ -1,0 +1,33 @@
+{
+ "tag": "trial77b",
+ "kind": "mistakes",
+ "day": 77,
+ "date": "2027-01-18",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "How many money?",
+   "right": "How much money?",
+   "note": "money شمردنی نیست؛ much",
+   "emoji": "money_bag"
+  },
+  {
+   "wrong": "How much people?",
+   "right": "How many people?",
+   "note": "people شمردنیه؛ many",
+   "emoji": "busts_in_silhouette"
+  },
+  {
+   "wrong": "A few water",
+   "right": "A little water",
+   "note": "برای غیرشمردنی: a little",
+   "emoji": "droplet"
+  }
+ ],
+ "caption": "much یا many؟ این ۳ تا رو قاطی نکن ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

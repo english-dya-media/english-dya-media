@@ -1,0 +1,154 @@
+{
+ "day": 75,
+ "date": "2027-01-16",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم روزای هفته",
+  "l2a": "رو",
+  "l2b": "درست",
+  "l3": "بگو!",
+  "l3emoji": "spiral_calendar",
+  "sub": "Monday «موندی» نیست!",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آ»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "Monday",
+   "mark": [
+    1
+   ],
+   "emoji": "spiral_calendar",
+   "uni": "🗓️",
+   "ipa": "/ˈmʌndeɪ/",
+   "wrong": "موندی",
+   "right": "ماندِی",
+   "fa": "دوشنبه",
+   "tts": "Monday"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ز»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "Tuesday",
+   "mark": [
+    3
+   ],
+   "emoji": "tear-off_calendar",
+   "uni": "📆",
+   "ipa": "/ˈtuːzdeɪ/",
+   "wrong": "توسدی",
+   "right": "توزدِی",
+   "fa": "سه‌شنبه",
+   "tts": "Tuesday"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "Saturday",
+   "mark": [
+    2
+   ],
+   "emoji": "party_popper",
+   "uni": "🎉",
+   "ipa": "/ˈsæɾərdeɪ/",
+   "wrong": "ساتوردی",
+   "right": "سَدِردِی",
+   "fa": "شنبه",
+   "tts": "Saturday"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آ»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "Sunday",
+   "mark": [
+    1
+   ],
+   "emoji": "sun",
+   "uni": "☀️",
+   "ipa": "/ˈsʌndeɪ/",
+   "wrong": "سوندی",
+   "right": "ساندِی",
+   "fa": "یکشنبه",
+   "tts": "Sunday"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "charger",
+   "ipa": "/ˈtʃɑːrdʒər/",
+   "answer": "چارجِر"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "musical_notes",
+   "word": "rhyme",
+   "answer": "h"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "درستش کدومه؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "battery",
+   "options": [
+    "باتری",
+    "بِیتِری",
+    "بَدِری"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "کدوم روز هفته",
+   "t2a": "رو",
+   "t2b": "دوست داری؟",
+   "body": "ریپلای کن؛ به انگلیسی\nبنویسش",
+   "example": "Friday"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "Monday رو «موندی» نخون ❌\nاسم این ۴ تا روز رو این‌جوری بگو 🔊 برای دوستت بفرست\n\n🗓️ Monday = ماندِی (دوشنبه)\n📆 Tuesday = توزدِی (سه‌شنبه)\n🎉 Saturday = سَدِردِی (شنبه)\n☀️ Sunday = ساندِی (یکشنبه)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

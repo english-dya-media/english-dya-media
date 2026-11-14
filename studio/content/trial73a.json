@@ -1,0 +1,39 @@
+{
+ "tag": "trial73a",
+ "kind": "vocab",
+ "day": 73,
+ "date": "2027-01-14",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی سفر",
+ "head_emoji": "airplane",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "two-way ticket",
+   "right": "round trip",
+   "note": "یعنی «بلیت رفت و برگشت»",
+   "emoji": "ticket"
+  },
+  {
+   "wrong": "a stop between flights",
+   "right": "layover",
+   "note": "یعنی «توقف بین دو پرواز»",
+   "emoji": "airplane_departure"
+  },
+  {
+   "wrong": "tired after a flight",
+   "right": "jet lag",
+   "note": "یعنی «به‌هم‌ریختگی ساعت خواب»",
+   "emoji": "sleeping_face"
+  },
+  {
+   "wrong": "small bag on the plane",
+   "right": "carry-on",
+   "note": "یعنی «چمدون دستی»",
+   "emoji": "luggage"
+  }
+ ],
+ "caption": "قبل از سفر این ۴ تا رو یاد بگیر ✈️\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

@@ -1,0 +1,158 @@
+{
+ "day": 65,
+ "date": "2027-01-06",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "es آخر این کلمه‌ها",
+  "l2a": "یه",
+  "l2b": "«ایز»",
+  "l3": "کامله!",
+  "l3emoji": "speaker_high_volume",
+  "sub": "houses میشه «هاوزیز»",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ایز»",
+   "tip_en": "es",
+   "tip_emoji": "light_bulb",
+   "en": "houses",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "houses",
+   "uni": "🏘️",
+   "ipa": "/ˈhaʊzɪz/",
+   "wrong": "هاوسِس",
+   "right": "هاوزیز",
+   "fa": "خونه‌ها",
+   "tts": "houses"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ایز»",
+   "tip_en": "es",
+   "tip_emoji": "light_bulb",
+   "en": "horses",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "horse",
+   "uni": "🐎",
+   "ipa": "/ˈhɔːrsɪz/",
+   "wrong": "هورسز",
+   "right": "هُرسیز",
+   "fa": "اسب‌ها",
+   "tts": "horses"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ایز»",
+   "tip_en": "es",
+   "tip_emoji": "light_bulb",
+   "en": "prizes",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "trophy",
+   "uni": "🏆",
+   "ipa": "/ˈpraɪzɪz/",
+   "wrong": "پرایزز",
+   "right": "پرایزیز",
+   "fa": "جایزه‌ها",
+   "tts": "prizes"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ایز»",
+   "tip_en": "es",
+   "tip_emoji": "light_bulb",
+   "en": "pages",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "page_facing_up",
+   "uni": "📄",
+   "ipa": "/ˈpeɪdʒɪz/",
+   "wrong": "پِیجز",
+   "right": "پِیجیز",
+   "fa": "صفحه‌ها",
+   "tts": "pages"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "athlete",
+   "ipa": "/ˈæθliːt/",
+   "answer": "ورزشکار"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "airplane",
+   "word": "aisle",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "author",
+   "options": [
+    "نویسنده",
+    "خواننده",
+    "معلم"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه‌ی جمع",
+   "t2a": "که",
+   "t2b": "سخته؟",
+   "body": "ریپلای کن تا تو ریلزهای بعدی\nتلفظشو بگم",
+   "example": "watches"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "houses رو «هاوسِس» نخون ❌\nبعد از صدای «س»، «ز» و «ج» جمع میشه «ایز» 💡 برای دوستت بفرست\n\n🏘️ houses = هاوزیز (خونه‌ها)\n🐎 horses = هُرسیز (اسب‌ها)\n🏆 prizes = پرایزیز (جایزه‌ها)\n📄 pages = پِیجیز (صفحه‌ها)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

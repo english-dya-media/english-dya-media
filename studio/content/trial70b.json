@@ -1,0 +1,33 @@
+{
+ "tag": "trial70b",
+ "kind": "mistakes",
+ "day": 70,
+ "date": "2027-01-11",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Don't be tired!",
+   "right": "Thanks for today!",
+   "note": "«خسته نباشید» رو این‌جوری بگو",
+   "emoji": "folded_hands"
+  },
+  {
+   "wrong": "Your hand not hurt!",
+   "right": "Thanks a million!",
+   "note": "«دستت درد نکنه» رو این‌جوری بگو",
+   "emoji": "raising_hands"
+  },
+  {
+   "wrong": "Eat with health!",
+   "right": "Enjoy!",
+   "note": "«نوش جان» رو این‌جوری بگو",
+   "emoji": "fork_and_knife_with_plate"
+  }
+ ],
+ "caption": "تعارف‌های فارسی رو کلمه به کلمه ترجمه نکن 😅\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

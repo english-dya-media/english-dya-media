@@ -1,0 +1,162 @@
+{
+ "day": 67,
+ "date": "2027-01-08",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«اژ»",
+  "l3": "نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "age آخرشون میشه «ایج»",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "{EN} آخرش «ج»ه، نه «ژ»",
+   "tip_en": "age",
+   "tip_emoji": "light_bulb",
+   "en": "village",
+   "mark": [
+    4,
+    5,
+    6
+   ],
+   "emoji": "house_with_garden",
+   "uni": "🏡",
+   "ipa": "/ˈvɪlɪdʒ/",
+   "wrong": "ویلاژ",
+   "right": "ویلِج",
+   "fa": "روستا",
+   "tts": "village"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} آخرش «ج»ه، نه «ژ»",
+   "tip_en": "age",
+   "tip_emoji": "light_bulb",
+   "en": "image",
+   "mark": [
+    2,
+    3,
+    4
+   ],
+   "emoji": "framed_picture",
+   "uni": "🖼️",
+   "ipa": "/ˈɪmɪdʒ/",
+   "wrong": "ایماژ",
+   "right": "ایمِج",
+   "fa": "تصویر",
+   "tts": "image"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} آخرش «ج»ه، نه «ژ»",
+   "tip_en": "age",
+   "tip_emoji": "light_bulb",
+   "en": "passage",
+   "mark": [
+    4,
+    5,
+    6
+   ],
+   "emoji": "open_book",
+   "uni": "📖",
+   "ipa": "/ˈpæsɪdʒ/",
+   "wrong": "پاساژ",
+   "right": "پَسِج",
+   "fa": "متن؛ گذرگاه",
+   "tts": "passage"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} آخرش «ج»ه، نه «ژ»",
+   "tip_en": "age",
+   "tip_emoji": "light_bulb",
+   "en": "voyage",
+   "mark": [
+    3,
+    4,
+    5
+   ],
+   "emoji": "passenger_ship",
+   "uni": "🛳️",
+   "ipa": "/ˈvɔɪɪdʒ/",
+   "wrong": "وویاژ",
+   "right": "وُیِج",
+   "fa": "سفر دریایی",
+   "tts": "voyage"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "scarf",
+   "ipa": "/skɑːrf/",
+   "answer": "شال گردن"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "oncoming_fist",
+   "word": "knuckle",
+   "answer": "k"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "station",
+   "options": [
+    "اتوبوس",
+    "فرودگاه",
+    "ایستگاه"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه‌ی فرانسوی",
+   "t2a": "که",
+   "t2b": "انگلیسیش؟",
+   "body": "ریپلای کن؛ تلفظ انگلیسیشو\nبرات می‌گم",
+   "example": "massage"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "passage «پاساژ» نیست ❌\nage آخر این ۴ تا کلمه «ج»ه، نه «ژ» 💡 برای دوستت بفرست\n\n🏡 village = ویلِج (روستا)\n🖼️ image = ایمِج (تصویر)\n📖 passage = پَسِج (متن؛ گذرگاه)\n🛳️ voyage = وُیِج (سفر دریایی)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

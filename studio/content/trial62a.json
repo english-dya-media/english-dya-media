@@ -1,0 +1,39 @@
+{
+ "tag": "trial62a",
+ "kind": "vocab",
+ "day": 62,
+ "date": "2027-01-03",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "مثل بومی‌ها جواب بده",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "That's reasonable.",
+   "right": "Fair enough.",
+   "note": "یعنی «منطقیه، قبول»",
+   "emoji": "ok_hand"
+  },
+  {
+   "wrong": "I'll come too!",
+   "right": "Count me in!",
+   "note": "یعنی «منم هستم!»",
+   "emoji": "raising_hands"
+  },
+  {
+   "wrong": "It's not important.",
+   "right": "No big deal.",
+   "note": "یعنی «مهم نیست، چیزی نیست»",
+   "emoji": "relieved_face"
+  },
+  {
+   "wrong": "Of course!",
+   "right": "You bet!",
+   "note": "یعنی «معلومه! حتماً»",
+   "emoji": "thumbs_up"
+  }
+ ],
+ "caption": "جواب‌هایی که بومی‌ها هر روز می‌دن 😎\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

@@ -1,0 +1,39 @@
+{
+ "tag": "trial81a",
+ "kind": "vocab",
+ "day": 81,
+ "date": "2027-01-22",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی کافه و رستوران",
+ "head_emoji": "hot_beverage",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "coffee to take away",
+   "right": "to go",
+   "note": "یعنی «بیرون‌بر»",
+   "emoji": "hot_beverage"
+  },
+  {
+   "wrong": "the bill (at a cafe)",
+   "right": "the check",
+   "note": "یعنی «صورت‌حساب» به آمریکایی",
+   "emoji": "receipt"
+  },
+  {
+   "wrong": "extra money for waiter",
+   "right": "tip",
+   "note": "یعنی «انعام»",
+   "emoji": "coin"
+  },
+  {
+   "wrong": "booking a table",
+   "right": "reservation",
+   "note": "یعنی «رزرو»",
+   "emoji": "spiral_calendar"
+  }
+ ],
+ "caption": "تو کافه و رستوران این‌جوری حرف بزن ☕\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

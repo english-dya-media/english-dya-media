@@ -1,0 +1,158 @@
+{
+ "day": 64,
+ "date": "2027-01-05",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«ت»",
+  "l3": "نگو!",
+  "l3emoji": "cross_mark",
+  "sub": "th این‌جا «ث»ه، با زبون بین دندون‌ها",
+  "subemoji": "tongue"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "bathroom",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "bathtub",
+   "uni": "🛁",
+   "ipa": "/ˈbæθruːm/",
+   "wrong": "باتروم",
+   "right": "بَثروم",
+   "fa": "حموم؛ دستشویی",
+   "tts": "bathroom"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "math",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "abacus",
+   "uni": "🧮",
+   "ipa": "/mæθ/",
+   "wrong": "مَت",
+   "right": "مَث",
+   "fa": "ریاضی",
+   "tts": "math"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "author",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "writing_hand",
+   "uni": "✍️",
+   "ipa": "/ˈɔːθər/",
+   "wrong": "آتور",
+   "right": "آثِر",
+   "fa": "نویسنده",
+   "tts": "author"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "athlete",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "sports_medal",
+   "uni": "🏅",
+   "ipa": "/ˈæθliːt/",
+   "wrong": "اَتلت",
+   "right": "اَثلیت",
+   "fa": "ورزشکار",
+   "tts": "athlete"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "Volkswagen",
+   "ipa": "/ˈvoʊkswæɡən/",
+   "answer": "وُکس‌وَگِن"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ف» میده؟",
+   "hint": "راهنما: حرف‌هاشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "speech_balloon",
+   "word": "phrase",
+   "answer": "ph"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "درستش کدومه؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "Nestle",
+   "options": [
+    "نستله",
+    "نِستِل",
+    "نِسلِی"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "درس مورد علاقه‌ت",
+   "t2a": "به",
+   "t2b": "انگلیسی؟",
+   "body": "ریپلای کن؛ تلفظشو\nبرات می‌فرستم",
+   "example": "chemistry"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "math رو «مَت» نگو ❌\nth این‌جا «ث»ه: زبون بین دندون‌ها و فوت 👅 سیو کن\n\n🛁 bathroom = بَثروم (حموم؛ دستشویی)\n🧮 math = مَث (ریاضی)\n✍️ author = آثِر (نویسنده)\n🏅 athlete = اَثلیت (ورزشکار)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

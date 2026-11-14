@@ -1,0 +1,156 @@
+{
+ "day": 80,
+ "date": "2027-01-21",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "تو این ۴ تا کلمه",
+  "l2a": "s",
+  "l2b": "«ش»ه!",
+  "l3": "نه «س»",
+  "l3emoji": "light_bulb",
+  "sub": "sugar میشه «شُگِر»",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ش»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "sugar",
+   "mark": [
+    0
+   ],
+   "emoji": "candy",
+   "uni": "🍬",
+   "ipa": "/ˈʃʊɡər/",
+   "wrong": "سوگار",
+   "right": "شُگِر",
+   "fa": "شکر",
+   "tts": "sugar"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ش»",
+   "tip_en": "ss",
+   "tip_emoji": "light_bulb",
+   "en": "tissue",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "roll_of_paper",
+   "uni": "🧻",
+   "ipa": "/ˈtɪʃuː/",
+   "wrong": "تیسو",
+   "right": "تیشو",
+   "fa": "دستمال کاغذی",
+   "tts": "tissue"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ش»",
+   "tip_en": "ss",
+   "tip_emoji": "light_bulb",
+   "en": "issue",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "warning",
+   "uni": "⚠️",
+   "ipa": "/ˈɪʃuː/",
+   "wrong": "ایسو",
+   "right": "ایشو",
+   "fa": "مسئله، مشکل",
+   "tts": "issue"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ش»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "insurance",
+   "mark": [
+    2
+   ],
+   "emoji": "shield",
+   "uni": "🛡️",
+   "ipa": "/ɪnˈʃʊrəns/",
+   "wrong": "اینسورانس",
+   "right": "اینشورِنس",
+   "fa": "بیمه",
+   "tts": "insurance"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "oxygen",
+   "ipa": "/ˈɑːksɪdʒən/",
+   "answer": "آکسیجِن"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ج» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "graduation_cap",
+   "word": "graduate",
+   "answer": "d"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "laboratory",
+   "options": [
+    "کتابخونه",
+    "آزمایشگاه",
+    "بیمارستان"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که",
+   "t2a": "صدای",
+   "t2b": "«ش» داره؟",
+   "body": "ریپلای کن؛ تو ریلزهای بعدی\nبا هم تمرینش کنیم",
+   "example": "machine"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "sugar رو «سوگار» نخون ❌\ns تو این ۴ تا کلمه «ش»ه 💡 برای دوستت بفرست\n\n🍬 sugar = شُگِر (شکر)\n🧻 tissue = تیشو (دستمال کاغذی)\n⚠️ issue = ایشو (مسئله، مشکل)\n🛡️ insurance = اینشورِنس (بیمه)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

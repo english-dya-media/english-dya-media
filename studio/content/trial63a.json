@@ -1,0 +1,39 @@
+{
+ "tag": "trial63a",
+ "kind": "vocab",
+ "day": 63,
+ "date": "2027-01-04",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "هوا رو حرفه‌ای توصیف کن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "It's raining a little.",
+   "right": "It's drizzling.",
+   "note": "یعنی «نم‌نم بارون میاد»",
+   "emoji": "cloud_with_rain"
+  },
+  {
+   "wrong": "It's a little cold.",
+   "right": "It's chilly.",
+   "note": "یعنی «هوا یه کم سرده»",
+   "emoji": "cold_face"
+  },
+  {
+   "wrong": "It's hot and humid.",
+   "right": "It's muggy.",
+   "note": "یعنی «هوا شرجی و دمه»",
+   "emoji": "hot_face"
+  },
+  {
+   "wrong": "It's very cloudy.",
+   "right": "It's overcast.",
+   "note": "یعنی «آسمون کاملاً ابریه»",
+   "emoji": "cloud"
+  }
+ ],
+ "caption": "هوا رو مثل بومی‌ها توصیف کن ☁️\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

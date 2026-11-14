@@ -1,0 +1,33 @@
+{
+ "tag": "trial71b",
+ "kind": "mistakes",
+ "day": 71,
+ "date": "2027-01-12",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I have car.",
+   "right": "I have a car.",
+   "note": "قبل از اسم مفرد a لازمه",
+   "emoji": "automobile"
+  },
+  {
+   "wrong": "I had a breakfast.",
+   "right": "I had breakfast.",
+   "note": "وعده‌های غذا a نمی‌گیرن",
+   "emoji": "cooking"
+  },
+  {
+   "wrong": "He's at the work.",
+   "right": "He's at work.",
+   "note": "at work بدون the",
+   "emoji": "office_building"
+  }
+ ],
+ "caption": "a و the رو این‌جا اشتباه می‌ذاری ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

@@ -1,0 +1,33 @@
+{
+ "tag": "trial74b",
+ "kind": "mistakes",
+ "day": 74,
+ "date": "2027-01-15",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Why are you nervous?",
+   "right": "Why are you upset?",
+   "note": "«عصبانی» = upset، نه nervous",
+   "emoji": "pouting_face"
+  },
+  {
+   "wrong": "Control your answers.",
+   "right": "Check your answers.",
+   "note": "«کنترل کردن» این‌جا یعنی check",
+   "emoji": "check_mark_button"
+  },
+  {
+   "wrong": "Pass a good time!",
+   "right": "Have a good time!",
+   "note": "«خوش بگذره» = have a good time",
+   "emoji": "party_popper"
+  }
+ ],
+ "caption": "کلمه به کلمه از فارسی ترجمه نکن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

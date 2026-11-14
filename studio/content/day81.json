@@ -1,0 +1,158 @@
+{
+ "day": 81,
+ "date": "2027-01-22",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "سفارش تو کافه",
+  "l2a": "رو",
+  "l2b": "درست",
+  "l3": "بگو!",
+  "l3emoji": "hot_beverage",
+  "sub": "espresso «اکسپرسو» نیست!",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ی»",
+   "tip_en": "ee",
+   "tip_emoji": "light_bulb",
+   "en": "coffee",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "hot_beverage",
+   "uni": "☕",
+   "ipa": "/ˈkɔːfi/",
+   "wrong": "کافه",
+   "right": "کافی",
+   "fa": "قهوه",
+   "tts": "coffee"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «س»، نه «کس»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "espresso",
+   "mark": [
+    1
+   ],
+   "emoji": "teacup_without_handle",
+   "uni": "🍵",
+   "ipa": "/eˈspresoʊ/",
+   "wrong": "اکسپرسو",
+   "right": "اِسپرِسُو",
+   "fa": "اسپرسو",
+   "tts": "espresso"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ذ»",
+   "tip_en": "th",
+   "tip_emoji": "light_bulb",
+   "en": "smoothie",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "cup_with_straw",
+   "uni": "🥤",
+   "ipa": "/ˈsmuːði/",
+   "wrong": "اسموتی",
+   "right": "سْموذی",
+   "fa": "اسموتی",
+   "tts": "smoothie"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِید»",
+   "tip_en": "ade",
+   "tip_emoji": "light_bulb",
+   "en": "lemonade",
+   "mark": [
+    5,
+    6,
+    7
+   ],
+   "emoji": "lemon",
+   "uni": "🍋",
+   "ipa": "/ˌleməˈneɪd/",
+   "wrong": "لیموناد",
+   "right": "لِمِنِید",
+   "fa": "لیموناد",
+   "tts": "lemonade"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "tissue",
+   "ipa": "/ˈtɪʃuː/",
+   "answer": "دستمال کاغذی"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "door",
+   "word": "cupboard",
+   "answer": "p"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "issue",
+   "options": [
+    "مسئله، مشکل",
+    "جواب",
+    "سؤال"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "تو کافه",
+   "t2a": "چی",
+   "t2b": "سفارش می‌دی؟",
+   "body": "ریپلای کن؛ تلفظ انگلیسیشو\nبرات می‌گم",
+   "example": "cappuccino"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "espresso رو «اکسپرسو» نگو ❌\nتو کافه این ۴ تا رو این‌جوری سفارش بده ☕ برای رفیق کافه‌گردت بفرست\n\n☕ coffee = کافی (قهوه)\n🍵 espresso = اِسپرِسُو (اسپرسو)\n🥤 smoothie = سْموذی (اسموتی)\n🍋 lemonade = لِمِنِید (لیموناد)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

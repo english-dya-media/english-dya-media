@@ -1,0 +1,39 @@
+{
+ "tag": "trial71a",
+ "kind": "vocab",
+ "day": 71,
+ "date": "2027-01-12",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "eat in small bites",
+   "right": "nibble",
+   "note": "یعنی «نوک زدن، کم‌کم خوردن»",
+   "emoji": "mouse_face"
+  },
+  {
+   "wrong": "eat very hungrily",
+   "right": "devour",
+   "note": "یعنی «با ولع بلعیدن»",
+   "emoji": "hamburger"
+  },
+  {
+   "wrong": "drink very fast",
+   "right": "gulp",
+   "note": "یعنی «یه‌نفس سر کشیدن»",
+   "emoji": "cup_with_straw"
+  },
+  {
+   "wrong": "drink with noise",
+   "right": "slurp",
+   "note": "یعنی «هورت کشیدن»",
+   "emoji": "steaming_bowl"
+  }
+ ],
+ "caption": "به جای eat و drink این ۴ تا رو بگو 😋\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

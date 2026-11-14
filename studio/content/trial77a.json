@@ -1,0 +1,39 @@
+{
+ "tag": "trial77a",
+ "kind": "vocab",
+ "day": 77,
+ "date": "2027-01-18",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "Is it true?",
+   "right": "For real?",
+   "note": "یعنی «جدی؟ واقعاً؟»",
+   "emoji": "face_with_raised_eyebrow"
+  },
+  {
+   "wrong": "Really?!",
+   "right": "Are you serious?",
+   "note": "یعنی «جدی می‌گی؟»",
+   "emoji": "astonished_face"
+  },
+  {
+   "wrong": "Wow, unbelievable!",
+   "right": "Get out of here!",
+   "note": "یعنی «برو بابا! باورم نمیشه»",
+   "emoji": "exploding_head"
+  },
+  {
+   "wrong": "What?!",
+   "right": "You're kidding!",
+   "note": "یعنی «شوخی می‌کنی!»",
+   "emoji": "face_with_open_mouth"
+  }
+ ],
+ "caption": "تعجب‌تو مثل بومی‌ها نشون بده 😲\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

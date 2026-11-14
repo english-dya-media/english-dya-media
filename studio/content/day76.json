@@ -1,0 +1,162 @@
+{
+ "day": 76,
+ "date": "2027-01-17",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه‌ی",
+  "l2a": "دانشگاهی",
+  "l2b": "رو",
+  "l3": "درست بگو",
+  "l3emoji": "graduation_cap",
+  "sub": "thesis «تز» نیست!",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "آخرش {EN} = «سیس»",
+   "tip_en": "sis",
+   "tip_emoji": "light_bulb",
+   "en": "crisis",
+   "mark": [
+    3,
+    4,
+    5
+   ],
+   "emoji": "warning",
+   "uni": "⚠️",
+   "ipa": "/ˈkraɪsɪs/",
+   "wrong": "کریز",
+   "right": "کْرایسیس",
+   "fa": "بحران",
+   "tts": "crisis"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "آخرش {EN} = «سیس»",
+   "tip_en": "sis",
+   "tip_emoji": "light_bulb",
+   "en": "thesis",
+   "mark": [
+    3,
+    4,
+    5
+   ],
+   "emoji": "graduation_cap",
+   "uni": "🎓",
+   "ipa": "/ˈθiːsɪs/",
+   "wrong": "تز",
+   "right": "ثیسیس",
+   "fa": "پایان‌نامه",
+   "tts": "thesis"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "آخرش {EN} = «سیس»",
+   "tip_en": "sis",
+   "tip_emoji": "light_bulb",
+   "en": "analysis",
+   "mark": [
+    5,
+    6,
+    7
+   ],
+   "emoji": "bar_chart",
+   "uni": "📊",
+   "ipa": "/əˈnæləsɪs/",
+   "wrong": "آنالیز",
+   "right": "اِنَلِسیس",
+   "fa": "تحلیل",
+   "tts": "analysis"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "آخرش {EN} = «سیس»",
+   "tip_en": "sis",
+   "tip_emoji": "light_bulb",
+   "en": "diagnosis",
+   "mark": [
+    6,
+    7,
+    8
+   ],
+   "emoji": "stethoscope",
+   "uni": "🩺",
+   "ipa": "/ˌdaɪəɡˈnoʊsɪs/",
+   "wrong": "دیاگنوز",
+   "right": "دایِگنُوسیس",
+   "fa": "تشخیص (بیماری)",
+   "tts": "diagnosis"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "Saturday",
+   "ipa": "/ˈsæɾərdeɪ/",
+   "answer": "شنبه"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «چ» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "framed_picture",
+   "word": "picture",
+   "answer": "t"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "Sunday",
+   "options": [
+    "شنبه",
+    "یکشنبه",
+    "دوشنبه"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "رشته‌ی تحصیلیت",
+   "t2a": "به",
+   "t2b": "انگلیسی؟",
+   "body": "ریپلای کن؛ اسم انگلیسیشو\nبرات می‌گم",
+   "example": "engineering"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "thesis «تز» نیست و crisis «کریز» نیست ❌\nاین ۴ تا کلمه آخرشون «سیس» داره 🎓 برای همکلاسیت بفرست\n\n⚠️ crisis = کْرایسیس (بحران)\n🎓 thesis = ثیسیس (پایان‌نامه)\n📊 analysis = اِنَلِسیس (تحلیل)\n🩺 diagnosis = دایِگنُوسیس (تشخیص (بیماری))\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

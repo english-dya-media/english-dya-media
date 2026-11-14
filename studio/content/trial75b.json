@@ -1,0 +1,33 @@
+{
+ "tag": "trial75b",
+ "kind": "mistakes",
+ "day": 75,
+ "date": "2027-01-16",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I brush my tooths.",
+   "right": "I brush my teeth.",
+   "note": "جمع tooth میشه teeth",
+   "emoji": "tooth"
+  },
+  {
+   "wrong": "Five sheeps",
+   "right": "Five sheep",
+   "note": "sheep جمع و مفردش یکیه",
+   "emoji": "ewe"
+  },
+  {
+   "wrong": "Two womans",
+   "right": "Two women",
+   "note": "جمع woman میشه women",
+   "emoji": "woman"
+  }
+ ],
+ "caption": "این کلمه‌ها جمع عجیب دارن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

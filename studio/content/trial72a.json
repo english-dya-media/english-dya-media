@@ -1,0 +1,39 @@
+{
+ "tag": "trial72a",
+ "kind": "vocab",
+ "day": 72,
+ "date": "2027-01-13",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی درس و امتحان",
+ "head_emoji": "books",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "study hard",
+   "right": "hit the books",
+   "note": "یعنی «حسابی درس خوندن»",
+   "emoji": "books"
+  },
+  {
+   "wrong": "study the night before",
+   "right": "cram",
+   "note": "یعنی «شب امتحانی خوندن»",
+   "emoji": "crescent_moon"
+  },
+  {
+   "wrong": "memorize",
+   "right": "learn by heart",
+   "note": "یعنی «حفظ کردن»",
+   "emoji": "brain"
+  },
+  {
+   "wrong": "get a perfect score",
+   "right": "ace the test",
+   "note": "یعنی «امتحانو ترکوندن»",
+   "emoji": "hundred_points"
+  }
+ ],
+ "caption": "فصل امتحاناته؛ این ۴ تا رو یاد بگیر 📚\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

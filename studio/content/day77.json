@@ -1,0 +1,158 @@
+{
+ "day": 77,
+ "date": "2027-01-18",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم این ۴ تا کشور",
+  "l2a": "به",
+  "l2b": "انگلیسی",
+  "l3": "چی میشه؟",
+  "l3emoji": "world_map",
+  "sub": "اسپانیا میشه Spain!",
+  "subemoji": "astonished_face"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "Sp",
+   "tip_emoji": "light_bulb",
+   "en": "Spain",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "woman_dancing",
+   "uni": "💃",
+   "ipa": "/speɪn/",
+   "wrong": "اسپانیا",
+   "right": "سْپِین",
+   "fa": "اسپانیا",
+   "tts": "Spain"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "Sw",
+   "tip_emoji": "light_bulb",
+   "en": "Sweden",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "snowflake",
+   "uni": "❄️",
+   "ipa": "/ˈswiːdən/",
+   "wrong": "سوئد",
+   "right": "سْویدِن",
+   "fa": "سوئد",
+   "tts": "Sweden"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «وِی»",
+   "tip_en": "way",
+   "tip_emoji": "light_bulb",
+   "en": "Norway",
+   "mark": [
+    3,
+    4,
+    5
+   ],
+   "emoji": "snow-capped_mountain",
+   "uni": "🏔️",
+   "ipa": "/ˈnɔːrweɪ/",
+   "wrong": "نروژ",
+   "right": "نُروِی",
+   "fa": "نروژ",
+   "tts": "Norway"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ج»",
+   "tip_en": "g",
+   "tip_emoji": "light_bulb",
+   "en": "Belgium",
+   "mark": [
+    3
+   ],
+   "emoji": "waffle",
+   "uni": "🧇",
+   "ipa": "/ˈbeldʒəm/",
+   "wrong": "بلژیک",
+   "right": "بِلجِم",
+   "fa": "بلژیک",
+   "tts": "Belgium"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "thesis",
+   "ipa": "/ˈθiːsɪs/",
+   "answer": "پایان‌نامه"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "pinching_hand",
+   "word": "subtle",
+   "answer": "b"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "crisis",
+   "options": [
+    "آرامش",
+    "سرعت",
+    "بحران"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "اسم کدوم کشور",
+   "t2a": "رو",
+   "t2b": "بلد نیستی؟",
+   "body": "ریپلای کن تا تلفظ درستشو\nبرات بگم",
+   "example": "Netherlands"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "اسپانیا و سوئد به انگلیسی چی میشن؟ 😳\nSpain میشه «سْپِین» و Belgium میشه «بِلجِم» 🌍 برای دوستت بفرست\n\n💃 Spain = سْپِین (اسپانیا)\n❄️ Sweden = سْویدِن (سوئد)\n🏔️ Norway = نُروِی (نروژ)\n🧇 Belgium = بِلجِم (بلژیک)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

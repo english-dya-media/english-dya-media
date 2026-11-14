@@ -1,0 +1,154 @@
+{
+ "day": 68,
+ "date": "2027-01-09",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "t این ۴ تا کلمه",
+  "l2a": "شبیه",
+  "l2b": "«د»ه!",
+  "l3": "آمریکایی بگو",
+  "l3emoji": "speaker_high_volume",
+  "sub": "tomato میشه «تِمِیدُو»",
+  "subemoji": "tomato"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "computer",
+   "mark": [
+    5
+   ],
+   "emoji": "laptop",
+   "uni": "💻",
+   "ipa": "/kəmˈpjuːɾər/",
+   "wrong": "کامپیوتِر",
+   "right": "کِمپیودِر",
+   "fa": "کامپیوتر",
+   "tts": "computer"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "sweater",
+   "mark": [
+    4
+   ],
+   "emoji": "coat",
+   "uni": "🧥",
+   "ipa": "/ˈsweɾər/",
+   "wrong": "سوییتِر",
+   "right": "سوِدِر",
+   "fa": "پلیور",
+   "tts": "sweater"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "tomato",
+   "mark": [
+    4
+   ],
+   "emoji": "tomato",
+   "uni": "🍅",
+   "ipa": "/təˈmeɪɾoʊ/",
+   "wrong": "توماتو",
+   "right": "تِمِیدُو",
+   "fa": "گوجه‌فرنگی",
+   "tts": "tomato"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "potato",
+   "mark": [
+    4
+   ],
+   "emoji": "potato",
+   "uni": "🥔",
+   "ipa": "/pəˈteɪɾoʊ/",
+   "wrong": "پوتیتو",
+   "right": "پِتِیدُو",
+   "fa": "سیب‌زمینی",
+   "tts": "potato"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "village",
+   "ipa": "/ˈvɪlɪdʒ/",
+   "answer": "روستا"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ش» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "water_wave",
+   "word": "ocean",
+   "answer": "c"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "image",
+   "options": [
+    "قاب عکس",
+    "صدا",
+    "تصویر"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با t",
+   "t2a": "که",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن تا تلفظ آمریکاییشو\nبرات بگم",
+   "example": "eating"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "tomato رو «توماتو» نگو ❌\nآمریکایی‌ها t این ۴ تا کلمه رو شبیه «د» می‌گن 🇺🇸 سیو کن\n\n💻 computer = کِمپیودِر (کامپیوتر)\n🧥 sweater = سوِدِر (پلیور)\n🍅 tomato = تِمِیدُو (گوجه‌فرنگی)\n🥔 potato = پِتِیدُو (سیب‌زمینی)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

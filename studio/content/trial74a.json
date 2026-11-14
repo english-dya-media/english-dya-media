@@ -1,0 +1,39 @@
+{
+ "tag": "trial74a",
+ "kind": "vocab",
+ "day": 74,
+ "date": "2027-01-15",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی اینترنت",
+ "head_emoji": "mobile_phone",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "He stopped answering.",
+   "right": "He ghosted me.",
+   "note": "یعنی «یهو غیبش زد، جواب نداد»",
+   "emoji": "ghost"
+  },
+  {
+   "wrong": "It got famous online.",
+   "right": "It went viral.",
+   "note": "یعنی «تو اینترنت ترکوند»",
+   "emoji": "fire"
+  },
+  {
+   "wrong": "Send me a message.",
+   "right": "Text me.",
+   "note": "یعنی «بهم پیام بده»",
+   "emoji": "speech_balloon"
+  },
+  {
+   "wrong": "My internet finished.",
+   "right": "I'm out of data.",
+   "note": "یعنی «بسته‌ی اینترنتم تموم شده»",
+   "emoji": "mobile_phone"
+  }
+ ],
+ "caption": "انگلیسی اینترنت و موبایل 📱\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

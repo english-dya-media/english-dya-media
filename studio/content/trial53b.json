@@ -1,0 +1,33 @@
+{
+ "tag": "trial53b",
+ "kind": "mistakes",
+ "day": 53,
+ "date": "2026-12-25",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "The trip was funny.",
+   "right": "The trip was fun.",
+   "note": "fun = خوش‌گذرون؛ funny = خنده‌دار",
+   "emoji": "airplane"
+  },
+  {
+   "wrong": "Hear this song!",
+   "right": "Listen to this song!",
+   "note": "با دقت گوش دادن = listen to",
+   "emoji": "headphone"
+  },
+  {
+   "wrong": "I see TV.",
+   "right": "I watch TV.",
+   "note": "تلویزیون رو watch می‌کنن",
+   "emoji": "television"
+  }
+ ],
+ "caption": "این ۳ تا رو با هم قاطی نکن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

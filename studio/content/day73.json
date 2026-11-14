@@ -1,0 +1,158 @@
+{
+ "day": 73,
+ "date": "2027-01-14",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«اُو»",
+  "l3": "نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "ow این‌جا «آو»ه، مثل now",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آو»",
+   "tip_en": "ow",
+   "tip_emoji": "light_bulb",
+   "en": "allow",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "check_mark_button",
+   "uni": "✅",
+   "ipa": "/əˈlaʊ/",
+   "wrong": "اَلُو",
+   "right": "اِلاو",
+   "fa": "اجازه دادن",
+   "tts": "allow"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آو»",
+   "tip_en": "ow",
+   "tip_emoji": "light_bulb",
+   "en": "crowd",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "busts_in_silhouette",
+   "uni": "👥",
+   "ipa": "/kraʊd/",
+   "wrong": "کرُود",
+   "right": "کْراود",
+   "fa": "جمعیت",
+   "tts": "crowd"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آو»",
+   "tip_en": "ow",
+   "tip_emoji": "light_bulb",
+   "en": "towel",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "soap",
+   "uni": "🧼",
+   "ipa": "/ˈtaʊəl/",
+   "wrong": "تُوِل",
+   "right": "تاوِل",
+   "fa": "حوله",
+   "tts": "towel"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آو»",
+   "tip_en": "ow",
+   "tip_emoji": "light_bulb",
+   "en": "owl",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "owl",
+   "uni": "🦉",
+   "ipa": "/aʊl/",
+   "wrong": "اُول",
+   "right": "آوْل",
+   "fa": "جغد",
+   "tts": "owl"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "dessert",
+   "ipa": "/dɪˈzɜːrt/",
+   "answer": "دسر"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "older_person",
+   "word": "wrinkle",
+   "answer": "w"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "sauce",
+   "options": [
+    "سس",
+    "کره",
+    "عسل"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با ow",
+   "t2a": "که",
+   "t2b": "مطمئن نیستی؟",
+   "body": "ریپلای کن؛ «اُو»ه یا «آو»؟\nبرات می‌گم",
+   "example": "bowl"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "allow رو «اَلُو» نخون ❌\now تو این ۴ تا کلمه «آو»ه، مثل now 💡 برای دوستت بفرست\n\n✅ allow = اِلاو (اجازه دادن)\n👥 crowd = کْراود (جمعیت)\n🧼 towel = تاوِل (حوله)\n🦉 owl = آوْل (جغد)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

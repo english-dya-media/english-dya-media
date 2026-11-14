@@ -1,0 +1,33 @@
+{
+ "tag": "trial80b",
+ "kind": "mistakes",
+ "day": 80,
+ "date": "2027-01-21",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Do a decision.",
+   "right": "Make a decision.",
+   "note": "تصمیم گرفتن = make a decision",
+   "emoji": "thinking_face"
+  },
+  {
+   "wrong": "Make me a favor.",
+   "right": "Do me a favor.",
+   "note": "لطف کردن = do a favor",
+   "emoji": "folded_hands"
+  },
+  {
+   "wrong": "Don't do noise.",
+   "right": "Don't make noise.",
+   "note": "سروصدا کردن = make noise",
+   "emoji": "loudspeaker"
+  }
+ ],
+ "caption": "make یا do؟ این ۳ تا رو اشتباه می‌گی ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

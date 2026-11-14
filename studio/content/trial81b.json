@@ -1,0 +1,33 @@
+{
+ "tag": "trial81b",
+ "kind": "mistakes",
+ "day": 81,
+ "date": "2027-01-22",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I want the bill.",
+   "right": "Can we get the check?",
+   "note": "صورت‌حساب رو مؤدبانه بخواه",
+   "emoji": "receipt"
+  },
+  {
+   "wrong": "One water, please.",
+   "right": "Some water, please.",
+   "note": "water شمردنی نیست",
+   "emoji": "droplet"
+  },
+  {
+   "wrong": "It's very delicious.",
+   "right": "It's really delicious.",
+   "note": "delicious خودش قویه؛ very نمی‌خواد",
+   "emoji": "face_savoring_food"
+  }
+ ],
+ "caption": "تو رستوران این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

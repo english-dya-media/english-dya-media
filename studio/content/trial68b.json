@@ -1,0 +1,33 @@
+{
+ "tag": "trial68b",
+ "kind": "mistakes",
+ "day": 68,
+ "date": "2027-01-09",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I no understand.",
+   "right": "I don't understand.",
+   "note": "منفی با don't ساخته میشه",
+   "emoji": "confused_face"
+  },
+  {
+   "wrong": "I don't have nothing.",
+   "right": "I don't have anything.",
+   "note": "دو تا منفی با هم نمیان",
+   "emoji": "cross_mark"
+  },
+  {
+   "wrong": "I didn't see nobody.",
+   "right": "I didn't see anybody.",
+   "note": "بعد از didn't، anybody میاد",
+   "emoji": "see-no-evil_monkey"
+  }
+ ],
+ "caption": "جمله‌ی منفی رو این‌جوری نساز ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

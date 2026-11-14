@@ -206,7 +206,7 @@ write_trial(53, "vocab", [
    head_emoji="speech_balloon")
 write_trial(53, "mistakes", [
     dict(wrong="The trip was funny.", right="The trip was fun.", note="fun = خوش‌گذرون؛ funny = خنده‌دار", emoji="airplane"),
-    dict(wrong="I'm hearing music.", right="I'm listening to music.", note="با دقت گوش دادن = listen to", emoji="headphone"),
+    dict(wrong="Hear this song!", right="Listen to this song!", note="با دقت گوش دادن = listen to", emoji="headphone"),
     dict(wrong="I see TV.", right="I watch TV.", note="تلویزیون رو watch می‌کنن", emoji="television"),
 ], ("این ۳ تا رو با هم قاطی نکن ❌", "تو کدومشو می‌گفتی؟ کامنت کن 👇"), suffix="b")
 

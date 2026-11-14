@@ -1,0 +1,158 @@
+{
+ "day": 78,
+ "date": "2027-01-19",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا عدد رو",
+  "l2a": "با",
+  "l2b": "«ت»",
+  "l3": "تموم نکن!",
+  "l3emoji": "cross_mark",
+  "sub": "th آخرشون «ث»ه: زبون بین دندون‌ها",
+  "subemoji": "tongue"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "third",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "3rd_place_medal",
+   "uni": "🥉",
+   "ipa": "/θɜːrd/",
+   "wrong": "تِرد",
+   "right": "ثِرد",
+   "fa": "سوم",
+   "tts": "third"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "fifth",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "keycap_5",
+   "uni": "5️⃣",
+   "ipa": "/fɪfθ/",
+   "wrong": "فیفت",
+   "right": "فیفث",
+   "fa": "پنجم",
+   "tts": "fifth"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "sixth",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "keycap_6",
+   "uni": "6️⃣",
+   "ipa": "/sɪksθ/",
+   "wrong": "سیکست",
+   "right": "سیکسث",
+   "fa": "ششم",
+   "tts": "sixth"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "twelfth",
+   "mark": [
+    5,
+    6
+   ],
+   "emoji": "twelve_oclock",
+   "uni": "🕛",
+   "ipa": "/twelfθ/",
+   "wrong": "توِلفت",
+   "right": "توِلفث",
+   "fa": "دوازدهم",
+   "tts": "twelfth"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "Spain",
+   "ipa": "/speɪn/",
+   "answer": "سْپِین"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ژ» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "eye",
+   "word": "vision",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "Belgium",
+   "options": [
+    "هلند",
+    "بلژیک",
+    "سوئیس"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "تو کلاس",
+   "t2a": "نفر",
+   "t2b": "چندم بودی؟",
+   "body": "ریپلای کن؛ به انگلیسی\nبنویس: first, second…",
+   "example": "first"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "fifth رو «فیفت» نگو ❌\nth آخر این عددها «ث»ه، نه «ت» 👅 سیو کن\n\n🥉 third = ثِرد (سوم)\n5️⃣ fifth = فیفث (پنجم)\n6️⃣ sixth = سیکسث (ششم)\n🕛 twelfth = توِلفث (دوازدهم)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

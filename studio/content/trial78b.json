@@ -1,0 +1,33 @@
+{
+ "tag": "trial78b",
+ "kind": "mistakes",
+ "day": 78,
+ "date": "2027-01-19",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I'm here since a year.",
+   "right": "I've been here a year.",
+   "note": "از گذشته تا حالا: present perfect",
+   "emoji": "hourglass_not_done"
+  },
+  {
+   "wrong": "I have went.",
+   "right": "I have gone.",
+   "note": "بعد از have شکل سوم فعل: gone",
+   "emoji": "person_walking"
+  },
+  {
+   "wrong": "I've met him last week",
+   "right": "I met him last week.",
+   "note": "با last week گذشته‌ی ساده میاد",
+   "emoji": "calendar"
+  }
+ ],
+ "caption": "زمان فعل رو این‌جا اشتباه می‌گی ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

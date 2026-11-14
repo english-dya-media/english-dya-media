@@ -1,0 +1,157 @@
+{
+ "day": 79,
+ "date": "2027-01-20",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه‌ی",
+  "l2a": "علمی",
+  "l2b": "رو",
+  "l3": "درست بگو",
+  "l3emoji": "test_tube",
+  "sub": "energy «انرژی» نیست!",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ج»",
+   "tip_en": "g",
+   "tip_emoji": "light_bulb",
+   "en": "oxygen",
+   "mark": [
+    3
+   ],
+   "emoji": "lungs",
+   "uni": "🫁",
+   "ipa": "/ˈɑːksɪdʒən/",
+   "wrong": "اکسیژن",
+   "right": "آکسیجِن",
+   "fa": "اکسیژن",
+   "tts": "oxygen"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ج»",
+   "tip_en": "g",
+   "tip_emoji": "light_bulb",
+   "en": "energy",
+   "mark": [
+    4
+   ],
+   "emoji": "high_voltage",
+   "uni": "⚡",
+   "ipa": "/ˈenərdʒi/",
+   "wrong": "انرژی",
+   "right": "اِنِرجی",
+   "fa": "انرژی",
+   "tts": "energy"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ج»",
+   "tip_en": "g",
+   "tip_emoji": "light_bulb",
+   "en": "genetic",
+   "mark": [
+    0
+   ],
+   "emoji": "dna",
+   "uni": "🧬",
+   "ipa": "/dʒəˈnetɪk/",
+   "wrong": "ژنتیک",
+   "right": "جِنِدیک",
+   "fa": "ژنتیکی",
+   "tts": "genetic"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «تُری»",
+   "tip_en": "tory",
+   "tip_emoji": "light_bulb",
+   "en": "laboratory",
+   "mark": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "emoji": "microscope",
+   "uni": "🔬",
+   "ipa": "/ˈlæbrətɔːri/",
+   "wrong": "لابراتوار",
+   "right": "لَبرِتُری",
+   "fa": "آزمایشگاه",
+   "tts": "laboratory"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "twelfth",
+   "ipa": "/twelfθ/",
+   "answer": "دوازدهم"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "pizza",
+   "word": "whole",
+   "answer": "w"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "fifth",
+   "options": [
+    "چهارم",
+    "ششم",
+    "پنجم"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه‌ی علمی",
+   "t2a": "که",
+   "t2b": "تلفظش سخته؟",
+   "body": "ریپلای کن؛ تو ریلزهای بعدی\nمی‌گمش",
+   "example": "physics"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "energy رو «انرژی» نگو ❌\nاین ۴ تا کلمه‌ی علمی رو انگلیسی بگو، نه فرانسوی 🔬 برای دوستت بفرست\n\n🫁 oxygen = آکسیجِن (اکسیژن)\n⚡ energy = اِنِرجی (انرژی)\n🧬 genetic = جِنِدیک (ژنتیکی)\n🔬 laboratory = لَبرِتُری (آزمایشگاه)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

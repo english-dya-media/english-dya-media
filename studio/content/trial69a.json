@@ -1,0 +1,39 @@
+{
+ "tag": "trial69a",
+ "kind": "vocab",
+ "day": 69,
+ "date": "2027-01-10",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "sleep a little",
+   "right": "take a nap",
+   "note": "یعنی «چرت زدن»",
+   "emoji": "sleeping_face"
+  },
+  {
+   "wrong": "sleep by accident",
+   "right": "doze off",
+   "note": "یعنی «ناخواسته خوابت بردن»",
+   "emoji": "yawning_face"
+  },
+  {
+   "wrong": "wake up too late",
+   "right": "oversleep",
+   "note": "یعنی «خواب موندن»",
+   "emoji": "alarm_clock"
+  },
+  {
+   "wrong": "move a lot in bed",
+   "right": "toss and turn",
+   "note": "یعنی «غلت زدن، خوابت نبردن»",
+   "emoji": "bed"
+  }
+ ],
+ "caption": "خواب و بیداری مثل بومی‌ها 😴\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

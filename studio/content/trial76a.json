@@ -1,0 +1,39 @@
+{
+ "tag": "trial76a",
+ "kind": "vocab",
+ "day": 76,
+ "date": "2027-01-17",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "موافقی یا مخالف؟",
+ "head_emoji": "handshake",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "Yes, that's right!",
+   "right": "Exactly!",
+   "note": "یعنی «دقیقاً!»",
+   "emoji": "bullseye"
+  },
+  {
+   "wrong": "I agree 100%.",
+   "right": "I couldn't agree more.",
+   "note": "یعنی «کاملاً موافقم»",
+   "emoji": "hundred_points"
+  },
+  {
+   "wrong": "I don't agree.",
+   "right": "I beg to differ.",
+   "note": "یعنی «من نظر دیگه‌ای دارم» (مؤدبانه)",
+   "emoji": "raised_hand"
+  },
+  {
+   "wrong": "You're right.",
+   "right": "You have a point.",
+   "note": "یعنی «حرفت منطقیه»",
+   "emoji": "light_bulb"
+  }
+ ],
+ "caption": "موافقت و مخالفت مثل بومی‌ها 🤝\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

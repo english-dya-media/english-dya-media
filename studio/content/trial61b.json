@@ -1,0 +1,33 @@
+{
+ "tag": "trial61b",
+ "kind": "mistakes",
+ "day": 61,
+ "date": "2027-01-02",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I want that you come.",
+   "right": "I want you to come.",
+   "note": "want + کسی + to + فعل",
+   "emoji": "raising_hands"
+  },
+  {
+   "wrong": "I told him that come.",
+   "right": "I told him to come.",
+   "note": "tell + کسی + to + فعل",
+   "emoji": "speaking_head"
+  },
+  {
+   "wrong": "I hope you to win.",
+   "right": "I hope you win.",
+   "note": "بعد از hope جمله‌ی کامل میاد",
+   "emoji": "crossed_fingers"
+  }
+ ],
+ "caption": "ساختار فارسی رو انگلیسی نکن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

@@ -1,0 +1,33 @@
+{
+ "tag": "trial67b",
+ "kind": "mistakes",
+ "day": 67,
+ "date": "2027-01-08",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I arrived to Tehran.",
+   "right": "I arrived in Tehran.",
+   "note": "برای شهر: arrive in",
+   "emoji": "airplane_arrival"
+  },
+  {
+   "wrong": "I'm worried for you.",
+   "right": "I'm worried about you.",
+   "note": "نگران کسی = worried about",
+   "emoji": "worried_face"
+  },
+  {
+   "wrong": "It's similar with mine",
+   "right": "It's similar to mine.",
+   "note": "similar to، نه with",
+   "emoji": "left-right_arrow"
+  }
+ ],
+ "caption": "حرف اضافه‌ی این ۳ تا رو اشتباه می‌ذاری ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

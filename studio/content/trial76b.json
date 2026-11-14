@@ -1,0 +1,33 @@
+{
+ "tag": "trial76b",
+ "kind": "mistakes",
+ "day": 76,
+ "date": "2027-01-17",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I spend a lot for food",
+   "right": "I spend a lot on food.",
+   "note": "spend ... on، نه for",
+   "emoji": "money_bag"
+  },
+  {
+   "wrong": "Take care about you.",
+   "right": "Take care of yourself.",
+   "note": "مراقب خودت باش = take care of",
+   "emoji": "red_heart"
+  },
+  {
+   "wrong": "I'll pay dinner.",
+   "right": "I'll pay for dinner.",
+   "note": "پول چیزی رو دادن = pay for",
+   "emoji": "credit_card"
+  }
+ ],
+ "caption": "حرف اضافه‌ی این ۳ تا رو جا ننداز ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

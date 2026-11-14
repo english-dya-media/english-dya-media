@@ -1,0 +1,33 @@
+{
+ "tag": "trial63b",
+ "kind": "mistakes",
+ "day": 63,
+ "date": "2027-01-04",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "You are coming?",
+   "right": "Are you coming?",
+   "note": "تو سؤال فعل میاد اول",
+   "emoji": "person_raising_hand"
+  },
+  {
+   "wrong": "What you want?",
+   "right": "What do you want?",
+   "note": "سؤال با do ساخته میشه",
+   "emoji": "thinking_face"
+  },
+  {
+   "wrong": "Why you didn't come?",
+   "right": "Why didn't you come?",
+   "note": "didn't قبل از فاعل میاد",
+   "emoji": "face_with_raised_eyebrow"
+  }
+ ],
+ "caption": "سؤال رو این‌جوری نپرس ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

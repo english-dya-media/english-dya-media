@@ -1,0 +1,33 @@
+{
+ "tag": "trial64b",
+ "kind": "mistakes",
+ "day": 64,
+ "date": "2027-01-05",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "It's more better.",
+   "right": "It's much better.",
+   "note": "better خودش تفضیلیه؛ more نمی‌خواد",
+   "emoji": "thumbs_up"
+  },
+  {
+   "wrong": "It's the most big.",
+   "right": "It's the biggest one.",
+   "note": "صفت کوتاه: est می‌گیره",
+   "emoji": "elephant"
+  },
+  {
+   "wrong": "He's as tall than me.",
+   "right": "He's as tall as me.",
+   "note": "as ... as، نه as ... than",
+   "emoji": "straight_ruler"
+  }
+ ],
+ "caption": "مقایسه رو این‌جوری نگو ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

@@ -1,0 +1,33 @@
+{
+ "tag": "trial65b",
+ "kind": "mistakes",
+ "day": 65,
+ "date": "2027-01-06",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "My big brother",
+   "right": "My older brother",
+   "note": "برای سن older، نه big",
+   "emoji": "boy"
+  },
+  {
+   "wrong": "My small sister",
+   "right": "My little sister",
+   "note": "«خواهر کوچیکم» = little sister",
+   "emoji": "girl"
+  },
+  {
+   "wrong": "My mother's sister",
+   "right": "My aunt",
+   "note": "خاله و عمه هر دو aunt هستن",
+   "emoji": "woman"
+  }
+ ],
+ "caption": "خانواده‌تو این‌جوری معرفی نکن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

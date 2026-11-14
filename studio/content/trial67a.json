@@ -1,0 +1,39 @@
+{
+ "tag": "trial67a",
+ "kind": "vocab",
+ "day": 67,
+ "date": "2027-01-08",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "اصطلاح‌هایی که بومی‌ها می‌گن",
+ "head_emoji": "speech_balloon",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "I don't like it.",
+   "right": "Not my cup of tea.",
+   "note": "یعنی «سلیقه‌ی من نیست»",
+   "emoji": "teacup_without_handle"
+  },
+  {
+   "wrong": "very calm",
+   "right": "cool as a cucumber",
+   "note": "یعنی «خیلی خونسرد»",
+   "emoji": "cucumber"
+  },
+  {
+   "wrong": "briefly",
+   "right": "in a nutshell",
+   "note": "یعنی «خلاصه‌ش اینه که»",
+   "emoji": "peanuts"
+  },
+  {
+   "wrong": "go crazy",
+   "right": "go bananas",
+   "note": "یعنی «دیوونه شدن، قاطی کردن»",
+   "emoji": "banana"
+  }
+ ],
+ "caption": "اصطلاح‌های خوراکی که بومی‌ها می‌گن 😋\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

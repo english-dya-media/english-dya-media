@@ -1,0 +1,156 @@
+{
+ "day": 74,
+ "date": "2027-01-15",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "مثل",
+  "l2b": "فارسی",
+  "l3": "نگو!",
+  "l3emoji": "cross_mark",
+  "sub": "charger «شارژر» نیست!",
+  "subemoji": "electric_plug"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «چ»",
+   "tip_en": "ch",
+   "tip_emoji": "light_bulb",
+   "en": "charger",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "mobile_phone_with_arrow",
+   "uni": "📲",
+   "ipa": "/ˈtʃɑːrdʒər/",
+   "wrong": "شارژر",
+   "right": "چارجِر",
+   "fa": "شارژر",
+   "tts": "charger"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "tt",
+   "tip_emoji": "light_bulb",
+   "en": "battery",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "battery",
+   "uni": "🔋",
+   "ipa": "/ˈbæɾəri/",
+   "wrong": "باتری",
+   "right": "بَدِری",
+   "fa": "باتری",
+   "tts": "battery"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "cable",
+   "mark": [
+    1
+   ],
+   "emoji": "electric_plug",
+   "uni": "🔌",
+   "ipa": "/ˈkeɪbəl/",
+   "wrong": "کابل",
+   "right": "کِیبِل",
+   "fa": "کابل",
+   "tts": "cable"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "adapter",
+   "mark": [
+    0
+   ],
+   "emoji": "high_voltage",
+   "uni": "⚡",
+   "ipa": "/əˈdæptər/",
+   "wrong": "آداپتور",
+   "right": "اِدَپتِر",
+   "fa": "آداپتور",
+   "tts": "adapter"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "crowd",
+   "ipa": "/kraʊd/",
+   "answer": "جمعیت"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «گز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "memo",
+   "word": "exam",
+   "answer": "x"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "owl",
+   "options": [
+    "عقاب",
+    "جغد",
+    "طوطی"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه‌ی فرنگی",
+   "t2a": "که",
+   "t2b": "تو فارسی داریم؟",
+   "body": "ریپلای کن؛ تلفظ انگلیسیشو\nبهت می‌گم",
+   "example": "television"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "charger رو «شارژر» نگو ❌\nاین ۴ تا کلمه رو انگلیسی بگو، نه فرانسوی 🔊 برای دوستت بفرست\n\n📲 charger = چارجِر (شارژر)\n🔋 battery = بَدِری (باتری)\n🔌 cable = کِیبِل (کابل)\n⚡ adapter = اِدَپتِر (آداپتور)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

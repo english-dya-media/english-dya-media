@@ -1,0 +1,39 @@
+{
+ "tag": "trial68a",
+ "kind": "vocab",
+ "day": 68,
+ "date": "2027-01-09",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی محیط کار",
+ "head_emoji": "briefcase",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "work friend",
+   "right": "colleague",
+   "note": "یعنی «همکار»",
+   "emoji": "briefcase"
+  },
+  {
+   "wrong": "last day to finish",
+   "right": "deadline",
+   "note": "یعنی «مهلت، ضرب‌الاجل»",
+   "emoji": "hourglass_not_done"
+  },
+  {
+   "wrong": "travel to work",
+   "right": "commute",
+   "note": "یعنی «رفت‌وآمد هرروزه به کار»",
+   "emoji": "bus"
+  },
+  {
+   "wrong": "a free day",
+   "right": "a day off",
+   "note": "یعنی «یه روز مرخصی»",
+   "emoji": "beach_with_umbrella"
+  }
+ ],
+ "caption": "انگلیسی محیط کار رو حرفه‌ای بگو 💼\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

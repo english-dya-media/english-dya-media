@@ -1,0 +1,39 @@
+{
+ "tag": "trial70a",
+ "kind": "vocab",
+ "day": 70,
+ "date": "2027-01-11",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی خرید",
+ "head_emoji": "shopping_bags",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "very cheap",
+   "right": "dirt cheap",
+   "note": "یعنی «مفت، خیلی ارزون»",
+   "emoji": "coin"
+  },
+  {
+   "wrong": "too expensive",
+   "right": "a rip-off",
+   "note": "یعنی «گرون‌فروشی، کلاه‌برداری»",
+   "emoji": "angry_face"
+  },
+  {
+   "wrong": "a very good price",
+   "right": "a bargain",
+   "note": "یعنی «یه خرید به‌صرفه»",
+   "emoji": "shopping_bags"
+  },
+  {
+   "wrong": "spend a lot",
+   "right": "splurge",
+   "note": "یعنی «ولخرجی کردن»",
+   "emoji": "credit_card"
+  }
+ ],
+ "caption": "خرید رو مثل بومی‌ها توصیف کن 🛍️\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

@@ -1,0 +1,158 @@
+{
+ "day": 72,
+ "date": "2027-01-13",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا خوراکی",
+  "l2a": "رو",
+  "l2b": "فرانسوی",
+  "l3": "نگو!",
+  "l3emoji": "cross_mark",
+  "sub": "dessert «دسر» نیست!",
+  "subemoji": "shortcake"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ز»",
+   "tip_en": "ss",
+   "tip_emoji": "light_bulb",
+   "en": "dessert",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "shortcake",
+   "uni": "🍰",
+   "ipa": "/dɪˈzɜːrt/",
+   "wrong": "دِسِر",
+   "right": "دیزِرت",
+   "fa": "دسر",
+   "tts": "dessert"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُو»",
+   "tip_en": "oa",
+   "tip_emoji": "light_bulb",
+   "en": "cocoa",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "chocolate_bar",
+   "uni": "🍫",
+   "ipa": "/ˈkoʊkoʊ/",
+   "wrong": "کاکائو",
+   "right": "کُوکُو",
+   "fa": "کاکائو",
+   "tts": "cocoa"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آ»",
+   "tip_en": "au",
+   "tip_emoji": "light_bulb",
+   "en": "sauce",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "hot_pepper",
+   "uni": "🌶️",
+   "ipa": "/sɔːs/",
+   "wrong": "سُس",
+   "right": "ساس",
+   "fa": "سس",
+   "tts": "sauce"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} آخرش خونده میشه",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "croissant",
+   "mark": [
+    8
+   ],
+   "emoji": "croissant",
+   "uni": "🥐",
+   "ipa": "/krəˈsɑːnt/",
+   "wrong": "کروسان",
+   "right": "کْرِسانت",
+   "fa": "کروسان",
+   "ph": "kɹəsˈɑːnt",
+   "tts": "croissant"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "secretary",
+   "ipa": "/ˈsekrəteri/",
+   "answer": "منشی"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ف» میده؟",
+   "hint": "راهنما: حرف‌هاشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "ok_hand",
+   "word": "enough",
+   "answer": "gh"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "surgeon",
+   "options": [
+    "پرستار",
+    "دندون‌پزشک",
+    "جراح"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "غذای مورد علاقه‌ت",
+   "t2a": "به",
+   "t2b": "انگلیسی؟",
+   "body": "ریپلای کن تا تلفظشو\nبرات بفرستم",
+   "example": "lasagna"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "dessert «دسر» نیست ❌\nاین ۴ تا خوراکی رو انگلیسی بگو، نه فرانسوی 🔊 سیو کن\n\n🍰 dessert = دیزِرت (دسر)\n🍫 cocoa = کُوکُو (کاکائو)\n🌶️ sauce = ساس (سس)\n🥐 croissant = کْرِسانت (کروسان)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

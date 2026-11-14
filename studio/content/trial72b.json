@@ -1,0 +1,33 @@
+{
+ "tag": "trial72b",
+ "kind": "mistakes",
+ "day": 72,
+ "date": "2027-01-13",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Don't laugh to me.",
+   "right": "Don't laugh at me.",
+   "note": "به کسی خندیدن = laugh at",
+   "emoji": "face_with_tears_of_joy"
+  },
+  {
+   "wrong": "I agree to you.",
+   "right": "I agree with you.",
+   "note": "با کسی موافق بودن = agree with",
+   "emoji": "handshake"
+  },
+  {
+   "wrong": "I'm thinking to you.",
+   "right": "I'm thinking of you.",
+   "note": "به کسی فکر کردن = think of",
+   "emoji": "thought_balloon"
+  }
+ ],
+ "caption": "حرف اضافه‌ی این ۳ تا فعل ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

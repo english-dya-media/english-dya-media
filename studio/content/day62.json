@@ -1,0 +1,156 @@
+{
+ "day": 62,
+ "date": "2027-01-03",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه",
+  "l2a": "یه",
+  "l2b": "«اِ»",
+  "l3": "دارن!",
+  "l3emoji": "light_bulb",
+  "sub": "said میشه «سِد»، نه «سِید»",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "ai",
+   "tip_emoji": "light_bulb",
+   "en": "said",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "speech_balloon",
+   "uni": "💬",
+   "ipa": "/sed/",
+   "wrong": "سِید",
+   "right": "سِد",
+   "fa": "گفت",
+   "tts": "said"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "ay",
+   "tip_emoji": "light_bulb",
+   "en": "says",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "speaking_head",
+   "uni": "🗣️",
+   "ipa": "/sez/",
+   "wrong": "سِیز",
+   "right": "سِز",
+   "fa": "می‌گه",
+   "tts": "says"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "any",
+   "mark": [
+    0
+   ],
+   "emoji": "red_question_mark",
+   "uni": "❓",
+   "ipa": "/ˈeni/",
+   "wrong": "آنی",
+   "right": "اِنی",
+   "fa": "هیچ؛ هر",
+   "tts": "any"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "many",
+   "mark": [
+    1
+   ],
+   "emoji": "hundred_points",
+   "uni": "💯",
+   "ipa": "/ˈmeni/",
+   "wrong": "مَنی",
+   "right": "مِنی",
+   "fa": "زیاد، خیلی",
+   "tts": "many"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "loved",
+   "ipa": "/lʌvd/",
+   "answer": "دوست داشت"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "nose",
+   "word": "nose",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "closed",
+   "options": [
+    "بست؛ بسته",
+    "باز کرد",
+    "پوشید"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که",
+   "t2a": "تلفظش",
+   "t2b": "عجیبه؟",
+   "body": "ریپلای کن تا تو ریلزهای بعدی\nبا هم درستش کنیم",
+   "example": "friend"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "said رو «سِید» و many رو «مَنی» نخون ❌\nاین ۴ تا کلمه یه «اِ»ی کوتاه دارن 💡 برای دوستت بفرست\n\n💬 said = سِد (گفت)\n🗣️ says = سِز (می‌گه)\n❓ any = اِنی (هیچ؛ هر)\n💯 many = مِنی (زیاد، خیلی)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

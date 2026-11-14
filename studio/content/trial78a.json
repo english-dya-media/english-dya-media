@@ -1,0 +1,39 @@
+{
+ "tag": "trial78a",
+ "kind": "vocab",
+ "day": 78,
+ "date": "2027-01-19",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "laugh quietly",
+   "right": "chuckle",
+   "note": "یعنی «زیرلبی خندیدن»",
+   "emoji": "grinning_face_with_smiling_eyes"
+  },
+  {
+   "wrong": "laugh suddenly a lot",
+   "right": "crack up",
+   "note": "یعنی «از خنده منفجر شدن»",
+   "emoji": "rolling_on_the_floor_laughing"
+  },
+  {
+   "wrong": "cry a lot",
+   "right": "weep",
+   "note": "یعنی «زار زدن، اشک ریختن»",
+   "emoji": "loudly_crying_face"
+  },
+  {
+   "wrong": "almost cry",
+   "right": "tear up",
+   "note": "یعنی «اشک تو چشمات جمع شدن»",
+   "emoji": "face_holding_back_tears"
+  }
+ ],
+ "caption": "به جای laugh و cry این ۴ تا رو بگو 😂\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

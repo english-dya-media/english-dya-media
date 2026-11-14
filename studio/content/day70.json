@@ -1,0 +1,155 @@
+{
+ "day": 70,
+ "date": "2027-01-11",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم این ۴ تا شهر",
+  "l2a": "به",
+  "l2b": "انگلیسی",
+  "l3": "چی میشه؟",
+  "l3emoji": "world_map",
+  "sub": "Venice «ونیز» نیست!",
+  "subemoji": "astonished_face"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ک»",
+   "tip_en": "ch",
+   "tip_emoji": "light_bulb",
+   "en": "Munich",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "pretzel",
+   "uni": "🥨",
+   "ipa": "/ˈmjuːnɪk/",
+   "wrong": "مونیخ",
+   "right": "میونیک",
+   "fa": "مونیخ",
+   "tts": "Munich"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «س»",
+   "tip_en": "c",
+   "tip_emoji": "light_bulb",
+   "en": "Venice",
+   "mark": [
+    4
+   ],
+   "emoji": "canoe",
+   "uni": "🛶",
+   "ipa": "/ˈvenɪs/",
+   "wrong": "ونیز",
+   "right": "وِنیس",
+   "fa": "ونیز",
+   "tts": "Venice"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "Naples",
+   "mark": [
+    1
+   ],
+   "emoji": "pizza",
+   "uni": "🍕",
+   "ipa": "/ˈneɪpəlz/",
+   "wrong": "ناپل",
+   "right": "نِیپِلز",
+   "fa": "ناپل",
+   "tts": "Naples"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ج»",
+   "tip_en": "G",
+   "tip_emoji": "light_bulb",
+   "en": "Geneva",
+   "mark": [
+    0
+   ],
+   "emoji": "watch",
+   "uni": "⌚",
+   "ipa": "/dʒəˈniːvə/",
+   "wrong": "ژنو",
+   "right": "جِنیوا",
+   "fa": "ژنو",
+   "tts": "Geneva"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "fasten",
+   "ipa": "/ˈfæsən/",
+   "answer": "بستن (کمربند)"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ش» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "check_mark_button",
+   "word": "sure",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "mortgage",
+   "options": [
+    "خونه",
+    "اجاره",
+    "وام مسکن"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "دوست داری",
+   "t2a": "کدوم",
+   "t2b": "شهر بری؟",
+   "body": "ریپلای کن؛ تلفظ انگلیسیشو\nبرات می‌گم",
+   "example": "Barcelona"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "ونیز و ژنو به انگلیسی چی میشن؟ 😳\nVenice میشه «وِنیس» و Geneva میشه «جِنیوا» 🌍 برای دوستت بفرست\n\n🥨 Munich = میونیک (مونیخ)\n🛶 Venice = وِنیس (ونیز)\n🍕 Naples = نِیپِلز (ناپل)\n⌚ Geneva = جِنیوا (ژنو)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

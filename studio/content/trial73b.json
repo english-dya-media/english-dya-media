@@ -1,0 +1,33 @@
+{
+ "tag": "trial73b",
+ "kind": "mistakes",
+ "day": 73,
+ "date": "2027-01-14",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "It's an university.",
+   "right": "It's a university.",
+   "note": "university با صدای «یو» شروع میشه",
+   "emoji": "school"
+  },
+  {
+   "wrong": "It takes a hour.",
+   "right": "It takes an hour.",
+   "note": "h تو hour خونده نمیشه",
+   "emoji": "hourglass_done"
+  },
+  {
+   "wrong": "It's an useful app.",
+   "right": "It's a useful app.",
+   "note": "useful هم با «یو» شروع میشه",
+   "emoji": "mobile_phone"
+  }
+ ],
+ "caption": "a یا an؟ صداش مهمه، نه حرفش ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

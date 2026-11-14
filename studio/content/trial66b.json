@@ -1,0 +1,33 @@
+{
+ "tag": "trial66b",
+ "kind": "mistakes",
+ "day": 66,
+ "date": "2027-01-07",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Today morning",
+   "right": "This morning",
+   "note": "«امروز صبح» = this morning",
+   "emoji": "sunrise"
+  },
+  {
+   "wrong": "After tomorrow",
+   "right": "The day after tomorrow",
+   "note": "«پس‌فردا» این‌جوری گفته میشه",
+   "emoji": "spiral_calendar"
+  },
+  {
+   "wrong": "At the morning",
+   "right": "In the morning",
+   "note": "صبح و عصر با in میان",
+   "emoji": "sun_behind_cloud"
+  }
+ ],
+ "caption": "زمان رو این‌جوری نگو ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

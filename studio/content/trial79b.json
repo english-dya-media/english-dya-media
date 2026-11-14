@@ -1,0 +1,33 @@
+{
+ "tag": "trial79b",
+ "kind": "mistakes",
+ "day": 79,
+ "date": "2027-01-20",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "How much it costs?",
+   "right": "How much is it?",
+   "note": "قیمت رو این‌جوری بپرس",
+   "emoji": "label"
+  },
+  {
+   "wrong": "What time it is?",
+   "right": "What time is it?",
+   "note": "تو سؤال is قبل از it میاد",
+   "emoji": "alarm_clock"
+  },
+  {
+   "wrong": "Who did call you?",
+   "right": "Who called you?",
+   "note": "وقتی who فاعله، did نمی‌خواد",
+   "emoji": "telephone_receiver"
+  }
+ ],
+ "caption": "این ۳ تا سؤال رو اشتباه می‌پرسی ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}
