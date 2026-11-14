@@ -37,8 +37,9 @@ Two scheduled jobs use this file: the **weekly run** (Thursdays, makes and sched
 - The daily reel uses layout **v2** (from day 12): no text-only intro, the first word is on screen and spoken from frame 0,
   the hook rides as a banner on top, 19.6 s long. Don't bring back the old 2.4 s hook scene: viewers left during it.
 - **YouTube** (from 14 Nov 2026, owner's request): every video (daily reel, trial reels, quote reel, Rostam & Sohrab
-  parts) also goes to the page's YouTube channel as a Short, in the **same Metricool post** (providers instagram +
-  youtube). `plan.py` and `rostam/plan_parts.py` add it, with a title, tags and settings from `youtube.py`.
+  parts, cartoon series parts) also goes to the page's YouTube channel as a Short, in the **same Metricool post**
+  (providers instagram + youtube). `plan.py`, `rostam/plan_parts.py` and `cartoon/plan_parts.py` add it, with a title,
+  tags and settings from `youtube.py`.
   Stories are images and stay Instagram-only. The posts made before 14 Nov were put on YouTube separately
   (YouTube-only posts, spread over 14–19 Nov).
 - Captions are **Persian only**, informal spoken style (می‌گن، نمیشه، خونده نمیشه), with hashtags (added automatically).

@@ -40,6 +40,9 @@ silhouettes for Babak) and left the number of parts to us (by the length of each
   emoji, US pronunciation in Persian letters and the meaning (story words a learner can use; no names), the source
   line, when the next part comes («امشب ساعت ۸» / «فردا ساعت ۶ عصر») + follow line, 5 hashtags. A series' last part
   announces the next series. AI label on (synthetic voices).
+- **YouTube**: every part also goes to the page's YouTube channel as a Short in the same Metricool post (providers
+  instagram + youtube, `youtubeData` from `../youtube.py` kind "series", tags from `yt_tags` in parts.json), like all
+  the page's videos (see `../RUNBOOK.md`).
 
 ## Files
 
@@ -108,7 +111,8 @@ The scheduled job "Story series: next part" runs this twice a day. Work in `stud
    `python3 plan_parts.py slots "<YYYY-MM-DD HH:MM Tehran of the last scheduled post among Rostam's part 40 and the
    cartoon parts>" <count>`, check in Metricool that nothing else is within 30 minutes of each slot, fill `date`/`slot`
    in `S/parts.json`, `python3 plan_parts.py S N …` and `createScheduledPost` for each (blogId "7830959", date = item
-   date, info = item info). Expect PENDING with the media copied to static.metricool.com. Commit.
+   date, info = item info). Expect PENDING on both networks (Instagram reel + YouTube Short) with the media copied to
+   static.metricool.com. Commit.
 4. **Clean up**: delete `media-<series>-*` branches whose parts are all published.
 5. **Report** (short, English): parts made, parts scheduled with dates and slots, anything that failed.
 

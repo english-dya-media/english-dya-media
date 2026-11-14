@@ -3,6 +3,7 @@ also goes to YouTube; stories can't, they are images). The channel is connected 
 
 yt(kind, content, ai) -> (youtubeData dict, description suffix) used by plan.py and rostam/plan_parts.py.
 kind: "reel" (dayNN.json), "trial" (trialNN.json), "quote" (quoteNN.json), "rostam" (parts.json entry + number),
+"series" (a cartoon series part: parts.json entry plus series_fa, series_en, yt_tags; + number; cartoon/plan_parts.py),
 "promo" (dict with "title").
 """
 FA = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
@@ -12,6 +13,7 @@ KIND_TAGS = {
     "quote": ["english quotes", "جملات انگلیسی", "متن انگلیسی با ترجمه", "جملات انگیزشی", "quotes"],
     "trial": ["مکالمه انگلیسی", "اشتباهات رایج انگلیسی", "english mistakes", "speak english"],
     "rostam": ["رستم و سهراب", "شاهنامه", "فردوسی", "Shahnameh", "Rostam and Sohrab", "Ferdowsi", "انیمیشن"],
+    "series": ["انیمیشن", "داستان", "قصه", "animated story", "story in english"],
 }
 DESC_TAIL = "\n\n📲 اینستاگرام: @english_dya"
 
@@ -40,6 +42,8 @@ def title(kind, c, n=None):
         return _fit(q + " 🤍", [])
     if kind == "rostam":
         return _fit(f"رستم و سهراب، قسمت {str(n).translate(FA)}: {c['title_fa']} 🎬", ["Shahnameh in English"])
+    if kind == "series":
+        return _fit(f"{c['series_fa']}، قسمت {str(n).translate(FA)}: {c['title_fa']} 🎬", [f"{c['series_en']} in English"])
     return _fit(c["title"], [])
 
 
@@ -51,6 +55,8 @@ def tags(kind, c):
         t += [it["right"].rstrip(".") for it in c["items"]]
     elif kind == "rostam":
         t += [w[1] for w in c.get("words", [])]
+    elif kind == "series":
+        t += c.get("yt_tags", []) + [w[1] for w in c.get("words", [])]
     out, total = [], 0
     for x in dict.fromkeys(t):                       # YouTube allows 500 characters of tags in all
         if total + len(x) + 1 > 480:

@@ -13,6 +13,8 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import series
+sys.path.insert(1, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import youtube                  # every part also goes to YouTube as a Short, in the same Metricool post (studio/youtube.py)
 
 RAW = "https://raw.githubusercontent.com/english-dya-media/english-dya-media/"
 FA = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
@@ -58,7 +60,9 @@ def item(name, cfg, n):
     y, mo, d = map(int, p["date"].split("-"))
     t = datetime(y, mo, d, hh, mm, tzinfo=TEH).astimezone(ROME)
     info = {"autoPublish": True, "descendants": [], "draft": False, "firstCommentText": "", "hasNotReadNotes": False,
-            "media": [RAW + p["media"]], "mediaAltText": [], "providers": [{"network": "instagram"}],
+            "media": [RAW + p["media"]], "mediaAltText": [], "providers": [{"network": "instagram"}, {"network": "youtube"}],
+            "youtubeData": youtube.yt("series", dict(p, series_fa=cfg["series_fa"], series_en=cfg["series_en"],
+                                                     yt_tags=cfg.get("yt_tags", [])), True, n)[0],
             "publicationDate": {"dateTime": t.strftime("%Y-%m-%dT%H:%M:%S"), "timezone": "Europe/Rome"},
             "shortener": False, "smartLinkData": {"ids": []}, "text": caption(name, cfg, n),
             "videoCoverMilliseconds": p.get("cover_ms", 15000),
