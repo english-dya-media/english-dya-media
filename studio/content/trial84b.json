@@ -1,0 +1,33 @@
+{
+ "tag": "trial84b",
+ "kind": "mistakes",
+ "day": 84,
+ "date": "2027-01-25",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I saw it in TV.",
+   "right": "I saw it on TV.",
+   "note": "تو تلویزیون = on TV",
+   "emoji": "television"
+  },
+  {
+   "wrong": "He's in the phone.",
+   "right": "He's on the phone.",
+   "note": "پشت تلفن = on the phone",
+   "emoji": "telephone_receiver"
+  },
+  {
+   "wrong": "It's in the radio.",
+   "right": "It's on the radio.",
+   "note": "از رادیو = on the radio",
+   "emoji": "radio"
+  }
+ ],
+ "caption": "in یا on؟ این ۳ تا رو اشتباه می‌گی ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

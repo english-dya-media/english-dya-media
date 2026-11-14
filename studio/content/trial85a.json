@@ -1,0 +1,39 @@
+{
+ "tag": "trial85a",
+ "kind": "vocab",
+ "day": 85,
+ "date": "2027-01-26",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "very soon",
+   "right": "in no time",
+   "note": "یعنی «تو یه چشم به هم زدن»",
+   "emoji": "high_voltage"
+  },
+  {
+   "wrong": "for a long time",
+   "right": "for ages",
+   "note": "یعنی «یه عمره، خیلی وقته»",
+   "emoji": "hourglass_done"
+  },
+  {
+   "wrong": "sometimes",
+   "right": "now and then",
+   "note": "یعنی «گاهی وقتا»",
+   "emoji": "spiral_calendar"
+  },
+  {
+   "wrong": "immediately",
+   "right": "right away",
+   "note": "یعنی «همین الان، فوراً»",
+   "emoji": "stopwatch"
+  }
+ ],
+ "caption": "زمان رو مثل بومی‌ها بگو ⏰\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

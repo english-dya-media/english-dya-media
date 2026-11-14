@@ -1,0 +1,33 @@
+{
+ "tag": "trial85b",
+ "kind": "mistakes",
+ "day": 85,
+ "date": "2027-01-26",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I go always there.",
+   "right": "I always go there.",
+   "note": "always قبل از فعل میاد",
+   "emoji": "repeat_button"
+  },
+  {
+   "wrong": "I yesterday saw him.",
+   "right": "I saw him yesterday.",
+   "note": "yesterday آخر جمله میاد",
+   "emoji": "calendar"
+  },
+  {
+   "wrong": "He can very well swim.",
+   "right": "He can swim very well.",
+   "note": "very well بعد از فعل میاد",
+   "emoji": "person_swimming"
+  }
+ ],
+ "caption": "کلمه‌ها رو به ترتیب فارسی نچین ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

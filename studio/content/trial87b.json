@@ -1,0 +1,33 @@
+{
+ "tag": "trial87b",
+ "kind": "mistakes",
+ "day": 87,
+ "date": "2027-01-28",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I have cold.",
+   "right": "I have a cold.",
+   "note": "سرماخوردگی = a cold",
+   "emoji": "sneezing_face"
+  },
+  {
+   "wrong": "I took a cold.",
+   "right": "I caught a cold.",
+   "note": "سرما خوردن = catch a cold",
+   "emoji": "snowflake"
+  },
+  {
+   "wrong": "I went to doctor.",
+   "right": "I went to the doctor.",
+   "note": "رفتن پیش دکتر = the doctor",
+   "emoji": "stethoscope"
+  }
+ ],
+ "caption": "سرما خوردی؟ این‌جوری نگو ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

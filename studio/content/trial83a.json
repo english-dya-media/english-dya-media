@@ -1,0 +1,39 @@
+{
+ "tag": "trial83a",
+ "kind": "vocab",
+ "day": 83,
+ "date": "2027-01-24",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "very bad",
+   "right": "dreadful",
+   "note": "یعنی «افتضاح، وحشتناک»",
+   "emoji": "face_screaming_in_fear"
+  },
+  {
+   "wrong": "bad quality",
+   "right": "lousy",
+   "note": "یعنی «بنجل، مزخرف»",
+   "emoji": "thumbs_down"
+  },
+  {
+   "wrong": "not good, not bad",
+   "right": "mediocre",
+   "note": "یعنی «معمولی، متوسط»",
+   "emoji": "neutral_face"
+  },
+  {
+   "wrong": "very weak and sad",
+   "right": "pathetic",
+   "note": "یعنی «رقت‌انگیز، ضعیف»",
+   "emoji": "pensive_face"
+  }
+ ],
+ "caption": "به جای bad این ۴ تا رو بگو 👎\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

@@ -1,0 +1,33 @@
+{
+ "tag": "trial86b",
+ "kind": "mistakes",
+ "day": 86,
+ "date": "2027-01-27",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I win money at work.",
+   "right": "I earn money at work.",
+   "note": "پول درآوردن = earn",
+   "emoji": "money_bag"
+  },
+  {
+   "wrong": "Borrow me your pen.",
+   "right": "Can I borrow your pen?",
+   "note": "borrow = قرض گرفتن، نه دادن",
+   "emoji": "pen"
+  },
+  {
+   "wrong": "Rise your hand.",
+   "right": "Raise your hand.",
+   "note": "بالا بردن چیزی = raise",
+   "emoji": "person_raising_hand"
+  }
+ ],
+ "caption": "این فعل‌ها رو با هم قاطی نکن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

@@ -1,0 +1,157 @@
+{
+ "day": 88,
+ "date": "2027-01-29",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم این ۴ تا حیوون",
+  "l2a": "رو",
+  "l2b": "درست",
+  "l3": "بگو!",
+  "l3emoji": "paw_prints",
+  "sub": "giraffe «زرافه» نیست!",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ج»",
+   "tip_en": "g",
+   "tip_emoji": "light_bulb",
+   "en": "giraffe",
+   "mark": [
+    0
+   ],
+   "emoji": "giraffe",
+   "uni": "🦒",
+   "ipa": "/dʒəˈræf/",
+   "wrong": "زرافه",
+   "right": "جِرَف",
+   "fa": "زرافه",
+   "tts": "giraffe"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ک»",
+   "tip_en": "ch",
+   "tip_emoji": "light_bulb",
+   "en": "chameleon",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "lizard",
+   "uni": "🦎",
+   "ipa": "/kəˈmiːliən/",
+   "wrong": "شامِلئون",
+   "right": "کِمیلیِن",
+   "fa": "آفتاب‌پرست",
+   "tts": "chameleon"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "gorilla",
+   "mark": [
+    1
+   ],
+   "emoji": "gorilla",
+   "uni": "🦍",
+   "ipa": "/ɡəˈrɪlə/",
+   "wrong": "گوریل",
+   "right": "گِریلا",
+   "fa": "گوریل",
+   "tts": "gorilla"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «کی»",
+   "tip_en": "qui",
+   "tip_emoji": "light_bulb",
+   "en": "mosquito",
+   "mark": [
+    3,
+    4,
+    5
+   ],
+   "emoji": "mosquito",
+   "uni": "🦟",
+   "ipa": "/məˈskiːɾoʊ/",
+   "wrong": "موسکوئیتو",
+   "right": "مِسکیدُو",
+   "fa": "پشه",
+   "tts": "mosquito"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "migraine",
+   "ipa": "/ˈmaɪɡreɪn/",
+   "answer": "مایگرِین"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ک» میده؟",
+   "hint": "راهنما: حرف‌هاشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "anchor",
+   "word": "anchor",
+   "answer": "ch"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "vaccine",
+   "options": [
+    "آمپول",
+    "قرص",
+    "واکسن"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "حیوون مورد علاقه‌ت",
+   "t2a": "به",
+   "t2b": "انگلیسی؟",
+   "body": "ریپلای کن؛ تلفظشو\nبرات می‌فرستم",
+   "example": "penguin"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "chameleon رو «شامِلئون» نخون ❌\nاسم این ۴ تا حیوون رو این‌جوری بگو 🦒 برای دوستت بفرست\n\n🦒 giraffe = جِرَف (زرافه)\n🦎 chameleon = کِمیلیِن (آفتاب‌پرست)\n🦍 gorilla = گِریلا (گوریل)\n🦟 mosquito = مِسکیدُو (پشه)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

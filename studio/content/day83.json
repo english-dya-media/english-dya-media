@@ -1,0 +1,150 @@
+{
+ "day": 83,
+ "date": "2027-01-24",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "تو این ۴ تا کلمه",
+  "l2a": "gh",
+  "l2b": "رو نخون!",
+  "l3": "صداش نیست!",
+  "l3emoji": "zipper-mouth_face",
+  "sub": "daughter میشه «دادِر»",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "gh",
+   "en": "daughter",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "girl",
+   "uni": "👧",
+   "ipa": "/ˈdɔːɾər/",
+   "wrong": "داگتِر",
+   "right": "دادِر",
+   "fa": "دختر (فرزند)",
+   "tts": "daughter"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "gh",
+   "en": "caught",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "fishing_pole",
+   "uni": "🎣",
+   "ipa": "/kɔːt/",
+   "wrong": "کاگت",
+   "right": "کات",
+   "fa": "گرفت؛ گیر انداخت",
+   "tts": "caught"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "gh",
+   "en": "taught",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "teacher",
+   "uni": "🧑‍🏫",
+   "ipa": "/tɔːt/",
+   "wrong": "تاگت",
+   "right": "تات",
+   "fa": "یاد داد",
+   "tts": "taught"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "gh",
+   "en": "straight",
+   "mark": [
+    5,
+    6
+   ],
+   "emoji": "straight_ruler",
+   "uni": "📏",
+   "ipa": "/streɪt/",
+   "wrong": "استرِیگت",
+   "right": "سْترِیت",
+   "fa": "مستقیم، صاف",
+   "tts": "straight"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "curious",
+   "ipa": "/ˈkjʊriəs/",
+   "answer": "کنجکاو"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "blueberries",
+   "word": "raspberry",
+   "answer": "p"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "nervous",
+   "options": [
+    "مضطرب، نگران",
+    "خوشحال",
+    "عصبانی"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "کدوم حرف بی‌صدا",
+   "t2a": "از همه",
+   "t2b": "عجیب‌تره؟",
+   "body": "ریپلای کن؛ ریلز بعدی\nشاید درباره‌ی اون باشه",
+   "example": "knife"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "daughter رو «داگتِر» نخون ❌\ngh تو این ۴ تا کلمه خونده نمیشه 🤐 سیو کن\n\n👧 daughter = دادِر (دختر (فرزند))\n🎣 caught = کات (گرفت؛ گیر انداخت)\n🧑‍🏫 taught = تات (یاد داد)\n📏 straight = سْترِیت (مستقیم، صاف)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

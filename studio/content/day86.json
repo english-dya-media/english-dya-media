@@ -1,0 +1,154 @@
+{
+ "day": 86,
+ "date": "2027-01-27",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«آ»",
+  "l3": "نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "o این‌جا «اُو»ه، مثل go",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُو»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "only",
+   "mark": [
+    0
+   ],
+   "emoji": "index_pointing_up",
+   "uni": "☝️",
+   "ipa": "/ˈoʊnli/",
+   "wrong": "آنلی",
+   "right": "اُونلی",
+   "fa": "فقط",
+   "tts": "only"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُو»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "both",
+   "mark": [
+    1
+   ],
+   "emoji": "people_hugging",
+   "uni": "🫂",
+   "ipa": "/boʊθ/",
+   "wrong": "باث",
+   "right": "بُوث",
+   "fa": "هر دو",
+   "tts": "both"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُو»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "most",
+   "mark": [
+    1
+   ],
+   "emoji": "chart_increasing",
+   "uni": "📈",
+   "ipa": "/moʊst/",
+   "wrong": "ماست",
+   "right": "مُوست",
+   "fa": "بیشترین",
+   "tts": "most"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُو»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "won't",
+   "mark": [
+    1
+   ],
+   "emoji": "no_entry",
+   "uni": "⛔",
+   "ipa": "/woʊnt/",
+   "wrong": "وانت",
+   "right": "وُونت",
+   "fa": "نخواهد کرد",
+   "tts": "won't"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "culture",
+   "ipa": "/ˈkʌltʃər/",
+   "answer": "فرهنگ"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "smiling_face",
+   "word": "pleasant",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "adventure",
+   "options": [
+    "سرزمین",
+    "ماجراجویی",
+    "سفر"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "want و won't رو",
+   "t2a": "قاطی",
+   "t2b": "می‌کنی؟",
+   "body": "ریپلای کن؛ با یه جمله\nتمرینش کنیم",
+   "example": "I won't go"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "won't رو «وانت» نخون ❌\nwon't = «وُونت» و want = «وانت» 💡 o این ۴ تا کلمه «اُو»ه؛ سیو کن\n\n☝️ only = اُونلی (فقط)\n🫂 both = بُوث (هر دو)\n📈 most = مُوست (بیشترین)\n⛔ won't = وُونت (نخواهد کرد)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

@@ -1,0 +1,33 @@
+{
+ "tag": "trial82b",
+ "kind": "mistakes",
+ "day": 82,
+ "date": "2027-01-23",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Me and my friend went.",
+   "right": "My friend and I went.",
+   "note": "فاعل I میشه و اسم بقیه اول میاد",
+   "emoji": "people_hugging"
+  },
+  {
+   "wrong": "He is a friend of me.",
+   "right": "He's a friend of mine.",
+   "note": "a friend of mine، نه of me",
+   "emoji": "handshake"
+  },
+  {
+   "wrong": "Between you and I",
+   "right": "Between you and me",
+   "note": "بعد از between: me",
+   "emoji": "shushing_face"
+  }
+ ],
+ "caption": "ضمیرها رو این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

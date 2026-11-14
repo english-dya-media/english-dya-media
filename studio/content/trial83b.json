@@ -1,0 +1,33 @@
+{
+ "tag": "trial83b",
+ "kind": "mistakes",
+ "day": 83,
+ "date": "2027-01-24",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Close the music.",
+   "right": "Turn off the music.",
+   "note": "خاموش کردن = turn off",
+   "emoji": "musical_note"
+  },
+  {
+   "wrong": "Open the radio.",
+   "right": "Turn on the radio.",
+   "note": "روشن کردن = turn on",
+   "emoji": "radio"
+  },
+  {
+   "wrong": "Make the volume high.",
+   "right": "Turn it up.",
+   "note": "صدا رو زیاد کردن = turn up",
+   "emoji": "speaker_high_volume"
+  }
+ ],
+ "caption": "open و close رو این‌جا نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

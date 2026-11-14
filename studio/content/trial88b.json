@@ -1,0 +1,33 @@
+{
+ "tag": "trial88b",
+ "kind": "mistakes",
+ "day": 88,
+ "date": "2027-01-29",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "The movie was bored.",
+   "right": "The movie was boring.",
+   "note": "چیزی که حوصله سر می‌بره = boring",
+   "emoji": "yawning_face"
+  },
+  {
+   "wrong": "I'm interesting in art",
+   "right": "I'm interested in art.",
+   "note": "علاقه داشتن = interested in",
+   "emoji": "artist_palette"
+  },
+  {
+   "wrong": "I was very exciting.",
+   "right": "I was so excited.",
+   "note": "حس آدم = excited",
+   "emoji": "star-struck"
+  }
+ ],
+ "caption": "ed یا ing؟ این ۳ تا رو اشتباه می‌گی ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

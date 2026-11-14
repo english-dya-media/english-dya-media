@@ -1,0 +1,156 @@
+{
+ "day": 84,
+ "date": "2027-01-25",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا برند رو",
+  "l2a": "انگلیسی",
+  "l2b": "بگو",
+  "l3": "این‌جوری!",
+  "l3emoji": "speaker_high_volume",
+  "sub": "Siemens تو انگلیسی «سیمِنز»ه",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "A",
+   "tip_emoji": "light_bulb",
+   "en": "Asus",
+   "mark": [
+    0
+   ],
+   "emoji": "laptop",
+   "uni": "💻",
+   "ipa": "/ˈeɪsuːs/",
+   "wrong": "آسوس",
+   "right": "اِیسوس",
+   "fa": "برند لپ‌تاپ",
+   "ph": "ˈeɪsuːs",
+   "tts": "Asus"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «س»",
+   "tip_en": "S",
+   "tip_emoji": "light_bulb",
+   "en": "Siemens",
+   "mark": [
+    0
+   ],
+   "emoji": "gear",
+   "uni": "⚙️",
+   "ipa": "/ˈsiːmənz/",
+   "wrong": "زیمنس",
+   "right": "سیمِنز",
+   "fa": "برند لوازم برقی",
+   "tts": "Siemens"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آ»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "Bosch",
+   "mark": [
+    1
+   ],
+   "emoji": "hammer_and_wrench",
+   "uni": "🛠️",
+   "ipa": "/bɑːʃ/",
+   "wrong": "بوش",
+   "right": "باش",
+   "fa": "برند ابزار",
+   "tts": "Bosch"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ای»",
+   "tip_en": "e",
+   "tip_emoji": "light_bulb",
+   "en": "Nivea",
+   "mark": [
+    3
+   ],
+   "emoji": "lotion_bottle",
+   "uni": "🧴",
+   "ipa": "/nɪˈviːə/",
+   "wrong": "نیوآ",
+   "right": "نیویا",
+   "fa": "برند کرم",
+   "ph": "nɪvˈiːə",
+   "tts": "Nivea"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "daughter",
+   "ipa": "/ˈdɔːɾər/",
+   "answer": "دختر (فرزند)"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ش» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "smiling_face_with_hearts",
+   "word": "emotion",
+   "answer": "t"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "straight",
+   "options": [
+    "خمیده",
+    "دور",
+    "مستقیم، صاف"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "برند مورد علاقه‌ت",
+   "t2a": "رو",
+   "t2b": "بنویس",
+   "body": "ریپلای کن تا تلفظ انگلیسیشو\nبرات بگم",
+   "example": "Lacoste"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "Siemens و Bosch رو انگلیسی‌ها چطوری می‌گن؟ 🔊\nاسم این ۴ تا برند به انگلیسی این‌جوریه 💡 برای دوستت بفرست\n\n💻 Asus = اِیسوس (برند لپ‌تاپ)\n⚙️ Siemens = سیمِنز (برند لوازم برقی)\n🛠️ Bosch = باش (برند ابزار)\n🧴 Nivea = نیویا (برند کرم)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}
