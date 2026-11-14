@@ -1,0 +1,166 @@
+{
+ "day": 34,
+ "date": "2026-12-06",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«اوق»",
+  "l3": "نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "ough هر بار یه جور خونده میشه!",
+  "subemoji": "face_with_spiral_eyes"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اف»",
+   "tip_en": "ough",
+   "tip_emoji": "light_bulb",
+   "en": "cough",
+   "mark": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "emoji": "face_with_medical_mask",
+   "uni": "😷",
+   "ipa": "/kɔːf/",
+   "wrong": "کوق",
+   "right": "کاف",
+   "fa": "سرفه",
+   "tts": "cough"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اف»",
+   "tip_en": "ough",
+   "tip_emoji": "light_bulb",
+   "en": "tough",
+   "mark": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "emoji": "flexed_biceps",
+   "uni": "💪",
+   "ipa": "/tʌf/",
+   "wrong": "توق",
+   "right": "تاف",
+   "fa": "سخت، سرسخت",
+   "tts": "tough"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آ»",
+   "tip_en": "ough",
+   "tip_emoji": "light_bulb",
+   "en": "bought",
+   "mark": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "emoji": "shopping_bags",
+   "uni": "🛍️",
+   "ipa": "/bɔːt/",
+   "wrong": "بوقت",
+   "right": "بات",
+   "fa": "خرید (گذشته)",
+   "tts": "bought"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «او»",
+   "tip_en": "ough",
+   "tip_emoji": "light_bulb",
+   "en": "through",
+   "mark": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "emoji": "bridge_at_night",
+   "uni": "🌉",
+   "ipa": "/θruː/",
+   "wrong": "تروق",
+   "right": "ثْرو",
+   "fa": "از میانِ",
+   "tts": "through"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "pretty",
+   "ipa": "/ˈprɪɾi/",
+   "answer": "قشنگ"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "christmas_tree",
+   "word": "wreath",
+   "answer": "w"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "bottle",
+   "options": [
+    "بطری",
+    "لیوان",
+    "قاشق"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با gh",
+   "t2a": "که",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن؛ شاید تو\nریلز بعدی باشه",
+   "example": "enough"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "ough رو «اوق» نخون ❌\ncough، tough، bought و through: هر کدوم یه جورن 😵 سیو کن\n\n😷 cough = کاف (سرفه)\n💪 tough = تاف (سخت، سرسخت)\n🛍️ bought = بات (خرید (گذشته))\n🌉 through = ثْرو (از میانِ)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

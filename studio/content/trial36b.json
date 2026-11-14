@@ -1,0 +1,33 @@
+{
+ "tag": "trial36b",
+ "kind": "mistakes",
+ "day": 36,
+ "date": "2026-12-08",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I'm not agree.",
+   "right": "I don't agree.",
+   "note": "agree فعله؛ با don't منفی میشه",
+   "emoji": "thumbs_down"
+  },
+  {
+   "wrong": "I'm believe you.",
+   "right": "I believe you.",
+   "note": "believe خودش فعله؛ am نمی‌خواد",
+   "emoji": "handshake"
+  },
+  {
+   "wrong": "I'm need help.",
+   "right": "I need help.",
+   "note": "need فعله؛ am لازم نیست",
+   "emoji": "sos_button"
+  }
+ ],
+ "caption": "این am ها اضافه‌ست ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

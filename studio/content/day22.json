@@ -1,0 +1,158 @@
+{
+ "day": 22,
+ "date": "2026-11-24",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "ed آخر این فعل‌ها",
+  "l2a": "رو",
+  "l2b": "«اِد»",
+  "l3": "نخون!",
+  "l3emoji": "warning",
+  "sub": "بعد از k، p، s و ch میشه «ت»",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "worked",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "briefcase",
+   "uni": "💼",
+   "ipa": "/wɜːrkt/",
+   "wrong": "وُرکِد",
+   "right": "وِرکت",
+   "fa": "کار کرد",
+   "tts": "worked"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "cooked",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "cooking",
+   "uni": "🍳",
+   "ipa": "/kʊkt/",
+   "wrong": "کوکِد",
+   "right": "کُکت",
+   "fa": "آشپزی کرد",
+   "tts": "cooked"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "helped",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "handshake",
+   "uni": "🤝",
+   "ipa": "/helpt/",
+   "wrong": "هِلپِد",
+   "right": "هِلپت",
+   "fa": "کمک کرد",
+   "tts": "helped"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "danced",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "woman_dancing",
+   "uni": "💃",
+   "ipa": "/dænst/",
+   "wrong": "دَنسِد",
+   "right": "دَنست",
+   "fa": "رقصید",
+   "tts": "danced"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "thirsty",
+   "ipa": "/ˈθɜːrsti/",
+   "answer": "تشنه"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "smiling_face_with_sunglasses",
+   "word": "easy",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "thank",
+   "options": [
+    "عذرخواهی کردن",
+    "خداحافظی کردن",
+    "تشکر کردن"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه فعل که",
+   "t2a": "گذشته‌اش",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن تا تلفظشو\nتو ریلزهای بعدی بگم",
+   "example": "watched"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "ed این ۴ تا فعل «اِد» نیست ❌\nبعد از صداهای k، p، s و ch آخرش میشه «ت» 💡 سیو کن\n\n💼 worked = وِرکت (کار کرد)\n🍳 cooked = کُکت (آشپزی کرد)\n🤝 helped = هِلپت (کمک کرد)\n💃 danced = دَنست (رقصید)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

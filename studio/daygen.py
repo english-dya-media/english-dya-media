@@ -203,3 +203,69 @@ def write_day(day, hook, words, cap, stories):
     json.dump(d, open(os.path.join(HERE, "content", f"day{day:02d}.json"), "w"), ensure_ascii=False, indent=1)
     print(f"day{day:02d} {d['date']}: " + ", ".join(w["en"] for w in words) + "  | stories: " +
           ", ".join(s.get("word", s.get("example", "")) for s in stories))
+
+
+# ---------------------------------------------------------------- compact helpers for week files (from week 4)
+def at(word, sub, nth=0):
+    """indices of the letters `sub` inside `word` (its nth occurrence), for mark=[...]"""
+    i = -1
+    for _ in range(nth + 1):
+        i = word.lower().find(sub.lower(), i + 1)
+        if i < 0:
+            raise SystemExit(f"'{sub}' not found in '{word}'")
+    return list(range(i, i + len(sub)))
+
+
+def W(style, en, sub, emoji, uni, ipa, wrong, right, fa, nth=0, **kw):
+    """One reel word. style = GLOW(...) or SIL(...); sub = the letters to mark (their nth occurrence in the word)."""
+    d = dict(style)
+    if style.get("mark_style") != "glow" and "tip_en" not in d:
+        d["tip_en"] = sub
+    d.update(en=en, mark=at(en, sub, nth), emoji=emoji, uni=uni, ipa=ipa, wrong=wrong, right=right, fa=fa, **kw)
+    return d
+
+
+def H(l1, l2a, l2b, l3, l3emoji, sub, subemoji):
+    return dict(l1=l1, l2a=l2a, l2b=l2b, l3=l3, l3emoji=l3emoji, sub=sub, subemoji=subemoji)
+
+
+def _prev_word(day, i):
+    p = load_day(day - 1)
+    if not p:
+        raise SystemExit(f"day{day - 1:02d} must be written first")
+    return p["words"][i]
+
+
+def REC(day, i, pron=False):
+    """recall story on word i of the previous day's reel (its meaning, or with pron=True its pronunciation)"""
+    w = _prev_word(day, i)
+    if pron:
+        return dict(RECALL, word=w["en"], ipa=w["ipa"], answer=w["right"], q="چطوری خونده میشه؟", cta="تلفظشو ریپلای کن")
+    return dict(RECALL, word=w["en"], ipa=w["ipa"], answer=w["fa"])
+
+
+def MC(day, i, wrong1, wrong2, pos, pron=False):
+    """mcq story on word i of the previous day's reel: its meaning (or with pron=True its pronunciation in Persian
+    letters) at position pos (0-2) among two wrong ones"""
+    w = _prev_word(day, i)
+    opts = [wrong1, wrong2]
+    opts.insert(pos, w["right"] if pron else w["fa"])
+    d = dict(MCQ, word=w["en"], options=opts, answer=pos)
+    if pron:
+        d["q"] = "درستش کدومه؟"
+    return d
+
+
+def QZV(word, answer, emoji, sound):
+    """quiz story, sound variant: which letter(s) of this new word make the sound `sound` (e.g. «ز», «ف», «ج», «ک»)"""
+    return dict(QUIZ, emoji=emoji, word=word, answer=answer, q=f"کدوم حرف این کلمه\nصدای {sound} میده؟",
+                hint="راهنما: حرف" + ("" if len(answer) == 1 else f"{ZW}ها") + "شو بفرست")
+
+
+def QZ(word, letter, emoji):
+    """quiz story: a new word with one silent letter"""
+    return dict(QUIZ, emoji=emoji, word=word, answer=letter)
+
+
+def AQ(t1, t2a, t2b, body, example):
+    return dict(ASK, t1=t1, t2a=t2a, t2b=t2b, body=body, example=example)

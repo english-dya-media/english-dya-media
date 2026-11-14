@@ -1,0 +1,33 @@
+{
+ "tag": "trial60b",
+ "kind": "mistakes",
+ "day": 60,
+ "date": "2027-01-01",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Happy New Year for you",
+   "right": "Happy New Year to you",
+   "note": "تبریک با to میاد، نه for",
+   "emoji": "party_popper"
+  },
+  {
+   "wrong": "I wish you happy.",
+   "right": "I wish you happiness.",
+   "note": "بعد از wish you اسم میاد",
+   "emoji": "glowing_star"
+  },
+  {
+   "wrong": "The next year",
+   "right": "Next year",
+   "note": "«سال بعد» = next year بدون the",
+   "emoji": "calendar"
+  }
+ ],
+ "caption": "سال نو این ۳ تا رو اشتباه نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

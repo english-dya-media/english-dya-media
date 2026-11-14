@@ -1,0 +1,33 @@
+{
+ "tag": "trial35b",
+ "kind": "mistakes",
+ "day": 35,
+ "date": "2026-12-07",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "He don't know.",
+   "right": "He doesn't know.",
+   "note": "با he و she میشه doesn't",
+   "emoji": "person_shrugging"
+  },
+  {
+   "wrong": "She go to work.",
+   "right": "She goes to work.",
+   "note": "با he/she فعل s می‌گیره",
+   "emoji": "briefcase"
+  },
+  {
+   "wrong": "It make me happy.",
+   "right": "It makes me happy.",
+   "note": "با it هم s لازمه",
+   "emoji": "smiling_face_with_smiling_eyes"
+  }
+ ],
+ "caption": "این s رو همه جا می‌ندازن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

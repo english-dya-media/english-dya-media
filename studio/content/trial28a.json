@@ -1,0 +1,39 @@
+{
+ "tag": "trial28a",
+ "kind": "vocab",
+ "day": 28,
+ "date": "2026-11-30",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "Help me.",
+   "right": "Give me a hand.",
+   "note": "یعنی «یه کمکی بهم بکن»",
+   "emoji": "raising_hands"
+  },
+  {
+   "wrong": "Wait a minute.",
+   "right": "Just a sec.",
+   "note": "یعنی «یه لحظه»",
+   "emoji": "stopwatch"
+  },
+  {
+   "wrong": "Hurry up.",
+   "right": "Let's get going.",
+   "note": "یعنی «بجنب، بریم»",
+   "emoji": "person_running"
+  },
+  {
+   "wrong": "Calm down.",
+   "right": "Take it easy.",
+   "note": "یعنی «آروم باش، سخت نگیر»",
+   "emoji": "relieved_face"
+  }
+ ],
+ "caption": "این ۴ تا جمله رو مثل بومی‌ها بگو 😎\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

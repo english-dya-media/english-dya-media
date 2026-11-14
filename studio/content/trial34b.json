@@ -1,0 +1,33 @@
+{
+ "tag": "trial34b",
+ "kind": "mistakes",
+ "day": 34,
+ "date": "2026-12-06",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Why you are sad?",
+   "right": "Why are you sad?",
+   "note": "تو سؤال are میاد قبل از you",
+   "emoji": "crying_face"
+  },
+  {
+   "wrong": "How old you are?",
+   "right": "How old are you?",
+   "note": "تو سؤال are میاد قبل از you",
+   "emoji": "birthday_cake"
+  },
+  {
+   "wrong": "You are Iranian?",
+   "right": "Are you Iranian?",
+   "note": "سؤال با are شروع میشه",
+   "emoji": "red_question_mark"
+  }
+ ],
+ "caption": "سؤال رو این‌جوری نپرس ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

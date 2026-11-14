@@ -1,0 +1,154 @@
+{
+ "day": 46,
+ "date": "2026-12-18",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "هر روز",
+  "l2b": "می‌گی",
+  "l3": "ولی اشتباه!",
+  "l3emoji": "grimacing_face",
+  "sub": "انگلیسیش یه جور دیگه‌ست",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اَ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "taxi",
+   "mark": [
+    1
+   ],
+   "emoji": "taxi",
+   "uni": "🚕",
+   "ipa": "/ˈtæksi/",
+   "wrong": "تاکسی",
+   "right": "تَکسی",
+   "fa": "تاکسی",
+   "tts": "taxi"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "garage",
+   "mark": [
+    1
+   ],
+   "emoji": "wrench",
+   "uni": "🔧",
+   "ipa": "/ɡəˈrɑːʒ/",
+   "wrong": "گاراژ",
+   "right": "گِراژ",
+   "fa": "پارکینگ، تعمیرگاه",
+   "tts": "garage"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "e",
+   "tip_emoji": "light_bulb",
+   "en": "cafe",
+   "mark": [
+    3
+   ],
+   "emoji": "hot_beverage",
+   "uni": "☕",
+   "ipa": "/kæˈfeɪ/",
+   "wrong": "کافه",
+   "right": "کَفِی",
+   "fa": "کافه",
+   "tts": "cafe"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «یو»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "menu",
+   "mark": [
+    3
+   ],
+   "emoji": "scroll",
+   "uni": "📜",
+   "ipa": "/ˈmenjuː/",
+   "wrong": "مِنو",
+   "right": "مِنیو",
+   "fa": "منو",
+   "tts": "menu"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "story",
+   "ipa": "/ˈstɔːri/",
+   "answer": "داستان؛ استوری"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "classical_building",
+   "word": "president",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "special",
+   "options": [
+    "خاص، ویژه",
+    "معمولی",
+    "قدیمی"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که فارسی",
+   "t2a": "هم",
+   "t2b": "داریمش؟",
+   "body": "ریپلای کن تا تلفظ انگلیسیشو\nتو ریلزهای بعدی بگم",
+   "example": "pizza"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "تاکسی، کافه و منو به انگلیسی چی میشن؟ 😳\nاین ۴ تا رو مثل فارسی نگو 🔊 برای دوستت بفرست\n\n🚕 taxi = تَکسی (تاکسی)\n🔧 garage = گِراژ (پارکینگ، تعمیرگاه)\n☕ cafe = کَفِی (کافه)\n📜 menu = مِنیو (منو)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

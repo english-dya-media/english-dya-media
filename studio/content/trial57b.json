@@ -1,0 +1,33 @@
+{
+ "tag": "trial57b",
+ "kind": "mistakes",
+ "day": 57,
+ "date": "2026-12-29",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Two hundreds",
+   "right": "Two hundred",
+   "note": "hundred بعد از عدد s نمی‌گیره",
+   "emoji": "hundred_points"
+  },
+  {
+   "wrong": "Three thousands",
+   "right": "Three thousand",
+   "note": "thousand هم بعد از عدد مفرده",
+   "emoji": "money_bag"
+  },
+  {
+   "wrong": "Millions people",
+   "right": "Millions of people",
+   "note": "بعد از millions حرف of میاد",
+   "emoji": "busts_in_silhouette"
+  }
+ ],
+ "caption": "عددها رو این‌جوری نگو ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

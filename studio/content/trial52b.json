@@ -1,0 +1,33 @@
+{
+ "tag": "trial52b",
+ "kind": "mistakes",
+ "day": 52,
+ "date": "2026-12-24",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Repeat again.",
+   "right": "Repeat that.",
+   "note": "repeat خودش یعنی «دوباره بگو»",
+   "emoji": "repeat_button"
+  },
+  {
+   "wrong": "Return back.",
+   "right": "Come back.",
+   "note": "return یعنی برگشتن؛ back اضافه‌ست",
+   "emoji": "right_arrow_curving_left"
+  },
+  {
+   "wrong": "Enter inside.",
+   "right": "Come in.",
+   "note": "enter یعنی وارد شدن؛ inside اضافه‌ست",
+   "emoji": "door"
+  }
+ ],
+ "caption": "این ۳ تا جمله یه کلمه‌ی اضافه دارن ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

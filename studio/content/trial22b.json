@@ -1,0 +1,33 @@
+{
+ "tag": "trial22b",
+ "kind": "mistakes",
+ "day": 22,
+ "date": "2026-11-24",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I'm tiring.",
+   "right": "I'm tired.",
+   "note": "«خسته‌ام» میشه tired، نه tiring",
+   "emoji": "tired_face"
+  },
+  {
+   "wrong": "I'm exciting!",
+   "right": "I'm excited!",
+   "note": "«هیجان‌زده‌ام» میشه excited",
+   "emoji": "partying_face"
+  },
+  {
+   "wrong": "I'm confusing.",
+   "right": "I'm confused.",
+   "note": "«گیج شدم» میشه confused",
+   "emoji": "confused_face"
+  }
+ ],
+ "caption": "ing یا ed؟ این ۳ تا رو همه اشتباه می‌گن 😬\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

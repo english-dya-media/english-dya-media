@@ -1,0 +1,33 @@
+{
+ "tag": "trial32b",
+ "kind": "mistakes",
+ "day": 32,
+ "date": "2026-12-04",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "My charge finished.",
+   "right": "My phone is dead.",
+   "note": "«شارژم تموم شد» = my phone is dead",
+   "emoji": "battery"
+  },
+  {
+   "wrong": "Close the tap.",
+   "right": "Turn off the tap.",
+   "note": "شیر آب رو turn off می‌کنن",
+   "emoji": "droplet"
+  },
+  {
+   "wrong": "Give me the salt.",
+   "right": "Pass me the salt.",
+   "note": "سر سفره pass the salt می‌گن",
+   "emoji": "salt"
+  }
+ ],
+ "caption": "این ۳ تا رو از فارسی ترجمه نکن ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

@@ -1,0 +1,158 @@
+{
+ "day": 27,
+ "date": "2026-11-29",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "es آخر این کلمه‌ها",
+  "l2a": "رو",
+  "l2b": "«س»",
+  "l3": "نخون!",
+  "l3emoji": "warning",
+  "sub": "بعد از s، x، sh و ch میشه «ایز»",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ایز»",
+   "tip_en": "es",
+   "tip_emoji": "light_bulb",
+   "en": "boxes",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "package",
+   "uni": "📦",
+   "ipa": "/ˈbɑːksɪz/",
+   "wrong": "باکسس",
+   "right": "باکسیز",
+   "fa": "جعبه‌ها",
+   "tts": "boxes"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ایز»",
+   "tip_en": "es",
+   "tip_emoji": "light_bulb",
+   "en": "glasses",
+   "mark": [
+    5,
+    6
+   ],
+   "emoji": "glasses",
+   "uni": "👓",
+   "ipa": "/ˈɡlæsɪz/",
+   "wrong": "گلاسس",
+   "right": "گْلَسیز",
+   "fa": "عینک؛ لیوان‌ها",
+   "tts": "glasses"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ایز»",
+   "tip_en": "es",
+   "tip_emoji": "light_bulb",
+   "en": "dishes",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "fork_and_knife_with_plate",
+   "uni": "🍽️",
+   "ipa": "/ˈdɪʃɪz/",
+   "wrong": "دیشس",
+   "right": "دیشیز",
+   "fa": "ظرف‌ها",
+   "tts": "dishes"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ایز»",
+   "tip_en": "es",
+   "tip_emoji": "light_bulb",
+   "en": "faces",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "grinning_face",
+   "uni": "😀",
+   "ipa": "/ˈfeɪsɪz/",
+   "wrong": "فِیسس",
+   "right": "فِیسیز",
+   "fa": "صورت‌ها",
+   "tts": "faces"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "snow",
+   "ipa": "/snoʊ/",
+   "answer": "برف"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "airplane",
+   "word": "visit",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "grow",
+   "options": [
+    "رشد کردن",
+    "افتادن",
+    "دویدن"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه‌ی جمع که",
+   "t2a": "گیجت",
+   "t2b": "می‌کنه؟",
+   "body": "ریپلای کن تا تلفظ درستشو\nتو ریلزهای بعدی یادت بدم",
+   "example": "watches"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "es آخر این ۴ کلمه رو «س» نخون ❌\nبعد از s، x، sh و ch، جمع میشه «ایز» 💡 برای دوستت بفرست\n\n📦 boxes = باکسیز (جعبه‌ها)\n👓 glasses = گْلَسیز (عینک؛ لیوان‌ها)\n🍽️ dishes = دیشیز (ظرف‌ها)\n😀 faces = فِیسیز (صورت‌ها)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

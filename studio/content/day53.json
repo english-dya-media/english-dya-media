@@ -1,0 +1,154 @@
+{
+ "day": 53,
+ "date": "2026-12-25",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "مثل",
+  "l2b": "فارسی",
+  "l3": "نخون!",
+  "l3emoji": "face_with_raised_eyebrow",
+  "sub": "انگلیسی‌ها یه جور دیگه می‌گن",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "data",
+   "mark": [
+    2
+   ],
+   "emoji": "bar_chart",
+   "uni": "📊",
+   "ipa": "/ˈdeɪɾə/",
+   "wrong": "دیتا",
+   "right": "دِیدا",
+   "fa": "داده‌ها",
+   "tts": "data"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "label",
+   "mark": [
+    1
+   ],
+   "emoji": "label",
+   "uni": "🏷️",
+   "ipa": "/ˈleɪbəl/",
+   "wrong": "لیبل",
+   "right": "لِیبِل",
+   "fa": "برچسب",
+   "tts": "label"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آ»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "model",
+   "mark": [
+    1
+   ],
+   "emoji": "dress",
+   "uni": "👗",
+   "ipa": "/ˈmɑːdəl/",
+   "wrong": "مُدِل",
+   "right": "مادِل",
+   "fa": "مدل",
+   "tts": "model"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "motor",
+   "mark": [
+    2
+   ],
+   "emoji": "gear",
+   "uni": "⚙️",
+   "ipa": "/ˈmoʊɾər/",
+   "wrong": "موتور",
+   "right": "مُودِر",
+   "fa": "موتور",
+   "tts": "motor"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "Vienna",
+   "ipa": "/viˈenə/",
+   "answer": "ویِنا"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "test_tube",
+   "word": "science",
+   "answer": "c"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "درستش کدومه؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "Istanbul",
+   "options": [
+    "ایستَنبُل",
+    "اِستانبول",
+    "استانبُل"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که فارسی",
+   "t2a": "هم",
+   "t2b": "داریمش؟",
+   "body": "ریپلای کن تا تلفظ انگلیسیشو\nتو ریلزهای بعدی بگم",
+   "example": "video"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "دیتا و موتور به انگلیسی چی میشن؟ 😳\nاین ۴ تا رو مثل فارسی نخون 🔊 برای دوستت بفرست\n\n📊 data = دِیدا (داده‌ها)\n🏷️ label = لِیبِل (برچسب)\n👗 model = مادِل (مدل)\n⚙️ motor = مُودِر (موتور)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

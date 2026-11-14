@@ -1,0 +1,158 @@
+{
+ "day": 26,
+ "date": "2026-11-28",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«آو»",
+  "l3": "نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "ow این‌جا میشه «اُو»، مثل know",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُو»",
+   "tip_en": "ow",
+   "tip_emoji": "light_bulb",
+   "en": "bowl",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "bowl_with_spoon",
+   "uni": "🥣",
+   "ipa": "/boʊl/",
+   "wrong": "باول",
+   "right": "بُول",
+   "fa": "کاسه",
+   "tts": "bowl"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُو»",
+   "tip_en": "ow",
+   "tip_emoji": "light_bulb",
+   "en": "own",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "key",
+   "uni": "🔑",
+   "ipa": "/oʊn/",
+   "wrong": "آون",
+   "right": "اُون",
+   "fa": "مالِ خود",
+   "tts": "own"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُو»",
+   "tip_en": "ow",
+   "tip_emoji": "light_bulb",
+   "en": "grow",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "seedling",
+   "uni": "🌱",
+   "ipa": "/ɡroʊ/",
+   "wrong": "گراو",
+   "right": "گْرُو",
+   "fa": "رشد کردن",
+   "tts": "grow"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُو»",
+   "tip_en": "ow",
+   "tip_emoji": "light_bulb",
+   "en": "snow",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "snowflake",
+   "uni": "❄️",
+   "ipa": "/snoʊ/",
+   "wrong": "اِسناو",
+   "right": "سْنُو",
+   "fa": "برف",
+   "tts": "snow"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "vitamin",
+   "ipa": "/ˈvaɪɾəmɪn/",
+   "answer": "وایدِمین"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "person_kneeling",
+   "word": "kneel",
+   "answer": "k"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "pajamas",
+   "options": [
+    "کت و شلوار",
+    "لباس ورزشی",
+    "لباس خواب"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با ow",
+   "t2a": "که",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن؛ شاید تو\nریلز بعدی باشه",
+   "example": "towel"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "snow رو «اسناو» نخون ❌\now تو این ۴ تا کلمه میشه «اُو»، مثل know 💡 سیو کن\n\n🥣 bowl = بُول (کاسه)\n🔑 own = اُون (مالِ خود)\n🌱 grow = گْرُو (رشد کردن)\n❄️ snow = سْنُو (برف)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

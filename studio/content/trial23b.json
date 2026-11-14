@@ -1,0 +1,33 @@
+{
+ "tag": "trial23b",
+ "kind": "mistakes",
+ "day": 23,
+ "date": "2026-11-25",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Since two years",
+   "right": "For two years",
+   "note": "مدت زمان با for میاد",
+   "emoji": "calendar"
+  },
+  {
+   "wrong": "Before two days",
+   "right": "Two days ago",
+   "note": "«دو روز پیش» میشه two days ago",
+   "emoji": "spiral_calendar"
+  },
+  {
+   "wrong": "After two days",
+   "right": "In two days",
+   "note": "«دو روز دیگه» میشه in two days",
+   "emoji": "hourglass_done"
+  }
+ ],
+ "caption": "زمان رو این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

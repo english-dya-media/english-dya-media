@@ -1,0 +1,158 @@
+{
+ "day": 56,
+ "date": "2026-12-28",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«ت»",
+  "l3": "نگو!",
+  "l3emoji": "cross_mark",
+  "sub": "th تو nothing و something «ث»ه",
+  "subemoji": "tongue"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "nothing",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "keycap_0",
+   "uni": "0️⃣",
+   "ipa": "/ˈnʌθɪŋ/",
+   "wrong": "ناتینگ",
+   "right": "ناثینگ",
+   "fa": "هیچی",
+   "tts": "nothing"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "everything",
+   "mark": [
+    5,
+    6
+   ],
+   "emoji": "globe_with_meridians",
+   "uni": "🌐",
+   "ipa": "/ˈevriθɪŋ/",
+   "wrong": "اِوریتینگ",
+   "right": "اِوریثینگ",
+   "fa": "همه‌چیز",
+   "tts": "everything"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "something",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "wrapped_gift",
+   "uni": "🎁",
+   "ipa": "/ˈsʌmθɪŋ/",
+   "wrong": "سامتینگ",
+   "right": "سامثینگ",
+   "fa": "یه چیزی",
+   "tts": "something"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "truth",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "magnifying_glass_tilted_left",
+   "uni": "🔍",
+   "ipa": "/truːθ/",
+   "wrong": "تروت",
+   "right": "تروث",
+   "fa": "حقیقت",
+   "tts": "truth"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "chalk",
+   "ipa": "/tʃɔːk/",
+   "answer": "گچ"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "cow_face",
+   "word": "calf",
+   "answer": "l"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "almond",
+   "options": [
+    "بادام",
+    "گردو",
+    "پسته"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با th که",
+   "t2a": "تلفظش",
+   "t2b": "سخته؟",
+   "body": "ریپلای کن تا تو ریلزهای بعدی\nبا هم تمرینش کنیم",
+   "example": "anything"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "nothing رو «ناتینگ» نگو ❌\nth این‌جا «ث»ه: زبون بین دندون‌ها و فوت 👅 برای دوستت بفرست\n\n0️⃣ nothing = ناثینگ (هیچی)\n🌐 everything = اِوریثینگ (همه‌چیز)\n🎁 something = سامثینگ (یه چیزی)\n🔍 truth = تروث (حقیقت)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

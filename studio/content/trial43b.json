@@ -1,0 +1,33 @@
+{
+ "tag": "trial43b",
+ "kind": "mistakes",
+ "day": 43,
+ "date": "2026-12-15",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Sorry for late.",
+   "right": "Sorry I'm late.",
+   "note": "«ببخشید دیر کردم» = Sorry I'm late",
+   "emoji": "alarm_clock"
+  },
+  {
+   "wrong": "Where is toilet?",
+   "right": "Where's the restroom?",
+   "note": "restroom مؤدبانه‌تره و the لازمه",
+   "emoji": "restroom"
+  },
+  {
+   "wrong": "Give me a water.",
+   "right": "Can I have water?",
+   "note": "water شمردنی نیست؛ a نمی‌گیره",
+   "emoji": "droplet"
+  }
+ ],
+ "caption": "تو سفر این ۳ تا رو اشتباه نگو ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

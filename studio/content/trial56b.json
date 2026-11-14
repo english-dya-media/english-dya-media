@@ -1,0 +1,33 @@
+{
+ "tag": "trial56b",
+ "kind": "mistakes",
+ "day": 56,
+ "date": "2026-12-28",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "She is my brother.",
+   "right": "He is my brother.",
+   "note": "برای مرد he، برای زن she",
+   "emoji": "boy"
+  },
+  {
+   "wrong": "Her name is Ali.",
+   "right": "His name is Ali.",
+   "note": "برای مرد his",
+   "emoji": "man"
+  },
+  {
+   "wrong": "He is my sister.",
+   "right": "She is my sister.",
+   "note": "برای زن she",
+   "emoji": "girl"
+  }
+ ],
+ "caption": "فارسی he و she نداره؛ واسه همین قاطی می‌کنیم ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

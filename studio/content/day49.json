@@ -1,0 +1,156 @@
+{
+ "day": 49,
+ "date": "2026-12-21",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "شب یلدا مبارک!",
+  "l2a": "این ۴ تا",
+  "l2b": "کلمه رو",
+  "l3": "درست بگو",
+  "l3emoji": "watermelon",
+  "sub": "هندوونه، انار، شعر و پسته",
+  "subemoji": "red_heart"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "watermelon",
+   "mark": [
+    2
+   ],
+   "emoji": "watermelon",
+   "uni": "🍉",
+   "ipa": "/ˈwɔːɾərmelən/",
+   "wrong": "واتِرمِلون",
+   "right": "وادِرمِلِن",
+   "fa": "هندوانه",
+   "tts": "watermelon"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آ»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "pomegranate",
+   "mark": [
+    1
+   ],
+   "emoji": "gem_stone",
+   "uni": "💎",
+   "ipa": "/ˈpɑːmɪɡrænɪt/",
+   "wrong": "پومِگرانات",
+   "right": "پامِگرَنِت",
+   "fa": "انار",
+   "tts": "pomegranate"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُوِ»",
+   "tip_en": "oe",
+   "tip_emoji": "light_bulb",
+   "en": "poem",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "feather",
+   "uni": "🪶",
+   "ipa": "/ˈpoʊəm/",
+   "wrong": "پوئم",
+   "right": "پُوِم",
+   "fa": "شعر",
+   "tts": "poem"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ش»",
+   "tip_en": "ch",
+   "tip_emoji": "light_bulb",
+   "en": "pistachio",
+   "mark": [
+    5,
+    6
+   ],
+   "emoji": "peanuts",
+   "uni": "🥜",
+   "ipa": "/pɪˈstæʃioʊ/",
+   "wrong": "پیستاچیو",
+   "right": "پیستَشیو",
+   "fa": "پسته",
+   "tts": "pistachio"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "yogurt",
+   "ipa": "/ˈjoʊɡərt/",
+   "answer": "ماست"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "sports_medal",
+   "word": "honor",
+   "answer": "h"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "درستش کدومه؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "spaghetti",
+   "options": [
+    "اِسپاگِتی",
+    "سْپِگِدی",
+    "سْپاگِتی"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "شب یلدا",
+   "t2a": "چی",
+   "t2b": "می‌خوری؟",
+   "body": "ریپلای کن تا اسم انگلیسیشو\nبرات بگم 🍉",
+   "example": "nuts"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "شب یلدا مبارک 🍉❤️ این ۴ تا کلمه‌ی یلدایی رو درست بگو\nبرای کسی که امشب کنارشی بفرست 🤍\n\n🍉 watermelon = وادِرمِلِن (هندوانه)\n💎 pomegranate = پامِگرَنِت (انار)\n🪶 poem = پُوِم (شعر)\n🥜 pistachio = پیستَشیو (پسته)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

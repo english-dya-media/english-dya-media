@@ -1,0 +1,33 @@
+{
+ "tag": "trial58b",
+ "kind": "mistakes",
+ "day": 58,
+ "date": "2026-12-30",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I'm in home.",
+   "right": "I'm at home.",
+   "note": "«خونه‌ام» = at home",
+   "emoji": "house"
+  },
+  {
+   "wrong": "In the weekend",
+   "right": "On the weekend",
+   "note": "به آمریکایی on the weekend",
+   "emoji": "beach_with_umbrella"
+  },
+  {
+   "wrong": "In 5 o'clock",
+   "right": "At 5 o'clock",
+   "note": "برای ساعت at میاد",
+   "emoji": "alarm_clock"
+  }
+ ],
+ "caption": "in و on و at رو این‌جا اشتباه می‌ذاری ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

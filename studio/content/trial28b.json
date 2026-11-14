@@ -1,0 +1,33 @@
+{
+ "tag": "trial28b",
+ "kind": "mistakes",
+ "day": 28,
+ "date": "2026-11-30",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "informations",
+   "right": "information",
+   "note": "information جمع نمی‌بنده",
+   "emoji": "information"
+  },
+  {
+   "wrong": "advices",
+   "right": "advice",
+   "note": "advice هم s نمی‌گیره",
+   "emoji": "speech_balloon"
+  },
+  {
+   "wrong": "furnitures",
+   "right": "furniture",
+   "note": "furniture همیشه مفرده",
+   "emoji": "couch_and_lamp"
+  }
+ ],
+ "caption": "این ۳ تا کلمه هیچ‌وقت s نمی‌گیرن ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

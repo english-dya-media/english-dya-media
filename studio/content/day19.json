@@ -1,0 +1,155 @@
+{
+ "day": 19,
+ "date": "2026-11-21",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "آمریکایی",
+  "l2b": "بگو",
+  "l3": "t میشه «د»!",
+  "l3emoji": "speaker_high_volume",
+  "sub": "t بین دو صدادار نرم میشه",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "water",
+   "mark": [
+    2
+   ],
+   "emoji": "droplet",
+   "uni": "💧",
+   "ipa": "/ˈwɑːɾər/",
+   "wrong": "واتِر",
+   "right": "وادِر",
+   "fa": "آب",
+   "tts": "water"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "city",
+   "mark": [
+    2
+   ],
+   "emoji": "cityscape",
+   "uni": "🏙️",
+   "ipa": "/ˈsɪɾi/",
+   "wrong": "سیتی",
+   "right": "سیدی",
+   "fa": "شهر",
+   "tts": "city"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "better",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "thumbs_up",
+   "uni": "👍",
+   "ipa": "/ˈbeɾər/",
+   "wrong": "بِتِر",
+   "right": "بِدِر",
+   "fa": "بهتر",
+   "tts": "better"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "party",
+   "mark": [
+    3
+   ],
+   "emoji": "party_popper",
+   "uni": "🎉",
+   "ipa": "/ˈpɑːrɾi/",
+   "wrong": "پارتی",
+   "right": "پاردی",
+   "fa": "مهمانی",
+   "tts": "party"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "lived",
+   "ipa": "/lɪvd/",
+   "answer": "زندگی کرد"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "knot",
+   "word": "knot",
+   "answer": "k"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "watched",
+   "options": [
+    "گوش داد",
+    "تماشا کرد",
+    "خوابید"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با t وسطش",
+   "t2a": "که",
+   "t2b": "سخته؟",
+   "body": "ریپلای کن تا تلفظ آمریکاییشو\nتو ریلزهای بعدی بگم",
+   "example": "butter"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "آمریکایی‌ها t این ۴ تا کلمه رو «د» می‌گن 🇺🇸\nواسه همینه که water رو «وادِر» می‌شنوی 💡 سیو کن\n\n💧 water = وادِر (آب)\n🏙️ city = سیدی (شهر)\n👍 better = بِدِر (بهتر)\n🎉 party = پاردی (مهمانی)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

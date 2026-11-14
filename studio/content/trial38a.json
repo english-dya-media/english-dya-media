@@ -1,0 +1,39 @@
+{
+ "tag": "trial38a",
+ "kind": "vocab",
+ "day": 38,
+ "date": "2026-12-10",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "It's very tasty.",
+   "right": "It's to die for.",
+   "note": "یعنی «محشره، خیلی خوشمزه‌ست»",
+   "emoji": "drooling_face"
+  },
+  {
+   "wrong": "Let's eat something.",
+   "right": "Let's grab a bite.",
+   "note": "یعنی «بریم یه چیزی بخوریم»",
+   "emoji": "hamburger"
+  },
+  {
+   "wrong": "Good appetite.",
+   "right": "Enjoy your meal!",
+   "note": "یعنی «نوش جان»",
+   "emoji": "fork_and_knife_with_plate"
+  },
+  {
+   "wrong": "I'm very hungry.",
+   "right": "I could eat a horse.",
+   "note": "یعنی «از گرسنگی دارم می‌میرم»",
+   "emoji": "horse_face"
+  }
+ ],
+ "caption": "سر سفره این‌جوری حرف بزن 😋\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

@@ -1,0 +1,33 @@
+{
+ "tag": "trial55b",
+ "kind": "mistakes",
+ "day": 55,
+ "date": "2026-12-27",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I suggest you to go.",
+   "right": "I suggest you go.",
+   "note": "بعد از suggest، to نمیاد",
+   "emoji": "light_bulb"
+  },
+  {
+   "wrong": "Make me to laugh.",
+   "right": "Make me laugh.",
+   "note": "بعد از make + کسی، to نمیاد",
+   "emoji": "face_with_tears_of_joy"
+  },
+  {
+   "wrong": "Let me to explain.",
+   "right": "Let me explain.",
+   "note": "بعد از let me، to نمیاد",
+   "emoji": "person_tipping_hand"
+  }
+ ],
+ "caption": "این to ها اضافه‌ست ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

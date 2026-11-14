@@ -1,0 +1,33 @@
+{
+ "tag": "trial44b",
+ "kind": "mistakes",
+ "day": 44,
+ "date": "2026-12-16",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I'm born in 1995.",
+   "right": "I was born in 1995.",
+   "note": "«به دنیا اومدم» = I was born",
+   "emoji": "baby"
+  },
+  {
+   "wrong": "I have married.",
+   "right": "I'm married.",
+   "note": "«متأهلم» = I'm married",
+   "emoji": "ring"
+  },
+  {
+   "wrong": "I'm study English.",
+   "right": "I'm studying English.",
+   "note": "بعد از am فعل ing می‌گیره",
+   "emoji": "books"
+  }
+ ],
+ "caption": "این ۳ تا جمله رو تقریباً همه اشتباه می‌گن 😬\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

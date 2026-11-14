@@ -1,0 +1,33 @@
+{
+ "tag": "trial50b",
+ "kind": "mistakes",
+ "day": 50,
+ "date": "2026-12-22",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "My actual job",
+   "right": "My current job",
+   "note": "actual یعنی واقعی، نه فعلی",
+   "emoji": "briefcase"
+  },
+  {
+   "wrong": "I'm sensible.",
+   "right": "I'm sensitive.",
+   "note": "«حساسم» میشه sensitive",
+   "emoji": "pleading_face"
+  },
+  {
+   "wrong": "Control the tickets.",
+   "right": "Check the tickets.",
+   "note": "«بررسی کردن» میشه check",
+   "emoji": "ticket"
+  }
+ ],
+ "caption": "این ۳ تا کلمه اون معنی‌ای که فکر می‌کنی نیستن ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

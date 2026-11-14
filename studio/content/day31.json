@@ -1,0 +1,158 @@
+{
+ "day": 31,
+ "date": "2026-12-03",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "ed این ۴ تا فعل",
+  "l2a": "رو",
+  "l2b": "«اِد»",
+  "l3": "نخون!",
+  "l3emoji": "warning",
+  "sub": "این‌جا ed فقط یه «د»ِ کوتاهه",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «د»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "opened",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "door",
+   "uni": "🚪",
+   "ipa": "/ˈoʊpənd/",
+   "wrong": "اوپِنِد",
+   "right": "اُوپِند",
+   "fa": "باز کرد",
+   "tts": "opened"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «د»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "called",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "telephone_receiver",
+   "uni": "📞",
+   "ipa": "/kɔːld/",
+   "wrong": "کالِد",
+   "right": "کالد",
+   "fa": "زنگ زد؛ صدا زد",
+   "tts": "called"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «د»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "moved",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "delivery_truck",
+   "uni": "🚚",
+   "ipa": "/muːvd/",
+   "wrong": "مووِد",
+   "right": "موود",
+   "fa": "جابه‌جا شد",
+   "tts": "moved"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «د»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "cried",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "crying_face",
+   "uni": "😢",
+   "ipa": "/kraɪd/",
+   "wrong": "کرایِد",
+   "right": "کْراید",
+   "fa": "گریه کرد",
+   "tts": "cried"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "learn",
+   "ipa": "/lɜːrn/",
+   "answer": "یاد گرفتن"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "maple_leaf",
+   "word": "season",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "early",
+   "options": [
+    "دیر",
+    "همیشه",
+    "زود"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه فعل که",
+   "t2a": "گذشته‌اش",
+   "t2b": "سخته؟",
+   "body": "ریپلای کن تا تلفظشو\nتو ریلزهای بعدی بگم",
+   "example": "listened"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "opened رو «اوپِنِد» نخون ❌\nبعد از صداهای نرم ed فقط یه «د»ه 💡 برای دوستت بفرست\n\n🚪 opened = اُوپِند (باز کرد)\n📞 called = کالد (زنگ زد؛ صدا زد)\n🚚 moved = موود (جابه‌جا شد)\n😢 cried = کْراید (گریه کرد)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

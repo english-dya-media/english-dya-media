@@ -1,0 +1,160 @@
+{
+ "day": 20,
+ "date": "2026-11-22",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«ای»",
+  "l3": "نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "ea و eigh این‌جا میشن «اِی»",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "ea",
+   "tip_emoji": "light_bulb",
+   "en": "great",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "glowing_star",
+   "uni": "🌟",
+   "ipa": "/ɡreɪt/",
+   "wrong": "گریت",
+   "right": "گْرِیت",
+   "fa": "عالی، بزرگ",
+   "tts": "great"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "ea",
+   "tip_emoji": "light_bulb",
+   "en": "break",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "broken_heart",
+   "uni": "💔",
+   "ipa": "/breɪk/",
+   "wrong": "بریک",
+   "right": "بْرِیک",
+   "fa": "شکستن؛ استراحت",
+   "tts": "break"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "ea",
+   "tip_emoji": "light_bulb",
+   "en": "steak",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "cut_of_meat",
+   "uni": "🥩",
+   "ipa": "/steɪk/",
+   "wrong": "استیک",
+   "right": "سْتِیک",
+   "fa": "استیک",
+   "tts": "steak"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "eigh",
+   "tip_emoji": "light_bulb",
+   "en": "weight",
+   "mark": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "emoji": "balance_scale",
+   "uni": "⚖️",
+   "ipa": "/weɪt/",
+   "wrong": "وایت",
+   "right": "وِیت",
+   "fa": "وزن",
+   "tts": "weight"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "water",
+   "ipa": "/ˈwɑːɾər/",
+   "answer": "آب"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "musical_note",
+   "word": "music",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "party",
+   "options": [
+    "مهمانی",
+    "تولد",
+    "عروسی"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با ea",
+   "t2a": "که",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن؛ شاید تو\nریلز بعدی باشه",
+   "example": "bread"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "great و steak رو با «ای» نخون ❌\nea و eigh تو این ۴ تا کلمه میشن «اِی» 💡 برای دوستت بفرست\n\n🌟 great = گْرِیت (عالی، بزرگ)\n💔 break = بْرِیک (شکستن؛ استراحت)\n🥩 steak = سْتِیک (استیک)\n⚖️ weight = وِیت (وزن)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

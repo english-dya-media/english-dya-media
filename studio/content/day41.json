@@ -1,0 +1,160 @@
+{
+ "day": 41,
+ "date": "2026-12-13",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا عدد رو",
+  "l2a": "با هم",
+  "l2b": "قاطی",
+  "l3": "نکن!",
+  "l3emoji": "warning",
+  "sub": "teen: تأکید آخر • ty: t نرم",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "تأکید روی {EN}",
+   "tip_en": "teen",
+   "tip_emoji": "light_bulb",
+   "en": "thirteen",
+   "mark": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "emoji": "input_numbers",
+   "uni": "🔢",
+   "ipa": "/θɜːrˈtiːn/",
+   "wrong": "تِرتین",
+   "right": "ثِرتین",
+   "fa": "سیزده",
+   "tts": "thirteen"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "thirty",
+   "mark": [
+    4
+   ],
+   "emoji": "shortcake",
+   "uni": "🍰",
+   "ipa": "/ˈθɜːrɾi/",
+   "wrong": "تِرتی",
+   "right": "ثِردی",
+   "fa": "سی",
+   "tts": "thirty"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "تأکید روی {EN}",
+   "tip_en": "teen",
+   "tip_emoji": "light_bulb",
+   "en": "eighteen",
+   "mark": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "emoji": "id_button",
+   "uni": "🆔",
+   "ipa": "/eɪˈtiːn/",
+   "wrong": "ایتین",
+   "right": "اِیتین",
+   "fa": "هجده",
+   "tts": "eighteen"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "eighty",
+   "mark": [
+    4
+   ],
+   "emoji": "older_person",
+   "uni": "🧓",
+   "ipa": "/ˈeɪɾi/",
+   "wrong": "ایتی",
+   "right": "اِیدی",
+   "fa": "هشتاد",
+   "tts": "eighty"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "suit",
+   "ipa": "/suːt/",
+   "answer": "کت و شلوار"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "light_bulb",
+   "word": "knew",
+   "answer": "k"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "fruit",
+   "options": [
+    "سبزی",
+    "میوه",
+    "نان"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "کدوم عدد انگلیسی",
+   "t2a": "تلفظش",
+   "t2b": "سخته؟",
+   "body": "ریپلای کن تا تو ریلزهای بعدی\nتلفظ درستشو بگم",
+   "example": "fifteen"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "thirteen یا thirty؟ این ۴ تا عدد رو قاطی نکن ⚠️\nteen تأکیدش آخره؛ ty تأکیدش اوله و t نرم میشه 💡 سیو کن\n\n🔢 thirteen = ثِرتین (سیزده)\n🍰 thirty = ثِردی (سی)\n🆔 eighteen = اِیتین (هجده)\n🧓 eighty = اِیدی (هشتاد)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

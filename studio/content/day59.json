@@ -1,0 +1,160 @@
+{
+ "day": 59,
+ "date": "2026-12-31",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«اِ»",
+  "l3": "شروع نکن!",
+  "l3emoji": "cross_mark",
+  "sub": "sk و sw و str بدون «اِ»",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "sk",
+   "tip_emoji": "light_bulb",
+   "en": "sky",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "cloud",
+   "uni": "☁️",
+   "ipa": "/skaɪ/",
+   "wrong": "اِسکای",
+   "right": "سْکای",
+   "fa": "آسمان",
+   "tts": "sky"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "sw",
+   "tip_emoji": "light_bulb",
+   "en": "swim",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "person_swimming",
+   "uni": "🏊",
+   "ipa": "/swɪm/",
+   "wrong": "اِسویم",
+   "right": "سْویم",
+   "fa": "شنا کردن",
+   "tts": "swim"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "str",
+   "tip_emoji": "light_bulb",
+   "en": "strong",
+   "mark": [
+    0,
+    1,
+    2
+   ],
+   "emoji": "flexed_biceps",
+   "uni": "💪",
+   "ipa": "/strɔːŋ/",
+   "wrong": "اِسترانگ",
+   "right": "سْترانگ",
+   "fa": "قوی",
+   "tts": "strong"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "spr",
+   "tip_emoji": "light_bulb",
+   "en": "spring",
+   "mark": [
+    0,
+    1,
+    2
+   ],
+   "emoji": "cherry_blossom",
+   "uni": "🌸",
+   "ipa": "/sprɪŋ/",
+   "wrong": "اِسپرینگ",
+   "right": "سْپْرینگ",
+   "fa": "بهار؛ فنر",
+   "tts": "spring"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "bread",
+   "ipa": "/bred/",
+   "answer": "نان"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ج» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "thought_balloon",
+   "word": "imagine",
+   "answer": "g"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "heavy",
+   "options": [
+    "سنگین",
+    "سبک",
+    "بلند"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که با",
+   "t2a": "«اِ»",
+   "t2b": "شروعش می‌کنی؟",
+   "body": "ریپلای کن تا تو ریلزهای بعدی\nتلفظ درستشو بگم",
+   "example": "Steve"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "sky رو «اِسکای» نگو ❌\nمستقیم با s شروع کن: «سْکای» 💡 برای دوستت بفرست\n\n☁️ sky = سْکای (آسمان)\n🏊 swim = سْویم (شنا کردن)\n💪 strong = سْترانگ (قوی)\n🌸 spring = سْپْرینگ (بهار؛ فنر)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

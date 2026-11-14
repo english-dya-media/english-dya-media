@@ -1,0 +1,33 @@
+{
+ "tag": "trial38b",
+ "kind": "mistakes",
+ "day": 38,
+ "date": "2026-12-10",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "one of my friend",
+   "right": "one of my friends",
+   "note": "بعد از one of اسم جمع میاد",
+   "emoji": "people_hugging"
+  },
+  {
+   "wrong": "two child",
+   "right": "two children",
+   "note": "جمع child میشه children",
+   "emoji": "children_crossing"
+  },
+  {
+   "wrong": "many person",
+   "right": "many people",
+   "note": "جمع person میشه people",
+   "emoji": "busts_in_silhouette"
+  }
+ ],
+ "caption": "جمع این ۳ تا رو اشتباه می‌گی ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

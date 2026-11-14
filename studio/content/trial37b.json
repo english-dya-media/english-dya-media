@@ -1,0 +1,33 @@
+{
+ "tag": "trial37b",
+ "kind": "mistakes",
+ "day": 37,
+ "date": "2026-12-09",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "more easy",
+   "right": "easier",
+   "note": "صفت‌های کوتاه er می‌گیرن",
+   "emoji": "check_mark_button"
+  },
+  {
+   "wrong": "more cheap",
+   "right": "cheaper",
+   "note": "صفت‌های کوتاه er می‌گیرن",
+   "emoji": "coin"
+  },
+  {
+   "wrong": "the most good",
+   "right": "the best",
+   "note": "good → better → best",
+   "emoji": "trophy"
+  }
+ ],
+ "caption": "مقایسه رو این‌جوری نگو ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

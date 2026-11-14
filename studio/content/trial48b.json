@@ -1,0 +1,33 @@
+{
+ "tag": "trial48b",
+ "kind": "mistakes",
+ "day": 48,
+ "date": "2026-12-20",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "homeworks",
+   "right": "homework",
+   "note": "homework جمع نمی‌بنده",
+   "emoji": "memo"
+  },
+  {
+   "wrong": "luggages",
+   "right": "luggage",
+   "note": "luggage همیشه مفرده",
+   "emoji": "luggage"
+  },
+  {
+   "wrong": "moneys",
+   "right": "money",
+   "note": "money هم s نمی‌گیره",
+   "emoji": "money_bag"
+  }
+ ],
+ "caption": "این ۳ تا کلمه هیچ‌وقت s نمی‌گیرن ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

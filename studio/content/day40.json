@@ -1,0 +1,158 @@
+{
+ "day": 40,
+ "date": "2026-12-12",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«ویی»",
+  "l3": "نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "ui این‌جا فقط یه صداست",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «او»",
+   "tip_en": "ui",
+   "tip_emoji": "light_bulb",
+   "en": "fruit",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "red_apple",
+   "uni": "🍎",
+   "ipa": "/fruːt/",
+   "wrong": "فرویت",
+   "right": "فْروت",
+   "fa": "میوه",
+   "tts": "fruit"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «او»",
+   "tip_en": "ui",
+   "tip_emoji": "light_bulb",
+   "en": "juice",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "beverage_box",
+   "uni": "🧃",
+   "ipa": "/dʒuːs/",
+   "wrong": "جویس",
+   "right": "جوس",
+   "fa": "آبمیوه",
+   "tts": "juice"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «او»",
+   "tip_en": "ui",
+   "tip_emoji": "light_bulb",
+   "en": "suit",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "necktie",
+   "uni": "👔",
+   "ipa": "/suːt/",
+   "wrong": "سویت",
+   "right": "سوت",
+   "fa": "کت و شلوار",
+   "tts": "suit"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ای»",
+   "tip_en": "ui",
+   "tip_emoji": "light_bulb",
+   "en": "build",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "building_construction",
+   "uni": "🏗️",
+   "ipa": "/bɪld/",
+   "wrong": "بویلد",
+   "right": "بیلد",
+   "fa": "ساختن",
+   "tts": "build"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "washed",
+   "ipa": "/wɑːʃt/",
+   "answer": "شست"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "cheese_wedge",
+   "word": "cheese",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "finished",
+   "options": [
+    "تموم کرد",
+    "شروع کرد",
+    "خوابید"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با ui",
+   "t2a": "که",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن؛ شاید تو\nریلز بعدی باشه",
+   "example": "guitar"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "juice رو «جویس» نخون ❌\nui تو این ۴ تا کلمه فقط یه صداست 💡 برای دوستت بفرست\n\n🍎 fruit = فْروت (میوه)\n🧃 juice = جوس (آبمیوه)\n👔 suit = سوت (کت و شلوار)\n🏗️ build = بیلد (ساختن)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

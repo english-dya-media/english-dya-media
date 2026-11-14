@@ -1,0 +1,158 @@
+{
+ "day": 45,
+ "date": "2026-12-17",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«اِ»",
+  "l3": "شروع نکن!",
+  "l3emoji": "cross_mark",
+  "sub": "قبل از st و sp و sw «اِ» نذار",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "st",
+   "tip_emoji": "light_bulb",
+   "en": "student",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "man_student",
+   "uni": "👨‍🎓",
+   "ipa": "/ˈstuːdənt/",
+   "wrong": "اِستودِنت",
+   "right": "سْتودِنت",
+   "fa": "دانش‌آموز، دانشجو",
+   "tts": "student"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "st",
+   "tip_emoji": "light_bulb",
+   "en": "story",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "open_book",
+   "uni": "📖",
+   "ipa": "/ˈstɔːri/",
+   "wrong": "اِستوری",
+   "right": "سْتُری",
+   "fa": "داستان؛ استوری",
+   "tts": "story"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "sp",
+   "tip_emoji": "light_bulb",
+   "en": "special",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "sparkles",
+   "uni": "✨",
+   "ipa": "/ˈspeʃəl/",
+   "wrong": "اِسپِشیال",
+   "right": "سْپِشِل",
+   "fa": "خاص، ویژه",
+   "tts": "special"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "sw",
+   "tip_emoji": "light_bulb",
+   "en": "sweet",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "candy",
+   "uni": "🍬",
+   "ipa": "/swiːt/",
+   "wrong": "اِسوییت",
+   "right": "سْویت",
+   "fa": "شیرین",
+   "tts": "sweet"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "boys",
+   "ipa": "/bɔɪz/",
+   "answer": "پسرها"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "memo",
+   "word": "written",
+   "answer": "w"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "keys",
+   "options": [
+    "قفل‌ها",
+    "درها",
+    "کلیدها"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که با",
+   "t2a": "«اِ»",
+   "t2b": "شروعش می‌کنی؟",
+   "body": "ریپلای کن تا تو ریلزهای بعدی\nتلفظ درستشو بگم",
+   "example": "Scotland"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "story رو «اِستوری» نگو ❌\nمستقیم با s شروع کن: «سْتُری» 💡 سیو کن\n\n👨‍🎓 student = سْتودِنت (دانش‌آموز، دانشجو)\n📖 story = سْتُری (داستان؛ استوری)\n✨ special = سْپِشِل (خاص، ویژه)\n🍬 sweet = سْویت (شیرین)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

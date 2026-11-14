@@ -1,0 +1,39 @@
+{
+ "tag": "trial34a",
+ "kind": "vocab",
+ "day": 34,
+ "date": "2026-12-06",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "Okay.",
+   "right": "Sounds good!",
+   "note": "یعنی «خوبه، موافقم»",
+   "emoji": "thumbs_up"
+  },
+  {
+   "wrong": "Of course.",
+   "right": "Definitely!",
+   "note": "یعنی «حتماً، قطعاً»",
+   "emoji": "check_mark_button"
+  },
+  {
+   "wrong": "Me too.",
+   "right": "Same here.",
+   "note": "یعنی «منم همین‌طور»",
+   "emoji": "raising_hands"
+  },
+  {
+   "wrong": "Thanks.",
+   "right": "Cheers!",
+   "note": "یعنی «مرسی» (خودمونی)",
+   "emoji": "clinking_glasses"
+  }
+ ],
+ "caption": "این‌جوری جواب بده تا مثل بومی‌ها به نظر بیای 😎\nبرای دوستت بفرست که اونم یاد بگیره 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

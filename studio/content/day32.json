@@ -1,0 +1,158 @@
+{
+ "day": 32,
+ "date": "2026-12-04",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«اِ»",
+  "l3": "شروع نکن!",
+  "l3emoji": "cross_mark",
+  "sub": "انگلیسی‌ها مستقیم با s شروع می‌کنن",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "st",
+   "tip_emoji": "light_bulb",
+   "en": "star",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "star",
+   "uni": "⭐",
+   "ipa": "/stɑːr/",
+   "wrong": "اِستار",
+   "right": "سْتار",
+   "fa": "ستاره",
+   "tts": "star"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "sn",
+   "tip_emoji": "light_bulb",
+   "en": "snake",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "snake",
+   "uni": "🐍",
+   "ipa": "/sneɪk/",
+   "wrong": "اِسنیک",
+   "right": "سْنِیک",
+   "fa": "مار",
+   "tts": "snake"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "sl",
+   "tip_emoji": "light_bulb",
+   "en": "sleep",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "sleeping_face",
+   "uni": "😴",
+   "ipa": "/sliːp/",
+   "wrong": "اِسلیپ",
+   "right": "سْلیپ",
+   "fa": "خوابیدن",
+   "tts": "sleep"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "{EN} بدون «اِ» اولش",
+   "tip_en": "sp",
+   "tip_emoji": "light_bulb",
+   "en": "spoon",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "spoon",
+   "uni": "🥄",
+   "ipa": "/spuːn/",
+   "wrong": "اِسپون",
+   "right": "سْپون",
+   "fa": "قاشق",
+   "tts": "spoon"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "cried",
+   "ipa": "/kraɪd/",
+   "answer": "گریه کرد"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "thinking_face",
+   "word": "who",
+   "answer": "w"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "moved",
+   "options": [
+    "جابه‌جا شد",
+    "خوابید",
+    "نشست"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که با",
+   "t2a": "«اِ»",
+   "t2b": "شروعش می‌کنی؟",
+   "body": "ریپلای کن تا تو ریلزهای بعدی\nتلفظ درستشو بگم",
+   "example": "Spain"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "star رو «اِستار» نگو ❌\nاول کلمه «اِ» نذار؛ مستقیم با s شروع کن 💡 سیو کن\n\n⭐ star = سْتار (ستاره)\n🐍 snake = سْنِیک (مار)\n😴 sleep = سْلیپ (خوابیدن)\n🥄 spoon = سْپون (قاشق)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

@@ -1,0 +1,158 @@
+{
+ "day": 33,
+ "date": "2026-12-05",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "آمریکایی",
+  "l2b": "بگو",
+  "l3": "tt میشه «د»!",
+  "l3emoji": "speaker_high_volume",
+  "sub": "تو آمریکایی، t وسط کلمه نرم میشه",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "tt",
+   "tip_emoji": "light_bulb",
+   "en": "pretty",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "rose",
+   "uni": "🌹",
+   "ipa": "/ˈprɪɾi/",
+   "wrong": "پریتی",
+   "right": "پْریدی",
+   "fa": "قشنگ",
+   "tts": "pretty"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "tt",
+   "tip_emoji": "light_bulb",
+   "en": "letter",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "envelope",
+   "uni": "✉️",
+   "ipa": "/ˈleɾər/",
+   "wrong": "لِتِر",
+   "right": "لِدِر",
+   "fa": "نامه؛ حرف الفبا",
+   "tts": "letter"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "tt",
+   "tip_emoji": "light_bulb",
+   "en": "bottle",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "baby_bottle",
+   "uni": "🍼",
+   "ipa": "/ˈbɑːɾəl/",
+   "wrong": "باتِل",
+   "right": "بادِل",
+   "fa": "بطری",
+   "tts": "bottle"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "tt",
+   "tip_emoji": "light_bulb",
+   "en": "butter",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "pancakes",
+   "uni": "🥞",
+   "ipa": "/ˈbʌɾər/",
+   "wrong": "باتِر",
+   "right": "بادِر",
+   "fa": "کره",
+   "tts": "butter"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "snake",
+   "ipa": "/sneɪk/",
+   "answer": "مار"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "confused_face",
+   "word": "lose",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "spoon",
+   "options": [
+    "چنگال",
+    "قاشق",
+    "چاقو"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با tt",
+   "t2a": "که",
+   "t2b": "مطمئن نیستی؟",
+   "body": "ریپلای کن تا تلفظ آمریکاییشو\nتو ریلزهای بعدی بگم",
+   "example": "little"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "آمریکایی‌ها tt این کلمه‌ها رو «د» می‌گن 🇺🇸\nbutter میشه «بادِر» و bottle میشه «بادِل» 💡 برای دوستت بفرست\n\n🌹 pretty = پْریدی (قشنگ)\n✉️ letter = لِدِر (نامه؛ حرف الفبا)\n🍼 bottle = بادِل (بطری)\n🥞 butter = بادِر (کره)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

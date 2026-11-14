@@ -1,0 +1,33 @@
+{
+ "tag": "trial27b",
+ "kind": "mistakes",
+ "day": 27,
+ "date": "2026-11-29",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Yesterday I go.",
+   "right": "Yesterday I went.",
+   "note": "گذشته‌ی go میشه went",
+   "emoji": "person_walking"
+  },
+  {
+   "wrong": "Did you went?",
+   "right": "Did you go?",
+   "note": "بعد از did فعل ساده میاد",
+   "emoji": "red_question_mark"
+  },
+  {
+   "wrong": "I've seen it yesterday",
+   "right": "I saw it yesterday.",
+   "note": "با yesterday گذشته‌ی ساده میاد",
+   "emoji": "eyes"
+  }
+ ],
+ "caption": "گذشته رو این‌جوری نگو ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

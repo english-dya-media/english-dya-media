@@ -1,0 +1,39 @@
+{
+ "tag": "trial59a",
+ "kind": "vocab",
+ "day": 59,
+ "date": "2026-12-31",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "I'm scared.",
+   "right": "I'm freaking out.",
+   "note": "یعنی «دارم وحشت می‌کنم»",
+   "emoji": "face_screaming_in_fear"
+  },
+  {
+   "wrong": "I'm a little sick.",
+   "right": "I'm under the weather.",
+   "note": "یعنی «یه کم ناخوشم»",
+   "emoji": "face_with_thermometer"
+  },
+  {
+   "wrong": "I'm busy.",
+   "right": "I'm tied up.",
+   "note": "یعنی «درگیرم، سرم شلوغه»",
+   "emoji": "spiral_calendar"
+  },
+  {
+   "wrong": "I'm nervous.",
+   "right": "I've got butterflies.",
+   "note": "یعنی «دلم شور می‌زنه»",
+   "emoji": "butterfly"
+  }
+ ],
+ "caption": "حال‌تو مثل بومی‌ها بگو 😎\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

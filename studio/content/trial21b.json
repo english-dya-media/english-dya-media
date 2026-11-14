@@ -1,0 +1,33 @@
+{
+ "tag": "trial21b",
+ "kind": "mistakes",
+ "day": 21,
+ "date": "2026-11-23",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I have hungry.",
+   "right": "I'm hungry.",
+   "note": "گرسنه بودن با be میاد، نه have",
+   "emoji": "fork_and_knife_with_plate"
+  },
+  {
+   "wrong": "I have sleep.",
+   "right": "I'm sleepy.",
+   "note": "«خوابم میاد» میشه I'm sleepy",
+   "emoji": "sleeping_face"
+  },
+  {
+   "wrong": "It's cold to me.",
+   "right": "I'm cold.",
+   "note": "«سردمه» میشه I'm cold",
+   "emoji": "cold_face"
+  }
+ ],
+ "caption": "این ۳ تا رو از فارسی ترجمه نکن ❌\nتو کدومشو می‌گفتی؟ برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

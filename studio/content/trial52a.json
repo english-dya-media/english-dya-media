@@ -1,0 +1,39 @@
+{
+ "tag": "trial52a",
+ "kind": "vocab",
+ "day": 52,
+ "date": "2026-12-24",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "آمریکایی حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "post",
+   "right": "mail",
+   "note": "یعنی «پست، نامه» به آمریکایی",
+   "emoji": "envelope"
+  },
+  {
+   "wrong": "tap",
+   "right": "faucet",
+   "note": "یعنی «شیر آب» به آمریکایی",
+   "emoji": "droplet"
+  },
+  {
+   "wrong": "car park",
+   "right": "parking lot",
+   "note": "یعنی «پارکینگ» به آمریکایی",
+   "emoji": "automobile"
+  },
+  {
+   "wrong": "underground",
+   "right": "subway",
+   "note": "یعنی «مترو» به آمریکایی",
+   "emoji": "metro"
+  }
+ ],
+ "caption": "این ۴ تا کلمه رو آمریکایی بگو 🇺🇸\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

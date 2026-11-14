@@ -1,0 +1,33 @@
+{
+ "tag": "trial39b",
+ "kind": "mistakes",
+ "day": 39,
+ "date": "2026-12-11",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I fell the exam.",
+   "right": "I failed the exam.",
+   "note": "رد شدن تو امتحان = fail",
+   "emoji": "memo"
+  },
+  {
+   "wrong": "I became late.",
+   "right": "I was late.",
+   "note": "«دیر کردم» = I was late",
+   "emoji": "alarm_clock"
+  },
+  {
+   "wrong": "I have head pain.",
+   "right": "I have a headache.",
+   "note": "«سردرد دارم» = a headache",
+   "emoji": "face_with_head-bandage"
+  }
+ ],
+ "caption": "این ۳ تا رو از فارسی ترجمه نکن ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

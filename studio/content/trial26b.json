@@ -1,0 +1,33 @@
+{
+ "tag": "trial26b",
+ "kind": "mistakes",
+ "day": 26,
+ "date": "2026-11-28",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Listen me.",
+   "right": "Listen to me.",
+   "note": "بعد از listen میاد to",
+   "emoji": "ear"
+  },
+  {
+   "wrong": "Wait me.",
+   "right": "Wait for me.",
+   "note": "بعد از wait میاد for",
+   "emoji": "hourglass_not_done"
+  },
+  {
+   "wrong": "Look me.",
+   "right": "Look at me.",
+   "note": "بعد از look میاد at",
+   "emoji": "eyes"
+  }
+ ],
+ "caption": "این ۳ تا فعل بدون حرف اضافه غلطن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

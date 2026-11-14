@@ -1,0 +1,159 @@
+{
+ "day": 52,
+ "date": "2026-12-24",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم این ۴ تا شهر",
+  "l2a": "رو",
+  "l2b": "اشتباه",
+  "l3": "می‌گی!",
+  "l3emoji": "world_map",
+  "sub": "انگلیسیش شبیه فارسی نیست",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آو»",
+   "tip_en": "ow",
+   "tip_emoji": "light_bulb",
+   "en": "Moscow",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "snowman",
+   "uni": "☃️",
+   "ipa": "/ˈmɑːskaʊ/",
+   "wrong": "مُسکو",
+   "right": "ماسکاو",
+   "fa": "مسکو",
+   "tts": "Moscow"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اَ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "Istanbul",
+   "mark": [
+    3
+   ],
+   "emoji": "mosque",
+   "uni": "🕌",
+   "ipa": "/ˌɪstænˈbʊl/",
+   "wrong": "اِستانبول",
+   "right": "ایستَنبُل",
+   "fa": "استانبول",
+   "tts": "Istanbul"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ث»",
+   "tip_en": "th",
+   "tip_emoji": "light_bulb",
+   "en": "Athens",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "amphora",
+   "uni": "🏺",
+   "ipa": "/ˈæθɪnz/",
+   "wrong": "آتِن",
+   "right": "اَثِنز",
+   "fa": "آتن",
+   "tts": "Athens"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِنا»",
+   "tip_en": "enna",
+   "tip_emoji": "light_bulb",
+   "en": "Vienna",
+   "mark": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "emoji": "violin",
+   "uni": "🎻",
+   "ipa": "/viˈenə/",
+   "wrong": "وین",
+   "right": "ویِنا",
+   "fa": "وین",
+   "tts": "Vienna"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "flood",
+   "ipa": "/flʌd/",
+   "answer": "سیل"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ف» میده؟",
+   "hint": "راهنما: حرف‌هاشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "input_latin_letters",
+   "word": "alphabet",
+   "answer": "ph"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "young",
+   "options": [
+    "پیر",
+    "جوان",
+    "قوی"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "اسم کدوم شهر رو",
+   "t2a": "مطمئن",
+   "t2b": "نیستی؟",
+   "body": "ریپلای کن تا تلفظ درستشو\nتو ریلزهای بعدی بگم",
+   "example": "Prague"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "وین به انگلیسی میشه Vienna 😳\nاسم این ۴ تا شهر رو این‌جوری بگو 🌍 برای دوستت بفرست\n\n☃️ Moscow = ماسکاو (مسکو)\n🕌 Istanbul = ایستَنبُل (استانبول)\n🏺 Athens = اَثِنز (آتن)\n🎻 Vienna = ویِنا (وین)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

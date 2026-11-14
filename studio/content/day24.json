@@ -1,0 +1,155 @@
+{
+ "day": 24,
+ "date": "2026-11-26",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم این ۴ تا شهر",
+  "l2a": "رو",
+  "l2b": "اشتباه",
+  "l3": "می‌گی!",
+  "l3emoji": "world_map",
+  "sub": "انگلیسی‌ها این‌جوری می‌گن",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اَ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "Paris",
+   "mark": [
+    1
+   ],
+   "emoji": "croissant",
+   "uni": "🥐",
+   "ipa": "/ˈpærɪs/",
+   "wrong": "پاریس",
+   "right": "پَریس",
+   "fa": "پاریس",
+   "tts": "Paris"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ا»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "London",
+   "mark": [
+    1
+   ],
+   "emoji": "crown",
+   "uni": "👑",
+   "ipa": "/ˈlʌndən/",
+   "wrong": "لُندُن",
+   "right": "لاندِن",
+   "fa": "لندن",
+   "tts": "London"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُو»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "Rome",
+   "mark": [
+    1
+   ],
+   "emoji": "pizza",
+   "uni": "🍕",
+   "ipa": "/roʊm/",
+   "wrong": "رُم",
+   "right": "رُوم",
+   "fa": "رُم",
+   "tts": "Rome"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آی»",
+   "tip_en": "ai",
+   "tip_emoji": "light_bulb",
+   "en": "Dubai",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "camel",
+   "uni": "🐫",
+   "ipa": "/duːˈbaɪ/",
+   "wrong": "دُبَی",
+   "right": "دوبای",
+   "fa": "دُبی",
+   "tts": "Dubai"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "put",
+   "ipa": "/pʊt/",
+   "answer": "گذاشتن"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ج» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "magic_wand",
+   "word": "magic",
+   "answer": "g"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "full",
+   "options": [
+    "پُر",
+    "خالی",
+    "شکسته"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "اسم کدوم شهر رو",
+   "t2a": "مطمئن",
+   "t2b": "نیستی؟",
+   "body": "ریپلای کن تا تلفظ درستشو\nتو ریلزهای بعدی بگم",
+   "example": "Barcelona"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "اسم این ۴ تا شهر رو اشتباه می‌گی 😳\nLondon میشه «لاندِن» و Dubai میشه «دوبای» 🌍 برای دوستت بفرست\n\n🥐 Paris = پَریس (پاریس)\n👑 London = لاندِن (لندن)\n🍕 Rome = رُوم (رُم)\n🐫 Dubai = دوبای (دُبی)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

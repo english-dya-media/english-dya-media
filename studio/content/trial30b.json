@@ -1,0 +1,33 @@
+{
+ "tag": "trial30b",
+ "kind": "mistakes",
+ "day": 30,
+ "date": "2026-12-02",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I can to swim.",
+   "right": "I can swim.",
+   "note": "بعد از can فعل ساده میاد",
+   "emoji": "person_swimming"
+  },
+  {
+   "wrong": "Let's to go.",
+   "right": "Let's go.",
+   "note": "بعد از let's، to نمیاد",
+   "emoji": "person_walking"
+  },
+  {
+   "wrong": "I must to study.",
+   "right": "I must study.",
+   "note": "بعد از must هم to نمیاد",
+   "emoji": "books"
+  }
+ ],
+ "caption": "این to‌ها اضافه‌ست ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

@@ -1,0 +1,154 @@
+{
+ "day": 44,
+ "date": "2026-12-16",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "s آخر این کلمه‌ها",
+  "l2a": "رو",
+  "l2b": "«س»",
+  "l3": "نخون!",
+  "l3emoji": "warning",
+  "sub": "بعد از صداهای نرم میشه «ز»",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ز»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "keys",
+   "mark": [
+    3
+   ],
+   "emoji": "old_key",
+   "uni": "🗝️",
+   "ipa": "/kiːz/",
+   "wrong": "کیس",
+   "right": "کیز",
+   "fa": "کلیدها",
+   "tts": "keys"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ز»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "phones",
+   "mark": [
+    5
+   ],
+   "emoji": "mobile_phone",
+   "uni": "📱",
+   "ipa": "/foʊnz/",
+   "wrong": "فونِس",
+   "right": "فُونز",
+   "fa": "گوشی‌ها",
+   "tts": "phones"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ز»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "cars",
+   "mark": [
+    3
+   ],
+   "emoji": "racing_car",
+   "uni": "🏎️",
+   "ipa": "/kɑːrz/",
+   "wrong": "کارس",
+   "right": "کارز",
+   "fa": "ماشین‌ها",
+   "tts": "cars"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ز»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "boys",
+   "mark": [
+    3
+   ],
+   "emoji": "boy",
+   "uni": "👦",
+   "ipa": "/bɔɪz/",
+   "wrong": "بویس",
+   "right": "بویز",
+   "fa": "پسرها",
+   "tts": "boys"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "height",
+   "ipa": "/haɪt/",
+   "answer": "قد، ارتفاع"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "folded_hands",
+   "word": "please",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "neighbor",
+   "options": [
+    "دوست",
+    "همسایه",
+    "فامیل"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه‌ی جمع که",
+   "t2a": "گیجت",
+   "t2b": "می‌کنه؟",
+   "body": "ریپلای کن تا تلفظ درستشو\nتو ریلزهای بعدی یادت بدم",
+   "example": "clothes"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "s آخر این ۴ کلمه رو «س» نخون ❌\nبعد از صداهای نرم، s جمع میشه «ز» 💡 برای دوستت بفرست\n\n🗝️ keys = کیز (کلیدها)\n📱 phones = فُونز (گوشی‌ها)\n🏎️ cars = کارز (ماشین‌ها)\n👦 boys = بویز (پسرها)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

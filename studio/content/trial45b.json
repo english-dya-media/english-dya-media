@@ -1,0 +1,33 @@
+{
+ "tag": "trial45b",
+ "kind": "mistakes",
+ "day": 45,
+ "date": "2026-12-17",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I go to the school.",
+   "right": "I go to school.",
+   "note": "رفتن به مدرسه the نمی‌خواد",
+   "emoji": "school"
+  },
+  {
+   "wrong": "at the night",
+   "right": "at night",
+   "note": "at night همیشه بدون the",
+   "emoji": "crescent_moon"
+  },
+  {
+   "wrong": "on the Monday",
+   "right": "on Monday",
+   "note": "قبل از روزهای هفته the نمیاد",
+   "emoji": "spiral_calendar"
+  }
+ ],
+ "caption": "این the ها اضافه‌ست ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

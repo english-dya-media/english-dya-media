@@ -1,0 +1,39 @@
+{
+ "tag": "trial49a",
+ "kind": "vocab",
+ "day": 49,
+ "date": "2026-12-21",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "Good night.",
+   "right": "Sweet dreams!",
+   "note": "یعنی «خوابای خوب ببینی»",
+   "emoji": "crescent_moon"
+  },
+  {
+   "wrong": "Go to sleep.",
+   "right": "Hit the sack.",
+   "note": "یعنی «برو بخواب»",
+   "emoji": "bed"
+  },
+  {
+   "wrong": "Wake up!",
+   "right": "Rise and shine!",
+   "note": "یعنی «پاشو، صبح شده»",
+   "emoji": "sunrise"
+  },
+  {
+   "wrong": "I'm going to sleep.",
+   "right": "I'm going to crash.",
+   "note": "یعنی «دارم بیهوش میشم از خستگی»",
+   "emoji": "sleeping_face"
+  }
+ ],
+ "caption": "شب و صبح رو مثل بومی‌ها بگو 🌙\nبرای دوستت بفرست که اونم یاد بگیره 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

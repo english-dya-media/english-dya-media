@@ -1,0 +1,159 @@
+{
+ "day": 48,
+ "date": "2026-12-20",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا خوراکی رو",
+  "l2a": "مثل",
+  "l2b": "فارسی",
+  "l3": "نگو!",
+  "l3emoji": "face_with_raised_eyebrow",
+  "sub": "انگلیسیشون فرق داره",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «یج»",
+   "tip_en": "age",
+   "tip_emoji": "light_bulb",
+   "en": "sausage",
+   "mark": [
+    4,
+    5,
+    6
+   ],
+   "emoji": "hot_dog",
+   "uni": "🌭",
+   "ipa": "/ˈsɔːsɪdʒ/",
+   "wrong": "سوسیس",
+   "right": "ساسیج",
+   "fa": "سوسیس",
+   "tts": "sausage"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "ay",
+   "tip_emoji": "light_bulb",
+   "en": "mayonnaise",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "sandwich",
+   "uni": "🥪",
+   "ipa": "/ˈmeɪəneɪz/",
+   "wrong": "مایونِز",
+   "right": "مِیِنِیز",
+   "fa": "سس مایونز",
+   "tts": "mayonnaise"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "tt",
+   "tip_emoji": "light_bulb",
+   "en": "spaghetti",
+   "mark": [
+    6,
+    7
+   ],
+   "emoji": "spaghetti",
+   "uni": "🍝",
+   "ipa": "/spəˈɡeɾi/",
+   "wrong": "اِسپاگِتی",
+   "right": "سْپِگِدی",
+   "fa": "اسپاگتی",
+   "tts": "spaghetti"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ِر»",
+   "tip_en": "ur",
+   "tip_emoji": "light_bulb",
+   "en": "yogurt",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "glass_of_milk",
+   "uni": "🥛",
+   "ipa": "/ˈjoʊɡərt/",
+   "wrong": "یوگورت",
+   "right": "یُوگِرت",
+   "fa": "ماست",
+   "tts": "yogurt"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "throw",
+   "ipa": "/θroʊ/",
+   "answer": "پرت کردن"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "man",
+   "word": "husband",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "earth",
+   "options": [
+    "زمین (سیاره)",
+    "ماه",
+    "خورشید"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "اسم کدوم خوراکی رو",
+   "t2a": "مطمئن",
+   "t2b": "نیستی؟",
+   "body": "ریپلای کن تا تلفظ درستشو\nتو ریلزهای بعدی بگم",
+   "example": "croissant"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "سوسیس و ماست و اسپاگتی به انگلیسی چی میشن؟ 😳\nتلفظ درستشون رو یاد بگیر 🔊 برای دوستت بفرست\n\n🌭 sausage = ساسیج (سوسیس)\n🥪 mayonnaise = مِیِنِیز (سس مایونز)\n🍝 spaghetti = سْپِگِدی (اسپاگتی)\n🥛 yogurt = یُوگِرت (ماست)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

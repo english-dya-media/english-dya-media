@@ -1,0 +1,39 @@
+{
+ "tag": "trial26a",
+ "kind": "vocab",
+ "day": 26,
+ "date": "2026-11-28",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "very small",
+   "right": "microscopic",
+   "note": "یعنی «خیلی ریز»",
+   "emoji": "microscope"
+  },
+  {
+   "wrong": "very happy",
+   "right": "overjoyed",
+   "note": "یعنی «خیلی خوشحال، ذوق‌زده»",
+   "emoji": "grinning_face_with_big_eyes"
+  },
+  {
+   "wrong": "very hungry",
+   "right": "famished",
+   "note": "یعنی «خیلی گرسنه»",
+   "emoji": "fork_and_knife_with_plate"
+  },
+  {
+   "wrong": "very hot",
+   "right": "scorching",
+   "note": "یعنی «داغِ داغ» (برای هوا)",
+   "emoji": "sun"
+  }
+ ],
+ "caption": "به جای very این ۴ تا کلمه رو بگو 😎\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

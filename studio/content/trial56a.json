@@ -1,0 +1,39 @@
+{
+ "tag": "trial56a",
+ "kind": "vocab",
+ "day": 56,
+ "date": "2026-12-28",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "فعل‌هایی که بومی‌ها می‌گن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "raise (a child)",
+   "right": "bring up",
+   "note": "یعنی «بچه بزرگ کردن»",
+   "emoji": "baby"
+  },
+  {
+   "wrong": "explode",
+   "right": "blow up",
+   "note": "یعنی «منفجر شدن»",
+   "emoji": "collision"
+  },
+  {
+   "wrong": "invent (a story)",
+   "right": "make up",
+   "note": "یعنی «از خودت درآوردن»",
+   "emoji": "open_book"
+  },
+  {
+   "wrong": "manage (with little)",
+   "right": "get by",
+   "note": "یعنی «سر کردن، گذروندن»",
+   "emoji": "coin"
+  }
+ ],
+ "caption": "بومی‌ها به جای این ۴ تا فعل این‌جوری می‌گن 😎\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

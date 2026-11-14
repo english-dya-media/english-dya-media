@@ -1,0 +1,33 @@
+{
+ "tag": "trial33b",
+ "kind": "mistakes",
+ "day": 33,
+ "date": "2026-12-05",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I'm good in math.",
+   "right": "I'm good at math.",
+   "note": "تو چیزی خوب بودن = good at",
+   "emoji": "abacus"
+  },
+  {
+   "wrong": "He's angry to me.",
+   "right": "He's angry with me.",
+   "note": "از کسی عصبانی = angry with",
+   "emoji": "pouting_face"
+  },
+  {
+   "wrong": "I'm proud to you.",
+   "right": "I'm proud of you.",
+   "note": "به کسی افتخار کردن = proud of",
+   "emoji": "trophy"
+  }
+ ],
+ "caption": "حرف اضافه‌ی این ۳ تا رو اشتباه می‌گی ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

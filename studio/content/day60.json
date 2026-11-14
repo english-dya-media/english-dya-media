@@ -1,0 +1,160 @@
+{
+ "day": 60,
+ "date": "2027-01-01",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "سال نو مبارک!",
+  "l2a": "اسم ماه‌ها",
+  "l2b": "رو",
+  "l3": "درست بگو",
+  "l3emoji": "party_popper",
+  "sub": "ژانویه و فوریه فرانسوی‌ان!",
+  "subemoji": "calendar"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ج»",
+   "tip_en": "J",
+   "tip_emoji": "light_bulb",
+   "en": "January",
+   "mark": [
+    0
+   ],
+   "emoji": "calendar",
+   "uni": "📅",
+   "ipa": "/ˈdʒænjueri/",
+   "wrong": "ژانویه",
+   "right": "جَنیوئِری",
+   "fa": "ژانویه",
+   "tts": "January"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «یوئِری»",
+   "tip_en": "ruary",
+   "tip_emoji": "light_bulb",
+   "en": "February",
+   "mark": [
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "emoji": "snowflake",
+   "uni": "❄️",
+   "ipa": "/ˈfebjueri/",
+   "wrong": "فوریه",
+   "right": "فِبیوئِری",
+   "fa": "فوریه",
+   "tts": "February"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ج»",
+   "tip_en": "J",
+   "tip_emoji": "light_bulb",
+   "en": "June",
+   "mark": [
+    0
+   ],
+   "emoji": "sun",
+   "uni": "☀️",
+   "ipa": "/dʒuːn/",
+   "wrong": "ژوئن",
+   "right": "جون",
+   "fa": "ژوئن",
+   "tts": "June"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آگ»",
+   "tip_en": "Aug",
+   "tip_emoji": "light_bulb",
+   "en": "August",
+   "mark": [
+    0,
+    1,
+    2
+   ],
+   "emoji": "beach_with_umbrella",
+   "uni": "🏖️",
+   "ipa": "/ˈɔːɡəst/",
+   "wrong": "اوت",
+   "right": "آگِست",
+   "fa": "اوت",
+   "tts": "August"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "spring",
+   "ipa": "/sprɪŋ/",
+   "answer": "بهار؛ فنر"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "artist_palette",
+   "word": "design",
+   "answer": "g"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "swim",
+   "options": [
+    "دویدن",
+    "پریدن",
+    "شنا کردن"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "امسال می‌خوای",
+   "t2a": "چی",
+   "t2b": "یاد بگیری؟",
+   "body": "ریپلای کن؛ تو ریلزهای بعدی\nبراش محتوا می‌سازم",
+   "example": "speaking"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "سال نو میلادی مبارک 🎉 ژانویه به انگلیسی میشه January\nاسم این ۴ تا ماه رو فرانسوی نگو 💡 برای دوستت بفرست\n\n📅 January = جَنیوئِری (ژانویه)\n❄️ February = فِبیوئِری (فوریه)\n☀️ June = جون (ژوئن)\n🏖️ August = آگِست (اوت)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

@@ -1,0 +1,39 @@
+{
+ "tag": "trial43a",
+ "kind": "vocab",
+ "day": 43,
+ "date": "2026-12-15",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "فعل دقیق‌تر بگو",
+ "head_emoji": "bullseye",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "say quietly",
+   "right": "whisper",
+   "note": "یعنی «پچ‌پچ کردن»",
+   "emoji": "shushing_face"
+  },
+  {
+   "wrong": "say loudly",
+   "right": "shout",
+   "note": "یعنی «داد زدن»",
+   "emoji": "loudspeaker"
+  },
+  {
+   "wrong": "look for a long time",
+   "right": "stare",
+   "note": "یعنی «خیره شدن»",
+   "emoji": "eyes"
+  },
+  {
+   "wrong": "look quickly",
+   "right": "glance",
+   "note": "یعنی «یه نگاه سریع انداختن»",
+   "emoji": "eye"
+  }
+ ],
+ "caption": "به جای say و look این فعل‌های دقیق رو بگو 😎\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

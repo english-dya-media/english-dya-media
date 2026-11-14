@@ -1,0 +1,158 @@
+{
+ "day": 28,
+ "date": "2026-11-30",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«د» و «ت»",
+  "l3": "نگو!",
+  "l3emoji": "cross_mark",
+  "sub": "th این‌جا نرمه، شبیه «ذ»",
+  "subemoji": "tongue"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: نرم، شبیه «ذ»",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "together",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "people_hugging",
+   "uni": "🫂",
+   "ipa": "/təˈɡeðər/",
+   "wrong": "تُگِدِر",
+   "right": "تُگِذِر",
+   "fa": "با هم",
+   "tts": "together"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: نرم، شبیه «ذ»",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "other",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "busts_in_silhouette",
+   "uni": "👥",
+   "ipa": "/ˈʌðər/",
+   "wrong": "آدِر",
+   "right": "آذِر",
+   "fa": "دیگر",
+   "tts": "other"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: نرم، شبیه «ذ»",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "breathe",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "wind_face",
+   "uni": "🌬️",
+   "ipa": "/briːð/",
+   "wrong": "بْریت",
+   "right": "بْریذ",
+   "fa": "نفس کشیدن",
+   "tts": "breathe"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: نرم، شبیه «ذ»",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "smooth",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "butter",
+   "uni": "🧈",
+   "ipa": "/smuːð/",
+   "wrong": "اِسموت",
+   "right": "سْموذ",
+   "fa": "صاف، نرم",
+   "tts": "smooth"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "glasses",
+   "ipa": "/ˈɡlæsɪz/",
+   "answer": "عینک؛ لیوان‌ها"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "cross_mark",
+   "word": "wrong",
+   "answer": "w"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "dishes",
+   "options": [
+    "قاشق‌ها",
+    "ظرف‌ها",
+    "میزها"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با th که",
+   "t2a": "مطمئن",
+   "t2b": "نیستی؟",
+   "body": "ریپلای کن تا تو ریلزهای بعدی\nبا هم تمرینش کنیم",
+   "example": "clothes"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "th این ۴ تا کلمه «د» یا «ت» نیست ❌\nاین‌جا th نرمه، شبیه «ذ»: زبونتو بذار بین دندونات 👅 سیو کن\n\n🫂 together = تُگِذِر (با هم)\n👥 other = آذِر (دیگر)\n🌬️ breathe = بْریذ (نفس کشیدن)\n🧈 smooth = سْموذ (صاف، نرم)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

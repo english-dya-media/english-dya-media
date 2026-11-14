@@ -1,0 +1,155 @@
+{
+ "day": 54,
+ "date": "2026-12-26",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "آمریکایی",
+  "l2b": "بگو",
+  "l3": "t میشه «د»!",
+  "l3emoji": "speaker_high_volume",
+  "sub": "مثل water که میشه «وادِر»",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "later",
+   "mark": [
+    2
+   ],
+   "emoji": "hourglass_not_done",
+   "uni": "⏳",
+   "ipa": "/ˈleɪɾər/",
+   "wrong": "لِیتِر",
+   "right": "لِیدِر",
+   "fa": "بعداً",
+   "tts": "later"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "meeting",
+   "mark": [
+    3
+   ],
+   "emoji": "spiral_notepad",
+   "uni": "🗒️",
+   "ipa": "/ˈmiːɾɪŋ/",
+   "wrong": "میتینگ",
+   "right": "میدینگ",
+   "fa": "جلسه",
+   "tts": "meeting"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "beautiful",
+   "mark": [
+    4
+   ],
+   "emoji": "sunflower",
+   "uni": "🌻",
+   "ipa": "/ˈbjuːɾəfəl/",
+   "wrong": "بیوتیفول",
+   "right": "بیودِفِل",
+   "fa": "زیبا",
+   "tts": "beautiful"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "tt",
+   "tip_emoji": "light_bulb",
+   "en": "little",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "baby_chick",
+   "uni": "🐤",
+   "ipa": "/ˈlɪɾəl/",
+   "wrong": "لیتِل",
+   "right": "لیدِل",
+   "fa": "کوچیک، کم",
+   "tts": "little"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "label",
+   "ipa": "/ˈleɪbəl/",
+   "answer": "برچسب"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "guitar",
+   "word": "folk",
+   "answer": "l"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "درستش کدومه؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "data",
+   "options": [
+    "دِیتا",
+    "دیتا",
+    "دِیدا"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با t وسطش",
+   "t2a": "که",
+   "t2b": "سخته؟",
+   "body": "ریپلای کن تا تلفظ آمریکاییشو\nتو ریلزهای بعدی بگم",
+   "example": "computer"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "beautiful رو «بیوتیفول» نخون ❌\nآمریکایی‌ها t این ۴ تا کلمه رو «د» می‌گن 🇺🇸 سیو کن\n\n⏳ later = لِیدِر (بعداً)\n🗒️ meeting = میدینگ (جلسه)\n🌻 beautiful = بیودِفِل (زیبا)\n🐤 little = لیدِل (کوچیک، کم)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

@@ -1,0 +1,33 @@
+{
+ "tag": "trial41b",
+ "kind": "mistakes",
+ "day": 41,
+ "date": "2026-12-13",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Say a joke.",
+   "right": "Tell a joke.",
+   "note": "جوک رو tell می‌کنن",
+   "emoji": "face_with_tears_of_joy"
+  },
+  {
+   "wrong": "Make a photo.",
+   "right": "Take a photo.",
+   "note": "عکس گرفتن = take a photo",
+   "emoji": "camera_with_flash"
+  },
+  {
+   "wrong": "Do a mistake.",
+   "right": "Make a mistake.",
+   "note": "اشتباه کردن = make a mistake",
+   "emoji": "cross_mark"
+  }
+ ],
+ "caption": "فعل این ۳ تا رو اشتباه انتخاب می‌کنی ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

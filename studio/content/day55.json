@@ -1,0 +1,146 @@
+{
+ "day": 55,
+ "date": "2026-12-27",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "تو این ۴ تا کلمه",
+  "l2a": "حرف",
+  "l2b": "l",
+  "l3": "رو نخون!",
+  "l3emoji": "zipper-mouth_face",
+  "sub": "l این‌جا فقط برای ظاهره!",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "l",
+   "en": "would",
+   "mark": [
+    3
+   ],
+   "emoji": "crystal_ball",
+   "uni": "🔮",
+   "ipa": "/wʊd/",
+   "wrong": "وولد",
+   "right": "وُد",
+   "fa": "فعل کمکی شرطی",
+   "tts": "would"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "l",
+   "en": "should",
+   "mark": [
+    4
+   ],
+   "emoji": "backhand_index_pointing_up",
+   "uni": "☝️",
+   "ipa": "/ʃʊd/",
+   "wrong": "شولد",
+   "right": "شُد",
+   "fa": "باید (توصیه)",
+   "tts": "should"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "l",
+   "en": "chalk",
+   "mark": [
+    3
+   ],
+   "emoji": "school",
+   "uni": "🏫",
+   "ipa": "/tʃɔːk/",
+   "wrong": "چالک",
+   "right": "چاک",
+   "fa": "گچ",
+   "tts": "chalk"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "l",
+   "en": "almond",
+   "mark": [
+    1
+   ],
+   "emoji": "chestnut",
+   "uni": "🌰",
+   "ipa": "/ˈɑːmənd/",
+   "wrong": "آلموند",
+   "right": "آمِند",
+   "fa": "بادام",
+   "tts": "almond"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "later",
+   "ipa": "/ˈleɪɾər/",
+   "answer": "بعداً"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "thinking_face",
+   "word": "reason",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "beautiful",
+   "options": [
+    "زشت",
+    "زیبا",
+    "بزرگ"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "کدوم حرف بی‌صدا",
+   "t2a": "بیشتر",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن؛ هفته‌ی بعد\nیه ریلز براش می‌سازم",
+   "example": "salmon"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "would و should رو با «ل» نخون ❌\nl تو این ۴ تا کلمه خونده نمیشه 🤐 برای دوستت بفرست\n\n🔮 would = وُد (فعل کمکی شرطی)\n☝️ should = شُد (باید (توصیه))\n🏫 chalk = چاک (گچ)\n🌰 almond = آمِند (بادام)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

@@ -1,0 +1,166 @@
+{
+ "day": 43,
+ "date": "2026-12-15",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«ایق»",
+  "l3": "نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "eigh معمولاً «اِی»ه، ولی نه همیشه!",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "eigh",
+   "tip_emoji": "light_bulb",
+   "en": "eight",
+   "mark": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "emoji": "keycap_8",
+   "uni": "8️⃣",
+   "ipa": "/eɪt/",
+   "wrong": "ایت",
+   "right": "اِیت",
+   "fa": "هشت",
+   "tts": "eight"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آی»",
+   "tip_en": "eigh",
+   "tip_emoji": "light_bulb",
+   "en": "height",
+   "mark": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "emoji": "straight_ruler",
+   "uni": "📏",
+   "ipa": "/haɪt/",
+   "wrong": "هِیت",
+   "right": "هایت",
+   "fa": "قد، ارتفاع",
+   "tts": "height"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "eigh",
+   "tip_emoji": "light_bulb",
+   "en": "neighbor",
+   "mark": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "emoji": "house_with_garden",
+   "uni": "🏡",
+   "ipa": "/ˈneɪbər/",
+   "wrong": "نایبِر",
+   "right": "نِیبِر",
+   "fa": "همسایه",
+   "tts": "neighbor"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "eigh",
+   "tip_emoji": "light_bulb",
+   "en": "weigh",
+   "mark": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "emoji": "balance_scale",
+   "uni": "⚖️",
+   "ipa": "/weɪ/",
+   "wrong": "وِیق",
+   "right": "وِی",
+   "fa": "وزن کردن",
+   "tts": "weigh"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "Xiaomi",
+   "ipa": "/ʃaʊˈmiː/",
+   "answer": "شاومی"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "brain",
+   "word": "known",
+   "answer": "k"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "Toyota",
+   "options": [
+    "برند ورزشی",
+    "برند موبایل",
+    "خودروساز ژاپنی"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با gh",
+   "t2a": "که",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن؛ شاید تو\nریلز بعدی باشه",
+   "example": "daughter"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "eight رو «ایت» نخون ❌\neigh معمولاً میشه «اِی»؛ ولی height میشه «هایت» 😵 سیو کن\n\n8️⃣ eight = اِیت (هشت)\n📏 height = هایت (قد، ارتفاع)\n🏡 neighbor = نِیبِر (همسایه)\n⚖️ weigh = وِی (وزن کردن)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

@@ -1,0 +1,39 @@
+{
+ "tag": "trial48a",
+ "kind": "vocab",
+ "day": 48,
+ "date": "2026-12-20",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "It's very cold.",
+   "right": "It's freezing out.",
+   "note": "یعنی «بیرون یخبندونه»",
+   "emoji": "cold_face"
+  },
+  {
+   "wrong": "It's raining a lot.",
+   "right": "It's pouring.",
+   "note": "یعنی «داره شُرشُر می‌باره»",
+   "emoji": "cloud_with_rain"
+  },
+  {
+   "wrong": "It's very hot.",
+   "right": "It's boiling today.",
+   "note": "یعنی «امروز داغِ داغه»",
+   "emoji": "hot_face"
+  },
+  {
+   "wrong": "very bad weather",
+   "right": "nasty weather",
+   "note": "یعنی «هوای خیلی بد»",
+   "emoji": "cloud_with_lightning_and_rain"
+  }
+ ],
+ "caption": "درباره‌ی هوا مثل بومی‌ها حرف بزن 🌧️\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

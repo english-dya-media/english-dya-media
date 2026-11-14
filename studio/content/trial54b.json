@@ -1,0 +1,33 @@
+{
+ "tag": "trial54b",
+ "kind": "mistakes",
+ "day": 54,
+ "date": "2026-12-26",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "He mentioned about it.",
+   "right": "He mentioned it.",
+   "note": "بعد از mention حرف about نمیاد",
+   "emoji": "speech_balloon"
+  },
+  {
+   "wrong": "Emphasize on this.",
+   "right": "Emphasize this.",
+   "note": "emphasize خودش یعنی تأکید کردن روی",
+   "emoji": "red_exclamation_mark"
+  },
+  {
+   "wrong": "We reached to Tehran.",
+   "right": "We reached Tehran.",
+   "note": "بعد از reach حرف to نمیاد",
+   "emoji": "round_pushpin"
+  }
+ ],
+ "caption": "این ۳ تا فعل حرف اضافه نمی‌خوان ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

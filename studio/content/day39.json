@@ -1,0 +1,158 @@
+{
+ "day": 39,
+ "date": "2026-12-11",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "ed آخر این فعل‌ها",
+  "l2a": "رو",
+  "l2b": "«اِد»",
+  "l3": "نخون!",
+  "l3emoji": "warning",
+  "sub": "بعد از s و sh میشه «ت»",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "kissed",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "kiss_mark",
+   "uni": "💋",
+   "ipa": "/kɪst/",
+   "wrong": "کیسِد",
+   "right": "کیست",
+   "fa": "بوسید",
+   "tts": "kissed"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "washed",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "soap",
+   "uni": "🧼",
+   "ipa": "/wɑːʃt/",
+   "wrong": "واشِد",
+   "right": "واشت",
+   "fa": "شست",
+   "tts": "washed"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "finished",
+   "mark": [
+    6,
+    7
+   ],
+   "emoji": "chequered_flag",
+   "uni": "🏁",
+   "ipa": "/ˈfɪnɪʃt/",
+   "wrong": "فینیشِد",
+   "right": "فینیشت",
+   "fa": "تموم کرد",
+   "tts": "finished"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "missed",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "hourglass_done",
+   "uni": "⌛",
+   "ipa": "/mɪst/",
+   "wrong": "میسِد",
+   "right": "میست",
+   "fa": "از دست داد",
+   "tts": "missed"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "guess",
+   "ipa": "/ɡes/",
+   "answer": "حدس زدن"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "red_question_mark",
+   "word": "whose",
+   "answer": "w"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "guest",
+   "options": [
+    "مهمان",
+    "صاحبخانه",
+    "همسایه"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه فعل که",
+   "t2a": "گذشته‌اش",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن تا تلفظشو\nتو ریلزهای بعدی بگم",
+   "example": "fixed"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "ed این ۴ تا فعل «اِد» نیست ❌\nبعد از s و sh و k، ed میشه «ت» 💡 سیو کن\n\n💋 kissed = کیست (بوسید)\n🧼 washed = واشت (شست)\n🏁 finished = فینیشت (تموم کرد)\n⌛ missed = میست (از دست داد)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

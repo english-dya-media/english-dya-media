@@ -1,0 +1,33 @@
+{
+ "tag": "trial47b",
+ "kind": "mistakes",
+ "day": 47,
+ "date": "2026-12-19",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I want go.",
+   "right": "I want to go.",
+   "note": "بعد از want حرف to لازمه",
+   "emoji": "person_walking"
+  },
+  {
+   "wrong": "I need sleep now.",
+   "right": "I need to sleep.",
+   "note": "بعد از need (فعل) to میاد",
+   "emoji": "sleeping_face"
+  },
+  {
+   "wrong": "I'd like eat.",
+   "right": "I'd like to eat.",
+   "note": "بعد از would like هم to میاد",
+   "emoji": "fork_and_knife_with_plate"
+  }
+ ],
+ "caption": "این ۳ تا جمله یه to کم دارن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

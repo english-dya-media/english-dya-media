@@ -1,0 +1,33 @@
+{
+ "tag": "trial25b",
+ "kind": "mistakes",
+ "day": 25,
+ "date": "2026-11-27",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I like it very.",
+   "right": "I like it a lot.",
+   "note": "very آخر جمله نمیاد",
+   "emoji": "red_heart"
+  },
+  {
+   "wrong": "Make a party.",
+   "right": "Throw a party.",
+   "note": "«مهمونی گرفتن» میشه throw a party",
+   "emoji": "party_popper"
+  },
+  {
+   "wrong": "Make my homework.",
+   "right": "Do my homework.",
+   "note": "تکلیف رو do می‌کنن، نه make",
+   "emoji": "memo"
+  }
+ ],
+ "caption": "make یا do؟ این ۳ تا رو اشتباه می‌گی ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

@@ -1,0 +1,33 @@
+{
+ "tag": "trial51b",
+ "kind": "mistakes",
+ "day": 51,
+ "date": "2026-12-23",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I don't. – Me too.",
+   "right": "Me neither.",
+   "note": "بعد از جمله‌ی منفی میشه me neither",
+   "emoji": "person_gesturing_no"
+  },
+  {
+   "wrong": "Both of us is ready.",
+   "right": "Both of us are ready.",
+   "note": "both جمعه؛ are لازمه",
+   "emoji": "people_hugging"
+  },
+  {
+   "wrong": "Everyone are here.",
+   "right": "Everyone is here.",
+   "note": "everyone مفرده؛ is میاد",
+   "emoji": "busts_in_silhouette"
+  }
+ ],
+ "caption": "این ۳ تا رو تقریباً همه اشتباه می‌گن 😬\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

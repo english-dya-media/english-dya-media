@@ -1,0 +1,158 @@
+{
+ "day": 50,
+ "date": "2026-12-22",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "ed آخر این فعل‌ها",
+  "l2a": "رو",
+  "l2b": "«اِد»",
+  "l3": "نخون!",
+  "l3emoji": "warning",
+  "sub": "بعد از p، k و x میشه «ت»",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "jumped",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "kangaroo",
+   "uni": "🦘",
+   "ipa": "/dʒʌmpt/",
+   "wrong": "جامپِد",
+   "right": "جامپت",
+   "fa": "پرید",
+   "tts": "jumped"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "liked",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "red_heart",
+   "uni": "❤️",
+   "ipa": "/laɪkt/",
+   "wrong": "لایکِد",
+   "right": "لایکت",
+   "fa": "لایک کرد",
+   "tts": "liked"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "fixed",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "hammer_and_wrench",
+   "uni": "🛠️",
+   "ipa": "/fɪkst/",
+   "wrong": "فیکسِد",
+   "right": "فیکست",
+   "fa": "درست کرد",
+   "tts": "fixed"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ت»",
+   "tip_en": "ed",
+   "tip_emoji": "light_bulb",
+   "en": "relaxed",
+   "mark": [
+    5,
+    6
+   ],
+   "emoji": "relieved_face",
+   "uni": "😌",
+   "ipa": "/rɪˈlækst/",
+   "wrong": "ریلَکسِد",
+   "right": "ریلَکست",
+   "fa": "آروم، ریلکس",
+   "tts": "relaxed"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "pomegranate",
+   "ipa": "/ˈpɑːmɪɡrænɪt/",
+   "answer": "انار"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ف» میده؟",
+   "hint": "راهنما: حرف‌هاشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "dolphin",
+   "word": "dolphin",
+   "answer": "ph"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "poem",
+   "options": [
+    "داستان",
+    "شعر",
+    "آهنگ"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه فعل که",
+   "t2a": "گذشته‌اش",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن تا تلفظشو\nتو ریلزهای بعدی بگم",
+   "example": "stopped"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "ed این ۴ تا فعل «اِد» نیست ❌\nبعد از p، k و x ed میشه «ت» 💡 سیو کن\n\n🦘 jumped = جامپت (پرید)\n❤️ liked = لایکت (لایک کرد)\n🛠️ fixed = فیکست (درست کرد)\n😌 relaxed = ریلَکست (آروم، ریلکس)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

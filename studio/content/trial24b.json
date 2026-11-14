@@ -1,0 +1,33 @@
+{
+ "tag": "trial24b",
+ "kind": "mistakes",
+ "day": 24,
+ "date": "2026-11-26",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Congratulation!",
+   "right": "Congratulations!",
+   "note": "همیشه با s آخرش",
+   "emoji": "party_popper"
+  },
+  {
+   "wrong": "Thanks God!",
+   "right": "Thank God!",
+   "note": "بدون s: Thank God",
+   "emoji": "folded_hands"
+  },
+  {
+   "wrong": "Good night! (hello)",
+   "right": "Good evening!",
+   "note": "good night فقط برای خداحافظیه",
+   "emoji": "night_with_stars"
+  }
+ ],
+ "caption": "تبریک و سلام رو این‌جوری نگو ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

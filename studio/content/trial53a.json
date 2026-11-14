@@ -1,0 +1,39 @@
+{
+ "tag": "trial53a",
+ "kind": "vocab",
+ "day": 53,
+ "date": "2026-12-25",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "اصطلاح‌هایی که بومی‌ها می‌گن",
+ "head_emoji": "speech_balloon",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "rarely",
+   "right": "once in a blue moon",
+   "note": "یعنی «به ندرت، سالی یه بار»",
+   "emoji": "full_moon"
+  },
+  {
+   "wrong": "tell a secret",
+   "right": "spill the beans",
+   "note": "یعنی «رازو لو دادن»",
+   "emoji": "shushing_face"
+  },
+  {
+   "wrong": "start talking",
+   "right": "break the ice",
+   "note": "یعنی «یخِ جمع رو شکستن»",
+   "emoji": "ice"
+  },
+  {
+   "wrong": "in trouble",
+   "right": "in hot water",
+   "note": "یعنی «تو دردسر»",
+   "emoji": "hot_springs"
+  }
+ ],
+ "caption": "این اصطلاح‌ها رو بومی‌ها هر روز می‌گن 😎\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

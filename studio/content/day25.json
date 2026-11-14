@@ -1,0 +1,154 @@
+{
+ "day": 25,
+ "date": "2026-11-27",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "مثل",
+  "l2b": "فارسی",
+  "l3": "نگو!",
+  "l3emoji": "face_with_raised_eyebrow",
+  "sub": "انگلیسی‌ها یه جور دیگه می‌گن",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آی»",
+   "tip_en": "i",
+   "tip_emoji": "light_bulb",
+   "en": "vitamin",
+   "mark": [
+    1
+   ],
+   "emoji": "pill",
+   "uni": "💊",
+   "ipa": "/ˈvaɪɾəmɪn/",
+   "wrong": "ویتامین",
+   "right": "وایدِمین",
+   "fa": "ویتامین",
+   "tts": "vitamin"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آی»",
+   "tip_en": "i",
+   "tip_emoji": "light_bulb",
+   "en": "virus",
+   "mark": [
+    1
+   ],
+   "emoji": "microbe",
+   "uni": "🦠",
+   "ipa": "/ˈvaɪrəs/",
+   "wrong": "ویروس",
+   "right": "وایرِس",
+   "fa": "ویروس",
+   "tts": "virus"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «یو»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "museum",
+   "mark": [
+    1
+   ],
+   "emoji": "classical_building",
+   "uni": "🏛️",
+   "ipa": "/mjuˈziːəm/",
+   "wrong": "موزه",
+   "right": "میوزیِم",
+   "fa": "موزه",
+   "tts": "museum"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ج»",
+   "tip_en": "j",
+   "tip_emoji": "light_bulb",
+   "en": "pajamas",
+   "mark": [
+    2
+   ],
+   "emoji": "bed",
+   "uni": "🛏️",
+   "ipa": "/pəˈdʒɑːməz/",
+   "wrong": "پیژامه",
+   "right": "پِجامِز",
+   "fa": "لباس خواب",
+   "tts": "pajamas"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "London",
+   "ipa": "/ˈlʌndən/",
+   "answer": "لاندِن"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "world_map",
+   "word": "guide",
+   "answer": "u"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "درستش کدومه؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "Dubai",
+   "options": [
+    "دوبی",
+    "دوبای",
+    "دُبَی"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که فارسی",
+   "t2a": "هم",
+   "t2b": "داریمش؟",
+   "body": "ریپلای کن تا تلفظ انگلیسیشو\nتو ریلزهای بعدی بگم",
+   "example": "sandwich"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "ویتامین و ویروس و موزه به انگلیسی چی میشن؟ 😳\nاین ۴ تا رو مثل فارسی نگو 🔊 برای دوستت بفرست\n\n💊 vitamin = وایدِمین (ویتامین)\n🦠 virus = وایرِس (ویروس)\n🏛️ museum = میوزیِم (موزه)\n🛏️ pajamas = پِجامِز (لباس خواب)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

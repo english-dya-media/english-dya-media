@@ -1,0 +1,158 @@
+{
+ "day": 36,
+ "date": "2026-12-08",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«ت» و «س»",
+  "l3": "نگو!",
+  "l3emoji": "cross_mark",
+  "sub": "زبونتو بذار بین دندونات",
+  "subemoji": "tongue"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "thousand",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "money_bag",
+   "uni": "💰",
+   "ipa": "/ˈθaʊzənd/",
+   "wrong": "تاوزِند",
+   "right": "ثاوزِند",
+   "fa": "هزار",
+   "tts": "thousand"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "Thursday",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "spiral_calendar",
+   "uni": "🗓️",
+   "ipa": "/ˈθɜːrzdeɪ/",
+   "wrong": "تِرزدِی",
+   "right": "ثِرزدِی",
+   "fa": "پنجشنبه",
+   "tts": "Thursday"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "mouth",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "mouth",
+   "uni": "👄",
+   "ipa": "/maʊθ/",
+   "wrong": "ماوت",
+   "right": "ماوث",
+   "fa": "دهان",
+   "tts": "mouth"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "health",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "stethoscope",
+   "uni": "🩺",
+   "ipa": "/helθ/",
+   "wrong": "هِلت",
+   "right": "هِلث",
+   "fa": "سلامتی",
+   "tts": "health"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "Germany",
+   "ipa": "/ˈdʒɜːrməni/",
+   "answer": "آلمان"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "keycap_2",
+   "word": "two",
+   "answer": "w"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "Egypt",
+   "options": [
+    "عراق",
+    "ترکیه",
+    "مصر"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با th که",
+   "t2a": "تلفظش",
+   "t2b": "سخته؟",
+   "body": "ریپلای کن تا تو ریلزهای بعدی\nبا هم تمرینش کنیم",
+   "example": "throat"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "Thursday رو «تِرزدِی» نگو ❌\nth این‌جا «ث»ه: زبون بین دندون‌ها و فوت 👅 برای دوستت بفرست\n\n💰 thousand = ثاوزِند (هزار)\n🗓️ Thursday = ثِرزدِی (پنجشنبه)\n👄 mouth = ماوث (دهان)\n🩺 health = هِلث (سلامتی)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

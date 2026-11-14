@@ -1,0 +1,33 @@
+{
+ "tag": "trial20b",
+ "kind": "mistakes",
+ "day": 20,
+ "date": "2026-11-22",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Where you live?",
+   "right": "Where do you live?",
+   "note": "تو سؤال do لازمه",
+   "emoji": "house"
+  },
+  {
+   "wrong": "What means it?",
+   "right": "What does it mean?",
+   "note": "سؤال با does میاد، نه means",
+   "emoji": "thinking_face"
+  },
+  {
+   "wrong": "I know where is he.",
+   "right": "I know where he is.",
+   "note": "وسط جمله ترتیب عادیه: he is",
+   "emoji": "magnifying_glass_tilted_left"
+  }
+ ],
+ "caption": "۳ تا سؤال که از فارسی ترجمه می‌کنیم ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

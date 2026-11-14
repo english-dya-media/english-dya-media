@@ -1,0 +1,33 @@
+{
+ "tag": "trial42b",
+ "kind": "mistakes",
+ "day": 42,
+ "date": "2026-12-14",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I always am late.",
+   "right": "I'm always late.",
+   "note": "always بعد از am میاد",
+   "emoji": "alarm_clock"
+  },
+  {
+   "wrong": "I speak well English.",
+   "right": "I speak English well.",
+   "note": "well میره آخر جمله",
+   "emoji": "speaking_head"
+  },
+  {
+   "wrong": "Very thank you.",
+   "right": "Thank you very much.",
+   "note": "very تنها قبل از thank نمیاد",
+   "emoji": "folded_hands"
+  }
+ ],
+ "caption": "ترتیب کلمه‌های این ۳ تا جمله غلطه ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

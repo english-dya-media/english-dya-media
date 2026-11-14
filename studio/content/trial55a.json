@@ -1,0 +1,39 @@
+{
+ "tag": "trial55a",
+ "kind": "vocab",
+ "day": 55,
+ "date": "2026-12-27",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "very good",
+   "right": "superb",
+   "note": "یعنی «عالی، معرکه»",
+   "emoji": "trophy"
+  },
+  {
+   "wrong": "very long",
+   "right": "endless",
+   "note": "یعنی «تموم‌نشدنی»",
+   "emoji": "infinity"
+  },
+  {
+   "wrong": "very new",
+   "right": "brand-new",
+   "note": "یعنی «نوِ نو، آک»",
+   "emoji": "wrapped_gift"
+  },
+  {
+   "wrong": "very tired",
+   "right": "worn out",
+   "note": "یعنی «خسته و کوفته»",
+   "emoji": "tired_face"
+  }
+ ],
+ "caption": "very رو بذار کنار؛ این ۴ تا رو بگو 😎\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

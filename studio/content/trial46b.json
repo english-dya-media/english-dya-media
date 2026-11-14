@@ -1,0 +1,33 @@
+{
+ "tag": "trial46b",
+ "kind": "mistakes",
+ "day": 46,
+ "date": "2026-12-18",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "He drives careful.",
+   "right": "He drives carefully.",
+   "note": "برای «چطوری» ly لازمه",
+   "emoji": "automobile"
+  },
+  {
+   "wrong": "You speak good.",
+   "right": "You speak well.",
+   "note": "خوب حرف زدن = speak well",
+   "emoji": "speech_balloon"
+  },
+  {
+   "wrong": "Run quick!",
+   "right": "Run quickly!",
+   "note": "برای «چطوری» ly لازمه",
+   "emoji": "person_running"
+  }
+ ],
+ "caption": "این ۳ تا جمله یه ly کم دارن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

@@ -1,0 +1,39 @@
+{
+ "tag": "trial51a",
+ "kind": "vocab",
+ "day": 51,
+ "date": "2026-12-23",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "Let me pay.",
+   "right": "It's on me.",
+   "note": "یعنی «مهمون من»",
+   "emoji": "money_with_wings"
+  },
+  {
+   "wrong": "How much is it?",
+   "right": "What's the damage?",
+   "note": "یعنی «چقدر شد؟» (خودمونی)",
+   "emoji": "receipt"
+  },
+  {
+   "wrong": "I want to pay.",
+   "right": "Check, please!",
+   "note": "یعنی «صورتحساب لطفاً»",
+   "emoji": "credit_card"
+  },
+  {
+   "wrong": "Give me a coffee.",
+   "right": "Can I get a coffee?",
+   "note": "یعنی «یه قهوه می‌دید؟»",
+   "emoji": "hot_beverage"
+  }
+ ],
+ "caption": "تو کافه این‌جوری حرف بزن ☕\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

@@ -52,9 +52,13 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
 
 1. **Setup**: `bash setup.sh` (installs packages, voice model ~340 MB, fonts, emoji).
 
-2. **Which days**: the last `content/dayNN.json` is the last scheduled day. Next week is days N+1 … N+7 and its
-   first date (`python3 -c "from daygen import *; print(day_date(N+1))"`) must be the coming Saturday.
-   If those day files already exist (a rerun), skip to step 6 and check Metricool for existing posts before scheduling anything.
+2. **Which days**: the last `content/dayNN.json` is the last day made. On 14 Nov 2026 the owner asked for three months
+   at once: weeks 4–16 (days 19–109, 21 Nov 2026 – 19 Feb 2027) were made and scheduled in one batch. So first check
+   whether the coming Saturday–Friday already has its day files and its posts in Metricool (`getScheduledPosts` for
+   that week): if it does, there is nothing to do; report "already scheduled through <last made date>" and stop.
+   Make a new week only when the last made day is less than 9 days away: days N+1 … N+7, the first one a Saturday
+   (`python3 -c "from daygen import *; print(day_date(N+1))"`). If those day files exist but the posts are not in
+   Metricool (a rerun), skip to step 6 and check Metricool for existing posts before scheduling anything.
 
 3. **Read the numbers**: `python3 growth/update.py` and `growth/learnings.md`. Let them steer the week: more themes like
    the best reels, none like the worst; if one trial format has clearly beaten the other for a week (about 2× the views),
@@ -73,8 +77,10 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
    - `mark` = indices of the letters to highlight. `SIL("b")` strikes a silent letter; `GLOW(tip, letters)` highlights
      stress/vowels/endings.
    - Stories: recall and mcq must use words from the **previous day's** reel (the checker enforces this; for the
-     first day of the week that is last Friday's reel). Vary the mcq answer position. The quiz word must be new and
-     have one silent letter. Vary the ask story text (see past weeks).
+     first day of the week that is last Friday's reel). Vary the mcq answer position. The quiz word must be new: either
+     one silent letter (`QZ`) or "which letter makes this sound" (`QZV`: s = «ز», ph = «ف», g = «ج»). Vary the ask
+     story text (see past weeks). Since week 4, week files use the compact helpers in daygen.py (`W`, `H`, `REC`,
+     `MC`, `QZ`, `QZV`, `AQ`; see `weeks/week04.py`): reels, trial reels and quotes of a week in one file.
    - Trial *mistakes*: real errors that come from translating Persian word by word (I am agree, I have 25 years old,
      He said me, Open the light, My mother is teacher, I'm boring/bored, more better, How it is?, I didn't went…),
      correct natural English, sentences ≤ 22 characters, `note` ≤ 36 characters of Persian explaining why.

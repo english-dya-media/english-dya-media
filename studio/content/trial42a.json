@@ -1,0 +1,39 @@
+{
+ "tag": "trial42a",
+ "kind": "vocab",
+ "day": 42,
+ "date": "2026-12-14",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "مخفف‌های چت انگلیسی",
+ "head_emoji": "mobile_phone",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "I don't know",
+   "right": "IDK",
+   "note": "یعنی «نمی‌دونم»",
+   "emoji": "person_shrugging"
+  },
+  {
+   "wrong": "oh my god",
+   "right": "OMG",
+   "note": "یعنی «وای خدای من»",
+   "emoji": "face_screaming_in_fear"
+  },
+  {
+   "wrong": "laughing out loud",
+   "right": "LOL",
+   "note": "یعنی «دارم از خنده می‌میرم»",
+   "emoji": "face_with_tears_of_joy"
+  },
+  {
+   "wrong": "be right back",
+   "right": "BRB",
+   "note": "یعنی «الان برمی‌گردم»",
+   "emoji": "right_arrow_curving_left"
+  }
+ ],
+ "caption": "IDK و BRB یعنی چی؟ مخفف‌های چت 🤔\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

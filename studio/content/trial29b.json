@@ -1,0 +1,33 @@
+{
+ "tag": "trial29b",
+ "kind": "mistakes",
+ "day": 29,
+ "date": "2026-12-01",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "The life is hard.",
+   "right": "Life is hard.",
+   "note": "برای مفهوم کلی the نمیاد",
+   "emoji": "mountain"
+  },
+  {
+   "wrong": "I play the football.",
+   "right": "I play football.",
+   "note": "قبل از اسم ورزش‌ها the نمیاد",
+   "emoji": "soccer_ball"
+  },
+  {
+   "wrong": "He is engineer.",
+   "right": "He's an engineer.",
+   "note": "قبل از شغل an یا a لازمه",
+   "emoji": "man_technologist"
+  }
+ ],
+ "caption": "the و a رو این‌جا اشتباه می‌ذاری ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

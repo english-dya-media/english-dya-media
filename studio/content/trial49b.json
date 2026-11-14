@@ -1,0 +1,33 @@
+{
+ "tag": "trial49b",
+ "kind": "mistakes",
+ "day": 49,
+ "date": "2026-12-21",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "This night",
+   "right": "Tonight",
+   "note": "«امشب» میشه tonight",
+   "emoji": "night_with_stars"
+  },
+  {
+   "wrong": "Tell to me.",
+   "right": "Tell me.",
+   "note": "بعد از tell، to نمیاد",
+   "emoji": "speech_balloon"
+  },
+  {
+   "wrong": "Call to me.",
+   "right": "Call me.",
+   "note": "بعد از call هم to نمیاد",
+   "emoji": "telephone_receiver"
+  }
+ ],
+ "caption": "امشب این ۳ تا رو اشتباه نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

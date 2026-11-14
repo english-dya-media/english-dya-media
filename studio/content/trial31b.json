@@ -1,0 +1,33 @@
+{
+ "tag": "trial31b",
+ "kind": "mistakes",
+ "day": 31,
+ "date": "2026-12-03",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Borrow me your pen.",
+   "right": "Lend me your pen.",
+   "note": "«قرض دادن» میشه lend",
+   "emoji": "pen"
+  },
+  {
+   "wrong": "He robbed my phone.",
+   "right": "He stole my phone.",
+   "note": "دزدیدن یه چیز میشه steal",
+   "emoji": "mobile_phone"
+  },
+  {
+   "wrong": "Remember me to call.",
+   "right": "Remind me to call.",
+   "note": "«یادم بنداز» میشه remind",
+   "emoji": "alarm_clock"
+  }
+ ],
+ "caption": "این ۳ تا فعل رو با هم قاطی نکن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

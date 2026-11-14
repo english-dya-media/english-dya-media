@@ -1,0 +1,158 @@
+{
+ "day": 21,
+ "date": "2026-11-23",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«ت»",
+  "l3": "نگو!",
+  "l3emoji": "cross_mark",
+  "sub": "زبونتو بذار بین دندونات",
+  "subemoji": "tongue"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "thank",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "folded_hands",
+   "uni": "🙏",
+   "ipa": "/θæŋk/",
+   "wrong": "تَنک",
+   "right": "ثَنک",
+   "fa": "تشکر کردن",
+   "tts": "thank"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "thirsty",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "cup_with_straw",
+   "uni": "🥤",
+   "ipa": "/ˈθɜːrsti/",
+   "wrong": "تِرستی",
+   "right": "ثِرستی",
+   "fa": "تشنه",
+   "tts": "thirsty"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "tooth",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "tooth",
+   "uni": "🦷",
+   "ipa": "/tuːθ/",
+   "wrong": "توت",
+   "right": "توث",
+   "fa": "دندان",
+   "tts": "tooth"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "صدای {EN}: زبون بین دندون‌ها",
+   "tip_en": "th",
+   "tip_emoji": "tongue",
+   "en": "birthday",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "birthday_cake",
+   "uni": "🎂",
+   "ipa": "/ˈbɜːrθdeɪ/",
+   "wrong": "بِرتدِی",
+   "right": "بِرثدِی",
+   "fa": "تولد",
+   "tts": "birthday"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "great",
+   "ipa": "/ɡreɪt/",
+   "answer": "عالی، بزرگ"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "yarn",
+   "word": "knit",
+   "answer": "k"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "weight",
+   "options": [
+    "قد",
+    "سرعت",
+    "وزن"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با th که",
+   "t2a": "تلفظش",
+   "t2b": "سخته؟",
+   "body": "ریپلای کن تا تو ریلزهای بعدی\nبا هم تمرینش کنیم",
+   "example": "thirteen"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "th این ۴ تا کلمه «ت» نیست ❌\nزبونتو بذار بین دندونات و فوت کن 👅 برای دوستت بفرست\n\n🙏 thank = ثَنک (تشکر کردن)\n🥤 thirsty = ثِرستی (تشنه)\n🦷 tooth = توث (دندان)\n🎂 birthday = بِرثدِی (تولد)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

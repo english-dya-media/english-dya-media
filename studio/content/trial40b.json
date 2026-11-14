@@ -1,0 +1,33 @@
+{
+ "tag": "trial40b",
+ "kind": "mistakes",
+ "day": 40,
+ "date": "2026-12-12",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Thanks for help me.",
+   "right": "Thanks for helping me.",
+   "note": "بعد از for فعل ing می‌گیره",
+   "emoji": "folded_hands"
+  },
+  {
+   "wrong": "Before go, call me.",
+   "right": "Before going, call me.",
+   "note": "بعد از before هم ing میاد",
+   "emoji": "telephone_receiver"
+  },
+  {
+   "wrong": "I enjoy to dance.",
+   "right": "I enjoy dancing.",
+   "note": "بعد از enjoy فعل ing میاد",
+   "emoji": "woman_dancing"
+  }
+ ],
+ "caption": "این ۳ تا فعل ing لازم دارن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}
