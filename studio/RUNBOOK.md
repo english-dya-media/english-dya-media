@@ -31,6 +31,11 @@ Two scheduled jobs use this file: the **weekly run** (Thursdays, makes and sched
   so they must be useful enough to share or save. Rendered by `trial_render.py` (~17–20 s).
 - The daily reel uses layout **v2** (from day 12): no text-only intro, the first word is on screen and spoken from frame 0,
   the hook rides as a banner on top, 19.6 s long. Don't bring back the old 2.4 s hook scene: viewers left during it.
+- **YouTube** (from 14 Nov 2026, owner's request): every video (daily reel, trial reels, quote reel, Rostam & Sohrab
+  parts) also goes to the page's YouTube channel as a Short, in the **same Metricool post** (providers instagram +
+  youtube). `plan.py` and `rostam/plan_parts.py` add it, with a title, tags and settings from `youtube.py`.
+  Stories are images and stay Instagram-only. The posts made before 14 Nov were put on YouTube separately
+  (YouTube-only posts, spread over 14–19 Nov).
 - Captions are **Persian only**, informal spoken style (می‌گن، نمیشه، خونده نمیشه), with hashtags (added automatically).
 - Reels and trial reels carry Instagram's AI label (the voice is synthetic); quote reels don't. `plan.py` sets this.
 - The 7-part story series (`make_story.py`, `story_render.py`) is **paused by the owner**. Don't make or post episodes.
@@ -126,8 +131,9 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
 10. **Schedule**: `python3 plan.py https://raw.githubusercontent.com/english-dya-media/english-dya-media/<branch>/media N+1 N+7 > build/plan.json`.
     First call Metricool `getScheduledPosts` for that date range: if posts already exist there, don't duplicate them.
     Then call `createScheduledPost` once per item with `blogId: "7830959"`, `date: item.date`, `info: item.info`
-    (56 posts: 7 reels, 7 quote reels, 14 trial reels, 28 stories). Finally `getScheduledPosts` again: expect all of
-    them PENDING, media copied to static.metricool.com, trial reels with type TRIAL_REEL.
+    (56 posts: 7 reels, 7 quote reels, 14 trial reels, 28 stories; the 28 videos carry Instagram and YouTube).
+    Finally `getScheduledPosts` again: expect all of them PENDING (both networks on video posts), media copied to
+    static.metricool.com, trial reels with type TRIAL_REEL.
 
 11. **Save**: commit `content/` and `weeks/` to `main` (`git fetch origin main` and rebase first; the daily check also
     pushes to main) and push.
@@ -148,6 +154,9 @@ Monitoring only: no new content. Work in `studio/` (no setup needed). "Now" is t
    time): schedule it again once with `createScheduledPost` — same media (its static.metricool.com URL), text and
    instagramData type, `autoPublish` true, at least 20 minutes from now and not within 30 minutes of another post.
    Never touch posts that are PUBLISHED or still in the future. Don't repost something already re-posted the day before.
+   Video posts carry two networks: if only one failed, re-schedule that network alone (a YouTube-only copy with the
+   same `youtubeData`, or an Instagram-only copy) so the other is never posted twice. If YouTube refused because of
+   its daily upload limit, put the copy on the next day at a free time (not within 30 minutes of another video).
 
 2. **Pull the numbers** with `getAnalyticsDataByMetrics` (brand 7830959):
    - followers, from 8 days ago to today: `IGEV01` followers, `IGEV43` gained, `IGEV44` lost, `IGEV06` reach.

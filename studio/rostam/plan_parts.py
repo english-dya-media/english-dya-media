@@ -6,6 +6,8 @@ media (branch/path), cover_ms, summary (lines), words ([emoji, english, pronunci
 """
 import json, os, sys
 from datetime import datetime
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import youtube                  # every part also goes to YouTube as a Short, in the same Metricool post
 from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -36,7 +38,8 @@ def item(cfg, n):
     y, mo, d = map(int, p["date"].split("-"))
     t = datetime(y, mo, d, hh, mm, tzinfo=ZoneInfo("Asia/Tehran")).astimezone(ZoneInfo("Europe/Rome"))
     info = {"autoPublish": True, "descendants": [], "draft": False, "firstCommentText": "", "hasNotReadNotes": False,
-            "media": [RAW + p["media"]], "mediaAltText": [], "providers": [{"network": "instagram"}],
+            "media": [RAW + p["media"]], "mediaAltText": [], "providers": [{"network": "instagram"}, {"network": "youtube"}],
+            "youtubeData": youtube.yt("rostam", p, True, n)[0],
             "publicationDate": {"dateTime": t.strftime("%Y-%m-%dT%H:%M:%S"), "timezone": "Europe/Rome"},
             "shortener": False, "smartLinkData": {"ids": []}, "text": caption(cfg, n),
             "videoCoverMilliseconds": p.get("cover_ms", 15000),

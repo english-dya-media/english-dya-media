@@ -1,7 +1,8 @@
 # Rostam & Sohrab: a shadow-play series for @english_dya
 
 Ferdowsi's story of Rostam and Sohrab told in **40 animated parts of under 3 minutes**, **two parts a day at
-18:00 and 20:00 Tehran**, posted as Instagram Reels through Metricool (brand `7830959`). The owner (Salar) chose
+18:00 and 20:00 Tehran**, posted as Instagram Reels and YouTube Shorts (same Metricool post; `plan_parts.py` adds YouTube) through
+Metricool (brand `7830959`). The owner (Salar) chose
 every part of this format; keep it. Under 3 minutes because Instagram does not recommend longer reels to people
 who don't follow the page, and new followers are the page's goal.
 
@@ -51,7 +52,8 @@ The scheduled job "Rostam & Sohrab: next part" runs this every morning and makes
 `OUTLINE.md`, told in two halves). Work in `studio/rostam/`.
 
 1. **Buffer check**: Metricool `getScheduledPosts` (brand 7830959, Europe/Rome) from now to 10 days ahead. Count
-   PENDING posts whose caption starts with «🎬 قسمت … از داستان رستم و سهراب». If the next 4 slots (18:00 and 20:00
+   PENDING **Instagram** posts whose caption starts with «🎬 قسمت … از داستان رستم و سهراب» (ignore YouTube-only
+   copies: parts 1–4 also have separate YouTube posts at the same times). If the next 4 slots (18:00 and 20:00
    Tehran) are all filled, or part 40 is scheduled, stop and report. The next part number is the highest in
    `parts.json` + 1; parts go into the free slots after the last scheduled part, in order (never a slot less than
    2 hours away).
