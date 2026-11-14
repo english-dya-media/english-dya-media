@@ -1,9 +1,11 @@
-# Rostam & Sohrab: the 20 parts
+# Rostam & Sohrab: the story in 20 rows, 40 parts
 
 Source: Ferdowsi's Shahnameh, the story of Rostam and Sohrab (Ganjoor: https://ganjoor.net/ferdousi/shahname/sohrab/).
-Each part ≈ 5 minutes. Titles are in `parts.json` ("titles"). Parts 1–2 are done (episode 1, `ep01/`).
+Each row below is about 5 minutes of story, told as **two parts of under 3 minutes**: row r = parts 2r−1 and 2r.
+Rows 1–2 are parts 1–4, done (`ep01/`, cut with `split_n.py`): 1 «رستم», 2 «رخش», 3 «ربودن رخش», 4 «مهمان سمنگان».
+Every part's title is in `parts.json` ("titles").
 
-| part | title | what happens |
+| row | row title | what happens |
 |---|---|---|
 | 1 | The Lost Horse · رخش گمشده | Cold open (Sohrab: "Are you Rostam?" — Rostam: "No."). Ferdowsi and his question about fate (the unripe citron). Rostam's birth and deeds; how he won Rakhsh as a colt. Iran and Turan. Rostam hunts near Samangan, roasts a wild ass, sleeps by a stream. Turanian riders find giant hoofprints. |
 | 2 | The Stolen Horse · ربودن رخش | The riders lasso Rakhsh after a fight and take him to Samangan. Rostam wakes, finds the tracks, walks to Samangan with his saddle. The king welcomes him, promises to find Rakhsh, hosts a feast. Tahmineh listens behind a lattice. Night: a maid with a candle leads someone to Rostam's door. |

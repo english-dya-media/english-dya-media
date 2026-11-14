@@ -17,9 +17,9 @@ Two scheduled jobs use this file: the **weekly run** (Thursdays, makes and sched
   - 15:00 **trial reel a**, *vocab*: 4 basic phrases → a stronger word (very tired → exhausted), with the Persian meaning
   - 17:00 story 3, **mcq**: another word from yesterday's reel, 3 meanings to pick from
   - 19:00 **trial reel b**, *mistakes*: 3 sentences Persian speakers get wrong (I am agree → I agree) + a one-line why
-  - 20:00 **Rostam & Sohrab**: one ~5-minute part a day of the animated Shahnameh series (owner's request, from
-    14 Nov 2026). Made and scheduled by its own daily job ("Rostam & Sohrab: next part", see `rostam/README.md`),
-    not by the weekly run; keep 19:30–20:30 free of other posts.
+  - 18:00 and 20:00 **Rostam & Sohrab**: two parts a day (each under 3 minutes) of the animated Shahnameh series
+    (owner's request, from 14 Nov 2026). Made and scheduled by its own daily job ("Rostam & Sohrab: next part",
+    see `rostam/README.md`), not by the weekly run; keep 17:30–18:30 and 19:30–20:30 free of other posts.
   - 21:00 **reel**: 4 words on one pronunciation theme (hook banner, 4 words, "which one did you say wrong?")
   - 22:00 story 4, **ask**: invite replies (a word they find hard)
   - 23:00 **quote reel**: a short English quote on a generated night/sunset landscape, then its Persian meaning, over
@@ -158,7 +158,7 @@ Monitoring only: no new content. Work in `studio/` (no setup needed). "Now" is t
    - Tag each reel by matching its url with `publicUrl` of the published posts (`getScheduledPosts` over the same 15
      days, or the time if no match: daily reels go out at 21:00 Tehran, trial reels at 15:00/19:00): `dayNN` + kind
      `reel` for daily reels, `trialNN…` + kind `trial` for trial reels, `quoteNN` + kind `quote` for quote reels
-     (23:00 Tehran; the media file name says which), Rostam & Sohrab parts (20:00 Tehran, caption starts with
+     (23:00 Tehran; the media file name says which), Rostam & Sohrab parts (18:00 and 20:00 Tehran, caption starts with
      «🎬 قسمت … از داستان رستم و سهراب») `rostamNN` + kind `series`, anything else kind `promo` with a short tag
      (e.g. `presenter`).
    - Write them to `build/today.json` in the format at the top of `growth/update.py` and run
