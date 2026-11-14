@@ -1,0 +1,21 @@
+{
+ "note": "Cartoon story series, posted one after another in this order, two parts a day (18:00 and 20:00 Tehran), starting in the first free slot after Rostam & Sohrab's part 40.",
+ "after": {
+  "series": "rostam",
+  "last_part": 40,
+  "caption_start": "🎬 قسمت ۴۰ از داستان رستم و سهراب"
+ },
+ "slots_tehran": [
+  "18:00",
+  "20:00"
+ ],
+ "order": [
+  "babak",
+  "zahhak",
+  "arash",
+  "leyli",
+  "khosrow",
+  "hasan",
+  "mahpishani"
+ ]
+}

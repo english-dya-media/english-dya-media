@@ -1,0 +1,55 @@
+{
+ "series_en": "Khosrow & Shirin",
+ "series_fa": "خسرو و شیرین",
+ "style": "cartoon",
+ "scripts": "OUTLINE.md",
+ "hashtags": "#خسرو_و_شیرین #فرهاد #نظامی_گنجوی #زبان_انگلیسی #آموزش_زبان_انگلیسی",
+ "source": "📖 منبع: خسرو و شیرینِ نظامی گنجوی (گنجور)؛ دیالوگ‌ها نمایشی‌ان",
+ "slots_tehran": [
+  "18:00",
+  "20:00"
+ ],
+ "titles": {
+  "1": [
+   "شاپور نقاش",
+   "Shapur the Painter"
+  ],
+  "2": [
+   "سه تصویر",
+   "Three Portraits"
+  ],
+  "3": [
+   "چشمه",
+   "The Spring"
+  ],
+  "4": [
+   "بهرام چوبین",
+   "The Rebel General"
+  ],
+  "5": [
+   "مریم",
+   "Maryam"
+  ],
+  "6": [
+   "فرهاد",
+   "Farhad"
+  ],
+  "7": [
+   "بیستون",
+   "Bisotun"
+  ],
+  "8": [
+   "خبر دروغ",
+   "The False News"
+  ],
+  "9": [
+   "شب برفی",
+   "The Snowy Night"
+  ],
+  "10": [
+   "شیرویه",
+   "Shiruyeh"
+  ]
+ },
+ "parts": {}
+}

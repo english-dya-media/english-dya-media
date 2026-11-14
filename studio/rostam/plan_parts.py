@@ -28,6 +28,8 @@ def caption(cfg, n):
         lines.append("فالو کن که بقیه‌ی داستانو از دست ندی 🤍")
     else:
         lines.append("پایان داستان رستم و سهراب 🤍 اگه دوست داشتی برای دوستت بفرست")
+        when = "امشب ساعت ۸" if p.get("slot", "20:00") == "18:00" else "فردا ساعت ۶ عصر"
+        lines.append(f"داستان بعدی: بابک خرمدین 🔥 قسمت اول {when}، فالو کن که از دستش ندی 🤍")
     lines += ["", cfg["hashtags"]]
     return "\n".join(lines)
 

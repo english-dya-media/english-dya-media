@@ -1,0 +1,31 @@
+{
+ "series_en": "Hasan Kachal",
+ "series_fa": "حسن کچل",
+ "style": "cartoon",
+ "scripts": "OUTLINE.md",
+ "hashtags": "#حسن_کچل #قصه_ایرانی #افسانه #زبان_انگلیسی #آموزش_زبان_انگلیسی",
+ "source": "📖 منبع: قصه‌ی عامیانه‌ی ایرانی (روایت‌های شفاهی)؛ این بازگویی ماست",
+ "slots_tehran": [
+  "18:00",
+  "20:00"
+ ],
+ "titles": {
+  "1": [
+   "حسن تنبل",
+   "Lazy Hasan"
+  ],
+  "2": [
+   "دیو و تخم‌مرغ",
+   "The Div and the Egg"
+  ],
+  "3": [
+   "چهل‌گیس",
+   "Chehel Gis"
+  ],
+  "4": [
+   "شیشه‌ی عمر",
+   "The Glass of Life"
+  ]
+ },
+ "parts": {}
+}

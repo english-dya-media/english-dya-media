@@ -20,6 +20,11 @@ Two scheduled jobs use this file: the **weekly run** (Thursdays, makes and sched
   - 18:00 and 20:00 **Rostam & Sohrab**: two parts a day (each under 3 minutes) of the animated Shahnameh series
     (owner's request, from 14 Nov 2026). Made and scheduled by its own daily job ("Rostam & Sohrab: next part",
     see `rostam/README.md`), not by the weekly run; keep 17:30–18:30 and 19:30–20:30 free of other posts.
+  - After Rostam & Sohrab's last part (part 40, ≈ 4 Dec 2026), the same two slots carry the **cartoon story series**,
+    one after another (owner's request, 14 Nov 2026; order in `cartoon/queue.json`): Babak Khorramdin (8 parts),
+    Zahhak & Fereydun (10), Arash the Archer (3), Leyli & Majnun (8), Khosrow & Shirin (10), Hasan Kachal (4),
+    Mah Pishani (5), each part under 3 minutes. Made and scheduled by their own job ("Story series: next part", twice a
+    day, see `cartoon/README.md`); the same slots stay free of other posts.
   - 21:00 **reel**: 4 words on one pronunciation theme (hook banner, 4 words, "which one did you say wrong?")
   - 22:00 story 4, **ask**: invite replies (a word they find hard)
   - 23:00 **quote reel**: a short English quote on a generated night/sunset landscape, then its Persian meaning, over
@@ -140,7 +145,8 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
 
 12. **Clean up**: delete media branches whose last day is before today (their posts are published and Metricool keeps its
     own copy): `git push origin --delete media-YYYY-MM-DD`. Never delete the branch of a week that still has posts to go.
-    Leave `media-rostam-*` branches alone: the Rostam & Sohrab job cleans them up.
+    Leave `media-rostam-*` branches and the cartoon series' `media-<series>-p*` branches (babak, zahhak, arash, leyli,
+    khosrow, hasan, mahpishani) alone: their own jobs clean them up.
 
 13. **Report** (short, English): the 7 themes with their words, the trial reel topics, the 7 quotes, first post date/time,
     anything that failed.
@@ -168,7 +174,9 @@ Monitoring only: no new content. Work in `studio/` (no setup needed). "Now" is t
      days, or the time if no match: daily reels go out at 21:00 Tehran, trial reels at 15:00/19:00): `dayNN` + kind
      `reel` for daily reels, `trialNN…` + kind `trial` for trial reels, `quoteNN` + kind `quote` for quote reels
      (23:00 Tehran; the media file name says which), Rostam & Sohrab parts (18:00 and 20:00 Tehran, caption starts with
-     «🎬 قسمت … از داستان رستم و سهراب») `rostamNN` + kind `series`, anything else kind `promo` with a short tag
+     «🎬 قسمت … از داستان رستم و سهراب») `rostamNN` + kind `series`, cartoon series parts (same slots, caption starts
+     with «🎬 قسمت … از داستان <series_fa>» of a series in `cartoon/queue.json`, e.g. بابک خرمدین) `<series>NN`
+     (`babak03`, `zahhak01` …) + kind `series`, anything else kind `promo` with a short tag
      (e.g. `presenter`).
    - Write them to `build/today.json` in the format at the top of `growth/update.py` and run
      `python3 growth/update.py build/today.json`. Its report has the month-to-date gain against the 5,000 goal.

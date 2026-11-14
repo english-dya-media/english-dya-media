@@ -1,0 +1,55 @@
+{
+ "series_en": "Zahhak & Fereydun",
+ "series_fa": "ضحاک و فریدون",
+ "style": "cartoon",
+ "scripts": "OUTLINE.md",
+ "hashtags": "#ضحاک_ماردوش #کاوه_آهنگر #شاهنامه #زبان_انگلیسی #آموزش_زبان_انگلیسی",
+ "source": "📖 منبع: شاهنامه‌ی فردوسی، داستان ضحاک و فریدون (گنجور)؛ دیالوگ‌ها نمایشی‌ان",
+ "slots_tehran": [
+  "18:00",
+  "20:00"
+ ],
+ "titles": {
+  "1": [
+   "شاهزاده و غریبه",
+   "The Prince and the Stranger"
+  ],
+  "2": [
+   "آشپز شاه",
+   "The King's Cook"
+  ],
+  "3": [
+   "پزشک",
+   "The Doctor"
+  ],
+  "4": [
+   "دو آشپز",
+   "The Two Cooks"
+  ],
+  "5": [
+   "خواب ضحاک",
+   "Zahhak's Dream"
+  ],
+  "6": [
+   "گاو برمایه",
+   "The Cow Barmayeh"
+  ],
+  "7": [
+   "کاوه‌ی آهنگر",
+   "Kaveh the Blacksmith"
+  ],
+  "8": [
+   "درفش کاویانی",
+   "The Blacksmith's Banner"
+  ],
+  "9": [
+   "گذر از اروند",
+   "Crossing the Arvand"
+  ],
+  "10": [
+   "دماوند",
+   "Damavand"
+  ]
+ },
+ "parts": {}
+}
