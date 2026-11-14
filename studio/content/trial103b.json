@@ -1,0 +1,33 @@
+{
+ "tag": "trial103b",
+ "kind": "mistakes",
+ "day": 103,
+ "date": "2027-02-13",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "How much is the price?",
+   "right": "What's the price?",
+   "note": "price خودش یعنی قیمت",
+   "emoji": "label"
+  },
+  {
+   "wrong": "Give me discount.",
+   "right": "Can I get a discount?",
+   "note": "تخفیف رو مؤدبانه بخواه",
+   "emoji": "shopping_bags"
+  },
+  {
+   "wrong": "I have money enough.",
+   "right": "I have enough money.",
+   "note": "enough قبل از اسم میاد",
+   "emoji": "money_bag"
+  }
+ ],
+ "caption": "موقع خرید این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

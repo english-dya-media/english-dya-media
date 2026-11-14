@@ -1,0 +1,33 @@
+{
+ "tag": "trial109b",
+ "kind": "mistakes",
+ "day": 109,
+ "date": "2027-02-19",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I will go to travel.",
+   "right": "I'm going to travel.",
+   "note": "برنامه‌ی قطعی = going to",
+   "emoji": "airplane"
+  },
+  {
+   "wrong": "I'm going to home.",
+   "right": "I'm going home.",
+   "note": "قبل از home حرف to نمیاد",
+   "emoji": "house"
+  },
+  {
+   "wrong": "I come back tomorrow.",
+   "right": "I'll be back tomorrow.",
+   "note": "برای آینده: I'll",
+   "emoji": "spiral_calendar"
+  }
+ ],
+ "caption": "درباره‌ی آینده این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

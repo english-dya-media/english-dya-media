@@ -1,0 +1,33 @@
+{
+ "tag": "trial106b",
+ "kind": "mistakes",
+ "day": 106,
+ "date": "2027-02-16",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I have a reserve.",
+   "right": "I have a reservation.",
+   "note": "رزرو (اسم) = reservation",
+   "emoji": "spiral_calendar"
+  },
+  {
+   "wrong": "I go to trip.",
+   "right": "I'm going on a trip.",
+   "note": "سفر رفتن = go on a trip",
+   "emoji": "airplane"
+  },
+  {
+   "wrong": "Is breakfast inside?",
+   "right": "Is breakfast included?",
+   "note": "«شامل میشه» = included",
+   "emoji": "croissant"
+  }
+ ],
+ "caption": "تو سفر این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

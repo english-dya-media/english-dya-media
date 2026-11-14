@@ -1,0 +1,33 @@
+{
+ "tag": "trial108b",
+ "kind": "mistakes",
+ "day": 108,
+ "date": "2027-02-18",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "The car of my father",
+   "right": "My father's car",
+   "note": "مالکیت آدم‌ها با 's",
+   "emoji": "automobile"
+  },
+  {
+   "wrong": "The house of Ali",
+   "right": "Ali's house",
+   "note": "خونه‌ی علی = Ali's house",
+   "emoji": "house"
+  },
+  {
+   "wrong": "The name of my teacher",
+   "right": "My teacher's name",
+   "note": "اسم معلمم = my teacher's name",
+   "emoji": "teacher"
+  }
+ ],
+ "caption": "مالکیت رو این‌جوری نگو ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

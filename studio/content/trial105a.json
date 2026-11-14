@@ -1,0 +1,39 @@
+{
+ "tag": "trial105a",
+ "kind": "vocab",
+ "day": 105,
+ "date": "2027-02-15",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "هوا رو حرفه‌ای توصیف کن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "very hot days",
+   "right": "a heat wave",
+   "note": "یعنی «موج گرما»",
+   "emoji": "hot_face"
+  },
+  {
+   "wrong": "sudden cold days",
+   "right": "a cold snap",
+   "note": "یعنی «سرمای ناگهانی»",
+   "emoji": "cold_face"
+  },
+  {
+   "wrong": "a little windy",
+   "right": "It's breezy.",
+   "note": "یعنی «نسیم میاد»",
+   "emoji": "wind_face"
+  },
+  {
+   "wrong": "very hot and humid",
+   "right": "It's sweltering.",
+   "note": "یعنی «گرمای خفه‌کننده»",
+   "emoji": "sun"
+  }
+ ],
+ "caption": "هوا رو حرفه‌ای توصیف کن 🌤️\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

@@ -1,0 +1,164 @@
+{
+ "day": 105,
+ "date": "2027-02-15",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم این ۴ تا شهر",
+  "l2a": "رو",
+  "l2b": "اشتباه",
+  "l3": "می‌گی!",
+  "l3emoji": "airplane",
+  "sub": "Toronto «تورنتو» نیست!",
+  "subemoji": "astonished_face"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "Toronto",
+   "mark": [
+    1
+   ],
+   "emoji": "maple_leaf",
+   "uni": "🍁",
+   "ipa": "/təˈrɑːntoʊ/",
+   "wrong": "تورنتو",
+   "right": "تِرانتُو",
+   "fa": "تورنتو",
+   "ph": "təɹˈɑːntoʊ",
+   "tts": "Toronto"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ری‌آل»",
+   "tip_en": "real",
+   "tip_emoji": "light_bulb",
+   "en": "Montreal",
+   "mark": [
+    4,
+    5,
+    6,
+    7
+   ],
+   "emoji": "ice_hockey",
+   "uni": "🏒",
+   "ipa": "/ˌmɑːntriˈɔːl/",
+   "wrong": "مونترال",
+   "right": "مانتْری‌آل",
+   "fa": "مونترال",
+   "tts": "Montreal"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «بِرن»",
+   "tip_en": "bourne",
+   "tip_emoji": "light_bulb",
+   "en": "Melbourne",
+   "mark": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "emoji": "kangaroo",
+   "uni": "🦘",
+   "ipa": "/ˈmelbərn/",
+   "wrong": "ملبورن",
+   "right": "مِلبِرن",
+   "fa": "ملبورن",
+   "tts": "Melbourne"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "tt",
+   "tip_emoji": "light_bulb",
+   "en": "Seattle",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "umbrella_with_rain_drops",
+   "uni": "☔",
+   "ipa": "/siˈæɾəl/",
+   "wrong": "سیاتل",
+   "right": "سی‌یَدِل",
+   "fa": "سیاتل",
+   "tts": "Seattle"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "romantic",
+   "ipa": "/roʊˈmæntɪk/",
+   "answer": "رُومَنتیک"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "sneezing_face",
+   "word": "handkerchief",
+   "answer": "d"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "diamond",
+   "options": [
+    "الماس",
+    "طلا",
+    "مروارید"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "دوست داری",
+   "t2a": "کجا",
+   "t2b": "زندگی کنی؟",
+   "body": "ریپلای کن؛ تلفظ انگلیسیشو\nبرات می‌گم",
+   "example": "Vancouver"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "تورنتو و ملبورن به انگلیسی چی میشن؟ ✈️\nاسم این ۴ تا شهر رو این‌جوری بگو 🌍 برای دوستت بفرست\n\n🍁 Toronto = تِرانتُو (تورنتو)\n🏒 Montreal = مانتْری‌آل (مونترال)\n🦘 Melbourne = مِلبِرن (ملبورن)\n☔ Seattle = سی‌یَدِل (سیاتل)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

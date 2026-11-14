@@ -1,0 +1,39 @@
+{
+ "tag": "trial106a",
+ "kind": "vocab",
+ "day": 106,
+ "date": "2027-02-16",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی هتل و سفر",
+ "head_emoji": "hotel",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "enter the hotel",
+   "right": "check in",
+   "note": "یعنی «پذیرش و تحویل گرفتن اتاق»",
+   "emoji": "bellhop_bell"
+  },
+  {
+   "wrong": "leave the hotel",
+   "right": "check out",
+   "note": "یعنی «تحویل دادن اتاق و رفتن»",
+   "emoji": "luggage"
+  },
+  {
+   "wrong": "room for one person",
+   "right": "single room",
+   "note": "یعنی «اتاق یک‌نفره»",
+   "emoji": "bed"
+  },
+  {
+   "wrong": "phone call to wake up",
+   "right": "wake-up call",
+   "note": "یعنی «زنگ بیدارباش هتل»",
+   "emoji": "alarm_clock"
+  }
+ ],
+ "caption": "انگلیسی هتل 🏨\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

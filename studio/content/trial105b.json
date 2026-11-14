@@ -1,0 +1,33 @@
+{
+ "tag": "trial105b",
+ "kind": "mistakes",
+ "day": 105,
+ "date": "2027-02-15",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "The air is very hot.",
+   "right": "It's very hot today.",
+   "note": "برای هوا از It's استفاده کن",
+   "emoji": "thermometer"
+  },
+  {
+   "wrong": "The weather is rain.",
+   "right": "It's rainy.",
+   "note": "«بارونیه» = it's rainy",
+   "emoji": "cloud_with_rain"
+  },
+  {
+   "wrong": "What a nice weather!",
+   "right": "What nice weather!",
+   "note": "weather شمردنی نیست؛ a نمی‌گیره",
+   "emoji": "sun_behind_cloud"
+  }
+ ],
+ "caption": "درباره‌ی هوا این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

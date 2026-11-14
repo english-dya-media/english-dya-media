@@ -1,0 +1,157 @@
+{
+ "day": 106,
+ "date": "2027-02-16",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم این ۴ تا جا",
+  "l2a": "رو",
+  "l2b": "درست",
+  "l3": "بگو!",
+  "l3emoji": "office_building",
+  "sub": "restaurant «رستوران» نیست!",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آی»",
+   "tip_en": "i",
+   "tip_emoji": "light_bulb",
+   "en": "library",
+   "mark": [
+    1
+   ],
+   "emoji": "books",
+   "uni": "📚",
+   "ipa": "/ˈlaɪbreri/",
+   "wrong": "لیبراری",
+   "right": "لایبرِری",
+   "fa": "کتابخانه",
+   "tts": "library"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «رانت»",
+   "tip_en": "rant",
+   "tip_emoji": "light_bulb",
+   "en": "restaurant",
+   "mark": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "emoji": "fork_and_knife_with_plate",
+   "uni": "🍽️",
+   "ipa": "/ˈrestərɑːnt/",
+   "wrong": "رستوران",
+   "right": "رِستِرانت",
+   "fa": "رستوران",
+   "tts": "restaurant"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} شبیه «د»",
+   "tip_en": "t",
+   "tip_emoji": "light_bulb",
+   "en": "hospital",
+   "mark": [
+    5
+   ],
+   "emoji": "hospital",
+   "uni": "🏥",
+   "ipa": "/ˈhɑːspɪɾəl/",
+   "wrong": "هاسپیتال",
+   "right": "هاسپیدِل",
+   "fa": "بیمارستان",
+   "tts": "hospital"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "bakery",
+   "mark": [
+    1
+   ],
+   "emoji": "baguette_bread",
+   "uni": "🥖",
+   "ipa": "/ˈbeɪkəri/",
+   "wrong": "باکِری",
+   "right": "بِیکِری",
+   "fa": "نونوایی",
+   "tts": "bakery"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "Seattle",
+   "ipa": "/siˈæɾəl/",
+   "answer": "سی‌یَدِل"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ژ» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "t-shirt",
+   "word": "casual",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "درستش کدومه؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "Montreal",
+   "options": [
+    "مونترال",
+    "مونتریال",
+    "مانتْری‌آل"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "کجای شهر",
+   "t2a": "بیشتر",
+   "t2b": "می‌ری؟",
+   "body": "ریپلای کن؛ اسم انگلیسیشو\nبرات می‌گم",
+   "example": "gym"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "restaurant رو «رستوران» نگو ❌\nاسم این ۴ تا جا رو این‌جوری بگو 🏙️ برای دوستت بفرست\n\n📚 library = لایبرِری (کتابخانه)\n🍽️ restaurant = رِستِرانت (رستوران)\n🏥 hospital = هاسپیدِل (بیمارستان)\n🥖 bakery = بِیکِری (نونوایی)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

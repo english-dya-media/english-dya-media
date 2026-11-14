@@ -1,0 +1,39 @@
+{
+ "tag": "trial103a",
+ "kind": "vocab",
+ "day": 103,
+ "date": "2027-02-13",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی پول و خرج",
+ "head_emoji": "money_bag",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "rich",
+   "right": "well-off",
+   "note": "یعنی «وضعش خوبه، پولداره»",
+   "emoji": "money_bag"
+  },
+  {
+   "wrong": "spend less",
+   "right": "cut back",
+   "note": "یعنی «خرجو کم کردن»",
+   "emoji": "chart_decreasing"
+  },
+  {
+   "wrong": "save money for",
+   "right": "save up for",
+   "note": "یعنی «پس‌انداز کردن برای»",
+   "emoji": "coin"
+  },
+  {
+   "wrong": "have just enough money",
+   "right": "make ends meet",
+   "note": "یعنی «دخل و خرج رو جور کردن»",
+   "emoji": "balance_scale"
+  }
+ ],
+ "caption": "پول و خرج به انگلیسی 💰\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

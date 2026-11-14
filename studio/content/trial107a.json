@@ -1,0 +1,39 @@
+{
+ "tag": "trial107a",
+ "kind": "vocab",
+ "day": 107,
+ "date": "2027-02-17",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "اصطلاح‌هایی که بومی‌ها می‌گن",
+ "head_emoji": "speech_balloon",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "I'm listening.",
+   "right": "I'm all ears.",
+   "note": "یعنی «سراپا گوشم»",
+   "emoji": "ear"
+  },
+  {
+   "wrong": "help",
+   "right": "lend a hand",
+   "note": "یعنی «کمک کردن»",
+   "emoji": "raising_hands"
+  },
+  {
+   "wrong": "watch it",
+   "right": "keep an eye on it",
+   "note": "یعنی «حواست بهش باشه»",
+   "emoji": "eyes"
+  },
+  {
+   "wrong": "I'm joking.",
+   "right": "I'm pulling your leg.",
+   "note": "یعنی «سربه‌سرت می‌ذارم»",
+   "emoji": "leg"
+  }
+ ],
+ "caption": "اصطلاح‌های بدن که بومی‌ها می‌گن 👂\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

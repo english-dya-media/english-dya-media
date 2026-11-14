@@ -1,0 +1,158 @@
+{
+ "day": 103,
+ "date": "2027-02-13",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«او»ی کشیده",
+  "l3": "نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "oo این‌جا یه «اُ»ی کوتاهه",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُ»ی کوتاه",
+   "tip_en": "oo",
+   "tip_emoji": "light_bulb",
+   "en": "book",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "closed_book",
+   "uni": "📕",
+   "ipa": "/bʊk/",
+   "wrong": "بوک",
+   "right": "بُک",
+   "fa": "کتاب",
+   "tts": "book"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُ»ی کوتاه",
+   "tip_en": "oo",
+   "tip_emoji": "light_bulb",
+   "en": "foot",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "footprints",
+   "uni": "👣",
+   "ipa": "/fʊt/",
+   "wrong": "فوت",
+   "right": "فُت",
+   "fa": "پا (کف پا)",
+   "tts": "foot"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُ»ی کوتاه",
+   "tip_en": "oo",
+   "tip_emoji": "light_bulb",
+   "en": "wood",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "wood",
+   "uni": "🪵",
+   "ipa": "/wʊd/",
+   "wrong": "وود",
+   "right": "وُد",
+   "fa": "چوب",
+   "tts": "wood"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُ»ی کوتاه",
+   "tip_en": "oo",
+   "tip_emoji": "light_bulb",
+   "en": "wool",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "ewe",
+   "uni": "🐑",
+   "ipa": "/wʊl/",
+   "wrong": "وول",
+   "right": "وُل",
+   "fa": "پشم",
+   "tts": "wool"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "avocado",
+   "ipa": "/ˌævəˈkɑːdoʊ/",
+   "answer": "اَوِکادُو"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "backpack",
+   "word": "knapsack",
+   "answer": "k"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "olive",
+   "options": [
+    "انگور",
+    "زیتون",
+    "خرما"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با oo",
+   "t2a": "که",
+   "t2b": "مطمئن نیستی؟",
+   "body": "ریپلای کن؛ کوتاهه یا کشیده؟\nبرات می‌گم",
+   "example": "good"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "book رو «بوک» نخون ❌\noo تو این ۴ تا کلمه یه «اُ»ی کوتاهه، نه «او»ی کشیده 💡 سیو کن\n\n📕 book = بُک (کتاب)\n👣 foot = فُت (پا (کف پا))\n🪵 wood = وُد (چوب)\n🐑 wool = وُل (پشم)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

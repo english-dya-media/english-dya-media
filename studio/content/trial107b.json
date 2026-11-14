@@ -1,0 +1,33 @@
+{
+ "tag": "trial107b",
+ "kind": "mistakes",
+ "day": 107,
+ "date": "2027-02-17",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I feel myself tired.",
+   "right": "I feel tired.",
+   "note": "بعد از feel، myself نمیاد",
+   "emoji": "tired_face"
+  },
+  {
+   "wrong": "I'm come from Iran.",
+   "right": "I come from Iran.",
+   "note": "با come، am لازم نیست",
+   "emoji": "globe_showing_asia-australia"
+  },
+  {
+   "wrong": "I'm live in Tehran.",
+   "right": "I live in Tehran.",
+   "note": "با live، am لازم نیست",
+   "emoji": "house"
+  }
+ ],
+ "caption": "این am و myself ها اضافه‌ست ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

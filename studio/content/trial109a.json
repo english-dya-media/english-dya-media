@@ -1,0 +1,39 @@
+{
+ "tag": "trial109a",
+ "kind": "vocab",
+ "day": 109,
+ "date": "2027-02-19",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "Good luck!",
+   "right": "Best of luck!",
+   "note": "یعنی «موفق باشی!»",
+   "emoji": "four_leaf_clover"
+  },
+  {
+   "wrong": "See you soon!",
+   "right": "Catch you later!",
+   "note": "یعنی «بعداً می‌بینمت!»",
+   "emoji": "waving_hand"
+  },
+  {
+   "wrong": "Goodbye, be well!",
+   "right": "Take care!",
+   "note": "یعنی «مراقب خودت باش!»",
+   "emoji": "red_heart"
+  },
+  {
+   "wrong": "I'm going now.",
+   "right": "I'm off!",
+   "note": "یعنی «من دیگه رفتم!»",
+   "emoji": "person_walking"
+  }
+ ],
+ "caption": "خداحافظی مثل بومی‌ها 👋\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

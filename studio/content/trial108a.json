@@ -1,0 +1,39 @@
+{
+ "tag": "trial108a",
+ "kind": "vocab",
+ "day": 108,
+ "date": "2027-02-18",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "I love sweets.",
+   "right": "I have a sweet tooth.",
+   "note": "یعنی «عاشق شیرینی‌ام»",
+   "emoji": "lollipop"
+  },
+  {
+   "wrong": "very delicious",
+   "right": "scrumptious",
+   "note": "یعنی «فوق‌العاده خوشمزه»",
+   "emoji": "face_savoring_food"
+  },
+  {
+   "wrong": "old (bread)",
+   "right": "stale",
+   "note": "یعنی «بیات»",
+   "emoji": "bread"
+  },
+  {
+   "wrong": "no taste",
+   "right": "bland",
+   "note": "یعنی «بی‌مزه»",
+   "emoji": "neutral_face"
+  }
+ ],
+ "caption": "طعم‌ها رو حرفه‌ای توصیف کن 😋\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

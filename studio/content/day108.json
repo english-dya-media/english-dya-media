@@ -1,0 +1,159 @@
+{
+ "day": 108,
+ "date": "2027-02-18",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا دسر رو",
+  "l2a": "انگلیسی",
+  "l2b": "بگو",
+  "l3": "مثل بومی‌ها!",
+  "l3emoji": "custard",
+  "sub": "caramel «کارامل» نیست!",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اَ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "caramel",
+   "mark": [
+    1
+   ],
+   "emoji": "candy",
+   "uni": "🍬",
+   "ipa": "/ˈkærəmel/",
+   "wrong": "کارامل",
+   "right": "کَرِمِل",
+   "fa": "کارامل",
+   "tts": "caramel"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "vanilla",
+   "mark": [
+    1
+   ],
+   "emoji": "soft_ice_cream",
+   "uni": "🍦",
+   "ipa": "/vəˈnɪlə/",
+   "wrong": "وانیل",
+   "right": "وِنیلا",
+   "fa": "وانیل",
+   "tts": "vanilla"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُ»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "pudding",
+   "mark": [
+    1
+   ],
+   "emoji": "custard",
+   "uni": "🍮",
+   "ipa": "/ˈpʊdɪŋ/",
+   "wrong": "پودینگ",
+   "right": "پُدینگ",
+   "fa": "پودینگ",
+   "tts": "pudding"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «مِلُو»",
+   "tip_en": "mallow",
+   "tip_emoji": "light_bulb",
+   "en": "marshmallow",
+   "mark": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "emoji": "cloud",
+   "uni": "☁️",
+   "ipa": "/ˈmɑːrʃmeloʊ/",
+   "wrong": "مارشمالو",
+   "right": "مارشمِلُو",
+   "fa": "مارشمالو",
+   "tts": "marshmallow"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "four",
+   "ipa": "/fɔːr/",
+   "answer": "فُر"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ز» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "door",
+   "word": "closet",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "pour",
+   "options": [
+    "ریختن (مایع)",
+    "جارو کردن",
+    "شستن"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "دسر مورد علاقه‌ت",
+   "t2a": "به",
+   "t2b": "انگلیسی؟",
+   "body": "ریپلای کن؛ تلفظشو\nبرات می‌فرستم",
+   "example": "cheesecake"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "caramel رو «کارامل» نگو ❌\nاسم این ۴ تا دسر رو انگلیسی بگو 🍮 برای رفیق شکموت بفرست\n\n🍬 caramel = کَرِمِل (کارامل)\n🍦 vanilla = وِنیلا (وانیل)\n🍮 pudding = پُدینگ (پودینگ)\n☁️ marshmallow = مارشمِلُو (مارشمالو)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

@@ -1,0 +1,33 @@
+{
+ "tag": "trial104b",
+ "kind": "mistakes",
+ "day": 104,
+ "date": "2027-02-14",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Marry with me?",
+   "right": "Will you marry me?",
+   "note": "بعد از marry حرف with نمیاد",
+   "emoji": "ring"
+  },
+  {
+   "wrong": "I'm in love to you.",
+   "right": "I'm in love with you.",
+   "note": "عاشق کسی = in love with",
+   "emoji": "red_heart"
+  },
+  {
+   "wrong": "I dated with him.",
+   "right": "I dated him.",
+   "note": "بعد از date حرف with نمیاد",
+   "emoji": "two_hearts"
+  }
+ ],
+ "caption": "ولنتاین این‌جوری نگو ❌\nبرای عشقت بفرست 💌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}
