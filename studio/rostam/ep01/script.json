@@ -1,0 +1,741 @@
+{
+ "episode": 1,
+ "title_en": "The Lost Horse",
+ "title_fa": "رخش گمشده",
+ "next_en": "Tahmineh",
+ "next_fa": "تهمینه",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "Old warrior, my heart tells me something strange. Tell me the truth. Are you Rostam?",
+     "fa": "ای پهلوان پیر، دلم چیز عجیبی می‌گوید. راستش را بگو. تو رستمی؟",
+     "pause": 0.7
+    },
+    {
+     "role": "ROSTAM",
+     "en": "No. I am not Rostam.",
+     "fa": "نه. من رستم نیستم.",
+     "pause": 1.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "He lied. And that one lie would cost him more than anything in the world.",
+     "fa": "دروغ گفت. و همین یک دروغ، از هر چیزی در جهان برایش گران‌تر تمام شد.",
+     "pause": 1.5
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 6.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "A thousand years ago, the poet Ferdowsi wrote the Shahnameh, the Book of Kings. It has more than fifty thousand couplets, and it took him about thirty years to write.",
+     "fa": "هزار سال پیش، فردوسی شاهنامه را سرود؛ کتابی با بیش از پنجاه هزار بیت که سرودنش حدود سی سال طول کشید.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Before he tells this story, the saddest of them all, he asks a question about fate.",
+     "fa": "پیش از گفتن این داستان، که از همه غم‌انگیزتر است، پرسشی درباره‌ی سرنوشت می‌پرسد.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "verse": [
+      "اگر تندبادی برآید ز کنج",
+      "به خاک افگند نارسیده ترنج"
+     ],
+     "pre": 2.0,
+     "en": "If a sudden wind rises from nowhere, and throws an unripe fruit to the ground, should we call that wind cruel, or just?",
+     "fa": "اگر بادی تند از گوشه‌ای برخیزد و میوه‌ای نارس را به خاک بیندازد، آن باد را ستمگر بنامیم یا دادگر؟",
+     "pause": 1.2
+    },
+    {
+     "role": "NARRATOR",
+     "verse": [
+      "اگر مرگ دادست بیداد چیست",
+      "ز داد این همه بانگ و فریاد چیست"
+     ],
+     "pre": 2.0,
+     "en": "If death is justice, then what is injustice? And if it is just, why all this crying and grief?",
+     "fa": "اگر مرگ داد است، پس بیداد چیست؟ و اگر داد است، این همه ناله و فریاد برای چیست؟",
+     "pause": 1.2
+    },
+    {
+     "role": "NARRATOR",
+     "verse": [
+      "یکی داستانست پر آب چشم",
+      "دل نازک از رستم آید به خشم"
+     ],
+     "pre": 2.0,
+     "en": "It is a story full of tears. It will make even a gentle heart angry with Rostam.",
+     "fa": "داستانی است پر از اشک، که حتی دل‌های نازک را هم از رستم خشمگین می‌کند.",
+     "pause": 1.2
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "This is Rostam, son of Zal, grandson of the mighty Sam: the greatest hero of Iran.",
+     "fa": "این رستم است، پسر زال و نوه‌ی سام نامدار؛ بزرگ‌ترین پهلوان ایران.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "When he was born, the magical bird Simorgh came to help his mother. As a boy, he killed a raging white elephant with one blow of his grandfather's mace.",
+     "fa": "وقتی به دنیا آمد، سیمرغ افسانه‌ای به یاری مادرش آمد. در کودکی، پیل سپید دیوانه‌ای را با یک ضربه‌ی گرز نیایش کشت.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Kings sat safely on their thrones because Rostam protected them.",
+     "fa": "شاهان به پشتیبانی رستم با خیال آسوده بر تخت می‌نشستند.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "In battle he wore a coat of tiger skin, the Babr-e Bayan. People said no sword, no fire and no water could harm it. And he carried a heavy mace with the head of an ox.",
+     "fa": "در جنگ جامه‌ای از پوست ببر می‌پوشید به نام ببر بیان. می‌گفتند هیچ شمشیر و آتش و آبی بر آن کارگر نیست. گرزی سنگین هم داشت با سری مانند سر گاو.",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "But every hero needs a horse. When Rostam was young, every horse he tested bent under the weight of his hand. Until one day, in a mountain valley...",
+     "fa": "اما هر پهلوانی اسبی می‌خواهد. رستم در جوانی هر اسبی را می‌آزمود، زیر سنگینی دستش کمر خم می‌کرد. تا اینکه روزی، در دره‌ای کوهستانی...",
+     "pause": 0.6
+    },
+    {
+     "role": "ROSTAM",
+     "en": "That one. The young stallion with the rose-colored coat. Whose horse is he?",
+     "fa": "آن یکی. آن کره‌اسب گلگون. اسب کیست؟",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S06b",
+   "lines": [
+    {
+     "role": "HERDSMAN",
+     "en": "He has no master, young lord. We call him Rakhsh. Many men have tried to catch him, and none of them could.",
+     "fa": "صاحبی ندارد، ای جوان. نامش رخش است. مردان بسیاری خواسته‌اند او را بگیرند و هیچ‌کدام نتوانسته‌اند.",
+     "pause": 0.5
+    },
+    {
+     "role": "HERDSMAN",
+     "en": "But be careful, young lord. His mother guards him like a lioness.",
+     "fa": "اما مراقب باش، ای جوان. مادرش مثل ماده‌شیر از او نگهبانی می‌کند.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S06c",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "The mare charged at Rostam. But Rostam gave a roar like a lion, and she turned and ran. Then he pressed his hand on the colt's back, and the colt did not bend.",
+     "fa": "مادیان به رستم حمله کرد. اما رستم مانند شیر غرّید و مادیان رو برگرداند و گریخت. آنگاه رستم دستش را بر پشت کره‌اسب فشرد، و کره‌اسب خم نشد.",
+     "pause": 0.7
+    },
+    {
+     "role": "HERDSMAN",
+     "en": "If you are Rostam, take him. The price of this horse is the land of Iran itself. With him, you will set the world right.",
+     "fa": "اگر رستمی، سوارش شو. بهای این اسب خاک ایران است. با او جهان را سامان خواهی داد.",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "ROSTAM",
+     "en": "You and I, Rakhsh. Lions, dragons, demons. We have faced them all, together.",
+     "fa": "من و تو، رخش. شیر، اژدها، دیو. با همه‌شان با هم روبه‌رو شده‌ایم.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "On his famous Seven Labors, Rakhsh had even killed a lion while Rostam slept.",
+     "fa": "در هفت‌خوان، رخش حتی وقتی رستم خواب بود، شیری را کشته بود.",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "And do you remember the dragon? You woke me three times, and I was angry with you. But you were right. You saved my life.",
+     "fa": "و اژدها را یادت هست؟ سه بار بیدارم کردی و از دستت خشمگین شدم. اما حق با تو بود. جانم را نجات دادی.",
+     "pause": 1.0
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "In those days, Iran had a powerful enemy: the land of Turan, ruled by King Afrasiab. And of all the heroes of Iran, the one Afrasiab feared most was Rostam.",
+     "fa": "در آن روزگار ایران دشمنی نیرومند داشت: سرزمین توران، که افراسیاب بر آن فرمان می‌راند. و افراسیاب از میان همه‌ی پهلوانان ایران، بیش از همه از رستم می‌ترسید.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Between the two lands lay a wild border, where few people dared to travel alone.",
+     "fa": "میان این دو سرزمین مرزی وحشی بود که کمتر کسی جرئت می‌کرد تنها از آن بگذرد.",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S09",
+   "lines": [
+    {
+     "role": "ROSTAM",
+     "en": "My heart is heavy today, Rakhsh, and I don't know why.",
+     "fa": "امروز دلم گرفته، رخش، و نمی‌دانم چرا.",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "Come. Let's go hunting. The wind of the plains will clear my head.",
+     "fa": "بیا. برویم شکار. باد دشت حالم را جا می‌آورد.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "verse": [
+      "غمی بد دلش ساز نخچیر کرد",
+      "کمر بست و ترکش پر از تیر کرد"
+     ],
+     "pre": 2.0,
+     "en": "His heart was sad, so he made ready for the hunt. He tied his belt, and filled his quiver with arrows.",
+     "fa": "دلش گرفته بود، پس آماده‌ی شکار شد؛ کمر بست و ترکشش را پر از تیر کرد.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S10",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "verse": [
+      "سوی مرز توران چو بنهاد روی",
+      "چو شیر دژآگاه نخچیرجوی"
+     ],
+     "pre": 2.0,
+     "en": "He turned his face toward the border of Turan, like a fierce lion in search of prey.",
+     "fa": "رو به مرز توران گذاشت، مانند شیری خشمگین که در پی شکار است.",
+     "pause": 3.0
+    }
+   ]
+  },
+  {
+   "id": "S11",
+   "lines": [
+    {
+     "role": "ROSTAM",
+     "en": "Look at them run! Go, Rakhsh! Faster!",
+     "fa": "ببین چطور می‌دوند! برو، رخش! تندتر!",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Near the city of Samangan, the plain was full of wild asses. With arrows, mace and lasso, Rostam brought down several of them in a single morning.",
+     "fa": "نزدیک شهر سمنگان، دشت پر از گورخر بود. رستم با تیر و گرز و کمند، در یک صبح چند گورخر شکار کرد.",
+     "pause": 0.8
+    },
+    {
+     "role": "ROSTAM",
+     "en": "Ha! Did you see that, Rakhsh? Three in one morning!",
+     "fa": "ها! دیدی، رخش؟ سه تا در یک صبح!",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S12",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "He lit a great fire, pulled up a whole tree to use as a spit, and roasted a wild ass over the flames.",
+     "fa": "آتشی بزرگ برافروخت، درختی را از جا کند تا سیخ کبابش کند، و گورخری را روی آتش بریان کرد.",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "A whole tree for a spit, and a whole wild ass for breakfast. Not bad, Rakhsh. Not bad at all.",
+     "fa": "یک درخت برای سیخ، و یک گورخر درسته برای صبحانه. بد نیست، رخش. اصلاً بد نیست.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "He ate it all, down to the marrow of the bones.",
+     "fa": "همه‌اش را خورد، تا مغز استخوان.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S13",
+   "lines": [
+    {
+     "role": "ROSTAM",
+     "en": "Eat, my friend, and rest. I'll sleep for a while.",
+     "fa": "بخور، دوست من، و استراحت کن. من کمی می‌خوابم.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "verse": [
+      "بخفت و برآسود از روزگار",
+      "چمان و چران رخش در مرغزار"
+     ],
+     "pre": 2.0,
+     "en": "He slept, and rested from the world, while Rakhsh wandered and grazed in the meadow.",
+     "fa": "خوابید و از رنج روزگار آسود، و رخش خرامان در مرغزار می‌چرید.",
+     "pause": 2.0
+    }
+   ]
+  },
+  {
+   "id": "S14",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "But that afternoon, seven or eight Turanian horsemen were riding across the same plain.",
+     "fa": "اما آن بعدازظهر، هفت هشت سوار تورانی از همان دشت می‌گذشتند.",
+     "pause": 0.5
+    },
+    {
+     "role": "RIDER",
+     "en": "Stop! Look at these hoofprints. Have you ever seen hooves this big?",
+     "fa": "صبر کنید! جای این سم‌ها را ببینید. تا حالا سمی به این بزرگی دیده‌اید؟",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "S14b",
+   "lines": [
+    {
+     "role": "RIDER2",
+     "en": "There, by the stream! No saddle, no bridle, no master. Look at his size. He's no ordinary horse.",
+     "fa": "آنجا، کنار جوی! بی‌زین، بی‌لگام، بی‌صاحب. هیکلش را ببین. اسب معمولی نیست.",
+     "pause": 0.5
+    },
+    {
+     "role": "RIDER",
+     "en": "Who cares whose he is? A horse like that is worth a kingdom. Let's take him before his master comes back. Get your lassos ready!",
+     "fa": "چه اهمیتی دارد مال کیست؟ چنین اسبی به اندازه‌ی یک پادشاهی می‌ارزد. تا صاحبش برنگشته بگیریمش. کمندها را آماده کنید!",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S15",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "verse": [
+      "چو رخش آن کمند سواران بدید",
+      "به کردار شیر ژیان بردمید"
+     ],
+     "pre": 2.0,
+     "en": "When Rakhsh saw the riders' lassos, he charged at them like a raging lion.",
+     "fa": "رخش وقتی کمند سواران را دید، مانند شیری خشمگین به آن‌ها حمله کرد.",
+     "pause": 1.0
+    },
+    {
+     "role": "RIDER2",
+     "en": "He's a demon! Hold the ropes! Hold him!",
+     "fa": "این اسب دیو است! کمندها را نگه دارید! نگهش دارید!",
+     "pause": 1.0
+    },
+    {
+     "role": "NARRATOR",
+     "verse": [
+      "دو تن را به زخم لگد کرد پست",
+      "یکی را سر از تن به دندان گسست"
+     ],
+     "pre": 2.0,
+     "en": "With his hooves he struck down two of them, and with his teeth he killed a third.",
+     "fa": "دو نفر را با لگد از پا انداخت و یکی را با دندان کشت.",
+     "pause": 1.5
+    }
+   ]
+  },
+  {
+   "id": "S16",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "But there were too many ropes. At last, they caught him.",
+     "fa": "اما کمندها بسیار بود. سرانجام او را به بند کشیدند.",
+     "pause": 0.5
+    },
+    {
+     "role": "RIDER2",
+     "en": "Easy, easy! He's still fighting the ropes!",
+     "fa": "آرام، آرام! هنوز با کمندها می‌جنگد!",
+     "pause": 0.5
+    },
+    {
+     "role": "RIDER",
+     "en": "Let him fight. To Samangan! Every lord in the city will want a foal from this horse. We'll be rich men.",
+     "fa": "بگذار بجنگد. به سمنگان! همه‌ی بزرگان شهر از نژاد این اسب کره‌اسب خواهند خواست. پولدار می‌شویم.",
+     "pause": 2.0
+    }
+   ]
+  },
+  {
+   "id": "S17",
+   "lines": [
+    {
+     "role": "ROSTAM",
+     "en": "Rakhsh? Rakhsh! Where are you, my brave horse?",
+     "fa": "رخش؟ رخش! کجایی، اسب دلاور من؟",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "The meadow was silent. There was no answer.",
+     "fa": "مرغزار خاموش بود. جوابی نیامد.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S18",
+   "lines": [
+    {
+     "role": "ROSTAM",
+     "en": "Riders. Seven, maybe eight. They fought here. And they took him that way, toward Samangan.",
+     "fa": "سوارها. هفت تا، شاید هشت تا. اینجا جنگیده‌اند. و او را به آن سمت بردند، به سوی سمنگان.",
+     "pause": 0.6
+    },
+    {
+     "role": "ROSTAM",
+     "en": "Thieves! Cowards! You could not face me, so you stole from me while I slept.",
+     "fa": "دزدها! ترسوها! جرئت رویارویی با من را نداشتید، پس وقتی خواب بودم از من دزدیدید.",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S19",
+   "lines": [
+    {
+     "role": "ROSTAM",
+     "en": "Now I must walk, with this heavy armor and this saddle on my back.",
+     "fa": "حالا باید پیاده بروم، با این زره سنگین و این زین بر دوشم.",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "And what will the heroes of Iran say? That Rostam fell asleep, and lost his horse to a band of thieves?",
+     "fa": "پهلوانان ایران چه خواهند گفت؟ که رستم خوابید و اسبش را به چند دزد باخت؟",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "No. I will find him, even if I have to search the whole world.",
+     "fa": "نه. پیدایش می‌کنم، حتی اگر مجبور شوم همه‌ی جهان را بگردم.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "verse": [
+      "غمی گشت چون بارگی را نیافت",
+      "سراسیمه سوی سمنگان شتافت"
+     ],
+     "pre": 2.0,
+     "en": "He grieved when he could not find his horse, and hurried, troubled, toward Samangan.",
+     "fa": "وقتی اسبش را پیدا نکرد غمگین شد، و پریشان به سوی سمنگان شتافت.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "The sun was going down. For hours Rostam walked on, following the tracks along the stream and through the reeds.",
+     "fa": "خورشید داشت غروب می‌کرد. رستم ساعت‌ها پیاده رفت و رد پا را در کنار جوی و میان نیزار دنبال کرد.",
+     "pause": 1.5
+    }
+   ]
+  },
+  {
+   "id": "S20",
+   "lines": [
+    {
+     "role": "GUARD",
+     "en": "Rostam! Rostam is coming, and he's on foot! Run, tell the king!",
+     "fa": "رستم! رستم دارد می‌آید، آن هم پیاده! بدوید، به شاه خبر بدهید!",
+     "pause": 1.0
+    },
+    {
+     "role": "NARRATOR",
+     "verse": [
+      "که آمد پیاده گو تاج‌بخش",
+      "به نخچیرگه زو رمیدست رخش"
+     ],
+     "pre": 2.0,
+     "en": "The crown-giving hero has come on foot! At the hunting ground, his Rakhsh ran away from him.",
+     "fa": "پهلوان تاج‌بخش پیاده آمده است! رخش در شکارگاه از او رمیده است.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S21",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "The king of Samangan did not wait on his throne. He came out on foot, with all his nobles, to welcome the hero.",
+     "fa": "شاه سمنگان بر تخت منتظر نماند. با همه‌ی بزرگانش پیاده به پیشواز پهلوان آمد.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "People crowded the streets and climbed onto the roofs. Everyone wanted to see the famous hero with their own eyes.",
+     "fa": "مردم در کوچه‌ها جمع شدند و روی بام‌ها رفتند. همه می‌خواستند پهلوان نامدار را به چشم خود ببینند.",
+     "pause": 0.6
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Welcome, great Rostam! Who in this land would dare to fight you? Tell us, what has happened?",
+     "fa": "خوش آمدی، رستم بزرگ! در این سرزمین چه کسی جرئت دارد با تو بجنگد؟ بگو، چه پیش آمده؟",
+     "pause": 0.5
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "In this city we are all your friends. Our lives and our wealth are yours to command.",
+     "fa": "در این شهر همه دوستدار توایم. جان و مال ما در فرمان توست.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S22",
+   "lines": [
+    {
+     "role": "ROSTAM",
+     "verse": [
+      "بدو گفت رخشم درین مرغزار",
+      "ز من دور شد بی لگام و فسار"
+     ],
+     "pre": 2.0,
+     "en": "My Rakhsh wandered away from me in the meadow, with no bridle and no rein.",
+     "fa": "رخشم در مرغزار، بی‌لگام و افسار، از من دور شد.",
+     "pause": 0.4
+    },
+    {
+     "role": "ROSTAM",
+     "en": "I was hunting near the border. I slept for an hour, and when I woke, he was gone.",
+     "fa": "نزدیک مرز شکار می‌کردم. ساعتی خوابیدم، و وقتی بیدار شدم، رفته بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "ROSTAM",
+     "en": "His tracks lead here, to Samangan. If you find him, you will have my thanks, and a good reward.",
+     "fa": "ردش به اینجا می‌رسد، به سمنگان. اگر پیدایش کنی، سپاسگزارت می‌شوم و پاداش خوبی می‌گیری.",
+     "pause": 0.4
+    },
+    {
+     "role": "ROSTAM",
+     "en": "But if he is not found, many heads in this city will fall.",
+     "fa": "اما اگر پیدا نشود، سرهای بسیاری در این شهر بر خاک خواهد افتاد.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S22b",
+   "lines": [
+    {
+     "role": "KING_SAMANGAN",
+     "verse": [
+      "بدو گفت شاه ای سرافراز مرد",
+      "نیارد کسی با تو این کار کرد"
+     ],
+     "pre": 2.0,
+     "en": "Proud hero, no one would dare to do such a thing to you.",
+     "fa": "ای پهلوان سرافراز، هیچ‌کس جرئت نمی‌کند با تو چنین کاری کند.",
+     "pause": 0.4
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Rakhsh is famous in every land. A horse like him cannot stay hidden for long. We will find him.",
+     "fa": "رخش در همه‌ی سرزمین‌ها نامدار است. چنین اسبی مدت زیادی پنهان نمی‌ماند. پیدایش می‌کنیم.",
+     "pause": 0.4
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Send riders in every direction! Search every stable in Samangan!",
+     "fa": "سوارها را به هر سو بفرستید! همه‌ی اصطبل‌های سمنگان را بگردید!",
+     "pause": 0.5
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Tonight, be our guest. In the morning, Rakhsh will be yours again.",
+     "fa": "امشب مهمان ما باش. فردا صبح رخش دوباره از آن تو خواهد بود.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Rostam's anger cooled, and he went with the king to his palace.",
+     "fa": "خشم رستم فرو نشست و همراه شاه به کاخ رفت.",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S23",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "That night, the palace was filled with music and light.",
+     "fa": "آن شب کاخ پر از موسیقی و روشنایی شد.",
+     "pause": 0.5
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "To Rostam, the crown-giver, the greatest hero in the world!",
+     "fa": "به سلامتی رستم تاج‌بخش، بزرگ‌ترین پهلوان جهان!",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "And to Rakhsh, wherever he is tonight.",
+     "fa": "و به سلامتی رخش، هر جا که امشب هست.",
+     "pause": 0.6
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Tell us, great hero, how did you defeat the White Div of Mazandaran?",
+     "fa": "بگو، پهلوان بزرگ، دیو سپید مازندران را چگونه شکست دادی؟",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "Another night, King. Tonight, I can only think of my horse.",
+     "fa": "شبی دیگر، ای شاه. امشب فقط به اسبم فکر می‌کنم.",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S23b",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Everyone wanted to hear about his adventures. But somewhere in the palace, someone was listening more carefully than anyone else.",
+     "fa": "همه می‌خواستند از ماجراهای او بشنوند. اما جایی در کاخ، کسی بود که از همه با دقت بیشتری گوش می‌داد.",
+     "pause": 1.5
+    }
+   ]
+  },
+  {
+   "id": "S24",
+   "lines": [
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Rest well, great hero. Tomorrow, your Rakhsh will be found.",
+     "fa": "خوب بیاسای، پهلوان بزرگ. فردا رخشت پیدا می‌شود.",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "I hope so, King. For the sake of your city.",
+     "fa": "امیدوارم، ای شاه. به خاطر شهرت.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Rostam lay down, and soon the whole palace was asleep.",
+     "fa": "رستم دراز کشید، و کمی بعد همه‌ی کاخ به خواب رفت.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S24b",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Outside, the moon rose over Samangan. The streets were empty, and the city was silent.",
+     "fa": "بیرون، ماه بر فراز سمنگان برآمد. کوچه‌ها خالی بود و شهر در سکوت فرو رفته بود.",
+     "pause": 2.5
+    }
+   ]
+  },
+  {
+   "id": "S25",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "But not everyone in the palace was asleep.",
+     "fa": "اما همه‌ی اهل کاخ خواب نبودند.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Soft footsteps came closer through the dark corridor.",
+     "fa": "صدای قدم‌هایی آرام در راهروی تاریک نزدیک‌تر می‌شد.",
+     "pause": 0.6
+    },
+    {
+     "role": "MAID",
+     "en": "This way, my lady. He is asleep.",
+     "fa": "از این طرف، بانوی من. خوابیده است.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Quiet. Walk slowly.",
+     "fa": "آرام. آهسته بیا.",
+     "pause": 0.8
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Who was coming to Rostam's door in the middle of the night? Find out in the next episode: Tahmineh.",
+     "fa": "چه کسی نیمه‌شب به در خوابگاه رستم می‌آمد؟ در قسمت بعد: تهمینه.",
+     "pause": 1.0
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}

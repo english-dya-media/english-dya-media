@@ -1,0 +1,87 @@
+{
+  "NARRATOR": {
+    "voice": "bm_george",
+    "speed": 0.84
+  },
+  "ROSTAM": {
+    "voice": "am_fenrir",
+    "speed": 0.86
+  },
+  "SOHRAB": {
+    "voice": "am_puck",
+    "speed": 0.95
+  },
+  "TAHMINEH": {
+    "voice": "af_heart",
+    "speed": 0.92
+  },
+  "KING_SAMANGAN": {
+    "voice": "bm_lewis",
+    "speed": 0.88
+  },
+  "KAVUS": {
+    "voice": "bm_daniel",
+    "speed": 0.92
+  },
+  "GORDAFARID": {
+    "voice": "bf_emma",
+    "speed": 0.95
+  },
+  "HOJIR": {
+    "voice": "am_michael",
+    "speed": 0.95
+  },
+  "AFRASIAB": {
+    "voice": "am_onyx",
+    "speed": 0.88
+  },
+  "HOOMAN": {
+    "voice": "am_eric",
+    "speed": 0.95
+  },
+  "GUDARZ": {
+    "voice": "bm_fable",
+    "speed": 0.9
+  },
+  "ZHENDEH": {
+    "voice": "am_liam",
+    "speed": 0.95
+  },
+  "RIDER": {
+    "voice": "am_echo",
+    "speed": 1.0
+  },
+  "_say": {
+    "Babr-e Bayan": "Babreh Bayaan",
+    "Tahmineh": "Tahmeeneh",
+    "Samangan": "Samangaan",
+    "Turanian": "Tooraanian",
+    "Turan": "Tooraan",
+    "Sohrab": "Sohraab",
+    "Kavus": "Kaavoos",
+    "Afrasiab": "Afraasiyaab",
+    "Gordafarid": "Gordaafareed",
+    "Hojir": "Hojeer",
+    "Ferdowsi": "Ferdowsee",
+    "Shahnameh": "Shaahnaameh",
+    "Iran": "Eeraan",
+    "Zal": "Zaal",
+    "Sam": "Saam"
+  },
+  "HERDSMAN": {
+    "voice": "bm_fable",
+    "speed": 0.86
+  },
+  "RIDER2": {
+    "voice": "am_liam",
+    "speed": 1.0
+  },
+  "GUARD": {
+    "voice": "am_michael",
+    "speed": 1.0
+  },
+  "MAID": {
+    "voice": "bf_isabella",
+    "speed": 0.92
+  }
+}

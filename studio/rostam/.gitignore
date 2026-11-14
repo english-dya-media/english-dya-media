@@ -1,0 +1,7 @@
+voice/
+*/audio/
+*/parts/
+*/images/
+*.mp4
+*.wav
+__pycache__/

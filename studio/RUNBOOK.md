@@ -17,6 +17,9 @@ Two scheduled jobs use this file: the **weekly run** (Thursdays, makes and sched
   - 15:00 **trial reel a**, *vocab*: 4 basic phrases → a stronger word (very tired → exhausted), with the Persian meaning
   - 17:00 story 3, **mcq**: another word from yesterday's reel, 3 meanings to pick from
   - 19:00 **trial reel b**, *mistakes*: 3 sentences Persian speakers get wrong (I am agree → I agree) + a one-line why
+  - 20:00 **Rostam & Sohrab**: one ~5-minute part a day of the animated Shahnameh series (owner's request, from
+    14 Nov 2026). Made and scheduled by its own daily job ("Rostam & Sohrab: next part", see `rostam/README.md`),
+    not by the weekly run; keep 19:30–20:30 free of other posts.
   - 21:00 **reel**: 4 words on one pronunciation theme (hook banner, 4 words, "which one did you say wrong?")
   - 22:00 story 4, **ask**: invite replies (a word they find hard)
   - 23:00 **quote reel**: a short English quote on a generated night/sunset landscape, then its Persian meaning, over
@@ -131,6 +134,7 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
 
 12. **Clean up**: delete media branches whose last day is before today (their posts are published and Metricool keeps its
     own copy): `git push origin --delete media-YYYY-MM-DD`. Never delete the branch of a week that still has posts to go.
+    Leave `media-rostam-*` branches alone: the Rostam & Sohrab job cleans them up.
 
 13. **Report** (short, English): the 7 themes with their words, the trial reel topics, the 7 quotes, first post date/time,
     anything that failed.
@@ -154,7 +158,9 @@ Monitoring only: no new content. Work in `studio/` (no setup needed). "Now" is t
    - Tag each reel by matching its url with `publicUrl` of the published posts (`getScheduledPosts` over the same 15
      days, or the time if no match: daily reels go out at 21:00 Tehran, trial reels at 15:00/19:00): `dayNN` + kind
      `reel` for daily reels, `trialNN…` + kind `trial` for trial reels, `quoteNN` + kind `quote` for quote reels
-     (23:00 Tehran; the media file name says which), anything else kind `promo` with a short tag (e.g. `presenter`).
+     (23:00 Tehran; the media file name says which), Rostam & Sohrab parts (20:00 Tehran, caption starts with
+     «🎬 قسمت … از داستان رستم و سهراب») `rostamNN` + kind `series`, anything else kind `promo` with a short tag
+     (e.g. `presenter`).
    - Write them to `build/today.json` in the format at the top of `growth/update.py` and run
      `python3 growth/update.py build/today.json`. Its report has the month-to-date gain against the 5,000 goal.
 
