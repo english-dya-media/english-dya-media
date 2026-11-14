@@ -1,0 +1,39 @@
+{
+ "tag": "trial91a",
+ "kind": "vocab",
+ "day": 91,
+ "date": "2027-02-01",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی محیط کار",
+ "head_emoji": "briefcase",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "tell me the news",
+   "right": "keep me posted",
+   "note": "یعنی «در جریانم بذار»",
+   "emoji": "memo"
+  },
+  {
+   "wrong": "start (a project)",
+   "right": "get the ball rolling",
+   "note": "یعنی «کار رو راه انداختن»",
+   "emoji": "soccer_ball"
+  },
+  {
+   "wrong": "start again from zero",
+   "right": "back to square one",
+   "note": "یعنی «برگشتن سر خونه‌ی اول»",
+   "emoji": "keycap_1"
+  },
+  {
+   "wrong": "not decided yet",
+   "right": "up in the air",
+   "note": "یعنی «هنوز معلوم نیست»",
+   "emoji": "balloon"
+  }
+ ],
+ "caption": "اصطلاح‌های محیط کار 💼\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

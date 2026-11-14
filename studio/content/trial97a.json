@@ -1,0 +1,39 @@
+{
+ "tag": "trial97a",
+ "kind": "vocab",
+ "day": 97,
+ "date": "2027-02-07",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی فیلم و سریال",
+ "head_emoji": "clapper_board",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "watch many episodes",
+   "right": "binge-watch",
+   "note": "یعنی «پشت سر هم سریال دیدن»",
+   "emoji": "television"
+  },
+  {
+   "wrong": "telling the ending",
+   "right": "spoiler",
+   "note": "یعنی «لو دادن داستان»",
+   "emoji": "speaking_head"
+  },
+  {
+   "wrong": "surprise in the story",
+   "right": "plot twist",
+   "note": "یعنی «پیچش داستان»",
+   "emoji": "exploding_head"
+  },
+  {
+   "wrong": "part two of a movie",
+   "right": "sequel",
+   "note": "یعنی «قسمت بعدی فیلم»",
+   "emoji": "clapper_board"
+  }
+ ],
+ "caption": "انگلیسی فیلم و سریال 🎬\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

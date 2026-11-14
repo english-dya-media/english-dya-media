@@ -1,0 +1,155 @@
+{
+ "day": 93,
+ "date": "2027-02-03",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه‌ی",
+  "l2a": "ورزشی",
+  "l2b": "رو",
+  "l3": "درست بگو",
+  "l3emoji": "sports_medal",
+  "sub": "marathon «ماراتن» نیست!",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ی»",
+   "tip_en": "e",
+   "tip_emoji": "light_bulb",
+   "en": "karate",
+   "mark": [
+    5
+   ],
+   "emoji": "martial_arts_uniform",
+   "uni": "🥋",
+   "ipa": "/kəˈrɑːɾi/",
+   "wrong": "کاراته",
+   "right": "کِرادی",
+   "fa": "کاراته",
+   "tts": "karate"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ث»",
+   "tip_en": "th",
+   "tip_emoji": "light_bulb",
+   "en": "marathon",
+   "mark": [
+    4,
+    5
+   ],
+   "emoji": "person_running",
+   "uni": "🏃",
+   "ipa": "/ˈmærəθɑːn/",
+   "wrong": "ماراتن",
+   "right": "مَرِثان",
+   "fa": "ماراتن",
+   "tts": "marathon"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "stadium",
+   "mark": [
+    2
+   ],
+   "emoji": "stadium",
+   "uni": "🏟️",
+   "ipa": "/ˈsteɪdiəm/",
+   "wrong": "استادیوم",
+   "right": "سْتِیدیِم",
+   "fa": "ورزشگاه",
+   "tts": "stadium"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ج»",
+   "tip_en": "g",
+   "tip_emoji": "light_bulb",
+   "en": "gymnastics",
+   "mark": [
+    0
+   ],
+   "emoji": "person_cartwheeling",
+   "uni": "🤸",
+   "ipa": "/dʒɪmˈnæstɪks/",
+   "wrong": "ژیمناستیک",
+   "right": "جیمنَستیکس",
+   "fa": "ژیمناستیک",
+   "tts": "gymnastics"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "human",
+   "ipa": "/ˈhjuːmən/",
+   "answer": "انسان"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "leg",
+   "word": "limb",
+   "answer": "b"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "fuel",
+   "options": [
+    "سوخت",
+    "آب",
+    "برق"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "ورزش مورد علاقه‌ت",
+   "t2a": "به",
+   "t2b": "انگلیسی؟",
+   "body": "ریپلای کن؛ تلفظشو\nبرات می‌فرستم",
+   "example": "volleyball"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "marathon رو «ماراتن» نگو ❌\nاین ۴ تا کلمه‌ی ورزشی رو انگلیسی بگو 🏅 برای رفیق ورزشکارت بفرست\n\n🥋 karate = کِرادی (کاراته)\n🏃 marathon = مَرِثان (ماراتن)\n🏟️ stadium = سْتِیدیِم (ورزشگاه)\n🤸 gymnastics = جیمنَستیکس (ژیمناستیک)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

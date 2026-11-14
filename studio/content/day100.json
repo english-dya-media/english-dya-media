@@ -1,0 +1,158 @@
+{
+ "day": 100,
+ "date": "2027-02-10",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا وسیله",
+  "l2a": "رو",
+  "l2b": "انگلیسی",
+  "l3": "بگو!",
+  "l3emoji": "speaker_high_volume",
+  "sub": "bicycle «بیسیکلت» نیست!",
+  "subemoji": "bicycle"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آی»",
+   "tip_en": "i",
+   "tip_emoji": "light_bulb",
+   "en": "bicycle",
+   "mark": [
+    1
+   ],
+   "emoji": "bicycle",
+   "uni": "🚲",
+   "ipa": "/ˈbaɪsɪkəl/",
+   "wrong": "بیسیکلت",
+   "right": "بایسیکِل",
+   "fa": "دوچرخه",
+   "tts": "bicycle"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "آخرش {EN} = «سایکِل»",
+   "tip_en": "cycle",
+   "tip_emoji": "light_bulb",
+   "en": "motorcycle",
+   "mark": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "emoji": "motorcycle",
+   "uni": "🏍️",
+   "ipa": "/ˈmoʊɾərsaɪkəl/",
+   "wrong": "موتورسیکلت",
+   "right": "مُودِرسایکِل",
+   "fa": "موتورسیکلت",
+   "tts": "motorcycle"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «بیِ»",
+   "tip_en": "bu",
+   "tip_emoji": "light_bulb",
+   "en": "ambulance",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "ambulance",
+   "uni": "🚑",
+   "ipa": "/ˈæmbjələns/",
+   "wrong": "آمبولانس",
+   "right": "اَمبیِلِنس",
+   "fa": "آمبولانس",
+   "tts": "ambulance"
+  },
+  {
+   "tip": "حرف {EN} خونده نمیشه",
+   "tip_en": "ch",
+   "en": "yacht",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "motor_boat",
+   "uni": "🛥️",
+   "ipa": "/jɑːt/",
+   "wrong": "یاچت",
+   "right": "یات",
+   "fa": "قایق تفریحی",
+   "tts": "yacht"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "license",
+   "ipa": "/ˈlaɪsəns/",
+   "answer": "گواهینامه، مجوز"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «چ» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "red_question_mark",
+   "word": "question",
+   "answer": "t"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "pilot",
+   "options": [
+    "مهندس",
+    "مهماندار",
+    "خلبان"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "با چی",
+   "t2a": "میری",
+   "t2b": "سر کار؟",
+   "body": "ریپلای کن؛ به انگلیسی\nبنویسش",
+   "example": "by bus"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "bicycle «بیسیکلت» نیست ❌\nاین ۴ تا وسیله رو انگلیسی بگو 🚲 yacht هم میشه «یات»؛ برای دوستت بفرست\n\n🚲 bicycle = بایسیکِل (دوچرخه)\n🏍️ motorcycle = مُودِرسایکِل (موتورسیکلت)\n🚑 ambulance = اَمبیِلِنس (آمبولانس)\n🛥️ yacht = یات (قایق تفریحی)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

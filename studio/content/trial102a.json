@@ -1,0 +1,39 @@
+{
+ "tag": "trial102a",
+ "kind": "vocab",
+ "day": 102,
+ "date": "2027-02-12",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "talk to people (party)",
+   "right": "mingle",
+   "note": "یعنی «با همه گپ زدن»",
+   "emoji": "busts_in_silhouette"
+  },
+  {
+   "wrong": "very fun",
+   "right": "a blast",
+   "note": "یعنی «فوق‌العاده خوش گذشت»",
+   "emoji": "party_popper"
+  },
+  {
+   "wrong": "invite friends home",
+   "right": "have people over",
+   "note": "یعنی «مهمون دعوت کردن»",
+   "emoji": "house"
+  },
+  {
+   "wrong": "leave (a place)",
+   "right": "head out",
+   "note": "یعنی «راه افتادن، رفتن»",
+   "emoji": "door"
+  }
+ ],
+ "caption": "مهمونی به انگلیسی 🎉\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

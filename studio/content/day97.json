@@ -1,0 +1,160 @@
+{
+ "day": 97,
+ "date": "2027-02-07",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم این ۴ تا ساز",
+  "l2a": "رو",
+  "l2b": "درست",
+  "l3": "بگو!",
+  "l3emoji": "musical_score",
+  "sub": "violin «ویولن» نیست!",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «وایِ»",
+   "tip_en": "vio",
+   "tip_emoji": "light_bulb",
+   "en": "violin",
+   "mark": [
+    0,
+    1,
+    2
+   ],
+   "emoji": "violin",
+   "uni": "🎻",
+   "ipa": "/ˌvaɪəˈlɪn/",
+   "wrong": "ویولن",
+   "right": "وایِلین",
+   "fa": "ویولن",
+   "tts": "violin"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «چ»",
+   "tip_en": "c",
+   "tip_emoji": "light_bulb",
+   "en": "cello",
+   "mark": [
+    0
+   ],
+   "emoji": "musical_note",
+   "uni": "🎵",
+   "ipa": "/ˈtʃeloʊ/",
+   "wrong": "سِلو",
+   "right": "چِلُو",
+   "fa": "ویولن‌سل",
+   "tts": "cello"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ک»",
+   "tip_en": "ch",
+   "tip_emoji": "light_bulb",
+   "en": "orchestra",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "musical_score",
+   "uni": "🎼",
+   "ipa": "/ˈɔːrkɪstrə/",
+   "wrong": "ارکستر",
+   "right": "اُرکِسترا",
+   "fa": "ارکستر",
+   "tts": "orchestra"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِکُ»",
+   "tip_en": "acco",
+   "tip_emoji": "light_bulb",
+   "en": "accordion",
+   "mark": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "emoji": "accordion",
+   "uni": "🪗",
+   "ipa": "/əˈkɔːrdiən/",
+   "wrong": "آکاردئون",
+   "right": "اِکُردیِن",
+   "fa": "آکاردئون",
+   "tts": "accordion"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "angel",
+   "ipa": "/ˈeɪndʒəl/",
+   "answer": "اِینجِل"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "ballet_shoes",
+   "word": "ballet",
+   "answer": "t"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "major",
+   "options": [
+    "رشته‌ی اصلی؛ مهم",
+    "رشته‌ی فرعی",
+    "دانشگاه"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "چه سازی",
+   "t2a": "دوست داری",
+   "t2b": "بزنی؟",
+   "body": "ریپلای کن؛ اسم انگلیسیشو\nبرات می‌گم",
+   "example": "guitar"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "violin رو «ویولن» نگو ❌\nاسم این ۴ تا ساز رو انگلیسی بگو 🎻 برای رفیق موزیسینت بفرست\n\n🎻 violin = وایِلین (ویولن)\n🎵 cello = چِلُو (ویولن‌سل)\n🎼 orchestra = اُرکِسترا (ارکستر)\n🪗 accordion = اِکُردیِن (آکاردئون)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

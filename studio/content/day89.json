@@ -1,0 +1,158 @@
+{
+ "day": 89,
+ "date": "2027-01-30",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "تو این ۴ تا کلمه",
+  "l2a": "ch",
+  "l2b": "«ک»ه!",
+  "l3": "نه «چ»",
+  "l3emoji": "light_bulb",
+  "sub": "chemistry میشه «کِمِستری»",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ک»",
+   "tip_en": "ch",
+   "tip_emoji": "light_bulb",
+   "en": "chemistry",
+   "mark": [
+    0,
+    1
+   ],
+   "emoji": "alembic",
+   "uni": "⚗️",
+   "ipa": "/ˈkemɪstri/",
+   "wrong": "چِمیستری",
+   "right": "کِمِستری",
+   "fa": "شیمی",
+   "tts": "chemistry"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ک»",
+   "tip_en": "ch",
+   "tip_emoji": "light_bulb",
+   "en": "architect",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "building_construction",
+   "uni": "🏗️",
+   "ipa": "/ˈɑːrkɪtekt/",
+   "wrong": "آرچیتِکت",
+   "right": "آرکیتِکت",
+   "fa": "معمار",
+   "tts": "architect"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ک»",
+   "tip_en": "ch",
+   "tip_emoji": "light_bulb",
+   "en": "stomach",
+   "mark": [
+    5,
+    6
+   ],
+   "emoji": "nauseated_face",
+   "uni": "🤢",
+   "ipa": "/ˈstʌmək/",
+   "wrong": "استوماچ",
+   "right": "سْتامِک",
+   "fa": "معده، شکم",
+   "tts": "stomach"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ک»",
+   "tip_en": "ch",
+   "tip_emoji": "light_bulb",
+   "en": "echo",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "loudspeaker",
+   "uni": "📢",
+   "ipa": "/ˈekoʊ/",
+   "wrong": "اِچو",
+   "right": "اِکُو",
+   "fa": "پژواک",
+   "tts": "echo"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "chameleon",
+   "ipa": "/kəˈmiːliən/",
+   "answer": "آفتاب‌پرست"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "rhinoceros",
+   "word": "rhino",
+   "answer": "h"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "mosquito",
+   "options": [
+    "مگس",
+    "زنبور",
+    "پشه"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با ch",
+   "t2a": "که",
+   "t2b": "مطمئن نیستی؟",
+   "body": "ریپلای کن؛ «چ»ه یا «ک»؟\nبرات می‌گم",
+   "example": "character"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "chemistry رو «چمیستری» نخون ❌\nch تو این ۴ تا کلمه «ک»ه 💡 برای دوستت بفرست\n\n⚗️ chemistry = کِمِستری (شیمی)\n🏗️ architect = آرکیتِکت (معمار)\n🤢 stomach = سْتامِک (معده، شکم)\n📢 echo = اِکُو (پژواک)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

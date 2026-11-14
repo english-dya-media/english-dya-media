@@ -1,0 +1,33 @@
+{
+ "tag": "trial89b",
+ "kind": "mistakes",
+ "day": 89,
+ "date": "2027-01-30",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I came with taxi.",
+   "right": "I came by taxi.",
+   "note": "با وسیله‌ی نقلیه = by",
+   "emoji": "taxi"
+  },
+  {
+   "wrong": "I go to work by foot.",
+   "right": "I go to work on foot.",
+   "note": "پیاده = on foot",
+   "emoji": "person_walking"
+  },
+  {
+   "wrong": "I'm in the bus.",
+   "right": "I'm on the bus.",
+   "note": "تو اتوبوس = on the bus",
+   "emoji": "bus"
+  }
+ ],
+ "caption": "با تاکسی و پیاده رو این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

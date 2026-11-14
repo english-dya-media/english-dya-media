@@ -1,0 +1,39 @@
+{
+ "tag": "trial96a",
+ "kind": "vocab",
+ "day": 96,
+ "date": "2027-02-06",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "مؤدبانه نه بگو",
+ "head_emoji": "raised_hand",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "No.",
+   "right": "I'll pass.",
+   "note": "یعنی «من نیستم، ممنون»",
+   "emoji": "raised_hand"
+  },
+  {
+   "wrong": "I don't want to.",
+   "right": "I'd rather not.",
+   "note": "یعنی «ترجیح می‌دم نه»",
+   "emoji": "person_gesturing_no"
+  },
+  {
+   "wrong": "Not now.",
+   "right": "Maybe another time.",
+   "note": "یعنی «شاید یه وقت دیگه»",
+   "emoji": "spiral_calendar"
+  },
+  {
+   "wrong": "No, thanks.",
+   "right": "I'm good, thanks.",
+   "note": "یعنی «نه مرسی، لازم ندارم»",
+   "emoji": "ok_hand"
+  }
+ ],
+ "caption": "مؤدبانه «نه» بگو 🙅\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

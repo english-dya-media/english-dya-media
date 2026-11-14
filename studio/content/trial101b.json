@@ -1,0 +1,33 @@
+{
+ "tag": "trial101b",
+ "kind": "mistakes",
+ "day": 101,
+ "date": "2027-02-11",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "She have a car.",
+   "right": "She has a car.",
+   "note": "برای she و he: has",
+   "emoji": "automobile"
+  },
+  {
+   "wrong": "Does he likes it?",
+   "right": "Does he like it?",
+   "note": "بعد از does فعل ساده میاد",
+   "emoji": "thinking_face"
+  },
+  {
+   "wrong": "He can drives.",
+   "right": "He can drive.",
+   "note": "بعد از can فعل ساده میاد",
+   "emoji": "oncoming_automobile"
+  }
+ ],
+ "caption": "این s ها جاشون اشتباهه ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

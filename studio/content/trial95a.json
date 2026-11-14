@@ -1,0 +1,39 @@
+{
+ "tag": "trial95a",
+ "kind": "vocab",
+ "day": 95,
+ "date": "2027-02-05",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "clean the room",
+   "right": "tidy up",
+   "note": "یعنی «مرتب کردن»",
+   "emoji": "broom"
+  },
+  {
+   "wrong": "wash the floor",
+   "right": "mop the floor",
+   "note": "یعنی «تِی کشیدن»",
+   "emoji": "bucket"
+  },
+  {
+   "wrong": "clean with a machine",
+   "right": "vacuum",
+   "note": "یعنی «جاروبرقی کشیدن»",
+   "emoji": "dashing_away"
+  },
+  {
+   "wrong": "throw away extra stuff",
+   "right": "declutter",
+   "note": "یعنی «اضافه‌ها رو دور ریختن»",
+   "emoji": "wastebasket"
+  }
+ ],
+ "caption": "کارهای خونه به انگلیسی 🧹\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

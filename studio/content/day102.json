@@ -1,0 +1,156 @@
+{
+ "day": 102,
+ "date": "2027-02-12",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم این ۴ تا میوه",
+  "l2a": "رو",
+  "l2b": "درست",
+  "l3": "بگو!",
+  "l3emoji": "red_apple",
+  "sub": "banana «بانانا» نیست!",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اَ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "banana",
+   "mark": [
+    3
+   ],
+   "emoji": "banana",
+   "uni": "🍌",
+   "ipa": "/bəˈnænə/",
+   "wrong": "بانانا",
+   "right": "بِنَنا",
+   "fa": "موز",
+   "tts": "banana"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِ»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "lemon",
+   "mark": [
+    3
+   ],
+   "emoji": "lemon",
+   "uni": "🍋",
+   "ipa": "/ˈlemən/",
+   "wrong": "لِمون",
+   "right": "لِمِن",
+   "fa": "لیمو",
+   "tts": "lemon"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آ»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "olive",
+   "mark": [
+    0
+   ],
+   "emoji": "olive",
+   "uni": "🫒",
+   "ipa": "/ˈɑːlɪv/",
+   "wrong": "اولیو",
+   "right": "آلیو",
+   "fa": "زیتون",
+   "tts": "olive"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اَوِ»",
+   "tip_en": "avo",
+   "tip_emoji": "light_bulb",
+   "en": "avocado",
+   "mark": [
+    0,
+    1,
+    2
+   ],
+   "emoji": "avocado",
+   "uni": "🥑",
+   "ipa": "/ˌævəˈkɑːdoʊ/",
+   "wrong": "آووکادو",
+   "right": "اَوِکادُو",
+   "fa": "آووکادو",
+   "tts": "avocado"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "recipe",
+   "ipa": "/ˈresəpi/",
+   "answer": "دستور پخت"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ژ» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "classical_building",
+   "word": "Persia",
+   "answer": "s"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "sesame",
+   "options": [
+    "بادام",
+    "گردو",
+    "کنجد"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "میوه‌ی مورد علاقه‌ت",
+   "t2a": "به",
+   "t2b": "انگلیسی؟",
+   "body": "ریپلای کن؛ تلفظشو\nبرات می‌فرستم",
+   "example": "pineapple"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "banana رو «بانانا» نخون ❌\nاسم این ۴ تا میوه رو این‌جوری بگو 🍌 برای دوستت بفرست\n\n🍌 banana = بِنَنا (موز)\n🍋 lemon = لِمِن (لیمو)\n🫒 olive = آلیو (زیتون)\n🥑 avocado = اَوِکادُو (آووکادو)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

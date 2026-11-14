@@ -1,0 +1,156 @@
+{
+ "day": 98,
+ "date": "2027-02-08",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم این ۴ تا ماه",
+  "l2a": "رو",
+  "l2b": "فرانسوی",
+  "l3": "نگو!",
+  "l3emoji": "cross_mark",
+  "sub": "مارس و آوریل فرانسوی‌ان!",
+  "subemoji": "calendar"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «چ»",
+   "tip_en": "ch",
+   "tip_emoji": "light_bulb",
+   "en": "March",
+   "mark": [
+    3,
+    4
+   ],
+   "emoji": "seedling",
+   "uni": "🌱",
+   "ipa": "/mɑːrtʃ/",
+   "wrong": "مارس",
+   "right": "مارچ",
+   "fa": "مارس (ماه)",
+   "tts": "March"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "A",
+   "tip_emoji": "light_bulb",
+   "en": "April",
+   "mark": [
+    0
+   ],
+   "emoji": "umbrella_with_rain_drops",
+   "uni": "☔",
+   "ipa": "/ˈeɪprəl/",
+   "wrong": "آوریل",
+   "right": "اِیپرِل",
+   "fa": "آوریل",
+   "tts": "April"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «لای»",
+   "tip_en": "ly",
+   "tip_emoji": "light_bulb",
+   "en": "July",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "ice_cream",
+   "uni": "🍦",
+   "ipa": "/dʒʊˈlaɪ/",
+   "wrong": "ژوئیه",
+   "right": "جولای",
+   "fa": "ژوئیه",
+   "tts": "July"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُو»",
+   "tip_en": "o",
+   "tip_emoji": "light_bulb",
+   "en": "November",
+   "mark": [
+    1
+   ],
+   "emoji": "fallen_leaf",
+   "uni": "🍂",
+   "ipa": "/noʊˈvembər/",
+   "wrong": "نوامبر",
+   "right": "نُووِمبِر",
+   "fa": "نوامبر",
+   "tts": "November"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "accordion",
+   "ipa": "/əˈkɔːrdiən/",
+   "answer": "آکاردئون"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ش» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "magic_wand",
+   "word": "magician",
+   "answer": "c"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "درستش کدومه؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "cello",
+   "options": [
+    "سِلو",
+    "کِلو",
+    "چِلُو"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "تولدت",
+   "t2a": "چه",
+   "t2b": "ماهیه؟",
+   "body": "ریپلای کن؛ به انگلیسی\nبنویسش",
+   "example": "September"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "مارس و آوریل به انگلیسی چی میشن؟ 📅\nاسم این ۴ تا ماه رو انگلیسی بگو، نه فرانسوی 💡 سیو کن\n\n🌱 March = مارچ (مارس (ماه))\n☔ April = اِیپرِل (آوریل)\n🍦 July = جولای (ژوئیه)\n🍂 November = نُووِمبِر (نوامبر)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

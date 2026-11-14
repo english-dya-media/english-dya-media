@@ -1,0 +1,33 @@
+{
+ "tag": "trial96b",
+ "kind": "mistakes",
+ "day": 96,
+ "date": "2027-02-06",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I think no.",
+   "right": "I don't think so.",
+   "note": "«فکر نکنم» = I don't think so",
+   "emoji": "thinking_face"
+  },
+  {
+   "wrong": "I think yes.",
+   "right": "I think so.",
+   "note": "«فکر کنم آره» = I think so",
+   "emoji": "thumbs_up"
+  },
+  {
+   "wrong": "Yes, I don't like it.",
+   "right": "No, I don't like it.",
+   "note": "جواب منفی با No شروع میشه",
+   "emoji": "cross_mark"
+  }
+ ],
+ "caption": "آره و نه رو این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

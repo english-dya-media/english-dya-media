@@ -1,0 +1,39 @@
+{
+ "tag": "trial101a",
+ "kind": "vocab",
+ "day": 101,
+ "date": "2027-02-11",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "talk unclearly",
+   "right": "mumble",
+   "note": "یعنی «زیر لب و نامفهوم حرف زدن»",
+   "emoji": "zipper-mouth_face"
+  },
+  {
+   "wrong": "talk proudly",
+   "right": "brag",
+   "note": "یعنی «پز دادن، لاف زدن»",
+   "emoji": "smiling_face_with_sunglasses"
+  },
+  {
+   "wrong": "talk about others",
+   "right": "gossip",
+   "note": "یعنی «غیبت کردن»",
+   "emoji": "speaking_head"
+  },
+  {
+   "wrong": "say you're unhappy",
+   "right": "complain",
+   "note": "یعنی «شکایت کردن، غر زدن»",
+   "emoji": "pouting_face"
+  }
+ ],
+ "caption": "به جای say و talk این‌ها رو بگو 🗣️\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

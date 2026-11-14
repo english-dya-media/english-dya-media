@@ -1,0 +1,33 @@
+{
+ "tag": "trial94b",
+ "kind": "mistakes",
+ "day": 94,
+ "date": "2027-02-04",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Put the tea.",
+   "right": "Make some tea.",
+   "note": "«چای دم کردن» = make tea",
+   "emoji": "teacup_without_handle"
+  },
+  {
+   "wrong": "Cook a cake.",
+   "right": "Bake a cake.",
+   "note": "کیک رو bake می‌کنن",
+   "emoji": "birthday_cake"
+  },
+  {
+   "wrong": "Close the gas.",
+   "right": "Turn off the stove.",
+   "note": "«گاز رو ببند» = turn off the stove",
+   "emoji": "fire"
+  }
+ ],
+ "caption": "تو آشپزخونه این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

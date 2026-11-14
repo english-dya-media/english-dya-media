@@ -1,0 +1,39 @@
+{
+ "tag": "trial94a",
+ "kind": "vocab",
+ "day": 94,
+ "date": "2027-02-04",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی آشپزی",
+ "head_emoji": "cooking",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "cut in small pieces",
+   "right": "chop",
+   "note": "یعنی «خرد کردن»",
+   "emoji": "kitchen_knife"
+  },
+  {
+   "wrong": "cut in thin pieces",
+   "right": "slice",
+   "note": "یعنی «ورقه‌ورقه کردن»",
+   "emoji": "bread"
+  },
+  {
+   "wrong": "remove the skin",
+   "right": "peel",
+   "note": "یعنی «پوست کندن»",
+   "emoji": "banana"
+  },
+  {
+   "wrong": "mix with a spoon",
+   "right": "stir",
+   "note": "یعنی «هم زدن»",
+   "emoji": "spoon"
+  }
+ ],
+ "caption": "آشپزی به انگلیسی 🍳\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

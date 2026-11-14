@@ -1,0 +1,39 @@
+{
+ "tag": "trial100a",
+ "kind": "vocab",
+ "day": 100,
+ "date": "2027-02-10",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "Help me, please.",
+   "right": "Can you help me out?",
+   "note": "یعنی «می‌تونی کمکم کنی؟»",
+   "emoji": "raising_hands"
+  },
+  {
+   "wrong": "Do you have time?",
+   "right": "Got a minute?",
+   "note": "یعنی «یه دقیقه وقت داری؟»",
+   "emoji": "stopwatch"
+  },
+  {
+   "wrong": "Is it a problem?",
+   "right": "Would you mind?",
+   "note": "یعنی «اشکالی نداره؟»",
+   "emoji": "thinking_face"
+  },
+  {
+   "wrong": "Can I sit here?",
+   "right": "Is this seat taken?",
+   "note": "یعنی «این صندلی خالیه؟»",
+   "emoji": "seat"
+  }
+ ],
+ "caption": "مؤدبانه درخواست کن 🙏\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

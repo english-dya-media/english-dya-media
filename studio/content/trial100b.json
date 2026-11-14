@@ -1,0 +1,33 @@
+{
+ "tag": "trial100b",
+ "kind": "mistakes",
+ "day": 100,
+ "date": "2027-02-10",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Who are you?",
+   "right": "Who's calling?",
+   "note": "پشت تلفن این‌جوری بپرس",
+   "emoji": "telephone_receiver"
+  },
+  {
+   "wrong": "Wait a little.",
+   "right": "Hold on, please.",
+   "note": "«گوشی دستت» = hold on",
+   "emoji": "hourglass_not_done"
+  },
+  {
+   "wrong": "I'm Ali.",
+   "right": "This is Ali.",
+   "note": "پشت تلفن: this is، نه I'm",
+   "emoji": "mobile_phone"
+  }
+ ],
+ "caption": "پشت تلفن این‌جوری نگو ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

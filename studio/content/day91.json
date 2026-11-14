@@ -1,0 +1,160 @@
+{
+ "day": 91,
+ "date": "2027-02-01",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "اسم این ۴ تا شهر",
+  "l2a": "به",
+  "l2b": "انگلیسی",
+  "l3": "چی میشه؟",
+  "l3emoji": "world_map",
+  "sub": "پکن به انگلیسی میشه Beijing!",
+  "subemoji": "astonished_face"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آ»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "Brussels",
+   "mark": [
+    2
+   ],
+   "emoji": "waffle",
+   "uni": "🧇",
+   "ipa": "/ˈbrʌsəlz/",
+   "wrong": "بروکسل",
+   "right": "بْراسِلز",
+   "fa": "بروکسل",
+   "tts": "Brussels"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «سا»",
+   "tip_en": "saw",
+   "tip_emoji": "light_bulb",
+   "en": "Warsaw",
+   "mark": [
+    3,
+    4,
+    5
+   ],
+   "emoji": "castle",
+   "uni": "🏰",
+   "ipa": "/ˈwɔːrsɔː/",
+   "wrong": "ورشو",
+   "right": "وُرسا",
+   "fa": "ورشو",
+   "tts": "Warsaw"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «هِیگِن»",
+   "tip_en": "hagen",
+   "tip_emoji": "light_bulb",
+   "en": "Copenhagen",
+   "mark": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "emoji": "bicycle",
+   "uni": "🚲",
+   "ipa": "/ˌkoʊpənˈheɪɡən/",
+   "wrong": "کپنهاگ",
+   "right": "کُوپِن‌هِیگِن",
+   "fa": "کپنهاگ",
+   "tts": "Copenhagen"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ج»",
+   "tip_en": "j",
+   "tip_emoji": "light_bulb",
+   "en": "Beijing",
+   "mark": [
+    3
+   ],
+   "emoji": "panda",
+   "uni": "🐼",
+   "ipa": "/beɪˈdʒɪŋ/",
+   "wrong": "پکن",
+   "right": "بِیجینگ",
+   "fa": "پکن",
+   "tts": "Beijing"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "uniform",
+   "ipa": "/ˈjuːnɪfɔːrm/",
+   "answer": "لباس فرم"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "tulip",
+   "word": "scent",
+   "answer": "c"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "jacket",
+   "options": [
+    "کاپشن، کت",
+    "کفش",
+    "شلوار"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "اسم کدوم شهر رو",
+   "t2a": "بلد",
+   "t2b": "نیستی؟",
+   "body": "ریپلای کن تا تلفظ انگلیسیشو\nبرات بگم",
+   "example": "Amsterdam"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "پکن و ورشو به انگلیسی چی میشن؟ 😳\nBeijing میشه «بِیجینگ» و Warsaw میشه «وُرسا» 🌍 برای دوستت بفرست\n\n🧇 Brussels = بْراسِلز (بروکسل)\n🏰 Warsaw = وُرسا (ورشو)\n🚲 Copenhagen = کُوپِن‌هِیگِن (کپنهاگ)\n🐼 Beijing = بِیجینگ (پکن)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

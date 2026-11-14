@@ -1,0 +1,33 @@
+{
+ "tag": "trial92b",
+ "kind": "mistakes",
+ "day": 92,
+ "date": "2027-02-02",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "So many traffics!",
+   "right": "So much traffic!",
+   "note": "traffic شمردنی نیست",
+   "emoji": "vertical_traffic_light"
+  },
+  {
+   "wrong": "I eat many fruits.",
+   "right": "I eat a lot of fruit.",
+   "note": "fruit معمولاً مفرد میاد",
+   "emoji": "red_apple"
+  },
+  {
+   "wrong": "Police is here.",
+   "right": "The police are here.",
+   "note": "police همیشه جمعه",
+   "emoji": "police_car_light"
+  }
+ ],
+ "caption": "این کلمه‌ها رو اشتباه جمع می‌بندی ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

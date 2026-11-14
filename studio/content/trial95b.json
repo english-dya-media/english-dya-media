@@ -1,0 +1,33 @@
+{
+ "tag": "trial95b",
+ "kind": "mistakes",
+ "day": 95,
+ "date": "2027-02-05",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Fix the bed.",
+   "right": "Make the bed.",
+   "note": "«تخت رو مرتب کن» = make the bed",
+   "emoji": "bed"
+  },
+  {
+   "wrong": "Throw the trash.",
+   "right": "Take out the trash.",
+   "note": "«آشغالا رو ببر بیرون»",
+   "emoji": "wastebasket"
+  },
+  {
+   "wrong": "Make the laundry.",
+   "right": "Do the laundry.",
+   "note": "«لباس شستن» = do the laundry",
+   "emoji": "soap"
+  }
+ ],
+ "caption": "کارهای خونه رو این‌جوری نگو ❌\nبرای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

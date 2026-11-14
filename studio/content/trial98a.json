@@ -1,0 +1,39 @@
+{
+ "tag": "trial98a",
+ "kind": "vocab",
+ "day": 98,
+ "date": "2027-02-08",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی آدرس دادن",
+ "head_emoji": "world_map",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "very near",
+   "right": "around the corner",
+   "note": "یعنی «همین نزدیکی، سر کوچه»",
+   "emoji": "round_pushpin"
+  },
+  {
+   "wrong": "other side of street",
+   "right": "across the street",
+   "note": "یعنی «اون طرف خیابون»",
+   "emoji": "world_map"
+  },
+  {
+   "wrong": "It's easy to find.",
+   "right": "You can't miss it.",
+   "note": "یعنی «راحت پیداش می‌کنی»",
+   "emoji": "eyes"
+  },
+  {
+   "wrong": "5 minutes on foot",
+   "right": "a five-minute walk",
+   "note": "یعنی «پنج دقیقه پیاده»",
+   "emoji": "person_walking"
+  }
+ ],
+ "caption": "آدرس دادن به انگلیسی 🗺️\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

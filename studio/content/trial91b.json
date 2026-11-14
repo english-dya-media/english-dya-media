@@ -1,0 +1,33 @@
+{
+ "tag": "trial91b",
+ "kind": "mistakes",
+ "day": 91,
+ "date": "2027-02-01",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I'm working in Google.",
+   "right": "I work at Google.",
+   "note": "محل کار دائمی: work at",
+   "emoji": "office_building"
+  },
+  {
+   "wrong": "Send it until Monday.",
+   "right": "Send it by Monday.",
+   "note": "«تا دوشنبه» (مهلت) = by",
+   "emoji": "spiral_calendar"
+  },
+  {
+   "wrong": "Can I ask from you?",
+   "right": "Can I ask a question?",
+   "note": "بعد از ask حرف from نمیاد",
+   "emoji": "person_raising_hand"
+  }
+ ],
+ "caption": "انگلیسی کاری رو این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

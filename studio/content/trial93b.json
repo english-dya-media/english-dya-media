@@ -1,0 +1,33 @@
+{
+ "tag": "trial93b",
+ "kind": "mistakes",
+ "day": 93,
+ "date": "2027-02-03",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I play yoga.",
+   "right": "I do yoga.",
+   "note": "یوگا رو do می‌کنن",
+   "emoji": "person_in_lotus_position"
+  },
+  {
+   "wrong": "I go to gym.",
+   "right": "I go to the gym.",
+   "note": "باشگاه = the gym",
+   "emoji": "person_lifting_weights"
+  },
+  {
+   "wrong": "I play swimming.",
+   "right": "I go swimming.",
+   "note": "ورزش‌های ing با go میان",
+   "emoji": "person_swimming"
+  }
+ ],
+ "caption": "play، do یا go؟ ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

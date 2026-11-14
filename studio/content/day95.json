@@ -1,0 +1,156 @@
+{
+ "day": 95,
+ "date": "2027-02-05",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه‌ی",
+  "l2a": "خونه",
+  "l2b": "رو",
+  "l3": "درست بگو",
+  "l3emoji": "house",
+  "sub": "toilet «توالت» نیست!",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُی»",
+   "tip_en": "oi",
+   "tip_emoji": "light_bulb",
+   "en": "toilet",
+   "mark": [
+    1,
+    2
+   ],
+   "emoji": "toilet",
+   "uni": "🚽",
+   "ipa": "/ˈtɔɪlət/",
+   "wrong": "توالت",
+   "right": "تُویلِت",
+   "fa": "توالت",
+   "tts": "toilet"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اَ»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "balcony",
+   "mark": [
+    1
+   ],
+   "emoji": "potted_plant",
+   "uni": "🪴",
+   "ipa": "/ˈbælkəni/",
+   "wrong": "بالکن",
+   "right": "بَلکِنی",
+   "fa": "بالکن",
+   "tts": "balcony"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اِی»",
+   "tip_en": "a",
+   "tip_emoji": "light_bulb",
+   "en": "radiator",
+   "mark": [
+    1
+   ],
+   "emoji": "fire",
+   "uni": "🔥",
+   "ipa": "/ˈreɪdieɪɾər/",
+   "wrong": "رادیاتور",
+   "right": "رِیدی‌اِیدِر",
+   "fa": "شوفاژ، رادیاتور",
+   "tts": "radiator"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آو»",
+   "tip_en": "ow",
+   "tip_emoji": "light_bulb",
+   "en": "shower",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "shower",
+   "uni": "🚿",
+   "ipa": "/ˈʃaʊər/",
+   "wrong": "شُوِر",
+   "right": "شاوِر",
+   "fa": "دوش",
+   "tts": "shower"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "معنی این کلمه چیه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "معنیشو ریپلای کن",
+   "slot": "10:00",
+   "word": "treasure",
+   "ipa": "/ˈtreʒər/",
+   "answer": "گنج"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "face_with_hand_over_mouth",
+   "word": "guilty",
+   "answer": "u"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "usual",
+   "options": [
+    "عجیب",
+    "جدید",
+    "معمول"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه چیز تو خونه‌تون",
+   "t2a": "که",
+   "t2b": "اسمشو نمی‌دونی؟",
+   "body": "ریپلای کن؛ اسم انگلیسیشو\nبرات می‌گم",
+   "example": "drawer"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "toilet رو «توالت» نگو ❌\nاین ۴ تا کلمه‌ی خونه رو انگلیسی بگو 🏠 برای دوستت بفرست\n\n🚽 toilet = تُویلِت (توالت)\n🪴 balcony = بَلکِنی (بالکن)\n🔥 radiator = رِیدی‌اِیدِر (شوفاژ، رادیاتور)\n🚿 shower = شاوِر (دوش)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

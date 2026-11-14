@@ -1,0 +1,156 @@
+{
+ "day": 90,
+ "date": "2027-01-31",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا لباس رو",
+  "l2a": "مثل",
+  "l2b": "فارسی",
+  "l3": "نگو!",
+  "l3emoji": "cross_mark",
+  "sub": "jacket «ژاکت» نیست!",
+  "subemoji": "coat"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ج»",
+   "tip_en": "j",
+   "tip_emoji": "light_bulb",
+   "en": "jacket",
+   "mark": [
+    0
+   ],
+   "emoji": "coat",
+   "uni": "🧥",
+   "ipa": "/ˈdʒækɪt/",
+   "wrong": "ژاکت",
+   "right": "جَکِت",
+   "fa": "کاپشن، کت",
+   "tts": "jacket"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آو»",
+   "tip_en": "ou",
+   "tip_emoji": "light_bulb",
+   "en": "blouse",
+   "mark": [
+    2,
+    3
+   ],
+   "emoji": "womans_clothes",
+   "uni": "👚",
+   "ipa": "/blaʊs/",
+   "wrong": "بلوز",
+   "right": "بْلاوس",
+   "fa": "بلوز زنانه",
+   "ph": "blˈaʊs",
+   "tts": "blouse"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «یو»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "uniform",
+   "mark": [
+    0
+   ],
+   "emoji": "backpack",
+   "uni": "🎒",
+   "ipa": "/ˈjuːnɪfɔːrm/",
+   "wrong": "اونیفورم",
+   "right": "یونیفُرم",
+   "fa": "لباس فرم",
+   "tts": "uniform"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «اُ»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "pullover",
+   "mark": [
+    1
+   ],
+   "emoji": "yarn",
+   "uni": "🧶",
+   "ipa": "/ˈpʊloʊvər/",
+   "wrong": "پلیور",
+   "right": "پُلُووِر",
+   "fa": "پلیور",
+   "tts": "pullover"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "chemistry",
+   "ipa": "/ˈkemɪstri/",
+   "answer": "کِمِستری"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ج» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "brain",
+   "word": "genius",
+   "answer": "g"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "architect",
+   "options": [
+    "مهندس",
+    "معمار",
+    "نقاش"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "لباس مورد علاقه‌ت",
+   "t2a": "به",
+   "t2b": "انگلیسی؟",
+   "body": "ریپلای کن تا تلفظشو\nبرات بگم",
+   "example": "hoodie"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "jacket رو «ژاکت» نگو ❌\nاسم این ۴ تا لباس رو انگلیسی بگو 🧥 برای دوستت بفرست\n\n🧥 jacket = جَکِت (کاپشن، کت)\n👚 blouse = بْلاوس (بلوز زنانه)\n🎒 uniform = یونیفُرم (لباس فرم)\n🧶 pullover = پُلُووِر (پلیور)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

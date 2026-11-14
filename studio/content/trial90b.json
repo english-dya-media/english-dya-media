@@ -1,0 +1,33 @@
+{
+ "tag": "trial90b",
+ "kind": "mistakes",
+ "day": 90,
+ "date": "2027-01-31",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I wear clothes at 7.",
+   "right": "I get dressed at 7.",
+   "note": "لباس پوشیدن (صبح) = get dressed",
+   "emoji": "alarm_clock"
+  },
+  {
+   "wrong": "Put off your coat.",
+   "right": "Take off your coat.",
+   "note": "درآوردن = take off",
+   "emoji": "coat"
+  },
+  {
+   "wrong": "It comes to you!",
+   "right": "It suits you!",
+   "note": "«بهت میاد» = it suits you",
+   "emoji": "t-shirt"
+  }
+ ],
+ "caption": "لباس رو این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

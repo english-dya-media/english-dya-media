@@ -1,0 +1,33 @@
+{
+ "tag": "trial98b",
+ "kind": "mistakes",
+ "day": 98,
+ "date": "2027-02-08",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Go direct.",
+   "right": "Go straight.",
+   "note": "«مستقیم برو» = go straight",
+   "emoji": "up_arrow"
+  },
+  {
+   "wrong": "Turn to left.",
+   "right": "Turn left.",
+   "note": "بعد از turn حرف to نمیاد",
+   "emoji": "left_arrow"
+  },
+  {
+   "wrong": "It's near to here.",
+   "right": "It's near here.",
+   "note": "بعد از near حرف to نمیاد",
+   "emoji": "round_pushpin"
+  }
+ ],
+ "caption": "آدرس رو این‌جوری نده ❌\nسیو کن و برای دوستت بفرست 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

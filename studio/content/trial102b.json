@@ -1,0 +1,33 @@
+{
+ "tag": "trial102b",
+ "kind": "mistakes",
+ "day": 102,
+ "date": "2027-02-12",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I bought two breads.",
+   "right": "I bought some bread.",
+   "note": "bread شمردنی نیست",
+   "emoji": "bread"
+  },
+  {
+   "wrong": "Give me a rice.",
+   "right": "Give me some rice.",
+   "note": "rice شمردنی نیست",
+   "emoji": "cooked_rice"
+  },
+  {
+   "wrong": "I have a good news!",
+   "right": "I have good news!",
+   "note": "news شمردنی نیست؛ a نمی‌گیره",
+   "emoji": "newspaper"
+  }
+ ],
+ "caption": "این کلمه‌ها a نمی‌گیرن ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

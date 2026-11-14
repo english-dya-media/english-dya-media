@@ -1,0 +1,39 @@
+{
+ "tag": "trial89a",
+ "kind": "vocab",
+ "day": 89,
+ "date": "2027-01-30",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "انگلیسی رانندگی",
+ "head_emoji": "automobile",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "stop the car on side",
+   "right": "pull over",
+   "note": "یعنی «بزن کنار»",
+   "emoji": "automobile"
+  },
+  {
+   "wrong": "heavy traffic",
+   "right": "traffic jam",
+   "note": "یعنی «ترافیک سنگین»",
+   "emoji": "vertical_traffic_light"
+  },
+  {
+   "wrong": "busy traffic hours",
+   "right": "rush hour",
+   "note": "یعنی «ساعت شلوغی»",
+   "emoji": "alarm_clock"
+  },
+  {
+   "wrong": "put gas in the car",
+   "right": "fill up",
+   "note": "یعنی «باک رو پر کردن»",
+   "emoji": "fuel_pump"
+  }
+ ],
+ "caption": "رانندگی به انگلیسی 🚗\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

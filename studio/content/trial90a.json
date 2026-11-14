@@ -1,0 +1,39 @@
+{
+ "tag": "trial90a",
+ "kind": "vocab",
+ "day": 90,
+ "date": "2027-01-31",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "wear (start wearing)",
+   "right": "put on",
+   "note": "یعنی «پوشیدن» (عمل)",
+   "emoji": "coat"
+  },
+  {
+   "wrong": "remove clothes",
+   "right": "take off",
+   "note": "یعنی «درآوردن لباس»",
+   "emoji": "t-shirt"
+  },
+  {
+   "wrong": "test clothes in a shop",
+   "right": "try on",
+   "note": "یعنی «پرو کردن»",
+   "emoji": "shopping_bags"
+  },
+  {
+   "wrong": "wear fancy clothes",
+   "right": "dress up",
+   "note": "یعنی «شیک کردن، لباس رسمی پوشیدن»",
+   "emoji": "necktie"
+  }
+ ],
+ "caption": "لباس پوشیدن به انگلیسی 👕\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

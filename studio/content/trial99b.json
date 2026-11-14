@@ -1,0 +1,33 @@
+{
+ "tag": "trial99b",
+ "kind": "mistakes",
+ "day": 99,
+ "date": "2027-02-09",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "Sorry for disturb.",
+   "right": "Sorry to bother you.",
+   "note": "«ببخشید مزاحم شدم»",
+   "emoji": "person_bowing"
+  },
+  {
+   "wrong": "Excuse me for late.",
+   "right": "Sorry for being late.",
+   "note": "«ببخشید دیر کردم»",
+   "emoji": "alarm_clock"
+  },
+  {
+   "wrong": "Welcome!",
+   "right": "You're welcome!",
+   "note": "جواب «مرسی» = you're welcome",
+   "emoji": "smiling_face"
+  }
+ ],
+ "caption": "عذرخواهی و تشکر رو این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

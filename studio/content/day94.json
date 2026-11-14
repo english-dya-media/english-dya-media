@@ -1,0 +1,154 @@
+{
+ "day": 94,
+ "date": "2027-02-04",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "تو این ۴ تا کلمه",
+  "l2a": "s",
+  "l2b": "«ژ»ه!",
+  "l3": "نه «س»",
+  "l3emoji": "light_bulb",
+  "sub": "measure میشه «مِژِر»",
+  "subemoji": "speaker_high_volume"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ژ»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "Asia",
+   "mark": [
+    1
+   ],
+   "emoji": "globe_showing_asia-australia",
+   "uni": "🌏",
+   "ipa": "/ˈeɪʒə/",
+   "wrong": "آسیا",
+   "right": "اِیژا",
+   "fa": "آسیا",
+   "tts": "Asia"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ژ»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "measure",
+   "mark": [
+    3
+   ],
+   "emoji": "straight_ruler",
+   "uni": "📏",
+   "ipa": "/ˈmeʒər/",
+   "wrong": "میژر",
+   "right": "مِژِر",
+   "fa": "اندازه گرفتن",
+   "tts": "measure"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ژ»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "treasure",
+   "mark": [
+    4
+   ],
+   "emoji": "gem_stone",
+   "uni": "💎",
+   "ipa": "/ˈtreʒər/",
+   "wrong": "تریژر",
+   "right": "تْرِژِر",
+   "fa": "گنج",
+   "tts": "treasure"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «ژ»",
+   "tip_en": "s",
+   "tip_emoji": "light_bulb",
+   "en": "usual",
+   "mark": [
+    1
+   ],
+   "emoji": "spiral_calendar",
+   "uni": "🗓️",
+   "ipa": "/ˈjuːʒuəl/",
+   "wrong": "یوسوال",
+   "right": "یوژوئِل",
+   "fa": "معمول",
+   "tts": "usual"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "marathon",
+   "ipa": "/ˈmærəθɑːn/",
+   "answer": "مَرِثان"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «ش» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "busts_in_silhouette",
+   "word": "social",
+   "answer": "c"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "stadium",
+   "options": [
+    "پارک",
+    "ورزشگاه",
+    "باشگاه"
+   ],
+   "answer": 1
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که",
+   "t2a": "صدای",
+   "t2b": "«ژ» داره؟",
+   "body": "ریپلای کن؛ تو ریلزهای بعدی\nتمرینش کنیم",
+   "example": "television"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "measure رو «میژر» نخون ❌\ns تو این ۴ تا کلمه «ژ»ه 💡 برای دوستت بفرست\n\n🌏 Asia = اِیژا (آسیا)\n📏 measure = مِژِر (اندازه گرفتن)\n💎 treasure = تْرِژِر (گنج)\n🗓️ usual = یوژوئِل (معمول)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

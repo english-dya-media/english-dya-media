@@ -1,0 +1,39 @@
+{
+ "tag": "trial92a",
+ "kind": "vocab",
+ "day": 92,
+ "date": "2027-02-02",
+ "slot": "15:00",
+ "handle": "@english_dya",
+ "headline": "حرفه‌ای‌تر حرف بزن",
+ "head_emoji": "smiling_face_with_sunglasses",
+ "end1": "هر روز کلمه‌ی جدید یاد بگیر",
+ "end2": "حرفه‌ای‌تر حرف بزن",
+ "items": [
+  {
+   "wrong": "two or three",
+   "right": "a couple of",
+   "note": "یعنی «یکی دو تا، چند تا»",
+   "emoji": "victory_hand"
+  },
+  {
+   "wrong": "a small number of",
+   "right": "a handful of",
+   "note": "یعنی «یه مشت، تعداد کمی»",
+   "emoji": "raised_hand"
+  },
+  {
+   "wrong": "very many",
+   "right": "loads of",
+   "note": "یعنی «کلی، یه عالمه»",
+   "emoji": "package"
+  },
+  {
+   "wrong": "more than enough",
+   "right": "plenty of",
+   "note": "یعنی «به اندازه‌ی کافی و بیشتر»",
+   "emoji": "check_mark_button"
+  }
+ ],
+ "caption": "مقدار رو مثل بومی‌ها بگو 📦\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #یادگیری_زبان #مکالمه_انگلیسی"
+}

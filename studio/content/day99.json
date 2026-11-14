@@ -1,0 +1,154 @@
+{
+ "day": 99,
+ "date": "2027-02-09",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«ای»",
+  "l3": "نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "i این‌جا «آی»ه، مثل five",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آی»",
+   "tip_en": "i",
+   "tip_emoji": "light_bulb",
+   "en": "pilot",
+   "mark": [
+    1
+   ],
+   "emoji": "airplane",
+   "uni": "✈️",
+   "ipa": "/ˈpaɪlət/",
+   "wrong": "پیلوت",
+   "right": "پایلِت",
+   "fa": "خلبان",
+   "tts": "pilot"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آی»",
+   "tip_en": "i",
+   "tip_emoji": "light_bulb",
+   "en": "iron",
+   "mark": [
+    0
+   ],
+   "emoji": "magnet",
+   "uni": "🧲",
+   "ipa": "/ˈaɪərn/",
+   "wrong": "ایرون",
+   "right": "آیِرن",
+   "fa": "آهن؛ اتو",
+   "tts": "iron"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آی»",
+   "tip_en": "i",
+   "tip_emoji": "light_bulb",
+   "en": "license",
+   "mark": [
+    1
+   ],
+   "emoji": "identification_card",
+   "uni": "🪪",
+   "ipa": "/ˈlaɪsəns/",
+   "wrong": "لیسانس",
+   "right": "لایسِنس",
+   "fa": "گواهینامه، مجوز",
+   "tts": "license"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «آی»",
+   "tip_en": "i",
+   "tip_emoji": "light_bulb",
+   "en": "climate",
+   "mark": [
+    2
+   ],
+   "emoji": "globe_showing_americas",
+   "uni": "🌎",
+   "ipa": "/ˈklaɪmət/",
+   "wrong": "کلیمات",
+   "right": "کْلایمِت",
+   "fa": "آب و هوا، اقلیم",
+   "tts": "climate"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "April",
+   "ipa": "/ˈeɪprəl/",
+   "answer": "اِیپرِل"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nخونده نمیشه؟",
+   "hint": "راهنما: فقط یه حرف!",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "star-struck",
+   "word": "fascinate",
+   "answer": "c"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "July",
+   "options": [
+    "ژوئیه",
+    "ژوئن",
+    "اوت"
+   ],
+   "answer": 0
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه که",
+   "t2a": "معنیش",
+   "t2b": "فرق داره؟",
+   "body": "ریپلای کن؛ مثل license\nکه «لیسانس» نیست",
+   "example": "doctor"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "license «لیسانس» نیست ❌\ni تو این ۴ تا کلمه «آی»ه 💡 license یعنی «مجوز»، نه مدرک دانشگاهی؛ سیو کن\n\n✈️ pilot = پایلِت (خلبان)\n🧲 iron = آیِرن (آهن؛ اتو)\n🪪 license = لایسِنس (گواهینامه، مجوز)\n🌎 climate = کْلایمِت (آب و هوا، اقلیم)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}

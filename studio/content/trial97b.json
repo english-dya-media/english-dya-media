@@ -1,0 +1,33 @@
+{
+ "tag": "trial97b",
+ "kind": "mistakes",
+ "day": 97,
+ "date": "2027-02-07",
+ "slot": "19:00",
+ "handle": "@english_dya",
+ "headline": "تو هم این‌جوری می‌گی؟",
+ "head_emoji": "grimacing_face",
+ "end1": "هر روز انگلیسی یاد بگیر",
+ "end2": "بدون اشتباه!",
+ "items": [
+  {
+   "wrong": "I went to cinema.",
+   "right": "I went to the movies.",
+   "note": "«سینما رفتم» به آمریکایی",
+   "emoji": "popcorn"
+  },
+  {
+   "wrong": "I'm fan of him.",
+   "right": "I'm a big fan of his.",
+   "note": "طرفدار کسی بودن = a fan of",
+   "emoji": "star-struck"
+  },
+  {
+   "wrong": "Put a song.",
+   "right": "Play a song.",
+   "note": "«آهنگ بذار» = play a song",
+   "emoji": "musical_note"
+  }
+ ],
+ "caption": "فیلم و آهنگ رو این‌جوری نگو ❌\nتو کدومشو می‌گفتی؟ کامنت کن 👇\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #گرامر_انگلیسی #اشتباهات_رایج #مکالمه_انگلیسی"
+}

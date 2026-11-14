@@ -1,0 +1,154 @@
+{
+ "day": 92,
+ "date": "2027-02-02",
+ "handle": "@english_dya",
+ "labels": {
+  "wrong": "اشتباه رایج",
+  "silent": "حرف {L} خونده نمیشه",
+  "meaning": "معنی",
+  "repeat": "با من تکرار کن"
+ },
+ "end": {
+  "emoji": "thinking_face",
+  "e1": "تو کدومو اشتباه می‌گفتی؟",
+  "e2": "تو کامنت بنویس",
+  "e3": "برای لغت‌های روزانه فالو کن"
+ },
+ "hook": {
+  "l1": "این ۴ تا کلمه رو",
+  "l2a": "با",
+  "l2b": "«او»",
+  "l3": "نخون!",
+  "l3emoji": "cross_mark",
+  "sub": "u این‌جا «یو»ه، مثل music",
+  "subemoji": "light_bulb"
+ },
+ "words": [
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «یو»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "human",
+   "mark": [
+    1
+   ],
+   "emoji": "bust_in_silhouette",
+   "uni": "👤",
+   "ipa": "/ˈhjuːmən/",
+   "wrong": "هومان",
+   "right": "هیومِن",
+   "fa": "انسان",
+   "tts": "human"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «یو»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "humor",
+   "mark": [
+    1
+   ],
+   "emoji": "face_with_tears_of_joy",
+   "uni": "😂",
+   "ipa": "/ˈhjuːmər/",
+   "wrong": "هومور",
+   "right": "هیومِر",
+   "fa": "شوخ‌طبعی، طنز",
+   "tts": "humor"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «یو»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "unit",
+   "mark": [
+    0
+   ],
+   "emoji": "triangular_ruler",
+   "uni": "📐",
+   "ipa": "/ˈjuːnɪt/",
+   "wrong": "اونیت",
+   "right": "یونیت",
+   "fa": "واحد",
+   "tts": "unit"
+  },
+  {
+   "mark_style": "glow",
+   "tip": "اینجا {EN} = «یو»",
+   "tip_en": "u",
+   "tip_emoji": "light_bulb",
+   "en": "fuel",
+   "mark": [
+    1
+   ],
+   "emoji": "fuel_pump",
+   "uni": "⛽",
+   "ipa": "/ˈfjuːəl/",
+   "wrong": "فوئل",
+   "right": "فیوئِل",
+   "fa": "سوخت",
+   "tts": "fuel"
+  }
+ ],
+ "stories": [
+  {
+   "kind": "recall",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "emoji": "thinking_face",
+   "title": "یادته؟",
+   "q": "چطوری خونده میشه؟",
+   "hint": "بدون نگاه کردن به ریلز!",
+   "cta": "تلفظشو ریپلای کن",
+   "slot": "10:00",
+   "word": "Beijing",
+   "ipa": "/beɪˈdʒɪŋ/",
+   "answer": "بِیجینگ"
+  },
+  {
+   "kind": "quiz",
+   "kicker": "تست ۵ ثانیه‌ای",
+   "kicker_emoji": "stopwatch",
+   "q": "کدوم حرف این کلمه\nصدای «چ» میده؟",
+   "hint": "راهنما: حرفشو بفرست",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "13:00",
+   "emoji": "crystal_ball",
+   "word": "future",
+   "answer": "t"
+  },
+  {
+   "kind": "mcq",
+   "kicker": "از ریلز دیروز",
+   "kicker_emoji": "brain",
+   "q": "یعنی چی؟",
+   "hint": "فقط حرفشو بفرست: الف، ب یا ج",
+   "cta": "جوابتو ریپلای کن",
+   "slot": "17:00",
+   "word": "Warsaw",
+   "options": [
+    "پراگ",
+    "وین",
+    "ورشو"
+   ],
+   "answer": 2
+  },
+  {
+   "kind": "ask",
+   "emoji": "speech_balloon",
+   "example_label": "مثلاً:",
+   "cta": "ریپلای کن",
+   "slot": "22:00",
+   "t1": "یه کلمه با u",
+   "t2a": "که",
+   "t2b": "گیجت می‌کنه؟",
+   "body": "ریپلای کن؛ «او»ه یا «یو»؟\nبرات می‌گم",
+   "example": "computer"
+  }
+ ],
+ "reel_slot": "21:00",
+ "caption": "human رو «هومان» نخون ❌\nu تو این ۴ تا کلمه «یو»ه، مثل music 💡 سیو کن\n\n👤 human = هیومِن (انسان)\n😂 humor = هیومِر (شوخ‌طبعی، طنز)\n📐 unit = یونیت (واحد)\n⛽ fuel = فیوئِل (سوخت)\n\nتو کدومشو اشتباه می‌گفتی؟ تو کامنت بنویس 👇\nسیو کن که یادت بمونه 📌\n\n#زبان_انگلیسی #آموزش_زبان_انگلیسی #لغت_انگلیسی #تلفظ_انگلیسی #یادگیری_زبان #لغت_روز #زبان_انگلیسی_آسان"
+}
