@@ -32,6 +32,7 @@ LOOKS = {
     "kavus": dict(b=1.05, head="crown", beard="long", garment="robe", cape=True),
     "afrasiab": dict(b=1.1, head="crown", beard="long", garment="robe", cape=True),
     "mobed": dict(b=0.95, head="turban", beard="long", garment="robe"),
+    "div": dict(b=1.35, heavy=True, head="horns", beard="long", garment="tunic"),
 }
 
 L1, L2 = 120, 106          # thigh, shin
@@ -335,6 +336,18 @@ def head(c, L, P, t, br):
     elif hg == "bare":
         fillp(c, spath([(-22, -468), (-28, -496), (-18, -520), (4, -531), (26, -524), (36, -508, 0), (20, -514),
                         (0, -510), (-10, -494), (-14, -470), (-18, -446), (-28, -428), (-38, -436), (-34, -462)]))
+    elif hg == "horns":         # a div: wild hair, two great curved horns, a pointed ear
+        hair = [(-24, -470, 0)]
+        for i in range(9):
+            u = i / 8
+            a = math.radians(mix(200, 330, u))
+            r = 30 if i % 2 else 46
+            hair.append((4 + r * math.cos(a), -500 + r * math.sin(a), 0))
+        hair += [(38, -506, 0), (8, -508)]
+        fillp(c, ppath([(p[0], p[1]) for p in hair]))
+        taper(c, bez((-8, -522), (-30, -566), (-74, -582), (-92, -548), 10), 10, 2)
+        taper(c, bez((12, -526), (22, -576), (62, -598), (84, -572), 10), 9, 2)
+        fillp(c, spath([(-6, -488, 0), (-22, -504), (-14, -486, 0)]))
     elif hg == "veil_crown":
         fillp(c, ppath([(-12, -524), (-10, -542), (-2, -530), (6, -547), (14, -530), (22, -541), (26, -522)]))
     if hg not in ("veil", "veil_crown"):
@@ -418,6 +431,25 @@ def prop(c, kind, W, a2, P, t):
     elif kind == "pen":
         fillp(c, ppath([(hx - 2, hy + 4), (hx + 34, hy + 34), (hx + 31, hy + 37), (hx - 4, hy + 8)]))
         anchor(c, "pen", hx + 34, hy + 36)
+    elif kind == "sword":
+        c.save()
+        c.translate(hx, hy)
+        c.rotate(P.get("sword", 0.0))
+        fillp(c, ppath([(-5, -20), (5, -20), (4, -206), (0, -232), (-4, -206)]))
+        fillp(c, spath([(-26, -26, 0), (26, -26, 0), (22, -16, 0), (-22, -16, 0)]))
+        fillp(c, ppath([(-4, -16), (4, -16), (4, 18), (-4, 18)]))
+        if Pen.mode != "anchor":
+            c.drawCircle(0, 22, 7, ink())
+        anchor(c, "tip", 0, -232)
+        c.restore()
+    elif kind == "club":
+        c.save()
+        c.translate(hx, hy)
+        c.rotate(P.get("mace", 0.0))
+        fillp(c, spath([(-6, 70, 0), (6, 70, 0), (14, -60), (24, -140), (14, -176), (-8, -180), (-24, -146), (-14, -60)]))
+        for (kx, ky) in ((22, -120), (-22, -100), (16, -160), (-18, -150)):
+            fillp(c, ppath([(kx - 5, ky - 4), (kx + 9 * (1 if kx > 0 else -1), ky), (kx - 5, ky + 4)]))
+        c.restore()
     elif kind == "lasso":
         rr = P.get("loop", 46)
         ang = t * 7.5

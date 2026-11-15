@@ -1,0 +1,272 @@
+{
+ "episode": 3,
+ "part": 5,
+ "title_en": "Tahmineh",
+ "title_fa": "تهمینه",
+ "next_label": "NEXT PART",
+ "next_en": "The Proposal",
+ "next_fa": "خواستگاری",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "ROSTAM",
+     "en": "Who's there? Who comes to my door in the middle of the night?",
+     "fa": "کیست آنجا؟ چه کسی نیمه‌شب به در اتاق من آمده؟",
+     "pause": 0.5
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Forgive me, hero. I had to see you.",
+     "fa": "مرا ببخش، پهلوان. باید تو را می‌دیدم.",
+     "pause": 1.0
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Rostam, the greatest hero of Iran, had lost his horse, Rakhsh, near the border of Turan.",
+     "fa": "رستم، بزرگ‌ترین پهلوان ایران، اسبش رخش را نزدیک مرز توران گم کرده بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "He followed the tracks to the city of Samangan.",
+     "fa": "رد سم‌ها را تا شهر سمنگان دنبال کرد.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "There, the king invited him to stay the night in his palace.",
+     "fa": "آنجا شاه او را برای شب به کاخ خود دعوت کرد.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "At the feast, someone had listened to his stories more carefully than anyone else.",
+     "fa": "در جشن آن شب، کسی بود که از همه با دقت بیشتری به داستان‌هایش گوش داده بود.",
+     "pause": 0.7
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "A third of the night had passed. The whole palace was asleep.",
+     "fa": "یک سوم از شب گذشته بود. همه‌ی کاخ در خواب بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "But two shadows were moving softly toward the hero's room.",
+     "fa": "اما دو سایه آرام به سوی خوابگاه پهلوان می‌رفتند.",
+     "pause": 0.9
+    },
+    {
+     "role": "MAID",
+     "en": "This is his door, my lady. Are you sure?",
+     "fa": "این در اتاق اوست، بانوی من. مطمئنی؟",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "I have never been so sure of anything. Open it. Softly.",
+     "fa": "هرگز به چیزی این‌قدر مطمئن نبوده‌ام. بازش کن. آرام.",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "The door opened.",
+     "fa": "در باز شد.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "A maid came in with a scented candle, and walked slowly toward the sleeping hero.",
+     "fa": "ندیمه‌ای با شمعی خوشبو آمد و آهسته به سوی پهلوانِ خفته رفت.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Behind her came a young woman.",
+     "fa": "پشت سرش بانویی جوان آمد.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "She was as beautiful as the moon, and as tall as a cypress tree.",
+     "fa": "زیبا بود چون ماه، و بلندبالا چون سرو.",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "S04b",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Her eyebrows were like bows, and her long hair was like a lasso.",
+     "fa": "ابروانش چون کمان بود و گیسوانش چون کمند.",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Rostam woke, and could not believe his eyes. He praised the Creator of the world.",
+     "fa": "رستم بیدار شد و چشمانش را باور نکرد. جهان‌آفرین را ستایش کرد.",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "Who are you? What is your name?",
+     "fa": "تو کیستی؟ نامت چیست؟",
+     "pause": 0.3
+    },
+    {
+     "role": "ROSTAM",
+     "en": "And what are you looking for, here, in the dark of night?",
+     "fa": "و در این شب تیره اینجا چه می‌جویی؟",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "TAHMINEH",
+     "en": "I am Tahmineh, the only daughter of the king of Samangan.",
+     "fa": "من تهمینه‌ام، تنها دختر شاه سمنگان.",
+     "pause": 0.4
+    },
+    {
+     "role": "ROSTAM",
+     "en": "The king's daughter? Here, at this hour?",
+     "fa": "دختر شاه؟ اینجا، در این وقت شب؟",
+     "pause": 0.6
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "I come from a family of lions and leopards.",
+     "fa": "از نژاد شیران و پلنگانم.",
+     "pause": 0.3
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "In all the world, few women are as beautiful as me.",
+     "fa": "در همه‌ی جهان، کمتر زنی به زیبایی من است.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "No man has ever seen me outside these walls, and no stranger has ever heard my voice.",
+     "fa": "هیچ مردی مرا بیرون از پرده ندیده و هیچ غریبه‌ای صدایم را نشنیده است.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "TAHMINEH",
+     "en": "But I have heard so many stories about you, like old legends.",
+     "fa": "اما داستان‌های بسیاری از تو شنیده‌ام، همچون افسانه‌ها.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "They say you are not afraid of demons, or lions, or sea monsters.",
+     "fa": "می‌گویند از دیو و شیر و نهنگ نمی‌ترسی.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "They say you ride alone into Turan on dark nights, and you never sleep there.",
+     "fa": "می‌گویند شب‌های تیره تنها به توران می‌روی و آنجا هرگز نمی‌خوابی.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "And when the eagle sees your sword, it is too afraid to hunt.",
+     "fa": "و عقاب وقتی شمشیرت را ببیند، از ترس به شکار نمی‌رود.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "lines": [
+    {
+     "role": "TAHMINEH",
+     "en": "Every time I heard these stories, I bit my lip and wished that I could see you.",
+     "fa": "هر بار که این داستان‌ها را می‌شنیدم، لب به دندان می‌گزیدم و آرزو می‌کردم تو را ببینم.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "And now God has brought you here, to my father's city.",
+     "fa": "و اکنون خداوند تو را به اینجا، به شهر پدرم آورده است.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Rostam listened, and did not say a word.",
+     "fa": "رستم گوش می‌داد و چیزی نمی‌گفت.",
+     "pause": 0.7
+    }
+   ]
+  },
+  {
+   "id": "S09",
+   "lines": [
+    {
+     "role": "TAHMINEH",
+     "en": "I have come to you tonight for three reasons, Rostam.",
+     "fa": "امشب به سه دلیل نزد تو آمده‌ام، رستم.",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "Three reasons? Tell me.",
+     "fa": "سه دلیل؟ بگو.",
+     "pause": 0.8
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And one of those three reasons would change Rostam's life forever.",
+     "fa": "و یکی از آن سه دلیل، زندگی رستم را برای همیشه دگرگون کرد.",
+     "pause": 1.2
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}

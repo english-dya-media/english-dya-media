@@ -32,9 +32,10 @@ who don't follow the page, and new followers are the page's goal.
 | file | what it is |
 |---|---|
 | `anim.py` | engine: pen passes (mask → glow, rim, fill), `Cam` push-ins/parallax, `Talk` (jaw from loudness), `figures()`, anchors + `rope()`, `SHIFTS`, and episode 1's cold-open world |
-| `puppets.py` | `person()` (LOOKS: rostam, rostam_bare, rostam_robe, young_rostam, sohrab, tahmineh, maid, king, kavus, afrasiab, gordafarid, warrior_ir, warrior_tu, rider, guard, noble, herdsman, mobed, poet, musician; modes stand/walk/sit/kneel/lie/ride; props mace, oxmace, spear, staff, lamp, candle, cup, lasso, pen, saddle, quiver) and `horse()` (stand/walk/gallop/rear/graze, rider, saddle; kind "onager") |
+| `puppets.py` | `person()` (LOOKS: rostam, rostam_bare, rostam_robe, young_rostam, sohrab, tahmineh, maid, king, kavus, afrasiab, gordafarid, warrior_ir, warrior_tu, rider, guard, noble, herdsman, mobed, poet, musician, div; modes stand/walk/sit/kneel/lie/ride; props mace, oxmace, spear, staff, lamp, candle, cup, lasso, pen, saddle, quiver, sword, club) and `horse()` (stand/walk/gallop/rear/graze, rider, saddle; kind "onager") |
 | `sets.py` | skies, sun/moon/stars, ridges, clouds, storm, trees, reeds, water, tents, city skyline, fire, rain, birds, dust, arches, lattice, lamps |
 | `ep01_scenes.py` | every shot of parts 1–2: **read it before writing a new part** (how scenes, timing and layout are done) |
+| `p05_scenes.py` | parts 5–6 (`p06_scenes.py` only registers part 6) and sets to reuse: Rostam's bedchamber `room()` with an opening `door()`, `in_bed()` (sit up / lie back under a blanket), `corridor()`, `city_night()`, `moon_window()`, `king_room()`, `shadow_layer()` (stories cast on a lit curtain), `ghost_layer()` (a vision in the sky), `eagle()` |
 | `render.py` | compositor: `full` / `preview` / `still` (subtitles, verse cards, title/end cards, header, watermark, audio) |
 | `voices_ep.py` | script → `audio/episode.wav` + `audio/timeline.json` |
 | `plan_parts.py`, `parts.json` | captions and Metricool items; registry of parts (date, media, words, summary) |
