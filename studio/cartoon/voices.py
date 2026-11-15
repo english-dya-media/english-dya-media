@@ -14,6 +14,10 @@ try:
     from lines import SPEED          # optional per-line length factors {line id: factor}
 except ImportError:
     SPEED = {}
+try:
+    from lines import FX             # optional per-line ffmpeg audio filters {line id: "vibrato=f=6:d=0.3"}
+except ImportError:
+    FX = {}
 
 MODEL = os.path.join(PIPER, "en-us-libritts-high.onnx")
 
@@ -45,6 +49,8 @@ def main(which, only=None):
             af.append(f"asetrate={sr}*{f:.5f},aresample={sr},atempo={1 / f:.5f}")
         if spk.endswith("_W"):
             af.append("lowpass=f=3800")
+        if lid in FX:
+            af.append(FX[lid])
         af += [f"volume={vol}", "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05",
                "areverse", "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08", "areverse", "aresample=48000"]
         out = os.path.join(VOICES_DIR, f"{lid}.wav")

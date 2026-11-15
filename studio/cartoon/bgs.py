@@ -823,3 +823,407 @@ def night_sky_wall():
         x = r.uniform(0, 1080); y = r.uniform(1120, 1240)
         s += f'<circle cx="{x:.0f}" cy="{y:.0f}" r="2.2" fill="#ffd080"/><circle cx="{x:.0f}" cy="{y:.0f}" r="10" fill="#ff9a40" opacity="0.2" filter="url(#b6)"/>'
     return svg_render(s)
+
+# ------------------------------------------------------------------ PART 5 (Babak, episode 3): Afshin's tent, the forts, the camp at Barzand, the watch fires,
+# the war room at Bazz, the silver road, the woods at night, the ravine
+def pine(x, y, h, col="#2e4a32", dark="#1e3424", trunk="#3a2618"):
+    """a layered pine, base of the trunk at (x, y)"""
+    out = f'<rect x="{x - h * 0.03:.0f}" y="{y - h * 0.18:.0f}" width="{h * 0.06:.0f}" height="{h * 0.18:.0f}" fill="{trunk}"/>'
+    for k in range(4):
+        top = y - h + k * h * 0.2; bot = y - h * 0.12 - (3 - k) * h * 0.13; w = h * (0.16 + 0.07 * k)
+        out += (f'<path d="M {x:.0f} {top:.0f} L {x + w:.0f} {bot:.0f} C {x + w * 0.4:.0f} {bot - h * 0.03:.0f}, {x - w * 0.4:.0f} {bot - h * 0.03:.0f}, {x - w:.0f} {bot:.0f} Z" fill="{col}"/>'
+                f'<path d="M {x:.0f} {top:.0f} L {x - w:.0f} {bot:.0f} C {x - w * 0.5:.0f} {bot - h * 0.02:.0f}, {x - w * 0.2:.0f} {bot - h * 0.03:.0f}, {x:.0f} {bot - h * 0.04:.0f} Z" fill="{dark}" opacity="0.8"/>')
+    return out
+
+def oak(x, y, h, seed=0, col="#3e5a2e", dark="#2a4020", hi="#5a7a3a", trunk="#3a2618"):
+    """a round leafy tree, base of the trunk at (x, y)"""
+    r = random.Random(seed)
+    out = f'<path d="M {x - h * 0.05:.0f} {y:.0f} L {x - h * 0.03:.0f} {y - h * 0.5:.0f} L {x + h * 0.03:.0f} {y - h * 0.5:.0f} L {x + h * 0.05:.0f} {y:.0f} Z" fill="{trunk}"/>'
+    for k in range(9):
+        cx = x + r.uniform(-0.28, 0.28) * h; cy = y - h * 0.62 + r.uniform(-0.25, 0.18) * h; rr = h * r.uniform(0.16, 0.24)
+        out += f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{rr:.0f}" fill="{col}"/>'
+    for k in range(4):
+        cx = x + r.uniform(-0.25, 0.25) * h; cy = y - h * 0.52 + r.uniform(-0.1, 0.12) * h; rr = h * r.uniform(0.12, 0.18)
+        out += f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{rr:.0f}" fill="{dark}" opacity="0.7"/>'
+    for k in range(3):
+        cx = x + r.uniform(-0.1, 0.28) * h; cy = y - h * 0.78 + r.uniform(-0.08, 0.08) * h; rr = h * r.uniform(0.08, 0.12)
+        out += f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{rr:.0f}" fill="{hi}" opacity="0.6"/>'
+    return out
+
+def oil_lamp(x, y, chain=300):
+    """a hanging brass oil lamp (flame at about (x, y - 14)) with its glow"""
+    return (f'<path d="M {x} {y - chain} L {x} {y - 30}" stroke="#6a5030" stroke-width="3"/>'
+            f'<circle cx="{x}" cy="{y - 10}" r="110" fill="#ffb060" opacity="0.30" filter="url(#b20)"/>'
+            f'<path d="M {x - 34} {y - 4} C {x - 30} {y + 22}, {x + 30} {y + 22}, {x + 34} {y - 4} Z" fill="#b9832f" stroke="#2a1608" stroke-width="3"/>'
+            f'<path d="M {x - 34} {y - 4} L {x + 34} {y - 4} L {x + 22} {y - 26} L {x - 22} {y - 26} Z" fill="#8a5a22" stroke="#2a1608" stroke-width="3"/>'
+            f'<path d="M {x} {y - 40} C {x - 8} {y - 30}, {x - 6} {y - 24}, {x} {y - 22} C {x + 6} {y - 24}, {x + 8} {y - 30}, {x} {y - 40} Z" fill="#fff0b0"/>')
+
+def command_tent():
+    """Afshin's command tent at night: canvas, two hanging oil lamps (x 250 and 840, flame y ≈ 610), spears on a rack (left),
+    a black banner (right), a carpet; people stand at feet y 1380-1650"""
+    s = ("<defs>" + FILTERS + lg("cv", [(0, "#3a2e22", 1), (0.6, "#4a3a2a", 1), (1, "#2a2018", 1)]) +
+         rg("l1", 250, 640, 700, [(0, "#ffb060", 0.42), (0.5, "#8a4a20", 0.12), (1, "#000", 0)]) +
+         rg("l2", 840, 620, 700, [(0, "#ffb060", 0.42), (0.5, "#8a4a20", 0.12), (1, "#000", 0)]) +
+         lg("cp", [(0, "#4a1410", 1), (1, "#2a0a08", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#cv)"/>'
+    for k in range(10):
+        x = -40 + k * 125
+        s += f'<path d="M {x} 0 C {x + 16} 500, {x - 8} 1000, {x + 8} 1330" stroke="#140e08" stroke-width="5" fill="none" opacity="0.5"/>'
+        s += f'<path d="M {x + 50} 0 C {x + 66} 500, {x + 42} 1000, {x + 58} 1330" stroke="#7a6248" stroke-width="3" fill="none" opacity="0.2"/>'
+    s += '<path d="M 0 0 L 1080 0 L 1080 190 C 700 290, 380 290, 0 190 Z" fill="#140e08" opacity="0.8"/>'
+    s += '<path d="M 0 250 C 380 330, 700 330, 1080 250" stroke="#8a6a3a" stroke-width="6" fill="none" opacity="0.5"/>'
+    # spear rack (left)
+    for k in range(4):
+        x = 70 + k * 34
+        s += f'<path d="M {x} 1330 L {x + 14} 640" stroke="#3a2414" stroke-width="9"/><path d="M {x + 14} 600 l 10 44 l -20 0 Z" fill="#a8aebb" stroke="#1b0f0a" stroke-width="2"/>'
+    s += '<rect x="40" y="1080" width="170" height="16" fill="#3a2414"/><rect x="40" y="1300" width="170" height="20" fill="#3a2414"/>'
+    # black banner on a stand (right)
+    s += ('<rect x="960" y="520" width="12" height="810" fill="#2a1a10"/><circle cx="966" cy="512" r="12" fill="#c9a24a" stroke="#1b0f0a" stroke-width="2"/>'
+          '<path d="M 972 540 L 1080 552 L 1080 820 L 972 800 Z" fill="#101014" stroke="#000" stroke-width="2"/>'
+          '<path d="M 972 570 L 1080 580" stroke="#c9a24a" stroke-width="5" opacity="0.7"/>')
+    # a low chest with a scroll (back right)
+    s += ('<rect x="700" y="1210" width="200" height="110" rx="8" fill="#4a2a14" stroke="#140a04" stroke-width="4"/>'
+          '<path d="M 700 1250 L 900 1250" stroke="#c9a24a" stroke-width="6"/>'
+          '<rect x="740" y="1186" width="110" height="26" rx="12" fill="#e2d2a8" stroke="#3a2a14" stroke-width="3"/>')
+    s += '<rect x="0" y="1320" width="1080" height="600" fill="#24180e"/><path d="M 0 1320 L 1080 1320" stroke="#3a2a1a" stroke-width="6"/>'
+    s += ('<path d="M 160 1400 L 920 1400 L 1060 1900 L 20 1900 Z" fill="url(#cp)" stroke="#140404" stroke-width="4"/>'
+          '<path d="M 200 1430 L 880 1430 L 1000 1860 L 80 1860 Z" fill="none" stroke="#b9832f" stroke-width="8" opacity="0.8"/>'
+          '<path d="M 330 1540 L 750 1540 L 800 1740 L 280 1740 Z" fill="none" stroke="#b9832f" stroke-width="5" opacity="0.5"/>')
+    s += oil_lamp(250, 640, 640) + oil_lamp(840, 620, 620)
+    s += f'<rect width="{W}" height="{H}" fill="url(#l1)"/><rect width="{W}" height="{H}" fill="url(#l2)"/>'
+    return svg_render(s)
+
+def fort_road():
+    """835: a ruined stone fort on the road between Zanjan and Ardabil, clear morning; the wall's broken top (x 470-820, y ≈ 1000)
+    is rebuilt in the scene; workers walk at feet y 1380-1600"""
+    s = ("<defs>" + FILTERS + lg("sky", [(0, "#3f72b4", 1), (0.38, "#9cc2de", 1), (0.55, "#f0dcb6", 1)]) +
+         lg("gr", [(0, "#b08c60", 1), (1, "#76583a", 1)]) + lg("st", [(0, "#a88a68", 1), (1, "#7a604a", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>' + clouds(W, 141, [300, 410, 520], "#ffffff", "#fff8e8", 0.6)
+    s += f'<path d="{ridge(W, 880, 300, 142, rough=0.55)}" fill="#8e98b8"/><path d="{ridge(W, 1000, 170, 143, rough=0.45)}" fill="#a0866a"/>'
+    s += f'<rect x="0" y="820" width="{W}" height="260" fill="#f0e0c0" opacity="0.3" filter="url(#b40)"/>'
+    s += f'<path d="M -40 1180 C 300 1150, 800 1150, 1120 1175 L 1120 2000 L -40 2000 Z" fill="url(#gr)"/>'
+    # the road
+    s += '<path d="M 1120 1240 C 800 1260, 500 1300, 380 1400 C 260 1500, 220 1700, 200 1920 L 520 1920 C 520 1700, 560 1520, 660 1430 C 780 1330, 960 1290, 1120 1280 Z" fill="#c8a87a" opacity="0.7"/>'
+    # the fort: a broken tower and a wall
+    s += ('<path d="M 120 1250 L 120 760 L 150 740 L 180 760 L 210 730 L 250 770 L 290 745 L 330 780 L 330 1250 Z" fill="url(#st)" stroke="#2a1a10" stroke-width="4"/>'
+          '<path d="M 120 760 L 330 780 L 330 1250 L 290 1250 L 290 800 Z" fill="#5a4432" opacity="0.4"/>'
+          '<rect x="200" y="880" width="40" height="70" fill="#2a1a10"/>'
+          '<path d="M 330 1250 L 330 900 L 470 900 L 470 1000 L 520 1010 L 560 1060 L 620 1040 L 680 1090 L 740 1050 L 820 1080 L 820 980 L 960 980 L 960 1250 Z" '
+          'fill="url(#st)" stroke="#2a1a10" stroke-width="4"/>')
+    r = random.Random(144)
+    for k in range(80):                       # stone courses
+        x = r.uniform(130, 950); y = r.uniform(780, 1240)
+        if 470 < x < 820 and y < 1090:
+            continue
+        s += f'<rect x="{x:.0f}" y="{y:.0f}" width="{r.uniform(40, 80):.0f}" height="{r.uniform(22, 34):.0f}" rx="4" fill="#5a4432" opacity="0.25"/>'
+    s += "".join(f'<rect x="{x}" y="870" width="26" height="30" fill="#9a7c5c" stroke="#2a1a10" stroke-width="3"/>' for x in (340, 390, 440, 830, 880, 930))
+    for i, (x, y, rr) in enumerate([(560, 1280, 34), (610, 1300, 26), (520, 1310, 30), (900, 1300, 40), (950, 1320, 28), (380, 1300, 30)]):
+        s += boulder(x, y, rr, 150 + i, "#9a7c5c", "#5a4432", "#c8aa86")
+    s += ('<path d="M 840 1250 L 840 900 M 900 1250 L 900 900 M 830 960 L 910 960 M 830 1060 L 910 1060 M 830 1160 L 910 1160" stroke="#5a3a1c" stroke-width="9"/>')
+    s += grass_tufts(145, 1200, 1900, 26, "#7a6a3a", "#a89a5a")
+    return svg_render(s)
+
+def army_camp():
+    """835: Afshin's great camp at Barzand: rows of dark tents to the mountains, black banners, smoke (people at feet y 1400-1700)"""
+    s = ("<defs>" + FILTERS + lg("sky", [(0, "#5a7aa8", 1), (0.4, "#b4c4d4", 1), (0.56, "#ecdcc0", 1)]) + lg("gr", [(0, "#a8885e", 1), (1, "#6e5236", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>' + clouds(W, 151, [320, 430], "#ffffff", "#fff4e4", 0.5)
+    s += f'<path d="{ridge(W, 900, 320, 152, rough=0.55)}" fill="#9aa2bc"/><path d="{ridge(W, 980, 160, 153, rough=0.4)}" fill="#8a8a8e"/>'
+    s += f'<path d="M -40 1000 C 300 985, 800 985, 1120 995 L 1120 2000 L -40 2000 Z" fill="url(#gr)"/>'
+    s += f'<rect x="0" y="930" width="{W}" height="180" fill="#e8dcc8" opacity="0.4" filter="url(#b20)"/>'
+    r = random.Random(154)
+    rows = [(1015, 0.22, 26), (1050, 0.3, 20), (1100, 0.42, 14), (1170, 0.6, 10), (1270, 0.85, 7)]
+    for y, sc, n in rows:
+        xs = sorted(r.uniform(-60, 1140) for _ in range(n))
+        for x in xs:
+            w = 180 * sc * r.uniform(0.85, 1.15); h = 130 * sc * r.uniform(0.9, 1.1)
+            col = r.choice(["#2a2a30", "#34343a", "#3e3a36", "#4a3e30", "#26262c"])
+            s += (f'<path d="M {x - w / 2:.0f} {y:.0f} L {x:.0f} {y - h:.0f} L {x + w / 2:.0f} {y:.0f} Z" fill="{col}" stroke="#141418" stroke-width="{max(1.5, 4 * sc):.1f}"/>'
+                  f'<path d="M {x:.0f} {y - h:.0f} L {x - w * 0.08:.0f} {y:.0f} L {x + w * 0.08:.0f} {y:.0f} Z" fill="#0a0a0c" opacity="0.7"/>'
+                  f'<path d="M {x:.0f} {y - h:.0f} L {x + w / 2:.0f} {y:.0f} L {x + w * 0.2:.0f} {y:.0f} Z" fill="#000" opacity="0.2"/>')
+            if r.random() < 0.18:
+                s += (f'<rect x="{x - 2 * sc:.0f}" y="{y - h - 160 * sc:.0f}" width="{max(2, 6 * sc):.0f}" height="{160 * sc:.0f}" fill="#2a1a10"/>'
+                      f'<path d="M {x + 3 * sc:.0f} {y - h - 156 * sc:.0f} l {70 * sc:.0f} {8 * sc:.0f} l {-6 * sc:.0f} {36 * sc:.0f} l {6 * sc:.0f} {36 * sc:.0f} l {-70 * sc:.0f} {-8 * sc:.0f} Z" fill="#101014"/>')
+    for k in range(70):
+        x = r.uniform(-20, 1100); y = r.uniform(1300, 1900); sc = 0.4 + (y - 1300) / 600
+        s += f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{r.uniform(6, 16) * sc:.0f}" ry="{r.uniform(4, 8) * sc:.0f}" fill="#5a4430" opacity="0.55"/>'
+    s += grass_tufts(155, 1300, 1900, 18, "#7a6a3a", "#a89a5a")
+    return svg_render(s)
+
+def ridges_dusk():
+    """watch fires along the ridges at dusk: layered dark ridges against an orange-violet sky; fire points in RIDGE_FIRES"""
+    s = ("<defs>" + FILTERS + lg("sky", [(0, "#141a3a", 1), (0.3, "#3a2e5a", 1), (0.48, "#a84e4a", 1), (0.58, "#f09a5a", 1), (0.66, "#ffd08a", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>' + stars(161, 90, 600)
+    s += clouds(W, 162, [700, 800, 880], "#e07a6a", "#ffb08a", 0.5)
+    layers = [(1080, 200, 163, "#4a3a5a"), (1200, 240, 164, "#33283e"), (1380, 260, 165, "#211a28"), (1600, 240, 166, "#120e16")]
+    for base, amp, seed, col in layers:
+        s += f'<path d="{ridge(W, base, amp, seed, rough=0.5)}" fill="{col}"/>'
+    s += f'<rect x="0" y="960" width="{W}" height="200" fill="#ffb080" opacity="0.18" filter="url(#b40)"/>'
+    for x, y, a in RIDGE_FIRES:
+        s += f'<circle cx="{x}" cy="{y}" r="{26 * a:.0f}" fill="#ff9a40" opacity="0.35" filter="url(#b12)"/><circle cx="{x}" cy="{y}" r="{4 * a:.1f}" fill="#ffe0a0"/>'
+    return svg_render(s)
+
+def _ridge_y(base, amp, seed, x, n=40, rough=0.5):
+    r = random.Random(seed); ys = []; y = 0
+    for i in range(n + 1):
+        y = y * 0.6 + r.uniform(-1, 1); ys.append(y)
+    i = max(0, min(n - 1, int(x / W * n))); f = x / W * n - i
+    yy = lambda i: base - amp * (0.5 + 0.5 * math.sin(i * 0.37 + seed)) - amp * rough * ys[i]
+    return yy(i) * (1 - f) + yy(i + 1) * f
+
+RIDGE_FIRES = [(x, round(_ridge_y(b, a, sd, x)) + 6, s) for (b, a, sd, s) in [(1200, 240, 164, 1.0), (1380, 260, 165, 1.5)] for x in (90, 300, 520, 740, 960)]
+
+def war_room():
+    """Bazz at night: stone walls, a hanging lamp (x 540, flame y ≈ 520), a red banner, a window with the moon; the table is drawn in the scene"""
+    s = ("<defs>" + FILTERS + lg("wall", [(0, "#2a1c14", 1), (1, "#4a3222", 1)]) +
+         rg("lamp", 540, 560, 900, [(0, "#ffb060", 0.5), (0.5, "#a05a28", 0.16), (1, "#000", 0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#wall)"/>'
+    r = random.Random(171)
+    for row in range(30):
+        y = 120 + row * 44; off = 0 if row % 2 else 50
+        for k in range(-1, 12):
+            x = off + k * 100 + r.uniform(-6, 6)
+            s += f'<rect x="{x:.0f}" y="{y}" width="{r.uniform(84, 96):.0f}" height="38" rx="6" fill="#1a100a" opacity="{r.uniform(0.18, 0.35):.2f}"/>'
+    s += ('<path d="M 820 400 L 820 760 L 960 760 L 960 400 Q 890 320, 820 400 Z" fill="#0e1430" stroke="#140a06" stroke-width="12"/>'
+          '<circle cx="905" cy="470" r="26" fill="#f4f0e0"/><circle cx="905" cy="470" r="70" fill="#c8d0ff" opacity="0.15" filter="url(#b20)"/>'
+          '<path d="M 890 400 L 890 760" stroke="#140a06" stroke-width="8"/>')
+    s += ('<rect x="110" y="300" width="10" height="560" fill="#2a1a10"/><path d="M 120 310 L 330 330 L 320 620 L 230 580 L 130 620 Z" fill="#9a1418" stroke="#2a0606" stroke-width="3"/>'
+          '<path d="M 120 340 L 328 358" stroke="#e0b25a" stroke-width="6" opacity="0.8"/>')
+    s += '<rect x="0" y="1180" width="1080" height="740" fill="#1e140e"/><path d="M 0 1180 L 1080 1180" stroke="#3a2a1a" stroke-width="6"/>'
+    s += oil_lamp(540, 520, 520)
+    s += f'<rect width="{W}" height="{H}" fill="url(#lamp)"/>'
+    return svg_render(s)
+
+def table_map():
+    """top-down: an old wooden table with a map scratched into it (mountains, a river, Bazz in the middle at (540, 980))"""
+    s = "<defs>" + FILTERS + rg("lt", 520, 900, 1100, [(0, "#a06a3a", 1), (0.6, "#6a4222", 1), (1, "#2e1a0c", 1)]) + "</defs>"
+    s += f'<rect width="{W}" height="{H}" fill="url(#lt)"/>'
+    r = random.Random(181)
+    for k in range(11):
+        y = k * 180 + r.uniform(-10, 10)
+        s += f'<path d="M 0 {y:.0f} L 1080 {y + r.uniform(-8, 8):.0f}" stroke="#1e1006" stroke-width="7" opacity="0.7"/>'
+        for j in range(6):
+            yy = y + r.uniform(20, 160); x0 = r.uniform(-100, 900)
+            s += f'<path d="M {x0:.0f} {yy:.0f} q {r.uniform(100, 200):.0f} {r.uniform(-8, 8):.0f} {r.uniform(250, 420):.0f} {r.uniform(-6, 6):.0f}" stroke="#3a2010" stroke-width="2.5" fill="none" opacity="0.45"/>'
+    for x, y, sz in [(260, 700, 70), (380, 620, 60), (760, 680, 80), (860, 820, 60), (250, 1250, 70), (800, 1300, 75), (420, 1420, 55), (680, 1460, 60), (180, 980, 55), (900, 1060, 60)]:
+        s += f'<path d="M {x - sz} {y + sz * 0.5:.0f} L {x} {y - sz * 0.6:.0f} L {x + sz} {y + sz * 0.5:.0f}" stroke="#e8c898" stroke-width="5" fill="none" opacity="0.75" stroke-linejoin="round"/>'
+    s += '<path d="M 60 560 C 200 700, 300 760, 330 900 C 360 1040, 300 1200, 420 1320 C 520 1420, 700 1500, 1020 1560" stroke="#e8c898" stroke-width="4" fill="none" stroke-dasharray="14 10" opacity="0.6"/>'
+    s += '<path d="M 500 1000 L 500 940 L 520 940 L 520 955 L 540 955 L 540 940 L 560 940 L 560 955 L 580 955 L 580 940 L 600 940 L 600 1000 Z" fill="none" stroke="#f0d0a0" stroke-width="5" opacity="0.85" transform="translate(-10,0)"/>'
+    return svg_render(s)
+
+FOREST = {"day": dict(sky=[(0, "#4a7cb8", 1), (0.4, "#a8c8de", 1), (0.55, "#eedcb8", 1)], far="#8e9ab8", mid="#6a7a5a", slope="#7a6a48", slope_d="#5a4a32",
+                      road="#c4a478", road_d="#9a7e58", tree="#3e5a2e", tree_d="#2a4020", hi="#5a7a3a", pine="#2e4a32", pine_d="#1e3424", haze="#f0e4c8"),
+          "night": dict(sky=[(0, "#04060e", 1), (0.45, "#101a34", 1), (0.6, "#1c2444", 1)], far="#1e2440", mid="#151c2a", slope="#1c1e26", slope_d="#121418",
+                        road="#4a4e5e", road_d="#30323e", tree="#14201a", tree_d="#0c1410", hi="#24342a", pine="#101a16", pine_d="#0a100c", haze="#4a5a8a")}
+
+def forest_road(pal="day"):
+    """a road along a wooded mountainside (road band at feet y 1300-1420); trees above and below; night: moon and stars"""
+    P = FOREST[pal]
+    s = "<defs>" + FILTERS + lg("sky", P["sky"]) + lg("sl", [(0, P["slope"], 1), (1, P["slope_d"], 1)]) + "</defs>"
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>'
+    if pal == "night":
+        s += stars(191, 220, 900) + '<circle cx="820" cy="380" r="44" fill="#f4f0e0"/><circle cx="820" cy="380" r="150" fill="#c8d0ff" opacity="0.12" filter="url(#b40)"/>'
+    else:
+        s += clouds(W, 192, [330, 440], "#ffffff", "#fff8e8", 0.6)
+    s += f'<path d="{ridge(W, 900, 300, 193, rough=0.5)}" fill="{P["far"]}"/>'
+    s += f'<rect x="0" y="820" width="{W}" height="220" fill="{P["haze"]}" opacity="0.25" filter="url(#b40)"/>'
+    s += f'<path d="M -40 2000 L -40 1020 C 200 960, 500 1000, 700 950 C 860 915, 1000 950, 1120 930 L 1120 2000 Z" fill="{P["mid"]}"/>'
+    r = random.Random(194)
+    for k in range(16):           # far pines along the upper slope
+        x = r.uniform(-20, 1100); y = 1000 - 40 * math.sin(x / 300) + r.uniform(0, 140)
+        s += pine(x, y, r.uniform(110, 170), P["pine"], P["pine_d"])
+    s += f'<path d="M -40 2000 L -40 1260 C 300 1240, 800 1250, 1120 1235 L 1120 2000 Z" fill="url(#sl)"/>'
+    s += f'<path d="M -40 1290 C 300 1270, 800 1280, 1120 1265 L 1120 1440 C 800 1450, 300 1445, -40 1460 Z" fill="{P["road"]}"/>'
+    s += f'<path d="M -40 1290 C 300 1270, 800 1280, 1120 1265" stroke="{P["road_d"]}" stroke-width="8" fill="none" opacity="0.6"/>'
+    s += f'<path d="M -40 1380 C 300 1370, 800 1378, 1120 1360" stroke="{P["road_d"]}" stroke-width="5" fill="none" opacity="0.35"/>'
+    for k in range(40):
+        x = r.uniform(-20, 1100); y = r.uniform(1290, 1450)
+        s += f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{r.uniform(5, 12):.0f}" ry="{r.uniform(3, 6):.0f}" fill="{P["road_d"]}" opacity="0.6"/>'
+    for i, (x, y, rr) in enumerate([(60, 1250, 40), (1020, 1240, 50), (980, 1500, 60), (90, 1520, 70)]):
+        s += boulder(x, y, rr, 195 + i, P["slope"], P["slope_d"], P["road"] if pal == "day" else "#5a6070")
+    for i, (x, h) in enumerate([(-30, 560), (1110, 600), (980, 470), (120, 430)]):    # big trees in front of the lower slope (edges)
+        s += oak(x, 1700 + 40 * (i % 2), h, 196 + i, P["tree"], P["tree_d"], P["hi"])
+    s += grass_tufts(197, 1460, 1900, 22, P["tree_d"], P["hi"])
+    return svg_render(s)
+
+def leaves_fg(pal="day"):
+    """foreground foliage framing the frame (scouts watching from the trees): a trunk at the left, leaves at the top,
+    the right edge and a thick bush across the bottom (from y ≈ 1180)"""
+    P = FOREST[pal]
+    r = random.Random(201)
+    s = "<defs>" + FILTERS + "</defs>"
+    s += '<path d="M -40 2000 L -40 -40 L 120 -40 C 130 600, 150 1300, 190 2000 Z" fill="#2a1a10"/><path d="M 120 -40 C 130 600, 150 1300, 190 2000" stroke="#4a3220" stroke-width="10" fill="none"/>'
+    def leaf(x, y, a, L, col):
+        return (f'<g transform="translate({x:.0f},{y:.0f}) rotate({a:.0f})"><path d="M {-L / 2:.0f} 0 C {-L / 4:.0f} {-L * 0.32:.0f}, {L / 4:.0f} {-L * 0.32:.0f}, {L / 2:.0f} 0 '
+                f'C {L / 4:.0f} {L * 0.32:.0f}, {-L / 4:.0f} {L * 0.32:.0f}, {-L / 2:.0f} 0 Z" fill="{col}" stroke="#0e160a" stroke-width="3"/>'
+                f'<path d="M {-L / 2:.0f} 0 L {L / 2:.0f} 0" stroke="#0e160a" stroke-width="2" opacity="0.5"/></g>')
+    clusters = [(80, 120, 26, 200, 130), (520, 20, 22, 380, 90), (1000, 160, 22, 150, 160), (1050, 700, 12, 90, 160)]
+    for cx, cy, n, rx, ry in clusters:
+        for k in range(n):
+            s += leaf(cx + r.uniform(-1, 1) * rx, cy + r.uniform(-1, 1) * ry, r.uniform(0, 180), r.uniform(120, 200), r.choice([P["tree"], P["tree_d"], P["hi"]]))
+    bush = "M -40 2000 L -40 1260 " + " ".join(f"Q {x - 45:.0f} {1170 + r.uniform(-40, 30):.0f} {x:.0f} {1230 + r.uniform(-30, 30):.0f}" for x in range(60, 1200, 90)) + " L 1120 2000 Z"
+    s += f'<path d="{bush}" fill="{P["tree_d"]}"/>'
+    for k in range(70):
+        x = r.uniform(-40, 1120); y = r.uniform(1170, 1950)
+        s += leaf(x, y, r.uniform(0, 180), r.uniform(130, 210), r.choice([P["tree"], P["tree_d"], P["hi"], P["tree"]]))
+    return svg_render(s).filter(ImageFilter.GaussianBlur(1.5))
+
+def woods_night():
+    """a camp in the woods at night: stars, a thin moon, trunks and dark canopy; ground at y 1300+ (the fire is drawn in the scene)"""
+    s = ("<defs>" + FILTERS + lg("sky", [(0, "#04060e", 1), (0.5, "#0e1630", 1), (0.7, "#18203a", 1)]) +
+         rg("fire", 540, 1400, 760, [(0, "#ff9a40", 0.32), (0.5, "#a04a20", 0.12), (1, "#000", 0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>' + stars(211, 200, 1000)
+    s += '<path d="M 300 300 C 270 330, 270 380, 300 410 C 280 380, 282 330, 300 300 Z" fill="#f0ecd8"/>'
+    s += f'<path d="{ridge(W, 1150, 160, 212)}" fill="#141a2c"/>'
+    r = random.Random(213)
+    for k in range(12):
+        x = r.uniform(-40, 1120); y = r.uniform(1240, 1320)
+        s += pine(x, y, r.uniform(380, 620), "#0c1410", "#080c0a", "#140c08")
+    s += '<rect x="0" y="1300" width="1080" height="620" fill="#16100c"/>'
+    for i, (x, y, rr) in enumerate([(120, 1330, 60), (960, 1320, 70), (300, 1310, 40)]):
+        s += boulder(x, y, rr, 214 + i, "#2a2a30", "#16161a", "#4a4440")
+    s += f'<rect width="{W}" height="{H}" fill="url(#fire)"/>'
+    return svg_render(s)
+
+RAVINE = {"night": dict(sky=[(0, "#060a18", 1), (1, "#1a2448", 1)], wall="#2a2c3a", wall_d="#16161e", wall_l="#5a6488", floor="#24242c", floor_d="#141418", lit=0.0),
+          "dawn": dict(sky=[(0, "#6a7ab0", 1), (0.6, "#e8a890", 1), (1, "#ffd8a8", 1)], wall="#7a5a48", wall_d="#3e2c26", wall_l="#f0a878", floor="#6a5446", floor_d="#3e3028", lit=1.0)}
+
+def ravine(pal="night"):
+    """a narrow ravine: steep walls left and right, a strip of sky, a stony floor (people at feet y 1400-1700)"""
+    P = RAVINE[pal]
+    s = ("<defs>" + FILTERS + lg("sky", P["sky"]) + lg("fl", [(0, P["floor"], 1), (1, P["floor_d"], 1)]) +
+         lg("wl", [(0, P["wall_l"], 1), (0.25, P["wall"], 1), (1, P["wall_d"], 1)]) + lg("wr", [(0, P["wall"], 1), (1, P["wall_d"], 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>'
+    if pal == "night":
+        s += stars(221, 60, 700)
+    s += f'<path d="M 300 2000 L 300 900 L 380 700 L 470 760 L 560 620 L 650 720 L 760 660 L 780 2000 Z" fill="{P["wall_d"]}" opacity="0.9"/>'
+    s += f'<path d="M -40 2000 L -40 -40 L 260 -40 L 300 300 L 250 600 L 330 900 L 290 1200 L 380 1420 L 330 2000 Z" fill="url(#wl)"/>'
+    s += f'<path d="M 1120 2000 L 1120 -40 L 820 -40 L 780 260 L 850 560 L 760 880 L 820 1150 L 700 1420 L 760 2000 Z" fill="url(#wr)"/>'
+    s += f'<path d="M 260 -40 L 300 300 L 250 600 L 330 900 L 290 1200 L 380 1420" stroke="{P["wall_l"]}" stroke-width="10" fill="none" opacity="{0.4 + 0.4 * P["lit"]:.2f}" stroke-linejoin="round"/>'
+    s += _strata(222, -40, 300, 0, 1900, 30, "#000", 0.25, 5, slope=0.1) + _strata(223, 780, 1120, 0, 1900, 30, "#000", 0.25, 5, slope=-0.1)
+    s += _cracks(224, 0, 260, 0, 1700, 10, "#000", 0.35) + _cracks(225, 820, 1080, 0, 1700, 10, "#000", 0.35)
+    s += f'<path d="M -40 1440 C 200 1400, 500 1380, 700 1400 C 900 1420, 1000 1430, 1120 1450 L 1120 2000 L -40 2000 Z" fill="url(#fl)"/>'
+    for i, (x, y, rr) in enumerate([(130, 1460, 80), (930, 1470, 90), (560, 1420, 30), (420, 1440, 24), (700, 1880, 120), (260, 1860, 100)]):
+        s += boulder(x, y, rr, 226 + i, P["wall"], P["wall_d"], P["wall_l"])
+    if pal == "dawn":
+        s += '<path d="M 560 620 L 650 720 L 760 660 L 780 900 L 300 900 L 380 700 L 470 760 Z" fill="#ffd0a0" opacity="0.25" filter="url(#b20)"/>'
+    return svg_render(s)
+
+def ravine_up():
+    """looking up from the ravine at dawn: the rim (y ≈ 700-760) against the morning sky; walls rise on both sides"""
+    s = ("<defs>" + FILTERS + lg("sky", [(0, "#3a5a9a", 1), (0.25, "#9aa8d0", 1), (0.38, "#f4b8a0", 1), (0.46, "#ffe0b0", 1)]) +
+         lg("wall", [(0, "#c88a64", 1), (0.3, "#8a5a40", 1), (1, "#2e1e18", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>' + clouds(W, 231, [260, 360, 470], "#ffd0c0", "#fff0e0", 0.55)
+    rim = [(-40, 760), (80, 730), (200, 750), (330, 712), (460, 730), (600, 706), (740, 726), (880, 702), (1000, 730), (1120, 715)]
+    s += '<path d="M -40 2000 L ' + " L ".join(f"{x} {y}" for x, y in rim) + ' L 1120 2000 Z" fill="url(#wall)"/>'
+    s += '<path d="M ' + " L ".join(f"{x} {y}" for x, y in rim) + '" stroke="#ffd8a8" stroke-width="8" fill="none" opacity="0.8"/>'
+    r = random.Random(232)
+    for _ in range(40):
+        y = r.uniform(760, 1900); x = r.uniform(-40, 1080); L = r.uniform(80, 240)
+        s += f'<path d="M {x:.0f} {y:.0f} q {L / 2:.0f} {-(y - 700) * 0.02:.0f} {L:.0f} {-(y - 700) * 0.05:.0f}" stroke="#3a2418" stroke-width="{3 + (y - 700) / 300:.1f}" fill="none" opacity="0.35"/>'
+    s += _cracks(233, 0, 1080, 780, 1800, 16, "#2a160c", 0.4)
+    s += '<path d="M -40 2000 L -40 -40 L 100 -40 L 140 400 L 80 800 L 150 1200 L 70 1600 L 110 2000 Z" fill="#2a1a12"/>'
+    s += '<path d="M 1120 2000 L 1120 -40 L 990 -40 L 960 300 L 1020 700 L 950 1100 L 1030 1500 L 990 2000 Z" fill="#33201a"/>'
+    s += f'<rect x="0" y="1200" width="{W}" height="720" fill="#000" opacity="0.25"/>'
+    return svg_render(s)
+
+# ------------------------------------------------------------------ PART 6 (Babak, episode 3): the side gate, the walls of Bazz, the forest stream, the field, Sahl's gate
+def side_gate_night():
+    """Bazz at night: a high stone wall with a small side gate (arch x 330-520, sill y 1360), a torch, the moon (rider leaves at feet y 1400-1600)"""
+    s = ("<defs>" + FILTERS + lg("sky", [(0, "#04060f", 1), (0.5, "#111a36", 1), (0.7, "#1c2442", 1)]) + lg("wl", [(0, "#2e2a30", 1), (1, "#1a171c", 1)]) +
+         rg("tq", 600, 1120, 420, [(0, "#ffb060", 0.45), (0.5, "#a05a28", 0.12), (1, "#000", 0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>' + stars(241, 160, 700)
+    s += '<circle cx="860" cy="330" r="40" fill="#f4f0e0"/><circle cx="860" cy="330" r="140" fill="#c8d0ff" opacity="0.12" filter="url(#b40)"/>'
+    s += '<path d="M -40 1440 L -40 640 L 1120 600 L 1120 1440 Z" fill="url(#wl)"/>'
+    s += "".join(f'<rect x="{-30 + i * 72}" y="{598 - 2 * i if i < 16 else 566}" width="44" height="46" fill="#2e2a30"/>' for i in range(16))
+    r = random.Random(242)
+    for row in range(18):
+        y = 660 + row * 44; off = 0 if row % 2 else 46
+        for k in range(-1, 13):
+            x = off + k * 92 + r.uniform(-5, 5)
+            s += f'<rect x="{x:.0f}" y="{y}" width="{r.uniform(76, 88):.0f}" height="38" rx="5" fill="#0e0c10" opacity="{r.uniform(0.25, 0.45):.2f}"/>'
+    s += ('<path d="M 320 1440 L 320 1130 Q 425 1010, 530 1130 L 530 1440 Z" fill="#0a080c" stroke="#3a3440" stroke-width="10"/>'
+          '<path d="M 300 1440 L 300 1120 Q 425 985, 550 1120 L 550 1440" fill="none" stroke="#4a4450" stroke-width="8"/>')
+    s += '<rect x="592" y="1080" width="14" height="90" fill="#3a2414"/>'
+    s += '<rect x="0" y="1440" width="1080" height="480" fill="#16141a"/><path d="M -40 1440 L 1120 1440" stroke="#2e2a32" stroke-width="8"/>'
+    s += f'<rect width="{W}" height="{H}" fill="url(#tq)"/>'
+    return svg_render(s)
+
+def wall_outside(pal="day"):
+    """the outer wall of Bazz seen from below: crenellated top at y ≈ 820, stone face to the bottom; smoky summer sky (ladders drawn in the scene)"""
+    s = ("<defs>" + FILTERS + lg("sky", [(0, "#4a5a7a", 1), (0.35, "#a0a4b0", 1), (0.5, "#e8c8a0", 1)]) + lg("wl", [(0, "#9a7a5c", 1), (1, "#5a4232", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>' + clouds(W, 251, [300, 420], "#e8e0d8", "#ffffff", 0.5)
+    s += '<path d="M -40 1920 L -40 860 L 1120 820 L 1120 1920 Z" fill="url(#wl)"/>'
+    s += "".join(f'<rect x="{-30 + i * 74}" y="{806 - 1.4 * i:.0f}" width="46" height="62" fill="#9a7a5c" stroke="#3a2a1c" stroke-width="3"/>' for i in range(16))
+    r = random.Random(252)
+    for row in range(24):
+        y = 880 + row * 44; off = 0 if row % 2 else 50
+        for k in range(-1, 12):
+            x = off + k * 100 + r.uniform(-6, 6)
+            s += f'<rect x="{x:.0f}" y="{y}" width="{r.uniform(84, 96):.0f}" height="38" rx="5" fill="#3a2a1c" opacity="{r.uniform(0.18, 0.32):.2f}"/>'
+    s += _cracks(253, 0, 1080, 880, 1800, 14, "#2a1a10", 0.4)
+    s += f'<rect x="0" y="1500" width="{W}" height="420" fill="#000" opacity="0.18"/>'
+    return svg_render(s)
+
+def forest_stream():
+    """a dense forest by a mountain stream, cool morning: tall pines, a stream across the lower middle (y 1330-1480), mossy stones; people stand at y 1500-1700"""
+    s = ("<defs>" + FILTERS + lg("sky", [(0, "#7a9ab8", 1), (0.5, "#c8d8d8", 1)]) + lg("gr", [(0, "#4a5a34", 1), (1, "#2e3a22", 1)]) +
+         lg("wt", [(0, "#5a8aa0", 1), (1, "#2e5a70", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>'
+    r = random.Random(261)
+    for k in range(14):
+        x = r.uniform(-60, 1140); s += pine(x, r.uniform(1150, 1220), r.uniform(700, 900), "#4a6a5a", "#3a5a4a", "#3a2a1e")
+    s += f'<rect x="0" y="700" width="{W}" height="500" fill="#e0e8e8" opacity="0.35" filter="url(#b40)"/>'
+    for k in range(9):
+        x = r.uniform(-60, 1140); s += pine(x, r.uniform(1260, 1320), r.uniform(900, 1150), "#2e4a32", "#1e3424", "#3a2618")
+    s += '<path d="M -40 1260 C 300 1240, 800 1250, 1120 1255 L 1120 2000 L -40 2000 Z" fill="url(#gr)"/>'
+    s += '<path d="M -40 1350 C 300 1320, 700 1340, 1120 1325 L 1120 1450 C 700 1470, 300 1460, -40 1490 Z" fill="url(#wt)"/>'
+    for k in range(12):
+        x = r.uniform(0, 1080); y = r.uniform(1350, 1460)
+        s += f'<path d="M {x:.0f} {y:.0f} q 30 -8 60 0" stroke="#c8e0e8" stroke-width="4" fill="none" opacity="0.6"/>'
+    for i, (x, y, rr) in enumerate([(160, 1350, 50), (900, 1340, 60), (520, 1470, 44), (80, 1500, 70), (1000, 1490, 80)]):
+        s += boulder(x, y, rr, 262 + i, "#6a7a6a", "#3a4a3a", "#a8b8a0")
+    s += grass_tufts(263, 1500, 1900, 26, "#3e5a2a", "#7a9a4a")
+    for i, (x, h) in enumerate([(-40, 1500), (1120, 1550)]):
+        s += f'<rect x="{x - 50}" y="0" width="100" height="1920" fill="#2a1c12"/>'
+    return svg_render(s)
+
+def field_dawn():
+    """the edge of the forest at dawn: a ploughed field (furrows), a low hill on the right (rider at y ≈ 1010), the forest edge on the left"""
+    s = ("<defs>" + FILTERS + lg("sky", [(0, "#5a6a9a", 1), (0.3, "#c8a0a0", 1), (0.48, "#ffd0a0", 1)]) + lg("fd", [(0, "#8a6a4a", 1), (1, "#5a4030", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>' + clouds(W, 271, [380, 480, 600], "#ffc8b0", "#fff0e0", 0.55)
+    s += '<circle cx="760" cy="960" r="70" fill="#fff0c8" opacity="0.9"/><circle cx="760" cy="960" r="260" fill="#ffd8a0" opacity="0.25" filter="url(#b40)"/>'
+    s += f'<path d="{ridge(W, 1080, 140, 272, rough=0.4)}" fill="#8a7a9a"/>'
+    s += '<path d="M 520 1200 C 700 1040, 900 1000, 1120 1030 L 1120 1300 L 520 1300 Z" fill="#6a6a4a"/>'
+    s += '<path d="M -40 1200 C 300 1180, 800 1170, 1120 1200 L 1120 2000 L -40 2000 Z" fill="url(#fd)"/>'
+    for k in range(16):
+        y = 1210 + k * k * 3.2
+        s += f'<path d="M -40 {y:.0f} C 300 {y - 10:.0f}, 800 {y - 14:.0f}, 1120 {y + 2:.0f}" stroke="#4a3424" stroke-width="{2 + k * 0.6:.1f}" fill="none" opacity="0.55"/>'
+    r = random.Random(273)
+    for k in range(10):
+        s += pine(r.uniform(-80, 220), r.uniform(1220, 1280), r.uniform(500, 760), "#2e4032", "#1e2c24", "#2a1c12")
+    return svg_render(s)
+
+def armenia_gate():
+    """night in the mountains of Armenia: a stone fortress gate (opening x 400-680, sill y 1380) with torches on both sides"""
+    s = ("<defs>" + FILTERS + lg("sky", [(0, "#04060f", 1), (0.6, "#141a34", 1)]) + lg("st", [(0, "#4a4248", 1), (1, "#2a2428", 1)]) +
+         rg("tl", 330, 1020, 380, [(0, "#ffb060", 0.5), (1, "#000", 0)]) + rg("tr", 750, 1020, 380, [(0, "#ffb060", 0.5), (1, "#000", 0)]) +
+         rg("inside", 540, 1250, 300, [(0, "#ffb870", 0.6), (1, "#000", 0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>' + stars(281, 180, 700)
+    s += f'<path d="{ridge(W, 900, 300, 282, rough=0.6)}" fill="#141a2c"/>'
+    s += '<path d="M 60 1400 L 60 560 L 100 520 L 140 560 L 140 600 L 940 600 L 940 560 L 980 520 L 1020 560 L 1020 1400 Z" fill="url(#st)" stroke="#120e12" stroke-width="5"/>'
+    s += "".join(f'<rect x="{150 + i * 64}" y="568" width="38" height="36" fill="#3a3238"/>' for i in range(13))
+    r = random.Random(283)
+    for row in range(17):
+        y = 620 + row * 46; off = 0 if row % 2 else 50
+        for k in range(0, 10):
+            x = 70 + off + k * 100 + r.uniform(-6, 6)
+            if 390 < x < 690 and y > 1000:
+                continue
+            s += f'<rect x="{x:.0f}" y="{y}" width="{r.uniform(80, 92):.0f}" height="40" rx="5" fill="#1a1418" opacity="{r.uniform(0.25, 0.4):.2f}"/>'
+    s += '<path d="M 390 1400 L 390 1110 Q 540 960, 690 1110 L 690 1400 Z" fill="url(#inside)" stroke="#120e12" stroke-width="10"/>'
+    s += '<path d="M 370 1110 Q 540 940, 710 1110" stroke="#5a5058" stroke-width="16" fill="none"/>'
+    for x in (330, 750):
+        s += f'<rect x="{x - 6}" y="1020" width="12" height="110" fill="#3a2414"/>'
+    s += '<rect x="0" y="1400" width="1080" height="520" fill="#1a1618"/><path d="M 380 1400 L 700 1400 L 820 1920 L 260 1920 Z" fill="#3a2e28" opacity="0.6"/>'
+    s += f'<rect width="{W}" height="{H}" fill="url(#tl)"/><rect width="{W}" height="{H}" fill="url(#tr)"/>'
+    return svg_render(s)

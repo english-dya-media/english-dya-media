@@ -601,6 +601,25 @@ def prop(c, name, x, y, ang, t, S=None):
                 f'<path d="M 0 -1170 L 17 -1080 L -17 -1080 Z" fill="#cfd4da" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>')
     if name == "bowl":
         return g + f'<path d="M -50 -10 L 50 -10 C 46 30, -46 30, -50 -10 Z" fill="#8a5a32" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>'
+    if name == "dagger":     # short curved knife, blade pointing down (+y) from the fist
+        return (g + f'<rect x="-7" y="-34" width="14" height="44" rx="4" fill="#3a2414" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<rect x="-22" y="8" width="44" height="10" rx="4" fill="#c9a24a" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<path d="M -7 18 L 7 18 C 12 70, 10 110, -4 150 C -4 110, -10 70, -7 18 Z" fill="#dfe3e8" stroke="{OUT}" stroke-width="{c.sw(2.2)}"/></g>')
+    if name == "torch":      # a burning torch held upright (flame above the fist)
+        fl = [(0, -150 - 70 * (0.8 + 0.2 * math.sin(t * 17)) - 20 * math.sin(t * 11)), (34, -150), (20, -120), (-20, -120), (-34, -150)]
+        return (g + f'<path d="M -9 -120 L 9 -120 L 7 170 L -7 170 Z" fill="#5a3a1c" stroke="{OUT}" stroke-width="{c.sw(2.2)}"/>'
+                f'<path d="M -16 -140 L 16 -140 L 13 -110 L -13 -110 Z" fill="#3a2a1a" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<path d="M -30 -136 C -40 -170, {fmt(-14 + 8 * math.sin(t * 13))} {fmt(fl[0][1] + 40)}, {fmt(4 * math.sin(t * 9))} {fmt(fl[0][1])} '
+                f'C {fmt(14 + 8 * math.sin(t * 15))} {fmt(fl[0][1] + 40)}, 40 -170, 30 -136 Z" fill="#ff8a1a"/>'
+                f'<path d="M -16 -136 C -20 -160, -6 -190, {fmt(2 * math.sin(t * 9))} {fmt(fl[0][1] + 34)} C 6 -190, 20 -160, 16 -136 Z" fill="#ffd84a"/></g>')
+    if name == "shovel":     # held with the blade down; the hand grips the shaft
+        return (g + f'<path d="M 0 -230 L 0 250" stroke="#6a4424" stroke-width="{c.sw(12)}"/><path d="M -30 -236 L 30 -236" stroke="#6a4424" stroke-width="{c.sw(12)}" stroke-linecap="round"/>'
+                f'<path d="M -46 250 L 46 250 L 40 360 C 20 400, -20 400, -40 360 Z" fill="#8e949e" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>')
+    if name == "pick":       # pickaxe: the handle runs from the fist (+y) to the iron head
+        return (g + f'<path d="M 0 -40 L 0 300" stroke="#6a4424" stroke-width="{c.sw(12)}"/>'
+                f'<path d="M -130 330 C -60 290, 60 290, 130 330 L 120 300 C 60 266, -60 266, -120 300 Z" fill="#8e949e" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>')
+    if name == "drumstick":
+        return g + f'<path d="M 0 -20 L 0 170" stroke="#6a4424" stroke-width="{c.sw(9)}" stroke-linecap="round"/><circle cx="0" cy="176" r="15" fill="#d8c8a8" stroke="{OUT}" stroke-width="{c.sw(2)}"/></g>'
     return ""
 
 def tanbur(c, x, y, ang, t):
@@ -644,13 +663,13 @@ ARM_PRESETS = {  # (upper-arm angle from straight down, + = outward/up ; inward 
     "carry": (165, 95), "touch": (46, 72), "both_out": (40, -10), "bless": (70, 60),
 }
 
-def ik_angles(sh, target, l1, l2, side):
+def ik_angles(sh, target, l1, l2, side, elbow_down=False):
     sx, sy = sh; tx, ty = target
     dx, dy = tx - sx, ty - sy
     d = max(abs(l1 - l2) + 1, min(math.hypot(dx, dy), (l1 + l2) * 0.995))
     base = math.atan2(side * dx, dy)
     A = math.acos(max(-1, min(1, (l1 * l1 + d * d - l2 * l2) / (2 * l1 * d))))
-    a1 = base + A
+    a1 = base - A if elbow_down else base + A
     ex, ey = sx + side * math.sin(a1) * l1, sy + math.cos(a1) * l1
     fa = math.atan2(side * (tx - ex), (ty - ey))
     return math.degrees(a1), math.degrees(a1 - fa)
@@ -658,8 +677,8 @@ def ik_angles(sh, target, l1, l2, side):
 def arm(c, S, p, t, side, preset, bs):
     shw = (150 if S["kind"] == "woman" else 172) * S["build"]
     sh = (side * shw * 0.92, 60)
-    if isinstance(preset, tuple) and preset and preset[0] == "ik":
-        a1, a2 = ik_angles(sh, (preset[1], preset[2]), 300, 270, side)
+    if isinstance(preset, tuple) and preset and preset[0] == "ik":      # ("ik", x, y) or ("ik", x, y, "down"): the other elbow solution
+        a1, a2 = ik_angles(sh, (preset[1], preset[2]), 300, 270, side, len(preset) > 3 and preset[3] == "down")
     else:
         a1, a2 = ARM_PRESETS.get(preset, preset) if isinstance(preset, str) else preset
     e, h = arm_pts(sh, a1, a2, 300, 270, side)

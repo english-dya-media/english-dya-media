@@ -67,3 +67,23 @@ AFSHIN = spec(kind="man", skin="light", hair="short", beard="short", beard_col="
               garment="coat", col="#2e4a4a", col2="#1a2e2e", pattern="scales", scale_col="#c9a24a", fur="#4a3a2a", build=0.95,
               belt="#2b190c", cuff="#c9a24a", trim="#e0b25a")
 DANCER_W = dict(VILLAGE_W, col="#9a1c1c", col2="#5a0e0e", scarf_col="#7a1414", scarf_edge="#e0b25a")
+
+# ---- part 5 (episode 3): 835-836, the spy and the silver trap
+SPY = spec(kind="man", skin="olive", hair="short", hair_col="#1a120c", beard="light", beard_col="#1a120c", head="cap", head_col="#2f6a5e",
+           garment="tunic", col="#7a5a34", col2="#4a3620", pattern="plain", build=0.92, belt="#2b190c", buckle=False, cuff="#9a7a4a", trim="#9a7a4a")
+SCOUT = spec(kind="man", skin="tan", hair="short", hair_col="#1a120c", beard="short", beard_col="#20140c", head="turban", head_col="#8a1a14", turban_tail=True,
+             garment="tunic", col="#7a2a1a", col2="#4a1a10", pattern="plain", belt="#2b190c", buckle=False, cuff="#9a4a2a", trim="#9a4a2a")
+DRUMMER = spec(kind="man", skin="tan", hair="short", beard="full", beard_col="#14100c", head="turban", head_col="#141418",
+               garment="tunic", col="#26262c", col2="#121216", pattern="plain", build=1.15, belt="#5a3a1a", buckle=False, cuff="#3a3a42", trim="#c9a24a")
+
+# ---- part 6 (episode 3): 836-837, the fall of Bazz
+ABDULLAH = spec(kind="man", hair="long_curly", beard="short", beard_col="#17100c", head="none", garment="tunic", col="#8a221a", col2="#5a1410",
+                pattern="scales", scale_col="#4a2a14", belt="#2b190c", cuff="#7a5a34", trim="#c9a24a", strap=True)
+MESSENGER = spec(kind="man", skin="olive", hair="short", hair_col="#1a120c", beard="full", beard_col="#20160e", head="cap", head_col="#5a2a1a",
+                 garment="tunic", col="#8a4a2a", col2="#5a2e1a", pattern="plain", belt="#2b190c", buckle=False, cuff="#7a5a3a", trim="#7a5a3a")
+SAHL = spec(kind="old", skin="light", hair="short", hair_col="#8a827a", beard="grey", beard_col="#9a948c", grey=0.6, head="fur_hat", head_col="#4a3226",
+            garment="robe", col="#24466a", col2="#142a44", pattern="brocade", fur="#d8c8a8", belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#e0b25a", build=1.08)
+BUGHA = spec(kind="man", skin="tan", hair="short", beard="full", beard_col="#120c08", grey=0.3, head="helmet", helm=STEEL, plume="#0c0c10",
+             garment="coat", col="#1e1e24", col2="#0e0e12", pattern="scales", scale_col="#8a8e9a", belt="#2b190c", cuff="#5a5e6a", trim="#a8aebb",
+             cloak="#1a1a20", cloak2="#0a0a0e", cloak_hi="#4a4a58", build=1.1)
+PLOUGHMAN = dict(FARMER, head_col="#8a7a5a", col="#7a6a4a")

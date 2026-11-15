@@ -65,6 +65,41 @@ LINES = [
  ("p4s5e",4,5,"AFSHIN","I will turn the mountains into a cage.","کوه‌ها را برایش قفس می‌کنم.",None),
  ("p4s6a",4,6,"BANU","They say this general never loses.","می‌گویند این سردار هیچ‌وقت نمی‌بازد.",None),
  ("p4s6b",4,6,"BABAK","Then he has never fought in these mountains.","پس هنوز در این کوه‌ها نجنگیده است.",None),
+ # ---- part 5 · The Silver Trap (episode 3, half 1)
+ ("p5s1a",5,1,"AFSHIN","How much does Babak pay you?","بابک چقدر به تو می‌دهد؟","How much does Baabak pay you?"),
+ ("p5s1b",5,1,"SPY","Enough to live.","آن‌قدر که زنده بمانم.","Enough... to live."),
+ ("p5s1c",5,1,"AFSHIN","I will pay you double.","من دو برابر می‌دهم.","I will pay you... double."),
+ ("p5s1d",5,1,"AFSHIN","From now on, you watch him.","از حالا تو او را می‌پایی.",None),
+ ("p5s3a",5,3,"AFSHIN","We dig. We wait.","خندق می‌کنیم. صبر می‌کنیم.","We dig. We wait."),
+ ("p5s3b",5,3,"AFSHIN","Every road we take, we keep.","هر راهی را که بگیریم نگه می‌داریم.",None),
+ ("p5s3c",5,3,"COMMANDER","He doesn't attack. He just digs.","حمله نمی‌کند. فقط خندق می‌کند.",None),
+ ("p5s3d",5,3,"BABAK","He is not chasing us.","دنبال ما نمی‌آید.",None),
+ ("p5s3e",5,3,"BABAK","He is building a wall around us.","دارد دورمان دیوار می‌کشد.",None),
+ ("p5s4a",5,4,"SCOUT","Silver, Babak.","نقره، بابک.","Silver, Baabak."),
+ ("p5s4b",5,4,"SCOUT","The pay for Afshin's whole army.","مزد همه سپاه افشین.","The pay, for Afsheen's whole army."),
+ ("p5s4c",5,4,"BABAK","If we take their silver,","اگر نقره‌شان را بگیریم،",None),
+ ("p5s4d",5,4,"BABAK","their soldiers will not fight.","سربازانشان نمی‌جنگند.",None),
+ ("p5s4e",5,4,"FIGHTER","It's a trap! They knew!","دام است! خبر داشتند!",None),
+ ("p5s4f",5,4,"BABAK","The ravine! Go!","به دره! برو!",None),
+ ("p5s5a",5,5,"BABAK_W","So that is how he knew.","پس این‌طور خبردار شد.","So... that is how he knew."),
+ # ---- part 6 · The Fall of Bazz (episode 3, half 2)
+ ("p6s3a",6,3,"BANU","Will the Byzantine emperor help us?","امپراتور بیزانس کمکمان می‌کند؟",None),
+ ("p6s3b",6,3,"BABAK","If he is wise.","اگر عاقل باشد.",None),
+ ("p6s3c",6,3,"BABAK","If not, we will help ourselves.","وگرنه خودمان به خودمان کمک می‌کنیم.","If not... we will help ourselves."),
+ ("p6s4a",6,4,"AFSHIN","It is over, Babak.","تمام شد، بابک.","It is over, Baabak."),
+ ("p6s4b",6,4,"AFSHIN","Come down, and live.","پایین بیا و زنده بمان.","Come down, and live."),
+ ("p6s4c",6,4,"ABDULLAH","Brother, they are inside Bazz!","برادر، وارد بذ شده‌اند!","Brother, they are inside Baz!"),
+ ("p6s4d",6,4,"ABDULLAH","If you die here, everything dies with you.","اگر این‌جا بمیری، همه‌چیز با تو می‌میرد.",None),
+ ("p6s5a",6,5,"MESSENGER","The caliph's letter of safety:","امان‌نامه خلیفه:",None),
+ ("p6s5b",6,5,"MESSENGER","your life, if you surrender.","جانت در امان است اگر تسلیم شوی.","Your life... if you surrender."),
+ ("p6s5c",6,5,"MESSENGER","And a letter from your son.","و نامه‌ای از پسرت.","And a letter, from your son."),
+ ("p6s5d",6,5,"BABAK","Tell my son:","به پسرم بگو:","Tell my son..."),
+ ("p6s5e",6,5,"BABAK","one day as a ruler is better than forty years as a slave.","یک روز فرمانروایی بهتر از چهل سال بندگی است.","One day as a ruler, is better than forty years as a slave."),
+ ("p6s5f",6,5,"BABAK","Go to a friend's castle and hide.","برو در قلعه یک دوست پنهان شو.",None),
+ ("p6s5g",6,5,"BABAK","We will meet again.","دوباره همدیگر را می‌بینیم.",None),
+ ("p6s6a",6,6,"BABAK","Buy bread. Talk to no one.","نان بخر. با کسی حرف نزن.","Buy bread. Talk to no one."),
+ ("p6s6b",6,6,"SAHL","Welcome, King Babak.","خوش آمدی، شاه بابک.","Welcome, King Baabak."),
+ ("p6s6c",6,6,"SAHL","My house is your house.","خانه من خانه توست.",None),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume)
 VOICES = {
@@ -77,7 +112,15 @@ VOICES = {
  "COMMANDER":(200,1.05,0,1.0), "AHMAD":(400,1.0,0,1.0), "MUHAMMAD":(520,1.05,-1,1.0), "BABAK_W":(105,1.15,0,0.75),
  # part 4
  "FIGHTER":(430,1.0,0,1.0), "MAMUN":(750,1.15,-1,0.85), "MUTASIM":(20,1.05,-1,1.0), "AFSHIN":(805,1.08,0,1.0),
+ # part 5
+ "SPY":(620,1.05,0,1.0), "SCOUT":(300,1.0,0,1.0),
+ # part 6
+ "ABDULLAH":(330,1.0,0,1.0), "MESSENGER":(600,1.05,0,1.0), "SAHL":(700,1.1,0,1.0),
 }
 # slower takes for part 3 (learners): per-line length factors, see voices.py
-SPEED = {lid: 1.18 for lid, part, *_ in LINES if part in (3, 4) and lid not in ("p3s5d", "p3s3a")}
+SPEED = {lid: 1.18 for lid, part, *_ in LINES if part in (3, 4, 5, 6) and lid not in ("p3s5d", "p3s3a", "p5s4e", "p5s4f", "p6s4c")}
 SPEED["p3s1a"] = 1.25; SPEED["p3s5c"] = 1.3
+SPEED.update({"p5s1b": 1.3, "p5s5a": 1.25, "p5s1a": 1.35, "p5s1c": 1.4, "p5s3d": 1.3, "p5s3e": 1.35, "p5s4c": 1.4, "p5s4e": 1.1})
+SPEED.update({"p6s5e": 1.4, "p6s5f": 1.35, "p6s5g": 1.35, "p6s5c": 1.3, "p6s4d": 1.3, "p6s5d": 1.3})
+# optional per-line ffmpeg filters (voices.py): the spy trembles
+FX = {"p5s1b": "vibrato=f=6.5:d=0.35", "p5s5a": "volume=1.7"}
