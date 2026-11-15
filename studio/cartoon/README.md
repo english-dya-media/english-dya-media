@@ -6,7 +6,7 @@ under 3 minutes, posted through Metricool (brand `7830959`) **after Rostam & Soh
 
 | # | series (folder) | parts | source | state |
 |---|---|---|---|---|
-| 1 | Babak Khorramdin · بابک خرمدین (`babak/`) | 8 | approved scripts `babak/SCRIPTS.md` (Iranica, Ibn al-Nadim, Tabari) | parts 1–3 made |
+| 1 | Babak Khorramdin · بابک خرمدین (`babak/`) | 8 | approved scripts `babak/SCRIPTS.md` (Iranica, Ibn al-Nadim, Tabari) | parts 1–4 made |
 | 2 | Zahhak & Fereydun · ضحاک و فریدون (`zahhak/`) | 10 | Shahnameh | outline |
 | 3 | Arash the Archer · آرش کمانگیر (`arash/`) | 3 | Biruni, Iranica | outline |
 | 4 | Leyli & Majnun · لیلی و مجنون (`leyli/`) | 8 | Nizami | outline |
