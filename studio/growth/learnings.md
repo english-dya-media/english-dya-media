@@ -5,32 +5,27 @@ Goal: **+5,000 followers a month** (≈ +167 a day net). Numbers: `python3 growt
 
 ## Where we are
 - Start of November: ~64.7K followers, net −10 to −20 a day. The page was quiet before 3 Nov.
-- 13 Nov: 64,645 followers (−9 vs 12 Nov); November so far −126, last 7 days −11.1/day → needs +302/day for the
-  rest of the month. 12 Nov: +10 follows / −14 unfollows (fewest unfollows so far). Follows 7–18/day, unfollows
-  14–31/day. Net still negative every day. Account reach 12 Nov 1,011 and 13 Nov 895 (vs 525–757 on 7–11 Nov):
-  higher since the quote reels started, but not turning into follows yet.
-- Daily reels reach 330–1,650 people (~700 views avg); shares are rare (day07 2, day09 5; others 0). Reach is mostly
-  followers: the page needs reels that get pushed to non-followers.
+- 14 Nov: 64,635 followers (−10 vs 13 Nov); November so far −136, last 7 days −11.0/day → needs +321/day for the
+  last 16 days. 13 Nov: +7 follows / −22 unfollows. Follows 7–18/day, unfollows 14–31/day; net negative every day.
+  Account reach 12–14 Nov 1,011 / 948 / 1,218 (vs 525–757 on 7–11 Nov): rising with more reels a day (14 Nov: 5
+  reels incl. Rostam part 1), but follows haven't risen with it.
+- Daily reels ~690 views avg, shares rare; reach is mostly followers — need reels pushed to non-followers.
 
 ## Reels so far (views, view rate, avg watch)
-- Best: day04 th → ت/س (three, think, month, clothes): 1,847 views, 42.4%, 5.8 s, 11 saves — still 2× any other reel.
+- Best: day04 th → ت/س (three, think, month, clothes): 1,855 views, 42.2%, 5.8 s, 11 saves — still 2× any other reel.
   A sound Iranians replace, words everyone uses.
-- day10 odd vowels (women, busy, bury, minute): 590 views at ~2 days, 38.2%, **5.9 s avg watch (best yet)**, 4 saves.
-- day09 silent h: 540 views, 31.3%, 4.4 s, 6 saves, **5 shares (most of any reel)**.
-- day07 -ed endings: 540, 32.4%, 4.8 s, 4 saves, 2 shares → sound rules hold attention and get shared.
-- day11 silent g (sign, foreign, campaign, reign), 13 Nov, at ~18 h: 363 views, 34.6%, 4.0 s, 1 save — slower start
-  than day10 (408 at ~17 h).
-- Worst: day05 (-ology words) 549 views, 22.4%, 3.3 s; day06 silent b 525, 24.4%, 3.7 s.
-- Silent letters (day01/03/06/08/09/11): 927 → 753 → 525 → 500 → 540 → 363 so far — six of eleven themes; tired.
-- Trial reels: 6 so far, 122–168 views (vs ~700 for daily reels). Mistakes: trial06 124 (33.0%), trial08 122 (40.5%),
-  trial10 168 (36.4%, 5 saves). Vocab: trial07 137 (30.9%), trial09 128 (27.8%), trial11 163 (35.1%, best vocab).
-  Mistakes avg 138 vs vocab 143: no gap in views; mistakes holds viewers a bit better (33–40% vs 28–35%).
-  Saves+shares per view are 2–4× daily reels: people who see them value them, Instagram just doesn't widen them.
-- Quote reels (23:00 Tehran): quote10 «peace of mind» 745 views at ~2 days (more than any reel since day04),
-  reach 524, 4 saves; quote11 «trying again» 458 at ~16 h, the most-viewed post of 13 Nov. But view rate is lowest
-  (22–24%) and watch 3.0–4.3 s. They reach the most people; sharing still low (1 each).
-- Promos: presenter (8 Nov) 617 views, 29.0%; presenter2 (10 Nov) 515 views, 28.2%, 7 saves, 3 shares.
-- Viewers leave early: avg watch 3.0–5.9 s, under half watch past 3 s.
+- day10 odd vowels (women, busy, bury, minute): 637 views, 37.7%, 5.7 s watch, 4 saves.
+- day09 silent h 568 views, 7 saves, **5 shares (most)**; day07 -ed endings 549, 4.8 s, 2 shares → rules get shared.
+- day12 (first v2 format, th → د/ز: mother, brother…) at ~19 h: 362 views, 36.7%, 4.4 s, 0 saves — same start as
+  day11 (363 at ~18 h): the shorter v2 cut hasn't lifted views yet; judge after 2–3 more days.
+- rostam01 (series, 14 Nov 20:00 Tehran) at ~20 h: 381 views, 29.6%, **5.1 s watch**, 1 share — best post of 14 Nov.
+- Worst: day11 silent g 423 (lowest daily reel); day05 (-ology) 553, 22.5%; day06 silent b 532, 24.0%. Silent letters: 6 of 12 themes, tired.
+- Trial reels: 8 so far, 122–168 views (avg 147 vs ~690 for daily reels). Mistakes: trial06 124 (33.0%), trial08 122
+  (40.5%), trial10 168 (36.4%, 5 saves), trial12b 161 (29.4%). Vocab: trial07 138, trial09 128, trial11 167 (35.9%),
+  trial12a 168 (**42.8%, best view rate of any trial**). No gap between the two formats in views.
+- Quote reels (23:00 Tehran): quote10 «peace of mind» 791 views (most since day04), quote11 610, quote12 «believe in
+  yourself» 379 at ~17 h. View rate lowest (23–25%), watch 3.0–4.3 s; shares ≤1 each.
+- Promos: presenter 640 views, presenter2 536 (7 saves, 3 shares). Viewers leave early: watch 3–6 s, <45% past 3 s.
 
 ## Changes made
 - 2026-11-08: trial reels started (one a day at 19:00 Tehran, alternating "mistakes" and "vocab"), shown to non-followers.
@@ -41,7 +36,9 @@ Goal: **+5,000 followers a month** (≈ +167 a day net). Numbers: `python3 growt
 ## For the next weekly run
 - Lean daily reel themes toward everyday words with a sound Iranians replace (like day04); avoid long academic words.
 - Silent letters: six of eleven themes and day11 started slowest yet — at most one in the next week, ideally none.
-- Odd-vowel words (day10: women, busy) gave the longest watch (5.9 s): use more odd-vowel / surprising-spelling themes.
+- Odd-vowel words (day10: women, busy) gave the longest daily-reel watch (5.7 s): use more odd-vowel themes.
+- Rostam part 1 held viewers 5.1 s on day one (more than any daily reel but day04/day10): check parts 2–6 before
+  adding more series slots.
 - Trial formats: no 2× gap (mistakes avg 138, vocab 143), so keep both.
 - Quote reels reach more people than daily reels: keep them; -ed endings (day07) kept viewers and got shares —
   try other rule-based sound themes (plural -s/-es: /s/ /z/ /ɪz/).
