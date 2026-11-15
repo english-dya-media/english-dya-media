@@ -29,6 +29,42 @@ LINES = [
  ("p2s11a",2,11,"BABAK","From these mountains, we will live by our own law.","از این کوه‌ها، به قانون خودمان زندگی خواهیم کرد.",None),
  ("p2s11b",2,11,"NARRATOR","It was the year 816. Babak led the Khorramis now, with Javidan's widow as his wife.","سال ۸۱۶ بود. حالا بابک رهبر خرمدینان بود و همسر جاویدان همسر او.","It was the year eight sixteen. Baabak led the Khorramis now, with Jahveedahn's widow as his wife."),
  ("p2s11c",2,11,"NARRATOR","Soon, the caliph would hear his name.","به‌زودی خلیفه نامش را می‌شنید.",None),
+ # ---- part 3 · Twenty Years of Fire (episode 2, half 1)
+ ("p3s1a",3,1,"YOUNG SOLDIER","Did you see that? Up there… red.","دیدی؟ آن بالا… سرخ.","Did you see that? Up there... red."),
+ ("p3s1b",3,1,"OFFICER","Keep moving. Rocks don't fight.","راه برو. سنگ که نمی‌جنگد.",None),
+ ("p3s3a",3,3,"NARRATOR","Thirteen years earlier.","سیزده سال پیش‌تر.",None),
+ ("p3s3b",3,3,"TAX COLLECTOR","The caliph's share. Load it all.","سهم خلیفه. همه‌اش را بار کنید.",None),
+ ("p3s3c",3,3,"BABAK","These mountains are ours.","این کوه‌ها مال ماست.",None),
+ ("p3s3d",3,3,"BABAK","The land belongs to the people who work it.","زمین از آنِ کسی است که روی آن کار می‌کند.",None),
+ ("p3s3e",3,3,"FARMER","And who will protect us from them?","و چه کسی ما را از آن‌ها محافظت می‌کند؟",None),
+ ("p3s3f",3,3,"BABAK","We will. Together.","خودمان. با هم.",None),
+ ("p3s4a",3,4,"BABAK","Never fight them where they are strong.","هرگز جایی نجنگید که آن‌ها قوی‌اند.",None),
+ ("p3s4b",3,4,"BABAK","Fight them where the mountain is strong.","جایی بجنگید که کوه قوی است.",None),
+ ("p3s4c",3,4,"COMMANDER","Yahya ibn Mu'adh has turned back.","یحیی بن معاذ عقب نشست.","Yahya ibn Moaz has turned back."),
+ ("p3s4d",3,4,"COMMANDER","Isa's army is gone.","سپاه عیسی نابود شد.","Eesa's army is gone."),
+ ("p3s4e",3,4,"AHMAD","The caliph will send more.","خلیفه باز هم سرباز می‌فرستد.",None),
+ ("p3s4f",3,4,"BABAK","Let him. Our mountains are patient.","بفرستد. کوه‌های ما صبورند.",None),
+ ("p3s5a",3,5,"MUHAMMAD","I have beaten him before.","پیش‌تر شکستش داده‌ام.",None),
+ ("p3s5b",3,5,"MUHAMMAD","Today, I end this. Forward!","امروز کار را تمام می‌کنم. پیش!",None),
+ ("p3s5c",3,5,"BABAK_W","Let them come deeper…","بگذارید جلوتر بیایند…","Let them come deeper..."),
+ ("p3s5d",3,5,"BABAK","Now!","حالا!",None),
+ # ---- part 4 · The Ambush (episode 2, half 2)
+ ("p4s1a",4,1,"MUHAMMAD","Hold the line! Hold—","صف را نگه دارید! نگه…","Hold the line! Hold..."),
+ ("p4s1b",4,1,"FIGHTER","Their general is dead! The rest are running!","سردارشان کشته شد! بقیه فرار می‌کنند!",None),
+ ("p4s3a",4,3,"BANU","The boy who played for stable boys…","پسری که برای مهترها می‌نواخت،","The boy who played for stable boys..."),
+ ("p4s3b",4,3,"BANU","…now plays for an army.","حالا برای یک سپاه می‌نوازد.","now plays, for an army."),
+ ("p4s3c",4,3,"BABAK","The song is the same, Banu.","آهنگ همان است، بانو.","The song is the same, Baanoo."),
+ ("p4s3d",4,3,"BABAK","Only the audience has changed.","فقط شنونده‌ها عوض شده‌اند.",None),
+ ("p4s4a",4,4,"MAMUN","Brother… finish what I could not.","برادر… کاری را که من نتوانستم تمام کن.","Brother... finish what I could not."),
+ ("p4s4b",4,4,"MAMUN","Do not let Babak outlive us.","نگذار بابک بعد از ما زنده بماند.","Do not let Baabak outlive us."),
+ ("p4s4c",4,4,"MUTASIM","I swear it.","قسم می‌خورم.",None),
+ ("p4s5a",4,5,"MUTASIM","Khaydhar, son of Kawus, Afshin of Ushrusana.","خیذر پسر کاووس، افشینِ اسروشنه.","Khaydar, son of Kaavoos, Afsheen of Ooshroosana."),
+ ("p4s5b",4,5,"MUTASIM","Take whatever you need: men, money, time.","هرچه لازم داری بردار: سرباز، پول، زمان.","Take whatever you need. Men, money, time."),
+ ("p4s5c",4,5,"MUTASIM","Just bring me Babak.","فقط بابک را برایم بیاور.","Just bring me Baabak."),
+ ("p4s5d",4,5,"AFSHIN","I will not chase him through the mountains, my lord.","سرورم، در کوه‌ها دنبالش نمی‌دوم.",None),
+ ("p4s5e",4,5,"AFSHIN","I will turn the mountains into a cage.","کوه‌ها را برایش قفس می‌کنم.",None),
+ ("p4s6a",4,6,"BANU","They say this general never loses.","می‌گویند این سردار هیچ‌وقت نمی‌بازد.",None),
+ ("p4s6b",4,6,"BABAK","Then he has never fought in these mountains.","پس هنوز در این کوه‌ها نجنگیده است.",None),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume)
 VOICES = {
@@ -36,4 +72,12 @@ VOICES = {
  "MAHRU":(240,1.05,0,1.0), "MAHRU_W":(240,1.2,0,0.7), "YOUNG BABAK":(60,1.0,3,1.0),
  "STABLE HAND":(720,1.05,0,1.0), "JAVIDAN":(135,1.12,0,1.0), "JAVIDAN_W":(135,1.3,0,0.7),
  "BABAK":(105,1.05,0,1.0), "BANU":(75,1.05,0,1.0), "OLD CHIEF":(480,1.1,0,1.0),
+ # part 3
+ "YOUNG SOLDIER":(550,1.0,1,1.0), "OFFICER":(800,1.05,-1,1.0), "TAX COLLECTOR":(360,1.05,0,1.0), "FARMER":(660,1.08,0,1.0),
+ "COMMANDER":(200,1.05,0,1.0), "AHMAD":(400,1.0,0,1.0), "MUHAMMAD":(520,1.05,-1,1.0), "BABAK_W":(105,1.15,0,0.75),
+ # part 4
+ "FIGHTER":(430,1.0,0,1.0), "MAMUN":(750,1.15,-1,0.85), "MUTASIM":(20,1.05,-1,1.0), "AFSHIN":(805,1.08,0,1.0),
 }
+# slower takes for part 3 (learners): per-line length factors, see voices.py
+SPEED = {lid: 1.18 for lid, part, *_ in LINES if part in (3, 4) and lid not in ("p3s5d", "p3s3a")}
+SPEED["p3s1a"] = 1.25; SPEED["p3s5c"] = 1.3

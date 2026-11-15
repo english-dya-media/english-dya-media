@@ -31,3 +31,39 @@ JAVIDAN_ILL = spec(kind="man", skin="light", hair="short", hair_col="#3a2a20", b
                    col="#d8d0c0", col2="#b0a890", pattern="plain", build=1.1, grey=0.6, belt=None, cuff="#c8c0b0", trim="#c8c0b0")
 SOLDIER = spec(kind="man", skin="olive", hair="short", beard="short", beard_col="#1a120c", head="cap", head_col="#5a5a60", garment="tunic",
                col="#4a4a52", col2="#2a2a30", pattern="plain", belt="#2b190c", buckle=False, cuff="#6a6a70", trim="#6a6a70")
+
+# ---- part 3 (episode 2): 816-829. Red = Babak's people, black = the caliph's men.
+STEEL = ("#2a2c34", "#5c606c", "#a8aebb")
+BABAK_816 = dict(BABAK_LEADER, cloak="#a51d1d")
+YOUNG_SOLDIER = spec(kind="man", skin="olive", hair="short", beard="light", beard_col="#1a120c", head="turban", head_col="#16161b",
+                     garment="tunic", col="#2a2a31", col2="#16161a", pattern="plain", belt="#2b190c", buckle=False, cuff="#40404a", trim="#40404a")
+OFFICER = spec(kind="man", skin="tan", hair="short", beard="short", beard_col="#2a2420", grey=0.4, head="helmet", helm=STEEL, plume="#141418",
+               garment="coat", col="#24242c", col2="#111116", pattern="scales", scale_col="#7a7e8a", belt="#2b190c", cuff="#3a3a44", trim="#8a8e9a")
+TAX_COLLECTOR = spec(kind="man", skin="light", hair="short", beard="father", beard_col="#1a1410", head="turban", head_col="#121216",
+                     garment="robe", col="#1e1e25", col2="#0e0e12", pattern="plain", build=1.22, belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#c9a24a")
+GUARD = spec(kind="man", skin="olive", hair="short", beard="full", beard_col="#14100c", head="turban", head_col="#141418",
+             garment="tunic", col="#2c2c33", col2="#16161a", pattern="plain", belt="#2b190c", buckle=False, cuff="#3a3a42", trim="#3a3a42")
+FARMER = spec(kind="old", skin="old", hair="short", hair_col="#bdb6ad", beard="grey", beard_col="#6a6058", grey=0.7, head="cap", head_col="#7a6a50",
+              garment="robe", col="#6a5a40", col2="#4a3e2c", pattern="plain", belt="#3a2414", buckle=False, cuff="#8a7a5a", trim="#8a7a5a")
+COMMANDER = spec(kind="man", skin="tan", hair="short", beard="full", beard_col="#20140c", head="cap", head_col="#5a1a14",
+                 garment="tunic", col="#8a221a", col2="#5a1410", pattern="plain", belt="#2b190c", cuff="#c9a24a", trim="#c9a24a", strap=True)
+AHMAD = spec(kind="man", skin="light", hair="short", beard="full", beard_col="#1a1410", head="helmet", helm=STEEL, plume="#141418",
+             garment="coat", col="#3a3c46", col2="#22242c", pattern="scales", scale_col="#d8b25a", belt="#2b190c", cuff="#c9a24a", trim="#e0b25a", build=1.08)
+MUHAMMAD = spec(kind="man", skin="tan", hair="short", beard="full", beard_col="#120c08", grey=0.25, head="helmet", helm=STEEL, plume="#0c0c10",
+                garment="coat", col="#1e1e24", col2="#0e0e12", pattern="scales", scale_col="#8a8e9a", belt="#2b190c", cuff="#5a5e6a", trim="#a8aebb",
+                cloak="#1a1a20", cloak2="#0a0a0e", cloak_hi="#4a4a58", build=1.12)
+FIGHTER = spec(kind="man", skin="olive", hair="short", beard="short", beard_col="#1a120c", head="cap", head_col="#6a1a14",
+               garment="tunic", col="#9a2a1e", col2="#6a1a12", pattern="plain", belt="#2b190c", buckle=False, cuff="#7a3a2a", trim="#7a3a2a")
+FIGHTER2 = dict(FIGHTER, beard="full", skin="tan", head="scarf", scarf_col="#7a1414", scarf_edge="#c9a24a", kind="man", hair="none")
+VILLAGE_W = spec(kind="woman", skin="tan", hair="none", beard=None, head="scarf", scarf_col="#5a3a2a", scarf_edge="#c9a24a", garment="dress",
+                 col="#6a4a3a", col2="#3a2a1e", pattern="plain", hs=0.95, bs=0.95, belt=None, cuff="#c9a24a", trim="#c9a24a")
+
+# ---- part 4 (episode 2): 829-835
+MAMUN = spec(kind="old", skin="light", hair="short", hair_col="#bdb6ad", beard="grey", beard_col="#8a847c", grey=0.7, head="cap", head_col="#16161a",
+             garment="robe", col="#1c1c22", col2="#0e0e12", pattern="plain", belt=None, cuff="#c9a24a", trim="#c9a24a")
+MUTASIM = spec(kind="man", skin="tan", hair="short", beard="full", beard_col="#120c08", head="turban", head_col="#121216", turban_tail=True,
+               garment="robe", col="#18181e", col2="#0a0a0e", pattern="brocade", build=1.22, belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#e0b25a")
+AFSHIN = spec(kind="man", skin="light", hair="short", beard="short", beard_col="#120c08", head="fur_hat", head_col="#3a2a20",
+              garment="coat", col="#2e4a4a", col2="#1a2e2e", pattern="scales", scale_col="#c9a24a", fur="#4a3a2a", build=0.95,
+              belt="#2b190c", cuff="#c9a24a", trim="#e0b25a")
+DANCER_W = dict(VILLAGE_W, col="#9a1c1c", col2="#5a0e0e", scarf_col="#7a1414", scarf_edge="#e0b25a")

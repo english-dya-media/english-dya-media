@@ -6,7 +6,7 @@ under 3 minutes, posted through Metricool (brand `7830959`) **after Rostam & Soh
 
 | # | series (folder) | parts | source | state |
 |---|---|---|---|---|
-| 1 | Babak Khorramdin · بابک خرمدین (`babak/`) | 8 | approved scripts `babak/SCRIPTS.md` (Iranica, Ibn al-Nadim, Tabari) | parts 1–2 made |
+| 1 | Babak Khorramdin · بابک خرمدین (`babak/`) | 8 | approved scripts `babak/SCRIPTS.md` (Iranica, Ibn al-Nadim, Tabari) | parts 1–3 made |
 | 2 | Zahhak & Fereydun · ضحاک و فریدون (`zahhak/`) | 10 | Shahnameh | outline |
 | 3 | Arash the Archer · آرش کمانگیر (`arash/`) | 3 | Biruni, Iranica | outline |
 | 4 | Leyli & Majnun · لیلی و مجنون (`leyli/`) | 8 | Nizami | outline |
@@ -50,11 +50,11 @@ Engine (this folder):
 
 | file | what it is |
 |---|---|
-| `chars.py` | the rig: `spec()` (looks), `pose()`, `person()` (heads with eyes, brows, lips and beards; hair; headwear helmet/fur_hat/turban/cap/scarf+diadem; garments; arms with presets or `("ik", x, y)`; props lantern, bread, baby, stick, brush, sack, purse, sword, spear, bowl, tanbur), `lying_person()`, `horse()`, `elephant()`, `cow()` |
+| `chars.py` | the rig: `spec()` (looks; helmet colours `helm`/`plume`, cloak colours `cloak2`/`cloak_hi`, `pattern="scales"` for lamellar armour), `pose()`, `person()` (heads with eyes, brows, lips and beards; hair; headwear helmet/fur_hat/turban/cap/scarf+diadem; garments; arms with presets or `("ik", x, y)`; props lantern, bread, baby, stick, brush, sack, purse, sword, spear, pike, bowl, scroll, spear_red, banner_black, banner_red, tanbur, or `(name, angle)`; `chains=True` or `"rope"` with `lead=(x, y)`), `lying_person()`, `horse()` (`packs`, `mule`), `elephant()`, `cow()` |
 | `stage.py` | placing people: `at_feet`, `at_neck`, `lying_at`, `crowd_row`, `back_heads`, `rider`, `howdah`, `fire_svg`, `Glow` |
 | `film.py` | `Shot` (bg/mid/fg layers, camera, light, particles Snow/Motes/Embers, bloom, grade, fades), lip sync `mouth()`/`talk_pose()`, `render_scene()`, `stills()` |
-| `bgs.py`, `wallbg.py` | painted backgrounds, cached in `build/bg` (Samarra, village, stable, bazaar, blizzard, interior, fortress above clouds, battle fog, bedroom, courtyard, throne hall, fortress wall at sunrise…) |
-| `voices.py`, `lips.py` | Piper voices → `build/<series>/voices/<id>.wav` + durations.json; lip-sync data |
+| `bgs.py`, `wallbg.py` | painted backgrounds, cached in `build/bg` (Samarra, village, stable, bazaar, blizzard, interior, fortress above clouds, battle fog, bedroom, courtyard, throne hall, fortress wall at sunrise; Babak 3–4: the pass `gorge_floor`+`gorge_walls`, `cliff_up`, `ridge_view`, `gorge_down`, `ledge_fg`, `village_square`, `snow_pass`+`snow_fg`, `camp_rocks`, `map_dirt`, `stream_bg`, `feast_night`, `tent_interior`, `gold_hall`, `night_plain`, `night_sky_wall`; `boulder()` rocks) |
+| `voices.py`, `lips.py` | Piper voices → `build/<series>/voices/<id>.wav` + durations.json; lip-sync data (optional `SPEED` in `lines.py`: per-line length factors, e.g. slower takes for learners) |
 | `audio.py`, `mix.py` | synthesized music and sound effects; mixing a part's lines, music and effects |
 | `subs.py` | subtitle and caption events → .ass |
 | `render.py`, `prev.py` | render a part's scenes in parallel; contact sheet of a scene |

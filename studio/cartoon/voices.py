@@ -10,6 +10,10 @@ if __name__ == "__main__":
     series.from_argv()
 from paths import VOICES_DIR, PIPER
 from lines import LINES, VOICES
+try:
+    from lines import SPEED          # optional per-line length factors {line id: factor}
+except ImportError:
+    SPEED = {}
 
 MODEL = os.path.join(PIPER, "en-us-libritts-high.onnx")
 
@@ -30,6 +34,7 @@ def main(which, only=None):
         if (which != "all" and part != int(which)) or (only and lid not in only):
             continue
         sid, length, semis, vol = VOICES[spk]
+        length *= SPEED.get(lid, 1.0)
         raw = os.path.join(VOICES_DIR, f"{lid}.raw.wav")
         synth(voice, tts or en, sid, length, raw)
         with wave.open(raw) as w:

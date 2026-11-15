@@ -336,12 +336,13 @@ def hair_top(c, S, p, t):
 def headwear(c, S, p, t):
     h = S["head"]; s = p["turn"]; wind = p["wind"]; rx = 10 * s
     if h == "helmet":
+        hc = S.get("helm", ("#6e4519", "#b9832f", "#f0c66a")); plume = S.get("plume", "#b3181d")
         cone = f"M -104 -256 C -100 -312, -52 -362, {fmt(rx)} -396 C 52 -362, 100 -312, 104 -256 Z"
         shade = f"M -104 -256 C -100 -312, -52 -362, {fmt(rx)} -396 C -24 -350, -50 -300, -56 -256 Z"
         spec_ = f"M {fmt(26+rx*0.5)} -364 C 50 -336, 66 -300, 70 -262 L 84 -262 C 80 -304, 62 -342, {fmt(34+rx*0.5)} -372 Z"
         band = "M -110 -262 C -60 -272, 60 -272, 110 -262 L 108 -232 C 60 -242, -60 -242, -108 -232 Z"
         zig = "M -100 -248 " + " ".join(f"L {-100 + i * 10} {-254 if i % 2 else -244}" for i in range(1, 21))
-        rivets = "".join(f'<circle cx="{x}" cy="{fmt(-249 + abs(x) * 0.07)}" r="3.4" fill="#f0c66a" stroke="{OUT}" stroke-width="{c.sw(1.2)}"/>' for x in (-88, -44, 0, 44, 88))
+        rivets = "".join(f'<circle cx="{x}" cy="{fmt(-249 + abs(x) * 0.07)}" r="3.4" fill="{hc[2]}" stroke="{OUT}" stroke-width="{c.sw(1.2)}"/>' for x in (-88, -44, 0, 44, 88))
         px, py = rx, -400; pl = [(px, py)]
         for i in range(1, 8):
             u = i / 7
@@ -349,14 +350,14 @@ def headwear(c, S, p, t):
         top = [(x, y - 11 * (1 - i / 7) ** 0.7 - 2) for i, (x, y) in enumerate(pl)]
         bot = [(x, y + 13 * (1 - i / 7) ** 0.7 + 2) for i, (x, y) in enumerate(pl)]
         gid = c.uid("bz")
-        return (f'<defs><linearGradient id="{gid}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6e4519"/><stop offset="0.55" stop-color="#b9832f"/>'
-                f'<stop offset="1" stop-color="#f0c66a"/></linearGradient></defs>' +
-                rimmed(c, smooth_path(top + list(reversed(bot))), "#b3181d", dx=2, dy=-2) +
-                f'<circle cx="{fmt(rx)}" cy="-402" r="7" fill="#f0c66a" stroke="{OUT}" stroke-width="{c.sw(2)}"/>' +
-                rimmed(c, cone, f"url(#{gid})", dx=3.5, dy=-2) + f'<path d="{shade}" fill="#6e4519" opacity="0.55"/>'
+        return (f'<defs><linearGradient id="{gid}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{hc[0]}"/><stop offset="0.55" stop-color="{hc[1]}"/>'
+                f'<stop offset="1" stop-color="{hc[2]}"/></linearGradient></defs>' +
+                (rimmed(c, smooth_path(top + list(reversed(bot))), plume, dx=2, dy=-2) if plume else "") +
+                f'<circle cx="{fmt(rx)}" cy="-402" r="7" fill="{hc[2]}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>' +
+                rimmed(c, cone, f"url(#{gid})", dx=3.5, dy=-2) + f'<path d="{shade}" fill="{hc[0]}" opacity="0.55"/>'
                 f'<path d="{spec_}" fill="#fff3c8" opacity="0.55"/>'
                 f'<path d="M {fmt(rx)} -394 C {fmt(rx*0.8-2)} -340, {fmt(rx*0.5-2)} -300, {fmt(rx*0.3)} -266" stroke="{OUT}" stroke-width="{c.sw(2.4)}" fill="none"/>' +
-                rimmed(c, band, "#b9832f", dx=3, dy=-1) + f'<path d="{zig}" stroke="#f6d488" stroke-width="{c.sw(2)}" fill="none" opacity="0.85"/>' + rivets)
+                rimmed(c, band, hc[1], dx=3, dy=-1) + f'<path d="{zig}" stroke="{S.get("helm_zig", "#f6d488")}" stroke-width="{c.sw(2)}" fill="none" opacity="0.85"/>' + rivets)
     if h == "fur_hat":
         pts = [(-112, -238), (-124, -300), (-112, -370), (-60, -404), (0, -412), (60, -404), (112, -370), (124, -300), (112, -238), (60, -228), (0, -226), (-60, -228)]
         d = smooth_path(bumpy(pts, 9))
@@ -476,6 +477,12 @@ def garment(c, S, p, t):
             for cc in range(-6, 7):
                 x = cc * 38 + (19 if r % 2 else 0); y = 60 + r * 46
                 pat += f'<path d="M {x} {y-9} L {x+7} {y} L {x} {y+9} L {x-7} {y} Z" fill="#d8a64a" opacity="0.5"/>'
+    elif S["pattern"] == "scales":          # lamellar armour
+        sc = S.get("scale_col", "#000000")
+        for r in range(int(hem_y / 36)):
+            for cc in range(-7, 8):
+                x = cc * 36 + (18 if r % 2 else 0); y = 40 + r * 36
+                pat += f'<path d="M {x-18} {y} C {x-18} {y+24}, {x+18} {y+24}, {x+18} {y}" stroke="{sc}" stroke-width="{c.sw(2.4)}" fill="none" opacity="0.5"/>'
     elif S["pattern"] == "stripes":
         for cc in range(-8, 9):
             pat += f'<path d="M {cc*34} 0 L {cc*34 + 20} {hem_y+20}" stroke="{col2}" stroke-width="{c.sw(6)}" opacity="0.5"/>'
@@ -565,6 +572,33 @@ def prop(c, name, x, y, ang, t, S=None):
     if name == "spear":
         return (g + f'<path d="M 0 -520 L 0 380" stroke="#4a3018" stroke-width="{c.sw(10)}"/>'
                 f'<path d="M 0 -600 L 16 -520 L -16 -520 Z" fill="#cfd4da" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>')
+    if name == "scroll":
+        return (g + f'<rect x="-15" y="-74" width="30" height="148" rx="10" fill="#eadbb4" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+                f'<path d="M -8 -50 L 8 -50 M -8 -26 L 8 -26 M -8 -2 L 6 -2 M -8 22 L 8 22" stroke="#8a6a3a" stroke-width="{c.sw(2)}"/>'
+                f'<rect x="-20" y="-86" width="40" height="17" rx="6" fill="#8a5a2a" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<rect x="-20" y="69" width="40" height="17" rx="6" fill="#8a5a2a" stroke="{OUT}" stroke-width="{c.sw(2)}"/></g>')
+    if name in ("spear_red", "banner_black", "banner_red"):
+        tall = name != "spear_red"
+        out = g + f'<path d="M 0 {-1190 if tall else -560} L 0 {320 if tall else 380}" stroke="#4a3018" stroke-width="{c.sw(10)}"/>'
+        if name == "spear_red":
+            out += f'<path d="M 0 -640 L 16 -560 L -16 -560 Z" fill="#cfd4da" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+            n = 7; top, bot = [], []
+            for i in range(n + 1):
+                u = i / n; wv = 16 * u * math.sin(t * 7 - u * 5)
+                top.append((-6 - 120 * u, -548 + wv)); bot.append((-6 - 112 * u, -520 + wv * 1.1 + 6 * u))
+            out += f'<path d="M {P(top + bot[::-1])} Z" fill="#c4161c" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+        else:
+            col = "#121216" if name == "banner_black" else "#b5161b"
+            out += f'<circle cx="0" cy="-1200" r="14" fill="#c9a24a" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+            n = 10; top, bot = [], []
+            for i in range(n + 1):
+                u = i / n; wv = (6 + 24 * u) * math.sin(t * 5.5 - u * 6)
+                top.append((-6 - 340 * u, -1180 + wv)); bot.append((-6 - 326 * u, -950 + wv * 1.1 + 14 * u))
+            out += f'<path d="M {P(top + bot[::-1])} Z" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+        return out + '</g>'
+    if name == "pike":   # long spear held low (hand hanging at the side)
+        return (g + f'<path d="M 0 -1080 L 0 320" stroke="#4a3018" stroke-width="{c.sw(10)}"/>'
+                f'<path d="M 0 -1170 L 17 -1080 L -17 -1080 Z" fill="#cfd4da" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>')
     if name == "bowl":
         return g + f'<path d="M -50 -10 L 50 -10 C 46 30, -46 30, -50 -10 Z" fill="#8a5a32" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>'
     return ""
@@ -587,7 +621,7 @@ def cloak_back(c, S, p, t):
            (-350 - 44 * wind, 620), (-330 - 36 * wind, 860), (-240, 920), (-170, 900)]
     pts = [(x + (6 + 10 * wind) * math.sin(t * 3.4 + i * 0.8) * (i / 8), y + 4 * math.sin(t * 2.7 + i) * (i / 8)) for i, (x, y) in enumerate(pts)]
     d = smooth_path(pts + [(-150, 400)])
-    return rimmed(c, d, "#6c0f12", dx=2, dy=-2)
+    return rimmed(c, d, S.get("cloak2", "#6c0f12"), dx=2, dy=-2)
 
 def cloak_front(c, S, p, t):
     if not S["cloak"]:
@@ -599,8 +633,8 @@ def cloak_front(c, S, p, t):
           f"L 144 {fmt(886+5*math.sin(t*3.0))} C 140 500, 138 150, 120 70 C 100 40, 70 20, 40 12 Z")
     br = "".join(f'<circle cx="{x}" cy="40" r="20" fill="#b9832f" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/><circle cx="{x}" cy="40" r="11" fill="#7a1010"/>'
                  for x in (-112, 112))
-    return (rimmed(c, Lp, col, dx=2, dy=-2) + f'<path d="M -186 60 C -200 160, -204 500, -200 880 L -170 886 C -176 500, -172 140, -150 70 Z" fill="#6c0f12" opacity="0.7"/>' +
-            rimmed(c, Rp, col, dx=3.5, dy=-1.5) + f'<path d="M 150 40 C 176 70, 186 200, 188 800 L 176 800 C 174 200, 166 80, 140 48 Z" fill="#d8402e" opacity="0.6"/>' + br +
+    return (rimmed(c, Lp, col, dx=2, dy=-2) + f'<path d="M -186 60 C -200 160, -204 500, -200 880 L -170 886 C -176 500, -172 140, -150 70 Z" fill="{S.get("cloak2", "#6c0f12")}" opacity="0.7"/>' +
+            rimmed(c, Rp, col, dx=3.5, dy=-1.5) + f'<path d="M 150 40 C 176 70, 186 200, 188 800 L 176 800 C 174 200, 166 80, 140 48 Z" fill="{S.get("cloak_hi", "#d8402e")}" opacity="0.6"/>' + br +
             f'<path d="M -112 40 C -60 70, 60 70, 112 40" stroke="#d8a64a" stroke-width="{c.sw(4)}" fill="none"/>')
 
 ARM_PRESETS = {  # (upper-arm angle from straight down, + = outward/up ; inward bend of the forearm)
@@ -657,13 +691,15 @@ def person(S, p, t, lw=1.0):
     for side, key, pkey in ((-1, "armR", "propR"), (1, "armL", "propL")):
         a, hpos, ang = arm(c, S, p, t, side, p[key], bs)
         hands[side] = hpos
-        pr = p[pkey]
+        pr = p[pkey]; pang = 0
+        if isinstance(pr, tuple):
+            pr, pang = pr
         prop_svg = ""
         if pr:
             if pr == "tanbur":
                 prop_svg = f'<g transform="translate(-60,430) scale(1.45) translate(60,-430)">' + tanbur(c, -60, 430, 34, t) + '</g>'
             else:
-                prop_svg = prop(c, pr, hpos[0] + (side * 60 if pr == "baby" else 0), hpos[1] + (40 if pr == "lantern" else (-10 if pr == "baby" else 0)), 0, t)
+                prop_svg = prop(c, pr, hpos[0] + (side * 60 if pr == "baby" else 0), hpos[1] + (40 if pr == "lantern" else (-10 if pr == "baby" else 0)), pang, t)
         arms += f'<g transform="scale({bs:.3f})">' + (prop_svg + a if pr in ("lantern",) else a + prop_svg) + '</g>'
     sk = SKINS[S["skin"]]
     neck = (f'<path d="M -44 -110 L -46 30 C -20 40, 20 40, 46 30 L 44 -110 Z" fill="{sk[0]}" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
@@ -674,7 +710,17 @@ def person(S, p, t, lw=1.0):
     front = f'<g transform="translate(0,{fmt(bob)})"><g transform="{htr}">' + head(c, S, p, t) + '</g></g>'
     cf = f'<g transform="scale({bs:.3f})">' + cloak_front(c, S, p, t) + '</g>'
     chains = ""
-    if p["chains"] and len(hands) == 2:
+    if p["chains"] == "rope" and len(hands) == 2:
+        (x1, y1), (x2, y2) = hands[-1], hands[1]
+        x1 *= bs; y1 *= bs; x2 *= bs; y2 *= bs
+        my = max(y1, y2) + 30
+        chains = (f'<path d="M {fmt(x1)} {fmt(y1)} C {fmt(x1)} {fmt(my)}, {fmt(x2)} {fmt(my)}, {fmt(x2)} {fmt(y2)}" stroke="#8a6a3a" stroke-width="{c.sw(11)}" fill="none"/>'
+                  + "".join(f'<ellipse cx="{fmt(x)}" cy="{fmt(y + dy)}" rx="{fmt(30*bs)}" ry="{fmt(9*bs)}" fill="none" stroke="#7a5a2e" stroke-width="{c.sw(8)}"/>'
+                            for x, y in ((x1, y1), (x2, y2)) for dy in (-10 * bs, 6 * bs)))
+        if p.get("lead"):
+            lx, ly = p["lead"]; mx = (x1 + x2) / 2; my2 = max(y1, y2) + 18
+            chains += f'<path d="M {fmt(mx)} {fmt(my2)} Q {fmt((mx + lx) / 2)} {fmt(max(my2, ly) + 60)}, {fmt(lx)} {fmt(ly)}" stroke="#8a6a3a" stroke-width="{c.sw(9)}" fill="none"/>'
+    elif p["chains"] and len(hands) == 2:
         (x1, y1), (x2, y2) = hands[-1], hands[1]
         x1 *= bs; y1 *= bs; x2 *= bs; y2 *= bs
         my = max(y1, y2) + 40
@@ -693,7 +739,7 @@ def lying_person(S, p, t, lw=1.0):
     return f'<g transform="translate(0,{fmt(-175*S["bs"])}) rotate(-90) translate(0,{fmt(F*0.55)})">{inner}</g>'
 
 # ============================================================== animals
-def horse(c, col="#6b4426", mane="#1d120c", phase=0.0, walk=False, t=0.0, head_bob=0.0, saddle=True, blanket=None, head_down=0.0):
+def horse(c, col="#6b4426", mane="#1d120c", phase=0.0, walk=False, t=0.0, head_bob=0.0, saddle=True, blanket=None, head_down=0.0, packs=None, mule=False):
     """side view facing right; origin on the ground under the belly; ~ 640 wide x 600 tall"""
     out = ""
     dark = "#3a2414"
@@ -729,7 +775,8 @@ def horse(c, col="#6b4426", mane="#1d120c", phase=0.0, walk=False, t=0.0, head_b
     out += f'<path d="M -150 -262 C -40 -246, 80 -248, 180 -266" stroke="#000" stroke-width="{c.sw(18)}" opacity="0.14" fill="none"/>'
     mpts = [(124, -404), (170, -460 + hb * 0.3), (214 + hx * 0.6, -520 + hb * 0.8), (256 + hx, -566 + hb), (276 + hx, -594 + hb), (246 + hx, -540 + hb), (204 + hx * 0.5, -486 + hb * 0.6), (160, -420)]
     out += rimmed(c, smooth_path(bumpy(mpts, 8)), mane, dx=2, dy=-2)
-    out += (f'<path d="M {fmt(284+hx)} {fmt(-580+hb)} l 4 -34 l 16 30 Z" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+    ear = "l 2 -66 l 20 62" if mule else "l 4 -34 l 16 30"
+    out += (f'<path d="M {fmt(284+hx)} {fmt(-580+hb)} {ear} Z" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
             f'<ellipse cx="{fmt(318+hx)}" cy="{fmt(-544+hb)}" rx="8" ry="7" fill="#120a06"/><circle cx="{fmt(320+hx)}" cy="{fmt(-547+hb)}" r="2.4" fill="#fff"/>'
             f'<ellipse cx="{fmt(384+hx)}" cy="{fmt(-488+hb)}" rx="5" ry="4" fill="#120a06"/>'
             f'<path d="M {fmt(372+hx)} {fmt(-468+hb)} q -14 4 -26 -2" stroke="{OUT}" stroke-width="{c.sw(2)}" fill="none"/>'
@@ -737,6 +784,11 @@ def horse(c, col="#6b4426", mane="#1d120c", phase=0.0, walk=False, t=0.0, head_b
     if saddle:
         out += (f'<path d="M -60 -404 C -50 -444, 70 -444, 90 -404 L 80 -360 L -50 -360 Z" fill="#5a3418" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
                 f'<path d="M -40 -360 L 70 -360 L 76 -320 L -46 -320 Z" fill="#8a2a20" stroke="{OUT}" stroke-width="{c.sw(2)}"/>')
+    if packs:
+        out += (f'<path d="M -120 -416 C -142 -366, -132 -296, -70 -288 C -10 -282, 30 -300, 40 -350 C 46 -400, 10 -430, -50 -432 Z" fill="{packs}" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+                f'<path d="M -10 -436 C 6 -470, 70 -472, 92 -440 C 112 -400, 100 -334, 50 -326 C 0 -322, -24 -380, -10 -436 Z" fill="{packs}" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+                f'<path d="M -100 -380 C -60 -372, 0 -372, 90 -390" stroke="#5a3a1c" stroke-width="{c.sw(5)}" fill="none"/>'
+                f'<path d="M -70 -420 C -60 -400, -40 -396, -20 -404 M 20 -450 C 30 -436, 50 -434, 70 -446" stroke="#000" stroke-width="{c.sw(3)}" fill="none" opacity="0.25"/>')
     if blanket:
         out += f'<path d="M -80 -400 L 100 -400 L 110 -300 L -90 -300 Z" fill="{blanket}" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
     return out
