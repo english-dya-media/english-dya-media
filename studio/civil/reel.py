@@ -72,6 +72,7 @@ body{font-family:Vaz,sans-serif;color:var(--ink);}
 .halo{paint-order:stroke;stroke:#0A2140;stroke-width:12px;stroke-linejoin:round;}
 .tb{transform-box:fill-box;transform-origin:center;}
 .gu{transform-box:fill-box;transform-origin:50% 100%;}
+.gd{transform-box:fill-box;transform-origin:50% 0%;}
 .steps{position:relative;flex:none;margin-top:12px;width:100%;height:250px;}
 .step{position:absolute;top:0;left:0;right:0;display:flex;justify-content:center;}
 .panel{max-width:880px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:14px 38px 16px;border-radius:30px;
@@ -125,6 +126,7 @@ body{font-family:Vaz,sans-serif;color:var(--ink);}
 @keyframes drawIn{0%{stroke-dashoffset:1;opacity:0}1%{opacity:1}100%{stroke-dashoffset:0;opacity:1}}
 @keyframes ringDown{from{stroke-dashoffset:0}to{stroke-dashoffset:-1}}
 @keyframes dim18{to{opacity:.18}} @keyframes dim25{to{opacity:.25}} @keyframes dim35{to{opacity:.35}} @keyframes dim0{to{opacity:0}}
+@keyframes flash{0%{opacity:0;transform:scale(.6)}25%{opacity:1}100%{opacity:0;transform:scale(1.35)}}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
 @keyframes bobY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
 @keyframes toY{to{transform:translateY(var(--dy))}}
@@ -143,6 +145,12 @@ window.seek = (ms) => {
   for (const a of document.getAnimations()) { a.pause(); a.currentTime = ms; }
   document.querySelectorAll('#stage svg').forEach(s => { try { s.pauseAnimations(); s.setCurrentTime(ms / 1000); } catch (e) {} });
   const t = ms / 1000;
+  document.querySelectorAll('[data-steps]').forEach(el => {
+    const pts = JSON.parse(el.dataset.steps); let v = 0;
+    for (const [tt, vv] of pts) if (t >= tt) v = vv;
+    let s = String(v); if (el.dataset.fa === '1') s = s.replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+    el.textContent = s;
+  });
   document.querySelectorAll('[data-count]').forEach(el => {
     const [t0, t1, a, b, pf] = JSON.parse(el.dataset.count);
     const k = Math.max(0, Math.min(1, (t - t0) / (t1 - t0)));
@@ -367,7 +375,8 @@ def mux(d, bdir, odir, video, total):
     tag = d["tag"]
     ev = [(0.0, make_music(total, [], os.path.join(bdir, "music.wav"), bpm=100, level_db=-21.0, prog=PROG, pluck_decay=.3), 1.0),
           (0.0, f"{SFX}/whoosh.wav", .35)]
-    ev += [(t, f"{SFX}/{name}.wav", gain) for t, name, gain in d["sfx"]]
+    sfx = lambda n: os.path.join(HERE, "sfx", n + ".wav") if os.path.exists(os.path.join(HERE, "sfx", n + ".wav")) else f"{SFX}/{n}.wav"
+    ev += [(t, sfx(name), gain) for t, name, gain in d["sfx"]]
     if d["kind"] == "quiz":
         ev += [(d["t_count"] + k, f"{SFX}/tick.wav", .5) for k in range(d["think"])]
         ev += [(d["t_reveal"], f"{SFX}/ding.wav", .45)]

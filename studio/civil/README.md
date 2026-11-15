@@ -5,8 +5,10 @@ It has its **own Metricool brand** (not @english_dya, brand 7830959). Owner's ch
 
 - **One reel every day**, posted automatically.
 - **Bilingual on screen**: every line in Persian, with the English line under it (technical terms in both languages).
-- **Mixed audience**, rotating day by day: **concept** (مفهوم روز, students) → **site tip** (نکته‌ی کارگاهی, site
-  engineers) → **quiz** (تست روز, exam-style question with a 5 s countdown, "comment your answer").
+- **Mixed audience**, rotating day by day: **concept** (مفهوم روز, students) → **process** (فرآیند اجرا: a
+  schematic film of machines doing the work, e.g. a rig driving a pile, an excavator digging with soil nailing;
+  owner's request) → **site tip** (نکته‌ی کارگاهی, site engineers) → **quiz** (تست روز, exam-style question with a
+  5 s countdown, "comment your answer").
 
 Brand: `BRAND_ID` = **(not connected yet: fill in when the page is connected)**, handle `HANDLE`.
 
@@ -15,6 +17,12 @@ Brand: `BRAND_ID` = **(not connected yet: fill in when the page is connected)**,
 - 1080×1920 reel, 18–27 s, blueprint look: badge (kind + running number), hook question (fa + en), an animated
   diagram, a timeline of bottom captions (fa + en, short), then a 2.6 s follow card. Music bed (`../music.py`) and
   sound effects (`../assets/sfx`), **no voice**, so no AI label.
+- Process reels: a side-view cross-section (soil layers, building, pit) with machines drawn in flat construction
+  yellow (`YEL`, dark outline): they drive in, raise masts, dig, drill; the work advances in visible stages
+  (blow counter, lifts removed one by one), then the reel explains how it works (load paths, why it is stable).
+  Draw each machine in its working position and animate it with `move` / `turn` / `keyed` (SMIL); see
+  `b002.py` (truck rig, pile driven blow by blow, impact flashes) and `b003.py` (excavator arm by inverse
+  kinematics, soil removed with an animated clipPath, nails, shotcrete). Sounds in `sfx/`: thud, rumble, drill, spray.
 - Quiz reels: question, small diagram, 4 options (الف ب ج د), countdown ring with «جوابتو کامنت کن», reveal at
   t_count + 5 s (right answer turns green and moves up, the others fade), then 1–2 explanation panels.
 - Caption: Persian, informal spoken style; first line = the hook; a few lines of explanation (quiz captions never
@@ -27,7 +35,9 @@ Brand: `BRAND_ID` = **(not connected yet: fill in when the page is connected)**,
 
 - `kit.py`: helpers for diagrams (beam outlines that bend, supports, arrows, labels fa+en, cracks, dimension
   lines, concrete and hatch patterns, SMIL morphs and moves) and `write_reel` / `write_quiz`, which check lengths.
-- `batches/bNNN.py`: the content of a batch of reels (see `b001.py`, the three approved samples, for every pattern).
+- `batches/bNNN.py`: the content of a batch of reels (`b001.py`: concept, site tip and quiz samples; `b002.py`,
+  `b003.py`: process samples). Copy their patterns.
+- `sfx/`: extra sounds made for these reels (the rest come from `../assets/sfx`).
 - `content/cNNN.json`: one file per reel (written by the batch files). `out/cNNN.mp4`: renders (not committed).
 - `reel.py`: `--preview` writes stills and `build/cNNN/sheet.jpg` (contact sheet) and prints layout problems;
   without it, renders the reel.

@@ -26,6 +26,20 @@ Pick the next unused topics in rotation (concept → site → quiz). When a reel
 - Differential settlement and the diagonal cracks it makes in walls / نشست غیریکنواخت
 - Inclinometers: how we measure displacement underground and find the slip surface / شیب‌سنج (انکلینومتر)
 
+## Process (فرآیند اجرا): machines doing the work, side view
+- Bored pile: drilling rig, casing, rebar cage, tremie concrete / شمع درجا (حفاری)
+- Concrete pour: mixer truck → pump → formwork → vibrator / بتن‌ریزی با پمپ
+- Compacting fill in layers with a roller (and why thin layers) / تراکم لایه‌لایه با غلتک
+- Anchored retaining wall: drilling and tensioning tieback anchors / دیوار مهارشده با انکراژ
+- Diaphragm wall: grab, bentonite slurry, rebar cage, tremie / دیوار دیافراگمی
+- Road pavement layers: subgrade, subbase, base, asphalt (paver + roller) / لایه‌های روسازی راه
+- Dewatering a pit with wells / زهکشی و پایین بردن آب گود
+- Tunnel boring machine: cut, push, ring segments / تی‌بی‌ام
+- Reinforced concrete column: starter bars, cage, formwork, pour / اجرای ستون بتنی
+- Ground improvement with stone columns / بهسازی خاک با ستون سنگی
+- Bridge girders lifted onto piers by crane / نصب تیرهای پل
+- Tower crane: how it climbs as the building rises / تاورکرین چطوری بالا میره؟
+
 ## Site tip (نکته‌ی کارگاهی)
 - Curing: keep concrete moist (why; typical minimum 7 days) / عمل‌آوری بتن
 - Vibrating concrete the right way (vertical insertion, no dragging, no over-vibration) / ویبره زدن درست
@@ -63,3 +77,5 @@ Pick the next unused topics in rotation (concept → site → quiz). When a reel
 - c001 concept: why the main rebar is at the bottom of a beam (and on top in a cantilever)
 - c002 site: slump test
 - c003 quiz: span ×2 → deflection ×16 (simple beam, UDL)
+- c004 process: pile driving (truck rig, blow count, skin friction + end bearing)
+- c005 process: excavation next to a building with soil nailing

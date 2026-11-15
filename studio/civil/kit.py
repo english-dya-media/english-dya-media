@@ -21,6 +21,7 @@ KINDS = {  # badge: Persian, English, Fluent emoji
     "concept": (f"مفهوم روز", "Concept of the day", "light_bulb"),
     "site": (f"نکته{ZW}ی کارگاهی", "Site tip", "hammer_and_wrench"),
     "quiz": ("تست روز", "Daily quiz", "brain"),
+    "process": (f"فرآیند اجرا", "How it's built", "construction"),
 }
 FA_DIGITS = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
 
@@ -81,14 +82,48 @@ def morph(d0, d1, begin, dur=.8):
             f'calcMode="spline" keyTimes="0;1" keySplines=".45 0 .2 1"/>')
 
 
-def move(points, begin, dur=.8):
-    """SMIL: translate a <g> through points [(x0,y0),(x1,y1),...] (equal time per leg) starting at `begin`."""
+def move(points, begin, dur=.8, spline=".45 0 .2 1"):
+    """SMIL: translate a <g> through points [(x0,y0),(x1,y1),...] (equal time per leg) starting at `begin`.
+    spline: ".45 0 .2 1" ease-in-out, ".2 .8 .2 1" ease-out (arrive and stop), ".6 0 .9 .4" ease-in (leave)."""
     n = len(points) - 1
     kt = ";".join(f"{i / n:g}" for i in range(n + 1))
-    ks = ";".join([".45 0 .2 1"] * n)
+    ks = ";".join([spline] * n)
     vals = ";".join(f"{x:g} {y:g}" for x, y in points)
     return (f'<animateTransform attributeName="transform" type="translate" begin="{begin:g}s" dur="{dur:g}s" '
             f'fill="freeze" values="{vals}" calcMode="spline" keyTimes="{kt}" keySplines="{ks}"/>')
+
+
+def turn(cx, cy, a0, a1, begin, dur=1.0, spline=".45 0 .2 1"):
+    """SMIL: rotate a <g> from angle a0 to a1 (degrees, clockwise +) about (cx, cy). Give the <g>
+    transform="rotate(a0 cx cy)" too, so it holds a0 before `begin`."""
+    return (f'<animateTransform attributeName="transform" type="rotate" begin="{begin:g}s" dur="{dur:g}s" fill="freeze" '
+            f'values="{a0:g} {cx:g} {cy:g};{a1:g} {cx:g} {cy:g}" calcMode="spline" keyTimes="0;1" keySplines="{spline}"/>')
+
+
+def keyed(kind, frames, begin):
+    """SMIL: translate (kind="translate") through timed key frames [(t, (x, y)), ...], t in seconds from `begin`,
+    linear between them. Good for step-by-step motion (a pile going down blow by blow)."""
+    T = frames[-1][0]
+    kt = ";".join(f"{t / T:.5f}" for t, _ in frames)
+    vals = ";".join(f"{x:g} {y:g}" for _, (x, y) in frames)
+    return (f'<animateTransform attributeName="transform" type="{kind}" begin="{begin:g}s" dur="{T:g}s" fill="freeze" '
+            f'values="{vals}" keyTimes="{kt}" calcMode="linear"/>')
+
+
+def steps_count(points, persian=True):
+    """Attribute for a <tspan>/<span> whose number steps up at given times: points [(t, value), ...]."""
+    return f"data-steps='{json.dumps([[round(t, 3), v] for t, v in points])}' data-fa='{1 if persian else 0}'"
+
+
+def wheel(cx, cy, r, begin=None, dur=None, turns=-2, spline=".2 .8 .2 1"):
+    """A wheel with a hub; it turns while the vehicle moves (turns < 0 for a vehicle arriving from the left)."""
+    w = (f'<circle cx="{cx:g}" cy="{cy:g}" r="{r:g}" fill="#1B2A3D" stroke="#0A2140" stroke-width="4"/>'
+         f'<circle cx="{cx:g}" cy="{cy:g}" r="{r * .45:g}" fill="#9FB3C8"/>'
+         f'<path d="M{cx - r * .45:g},{cy:g} h{r * .9:g} M{cx:g},{cy - r * .45:g} v{r * .9:g}" stroke="#1B2A3D" stroke-width="3"/>')
+    if begin is None:
+        return w
+    return (f'<g>{w}<animateTransform attributeName="transform" type="rotate" begin="{begin:g}s" dur="{dur:g}s" fill="freeze" '
+            f'values="{turns * 360:g} {cx:g} {cy:g};0 {cx:g} {cy:g}" calcMode="spline" keyTimes="0;1" keySplines="{spline}"/></g>')
 
 
 def bob(dy, begin, period, count):
@@ -260,3 +295,26 @@ def _save(d):
     p = os.path.join(CONTENT, d["tag"] + ".json")
     json.dump(d, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("wrote", os.path.relpath(p, HERE))
+
+
+# ---------- machines and soils (process reels) ----------
+DARK = "#0A2140"
+YEL, YEL2, ORANGE, STEEL = "#F2C230", "#D9A91A", "#FF9F1C", "#9FB3C8"
+
+
+def harrow(x1, y1, x2, y2, color, w=7, head=22):
+    """Arrow with a dark outline, readable on any fill."""
+    return arrow(x1, y1, x2, y2, DARK, w + 6, head + 6) + arrow(x1, y1, x2, y2, color, w, head)
+
+
+def soil_defs():
+    """Patterns: clay (brown dashes), sand (tan dots), lattice (steel mast)."""
+    return ('<defs>'
+            '<pattern id="clay" width="34" height="22" patternUnits="userSpaceOnUse"><rect width="34" height="22" fill="#5E4837"/>'
+            '<path d="M3 6h9M20 15h10M13 2h5" stroke="#7E6350" stroke-width="3" stroke-linecap="round"/></pattern>'
+            '<pattern id="sand" width="26" height="26" patternUnits="userSpaceOnUse"><rect width="26" height="26" fill="#86703F"/>'
+            '<circle cx="5" cy="6" r="2.4" fill="#B49862"/><circle cx="17" cy="11" r="2" fill="#665430"/>'
+            '<circle cx="10" cy="20" r="2.6" fill="#C4A66C"/><circle cx="22" cy="22" r="1.6" fill="#B49862"/></pattern>'
+            '<pattern id="lattice" width="20" height="24" patternUnits="userSpaceOnUse"><rect width="20" height="24" fill="#4E6782"/>'
+            '<path d="M0 0L20 24M20 0L0 24" stroke="#B9CBDD" stroke-width="2.4"/></pattern>'
+            '</defs>')

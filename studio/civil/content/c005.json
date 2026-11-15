@@ -1,0 +1,149 @@
+{
+ "tag": "c005",
+ "n": 5,
+ "kind": "process",
+ "date": null,
+ "slot": "19:30",
+ "caption": "گودبرداری کنار ساختمون چطوری ایمن انجام میشه؟ 🏗️ (روش میخ‌کوبی / نیلینگ)\n\n۱. هر بار فقط یه مرحله‌ی کم‌عمق خاکبرداری میشه (معمولاً ۱ تا ۲ متر)\n۲. میخ‌ها با زاویه‌ی رو به پایین (معمولاً حدود ۱۵ درجه) حفاری و کار گذاشته میشن و دوغاب تزریق میشه\n۳. روی دیواره مش بسته میشه و شاتکریت اجرا میشه\n۴. همین مراحل تا رسیدن به کف گود تکرار میشه\n\nمیخ‌ها خاکِ پشت دیواره رو به یه بلوک یکپارچه تبدیل می‌کنن که خودش پایدار می‌مونه.\n\n⚠️ خاکبرداری کل عمق قبل از اجرای سازه‌ی نگهبان یکی از دلایل اصلی ریزش گودهاست.\n\n📘 اصطلاحات:\nSoil nailing = میخ‌کوبی (نیلینگ)\nShotcrete = بتن پاششی (شاتکریت)\nGrout = دوغاب\nExcavation = گودبرداری\n\n👷 هر روز یه درس عمران | برای همکارت بفرست\n\n#عمران #مهندسی_عمران #ژئوتکنیک #گودبرداری #نیلینگ #سازه_نگهبان #civilengineering #geotechnicalengineering #soilnailing #excavation",
+ "hook_fa": "چرا گود کنار ساختمون ریزش نمی‌کنه؟",
+ "hook_en": "Why doesn't a deep pit next to a building collapse?",
+ "svg": "<defs><pattern id=\"agg\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><rect width=\"30\" height=\"30\" fill=\"#8E9BA8\"/><circle cx=\"6\" cy=\"8\" r=\"3.2\" fill=\"#6E7B88\"/><circle cx=\"20\" cy=\"18\" r=\"4.2\" fill=\"#ABB6C1\"/><circle cx=\"25\" cy=\"5\" r=\"2.2\" fill=\"#5E6A76\"/><circle cx=\"10\" cy=\"23\" r=\"2.6\" fill=\"#B9C3CC\"/><circle cx=\"16\" cy=\"9\" r=\"1.6\" fill=\"#7A8794\"/></pattern><pattern id=\"hatch\" width=\"18\" height=\"18\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><rect width=\"18\" height=\"18\" fill=\"rgba(143,179,217,.10)\"/><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"18\" stroke=\"#8FB3D9\" stroke-width=\"3\"/></pattern></defs><defs><pattern id=\"clay\" width=\"34\" height=\"22\" patternUnits=\"userSpaceOnUse\"><rect width=\"34\" height=\"22\" fill=\"#5E4837\"/><path d=\"M3 6h9M20 15h10M13 2h5\" stroke=\"#7E6350\" stroke-width=\"3\" stroke-linecap=\"round\"/></pattern><pattern id=\"sand\" width=\"26\" height=\"26\" patternUnits=\"userSpaceOnUse\"><rect width=\"26\" height=\"26\" fill=\"#86703F\"/><circle cx=\"5\" cy=\"6\" r=\"2.4\" fill=\"#B49862\"/><circle cx=\"17\" cy=\"11\" r=\"2\" fill=\"#665430\"/><circle cx=\"10\" cy=\"20\" r=\"2.6\" fill=\"#C4A66C\"/><circle cx=\"22\" cy=\"22\" r=\"1.6\" fill=\"#B49862\"/></pattern><pattern id=\"lattice\" width=\"20\" height=\"24\" patternUnits=\"userSpaceOnUse\"><rect width=\"20\" height=\"24\" fill=\"#4E6782\"/><path d=\"M0 0L20 24M20 0L0 24\" stroke=\"#B9CBDD\" stroke-width=\"2.4\"/></pattern></defs><g transform=\"translate(0,70)\"><defs><clipPath id=\"lift0\"><rect x=\"300\" y=\"256\" width=\"340\" height=\"114\"><animate attributeName=\"width\" begin=\"3.1s\" dur=\"2.3s\" fill=\"freeze\" values=\"340;231;231;112;112;0\" keyTimes=\"0;.24;.35;.6;.7;1\" calcMode=\"linear\"/></rect></clipPath><clipPath id=\"lift1\"><rect x=\"300\" y=\"366\" width=\"340\" height=\"114\"><animate attributeName=\"width\" begin=\"10.2s\" dur=\"2.3s\" fill=\"freeze\" values=\"340;231;231;112;112;0\" keyTimes=\"0;.24;.35;.6;.7;1\" calcMode=\"linear\"/></rect></clipPath><clipPath id=\"lift2\"><rect x=\"300\" y=\"476\" width=\"340\" height=\"114\"><animate attributeName=\"width\" begin=\"14.3s\" dur=\"2.3s\" fill=\"freeze\" values=\"340;231;231;112;112;0\" keyTimes=\"0;.24;.35;.6;.7;1\" calcMode=\"linear\"/></rect></clipPath></defs><g style=\"animation:fadeIn 0.4s cubic-bezier(.2,.8,.2,1) 0s 1 normal both;\"><rect x=\"0\" y=\"260\" width=\"300\" height=\"390\" fill=\"url(#clay)\"/><rect x=\"640\" y=\"260\" width=\"280\" height=\"390\" fill=\"url(#clay)\"/><rect x=\"300\" y=\"590\" width=\"340\" height=\"60\" fill=\"url(#clay)\"/><line x1=\"0\" y1=\"260\" x2=\"300\" y2=\"260\" stroke=\"#9BD27A\" stroke-width=\"6\"/><line x1=\"640\" y1=\"260\" x2=\"920\" y2=\"260\" stroke=\"#9BD27A\" stroke-width=\"6\"/><rect x=\"300\" y=\"260\" width=\"340\" height=\"110\" fill=\"url(#clay)\" clip-path=\"url(#lift0)\"/><line x1=\"300\" y1=\"260\" x2=\"640\" y2=\"260\" stroke=\"#9BD27A\" stroke-width=\"6\" clip-path=\"url(#lift0)\"/><rect x=\"300\" y=\"370\" width=\"340\" height=\"110\" fill=\"url(#clay)\" clip-path=\"url(#lift1)\"/><rect x=\"300\" y=\"480\" width=\"340\" height=\"110\" fill=\"url(#clay)\" clip-path=\"url(#lift2)\"/></g><g style=\"animation:fadeIn 0.4s cubic-bezier(.2,.8,.2,1) 0.1s 1 normal both;\"><rect x=\"24\" y=\"112\" width=\"214\" height=\"148\" fill=\"#1D3B60\" stroke=\"#E8F3FF\" stroke-width=\"4\"/><path d=\"M14,112 L248,112\" stroke=\"#E8F3FF\" stroke-width=\"6\" stroke-linecap=\"round\"/><rect x=\"20\" y=\"258\" width=\"222\" height=\"16\" fill=\"#6D7C8C\" stroke=\"#E8F3FF\" stroke-width=\"3\"/><rect x=\"44\" y=\"130\" width=\"30\" height=\"36\" rx=\"3\" fill=\"#FFE58A\" opacity=\".85\"/><rect x=\"94\" y=\"130\" width=\"30\" height=\"36\" rx=\"3\" fill=\"#FFE58A\" opacity=\".85\"/><rect x=\"144\" y=\"130\" width=\"30\" height=\"36\" rx=\"3\" fill=\"#FFE58A\" opacity=\".85\"/><rect x=\"194\" y=\"130\" width=\"30\" height=\"36\" rx=\"3\" fill=\"#FFE58A\" opacity=\".85\"/><rect x=\"44\" y=\"188\" width=\"30\" height=\"36\" rx=\"3\" fill=\"#FFE58A\" opacity=\".85\"/><rect x=\"94\" y=\"188\" width=\"30\" height=\"36\" rx=\"3\" fill=\"#FFE58A\" opacity=\".85\"/><rect x=\"144\" y=\"188\" width=\"30\" height=\"36\" rx=\"3\" fill=\"#FFE58A\" opacity=\".85\"/><rect x=\"194\" y=\"188\" width=\"30\" height=\"36\" rx=\"3\" fill=\"#FFE58A\" opacity=\".85\"/></g><g class=\"tb\" style=\"animation:popIn 0.35s cubic-bezier(.2,.9,.3,1.3) 0.5s 1 normal both,fadeOut 0.3s ease-in 3.7s 1 normal forwards;\"><text x=\"131\" y=\"72\" font-family=\"Vaz\" font-size=\"32\" font-weight=\"800\" fill=\"#E8F3FF\" text-anchor=\"middle\" direction=\"rtl\" class=\"halo\">ساختمون همسایه</text><text x=\"131\" y=\"100.8\" font-family=\"Pop\" font-size=\"23\" font-weight=\"600\" fill=\"#E8F3FF\" text-anchor=\"middle\" class=\"halo\">Neighbouring building</text></g><path d=\"M300,315 L77.8,374.5\" fill=\"none\" stroke=\"#C9D3DC\" stroke-width=\"16\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"stroke-dasharray:1;animation:drawIn 0.25s ease-out 5.95s 1 normal both;opacity:.75\" pathLength=\"1\"></path><path d=\"M300,315 L77.8,374.5\" fill=\"none\" stroke=\"#E7EEF5\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"stroke-dasharray:1;animation:drawIn 0.6s ease-out 5.4s 1 normal both;\" pathLength=\"1\"></path><rect x=\"300\" y=\"260\" width=\"14\" height=\"110\" fill=\"#AEB8C2\" stroke=\"#E8F3FF\" stroke-width=\"3\" class=\"gd\" style=\"animation:growUp 0.6s ease-out 7.6s 1 normal both;\"/><g style=\"animation:popIn 0.35s cubic-bezier(.2,.9,.3,1.3) 6s 1 normal both;\"><rect x=\"308\" y=\"302\" width=\"10\" height=\"26\" rx=\"2\" fill=\"#9FB3C8\" stroke=\"#0A2140\" stroke-width=\"2\"/></g><path d=\"M300,425 L77.8,484.5\" fill=\"none\" stroke=\"#C9D3DC\" stroke-width=\"16\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"stroke-dasharray:1;animation:drawIn 0.25s ease-out 13s 1 normal both;opacity:.75\" pathLength=\"1\"></path><path d=\"M300,425 L77.8,484.5\" fill=\"none\" stroke=\"#E7EEF5\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"stroke-dasharray:1;animation:drawIn 0.6s ease-out 12.45s 1 normal both;\" pathLength=\"1\"></path><rect x=\"300\" y=\"370\" width=\"14\" height=\"110\" fill=\"#AEB8C2\" stroke=\"#E8F3FF\" stroke-width=\"3\" class=\"gd\" style=\"animation:growUp 0.6s ease-out 13.2s 1 normal both;\"/><g style=\"animation:popIn 0.35s cubic-bezier(.2,.9,.3,1.3) 13.05s 1 normal both;\"><rect x=\"308\" y=\"412\" width=\"10\" height=\"26\" rx=\"2\" fill=\"#9FB3C8\" stroke=\"#0A2140\" stroke-width=\"2\"/></g><path d=\"M300,535 L77.8,594.5\" fill=\"none\" stroke=\"#C9D3DC\" stroke-width=\"16\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"stroke-dasharray:1;animation:drawIn 0.25s ease-out 17.1s 1 normal both;opacity:.75\" pathLength=\"1\"></path><path d=\"M300,535 L77.8,594.5\" fill=\"none\" stroke=\"#E7EEF5\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"stroke-dasharray:1;animation:drawIn 0.6s ease-out 16.55s 1 normal both;\" pathLength=\"1\"></path><rect x=\"300\" y=\"480\" width=\"14\" height=\"110\" fill=\"#AEB8C2\" stroke=\"#E8F3FF\" stroke-width=\"3\" class=\"gd\" style=\"animation:growUp 0.6s ease-out 17.3s 1 normal both;\"/><g style=\"animation:popIn 0.35s cubic-bezier(.2,.9,.3,1.3) 17.15s 1 normal both;\"><rect x=\"308\" y=\"522\" width=\"10\" height=\"26\" rx=\"2\" fill=\"#9FB3C8\" stroke=\"#0A2140\" stroke-width=\"2\"/></g><g class=\"tb\" style=\"animation:popIn 0.35s cubic-bezier(.2,.9,.3,1.3) 5.9s 1 normal both,fadeOut 0.3s ease-in 7.2s 1 normal forwards;\"><text x=\"470\" y=\"300\" font-family=\"Vaz\" font-size=\"34\" font-weight=\"800\" fill=\"#E7EEF5\" text-anchor=\"middle\" direction=\"rtl\" class=\"halo\">میخ (نیل) + دوغاب</text><text x=\"470\" y=\"330.6\" font-family=\"Pop\" font-size=\"24\" font-weight=\"600\" fill=\"#E7EEF5\" text-anchor=\"middle\" class=\"halo\">Soil nail + grout</text></g><g style=\"animation:fadeIn 0.35s cubic-bezier(.2,.8,.2,1) 6s 1 normal both,fadeOut 0.3s ease-in 7.2s 1 normal forwards;\"><line x1=\"372\" y1=\"318\" x2=\"332.0\" y2=\"318.0\" stroke=\"#E7EEF5\" stroke-width=\"4\" stroke-linecap=\"round\"/><polygon points=\"318,318 332.0,309.3 332.0,326.7\" fill=\"#E7EEF5\" stroke=\"#E7EEF5\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g class=\"tb\" style=\"animation:popIn 0.35s cubic-bezier(.2,.9,.3,1.3) 7.8s 1 normal both,fadeOut 0.3s ease-in 9.4s 1 normal forwards;\"><text x=\"470\" y=\"300\" font-family=\"Vaz\" font-size=\"34\" font-weight=\"800\" fill=\"#D7DEE6\" text-anchor=\"middle\" direction=\"rtl\" class=\"halo\">مش + شاتکریت</text><text x=\"470\" y=\"330.6\" font-family=\"Pop\" font-size=\"24\" font-weight=\"600\" fill=\"#D7DEE6\" text-anchor=\"middle\" class=\"halo\">Mesh + shotcrete</text></g><g style=\"animation:fadeIn 0.35s cubic-bezier(.2,.8,.2,1) 7.9s 1 normal both,fadeOut 0.3s ease-in 9.4s 1 normal forwards;\"><line x1=\"384\" y1=\"318\" x2=\"330.0\" y2=\"318.0\" stroke=\"#D7DEE6\" stroke-width=\"4\" stroke-linecap=\"round\"/><polygon points=\"316,318 330.0,309.3 330.0,326.7\" fill=\"#D7DEE6\" stroke=\"#D7DEE6\" stroke-width=\"2\" stroke-linejoin=\"round\"/></g><g style=\"animation:fadeIn 0.4s cubic-bezier(.2,.8,.2,1) 3.2s 1 normal both,fadeOut 0.3s ease-in 5.4s 1 normal forwards;\"><line x1=\"610\" y1=\"260\" x2=\"610\" y2=\"370\" stroke=\"#FFD43B\" stroke-width=\"3\"/><line x1=\"622.0\" y1=\"260.0\" x2=\"598.0\" y2=\"260.0\" stroke=\"#FFD43B\" stroke-width=\"3\"/><line x1=\"622.0\" y1=\"370.0\" x2=\"598.0\" y2=\"370.0\" stroke=\"#FFD43B\" stroke-width=\"3\"/><line x1=\"610\" y1=\"315\" x2=\"610.0\" y2=\"274.0\" stroke=\"#FFD43B\" stroke-width=\"3\" stroke-linecap=\"round\"/><polygon points=\"610,260 618.7,274.0 601.3,274.0\" fill=\"#FFD43B\" stroke=\"#FFD43B\" stroke-width=\"2\" stroke-linejoin=\"round\"/><line x1=\"610\" y1=\"315\" x2=\"610.0\" y2=\"356.0\" stroke=\"#FFD43B\" stroke-width=\"3\" stroke-linecap=\"round\"/><polygon points=\"610,370 601.3,356.0 618.7,356.0\" fill=\"#FFD43B\" stroke=\"#FFD43B\" stroke-width=\"2\" stroke-linejoin=\"round\"/><text x=\"610\" y=\"324.8\" font-family=\"Vaz\" font-size=\"28\" font-weight=\"800\" fill=\"#FFD43B\" text-anchor=\"middle\" direction=\"rtl\" class=\"halo\">۱ تا ۲ متر</text></g><g style=\"animation:fadeIn 0.5s cubic-bezier(.2,.8,.2,1) 18.2s 1 normal both;\"><path d=\"M300,264 L60,264 L60,612 L300,590 Z\" fill=\"rgba(46,229,157,.16)\" stroke=\"#2EE59D\" stroke-width=\"4\" stroke-dasharray=\"14 10\"/></g><g class=\"tb\" style=\"animation:popIn 0.35s cubic-bezier(.2,.9,.3,1.3) 18.6s 1 normal both;\"><text x=\"180\" y=\"470\" font-family=\"Vaz\" font-size=\"34\" font-weight=\"800\" fill=\"#2EE59D\" text-anchor=\"middle\" direction=\"rtl\" class=\"halo\">خاک یکپارچه‌شده</text><text x=\"180\" y=\"500.6\" font-family=\"Pop\" font-size=\"24\" font-weight=\"600\" fill=\"#2EE59D\" text-anchor=\"middle\" class=\"halo\">One nailed soil block</text></g><g class=\"tb\" style=\"animation:popIn 0.35s cubic-bezier(.2,.9,.3,1.3) 19.2s 1 normal both;\"><text x=\"470\" y=\"470\" font-family=\"Vaz\" font-size=\"36\" font-weight=\"800\" fill=\"#BDF5DD\" text-anchor=\"middle\" direction=\"rtl\" class=\"halo\">گود پایدار</text><text x=\"470\" y=\"502.4\" font-family=\"Pop\" font-size=\"25\" font-weight=\"600\" fill=\"#BDF5DD\" text-anchor=\"middle\" class=\"halo\">Stable excavation</text></g><g style=\"animation:fadeIn 0.4s cubic-bezier(.2,.8,.2,1) 0.2s 1 normal both;\"><rect x=\"650\" y=\"228\" width=\"232\" height=\"32\" rx=\"16\" fill=\"#2E3B4E\" stroke=\"#0A2140\" stroke-width=\"4\"/><circle cx=\"670\" cy=\"244\" r=\"10\" fill=\"#55667A\" stroke=\"#0A2140\" stroke-width=\"2\"/><circle cx=\"712\" cy=\"244\" r=\"10\" fill=\"#55667A\" stroke=\"#0A2140\" stroke-width=\"2\"/><circle cx=\"754\" cy=\"244\" r=\"10\" fill=\"#55667A\" stroke=\"#0A2140\" stroke-width=\"2\"/><circle cx=\"796\" cy=\"244\" r=\"10\" fill=\"#55667A\" stroke=\"#0A2140\" stroke-width=\"2\"/><circle cx=\"838\" cy=\"244\" r=\"10\" fill=\"#55667A\" stroke=\"#0A2140\" stroke-width=\"2\"/><circle cx=\"864\" cy=\"244\" r=\"10\" fill=\"#55667A\" stroke=\"#0A2140\" stroke-width=\"2\"/><rect x=\"680\" y=\"170\" width=\"190\" height=\"58\" rx=\"6\" fill=\"#F2C230\" stroke=\"#0A2140\" stroke-width=\"4\"/><rect x=\"832\" y=\"178\" width=\"56\" height=\"48\" rx=\"8\" fill=\"#D9A91A\" stroke=\"#0A2140\" stroke-width=\"4\"/><path d=\"M690,170 L690,112 L742,112 L758,140 L758,170 Z\" fill=\"#F2C230\" stroke=\"#0A2140\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M698,120 L738,120 L750,142 L698,142 Z\" fill=\"#9FD3FF\" stroke=\"#0A2140\" stroke-width=\"3\" stroke-linejoin=\"round\"/><g transform=\"rotate(36.07 770 180)\"><animateTransform attributeName=\"transform\" type=\"rotate\" begin=\"0s\" dur=\"23.6s\" fill=\"freeze\" values=\"36.07 770 180;36.07 770 180;15.74 770 180;12.99 770 180;57.54 770 180;19.07 770 180;17.44 770 180;57.54 770 180;13.03 770 180;20.71 770 180;57.54 770 180;36.07 770 180;36.07 770 180;-4.99 770 180;-7.49 770 180;57.54 770 180;-0.75 770 180;-3.61 770 180;57.54 770 180;-6.16 770 180;0.72 770 180;57.54 770 180;36.07 770 180;36.07 770 180;-23.53 770 180;-25.02 770 180;57.54 770 180;-21.24 770 180;-22.17 770 180;57.54 770 180;-35.54 770 180;-19.47 770 180;57.54 770 180;36.07 770 180;36.07 770 180\" keyTimes=\"0.00000;0.11441;0.12712;0.14068;0.15042;0.16314;0.17669;0.18644;0.19915;0.21271;0.22246;0.23517;0.41525;0.42797;0.44153;0.45127;0.46398;0.47754;0.48729;0.50000;0.51356;0.52331;0.53602;0.58898;0.60169;0.61525;0.62500;0.63771;0.65127;0.66102;0.67373;0.68729;0.69703;0.70975;1.00000\" calcMode=\"spline\" keySplines=\".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1\"/><path d=\"M770.0,167.0 C680.0,140.0 530.0,150.0 450.0,172.0 L450.0,188.0 C530.0,168.0 680.0,164.0 770.0,193.0 Z\" fill=\"#F2C230\" stroke=\"#0A2140\" stroke-width=\"4\" stroke-linejoin=\"round\"/><g transform=\"rotate(-56.01 450 180)\"><animateTransform attributeName=\"transform\" type=\"rotate\" begin=\"0s\" dur=\"23.6s\" fill=\"freeze\" values=\"-56.01 450 180;-56.01 450 180;-37.89 450 180;-46.04 450 180;-57.93 450 180;-12.98 450 180;-38.94 450 180;-57.93 450 180;16.52 450 180;-16.15 450 180;-57.93 450 180;-56.01 450 180;-56.01 450 180;-19.74 450 180;-27.01 450 180;-57.93 450 180;2.96 450 180;-21.27 450 180;-57.93 450 180;34.10 450 180;-0.71 450 180;-57.93 450 180;-56.01 450 180;-56.01 450 180;4.82 450 180;-2.46 450 180;-57.93 450 180;28.26 450 180;2.77 450 180;-57.93 450 180;79.24 450 180;23.50 450 180;-57.93 450 180;-56.01 450 180;-56.01 450 180\" keyTimes=\"0.00000;0.11441;0.12712;0.14068;0.15042;0.16314;0.17669;0.18644;0.19915;0.21271;0.22246;0.23517;0.41525;0.42797;0.44153;0.45127;0.46398;0.47754;0.48729;0.50000;0.51356;0.52331;0.53602;0.58898;0.60169;0.61525;0.62500;0.63771;0.65127;0.66102;0.67373;0.68729;0.69703;0.70975;1.00000\" calcMode=\"spline\" keySplines=\".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1\"/><path d=\"M443.0,180.0 L457.0,180.0 L455.0,440.0 L445.0,440.0 Z\" fill=\"#D9A91A\" stroke=\"#0A2140\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M438.0,432.0 Q480.0,436.0 472.0,470.0 L440.0,472.0 Z\" fill=\"#3A4A5E\" stroke=\"#0A2140\" stroke-width=\"4\" stroke-linejoin=\"round\"/><circle cx=\"450.0\" cy=\"180.0\" r=\"7\" fill=\"#9FB3C8\" stroke=\"#0A2140\" stroke-width=\"3\"/></g></g><circle cx=\"770.0\" cy=\"180.0\" r=\"9\" fill=\"#9FB3C8\" stroke=\"#0A2140\" stroke-width=\"3\"/></g><g class=\"tb\" style=\"animation:popIn 0.35s cubic-bezier(.2,.9,.3,1.3) 0.7s 1 normal both,fadeOut 0.3s ease-in 3.7s 1 normal forwards;\"><text x=\"820\" y=\"62\" font-family=\"Vaz\" font-size=\"32\" font-weight=\"800\" fill=\"#FFE58A\" text-anchor=\"middle\" direction=\"rtl\" class=\"halo\">بیل مکانیکی</text><text x=\"820\" y=\"90.8\" font-family=\"Pop\" font-size=\"23\" font-weight=\"600\" fill=\"#FFE58A\" text-anchor=\"middle\" class=\"halo\">Excavator</text></g></g>",
+ "svg_h": 720,
+ "steps": [
+  {
+   "t": 0.6,
+   "fa": "کنار یه ساختمون می‌خوایم گود عمیق بکنیم",
+   "en": "We need a deep pit right next to a building"
+  },
+  {
+   "t": 2.6,
+   "fa": "اول فقط ۱ تا ۲ متر خاکبرداری می‌کنیم",
+   "en": "First, dig only 1–2 m"
+  },
+  {
+   "t": 5.2,
+   "fa": "میخ‌ها رو مایل توی خاک می‌کاریم و دوغاب می‌زنیم",
+   "en": "Drill in inclined soil nails and grout them"
+  },
+  {
+   "t": 7.4,
+   "fa": "روی دیواره مش می‌بندیم و شاتکریت می‌زنیم",
+   "en": "Fix mesh on the face and spray shotcrete"
+  },
+  {
+   "t": 9.6,
+   "fa": "و همین‌طور مرحله به مرحله می‌ریم پایین",
+   "en": "Then repeat, lift by lift, going down"
+  },
+  {
+   "t": 18.0,
+   "fa": "میخ‌ها خاک پشت دیواره رو یکپارچه نگه می‌دارن",
+   "en": "The nails bind the soil into one block"
+  },
+  {
+   "t": 20.6,
+   "fa": ":warning: اول کل گود رو خالی نکنید؛ گام‌به‌گام!",
+   "en": "Never dig the full depth first: step by step!"
+  }
+ ],
+ "dur": 23.6,
+ "sfx": [
+  [
+   0.2,
+   "rumble",
+   0.5
+  ],
+  [
+   3.3200000000000003,
+   "boop",
+   0.25
+  ],
+  [
+   4.17,
+   "boop",
+   0.25
+  ],
+  [
+   5.0200000000000005,
+   "boop",
+   0.25
+  ],
+  [
+   10.42,
+   "boop",
+   0.25
+  ],
+  [
+   11.27,
+   "boop",
+   0.25
+  ],
+  [
+   12.12,
+   "boop",
+   0.25
+  ],
+  [
+   14.52,
+   "boop",
+   0.25
+  ],
+  [
+   15.37,
+   "boop",
+   0.25
+  ],
+  [
+   16.22,
+   "boop",
+   0.25
+  ],
+  [
+   5.4,
+   "drill",
+   0.4
+  ],
+  [
+   12.45,
+   "drill",
+   0.4
+  ],
+  [
+   16.55,
+   "drill",
+   0.4
+  ],
+  [
+   7.6,
+   "spray",
+   0.45
+  ],
+  [
+   13.2,
+   "spray",
+   0.45
+  ],
+  [
+   17.3,
+   "spray",
+   0.45
+  ],
+  [
+   18.2,
+   "pop",
+   0.3
+  ],
+  [
+   19.2,
+   "ding",
+   0.3
+  ],
+  [
+   20.6,
+   "pop",
+   0.3
+  ]
+ ],
+ "cover": 8.4,
+ "topic": "soil nailing excavation"
+}
