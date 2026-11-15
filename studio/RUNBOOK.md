@@ -41,7 +41,13 @@ Two scheduled jobs use this file: the **weekly run** (Thursdays, makes and sched
   (providers instagram + youtube). `plan.py`, `rostam/plan_parts.py` and `cartoon/plan_parts.py` add it, with a title,
   tags and settings from `youtube.py`.
   Stories are images and stay Instagram-only. The posts made before 14 Nov were put on YouTube separately
-  (YouTube-only posts, spread over 14–19 Nov).
+  (YouTube-only posts, spread over 14–20 Nov; `growth/yt_backlog.json` maps their Metricool ids to tags).
+  **Playlists** run by themselves: the Apps Script project «english_dya YouTube playlists» (in the channel's Google
+  account; its code is copied in `youtube_playlists.gs`) puts every new public Short into a playlist once an hour, by
+  its tags: pronunciation (no matching tag), mistakes & vocab (`english mistakes`), quotes (`english quotes`), Rostam &
+  Sohrab (`rostam and sohrab`), and one playlist per cartoon series (its own tag, e.g. `babak khorramdin`; made when
+  the series' first part is out). Keep those tags in `youtube.py` / `cartoon/<series>/parts.json`. A new kind of video
+  or series needs a row in the script, which only the owner's browser can change: ask for it in the report.
 - Captions are **Persian only**, informal spoken style (می‌گن، نمیشه، خونده نمیشه), with hashtags (added automatically).
 - Reels and trial reels carry Instagram's AI label (the voice is synthetic); quote reels don't. `plan.py` sets this.
 - The 7-part story series (`make_story.py`, `story_render.py`) is **paused by the owner**. Don't make or post episodes.
@@ -185,18 +191,29 @@ Monitoring only: no new content. Work in `studio/` (no setup needed). "Now" is t
      with «🎬 قسمت … از داستان <series_fa>» of a series in `cartoon/queue.json`, e.g. بابک خرمدین) `<series>NN`
      (`babak03`, `zahhak01` …) + kind `series`, anything else kind `promo` with a short tag
      (e.g. `presenter`).
-   - Write them to `build/today.json` in the format at the top of `growth/update.py` and run
-     `python3 growth/update.py build/today.json`. Its report has the month-to-date gain against the 5,000 goal.
+   - YouTube channel, from 8 days ago to today: `YTEV01` subscribers, `YTEV02` views, `YTEV05` gained, `YTEV06` lost
+     (rows `[subscribers, views, gained, lost, "YYYYMMDD"]`). YouTube's numbers come in 2–3 days late: the newest days
+     often have subscribers only.
+   - YouTube Shorts published in the last 15 days: `YTVP02` published (yyyyMMddHHmmss, UTC), `YTVP05` url
+     (`watch?v=<id>`), `YTVP06` views, `YTVP09` likes, `YTVP11` comments, `YTVP12` shares, `YTVP08` average view
+     duration (s), `YTVP07` watch minutes. Rows can be missing or null for 2–3 days; log what is there. Tag each Short
+     like its Instagram twin: find the post whose YouTube `publicUrl` (`/shorts/<id>`) has the same id; a post with
+     both networks gets its Instagram reel's tag and kind; a YouTube-only post (14–20 Nov) gets them from
+     `growth/yt_backlog.json` by the post's Metricool id.
+   - Write them to `build/today.json` in the format at the top of `growth/update.py` (`days`, `reels`, `yt_days`,
+     `yt_shorts`) and run `python3 growth/update.py build/today.json`. Its report has the month-to-date gain against
+     the 5,000 goal, then YouTube: subscribers, views a day and every Short next to the same video's Instagram views.
 
-3. **Learn**: update `growth/learnings.md` (keep it under ~40 lines, keep its sections): the best and worst reels of the
-   last 14 days with theme/format and numbers, how trial reels compare with daily reels, and 1–3 concrete instructions
-   for the next weekly run. Only claim what the numbers show. Add a line to "Changes made" only if something changed.
+3. **Learn**: update `growth/learnings.md` (keep it under ~50 lines, keep its sections): the best and worst reels of the
+   last 14 days with theme/format and numbers, how trial reels compare with daily reels, how each kind does on YouTube
+   compared with Instagram and the subscriber trend, and 1–3 concrete instructions for the next weekly run. Only claim
+   what the numbers show. Add a line to "Changes made" only if something changed.
 
 4. **Save**: commit `growth/` to `main` (`git pull --rebase origin main` first) and push.
 
-5. **Message** (the final reply goes to Salar's phone; English, at most 4 short lines): followers and yesterday's change,
-   month-to-date vs +5,000 and the daily pace needed, yesterday's best reel (views, view rate), and any post that failed
-   or was re-scheduled.
+5. **Message** (the final reply goes to Salar's phone; English, at most 5 short lines): followers and yesterday's change,
+   month-to-date vs +5,000 and the daily pace needed, yesterday's best reel (views, view rate), YouTube subscribers
+   and their change with the best recent Short (views), and any post that failed or was re-scheduled.
 
 ## Rules
 

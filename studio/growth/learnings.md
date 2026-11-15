@@ -1,6 +1,6 @@
 # What works on @english_dya
 
-Written by the daily check, read by the weekly run before it writes a week. Keep it under ~40 lines.
+Written by the daily check, read by the weekly run before it writes a week. Keep it under ~50 lines.
 Goal: **+5,000 followers a month** (≈ +167 a day net). Numbers: `python3 growth/update.py`.
 
 ## Where we are
@@ -27,13 +27,30 @@ Goal: **+5,000 followers a month** (≈ +167 a day net). Numbers: `python3 growt
   yourself» 379 at ~17 h. View rate lowest (23–25%), watch 3.0–4.3 s; shares ≤1 each.
 - Promos: presenter 640 views, presenter2 536 (7 saves, 3 shares). Viewers leave early: watch 3–6 s, <45% past 3 s.
 
+## YouTube (every video as a Short since 14 Nov 18:10 Rome)
+- The channel was dormant before (1–17 views a day, 1 new subscriber from 20 Oct to 12 Nov). First ~26 h: 17 Shorts,
+  4,007 views in 48 h, subscribers 117 → 136 (Studio, 15 Nov 20:00). 97% of views come from the Shorts feed and 93% of
+  viewers are new: YouTube shows the videos to strangers, which Instagram reels mostly don't.
+- Pronunciation reels win there too: day04 th 963 views (IG 1,855), day01 533 (IG 931); 26–44% of feed viewers stayed
+  to watch, and 8 of the 9 subscribers of 14 Nov came from them (1 from the presenter promo).
+- Quote reels are swiped away on YouTube (9–13% stayed; 102–137 views vs 379–791 on IG). Trial reels 71–206 views,
+  about what they get on IG (trial10: 11% stayed). Rostam parts hold best (49% stayed) but run 2:09–2:37, so the feed
+  shows them little (18–81 views); their playlist is where they get watched.
+- Overall 69% of feed viewers swiped away rather than stayed to watch (Studio, 14 Nov).
+
 ## Changes made
 - 2026-11-08: trial reels started (one a day at 19:00 Tehran, alternating "mistakes" and "vocab"), shown to non-followers.
 - 2026-11-12: quote reels started (23:00 Tehran, music only).
+- 2026-11-14: every video also goes to YouTube as a Short (same Metricool post); the 53 earlier videos were posted
+  there as YouTube-only copies over 14–20 Nov.
+- 2026-11-15: YouTube playlists (pronunciation, mistakes & vocab, quotes, Rostam & Sohrab; one per later series),
+  filled automatically every hour.
 - From day 12 (14 Nov): daily reel v2 — no text-only intro; the first word is on screen and spoken from frame 0; the hook
   is a banner on top; 19.6 s instead of 26 s. Two trial reels a day (vocab 15:00, mistakes 19:00).
 
 ## For the next weekly run
+- Pronunciation themes are the best format on both platforms (most views and all YouTube subscribers so far): keep the
+  daily reel on sounds Iranians replace with Persian ones.
 - Lean daily reel themes toward everyday words with a sound Iranians replace (like day04); avoid long academic words.
 - Silent letters: six of eleven themes and day11 started slowest yet — at most one in the next week, ideally none.
 - Odd-vowel words (day10: women, busy) gave the longest daily-reel watch (5.7 s): use more odd-vowel themes.

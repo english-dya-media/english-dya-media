@@ -1,0 +1,217 @@
+{
+ "note": "YouTube-only copies of videos first posted on Instagram before 14 Nov 2026 (made 14 Nov, published 14-20 Nov). Metricool post id -> tag/kind, so the daily check can tag these Shorts like their Instagram twins. Posts from 21 Nov on carry both networks and take the Instagram post's tag.",
+ "posts": {
+  "428150270": {
+   "tag": "day04",
+   "kind": "reel"
+  },
+  "428150438": {
+   "tag": "day12",
+   "kind": "reel"
+  },
+  "428150528": {
+   "tag": "rostam01",
+   "kind": "series"
+  },
+  "428150612": {
+   "tag": "day01",
+   "kind": "reel"
+  },
+  "428150717": {
+   "tag": "quote12",
+   "kind": "quote"
+  },
+  "428150789": {
+   "tag": "quote10",
+   "kind": "quote"
+  },
+  "428150864": {
+   "tag": "trial10",
+   "kind": "trial"
+  },
+  "428150961": {
+   "tag": "day03",
+   "kind": "reel"
+  },
+  "428151030": {
+   "tag": "presenter_girl",
+   "kind": "promo"
+  },
+  "428151209": {
+   "tag": "day02",
+   "kind": "reel"
+  },
+  "428151267": {
+   "tag": "trial11",
+   "kind": "trial"
+  },
+  "428151341": {
+   "tag": "trial13a",
+   "kind": "trial"
+  },
+  "428151443": {
+   "tag": "quote11",
+   "kind": "quote"
+  },
+  "428151597": {
+   "tag": "rostam02",
+   "kind": "series"
+  },
+  "428151683": {
+   "tag": "trial13b",
+   "kind": "trial"
+  },
+  "428151826": {
+   "tag": "rostam03",
+   "kind": "series"
+  },
+  "428151918": {
+   "tag": "day13",
+   "kind": "reel"
+  },
+  "428151987": {
+   "tag": "quote13",
+   "kind": "quote"
+  },
+  "428152192": {
+   "tag": "day10",
+   "kind": "reel"
+  },
+  "428152246": {
+   "tag": "trial07",
+   "kind": "trial"
+  },
+  "428152345": {
+   "tag": "day05",
+   "kind": "reel"
+  },
+  "428152404": {
+   "tag": "trial14a",
+   "kind": "trial"
+  },
+  "428152476": {
+   "tag": "day07",
+   "kind": "reel"
+  },
+  "428152587": {
+   "tag": "rostam04",
+   "kind": "series"
+  },
+  "428152648": {
+   "tag": "trial14b",
+   "kind": "trial"
+  },
+  "428152732": {
+   "tag": "day14",
+   "kind": "reel"
+  },
+  "428152807": {
+   "tag": "quote14",
+   "kind": "quote"
+  },
+  "428152974": {
+   "tag": "trial12a",
+   "kind": "trial"
+  },
+  "428153052": {
+   "tag": "day09",
+   "kind": "reel"
+  },
+  "428153114": {
+   "tag": "trial09",
+   "kind": "trial"
+  },
+  "428153184": {
+   "tag": "trial15a",
+   "kind": "trial"
+  },
+  "428153253": {
+   "tag": "day06",
+   "kind": "reel"
+  },
+  "428153317": {
+   "tag": "trial15b",
+   "kind": "trial"
+  },
+  "428153400": {
+   "tag": "day15",
+   "kind": "reel"
+  },
+  "428153467": {
+   "tag": "quote15",
+   "kind": "quote"
+  },
+  "428153523": {
+   "tag": "presenter_man",
+   "kind": "promo"
+  },
+  "428153676": {
+   "tag": "trial06",
+   "kind": "trial"
+  },
+  "428153750": {
+   "tag": "day08",
+   "kind": "reel"
+  },
+  "428153791": {
+   "tag": "trial16a",
+   "kind": "trial"
+  },
+  "428153866": {
+   "tag": "trial12b",
+   "kind": "trial"
+  },
+  "428153928": {
+   "tag": "trial16b",
+   "kind": "trial"
+  },
+  "428153976": {
+   "tag": "day16",
+   "kind": "reel"
+  },
+  "428154051": {
+   "tag": "quote16",
+   "kind": "quote"
+  },
+  "428154098": {
+   "tag": "trial08",
+   "kind": "trial"
+  },
+  "428154158": {
+   "tag": "day11",
+   "kind": "reel"
+  },
+  "428154301": {
+   "tag": "trial17a",
+   "kind": "trial"
+  },
+  "428154374": {
+   "tag": "trial17b",
+   "kind": "trial"
+  },
+  "428154447": {
+   "tag": "day17",
+   "kind": "reel"
+  },
+  "428154519": {
+   "tag": "quote17",
+   "kind": "quote"
+  },
+  "428154617": {
+   "tag": "trial18a",
+   "kind": "trial"
+  },
+  "428154666": {
+   "tag": "trial18b",
+   "kind": "trial"
+  },
+  "428154744": {
+   "tag": "day18",
+   "kind": "reel"
+  },
+  "428154796": {
+   "tag": "quote18",
+   "kind": "quote"
+  }
+ }
+}
