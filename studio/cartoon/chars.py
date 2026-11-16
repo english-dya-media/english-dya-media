@@ -618,6 +618,20 @@ def prop(c, name, x, y, ang, t, S=None):
     if name == "pick":       # pickaxe: the handle runs from the fist (+y) to the iron head
         return (g + f'<path d="M 0 -40 L 0 300" stroke="#6a4424" stroke-width="{c.sw(12)}"/>'
                 f'<path d="M -130 330 C -60 290, 60 290, 130 330 L 120 300 C 60 266, -60 266, -120 300 Z" fill="#8e949e" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>')
+    if name == "falcon":     # a falcon perched on a leather-gloved fist, facing right (+x)
+        return (g + f'<path d="M -46 -20 C -50 30, -40 60, -30 90 L 34 90 C 44 60, 50 30, 44 -20 Z" fill="#8a5a2a" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+                f'<path d="M -40 70 L 40 70" stroke="#5a3a1a" stroke-width="{c.sw(5)}"/>'
+                f'<path d="M -18 -62 C -40 0, -64 70, -78 140 L -46 146 C -30 80, -6 20, 10 -40 Z" fill="#5a4a3e" stroke="{OUT}" stroke-width="{c.sw(2.2)}"/>'
+                f'<ellipse cx="0" cy="-118" rx="50" ry="88" fill="#6a5a4c" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/>'
+                f'<path d="M 14 -180 C 46 -150, 50 -80, 30 -40 C 14 -24, -2 -40, 2 -80 Z" fill="#efe4cc" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<path d="M 18 -150 l 16 4 M 16 -126 l 20 4 M 14 -102 l 18 4 M 14 -78 l 14 3" stroke="#8a7a62" stroke-width="{c.sw(3)}"/>'
+                f'<path d="M -44 -150 C -64 -100, -56 -40, -30 -10 C -10 -30, -6 -110, -20 -170 Z" fill="#4a3e34" stroke="{OUT}" stroke-width="{c.sw(2.2)}"/>'
+                f'<circle cx="8" cy="-214" r="40" fill="#5a4a3e" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/>'
+                f'<path d="M 18 -236 C 40 -226, 46 -196, 30 -180 C 20 -190, 12 -204, 14 -222 Z" fill="#efe4cc"/>'
+                f'<path d="M 22 -214 C 26 -200, 26 -188, 20 -180" stroke="#2a221c" stroke-width="{c.sw(6)}" fill="none" stroke-linecap="round"/>'
+                f'<path d="M 42 -222 C 62 -222, 70 -210, 62 -196 L 46 -206 Z" fill="#e0b040" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<circle cx="26" cy="-222" r="8" fill="#120a06"/><circle cx="28" cy="-224" r="2.6" fill="#fff"/>'
+                f'<path d="M -12 -30 l -6 22 M 8 -30 l 4 22" stroke="#e0b040" stroke-width="{c.sw(5)}" stroke-linecap="round"/></g>')
     if name == "drumstick":
         return g + f'<path d="M 0 -20 L 0 170" stroke="#6a4424" stroke-width="{c.sw(9)}" stroke-linecap="round"/><circle cx="0" cy="176" r="15" fill="#d8c8a8" stroke="{OUT}" stroke-width="{c.sw(2)}"/></g>'
     return ""
@@ -812,24 +826,43 @@ def horse(c, col="#6b4426", mane="#1d120c", phase=0.0, walk=False, t=0.0, head_b
         out += f'<path d="M -80 -400 L 100 -400 L 110 -300 L -90 -300 Z" fill="{blanket}" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
     return out
 
-def elephant(c, phase=0.0, t=0.0, blanket="#7a1a1a"):
-    """side view facing left; origin at the ground under the belly; ~ 900 wide, 760 tall"""
+def kneel_drop(kneel):
+    """how far (elephant units) a kneeling elephant's back comes down; riders and howdahs move with it"""
+    return 300.0 * max(0.0, min(1.0, kneel))
+
+def elephant(c, phase=0.0, t=0.0, blanket="#7a1a1a", kneel=0.0):
+    """side view facing left; origin at the ground under the belly; ~ 900 wide, 760 tall.
+    kneel 0..1: the body comes down by kneel_drop(kneel) on folded legs (knees on the ground, feet tucked back, trunk on the ground)"""
     col = "#7d7a80"; dark = "#5d5a62"
     out = ""
+    k = max(0.0, min(1.0, kneel)); D = kneel_drop(k)
     for i, (lx, ph) in enumerate([(-260, math.pi), (220, 0.0), (-200, 0.0), (280, math.pi)]):
-        a = 10 * math.sin(phase + ph)
+        a = 10 * math.sin(phase + ph) * (1 - k)
         far = i < 2
         r = math.radians(a)
         x1 = lx + math.sin(r) * 260
         fill = dark if far else col
-        out += (f'<path d="M {fmt(lx-58)} -420 L {fmt(lx+58)} -420 L {fmt(x1+52)} {fmt(-6 - max(0, 18*math.sin(phase+ph)))} L {fmt(x1-52)} {fmt(-6 - max(0, 18*math.sin(phase+ph)))} Z" '
-                f'fill="{fill}" stroke="{OUT}" stroke-width="{c.sw(3)}" stroke-linejoin="round"/>'
-                f'<path d="M {fmt(x1-46)} {fmt(-10 - max(0, 18*math.sin(phase+ph)))} l 20 -10 M {fmt(x1)} {fmt(-12 - max(0, 18*math.sin(phase+ph)))} l 0 -12" stroke="#d8d4cc" stroke-width="{c.sw(4)}"/>')
-    tr = 30 * math.sin(t * 1.4)
-    body = smooth_path([(380, -620), (300, -760), (60, -800), (-220, -780), (-400, -700), (-470, -620), (-500, -520),
-                        (-520, -400 + tr * 0.2), (-540, -260 + tr * 0.6), (-520, -150 + tr), (-500, -170 + tr), (-470, -300 + tr * 0.5),
-                        (-450, -420), (-400, -470), (-300, -420), (300, -400), (400, -480)])
-    out += rimmed(c, body, col, dx=4, dy=-3)
+        lift = max(0, 18 * math.sin(phase + ph)) * (1 - k)
+        if k <= 0:
+            out += (f'<path d="M {fmt(lx-58)} -420 L {fmt(lx+58)} -420 L {fmt(x1+52)} {fmt(-6 - lift)} L {fmt(x1-52)} {fmt(-6 - lift)} Z" '
+                    f'fill="{fill}" stroke="{OUT}" stroke-width="{c.sw(3)}" stroke-linejoin="round"/>'
+                    f'<path d="M {fmt(x1-46)} {fmt(-10 - lift)} l 20 -10 M {fmt(x1)} {fmt(-12 - lift)} l 0 -12" stroke="#d8d4cc" stroke-width="{c.sw(4)}"/>')
+            continue
+        hip = (lx, -420 + D)
+        knee = (lerp((lx + x1) / 2, lx - 46 - 8 * (i % 2), k), lerp(-213 - lift / 2, -50, k))
+        foot = (lerp(x1, lx + 150, k), lerp(-6 - lift, -38, k))
+        out += limb(c, hip, knee, 58, 55, fill, 3) + limb(c, knee, foot, 55, 50, fill, 3)
+        ang = math.degrees(math.atan2(foot[1] - knee[1], foot[0] - knee[0])) - 90
+        out += (f'<g transform="rotate({fmt(ang)},{fmt(foot[0])},{fmt(foot[1])})"><path d="M {fmt(foot[0]-40)} {fmt(foot[1]+38)} l 20 -10 '
+                f'M {fmt(foot[0]+6)} {fmt(foot[1]+36)} l 0 -12" stroke="#d8d4cc" stroke-width="{c.sw(4)}"/></g>')
+    tr = 30 * math.sin(t * 1.4) * (1 - 0.8 * k)
+    stand = [(-520, -400 + tr * 0.2), (-540, -260 + tr * 0.6), (-520, -150 + tr), (-500, -170 + tr), (-470, -300 + tr * 0.5)]
+    down = [(-525, -405), (-592, -342), (-668, -324 + tr * 0.2), (-660, -302 + tr * 0.2), (-560, -320)]   # minus D: the trunk lies on the ground, curled forward
+    trunk = [(lerp(a[0], b[0], k), lerp(a[1], b[1], k)) for a, b in zip(stand, down)]
+    body = smooth_path([(380, -620), (300, -760), (60, -800), (-220, -780), (-400, -700), (-470, -620), (-500, -520)] + trunk +
+                       [(-450, -420), (-400, -470), (-300, -420), (300, -400), (400, -480)])
+    up = f'<g transform="translate(0,{fmt(D)})">' if D else "<g>"
+    out += up + rimmed(c, body, col, dx=4, dy=-3)
     ear = 12 * math.sin(t * 2.2)
     out += rimmed(c, smooth_path([(-300, -700), (-200 - ear, -720), (-150 - ear, -600), (-200 - ear * 0.5, -470), (-300, -520)]), "#8c8890", dx=3, dy=-2)
     out += (f'<circle cx="-410" cy="-610" r="9" fill="#120a06"/><circle cx="-412" cy="-613" r="3" fill="#fff"/>'
@@ -837,6 +870,56 @@ def elephant(c, phase=0.0, t=0.0, blanket="#7a1a1a"):
     out += (f'<path d="M -140 -790 L 260 -790 L 290 -560 L -170 -560 Z" fill="{blanket}" stroke="{OUT}" stroke-width="{c.sw(3)}"/>'
             f'<path d="M -170 -580 L 290 -580" stroke="#e0b25a" stroke-width="{c.sw(14)}"/>'
             + "".join(f'<circle cx="{x}" cy="-560" r="10" fill="#e0b25a" stroke="{OUT}" stroke-width="{c.sw(2)}"/>' for x in range(-160, 290, 40)))
+    return out + "</g>"
+
+def dog(c, col="#d8b888", dark="#a87848", phase=0.0, run=False, t=0.0, seed=0):
+    """a slim hunting dog (saluki), side view facing right; origin on the ground under the belly; ~ 420 wide x 300 tall.
+    run: a gallop (front legs reach forward while the hind legs push back), ears and tail streaming back"""
+    out = ""
+    s_ = math.sin(phase) if run else 0.0
+    bob = (-16 * abs(math.cos(phase)) if run else 2 * math.sin(t * 2.0 + seed))
+    legs_svg = ["", ""]
+    for i, (lx, front, ph) in enumerate([(92, True, 0.35), (-118, False, 0.35), (112, True, 0.0), (-98, False, 0.0)]):
+        far = i < 2
+        fill = dark if far else col
+        if run:
+            sw_ = math.sin(phase + ph)
+            a = (38 * sw_ if front else -40 * sw_) + (8 if front else -8)
+        else:
+            a = 2 * math.sin(t * 1.3 + i + seed)
+        r = math.radians(a)
+        top = (lx, -168 + bob)
+        knee = (lx + math.sin(r) * 86, -168 + bob + math.cos(r) * 86)
+        bend = math.radians(a + (-28 if front else 38) * (1 if run else 0.25))
+        foot = (knee[0] + math.sin(bend) * 82, min(-2, knee[1] + math.cos(bend) * 82))
+        seg = (limb(c, top, knee, 17 if front else 22, 10, fill, 2.2) + limb(c, knee, foot, 9, 7, fill, 2.2) +
+               f'<ellipse cx="{fmt(foot[0] + 7)}" cy="{fmt(foot[1])}" rx="13" ry="7" fill="{fill}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>')
+        legs_svg[0 if far else 1] += seg
+    wag = 10 * math.sin(t * 7 + seed)
+    if run:
+        tail = [(-136, -190 + bob), (-190, -198 + bob), (-240, -190 + bob + 6 * s_), (-272, -168 + bob + 10 * s_)]
+    else:
+        tail = [(-136, -190 + bob), (-176, -186 + bob + wag * 0.3), (-206, -158 + bob + wag * 0.6), (-214, -116 + bob + wag), (-198, -96 + bob + wag)]
+    td = "M " + " L ".join(f"{fmt(x)} {fmt(y)}" for x, y in tail)
+    tail_svg = (f'<path d="{td}" stroke="{OUT}" stroke-width="{c.sw(17)}" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+                f'<path d="{td}" stroke="{col}" stroke-width="{c.sw(12)}" fill="none" stroke-linecap="round" stroke-linejoin="round"/>')
+    stretch = 10 * s_
+    body = smooth_path([(-140 - stretch, -188 + bob), (-120 - stretch, -212 + bob), (-40, -208 + bob), (40, -212 + bob), (100 + stretch, -222 + bob),
+                        (136 + stretch, -205 + bob), (142 + stretch, -170 + bob), (120 + stretch, -134 + bob), (80, -118 + bob), (20, -130 + bob),
+                        (-40, -148 + bob), (-100 - stretch, -152 + bob), (-140 - stretch, -166 + bob)])
+    hx = 30 if run else 0; hy = 34 if run else 0
+    neck = smooth_path([(96, -214 + bob), (128 + hx * 0.5, -252 + bob + hy * 0.6), (158 + hx, -276 + bob + hy), (178 + hx, -262 + bob + hy), (150 + hx * 0.5, -224 + bob + hy * 0.5), (136, -192 + bob)])
+    hd = [(150, -282), (170, -296), (196, -293), (232, -280), (262, -268), (263, -258), (236, -253), (200, -255), (172, -258), (154, -266)]
+    headp = smooth_path([(x + hx, y + bob + hy) for x, y in hd])
+    ea = 34 if run else 4 * math.sin(t * 1.7 + seed)
+    ear = smooth_path(bumpy([(172, -288), (152, -287), (138, -262), (132, -234), (146, -228), (158, -252), (174, -276)], 4))
+    out += legs_svg[0] + tail_svg + rimmed(c, body, col, dx=3, dy=-2) + rimmed(c, neck, col, dx=3, dy=-2) + rimmed(c, headp, col, dx=3, dy=-2)
+    out += f'<path d="M -110 {fmt(-160 + bob)} C -40 {fmt(-150 + bob)}, 40 {fmt(-140 + bob)}, 110 {fmt(-142 + bob)}" stroke="#000" stroke-width="{c.sw(10)}" opacity="0.10" fill="none"/>'
+    out += legs_svg[1]
+    out += f'<g transform="translate({fmt(hx)},{fmt(bob + hy)}) rotate({fmt(ea)},170,-285)">' + rimmed(c, ear, dark, dx=2, dy=-1) + '</g>'
+    out += (f'<circle cx="{fmt(206 + hx)}" cy="{fmt(-282 + bob + hy)}" r="6" fill="#120a06"/><circle cx="{fmt(207 + hx)}" cy="{fmt(-284 + bob + hy)}" r="2" fill="#fff"/>'
+            f'<ellipse cx="{fmt(261 + hx)}" cy="{fmt(-263 + bob + hy)}" rx="7" ry="6" fill="#120a06"/>'
+            f'<path d="M {fmt(258 + hx)} {fmt(-254 + bob + hy)} q -16 6 -34 2" stroke="{OUT}" stroke-width="{c.sw(2)}" fill="none"/>')
     return out
 
 def cow(c, col="#7a5a3e", spots="#efe6d6", t=0.0, graze=0.0, seed=0):

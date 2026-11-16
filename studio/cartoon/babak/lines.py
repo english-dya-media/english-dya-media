@@ -100,6 +100,24 @@ LINES = [
  ("p6s6a",6,6,"BABAK","Buy bread. Talk to no one.","نان بخر. با کسی حرف نزن.","Buy bread. Talk to no one."),
  ("p6s6b",6,6,"SAHL","Welcome, King Babak.","خوش آمدی، شاه بابک.","Welcome, King Baabak."),
  ("p6s6c",6,6,"SAHL","My house is your house.","خانه من خانه توست.",None),
+ # ---- part 7 · The Betrayal (episode 4, half 1)
+ ("p7s1a",7,1,"STEWARD","Two million silver coins, my prince.","دو میلیون درهم، شاهزاده.",None),
+ ("p7s1b",7,1,"STEWARD","For him… alive.","برای او… زنده.","For him... alive."),
+ ("p7s1c",7,1,"SAHL","Ride to Afshin.","به‌سوی افشین بتاز.","Ride to Afsheen."),
+ ("p7s1d",7,1,"SAHL","Tell him the guest is here.","بگو مهمان این‌جاست.",None),
+ ("p7s3a",7,3,"SAHL","Come, my friend.","بیا دوست من.",None),
+ ("p7s3b",7,3,"SAHL","Today we hunt, like kings.","امروز مثل شاهان شکار می‌کنیم.","Today, we hunt, like kings."),
+ ("p7s3c",7,3,"BABAK","You sold me, Sahl.","مرا فروختی، سهل.","You sold me, Saahl."),
+ ("p7s3d",7,3,"BABAK","You sold your own guest.","مهمان خودت را فروختی.",None),
+ ("p7s3e",7,3,"SAHL","The caliph pays better than you, Babak.","خلیفه بهتر از تو پول می‌دهد، بابک.","The caliph pays better than you, Baabak."),
+ ("p7s4a",7,4,"NARRATOR","That winter, Afshin brought his prisoners to the caliph.","آن زمستان، افشین اسیرانش را نزد خلیفه برد.","That winter, Afsheen brought his prisoners, to the caliph."),
+ ("p7s4b",7,4,"AFSHIN","You fought well, Babak.","خوب جنگیدی، بابک.","You fought well, Baabak."),
+ ("p7s4c",7,4,"AFSHIN","But I waited better.","اما من بهتر صبر کردم.","But I... waited better."),
+ ("p7s4d",7,4,"BABAK","You serve the caliph, Afshin.","تو به خلیفه خدمت می‌کنی، افشین.","You serve the caliph, Afsheen."),
+ ("p7s4e",7,4,"BABAK","One day you will see how he pays.","روزی می‌بینی مزدش چیست.","One day, you will see how he pays."),
+ ("p7s5a",7,5,"NARRATOR","Three days later.","سه روز بعد.",None),
+ ("p7s5b",7,5,"GUARD","The caliph wants the whole city to see you.","خلیفه می‌خواهد همه شهر تو را ببینند.",None),
+ ("p7s5c",7,5,"BABAK","Good. Let them see.","خوب است. بگذار ببینند.","Good... Let them see."),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume)
 VOICES = {
@@ -116,11 +134,15 @@ VOICES = {
  "SPY":(620,1.05,0,1.0), "SCOUT":(300,1.0,0,1.0),
  # part 6
  "ABDULLAH":(330,1.0,0,1.0), "MESSENGER":(600,1.05,0,1.0), "SAHL":(700,1.1,0,1.0),
+ # part 7
+ "STEWARD":(740,1.05,0,1.0), "GUARD":(350,1.05,-1,1.0),
 }
 # slower takes for part 3 (learners): per-line length factors, see voices.py
 SPEED = {lid: 1.18 for lid, part, *_ in LINES if part in (3, 4, 5, 6) and lid not in ("p3s5d", "p3s3a", "p5s4e", "p5s4f", "p6s4c")}
 SPEED["p3s1a"] = 1.25; SPEED["p3s5c"] = 1.3
 SPEED.update({"p5s1b": 1.3, "p5s5a": 1.25, "p5s1a": 1.35, "p5s1c": 1.4, "p5s3d": 1.3, "p5s3e": 1.35, "p5s4c": 1.4, "p5s4e": 1.1})
 SPEED.update({"p6s5e": 1.4, "p6s5f": 1.35, "p6s5g": 1.35, "p6s5c": 1.3, "p6s4d": 1.3, "p6s5d": 1.3})
+SPEED.update({lid: 1.2 for lid, part, *_ in LINES if part == 7})
+SPEED.update({"p7s1a": 1.3, "p7s1b": 1.45, "p7s1c": 1.25, "p7s3c": 1.35, "p7s3d": 1.3, "p7s3e": 1.3, "p7s4c": 1.3, "p7s4e": 1.3, "p7s5c": 1.4})
 # optional per-line ffmpeg filters (voices.py): the spy trembles
 FX = {"p5s1b": "vibrato=f=6.5:d=0.35", "p5s5a": "volume=1.7"}

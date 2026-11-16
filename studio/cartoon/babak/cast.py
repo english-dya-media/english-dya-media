@@ -87,3 +87,21 @@ BUGHA = spec(kind="man", skin="tan", hair="short", beard="full", beard_col="#120
              garment="coat", col="#1e1e24", col2="#0e0e12", pattern="scales", scale_col="#8a8e9a", belt="#2b190c", cuff="#5a5e6a", trim="#a8aebb",
              cloak="#1a1a20", cloak2="#0a0a0e", cloak_hi="#4a4a58", build=1.1)
 PLOUGHMAN = dict(FARMER, head_col="#8a7a5a", col="#7a6a4a")
+
+# ---- part 7 (episode 4): 837-838, the betrayal. Babak greys a little with every step towards Samarra (part 1's captive look).
+BABAK_GUEST = dict(BABAK, head="none", grey=0.2)                                   # Sahl's guest: no helmet, his red cloak
+BABAK_SLEEP = dict(BABAK_GUEST, cloak=None)
+BABAK_CHAINED = dict(BABAK, head="none", grey=0.4, pattern="plain", col="#5a4632", col2="#3a2a1c", strap=False,
+                     cloak="#6a4a34", cloak2="#4a3424", cloak_hi="#8a6a4a")       # a prisoner on the winter road
+ABDULLAH_CHAINED = dict(ABDULLAH, strap=False, pattern="plain", col="#6a2a1e", col2="#4a1a12")
+STEWARD = spec(kind="man", skin="light", hair="short", hair_col="#2a1a12", beard="short", beard_col="#2a1a12", head="cap", head_col="#3a4a2a",
+               garment="robe", col="#4a5a3a", col2="#2a3a22", pattern="plain", belt=None, sash="#8a6a3a", cuff="#c9a24a", trim="#c9a24a", build=0.95)
+NIGHT_RIDER = spec(kind="man", skin="olive", hair="short", hair_col="#1a120c", beard="short", beard_col="#1a120c", head="cap", head_col="#2a2a30",
+                   garment="tunic", col="#3a3a44", col2="#22222a", pattern="plain", belt="#2b190c", buckle=False, cuff="#4a4a52", trim="#4a4a52",
+                   cloak="#26262e", cloak2="#141418", cloak_hi="#4a4a58")
+PRINCE = spec(kind="man", skin="tan", hair="short", beard="short", beard_col="#120c08", head="turban", head_col="#121216", turban_tail=True,
+              garment="robe", col="#1e1e26", col2="#0e0e12", pattern="brocade", belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#e0b25a")   # Harun, the caliph's son
+OFFICIAL = dict(TAX_COLLECTOR, build=1.05)
+OFFICIAL2 = dict(TAX_COLLECTOR, build=1.0, beard="full", skin="tan", head_col="#f0ead8", col="#2a2a33", sash="#8a2a2a")
+PALACE_SERVANT = dict(SERVANT, head="turban", head_col="#f0ead8", col="#e2dccb", col2="#bdb5a0", cuff="#c9a24a", trim="#c9a24a", beard="light")
+PALACE_SERVANT2 = dict(PALACE_SERVANT, skin="tan", beard="short", head="cap", head_col="#121216")

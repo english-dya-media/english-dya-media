@@ -1013,7 +1013,10 @@ def table_map():
 FOREST = {"day": dict(sky=[(0, "#4a7cb8", 1), (0.4, "#a8c8de", 1), (0.55, "#eedcb8", 1)], far="#8e9ab8", mid="#6a7a5a", slope="#7a6a48", slope_d="#5a4a32",
                       road="#c4a478", road_d="#9a7e58", tree="#3e5a2e", tree_d="#2a4020", hi="#5a7a3a", pine="#2e4a32", pine_d="#1e3424", haze="#f0e4c8"),
           "night": dict(sky=[(0, "#04060e", 1), (0.45, "#101a34", 1), (0.6, "#1c2444", 1)], far="#1e2440", mid="#151c2a", slope="#1c1e26", slope_d="#121418",
-                        road="#4a4e5e", road_d="#30323e", tree="#14201a", tree_d="#0c1410", hi="#24342a", pine="#101a16", pine_d="#0a100c", haze="#4a5a8a")}
+                        road="#4a4e5e", road_d="#30323e", tree="#14201a", tree_d="#0c1410", hi="#24342a", pine="#101a16", pine_d="#0a100c", haze="#4a5a8a"),
+          # Babak 7: an autumn valley in Armenia, the morning of the hunt
+          "autumn": dict(sky=[(0, "#5a86bc", 1), (0.38, "#b4cce0", 1), (0.55, "#f6e2c2", 1)], far="#9a98b4", mid="#8e7a48", slope="#9c7c46", slope_d="#6c5230",
+                         road="#cbab7a", road_d="#9c8058", tree="#c2662a", tree_d="#8a3c1a", hi="#e8aa3c", pine="#2e4a32", pine_d="#1e3424", haze="#fae8c8")}
 
 def forest_road(pal="day"):
     """a road along a wooded mountainside (road band at feet y 1300-1420); trees above and below; night: moon and stars"""
@@ -1226,4 +1229,137 @@ def armenia_gate():
         s += f'<rect x="{x - 6}" y="1020" width="12" height="110" fill="#3a2414"/>'
     s += '<rect x="0" y="1400" width="1080" height="520" fill="#1a1618"/><path d="M 380 1400 L 700 1400 L 820 1920 L 260 1920 Z" fill="#3a2e28" opacity="0.6"/>'
     s += f'<rect width="{W}" height="{H}" fill="url(#tl)"/><rect width="{W}" height="{H}" fill="url(#tr)"/>'
+    return svg_render(s)
+
+
+# ------------------------------------------------------------------ PART 7 (Babak, episode 4 half 1): Sahl's castle, Samarra's palace
+def sahl_room():
+    """Sahl's hall at night (Armenia, 837): stone walls, a carved cross-stone, a blue-and-gold hanging, an arched window with the moon (left),
+    a hanging oil lamp (flame x 760, y ≈ 520) and a table with a candle at the right (table top y 1250); floor from y 1330"""
+    s = ("<defs>" + FILTERS + lg("wall", [(0, "#241a16", 1), (1, "#46322a", 1)]) +
+         rg("lamp", 760, 600, 950, [(0, "#ffb060", 0.5), (0.5, "#a05a28", 0.16), (1, "#000", 0)]) +
+         rg("cand", 900, 1150, 420, [(0, "#ffc070", 0.45), (1, "#000", 0)]) + lg("rug", [(0, "#24365a", 1), (1, "#16223a", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#wall)"/>'
+    r = random.Random(701)
+    for row in range(29):
+        y = 130 + row * 42; off = 0 if row % 2 else 55
+        for k in range(-1, 12):
+            x = off + k * 110 + r.uniform(-6, 6)
+            s += f'<rect x="{x:.0f}" y="{y}" width="{r.uniform(92, 104):.0f}" height="36" rx="6" fill="#140c08" opacity="{r.uniform(0.18, 0.34):.2f}"/>'
+    s += '<rect x="0" y="0" width="1080" height="120" fill="#120a06"/>' + "".join(f'<rect x="{x}" y="90" width="70" height="60" fill="#2a1a10" stroke="#0a0604" stroke-width="3"/>' for x in (60, 330, 600, 870))
+    # the window with the moon
+    s += ('<clipPath id="win7"><path d="M 90 980 L 90 560 Q 190 420, 290 560 L 290 980 Z"/></clipPath>'
+          '<path d="M 90 980 L 90 560 Q 190 420, 290 560 L 290 980 Z" fill="#0c1430" stroke="#120a06" stroke-width="14"/>' + '<g clip-path="url(#win7)">' + stars(702, 60, 980, 300) + '</g>' +
+          '<circle cx="215" cy="640" r="30" fill="#f4f0e0"/><circle cx="228" cy="632" r="26" fill="#0c1430"/>'
+          '<circle cx="200" cy="650" r="90" fill="#c8d0ff" opacity="0.12" filter="url(#b20)"/>'
+          '<path d="M 190 500 L 190 980 M 90 760 L 290 760" stroke="#120a06" stroke-width="10"/>'
+          '<path d="M 80 990 L 300 990" stroke="#3a2a20" stroke-width="18"/>')
+    # carved cross-stone (khachkar)
+    s += ('<rect x="430" y="540" width="200" height="330" rx="10" fill="#7a6a5e" stroke="#2a1e18" stroke-width="6"/>'
+          '<rect x="446" y="556" width="168" height="298" rx="6" fill="none" stroke="#5a4a40" stroke-width="5"/>'
+          '<path d="M 530 590 L 530 760 M 482 640 L 578 640" stroke="#4a3a30" stroke-width="22" stroke-linecap="round"/>'
+          '<path d="M 530 590 l -16 -14 M 530 590 l 16 -14 M 482 640 l -14 -16 M 482 640 l -14 16 M 578 640 l 14 -16 M 578 640 l 14 16" stroke="#4a3a30" stroke-width="9" stroke-linecap="round"/>'
+          '<circle cx="530" cy="810" r="28" fill="none" stroke="#4a3a30" stroke-width="8"/><circle cx="530" cy="810" r="9" fill="#4a3a30"/>')
+    # blue-and-gold hanging (Sahl's colours)
+    s += ('<rect x="866" y="300" width="12" height="40" fill="#2a1a10"/><path d="M 800 340 L 960 340 L 960 820 L 880 780 L 800 820 Z" fill="#24466a" stroke="#0e1a2a" stroke-width="5"/>'
+          '<path d="M 812 360 L 948 360 M 812 760 L 948 760" stroke="#e0b25a" stroke-width="8"/>'
+          + "".join(f'<path d="M {880} {430 + k * 80} l 22 26 l -22 26 l -22 -26 Z" fill="#e0b25a" opacity="0.7"/>' for k in range(4)))
+    # floor, rug, table with a candle
+    s += '<rect x="0" y="1330" width="1080" height="590" fill="#22160e"/><path d="M 0 1330 L 1080 1330" stroke="#3a281a" stroke-width="6"/>'
+    s += '<path d="M 160 1420 L 920 1420 L 1060 1920 L 20 1920 Z" fill="url(#rug)"/><path d="M 190 1440 L 890 1440 L 1020 1900 L 60 1900 Z" fill="none" stroke="#c9a24a" stroke-width="7"/>'
+    s += ('<rect x="700" y="1250" width="380" height="34" rx="6" fill="#4a2e1a" stroke="#1a0e06" stroke-width="5"/>'
+          '<rect x="730" y="1284" width="24" height="120" fill="#3a2414"/><rect x="1030" y="1284" width="24" height="120" fill="#3a2414"/>'
+          '<rect x="884" y="1176" width="30" height="74" rx="4" fill="#efe2c4" stroke="#2a1a10" stroke-width="3"/><rect x="872" y="1244" width="54" height="10" rx="3" fill="#b9832f"/>'
+          '<path d="M 899 1176 C 889 1160, 893 1146, 899 1132 C 905 1146, 909 1160, 899 1176 Z" fill="#ffe8a0"/>')
+    s += oil_lamp(760, 520, 400)
+    s += f'<rect width="{W}" height="{H}" fill="url(#lamp)"/><rect width="{W}" height="{H}" fill="url(#cand)"/>'
+    return svg_render(s)
+
+def palace_court():
+    """the caliph's palace in Samarra, an inner court on a winter morning (838): a great gate in the back wall at the left (opening x 80-470,
+    y 320-1080; through it the street and the crowd), an arcade in the middle, a palace door at the right (opening x 890-1030), black
+    banners, palms above the wall; paved ground from y 1080 (people stand at y 1120-1300, the elephant at about y 1150)"""
+    B = 1080
+    s = ("<defs>" + FILTERS + lg("sky", [(0, "#7a8cb8", 1), (0.6, "#e8c8b0", 1), (1, "#f6dcc0", 1)]) + lg("wl", [(0, "#d2aa82", 1), (1, "#b08664", 1)]) +
+         lg("street", [(0, "#fff0d8", 1), (1, "#e2c49a", 1)]) + lg("pave", [(0, "#b49274", 1), (1, "#6e5442", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>' + clouds(W, 711, [120, 200], "#ffffff", "#fff4e8", 0.5)
+    for px, ph in [(640, 300), (770, 360), (1010, 330)]:          # palms behind the wall
+        s += f'<path d="M {px} 420 C {px - 10} {420 - ph * 0.5}, {px + 10} {420 - ph * 0.8}, {px} {420 - ph}" stroke="#4a3a2a" stroke-width="14" fill="none"/>'
+        for a in range(0, 360, 40):
+            ang = math.radians(a); L = 105
+            s += f'<path d="M {px} {420 - ph} q {math.cos(ang) * L * 0.5:.0f} {math.sin(ang) * L * 0.3 - 26:.0f} {math.cos(ang) * L:.0f} {math.sin(ang) * L * 0.5 + 18:.0f}" stroke="#3e5a34" stroke-width="13" fill="none" stroke-linecap="round"/>'
+    s += f'<rect x="0" y="380" width="1080" height="{B - 380}" fill="url(#wl)"/>' + "".join(f'<rect x="{i * 54}" y="352" width="34" height="32" fill="#c8a07a"/>' for i in range(21))
+    s += f'<path d="M 0 420 L 1080 420" stroke="#9a7254" stroke-width="6"/><path d="M 0 {B - 18} L 1080 {B - 18}" stroke="#8a6448" stroke-width="10"/>'
+    # gate tower and the great gate (left)
+    s += f'<rect x="30" y="240" width="480" height="{B - 240}" fill="#c49a74" stroke="#7a5638" stroke-width="5"/>' + "".join(f'<rect x="{34 + i * 60}" y="210" width="38" height="34" fill="#c49a74" stroke="#7a5638" stroke-width="3"/>' for i in range(8))
+    arch = f"M 80 {B} L 80 520 Q 80 360, 275 320 Q 470 360, 470 520 L 470 {B} Z"
+    s += f'<path d="{arch}" fill="url(#street)"/>'
+    r = random.Random(712)
+    crowd = ""
+    for row, (y, sc, cols) in enumerate([(930, 0.8, ["#7a6a8a", "#8a6a5a", "#6a7a8a"]), (1000, 1.0, ["#5a4a5a", "#6a4a3a", "#4a5a6a", "#7a3a2a"]), (1075, 1.25, ["#3a2a30", "#4a3428", "#2a3440", "#5a2a20"])]):
+        for k in range(14):
+            x = 70 + k * 30 + r.uniform(-8, 8); col = r.choice(cols)
+            crowd += (f'<path d="M {x - 22 * sc:.0f} {y + 40:.0f} C {x - 22 * sc:.0f} {y - 10 * sc:.0f}, {x + 22 * sc:.0f} {y - 10 * sc:.0f}, {x + 22 * sc:.0f} {y + 40:.0f} Z" fill="{col}"/>'
+                      f'<circle cx="{x:.0f}" cy="{y - 24 * sc:.0f}" r="{13 * sc:.0f}" fill="{col}"/>')
+            if r.random() < 0.35:
+                crowd += f'<path d="M {x + 8 * sc:.0f} {y - 6 * sc:.0f} L {x + 20 * sc:.0f} {y - 62 * sc:.0f}" stroke="{col}" stroke-width="{7 * sc:.0f}" stroke-linecap="round"/>'
+    s += f'<clipPath id="gclip7"><path d="{arch}"/></clipPath><g clip-path="url(#gclip7)">{crowd}</g>'
+    s += f'<path d="{arch[:-2]}" fill="none" stroke="#6a4a30" stroke-width="16"/>'
+    s += f'<path d="M 56 {B} L 56 510 Q 56 330, 275 288 Q 494 330, 494 510 L 494 {B}" fill="none" stroke="#e8c8a0" stroke-width="10" opacity="0.8"/>'
+    for x in (560, 700):                                           # arcade
+        s += (f'<path d="M {x} {B - 18} L {x} 700 Q {x + 55} 600, {x + 110} 700 L {x + 110} {B - 18} Z" fill="#7a5640" stroke="#6a4a34" stroke-width="5"/>'
+              f'<path d="M {x + 10} {B - 18} L {x + 10} 710 Q {x + 55} 630, {x + 100} 710" fill="none" stroke="#e8c8a0" stroke-width="5" opacity="0.7"/>')
+    s += (f'<rect x="860" y="640" width="200" height="{B - 640}" fill="#b08664" stroke="#7a5638" stroke-width="5"/>'      # palace door (right)
+          f'<path d="M 890 {B} L 890 790 Q 960 700, 1030 790 L 1030 {B} Z" fill="#2a1a12" stroke="#6a4a30" stroke-width="8"/>')
+    for fx in (140, 410):                                          # black flags on the gate tower
+        s += (f'<rect x="{fx - 4}" y="80" width="8" height="134" fill="#2a1a12"/>'
+              f'<path d="M {fx + 4} 86 L {fx + 120} 98 L {fx + 112} 150 L {fx + 120} 202 L {fx + 4} 190 Z" fill="#141216" stroke="#060406" stroke-width="2"/>')
+    for bx, by, h in [(630, 440, 170), (990, 440, 170)]:     # black banners hanging on the walls
+        s += (f'<rect x="{bx - 46}" y="{by - 8}" width="92" height="10" rx="4" fill="#2a1a12"/>'
+              f'<path d="M {bx - 40} {by} L {bx + 40} {by} L {bx + 40} {by + h} L {bx} {by + h - 34} L {bx - 40} {by + h} Z" fill="#141216" stroke="#060406" stroke-width="2"/>'
+              f'<path d="M {bx - 32} {by + 22} L {bx + 32} {by + 22}" stroke="#c9a24a" stroke-width="5" opacity="0.8"/>')
+    s += f'<rect x="0" y="{B}" width="1080" height="{H - B}" fill="url(#pave)"/>'
+    for k in range(12):
+        y = B + k * k * 6 + k * 12
+        s += f'<path d="M 0 {y} L 1080 {y}" stroke="#5a4434" stroke-width="{2 + k * 0.4:.1f}" opacity="0.5"/>'
+    for k in range(-9, 10):
+        s += f'<path d="M {540 + k * 60} {B} L {540 + k * 230} 1920" stroke="#5a4434" stroke-width="2.5" opacity="0.45"/>'
+    s += f'<rect x="0" y="{B}" width="1080" height="60" fill="#000" opacity="0.12" filter="url(#b12)"/>'
+    return svg_render(s)
+
+def bare_tree(x, y, h, seed=0, col="#2a2026"):
+    """a leafless winter tree (base at x, y)"""
+    r = random.Random(seed)
+    s = f'<path d="M {x - h * 0.04:.0f} {y} L {x - h * 0.02:.0f} {y - h * 0.55:.0f} L {x + h * 0.02:.0f} {y - h * 0.55:.0f} L {x + h * 0.04:.0f} {y} Z" fill="{col}"/>'
+    def br(x0, y0, ang, L, w, d):
+        nonlocal s
+        if d == 0 or L < 8:
+            return
+        x1 = x0 + math.sin(math.radians(ang)) * L; y1 = y0 - math.cos(math.radians(ang)) * L
+        s += f'<path d="M {x0:.0f} {y0:.0f} L {x1:.0f} {y1:.0f}" stroke="{col}" stroke-width="{w:.1f}" stroke-linecap="round"/>'
+        for da in (-28 - r.uniform(0, 14), 24 + r.uniform(0, 14)):
+            br(x1, y1, ang + da, L * r.uniform(0.62, 0.74), w * 0.62, d - 1)
+    br(x, y - h * 0.5, -6, h * 0.3, h * 0.05, 5)
+    return s
+
+def winter_road():
+    """January 838: a road across a snowy plain under a grey sky (road band at y 1030-1110, riders' feet at about y 1080), far snowy mountains,
+    bare trees; snow drifts in the foreground from y 1350"""
+    s = ("<defs>" + FILTERS + lg("sky", [(0, "#6e7888", 1), (0.45, "#b6bec8", 1), (0.62, "#e2e6ec", 1)]) + lg("sn", [(0, "#eef2f8", 1), (1, "#c2cad8", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#sky)"/>'
+    s += f'<path d="{ridge(W, 800, 300, 731, rough=0.6)}" fill="#cdd4de"/><path d="{ridge(W, 800, 300, 731, rough=0.6)}" fill="#7a8498" opacity="0.3" transform="translate(26,0)"/>'
+    s += f'<path d="{ridge(W, 930, 110, 732, rough=0.4)}" fill="#e2e6ee"/>'
+    s += f'<rect x="0" y="780" width="{W}" height="260" fill="#ffffff" opacity="0.35" filter="url(#b40)"/>'
+    s += '<path d="M -40 980 C 300 960, 800 970, 1120 985 L 1120 2000 L -40 2000 Z" fill="url(#sn)"/>'
+    for x, y, h in [(90, 1000, 260), (300, 985, 170), (860, 990, 210), (1010, 1000, 300)]:
+        s += bare_tree(x, y, h, seed=733 + x)
+    s += '<path d="M -40 1040 C 300 1025, 800 1030, 1120 1045 L 1120 1112 C 800 1100, 300 1098, -40 1115 Z" fill="#c6c0bc"/>'
+    s += '<path d="M -40 1060 C 300 1048, 800 1052, 1120 1066 M -40 1092 C 300 1082, 800 1086, 1120 1098" stroke="#a49c98" stroke-width="5" fill="none" opacity="0.6"/>'
+    r = random.Random(734)
+    for k in range(50):
+        x = r.uniform(-20, 1100); y = r.uniform(1040, 1110)
+        s += f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{r.uniform(5, 10):.0f}" ry="{r.uniform(2, 4):.0f}" fill="#8a8480" opacity="0.5"/>'
+    s += '<path d="M -40 1380 C 200 1340, 420 1370, 640 1345 C 820 1325, 980 1350, 1120 1340 L 1120 2000 L -40 2000 Z" fill="#f4f6fa"/>'
+    s += '<path d="M -40 1380 C 200 1340, 420 1370, 640 1345 C 820 1325, 980 1350, 1120 1340" stroke="#ffffff" stroke-width="8" fill="none"/>'
+    s += '<path d="M -40 1640 C 260 1600, 600 1630, 1120 1610 L 1120 2000 L -40 2000 Z" fill="#e4e8f0"/>'
     return svg_render(s)
