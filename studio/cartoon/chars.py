@@ -67,7 +67,7 @@ def spec(**kw):
 def pose(**kw):
     base = dict(turn=0.15, tilt=0.0, nod=0.0, blink=0.0, gx=0.2, gy=0.0, brow=0.0, furrow=0.3, mouth_o=0.0, mouth_w=1.0,
                 smile=0.0, wind=0.4, breathe=0.0, armL=(8, 10), armR=(8, 10), legs="stand", phase=0.0, propL=None, propR=None,
-                sad=0.0, chains=False, glow=0.0)
+                sad=0.0, chains=False, glow=0.0, red=0.0, red_reveal=1.0)
     base.update(kw)
     return base
 
@@ -105,18 +105,22 @@ def hair_back(c, S, p, t):
                     f'stroke="{hi}" stroke-width="{c.sw(3)}" fill="none" stroke-linecap="round" opacity="0.8"/>')
     return rimmed(c, d, S["hair_col"], dx=3.5, dy=-1) + strands
 
+def face_d(S, p):
+    """the outline of the face (head coords)"""
+    s = p["turn"]; k = S["kind"]
+    if k == "woman":
+        return (f"M -88 -262 C -94 -210, -96 -168, -88 -130 C -80 -98, -50 -66, {fmt(4*s)} -60 C 52 -66, 80 -98, 88 -130 "
+                f"C 96 -168, 94 -210, 88 -262 Z")
+    if k == "boy":
+        return (f"M -94 -262 C -102 -214, -104 -166, -96 -132 C -86 -98, -54 -72, {fmt(4*s)} -68 C 58 -72, 88 -98, 96 -132 "
+                f"C 104 -166, 102 -214, 94 -262 Z")
+    return (f"M -94 -262 C -100 -205, -102 -160, -94 -122 C -86 -88, -56 -58, {fmt(4*s)} -52 "
+            f"C 60 -58, 88 -88, 96 -122 C 104 -160, 102 -205, 96 -262 Z")
+
 def face_shape(c, S, p):
     sk, sh, hi = SKINS[S["skin"]]
     s = p["turn"]; k = S["kind"]
-    if k == "woman":
-        d = (f"M -88 -262 C -94 -210, -96 -168, -88 -130 C -80 -98, -50 -66, {fmt(4*s)} -60 C 52 -66, 80 -98, 88 -130 "
-             f"C 96 -168, 94 -210, 88 -262 Z")
-    elif k == "boy":
-        d = (f"M -94 -262 C -102 -214, -104 -166, -96 -132 C -86 -98, -54 -72, {fmt(4*s)} -68 C 58 -72, 88 -98, 96 -132 "
-             f"C 104 -166, 102 -214, 94 -262 Z")
-    else:
-        d = (f"M -94 -262 C -100 -205, -102 -160, -94 -122 C -86 -88, -56 -58, {fmt(4*s)} -52 "
-             f"C 60 -58, 88 -88, 96 -122 C 104 -160, 102 -205, 96 -262 Z")
+    d = face_d(S, p)
     gid = c.uid("fg")
     out = rimmed(c, d, sk, dx=3, dy=-1)
     out += (f'<defs><linearGradient id="{gid}" x1="-100" y1="0" x2="100" y2="0" gradientUnits="userSpaceOnUse">'
@@ -404,12 +408,31 @@ def scarf_front(c, S, p, t):
     out += f'<path d="M 40 -300 C 70 -290, 96 -260, 104 -200" stroke="#ffffff" stroke-width="{c.sw(5)}" fill="none" opacity="0.18"/>'
     return out
 
+def red_face(c, S, p):
+    """Babak's red face (Samarra, 838): dark red smears wiped across the face with a sleeve, no wounds.
+    p["red"] 0..1 strength; p["red_reveal"] 0..1 how far the wipe has gone (it runs from x -120 to x 120 of the head)"""
+    a = max(0.0, min(1.0, p.get("red", 0.0))); rv = max(0.0, min(1.0, p.get("red_reveal", 1.0)))
+    if a <= 0 or rv <= 0:
+        return ""
+    fx = 12 * p["turn"]
+    fid = c.uid("rff"); wid = c.uid("rfw")
+    xr = -126 + 252 * rv
+    body = f'<path d="{face_d(S, p)}" fill="#9a2018" opacity="0.32"/>'
+    for (x0, y0, x1, y1, w, op) in [(-104, -238, 104, -184, 34, 0.62), (-108, -176, 104, -124, 30, 0.58), (-70, -258, 60, -232, 16, 0.4)]:
+        d = f"M {fmt(x0+fx)} {y0} C {fmt(x0*0.4+fx)} {fmt(y0+(y1-y0)*0.25-6)}, {fmt(x1*0.4+fx)} {fmt(y0+(y1-y0)*0.75-6)}, {fmt(x1+fx)} {y1}"
+        body += (f'<path d="{d}" stroke="#7a120e" stroke-width="{w}" fill="none" stroke-linecap="round" opacity="{op}"/>'
+                 f'<path d="{d}" stroke="#b4342a" stroke-width="{w*0.35:.1f}" fill="none" stroke-linecap="round" opacity="{op*0.6:.2f}" transform="translate(0,{-w*0.2:.1f})"/>')
+    return (f'<defs><clipPath id="{fid}"><path d="{face_d(S, p)}"/></clipPath><clipPath id="{wid}"><rect x="-200" y="-400" width="{fmt(xr+200)}" height="500"/></clipPath></defs>'
+            f'<g clip-path="url(#{fid})"><g clip-path="url(#{wid})"><g opacity="{a:.2f}">{body}</g></g></g>')
+
 def head(c, S, p, t):
     turn = p["turn"]
     face_x = 12 * turn
     o = (face_shape(c, S, p) + ears(c, S, p) +
          f'<ellipse cx="{fmt(-40+face_x)}" cy="-182" rx="32" ry="19" fill="#7a4630" opacity="0.18"/>'
          f'<ellipse cx="{fmt(40+face_x)}" cy="-182" rx="30" ry="19" fill="#7a4630" opacity="0.12"/>')
+    if p.get("red", 0) > 0:
+        o += red_face(c, S, p)
     if S["beard"]:
         o += beard(c, S, p, t)
     else:
@@ -871,6 +894,55 @@ def elephant(c, phase=0.0, t=0.0, blanket="#7a1a1a", kneel=0.0):
             f'<path d="M -170 -580 L 290 -580" stroke="#e0b25a" stroke-width="{c.sw(14)}"/>'
             + "".join(f'<circle cx="{x}" cy="-560" r="10" fill="#e0b25a" stroke="{OUT}" stroke-width="{c.sw(2)}"/>' for x in range(-160, 290, 40)))
     return out + "</g>"
+
+CAMEL_SADDLE_Y = -800        # a rider's seat on the camel's hump (camel units), see camel_rider in babak/p08_scenes.py
+
+def camel(c, col="#c49a64", dark="#9a7448", phase=0.0, walk=False, t=0.0, blanket="#121216", trim="#c9a24a", saddle=True):
+    """a dromedary, side view facing right; origin on the ground under the belly; ~ 800 wide x 860 tall.
+    walk: a pacing gait (the two legs of one side move together); the head bobs with the step. The saddle sits on the hump (CAMEL_SADDLE_Y)."""
+    out = ""
+    legs_svg = ["", ""]
+    for i, (lx, ph, hind) in enumerate([(-150, 0.0, True), (150, 0.0, False), (-118, math.pi, True), (182, math.pi, False)]):
+        far = i < 2
+        fill = dark if far else col
+        s_ = math.sin(phase + ph) if walk else 0.0
+        a = 18 * s_ if walk else 1.2 * math.sin(t * 1.1 + i)
+        lift = max(0.0, -math.cos(phase + ph)) if walk else 0.0
+        r = math.radians(a)
+        top = (lx, -470)
+        knee = (lx + math.sin(r) * 230, -470 + math.cos(r) * 230)
+        bend = math.radians(a + (24 if hind else -24) * lift)
+        foot = (knee[0] + math.sin(bend) * 220, min(-6, knee[1] + math.cos(bend) * 220))
+        seg = (limb(c, top, knee, 40 if hind else 34, 22, fill) + f'<circle cx="{fmt(knee[0])}" cy="{fmt(knee[1])}" r="26" fill="{fill}" stroke="{OUT}" stroke-width="{c.sw(2.2)}"/>' +
+               limb(c, knee, foot, 20, 17, fill) +
+               f'<ellipse cx="{fmt(foot[0] + 8)}" cy="{fmt(foot[1] - 4)}" rx="34" ry="13" fill="{fill}" stroke="{OUT}" stroke-width="{c.sw(2.2)}"/>')
+        legs_svg[0 if far else 1] += seg
+    bob = (10 * math.sin(phase * 2) if walk else 0.0) + 6 * math.sin(t * 1.3)
+    tail = smooth_path([(-236, -560), (-262 - 6 * math.sin(t * 2.2), -500), (-266 - 8 * math.sin(t * 2.2 + 0.7), -420), (-250, -400), (-246, -500)])
+    body = smooth_path([(-240, -540), (-220, -610), (-150, -660), (-70, -760), (10, -800), (90, -770), (150, -690), (220, -640), (270, -600),
+                        (276, -520), (230, -462), (120, -440), (-20, -440), (-150, -452), (-226, -480)])
+    neck = smooth_path([(230, -650), (300, -610), (360, -570 + bob * 0.3), (410, -600 + bob * 0.6), (440, -680 + bob), (468, -700 + bob), (480, -640 + bob),
+                        (466, -580 + bob * 0.6), (420, -520 + bob * 0.4), (340, -470), (260, -470)])
+    headp = smooth_path([(430, -690 + bob), (446, -740 + bob), (490, -752 + bob), (540, -726 + bob), (578, -690 + bob), (576, -664 + bob), (540, -656 + bob),
+                         (490, -662 + bob), (452, -664 + bob)])
+    out += legs_svg[0] + rimmed(c, tail, dark, dx=2, dy=-2)
+    out += rimmed(c, body, col, dx=3, dy=-2) + rimmed(c, neck, col, dx=3, dy=-2) + rimmed(c, headp, col, dx=3, dy=-2)
+    out += f'<path d="M -190 -470 C -60 -446, 80 -446, 220 -470" stroke="#000" stroke-width="{c.sw(18)}" opacity="0.12" fill="none"/>'
+    out += f'<path d="M -40 -790 C 20 -812, 80 -790, 120 -740" stroke="#ffe8c0" stroke-width="{c.sw(6)}" fill="none" opacity="0.35"/>'
+    out += legs_svg[1]
+    out += (f'<path d="M {fmt(456)} {fmt(-742 + bob)} l -6 -30 l 22 24 Z" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+            f'<ellipse cx="{fmt(494)}" cy="{fmt(-724 + bob)}" rx="8" ry="6" fill="#120a06"/><circle cx="{fmt(496)}" cy="{fmt(-726 + bob)}" r="2.2" fill="#fff"/>'
+            f'<path d="M {fmt(478)} {fmt(-736 + bob)} q 16 -8 30 -2" stroke="{OUT}" stroke-width="{c.sw(3)}" fill="none"/>'
+            f'<ellipse cx="{fmt(566)}" cy="{fmt(-688 + bob)}" rx="5" ry="3.5" fill="#120a06"/>'
+            f'<path d="M {fmt(574)} {fmt(-668 + bob)} q -18 6 -40 4" stroke="{OUT}" stroke-width="{c.sw(2)}" fill="none"/>'
+            f'<path d="M {fmt(470)} {fmt(-700 + bob)} L {fmt(560)} {fmt(-680 + bob)} M {fmt(470)} {fmt(-668 + bob)} L {fmt(520)} {fmt(-700 + bob)}" stroke="#3a2414" stroke-width="{c.sw(4)}" opacity="0.8"/>')
+    if saddle:
+        out += (f'<path d="M -110 -760 C -80 -812, 110 -816, 140 -756 L 150 -640 L -120 -640 Z" fill="{blanket}" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/>'
+                f'<path d="M -118 -664 L 148 -664" stroke="{trim}" stroke-width="{c.sw(10)}"/>'
+                + "".join(f'<path d="M {x} -644 l -7 24 l 14 0 Z" fill="{trim}" stroke="{OUT}" stroke-width="{c.sw(1.6)}"/>' for x in range(-104, 150, 32)) +
+                f'<path d="M -70 -796 C -40 -826, 70 -830, 100 -796 L 92 -772 L -64 -772 Z" fill="#5a3418" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+                f'<path d="M -76 -800 L -88 -846 M 104 -800 L 116 -846" stroke="#5a3418" stroke-width="{c.sw(14)}" stroke-linecap="round"/>')
+    return out
 
 def dog(c, col="#d8b888", dark="#a87848", phase=0.0, run=False, t=0.0, seed=0):
     """a slim hunting dog (saluki), side view facing right; origin on the ground under the belly; ~ 420 wide x 300 tall.

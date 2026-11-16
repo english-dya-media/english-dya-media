@@ -118,6 +118,25 @@ LINES = [
  ("p7s5a",7,5,"NARRATOR","Three days later.","سه روز بعد.",None),
  ("p7s5b",7,5,"GUARD","The caliph wants the whole city to see you.","خلیفه می‌خواهد همه شهر تو را ببینند.",None),
  ("p7s5c",7,5,"BABAK","Good. Let them see.","خوب است. بگذار ببینند.","Good... Let them see."),
+ # ---- part 8 · The Red Face (episode 4, half 2): the parade comes back to part 1's opening, the courtyard, after, today
+ ("p8s1a",8,1,"BOY","Father, who is he?","پدر، او کیست؟",None),
+ ("p8s1b",8,1,"FATHER","Babak. For twenty years, the caliph could not catch him.","بابک. بیست سال خلیفه نتوانست او را بگیرد.","Baabak. For twenty years, the caliph could not catch him."),
+ ("p8s3a",8,3,"BOY","Then why isn't he afraid?","پس چرا نمی‌ترسد؟",None),
+ ("p8s4a",8,4,"HERALD","By order of the caliph:","به فرمان خلیفه:","By order of the caliph..."),
+ ("p8s4b",8,4,"HERALD","his hands and feet shall be cut off.","دست‌ها و پاهایش بریده شود.","his hands and feet, shall be cut off."),
+ ("p8s4c",8,4,"MUTASIM","What is he doing?","چه می‌کند؟",None),
+ ("p8s4d",8,4,"BABAK","When a man loses blood, his face turns pale.","وقتی خون از تن برود، رنگ چهره زرد می‌شود.","When a man loses blood... his face turns pale."),
+ ("p8s4e",8,4,"BABAK","I will not let you think I am pale from fear.","نمی‌گذارم گمان کنید از ترس رنگم زرد شده است.","I will not let you think, I am pale from fear."),
+ ("p8s5a",8,5,"NARRATOR","His brother Abdullah was executed in Baghdad.","برادرش عبدالله در بغداد اعدام شد.","His brother, Abdollaah, was executed in Baghdad."),
+ ("p8s5b",8,5,"NARRATOR","Two years later, the caliph turned on Afshin.","دو سال بعد، خلیفه به افشین هم پشت کرد.","Two years later, the caliph turned on Afsheen."),
+ ("p8s5c",8,5,"AFSHIN_W","You were right, Babak.","حق با تو بود، بابک.","You were right... Baabak."),
+ ("p8s5d",8,5,"NARRATOR","He died in the caliph's prison in 841.","او سال ۸۴۱ در زندان خلیفه مرد.","He died in the caliph's prison, in eight forty-one."),
+ ("p8s6a",8,6,"NARRATOR","His story was written by his enemies.","داستانش را دشمنانش نوشتند.",None),
+ ("p8s6b",8,6,"NARRATOR","Still, it survived.","با این حال، زنده ماند.","Still... it survived."),
+ ("p8s6c",8,6,"NARRATOR","Near Kaleybar, the ruins of Bazz still stand above the clouds.","نزدیک کلیبر، ویرانه‌های بذ هنوز بالای ابرها ایستاده‌اند.","Near Kah-lay-bar, the ruins of Baz still stand, above the clouds."),
+ ("p8s6d",8,6,"BOY_W","Why isn't he afraid?","چرا نمی‌ترسد؟",None),
+ ("p8s6e",8,6,"NARRATOR","People still remember the man who made his face red,","مردم هنوز مردی را به یاد دارند که چهره‌اش را سرخ کرد،","People still remember the man, who made his face red,"),
+ ("p8s6f",8,6,"NARRATOR","so that no one would see fear.","تا کسی ترسی نبیند.","so that no one, would see fear."),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume)
 VOICES = {
@@ -136,6 +155,8 @@ VOICES = {
  "ABDULLAH":(330,1.0,0,1.0), "MESSENGER":(600,1.05,0,1.0), "SAHL":(700,1.1,0,1.0),
  # part 7
  "STEWARD":(740,1.05,0,1.0), "GUARD":(350,1.05,-1,1.0),
+ # part 8
+ "HERALD":(666,1.0,-1,1.0), "AFSHIN_W":(805,1.2,0,0.75), "BOY_W":(765,1.05,4,0.7),
 }
 # slower takes for part 3 (learners): per-line length factors, see voices.py
 SPEED = {lid: 1.18 for lid, part, *_ in LINES if part in (3, 4, 5, 6) and lid not in ("p3s5d", "p3s3a", "p5s4e", "p5s4f", "p6s4c")}
@@ -144,5 +165,8 @@ SPEED.update({"p5s1b": 1.3, "p5s5a": 1.25, "p5s1a": 1.35, "p5s1c": 1.4, "p5s3d":
 SPEED.update({"p6s5e": 1.4, "p6s5f": 1.35, "p6s5g": 1.35, "p6s5c": 1.3, "p6s4d": 1.3, "p6s5d": 1.3})
 SPEED.update({lid: 1.2 for lid, part, *_ in LINES if part == 7})
 SPEED.update({"p7s1a": 1.3, "p7s1b": 1.45, "p7s1c": 1.25, "p7s3c": 1.35, "p7s3d": 1.3, "p7s3e": 1.3, "p7s4c": 1.3, "p7s4e": 1.3, "p7s5c": 1.4})
-# optional per-line ffmpeg filters (voices.py): the spy trembles
-FX = {"p5s1b": "vibrato=f=6.5:d=0.35", "p5s5a": "volume=1.7"}
+SPEED.update({lid: 1.2 for lid, part, *_ in LINES if part == 8})
+SPEED.update({"p8s1a": 1.1, "p8s1b": 1.15, "p8s3a": 1.15, "p8s4c": 1.7, "p8s4d": 1.3, "p8s4e": 1.45, "p8s6b": 1.35, "p8s5c": 1.3, "p8s6d": 1.2})
+# optional per-line ffmpeg filters (voices.py): the spy trembles; the herald calls across the courtyard; the boy's question comes back as an echo
+FX = {"p5s1b": "vibrato=f=6.5:d=0.35", "p5s5a": "volume=1.7",
+      "p8s4a": "aecho=0.8:0.5:110:0.25", "p8s4b": "aecho=0.8:0.5:110:0.25", "p8s6d": "aecho=0.8:0.6:200|400:0.4|0.22"}

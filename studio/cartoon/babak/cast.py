@@ -105,3 +105,10 @@ OFFICIAL = dict(TAX_COLLECTOR, build=1.05)
 OFFICIAL2 = dict(TAX_COLLECTOR, build=1.0, beard="full", skin="tan", head_col="#f0ead8", col="#2a2a33", sash="#8a2a2a")
 PALACE_SERVANT = dict(SERVANT, head="turban", head_col="#f0ead8", col="#e2dccb", col2="#bdb5a0", cuff="#c9a24a", trim="#c9a24a", beard="light")
 PALACE_SERVANT2 = dict(PALACE_SERVANT, skin="tan", beard="short", head="cap", head_col="#121216")
+
+# ---- part 8 (episode 4): Samarra 838, the red face; Afshin's prison (840-841)
+HERALD = spec(kind="man", skin="tan", hair="short", beard="full", beard_col="#1a120c", grey=0.3, head="turban", head_col="#121216", turban_tail=True,
+              garment="robe", col="#22222a", col2="#101014", pattern="plain", belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#c9a24a", build=1.05)
+EXECUTIONER = spec(kind="man", skin="tan", hair="short", beard="full", head="cap", head_col="#1a1a1e", garment="tunic", col="#1a1a1e", col2="#0e0e12",
+                   pattern="plain", build=1.35, belt="#2b190c", buckle=False)                      # only ever seen as a shadow on the wall
+AFSHIN_PRISONER = dict(AFSHIN, head="none", pattern="plain", col="#3a4646", col2="#222c2c", grey=0.35, fur=None, cuff="#5a5a52", trim="#5a5a52")
