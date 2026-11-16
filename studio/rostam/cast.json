@@ -67,7 +67,9 @@
     "Iran": "Eeraan",
     "Zal": "Zaal",
     "Sam": "Saam",
-    "mobed": "mowbed"
+    "mobed": "mowbed",
+    "Zabol": "Zaabol",
+    "Nariman": "Naareemaan"
   },
   "HERDSMAN": {
     "voice": "bm_fable",
@@ -88,5 +90,9 @@
   "MOBED": {
     "voice": "bm_fable",
     "speed": 0.86
+  },
+  "NOBLE": {
+    "voice": "am_adam",
+    "speed": 0.95
   }
 }

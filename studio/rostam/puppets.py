@@ -161,6 +161,10 @@ def garment(c, L, P, t, mode, hy):
                         (-56 * b, -200)]))
         if g != "dress":
             fillp(c, spath([(-42 * b, -282, 0), (44 * b, -282, 0), (46 * b, -264, 0), (-42 * b, -264, 0)]))
+    bel = P.get("belly", 0.0)              # a woman with child (0..1)
+    if bel > 0.01 and g == "dress":
+        fillp(c, spath([(26 * b, -348), (34 * b + 20 * bel, -316), (40 * b + 36 * bel, -276), (40 * b + 32 * bel, -236),
+                        (44 * b + 14 * bel, -206), (20 * b, -206), (0, -280)]))
 
 
 def mantle(c, br, t):
@@ -380,6 +384,7 @@ def arm(c, S, T, sign, r=(21, 16, 12), hand="fist", name=None):
         hand_shape(c, Wr, a2, hand)
     if name:
         anchor(c, name, Wr[0] + 8 * math.cos(a2), Wr[1] + 8 * math.sin(a2))
+        anchor(c, name + "_up", (S[0] + E[0]) / 2, (S[1] + E[1]) / 2)      # upper arm (an armband)
     return E, Wr, a2
 
 

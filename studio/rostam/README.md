@@ -36,6 +36,7 @@ who don't follow the page, and new followers are the page's goal.
 | `sets.py` | skies, sun/moon/stars, ridges, clouds, storm, trees, reeds, water, tents, city skyline, fire, rain, birds, dust, arches, lattice, lamps |
 | `ep01_scenes.py` | every shot of parts 1–2: **read it before writing a new part** (how scenes, timing and layout are done) |
 | `p05_scenes.py` | parts 5–6 (`p06_scenes.py` only registers part 6) and sets to reuse: Rostam's bedchamber `room()` with an opening `door()`, `in_bed()` (sit up / lie back under a blanket), `corridor()`, `city_night()`, `moon_window()`, `king_room()`, `shadow_layer()` (stories cast on a lit curtain), `ghost_layer()` (a vision in the sky), `eagle()` |
+| `p07_scenes.py` | parts 7–8 (`p08_scenes.py` registers part 8) and helpers to reuse: `LN(part, sid, k)` (line times read from the timeline, so the action follows the voices), `dissolve()` (a cross-fade inside one shot), `gem()` (Rostam's jewel, glowing over the silhouettes), `baby()`, `seated()` (a person sitting on the floor), `dawn_window()`, `months_window()` (moon phases, leaves, snow, blossom), `Coins`, `lamp_row()`, `courtyard()`, `cypress()`, `birth_room()` |
 | `render.py` | compositor: `full` / `preview` / `still` (subtitles, verse cards, title/end cards, header, watermark, audio) |
 | `voices_ep.py` | script → `audio/episode.wav` + `audio/timeline.json` |
 | `plan_parts.py`, `parts.json` | captions and Metricool items; registry of parts (date, media, words, summary) |
@@ -111,3 +112,10 @@ owner can pick it up. Never schedule the same part twice; never edit or delete e
   call `an.figures(..., anchors=True)` to use them (ropes, flames, lamp light).
 - Speed: 80–200 ms a frame; avoid full-frame blurs or hundreds of gradient shapes per frame (cache static layers in
   `an.cache` with `get()`).
+- `person(mode="sit")` draws the seated robe below the feet (it shows in the rim colour): sit people on the floor with
+  `seated()` (p07_scenes) or in bed with `in_bed()`, which clip it away.
+- A baby, a cup or a jewel held in the hands: draw it after the figure, at the hand anchors (`A("x:hand")`,
+  `A("x:rhand")`, `A("x:hand_up")` = upper arm), inside the same `an.figures()` call (each call with `anchors=True`
+  clears the anchors of the previous one).
+- In scheduled runs the web fetch of ganjoor.net can be refused (a permission prompt nobody answers); then the part
+  has no verses (parts 5–8 have none).

@@ -1,0 +1,267 @@
+{
+ "episode": 4,
+ "part": 8,
+ "title_en": "Sohrab Is Born",
+ "title_fa": "تولد سهراب",
+ "next_label": "NEXT PART",
+ "next_en": "Whose Son Am I?",
+ "next_fa": "پسر کیستم؟",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "MAID",
+     "en": "A boy, my lady! It's a boy!",
+     "fa": "پسر است، بانوی من! پسر!",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Give him to me... Let me see him.",
+     "fa": "بدهیدش به من... بگذارید ببینمش.",
+     "pause": 1.0
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Nine months earlier, in the palace of Samangan.",
+     "fa": "نه ماه پیش از آن، در کاخ سمنگان.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Rostam, the great hero of Iran, had just married Tahmineh, the king's daughter.",
+     "fa": "رستم، پهلوان بزرگ ایران، تازه با تهمینه، دختر شاه، پیوند بسته بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "But when the sun rose, it was time to say goodbye.",
+     "fa": "اما چون خورشید برآمد، هنگام بدرود رسید.",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "I must go back to Iran, Tahmineh. Keep my jewel safe.",
+     "fa": "باید به ایران برگردم، تهمینه. مهره‌ام را نگه دار.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Go, then. But do not forget me, Rostam.",
+     "fa": "پس برو. اما مرا فراموش نکن، رستم.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "He held her in his arms, and kissed her eyes and her head.",
+     "fa": "او را در آغوش گرفت و چشم و سرش را بوسید.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And she turned away from him, in tears.",
+     "fa": "و تهمینه گریان از او روی برگرداند.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Good morning, hero! Did you sleep well?",
+     "fa": "بامدادت خوش، پهلوان! خوب خوابیدی؟",
+     "pause": 0.3
+    },
+    {
+     "role": "ROSTAM",
+     "en": "Very well, great king.",
+     "fa": "بسیار خوب، شاها.",
+     "pause": 0.3
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Then I bring you good news. My men have found your Rakhsh!",
+     "fa": "پس برایت مژده دارم. مردانم رخشت را یافته‌اند!",
+     "pause": 0.4
+    },
+    {
+     "role": "ROSTAM",
+     "en": "Rakhsh? Where is he?",
+     "fa": "رخش؟ کجاست؟",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Rakhsh was back! Rostam ran to him, and stroked his neck.",
+     "fa": "رخش بازگشته بود! رستم به سویش شتافت و گردنش را نوازش کرد.",
+     "pause": 0.3
+    },
+    {
+     "role": "ROSTAM",
+     "en": "There you are, my old friend. Where have you been?",
+     "fa": "اینجایی، یار دیرینه‌ام. کجا بودی؟",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "He put the saddle on Rakhsh's back, and thanked the king.",
+     "fa": "زین بر پشت رخش نهاد و از شاه سپاس گزارد.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Then, like the wind, he rode away to Iran.",
+     "fa": "آن‌گاه چون باد به سوی ایران تاخت.",
+     "pause": 0.5
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Goodbye, my hero.",
+     "fa": "بدرود، پهلوان من.",
+     "pause": 0.7
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Tahmineh watched from her window, until he was only a cloud of dust.",
+     "fa": "تهمینه از پنجره‌اش نگاه کرد، تا آنکه از او جز گردی بر جا نماند.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "MAID",
+     "en": "My lady, come away from the window. It's cold.",
+     "fa": "بانوی من، از کنار پنجره بیایید. هوا سرد است.",
+     "pause": 0.3
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Not yet. Just a little longer.",
+     "fa": "هنوز نه. فقط کمی دیگر.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Tahmineh was left alone with her sorrow. Days passed, then weeks, then months.",
+     "fa": "تهمینه با اندوهش تنها ماند. روزها گذشت، سپس هفته‌ها، سپس ماه‌ها.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Every night, she held the jewel, and looked toward Iran.",
+     "fa": "هر شب مهره را در دست می‌گرفت و به سوی ایران چشم می‌دوخت.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And inside her, Rostam's child was growing.",
+     "fa": "و فرزند رستم در وجودش بزرگ می‌شد.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Nine months later, a son was born to the king's daughter, as bright as the moon.",
+     "fa": "چون نه ماه گذشت، دختر شاه پسری زاد، تابان چون ماه.",
+     "pause": 0.4
+    },
+    {
+     "role": "MAID",
+     "en": "Look at him, my lady! Look at his strong little hands!",
+     "fa": "نگاهش کنید، بانوی من! چه دست‌های کوچک و نیرومندی!",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "He looks just like his father.",
+     "fa": "درست مانند پدرش است.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "People said: he is Rostam himself! Or Sam, or Nariman, the great heroes of old.",
+     "fa": "می‌گفتند: گویی خودِ رستم است! یا سام، یا نریمان، پهلوانان بزرگ روزگاران کهن.",
+     "pause": 0.7
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "When the baby smiled for the first time, his face shone like the sun.",
+     "fa": "چون کودک نخستین بار خندید، چهره‌اش چون خورشید درخشید.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Sohrab. Your name is Sohrab.",
+     "fa": "سهراب. نام تو سهراب است.",
+     "pause": 0.6
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "And this is your father's jewel. One day, it will tell him who you are.",
+     "fa": "و این مهره‌ی پدر توست. روزی به او خواهد گفت که تو کیستی.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S09",
+   "lines": [
+    {
+     "role": "TAHMINEH",
+     "en": "One day, you will meet your father, my son.",
+     "fa": "روزی پدرت را خواهی دید، پسرم.",
+     "pause": 0.7
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And one day, he would. But not the way his mother dreamed.",
+     "fa": "و روزی هم او را دید. اما نه آن‌گونه که مادرش آرزو داشت.",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}

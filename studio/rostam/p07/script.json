@@ -1,0 +1,249 @@
+{
+ "episode": 4,
+ "part": 7,
+ "title_en": "Rostam's Armband",
+ "title_fa": "مهره‌ی رستم",
+ "next_label": "NEXT PART",
+ "next_en": "Sohrab Is Born",
+ "next_fa": "تولد سهراب",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "ROSTAM",
+     "en": "If it is a son... tie this on his arm. The sign of his father.",
+     "fa": "اگر پسر بود... این را به بازویش ببند. نشانِ پدرش.",
+     "pause": 1.0
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Rostam, the great hero of Iran, was a guest in the palace of Samangan.",
+     "fa": "رستم، پهلوان بزرگ ایران، در کاخ سمنگان مهمان بود.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "At midnight, he sent a priest to wake the king.",
+     "fa": "نیمه‌شب، موبدی را فرستاد تا شاه را بیدار کند.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "He was asking for the hand of the king's daughter, Tahmineh.",
+     "fa": "او دختر شاه، تهمینه، را خواستگاری کرده بود.",
+     "pause": 0.5
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Rostam wants my Tahmineh? The greatest hero in the world?",
+     "fa": "رستم تهمینه‌ی مرا می‌خواهد؟ بزرگ‌ترین پهلوان جهان؟",
+     "pause": 0.7
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "The king's heart filled with joy. He stood up, tall and proud, like a cypress tree.",
+     "fa": "دل شاه از شادی لبریز شد. چون سروی آزاد، سرافراز از جا برخاست.",
+     "pause": 0.4
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Light every lamp in the palace! Wake the musicians!",
+     "fa": "همه‌ی چراغ‌های کاخ را روشن کنید! نوازندگان را بیدار کنید!",
+     "pause": 0.3
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Tell Rostam my answer is yes. Tonight, there will be a wedding!",
+     "fa": "به رستم بگویید پاسخ من آری است. امشب جشن عروسی است!",
+     "pause": 0.7
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "That same night, the king gave his daughter to Rostam, with all their old customs.",
+     "fa": "همان شب، شاه دخترش را به آیین و کیش خود به رستم داد.",
+     "pause": 0.4
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Rostam, I give you my daughter. She is the light of my eyes.",
+     "fa": "رستم، دخترم را به تو می‌سپارم. او روشنی چشم من است.",
+     "pause": 0.4
+    },
+    {
+     "role": "ROSTAM",
+     "en": "I will honour her, great king, for as long as I live.",
+     "fa": "شاها، تا زنده‌ام او را گرامی می‌دارم.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Young and old were happy. They showered gold on the hero, and praised him.",
+     "fa": "پیر و جوان شاد شدند؛ بر پهلوان زر افشاندند و بر او آفرین خواندند.",
+     "pause": 0.3
+    },
+    {
+     "role": "NOBLE",
+     "en": "May this new moon bring you joy, Rostam!",
+     "fa": "این ماهِ نو بر تو فرخنده باد، رستم!",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "All that long night, Rostam stayed with Tahmineh, and told her about his life.",
+     "fa": "رستم همه‌ی آن شبِ دراز را نزد تهمینه ماند و از زندگی‌اش برایش گفت.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Tell me about your home. Tell me about Zabol.",
+     "fa": "از خانه‌ات بگو. از زابل بگو.",
+     "pause": 0.4
+    },
+    {
+     "role": "ROSTAM",
+     "en": "My home is far from here, in Zabol. My old father, Zal, is waiting for me there.",
+     "fa": "خانه‌ی من از اینجا دور است، در زابل. پدر پیرم، زال، آنجا چشم به راه من است.",
+     "pause": 0.3
+    },
+    {
+     "role": "ROSTAM",
+     "en": "And Kavus, the king of Iran, may call me to war any day.",
+     "fa": "و کاووس، شاه ایران، هر روز ممکن است مرا به جنگ بخواند.",
+     "pause": 0.5
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Then you will leave me soon.",
+     "fa": "پس به زودی ترکم می‌کنی.",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "When Rakhsh is found... I must go.",
+     "fa": "وقتی رخش پیدا شود... باید بروم.",
+     "pause": 1.0
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "When dawn was near, Rostam untied a jewel from his arm.",
+     "fa": "نزدیک سپیده‌دم، رستم مهره‌ای را از بازویش گشود.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "That jewel was famous all over the world.",
+     "fa": "آن مهره در همه‌ی جهان نامدار بود.",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "Take this, Tahmineh. Keep it safe.",
+     "fa": "این را بگیر، تهمینه. خوب نگهش دار.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S06b",
+   "lines": [
+    {
+     "role": "ROSTAM",
+     "en": "If the heavens give you a daughter, sew it into her hair, for good luck.",
+     "fa": "اگر روزگار دختری به تو داد، آن را به گیسویش بدوز تا بختش بلند باشد.",
+     "pause": 0.5
+    },
+    {
+     "role": "ROSTAM",
+     "en": "But if it is a son, tie it on his arm, as the sign of his father.",
+     "fa": "و اگر پسر بود، آن را به بازویش ببند، به نشانِ پدر.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "ROSTAM",
+     "en": "He will be as tall as Sam, my grandfather, and just as brave.",
+     "fa": "به بالای سام، نیای من، خواهد بود و به همان دلیری.",
+     "pause": 0.4
+    },
+    {
+     "role": "ROSTAM",
+     "en": "He will bring eagles down from the clouds.",
+     "fa": "عقاب را از دل ابرها به زیر می‌آورد.",
+     "pause": 0.3
+    },
+    {
+     "role": "ROSTAM",
+     "en": "And even the sun will not dare to burn him.",
+     "fa": "و خورشید هم بر او تند نمی‌تابد.",
+     "pause": 0.6
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "I will keep it close to my heart, Rostam. Always.",
+     "fa": "همیشه آن را نزدیک دلم نگه می‌دارم، رستم. همیشه.",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Rostam could not know it then...",
+     "fa": "رستم آن زمان نمی‌توانست بداند...",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "but one day he would see this jewel again, on the darkest day of his life.",
+     "fa": "که روزی این مهره را دوباره خواهد دید؛ در تاریک‌ترین روز زندگی‌اش.",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}
