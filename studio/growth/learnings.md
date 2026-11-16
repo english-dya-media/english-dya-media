@@ -5,10 +5,10 @@ Goal: **+5,000 followers a month** (≈ +167 a day net). Numbers: `python3 growt
 
 ## Where we are
 - Start of November: ~64.7K followers, net −10 to −20 a day. The page was quiet before 3 Nov.
-- 14 Nov: 64,635 followers (−10 vs 13 Nov); November so far −136, last 7 days −11.0/day → needs +321/day for the
-  last 16 days. 13 Nov: +7 follows / −22 unfollows. Follows 7–18/day, unfollows 14–31/day; net negative every day.
-  Account reach 12–14 Nov 1,011 / 948 / 1,218 (vs 525–757 on 7–11 Nov): rising with more reels a day (14 Nov: 5
-  reels incl. Rostam part 1), but follows haven't risen with it.
+- 15 Nov: 64,624 followers (−11 vs 14 Nov); November so far −147, last 7 days −10.4/day → needs +343/day for the
+  last 15 days. 14 Nov: +5 follows / −14 unfollows (fewest follows yet). Net negative every day since 2 Nov.
+  Account reach 14–15 Nov 1,280 / 1,279 (vs 525–757 on 7–11 Nov): doubled with 6–7 reels a day, but follows have
+  not risen with it (5–10/day on 12–14 Nov vs 13–18 on 8–11 Nov).
 - Daily reels ~690 views avg, shares rare; reach is mostly followers — need reels pushed to non-followers.
 
 ## Reels so far (views, view rate, avg watch)
@@ -16,15 +16,16 @@ Goal: **+5,000 followers a month** (≈ +167 a day net). Numbers: `python3 growt
   A sound Iranians replace, words everyone uses.
 - day10 odd vowels (women, busy, bury, minute): 637 views, 37.7%, 5.7 s watch, 4 saves.
 - day09 silent h 568 views, 7 saves, **5 shares (most)**; day07 -ed endings 549, 4.8 s, 2 shares → rules get shared.
-- day12 (first v2 format, th → د/ز: mother, brother…) at ~19 h: 362 views, 36.7%, 4.4 s, 0 saves — same start as
-  day11 (363 at ~18 h): the shorter v2 cut hasn't lifted views yet; judge after 2–3 more days.
-- rostam01 (series, 14 Nov 20:00 Tehran) at ~20 h: 381 views, 29.6%, **5.1 s watch**, 1 share — best post of 14 Nov.
+- day12 (first v2 format, th → د/ز) 462 views at ~43 h, 35.2%. day13 (v2, brand names: Nike, Adidas, Hyundai,
+  Samsung) at ~19 h: 321 views, **41.0% view rate (best daily reel since day04)**, 4.7 s, 2 saves.
+- Rostam & Sohrab fades part by part on IG: part 1 461 views (28.1%, 4.7 s), part 2 358 (24.5%, 3.7 s), part 3 328
+  (21.8%, 3.5 s); 0–1 saves/shares each. Parts 2–3 still out-viewed day13 and quote13 on 15 Nov.
 - Worst: day11 silent g 423 (lowest daily reel); day05 (-ology) 553, 22.5%; day06 silent b 532, 24.0%. Silent letters: 6 of 12 themes, tired.
-- Trial reels: 8 so far, 122–168 views (avg 147 vs ~690 for daily reels). Mistakes: trial06 124 (33.0%), trial08 122
-  (40.5%), trial10 168 (36.4%, 5 saves), trial12b 161 (29.4%). Vocab: trial07 138, trial09 128, trial11 167 (35.9%),
-  trial12a 168 (**42.8%, best view rate of any trial**). No gap between the two formats in views.
-- Quote reels (23:00 Tehran): quote10 «peace of mind» 791 views (most since day04), quote11 610, quote12 «believe in
-  yourself» 379 at ~17 h. View rate lowest (23–25%), watch 3.0–4.3 s; shares ≤1 each.
+- Trial reels: 10 so far, 122–183 views (avg 150 vs 682 for daily reels). Mistakes: trial06 124, trial08 122 (40.5%),
+  trial10 168 (5 saves), trial12b 162, trial13b 140 (**47.8%, best view rate of any reel**, 5 saves). Vocab: trial07
+  138, trial09 128, trial11 167, trial12a 169 (43.1%), trial13a 183 (most trial views, 4 saves). No 2× gap.
+- Quote reels (23:00 Tehran): quote10 «peace of mind» 808 views, quote11 638, quote12 533, quote13 «patience» 307
+  at ~17 h. View rate lowest (23–25%), watch 3.0–4.3 s; shares ≤1 each.
 - Promos: presenter 640 views, presenter2 536 (7 saves, 3 shares). Viewers leave early: watch 3–6 s, <45% past 3 s.
 
 ## YouTube (every video as a Short since 14 Nov 18:10 Rome)
@@ -37,6 +38,8 @@ Goal: **+5,000 followers a month** (≈ +167 a day net). Numbers: `python3 growt
   about what they get on IG (trial10: 11% stayed). Rostam parts hold best (49% stayed) but run 2:09–2:37, so the feed
   shows them little (18–81 views); their playlist is where they get watched.
 - Overall 69% of feed viewers swiped away rather than stayed to watch (Studio, 14 Nov).
+- Subscribers (Metricool daily snapshot): 117 (14 Nov) → 121 (15 Nov) → 140 (16 Nov). Metricool returns no per-Short
+  numbers yet (YTVP empty on 16 Nov), so Short views in the log are the Studio numbers from 15 Nov.
 
 ## Changes made
 - 2026-11-08: trial reels started (one a day at 19:00 Tehran, alternating "mistakes" and "vocab"), shown to non-followers.
@@ -54,8 +57,10 @@ Goal: **+5,000 followers a month** (≈ +167 a day net). Numbers: `python3 growt
 - Lean daily reel themes toward everyday words with a sound Iranians replace (like day04); avoid long academic words.
 - Silent letters: six of eleven themes and day11 started slowest yet — at most one in the next week, ideally none.
 - Odd-vowel words (day10: women, busy) gave the longest daily-reel watch (5.7 s): use more odd-vowel themes.
-- Rostam part 1 held viewers 5.1 s on day one (more than any daily reel but day04/day10): check parts 2–6 before
-  adding more series slots.
+- Rostam parts lose views and watch each part (461 → 358 → 328 views, 4.7 → 3.5 s): don't add series slots; the
+  daily pronunciation reel is still the format to invest in.
+- Brand/name pronunciation (day13: Nike, Hyundai…) got the best daily-reel view rate since day04: try one more
+  everyday-names theme (brands, apps, cities) next week, with all-new words.
 - Trial formats: no 2× gap (mistakes avg 138, vocab 143), so keep both.
 - Quote reels reach more people than daily reels: keep them; -ed endings (day07) kept viewers and got shares —
   try other rule-based sound themes (plural -s/-es: /s/ /z/ /ɪz/).
