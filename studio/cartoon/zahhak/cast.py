@@ -26,3 +26,15 @@ POOR_BOY = spec(kind="boy", skin="tan", hair="boy_curly", beard=None, head="none
                 hs=1.08, bs=0.62, belt="#5a4228", buckle=False, cuff="#8a9aa8", trim="#8a9aa8", trousers="#4a3a2a")
 POOR_MOTHER = spec(kind="woman", skin="tan", hair="none", beard=None, head="scarf", scarf_col="#4a3a5a", scarf_edge="#a89878", garment="dress",
                    col="#6a5a4a", col2="#4a3e32", pattern="plain", hs=0.95, bs=0.95, belt=None, cuff="#a89878", trim="#a89878")
+
+# ---- part 2: Zahhak, young and crowned on his father's throne (the snakes grow out of his shoulders at the end of the part);
+# Iblis's second disguise: a young cook in white (the same amber eyes)
+ZAHHAK_YOUNG_KING = dict(ZAHHAK_PRINCE, head="crown", garment="robe", col="#141218", col2="#08070a", pattern="brocade",
+                         cloak="#6a0c14", cloak2="#3a060c", cloak_hi="#a8202a", belt=None, sash="#a8202a", snakes=True)
+IBLIS_COOK = spec(kind="man", skin="light", hair="short", hair_col="#1a120c", beard="light", beard_col="#1a120c", head="cap", head_col="#f2eee6",
+                  garment="tunic", col="#ece6da", col2="#c8bea8", pattern="plain", belt="#8a6a40", buckle=False, cuff="#d8cfbe", trim="#d8cfbe",
+                  trousers="#5a4a3a", iris="#c8981c", build=0.95)
+COURTIER = spec(kind="man", skin="tan", hair="short", beard="full", beard_col="#1a120c", head="kufiya", kufiya_col="#f2eee6", agal="#17161a",
+                garment="robe", col="#3a5a6a", col2="#24404c", pattern="plain", belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#c9a24a")
+COURTIER2 = dict(COURTIER, beard="white", kind="old", skin="old", col="#6a4a2a", col2="#4a321c", kufiya_pat="check", kufiya_pat_col="#a8262a")
+COURTIER3 = dict(COURTIER, beard="short", col="#5a2a3a", col2="#3a1a24", head="turban", head_col="#e8e0cc", skin="olive")

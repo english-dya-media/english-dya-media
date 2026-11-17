@@ -41,6 +41,29 @@ LINES = [
  ("p1s6b",1,6,"ZAHHAK_W","Father…","پدر…","Father..."),
  ("p1s6c",1,6,"NARRATOR","And the old king walked into the dark garden… without a lamp.","و پادشاه پیر، بی‌چراغ، به باغ تاریک رفت…",
   "And the old king walked into the dark garden... without a lamp."),
+ # ---- part 2 · The King's Cook (Shahnameh, «جمشید»: Iblis the cook, the four meals, the kiss, the snakes)
+ ("p2s1a",2,1,"IBLIS","Just one small wish, my king…","فقط یک آرزوی کوچک، سرورم…","Just one small wish, my king..."),
+ ("p2s1b",2,1,"NARRATOR","Be careful what you give a stranger.","مراقب باش به غریبه چه می‌دهی.",None),
+ ("p2s3a",2,3,"NARRATOR","The old king never came back from his garden.","پادشاه پیر دیگر هیچ‌وقت از باغش برنگشت.",None),
+ ("p2s3b",2,3,"NARRATOR","And Zahhak sat on his father's throne.","و ضحاک بر تخت پدرش نشست.","And Zah-hawk sat on his father's throne."),
+ ("p2s3c",2,3,"IBLIS","Long live the king! I am a cook, my lord. The best in the world.","زنده باد پادشاه! من آشپزم، سرورم. بهترینِ دنیا.",None),
+ ("p2s3d",2,3,"ZAHHAK","The best? Then show me.","بهترین؟ پس نشانم بده.",None),
+ ("p2s3e",2,3,"ZAHHAK","Here. The keys to my kitchen are yours.","بیا. کلیدهای آشپزخانه‌ام مال تو.",None),
+ ("p2s4a",2,4,"NARRATOR","In those days, people ate only what grew from the earth.","در آن روزگار، مردم فقط چیزهایی را می‌خوردند که از زمین می‌روید.",None),
+ ("p2s4b",2,4,"NARRATOR","But the cook had a secret plan.","اما آشپز نقشه‌ای پنهانی داشت.",None),
+ ("p2s4c",2,4,"NARRATOR","On the first day, he brought golden egg yolks.","روز اول، زرده‌ی طلاییِ تخم‌مرغ آورد.",None),
+ ("p2s4d",2,4,"ZAHHAK","Mmm! What is this? It's wonderful!","اوم! این چیست؟ فوق‌العاده است!","Mmm! What is this? It's wonderful!"),
+ ("p2s4e",2,4,"NARRATOR","The next day, partridge and pheasant.","روز بعد، کبک و قرقاول.",None),
+ ("p2s4f",2,4,"ZAHHAK","More! Bring me more!","بیشتر! بیشتر بیاور!",None),
+ ("p2s4g",2,4,"NARRATOR","Then chicken and lamb.","بعد مرغ و بره.",None),
+ ("p2s4h",2,4,"NARRATOR","And on the fourth day, young veal, with saffron and rose water.","و روز چهارم، گوشت گوساله با زعفران و گلاب.",None),
+ ("p2s4i",2,4,"ZAHHAK","Cook, you are a wonder! Ask me for anything you want.","آشپز، تو معجزه‌ای! هر چه می‌خواهی از من بخواه.",None),
+ ("p2s5a",2,5,"IBLIS","I want no gold, my king. My heart is full of love for you.","طلا نمی‌خواهم، سرورم. دلم پر از مهر توست.",None),
+ ("p2s5b",2,5,"IBLIS","Just let me kiss your shoulders. That is all.","فقط بگذار شانه‌هایت را ببوسم. همین.",None),
+ ("p2s5c",2,5,"ZAHHAK","Is that all? Ha! Go on, then.","همین؟ ها! خب، ببوس.","Is that all? Ha! Go on, then."),
+ ("p2s5d",2,5,"ZAHHAK","Cook? Cook! Where did he go?","آشپز؟ آشپز! کجا رفت؟","Cook? ... Cook! Where did he go?"),
+ ("p2s6a",2,6,"ZAHHAK","What… what is this?!","این… این چیست؟!","What... what is this?!"),
+ ("p2s6b",2,6,"NARRATOR","From the places he had kissed, two black snakes grew.","از جایی که بوسیده بود، دو مار سیاه رویید.",None),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -52,5 +75,6 @@ VOICES = {
  "MARDAS": (680, 1.12, -1, 1.0), "HERDSMAN": (50, 1.05, 0, 1.0), "BOY": (765, 1.0, 4, 1.0),
 }
 # slower takes for learners (per-line length factors, see voices.py)
-SPEED = {lid: 1.15 for lid, part, *_ in LINES if part == 1}
+SPEED = {lid: 1.15 for lid, part, *_ in LINES if part in (1, 2)}
 SPEED.update({"p1s1a": 1.3, "p1s6b": 1.4, "p1s5d": 1.2, "p1s4m": 1.25})
+SPEED.update({"p2s1a": 1.2, "p2s5d": 1.2, "p2s6a": 1.25, "p2s4f": 1.1})

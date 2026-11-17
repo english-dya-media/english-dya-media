@@ -414,3 +414,134 @@ def window_wall(pal="night"):
         if r.random() < 0.35:
             s += "".join(f'<circle cx="{x + 7 * math.cos(a):.0f}" cy="{y + 7 * math.sin(a):.0f}" r="4" fill="#e8e8f4" opacity="0.85"/>' for a in (0, 1.26, 2.51, 3.77, 5.03))
     return svg_render(s)
+
+
+# ------------------------------------------------------------------ part 2: Mardas's (now Zahhak's) palace by day, the kitchen, the table
+def _tiles(x0, y0, x1, y1, step, col="#2f8a96", col2="#f0e6cc"):
+    s = f'<rect x="{x0}" y="{y0}" width="{x1 - x0}" height="{y1 - y0}" fill="{col}"/>'
+    for x in range(x0, x1, step):
+        for y in range(y0, y1, step):
+            cx, cy = x + step / 2, y + step / 2
+            s += f'<path d="M {cx} {cy - step * 0.38} L {cx + step * 0.38} {cy} L {cx} {cy + step * 0.38} L {cx - step * 0.38} {cy} Z" fill="{col2}" opacity="0.85"/>'
+    return s
+
+
+def palace_hall():
+    """the palace's throne hall by day (Mardas's, then Zahhak's): white walls, turquoise tile bands, arched alcoves, sunbeams from high
+    windows, brass lamps; a white and gold throne (cushion top y 990, x 380-700) on three marble steps (y 1180-1310); a red carpet;
+    courtiers stand at y 1330-1750"""
+    s = ("<defs>" + FILTERS + lg("pw", [(0, "#e8dcc4", 1), (1, "#d6c6a6", 1)]) + lg("pf", [(0, "#c8b494", 1), (1, "#8a7050", 1)]) +
+         lg("beam", [(0, "#fff6dc", 0.45), (1, "#fff6dc", 0.0)]) + lg("cush", [(0, "#b8242c", 1), (1, "#7a1218", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#pw)"/>'
+    s += _tiles(0, 1140, W, 1180, 40)
+    for ax in (40, 820):                                                     # alcoves
+        s += (f'<path d="M {ax} 1140 L {ax} 700 Q {ax + 110} 540, {ax + 220} 700 L {ax + 220} 1140 Z" fill="#cbb896" stroke="#2f8a96" stroke-width="10"/>'
+              f'<path d="M {ax + 20} 1140 L {ax + 20} 710 Q {ax + 110} 580, {ax + 200} 710 L {ax + 200} 1140" fill="none" stroke="#f0e6cc" stroke-width="3" stroke-dasharray="10 8"/>'
+              f'<path d="M {ax + 60} 980 C {ax + 60} 900, {ax + 160} 900, {ax + 160} 980 L {ax + 150} 1060 L {ax + 70} 1060 Z" fill="#b8693c" stroke="#5a2e18" stroke-width="3"/>')
+    for wx in (300, 780):                                                    # high windows and their beams
+        s += (f'<path d="M {wx - 40} 420 L {wx - 40} 300 Q {wx} 250, {wx + 40} 300 L {wx + 40} 420 Z" fill="#fff6dc" stroke="#2f8a96" stroke-width="6"/>'
+              f'<path d="M {wx - 40} 420 L {wx + 40} 420 L {wx + 260} 1500 L {wx + 60} 1500 Z" fill="url(#beam)" opacity="0.8"/>')
+    s += f'<path d="M 360 1180 L 360 640 Q 540 470, 720 640 L 720 1180 Z" fill="#dccaa6" stroke="#2f8a96" stroke-width="10"/>'
+    s += f'<path d="M 384 1180 L 384 650 Q 540 505, 696 650 L 696 1180" fill="none" stroke="#c9a24a" stroke-width="4"/>'
+    for k, (x0, x1, y0) in enumerate([(220, 860, 1270), (260, 820, 1225), (300, 780, 1180)]):
+        s += (f'<rect x="{x0}" y="{y0}" width="{x1 - x0}" height="{50 if k else 42}" fill="#{0xf2 - 8 * k:02x}{0xec - 8 * k:02x}{0xe0 - 8 * k:02x}" stroke="#a8987a" stroke-width="3"/>'
+              f'<path d="M {x0} {y0 + 2} L {x1} {y0 + 2}" stroke="#c9a24a" stroke-width="4" opacity="0.8"/>')
+    s += (f'<path d="M 400 1000 L 400 740 Q 540 600, 680 740 L 680 1000 Z" fill="#f4ecdc" stroke="#c9a24a" stroke-width="8"/>'
+          f'<path d="M 424 990 L 424 750 Q 540 640, 656 750 L 656 990" fill="none" stroke="#2f8a96" stroke-width="5"/>'
+          + "".join(f'<path d="M 540 720 L {540 + 34 * math.cos(math.radians(a)):.0f} {720 + 34 * math.sin(math.radians(a)):.0f}" stroke="#c9a24a" stroke-width="6"/>' for a in range(0, 360, 30)) +
+          f'<circle cx="540" cy="720" r="16" fill="#c9a24a" stroke="#7a5a22" stroke-width="3"/>'
+          f'<rect x="370" y="1040" width="340" height="140" fill="#efe6d4" stroke="#c9a24a" stroke-width="4"/>'
+          f'<path d="M 386 1070 L 694 1070 M 386 1150 L 694 1150" stroke="#2f8a96" stroke-width="4" opacity="0.8"/>'
+          f'<rect x="380" y="988" width="320" height="58" rx="18" fill="url(#cush)" stroke="#4a0a10" stroke-width="3"/>'
+          f'<path d="M 392 1000 L 688 1000" stroke="#c9a24a" stroke-width="4" opacity="0.8"/>'
+          f'<rect x="352" y="900" width="40" height="150" rx="8" fill="#efe6d4" stroke="#c9a24a" stroke-width="3"/>'
+          f'<rect x="688" y="900" width="40" height="150" rx="8" fill="#efe6d4" stroke="#c9a24a" stroke-width="3"/>'
+          f'<circle cx="372" cy="894" r="15" fill="#c9a24a" stroke="#7a5a22" stroke-width="3"/><circle cx="708" cy="894" r="15" fill="#c9a24a" stroke="#7a5a22" stroke-width="3"/>')
+    for lx in (170, 910):
+        s += (f'<path d="M {lx} 0 L {lx} 520" stroke="#7a5a30" stroke-width="3"/>'
+              f'<path d="M {lx - 40} 520 L {lx + 40} 520 L {lx + 26} 560 L {lx - 26} 560 Z" fill="#b9832f" stroke="#5a3a14" stroke-width="3"/>'
+              f'<circle cx="{lx}" cy="540" r="60" fill="#ffd890" opacity="0.25" filter="url(#b12)"/>')
+    s += f'<rect x="0" y="1310" width="{W}" height="{H - 1310}" fill="url(#pf)"/>'
+    for k in range(10):
+        y = 1310 + k * k * 7 + k * 14
+        s += f'<path d="M 0 {y} L {W} {y}" stroke="#6a5438" stroke-width="{2 + k * 0.4:.1f}" opacity="0.4"/>'
+    for k in range(-8, 9):
+        s += f'<path d="M {540 + k * 70} 1310 L {540 + k * 240} 1920" stroke="#6a5438" stroke-width="2.5" opacity="0.35"/>'
+    s += ('<path d="M 440 1310 L 640 1310 L 780 1920 L 300 1920 Z" fill="#a8242c"/>'
+          '<path d="M 456 1310 L 624 1310 L 752 1920 L 328 1920 Z" fill="none" stroke="#c9a24a" stroke-width="5"/>')
+    return svg_render(s)
+
+
+def palace_hall_close():
+    """close on the white and gold throne: its tall back (rosette at (540, 520)) behind the king, whose neck is at about (540, 1010)"""
+    s = ("<defs>" + FILTERS + lg("pw", [(0, "#e8dcc4", 1), (1, "#cdbb98", 1)]) + lg("beam", [(0, "#fff6dc", 0.4), (1, "#fff6dc", 0.0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#pw)"/>'
+    s += '<path d="M 700 0 L 860 0 L 1180 1920 L 960 1920 Z" fill="url(#beam)" opacity="0.7"/>'
+    s += f'<path d="M 150 1920 L 150 760 Q 540 300, 930 760 L 930 1920 Z" fill="#f4ecdc" stroke="#c9a24a" stroke-width="14"/>'
+    s += f'<path d="M 190 1920 L 190 780 Q 540 360, 890 780 L 890 1920" fill="none" stroke="#2f8a96" stroke-width="8"/>'
+    s += "".join(f'<path d="M 540 520 L {540 + 70 * math.cos(math.radians(a)):.0f} {520 + 70 * math.sin(math.radians(a)):.0f}" stroke="#c9a24a" stroke-width="10"/>' for a in range(0, 360, 30))
+    s += '<circle cx="540" cy="520" r="30" fill="#c9a24a" stroke="#7a5a22" stroke-width="4"/>'
+    s += "".join(f'<circle cx="{x}" cy="{y}" r="8" fill="#2f8a96" opacity="0.8"/>' for x, y in
+                 [(150, 900), (150, 1100), (150, 1300), (150, 1500), (930, 900), (930, 1100), (930, 1300), (930, 1500)])
+    return svg_render(s)
+
+
+def kitchen():
+    """the palace kitchen: brick walls, a raised hearth at the left (top y 960, x 80-520) with the fire under it (opening x 150-450,
+    y 1000-1160, flames drawn by the scene) and a big copper pot on it (rim y 820, x 200-440); hanging pans and herbs; shelves with jars
+    at the right; a window with a beam; a person stands at feet y 1600-1700"""
+    s = ("<defs>" + FILTERS + lg("kw", [(0, "#5a3222", 1), (0.35, "#8a5236", 1), (1, "#6a3c26", 1)]) + lg("kf", [(0, "#7a5034", 1), (1, "#3a2416", 1)]) +
+         rg("fire", 300, 1080, 620, [(0, "#ffb060", 0.45), (0.5, "#c0602a", 0.12), (1, "#000", 0)]) +
+         lg("beam", [(0, "#fff0c8", 0.4), (1, "#fff0c8", 0.0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#kw)"/>'
+    r = random.Random(91)
+    for row in range(26):
+        y = row * 60
+        for col in range(10):
+            x = col * 120 + (60 if row % 2 else 0) - 60
+            s += f'<rect x="{x + 3}" y="{y + 3}" width="114" height="54" fill="#{r.randint(0x82, 0x9a):02x}{r.randint(0x4a, 0x58):02x}{r.randint(0x30, 0x3a):02x}" opacity="0.45"/>'
+    s += f'<rect x="0" y="0" width="{W}" height="380" fill="#1a0e08" opacity="0.35" filter="url(#b40)"/>'
+    s += ('<path d="M 760 560 L 760 380 Q 860 300, 960 380 L 960 560 Z" fill="#ffefc8" stroke="#3a2416" stroke-width="8"/>'
+          '<path d="M 860 380 L 860 560 M 760 470 L 960 470" stroke="#3a2416" stroke-width="6"/>'
+          '<path d="M 760 560 L 960 560 L 620 1500 L 420 1500 Z" fill="url(#beam)" opacity="0.7"/>')
+    for k, y in enumerate((760, 960)):                                     # shelves with jars
+        s += f'<rect x="700" y="{y}" width="360" height="18" fill="#5a3a22" stroke="#2a180e" stroke-width="3"/>'
+        for j in range(4):
+            jx = 730 + j * 85 + (20 if k else 0); jh = 70 + 20 * ((j + k) % 2)
+            s += (f'<path d="M {jx} {y} C {jx - 26} {y - jh * 0.3}, {jx - 22} {y - jh}, {jx + 4} {y - jh} L {jx + 26} {y - jh} C {jx + 52} {y - jh}, {jx + 56} {y - jh * 0.3}, {jx + 30} {y} Z" '
+                  f'fill="{["#b8693c", "#2f7a86", "#c9a24a", "#8a4a2a"][(j + k) % 4]}" stroke="#2a180e" stroke-width="3"/>')
+    for k, (px, py) in enumerate([(160, 420), (300, 460), (440, 410)]):    # hanging copper pans
+        s += (f'<path d="M {px} 0 L {px} {py - 40}" stroke="#2a180e" stroke-width="3"/>'
+              f'<circle cx="{px}" cy="{py}" r="48" fill="#c0703a" stroke="#4a2410" stroke-width="4"/><circle cx="{px - 12}" cy="{py - 12}" r="16" fill="#f0a868" opacity="0.6"/>'
+              f'<path d="M {px} {py - 48} L {px} {py - 90}" stroke="#4a2410" stroke-width="10"/>')
+    for hx in (600, 660):                                                   # herbs and garlic
+        s += f'<path d="M {hx} 0 L {hx} 300" stroke="#2a180e" stroke-width="2"/>'
+        s += "".join(f'<ellipse cx="{hx + 10 * math.sin(i)}" cy="{300 + 18 * i}" rx="12" ry="9" fill="{"#e8e0cc" if hx == 660 else "#5a7a3a"}" stroke="#2a180e" stroke-width="2"/>' for i in range(5))
+    s += ('<rect x="60" y="960" width="480" height="560" fill="#7a4428" stroke="#2a180e" stroke-width="4"/>'
+          '<rect x="50" y="944" width="500" height="30" rx="6" fill="#9a5a34" stroke="#2a180e" stroke-width="4"/>'
+          '<path d="M 150 1180 L 150 1060 Q 300 960, 450 1060 L 450 1180 Z" fill="#1a0a04" stroke="#2a180e" stroke-width="4"/>')
+    for row in range(9):
+        y = 990 + row * 60
+        s += f'<path d="M 60 {y} L 540 {y}" stroke="#4a2416" stroke-width="3" opacity="0.6"/>'
+    s += ('<path d="M 190 840 C 180 930, 210 960, 320 960 C 430 960, 460 930, 450 840 Z" fill="#b8682e" stroke="#3a1a08" stroke-width="5"/>'
+          '<ellipse cx="320" cy="840" rx="132" ry="24" fill="#8a4a1e" stroke="#3a1a08" stroke-width="5"/>'
+          '<ellipse cx="320" cy="842" rx="112" ry="16" fill="#c8862e"/>'
+          '<path d="M 230 880 C 250 920, 290 930, 330 930" stroke="#f0a868" stroke-width="8" fill="none" opacity="0.5"/>')
+    s += f'<rect x="0" y="1520" width="{W}" height="{H - 1520}" fill="url(#kf)"/>'
+    s += f'<rect width="{W}" height="{H}" fill="url(#fire)"/>'
+    return svg_render(s)
+
+
+def table_cloth():
+    """a dish on the royal table: the hall blurred above, a red cloth with a gold border below (the dish sits at about (540, 900))"""
+    s = ("<defs>" + FILTERS + lg("tw", [(0, "#e8dcc4", 1), (1, "#cdbb98", 1)]) + lg("cl", [(0, "#9a1c24", 1), (1, "#5a0a10", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#tw)"/>'
+    s += '<g filter="url(#b20)"><path d="M 300 760 L 300 300 Q 540 120, 780 300 L 780 760 Z" fill="#f4ecdc" stroke="#c9a24a" stroke-width="14"/>'
+    s += '<circle cx="540" cy="360" r="40" fill="#c9a24a"/><rect x="0" y="560" width="1080" height="40" fill="#2f8a96"/></g>'
+    s += '<path d="M -100 760 L 1180 760 L 1180 1920 L -100 1920 Z" fill="url(#cl)"/>'
+    s += '<path d="M -100 800 L 1180 800" stroke="#c9a24a" stroke-width="12"/><path d="M -100 830 L 1180 830" stroke="#c9a24a" stroke-width="4"/>'
+    r = random.Random(95)
+    for k in range(60):
+        x = r.uniform(-60, 1140); y = r.uniform(870, 1900); sc = 0.6 + (y - 870) / 900
+        s += f'<path d="M {x:.0f} {y - 10 * sc:.0f} L {x + 10 * sc:.0f} {y:.0f} L {x:.0f} {y + 10 * sc:.0f} L {x - 10 * sc:.0f} {y:.0f} Z" fill="#c9a24a" opacity="0.45"/>'
+    return svg_render(s)
