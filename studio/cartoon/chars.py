@@ -405,10 +405,10 @@ def headwear(c, S, p, t):
         pts = []
         for i, x in enumerate((-92, -46, 0, 46, 92)):
             top = -354 + abs(x) * 0.08
-            hgt = 64 if x == 0 else (52 if abs(x) < 60 else 40)
+            hgt = (64 if x == 0 else (52 if abs(x) < 60 else 40)) * S.get("crown_h", 1.0)
             pts.append(f"M {x - 22} {fmt(top + 4)} L {x} {fmt(top - hgt)} L {x + 22} {fmt(top + 4)} Z")
         spikes = "".join(rimmed(c, d_, f"url(#{gid})", dx=2, dy=-1, sw=2.2) for d_ in pts)
-        tips = "".join(f'<circle cx="{x}" cy="{fmt(-354 + abs(x) * 0.08 - (64 if x == 0 else (52 if abs(x) < 60 else 40)) - 6)}" r="9" fill="{g3}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+        tips = "".join(f'<circle cx="{x}" cy="{fmt(-354 + abs(x) * 0.08 - (64 if x == 0 else (52 if abs(x) < 60 else 40)) * S.get("crown_h", 1.0) - 6)}" r="9" fill="{g3}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
                        for x in (-92, -46, 0, 46, 92))
         jewels = "".join(f'<ellipse cx="{x}" cy="{fmt(-322 + abs(x) * 0.02)}" rx="{11 if x == 0 else 8}" ry="{13 if x == 0 else 9}" fill="{col_}" stroke="{OUT}" stroke-width="{c.sw(1.6)}"/>'
                          for x, col_ in ((-66, S.get("jewel", "#a8121c")), (0, S.get("jewel2", "#1c3a8a")), (66, S.get("jewel", "#a8121c"))))
@@ -670,6 +670,16 @@ def prop(c, name, x, y, ang, t, S=None):
     if name == "pike":   # long spear held low (hand hanging at the side)
         return (g + f'<path d="M 0 -1080 L 0 320" stroke="#4a3018" stroke-width="{c.sw(10)}"/>'
                 f'<path d="M 0 -1170 L 17 -1080 L -17 -1080 Z" fill="#cfd4da" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>')
+    if name == "bag":       # a doctor's leather bag hanging from the fist by its handle
+        return (g + f'<path d="M -36 30 C -40 -16, 40 -16, 36 30" stroke="#3a2414" stroke-width="{c.sw(11)}" fill="none"/>'
+                f'<path d="M -92 30 L 92 30 L 104 170 C 104 196, -104 196, -104 170 Z" fill="#6a3e22" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/>'
+                f'<path d="M -98 76 L 98 76" stroke="#4a2a14" stroke-width="{c.sw(5)}"/><path d="M -60 40 L -66 180 M 60 40 L 66 180" stroke="#8a5a32" stroke-width="{c.sw(3)}" opacity="0.6"/>'
+                f'<rect x="-16" y="64" width="32" height="26" rx="5" fill="#c9a24a" stroke="{OUT}" stroke-width="{c.sw(2)}"/></g>')
+    if name == "flask":     # a round glass flask with a long neck, held by the neck, a green medicine in it
+        return (g + f'<path d="M -11 -14 L 11 -14 L 11 46 C 52 62, 66 98, 66 130 C 66 182, 32 214, 0 214 C -32 214, -66 182, -66 130 C -66 98, -52 62, -11 46 Z" '
+                f'fill="#d8ece8" fill-opacity="0.6" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+                f'<path d="M -60 140 C -40 152, 40 152, 60 140 C 58 182, 30 207, 0 207 C -30 207, -58 182, -60 140 Z" fill="#4a9a5a" opacity="0.85"/>'
+                f'<ellipse cx="-26" cy="108" rx="10" ry="20" fill="#ffffff" opacity="0.65"/><rect x="-15" y="-24" width="30" height="14" rx="4" fill="#8a5a2a" stroke="{OUT}" stroke-width="{c.sw(2)}"/></g>')
     if name == "bowl":
         return g + f'<path d="M -50 -10 L 50 -10 C 46 30, -46 30, -50 -10 Z" fill="#8a5a32" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>'
     if name == "dagger":     # short curved knife, blade pointing down (+y) from the fist
@@ -736,7 +746,9 @@ def cloak_back(c, S, p, t):
            (-350 - 44 * wind, 620), (-330 - 36 * wind, 860), (-240, 920), (-170, 900)]
     pts = [(x + (6 + 10 * wind) * math.sin(t * 3.4 + i * 0.8) * (i / 8), y + 4 * math.sin(t * 2.7 + i) * (i / 8)) for i, (x, y) in enumerate(pts)]
     d = smooth_path(pts + [(-150, 400)])
-    return rimmed(c, d, S.get("cloak2", "#6c0f12"), dx=2, dy=-2)
+    k = p.get("cloak_len", 1.0)          # < 1 shortens the cloak (a king seated on his throne)
+    out = rimmed(c, d, S.get("cloak2", "#6c0f12"), dx=2, dy=-2)
+    return out if k == 1.0 else f'<g transform="translate(0,40) scale(1,{k:.3f}) translate(0,-40)">{out}</g>'
 
 def cloak_front(c, S, p, t):
     if not S["cloak"]:
@@ -748,9 +760,12 @@ def cloak_front(c, S, p, t):
           f"L 144 {fmt(886+5*math.sin(t*3.0))} C 140 500, 138 150, 120 70 C 100 40, 70 20, 40 12 Z")
     br = "".join(f'<circle cx="{x}" cy="40" r="20" fill="#b9832f" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/><circle cx="{x}" cy="40" r="11" fill="#7a1010"/>'
                  for x in (-112, 112))
-    return (rimmed(c, Lp, col, dx=2, dy=-2) + f'<path d="M -186 60 C -200 160, -204 500, -200 880 L -170 886 C -176 500, -172 140, -150 70 Z" fill="{S.get("cloak2", "#6c0f12")}" opacity="0.7"/>' +
-            rimmed(c, Rp, col, dx=3.5, dy=-1.5) + f'<path d="M 150 40 C 176 70, 186 200, 188 800 L 176 800 C 174 200, 166 80, 140 48 Z" fill="{S.get("cloak_hi", "#d8402e")}" opacity="0.6"/>' + br +
-            f'<path d="M -112 40 C -60 70, 60 70, 112 40" stroke="#d8a64a" stroke-width="{c.sw(4)}" fill="none"/>')
+    panels = (rimmed(c, Lp, col, dx=2, dy=-2) + f'<path d="M -186 60 C -200 160, -204 500, -200 880 L -170 886 C -176 500, -172 140, -150 70 Z" fill="{S.get("cloak2", "#6c0f12")}" opacity="0.7"/>' +
+              rimmed(c, Rp, col, dx=3.5, dy=-1.5) + f'<path d="M 150 40 C 176 70, 186 200, 188 800 L 176 800 C 174 200, 166 80, 140 48 Z" fill="{S.get("cloak_hi", "#d8402e")}" opacity="0.6"/>')
+    k = p.get("cloak_len", 1.0)
+    if k != 1.0:
+        panels = f'<g transform="translate(0,40) scale(1,{k:.3f}) translate(0,-40)">{panels}</g>'
+    return (panels + br + f'<path d="M -112 40 C -60 70, 60 70, 112 40" stroke="#d8a64a" stroke-width="{c.sw(4)}" fill="none"/>')
 
 ARM_PRESETS = {  # (upper-arm angle from straight down, + = outward/up ; inward bend of the forearm)
     "down": (6, 4), "relaxed": (10, 18), "hip": (35, 100), "raise": (160, -10), "fist_up": (165, -15), "forward": (40, 90),

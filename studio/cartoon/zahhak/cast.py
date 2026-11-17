@@ -38,3 +38,33 @@ COURTIER = spec(kind="man", skin="tan", hair="short", beard="full", beard_col="#
                 garment="robe", col="#3a5a6a", col2="#24404c", pattern="plain", belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#c9a24a")
 COURTIER2 = dict(COURTIER, beard="white", kind="old", skin="old", col="#6a4a2a", col2="#4a321c", kufiya_pat="check", kufiya_pat_col="#a8262a")
 COURTIER3 = dict(COURTIER, beard="short", col="#5a2a3a", col2="#3a1a24", head="turban", head_col="#e8e0cc", skin="olive")
+
+# ---- part 3: Iblis's third disguise: a doctor in grey with a leather bag (the same amber eyes); the court doctors; King Jamshid on his
+# jewelled throne (long white beard, a tall crown, lapis blue and gold) and his nobles; a noble rider of Iran; Zahhak's guards;
+# Arnavaz and Shahrnaz, princesses of Jamshid's house, in pale silk
+IBLIS_DOCTOR = spec(kind="man", skin="light", hair="short", hair_col="#1a120c", beard="short", beard_col="#2a221c", head="turban", head_col="#45454f",
+                    garment="robe", col="#6e6e78", col2="#4a4a54", pattern="plain", belt=None, sash="#34343c", cuff="#9a9aa4", trim="#9a9aa4",
+                    iris="#c8981c", build=0.95)
+DOCTOR_A = spec(kind="old", skin="old", hair="short", hair_col="#d8d2c8", beard="white", head="turban", head_col="#f2eee6", garment="robe",
+                col="#2a3a6a", col2="#1a2648", pattern="plain", belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#c9a24a", iris="#3a2a1a")
+DOCTOR_B = spec(kind="man", skin="olive", hair="short", beard="full", beard_col="#6a625a", head="turban", head_col="#e8dcc0", garment="robe",
+                col="#6a4a2a", col2="#4a321c", pattern="plain", belt="#3a2414", buckle=False, cuff="#a8946e", trim="#a8946e", iris="#2a1a10")
+DOCTOR_C = spec(kind="old", skin="tan", hair="short", hair_col="#d8d2c8", beard="white", head="kufiya", kufiya_col="#efe8dc", kufiya_shade="#cbbfaa",
+                agal="#2a1e16", garment="robe", col="#3a5a3a", col2="#24402a", pattern="plain", belt=None, sash="#8a6a3a", cuff="#c9b07a", trim="#c9b07a")
+JAMSHID = spec(kind="old", skin="old", hair="long_curly", hair_col="#bdb6ac", beard="white", head="crown", crown_h=1.7, jewel="#1c4aa8", jewel2="#b8121c",
+               garment="robe", col="#1e3a7a", col2="#132654", pattern="brocade", cloak="#c9a24a", cloak2="#8a6a22", cloak_hi="#f6dc8a",
+               belt=None, sash="#c9a24a", cuff="#f0d48a", trim="#f0d48a", iris="#3a2a1a", build=1.08)
+IRAN_NOBLE = spec(kind="man", skin="light", hair="long_curly", hair_col="#1a120c", beard="full", beard_col="#1a120c", head="helmet",
+                  helm=("#5a3c14", "#a8782a", "#ecc66a"), plume="#1e4a8a", garment="tunic", col="#1e4a6a", col2="#123448", pattern="scales",
+                  cloak="#7a1a1a", cloak2="#4a0e0e", cloak_hi="#a83a2a", belt="#2b190c", cuff="#c9a24a", trim="#c9a24a", iris="#2a1a10")
+NOBLE_1 = spec(kind="man", skin="light", hair="short", beard="full", beard_col="#2a1a10", head="turban", head_col="#f2eee6", garment="robe",
+               col="#1f6a6a", col2="#124646", pattern="brocade", belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#c9a24a")
+NOBLE_2 = spec(kind="old", skin="old", hair="short", hair_col="#d8d2c8", beard="white", head="cap", head_col="#8a1a24", garment="robe",
+               col="#b8642a", col2="#7a3e16", pattern="plain", belt=None, sash="#5a1a1a", cuff="#e0b25a", trim="#e0b25a")
+NOBLE_3 = dict(IRAN_NOBLE, plume="#b3181d", col="#4a3a6a", col2="#2a2048", cloak="#1e4a3a", cloak2="#123026", cloak_hi="#2e6a52", beard="short")
+ZGUARD = spec(kind="man", skin="tan", hair="short", beard="short", beard_col="#120c09", head="helmet", helm=("#141418", "#3a3a44", "#6a6a78"),
+              plume="#6a0c14", garment="tunic", col="#17151b", col2="#08070a", pattern="scales", scale_col="#6a6a78", belt="#2b190c", buckle=False,
+              cuff="#3a3a44", trim="#6a0c14")
+ARNAVAZ = spec(kind="woman", skin="light", hair="none", beard=None, head="scarf", scarf_col="#dfe6f2", scarf_edge="#c9a24a", diadem=True,
+               garment="dress", col="#9fb4d6", col2="#7088b0", pattern="plain", hs=0.95, bs=0.95, belt=None, cuff="#c9a24a", trim="#c9a24a", iris="#3a2a1a")
+SHAHRNAZ = dict(ARNAVAZ, scarf_col="#f4e2e8", col="#d8a8b8", col2="#a87888", iris="#4a2a17")

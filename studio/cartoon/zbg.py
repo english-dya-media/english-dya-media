@@ -545,3 +545,142 @@ def table_cloth():
         x = r.uniform(-60, 1140); y = r.uniform(870, 1900); sc = 0.6 + (y - 870) / 900
         s += f'<path d="M {x:.0f} {y - 10 * sc:.0f} L {x + 10 * sc:.0f} {y:.0f} L {x:.0f} {y + 10 * sc:.0f} L {x - 10 * sc:.0f} {y:.0f} Z" fill="#c9a24a" opacity="0.45"/>'
     return svg_render(s)
+
+
+# ------------------------------------------------------------------ part 3: Jamshid's hall (Persepolis style)
+LAPIS, LAPIS_D = "#1e3a7a", "#122656"
+
+
+def _rosette(x, y, r, col=GOLD, dark=GOLD_D, n=12):
+    out = f'<circle cx="{x}" cy="{y}" r="{r}" fill="{dark}"/>'
+    for k in range(n):
+        a = 2 * math.pi * k / n
+        out += f'<ellipse cx="{x + r * 0.55 * math.cos(a):.1f}" cy="{y + r * 0.55 * math.sin(a):.1f}" rx="{r * 0.36:.1f}" ry="{r * 0.16:.1f}" fill="{col}" transform="rotate({math.degrees(a):.0f},{x + r * 0.55 * math.cos(a):.1f},{y + r * 0.55 * math.sin(a):.1f})"/>'
+    return out + f'<circle cx="{x}" cy="{y}" r="{r * 0.22:.1f}" fill="{GOLD_L}"/>'
+
+
+def _bull_capital(x, y, w=150):
+    """a double-bull capital (two kneeling bull fronts back to back) centred at x, its saddle top at y"""
+    out = ""
+    for sd in (-1, 1):
+        hx = x + sd * w * 0.42
+        out += (f'<path d="M {x} {y + 4} L {x + sd * w * 0.30:.0f} {y + 4} C {x + sd * w * 0.45:.0f} {y + 2}, {x + sd * w * 0.55:.0f} {y + 22}, {x + sd * w * 0.55:.0f} {y + 46} '
+                f'L {x + sd * w * 0.50:.0f} {y + 88} L {x + sd * w * 0.36:.0f} {y + 88} L {x + sd * w * 0.32:.0f} {y + 58} L {x} {y + 58} Z" fill="#b8a07a" stroke="#5a4a32" stroke-width="3"/>'
+              f'<ellipse cx="{hx:.0f}" cy="{y + 30}" rx="{w * 0.13:.0f}" ry="{w * 0.15:.0f}" fill="#a8906a" stroke="#5a4a32" stroke-width="3"/>'
+              f'<path d="M {hx - w * 0.08:.0f} {y + 12} C {hx - w * 0.16:.0f} {y - 14}, {hx - w * 0.04:.0f} {y - 24}, {hx + sd * w * 0.02:.0f} {y - 30}" stroke="#5a4a32" stroke-width="7" fill="none" stroke-linecap="round"/>'
+              f'<path d="M {hx + w * 0.08:.0f} {y + 12} C {hx + w * 0.16:.0f} {y - 14}, {hx + w * 0.04:.0f} {y - 24}, {hx + sd * w * 0.02:.0f} {y - 30}" stroke="#5a4a32" stroke-width="7" fill="none" stroke-linecap="round"/>'
+              f'<circle cx="{hx + sd * w * 0.05:.0f}" cy="{y + 24}" r="4" fill="#2a2018"/>')
+    return out + f'<rect x="{x - w * 0.22:.0f}" y="{y - 6}" width="{w * 0.44:.0f}" height="14" fill="#7a5a32"/>'
+
+
+def _column(x, top, base, w=56):
+    """a slender fluted stone column with a bell base and a double-bull capital; capital top at `top`, foot at `base`"""
+    out = (f'<rect x="{x - w / 2:.0f}" y="{top + 88}" width="{w}" height="{base - top - 130}" fill="#d8c8a8" stroke="#8a7656" stroke-width="3"/>'
+           + "".join(f'<path d="M {x - w / 2 + k * w / 6:.1f} {top + 96} L {x - w / 2 + k * w / 6:.1f} {base - 46}" stroke="#a8946e" stroke-width="2.5" opacity="0.8"/>' for k in range(1, 6)) +
+           f'<path d="M {x - w / 2 - 6:.0f} {top + 88} L {x + w / 2 + 6:.0f} {top + 88} L {x + w / 2 + 2:.0f} {top + 104} L {x - w / 2 - 2:.0f} {top + 104} Z" fill="#c8b48e" stroke="#8a7656" stroke-width="2"/>'
+           f'<path d="M {x - w / 2:.0f} {base - 46} C {x - w * 0.9:.0f} {base - 30}, {x - w * 1.2:.0f} {base - 6}, {x - w * 1.2:.0f} {base} L {x + w * 1.2:.0f} {base} '
+           f'C {x + w * 1.2:.0f} {base - 6}, {x + w * 0.9:.0f} {base - 30}, {x + w / 2:.0f} {base - 46} Z" fill="#c8b48e" stroke="#8a7656" stroke-width="3"/>'
+           + "".join(f'<path d="M {x + k * w * 0.2:.1f} {base - 44} C {x + k * w * 0.3:.1f} {base - 26}, {x + k * w * 0.4:.1f} {base - 10}, {x + k * w * 0.42:.1f} {base}" stroke="#a8946e" stroke-width="2" fill="none"/>' for k in (-2, -1, 0, 1, 2)))
+    return out + _bull_capital(x, top, w * 2.7)
+
+
+def jamshid_hall():
+    """King Jamshid's hall by day, in the style of Persepolis: limestone walls, slender fluted columns with double-bull capitals under
+    cedar beams, lapis blue panels with gold rosettes, a gold sun disc with rays over the throne; a golden jewelled throne (cushion top
+    y 990, x 380-700) on three stone steps (y 1180-1310); two bronze fire stands at x 160 and 920 (bowls at y 1150: the scene lights
+    them); a blue carpet; people stand at y 1330-1750"""
+    s = ("<defs>" + FILTERS + lg("jw", [(0, "#efe2c4", 1), (1, "#d8c49e", 1)]) + lg("jf", [(0, "#cdb894", 1), (1, "#8a7452", 1)]) +
+         lg("jcar", [(0, "#1a3470", 1), (1, "#0e1e46", 1)]) + lg("jcush", [(0, "#2a4ea0", 1), (1, "#16306a", 1)]) +
+         rg("jsun", 540, 610, 330, [(0, "#fff2c0", 0.9), (0.35, "#f0c860", 0.45), (1, "#f0c860", 0)]) +
+         lg("jbeam", [(0, "#fff6dc", 0.4), (1, "#fff6dc", 0.0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#jw)"/>'
+    # cedar beams and a painted frieze
+    s += f'<rect x="0" y="0" width="{W}" height="230" fill="#5a3a22"/>'
+    for k in range(9):
+        s += f'<rect x="{k * 130 - 20}" y="0" width="60" height="230" fill="#4a2e1a"/>'
+    s += f'<rect x="0" y="230" width="{W}" height="44" fill="{LAPIS}"/>'
+    s += "".join(_rosette(60 + k * 120, 252, 16) for k in range(9))
+    s += f'<path d="M 0 274 L {W} 274" stroke="{GOLD}" stroke-width="6"/>'
+    # lapis panels between the columns, with rosettes
+    for x0, x1 in ((0, 122), (178, 302), (778, 902), (958, W)):
+        s += f'<rect x="{x0}" y="340" width="{x1 - x0}" height="800" fill="{LAPIS}"/><rect x="{x0 + 10}" y="350" width="{x1 - x0 - 20}" height="780" fill="none" stroke="{GOLD}" stroke-width="4"/>'
+        s += "".join(_rosette((x0 + x1) / 2, 420 + j * 130, 22) for j in range(6))
+    # the sun disc behind the throne and its glow
+    s += f'<rect x="300" y="280" width="480" height="900" fill="url(#jsun)"/>'
+    for k in range(24):
+        a = 2 * math.pi * k / 24
+        r0, r1 = 120, 200 if k % 2 == 0 else 165
+        s += f'<path d="M {540 + r0 * math.cos(a):.0f} {600 + r0 * math.sin(a):.0f} L {540 + r1 * math.cos(a - 0.05):.0f} {600 + r1 * math.sin(a - 0.05):.0f} L {540 + r1 * math.cos(a + 0.05):.0f} {600 + r1 * math.sin(a + 0.05):.0f} Z" fill="{GOLD}" opacity="0.85"/>'
+    s += f'<circle cx="540" cy="600" r="118" fill="{GOLD}" stroke="{GOLD_D}" stroke-width="6"/><circle cx="540" cy="600" r="92" fill="{GOLD_L}" opacity="0.6"/>'
+    s += f'<circle cx="540" cy="600" r="70" fill="none" stroke="{GOLD_D}" stroke-width="4"/>'
+    # drapes on both sides of the throne
+    for sd in (-1, 1):
+        x = 540 + sd * 200
+        s += (f'<path d="M {x - 50} 280 C {x - 60} 600, {x - 40} 900, {x - 70} 1180 L {x + 70} 1180 C {x + 40} 900, {x + 60} 600, {x + 50} 280 Z" fill="{LAPIS_D}" stroke="#0a1636" stroke-width="3"/>'
+              f'<path d="M {x - 20} 290 C {x - 26} 600, {x - 10} 900, {x - 30} 1170 M {x + 20} 290 C {x + 26} 600, {x + 14} 900, {x + 34} 1170" stroke="#2a4a8a" stroke-width="6" fill="none"/>'
+              f'<path d="M {x - 70} 1180 L {x + 70} 1180" stroke="{GOLD}" stroke-width="10"/>')
+    # columns along the back wall
+    for x in (150, 330, 750, 930):
+        s += _column(x, 270, 1180)
+    # steps of the platform, with rows of tiny relief figures (a procession)
+    for k, (x0, x1, y0) in enumerate([(200, 880, 1270), (240, 840, 1225), (280, 800, 1180)]):
+        hgt = 42 if k == 2 else 50
+        s += f'<rect x="{x0}" y="{y0}" width="{x1 - x0}" height="{hgt}" fill="#{0xd8 - 10 * k:02x}{0xc8 - 10 * k:02x}{0xa8 - 10 * k:02x}" stroke="#8a7656" stroke-width="3"/>'
+        s += "".join(f'<circle cx="{x}" cy="{y0 + 13}" r="4" fill="#8a7656" opacity="0.6"/><path d="M {x - 4} {y0 + hgt - 9} L {x - 3} {y0 + 19} L {x + 3} {y0 + 19} L {x + 6} {y0 + hgt - 9} Z" fill="#8a7656" opacity="0.5"/>'
+                     for x in range(x0 + 16, x1 - 8, 22))
+    # the throne: a tall golden back with lapis inlay and jewels, a blue cushion, lion-paw feet
+    s += (f'<path d="M 400 1000 L 400 760 Q 540 620, 680 760 L 680 1000 Z" fill="{GOLD}" stroke="{GOLD_D}" stroke-width="8"/>'
+          f'<path d="M 426 990 L 426 772 Q 540 664, 654 772 L 654 990 Z" fill="{LAPIS}" stroke="{GOLD_L}" stroke-width="4"/>'
+          + _rosette(540, 800, 34) +
+          "".join(f'<circle cx="{x}" cy="{y}" r="9" fill="{c}" stroke="{GOLD_D}" stroke-width="2"/>' for x, y, c in
+                  ((452, 900, "#b8121c"), (628, 900, "#b8121c"), (452, 960, "#2a8a4a"), (628, 960, "#2a8a4a"), (540, 712, "#b8121c"))) +
+          f'<rect x="370" y="1040" width="340" height="140" fill="{GOLD}" stroke="{GOLD_D}" stroke-width="4"/>'
+          f'<path d="M 386 1070 L 694 1070 M 386 1150 L 694 1150" stroke="{LAPIS}" stroke-width="8"/>'
+          + "".join(f'<circle cx="{x}" cy="1110" r="10" fill="#b8121c" stroke="{GOLD_D}" stroke-width="2"/>' for x in range(410, 690, 56)) +
+          f'<rect x="380" y="988" width="320" height="58" rx="18" fill="url(#jcush)" stroke="#0a1636" stroke-width="3"/>'
+          f'<path d="M 392 1000 L 688 1000" stroke="{GOLD_L}" stroke-width="4" opacity="0.8"/>'
+          f'<rect x="352" y="900" width="40" height="150" rx="8" fill="{GOLD}" stroke="{GOLD_D}" stroke-width="3"/>'
+          f'<rect x="688" y="900" width="40" height="150" rx="8" fill="{GOLD}" stroke="{GOLD_D}" stroke-width="3"/>'
+          f'<circle cx="372" cy="892" r="18" fill="{GOLD_L}" stroke="{GOLD_D}" stroke-width="3"/><circle cx="708" cy="892" r="18" fill="{GOLD_L}" stroke="{GOLD_D}" stroke-width="3"/>'
+          f'<path d="M 372 1180 C 360 1150, 380 1140, 392 1160 M 708 1180 C 720 1150, 700 1140, 688 1160" stroke="{GOLD_D}" stroke-width="6" fill="none"/>')
+    # floor, carpet and the two fire stands
+    s += f'<rect x="0" y="1310" width="{W}" height="{H - 1310}" fill="url(#jf)"/>'
+    for k in range(10):
+        y = 1310 + k * k * 7 + k * 14
+        s += f'<path d="M 0 {y} L {W} {y}" stroke="#6a5438" stroke-width="{2 + k * 0.4:.1f}" opacity="0.35"/>'
+    for k in range(-8, 9):
+        s += f'<path d="M {540 + k * 70} 1310 L {540 + k * 240} 1920" stroke="#6a5438" stroke-width="2.5" opacity="0.3"/>'
+    s += (f'<path d="M 430 1310 L 650 1310 L 790 1920 L 290 1920 Z" fill="url(#jcar)"/>'
+          f'<path d="M 446 1310 L 634 1310 L 762 1920 L 318 1920 Z" fill="none" stroke="{GOLD}" stroke-width="6"/>'
+          + "".join(f'<path d="M {540 - 8 - k * 0.05 * (y - 1310)} {y} L 540 {y - 14 - k} L {540 + 8 + k * 0.05 * (y - 1310)} {y} L 540 {y + 14 + k} Z" fill="{GOLD}" opacity="0.7"/>'
+                    for k, y in enumerate((1400, 1520, 1660, 1820))))
+    for fx_ in (160, 920):
+        s += (f'<path d="M {fx_ - 50} 1380 L {fx_ + 50} 1380 L {fx_ + 30} 1360 L {fx_ - 30} 1360 Z" fill="#8a5a22" stroke="#3a2410" stroke-width="3"/>'
+              f'<rect x="{fx_ - 12}" y="1180" width="24" height="182" fill="#9a6a2a" stroke="#3a2410" stroke-width="3"/>'
+              f'<path d="M {fx_ - 70} 1150 L {fx_ + 70} 1150 C {fx_ + 60} 1196, {fx_ - 60} 1196, {fx_ - 70} 1150 Z" fill="#b8822e" stroke="#3a2410" stroke-width="4"/>'
+              f'<path d="M {fx_ - 76} 1150 L {fx_ + 76} 1150" stroke="#e0b25a" stroke-width="6"/>')
+    s += f'<path d="M 0 0 L 220 0 L 640 1500 L 300 1500 Z" fill="url(#jbeam)" opacity="0.5"/>'
+    return svg_render(s)
+
+
+def jamshid_hall_close():
+    """close on Jamshid's golden throne: its lapis and gold back with the sun disc at (540, 520) behind the king's head (neck at about
+    (540, 1010)), drapes and columns soft at the sides"""
+    s = ("<defs>" + FILTERS + lg("jw", [(0, "#efe2c4", 1), (1, "#d2bc94", 1)]) +
+         rg("jsun", 540, 520, 520, [(0, "#fff2c0", 0.9), (0.35, "#f0c860", 0.4), (1, "#f0c860", 0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#jw)"/>'
+    s += f'<g filter="url(#b12)">' + _column(70, 200, 1900, 110) + _column(1010, 200, 1900, 110) + '</g>'
+    s += f'<g filter="url(#b6)"><path d="M 150 0 C 130 600, 170 1200, 120 1920 L 260 1920 C 230 1200, 250 600, 240 0 Z" fill="{LAPIS_D}"/>'
+    s += f'<path d="M 930 0 C 950 600, 910 1200, 960 1920 L 820 1920 C 850 1200, 830 600, 840 0 Z" fill="{LAPIS_D}"/></g>'
+    s += f'<rect width="{W}" height="{H}" fill="url(#jsun)"/>'
+    s += f'<path d="M 190 1920 L 190 760 Q 540 300, 890 760 L 890 1920 Z" fill="{GOLD}" stroke="{GOLD_D}" stroke-width="14"/>'
+    s += f'<path d="M 232 1920 L 232 784 Q 540 380, 848 784 L 848 1920 Z" fill="{LAPIS}" stroke="{GOLD_L}" stroke-width="8"/>'
+    for k in range(24):
+        a = 2 * math.pi * k / 24
+        r0, r1 = 150, 250 if k % 2 == 0 else 205
+        s += f'<path d="M {540 + r0 * math.cos(a):.0f} {520 + r0 * math.sin(a):.0f} L {540 + r1 * math.cos(a - 0.05):.0f} {520 + r1 * math.sin(a - 0.05):.0f} L {540 + r1 * math.cos(a + 0.05):.0f} {520 + r1 * math.sin(a + 0.05):.0f} Z" fill="{GOLD}"/>'
+    s += f'<circle cx="540" cy="520" r="148" fill="{GOLD}" stroke="{GOLD_D}" stroke-width="8"/><circle cx="540" cy="520" r="112" fill="{GOLD_L}" opacity="0.6"/>'
+    s += "".join(_rosette(x, y, 30) for x, y in ((300, 1000), (780, 1000), (300, 1300), (780, 1300), (300, 1600), (780, 1600)))
+    s += "".join(f'<circle cx="{x}" cy="{y}" r="13" fill="{c}" stroke="{GOLD_D}" stroke-width="3"/>' for x, y, c in
+                 ((210, 900, "#b8121c"), (870, 900, "#b8121c"), (210, 1200, "#2a8a4a"), (870, 1200, "#2a8a4a"), (210, 1500, "#b8121c"), (870, 1500, "#b8121c")))
+    return svg_render(s)

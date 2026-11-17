@@ -64,6 +64,50 @@ LINES = [
  ("p2s5d",2,5,"ZAHHAK","Cook? Cook! Where did he go?","آشپز؟ آشپز! کجا رفت؟","Cook? ... Cook! Where did he go?"),
  ("p2s6a",2,6,"ZAHHAK","What… what is this?!","این… این چیست؟!","What... what is this?!"),
  ("p2s6b",2,6,"NARRATOR","From the places he had kissed, two black snakes grew.","از جایی که بوسیده بود، دو مار سیاه رویید.",None),
+ # ---- part 3 · The Doctor (Shahnameh, «جمشید»: the snakes cut and growing back, the doctors, Iblis the doctor; Jamshid's pride,
+ #      the farr leaves him, the riders of Iran choose Zahhak, Jamshid flees; «ضحاک» sh1: Arnavaz and Shahrnaz brought to Zahhak)
+ ("p3s1a",3,1,"IBLIS","There is only one cure, my king…","فقط یک درمان هست، سرورم…","There is only one cure, my king..."),
+ ("p3s1b",3,1,"NARRATOR","But the cure was worse than the snakes.","اما آن درمان از خودِ مارها بدتر بود.",None),
+ ("p3s3a",3,3,"NARRATOR","The two snakes gave the king no rest, day or night.","آن دو مار، شب و روز، آرام را از شاه گرفته بودند.",None),
+ ("p3s3b",3,3,"ZAHHAK","Cut them off! Now!","ببُریدشان! همین حالا!",None),
+ ("p3s3c",3,3,"NARRATOR","But like the branches of a tree… they grew back.","اما مثل شاخه‌های درخت… دوباره روییدند.",
+  "But like the branches of a tree... they grew back."),
+ ("p3s3d",3,3,"ZAHHAK","No… no!","نه… نه!","No... no!"),
+ ("p3s3e",3,3,"NARRATOR","Wise doctors came from every land.","پزشکان دانا از هر سرزمینی آمدند.",None),
+ ("p3s3f",3,3,"DOCTOR_A","I have never seen anything like this.","هرگز چنین چیزی ندیده‌ام.",None),
+ ("p3s3g",3,3,"DOCTOR_B","There is no medicine for this, my king.","این درد هیچ دارویی ندارد، سرورم.",None),
+ ("p3s3h",3,3,"ZAHHAK","Useless! Get out, all of you!","بی‌فایده‌اید! همه‌تان بیرون!",None),
+ ("p3s4a",3,4,"NARRATOR","Then one more doctor came… with golden eyes.","بعد پزشک دیگری آمد… با چشمانی طلایی.","Then one more doctor came... with golden eyes."),
+ ("p3s4b",3,4,"IBLIS","Don't cut them, my king. They will always grow back.","نبُرَشان، سرورم. همیشه دوباره می‌رویند.",None),
+ ("p3s4c",3,4,"ZAHHAK","Then what can I do?","پس چه کار کنم؟",None),
+ ("p3s4d",3,4,"IBLIS","Feed them. Food will make them calm.","غذایشان بده. غذا آرامشان می‌کند.",None),
+ ("p3s4e",3,4,"ZAHHAK","What food?","چه غذایی؟",None),
+ ("p3s4f",3,4,"IBLIS_W","The brains of two young men… every day.","مغزِ دو مرد جوان… هر روز.","The brains of two young men... every day."),
+ ("p3s4g",3,4,"IBLIS_W","And maybe, one day… they will die.","و شاید یک روز… بمیرند.","And maybe, one day... they will die."),
+ ("p3s4h",3,4,"NARRATOR","It was Iblis, the devil, again.","باز هم ابلیس بود… خودِ شیطان.","It was Ibleess, the devil, again."),
+ ("p3s4i",3,4,"NARRATOR","And he wanted a world with no people in it.","و می‌خواست دنیا از آدم‌ها خالی شود.",None),
+ ("p3s5a",3,5,"NARRATOR","Meanwhile, in Iran, King Jamshid had ruled for hundreds of years.","در همان روزگار، در ایران، جمشید شاه صدها سال بود که پادشاهی می‌کرد.",
+  "Meanwhile, in Iran, King Jamsheed had ruled for hundreds of years."),
+ ("p3s5b",3,5,"NARRATOR","His land was rich, and his people were happy.","سرزمینش آباد بود و مردمش شاد.",None),
+ ("p3s5c",3,5,"JAMSHID","Look at this world! Who made it so beautiful? I did!","این دنیا را ببینید! چه کسی آن را این‌قدر زیبا کرد؟ من!",None),
+ ("p3s5d",3,5,"JAMSHID","Your food, your sleep, your peace… all come from me.","خوراکتان، خوابتان، آرامشتان… همه از من است.",
+  "Your food, your sleep, your peace... all come from me."),
+ ("p3s5e",3,5,"JAMSHID","So from now on, call me the maker of the world!","پس از این به بعد، مرا آفریننده‌ی جهان بخوانید!",None),
+ ("p3s5f",3,5,"NARRATOR","No one said a word.","هیچ‌کس حرفی نزد.",None),
+ ("p3s5g",3,5,"NARRATOR","But at that moment, the light of God left him.","اما در همان لحظه، فرّ ایزدی از او جدا شد.",None),
+ ("p3s5h",3,5,"NARRATOR","And one by one, his nobles turned away from him.","و بزرگانش یکی‌یکی از او رو برگرداندند.",None),
+ ("p3s6a",3,6,"NARRATOR","Iran had no king now. So its riders went to the Arab lands.","حالا ایران شاهی نداشت. پس سوارانش به سرزمین تازیان رفتند.",None),
+ ("p3s6b",3,6,"NOBLE","Great king, Iran needs a new king. Will you be our king?","شاه بزرگ، ایران به شاهی تازه نیاز دارد. شاه ما می‌شوی؟",None),
+ ("p3s6c",3,6,"ZAHHAK","Your king? …Gladly.","شاه شما؟ …با کمال میل.","Your king? ... Gladly."),
+ ("p3s6d",3,6,"NARRATOR","Zahhak marched on Jamshid's palace with a great army.","ضحاک با سپاهی بزرگ به سوی کاخ جمشید تاخت.",
+  "Zah-hawk marched on Jamsheed's palace, with a great army."),
+ ("p3s6e",3,6,"NARRATOR","Jamshid ran away… and for a hundred years, no one saw him.","جمشید گریخت… و تا صد سال کسی او را ندید.",
+  "Jamsheed ran away... and for a hundred years, no one saw him."),
+ ("p3s6f",3,6,"NARRATOR","Two princesses of Jamshid's house, Arnavaz and Shahrnaz…","دو بانوی خاندان جمشید، ارنواز و شهرناز…",
+  "Two princesses of Jamsheed's house, Arnavaaz and Shahrnaaz..."),
+ ("p3s6g",3,6,"NARRATOR","…were brought to the snake king's palace.","…به کاخ شاه ماردوش برده شدند.","were brought to the snake king's palace."),
+ ("p3s6h",3,6,"ARNAVAZ","Stay close to me, Shahrnaz.","کنارم بمان، شهرناز.","Stay close to me, Shahrnaaz."),
+ ("p3s6i",3,6,"ZAHHAK","Welcome… to my palace.","به کاخ من… خوش آمدید.","Welcome... to my palace."),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -73,8 +117,15 @@ VOICES = {
  "ZAHHAK": (500, 1.08, 0, 1.0), "ZAHHAK_W": (500, 1.25, 0, 0.7),
  "IBLIS": (640, 1.25, 1, 1.0), "IBLIS_W": (640, 1.3, 1, 0.7),
  "MARDAS": (680, 1.12, -1, 1.0), "HERDSMAN": (50, 1.05, 0, 1.0), "BOY": (765, 1.0, 4, 1.0),
+ # part 3
+ "DOCTOR_A": (480, 1.1, -1, 1.0), "DOCTOR_B": (700, 1.08, 0, 1.0), "JAMSHID": (750, 1.12, -1, 1.0), "NOBLE": (805, 1.05, 0, 1.0),
+ "ARNAVAZ": (240, 1.1, 0, 0.85),
 }
 # slower takes for learners (per-line length factors, see voices.py)
 SPEED = {lid: 1.15 for lid, part, *_ in LINES if part in (1, 2)}
 SPEED.update({"p1s1a": 1.3, "p1s6b": 1.4, "p1s5d": 1.2, "p1s4m": 1.25})
 SPEED.update({"p2s1a": 1.2, "p2s5d": 1.2, "p2s6a": 1.25, "p2s4f": 1.1})
+SPEED.update({lid: 1.12 for lid, part, *_ in LINES if part == 3})
+SPEED.update({"p3s1a": 1.35, "p3s1b": 1.25, "p3s3a": 1.2, "p3s3c": 1.2, "p3s3d": 1.35, "p3s3f": 1.2, "p3s3g": 1.25, "p3s4b": 1.3,
+              "p3s4d": 1.35, "p3s4e": 1.1, "p3s4f": 1.2, "p3s4g": 1.2, "p3s4i": 1.4, "p3s5e": 1.35, "p3s5f": 1.5, "p3s5g": 1.2,
+              "p3s6c": 1.25, "p3s6g": 1.2, "p3s6i": 1.3})
