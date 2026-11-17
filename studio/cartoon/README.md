@@ -7,7 +7,7 @@ under 3 minutes, posted through Metricool (brand `7830959`) **after Rostam & Soh
 | # | series (folder) | parts | source | state |
 |---|---|---|---|---|
 | 1 | Babak Khorramdin · بابک خرمدین (`babak/`) | 8 | approved scripts `babak/SCRIPTS.md` (Iranica, Ibn al-Nadim, Tabari) | all 8 parts made |
-| 2 | Zahhak & Fereydun · ضحاک و فریدون (`zahhak/`) | 10 | Shahnameh | outline |
+| 2 | Zahhak & Fereydun · ضحاک و فریدون (`zahhak/`) | 10 | Shahnameh | part 1 made |
 | 3 | Arash the Archer · آرش کمانگیر (`arash/`) | 3 | Biruni, Iranica | outline |
 | 4 | Leyli & Majnun · لیلی و مجنون (`leyli/`) | 8 | Nizami | outline |
 | 5 | Khosrow & Shirin · خسرو و شیرین (`khosrow/`) | 10 | Nizami | outline |
@@ -50,10 +50,11 @@ Engine (this folder):
 
 | file | what it is |
 |---|---|
-| `chars.py` | the rig: `spec()` (looks; helmet colours `helm`/`plume`, cloak colours `cloak2`/`cloak_hi`, `pattern="scales"` for lamellar armour), `pose()`, `person()` (heads with eyes, brows, lips and beards; hair; headwear helmet/fur_hat/turban/cap/scarf+diadem; garments; arms with presets or `("ik", x, y)` (`("ik", x, y, "down")`: elbow down, for handing things over); props lantern, bread, baby, stick, brush, sack, purse, sword, spear, pike, bowl, scroll, spear_red, banner_black, banner_red, tanbur, dagger, torch, shovel, pick, drumstick, or `(name, angle)`; `chains=True` or `"rope"` with `lead=(x, y)`), `lying_person()`, `horse()` (`packs`, `mule`), `elephant()` (`kneel` 0..1, riders move down by `kneel_drop()`), `dog()` (a saluki, `run`), `cow()`, `camel()` (a dromedary, pacing; a rider on the hump with `camel_rider` in `babak/p08_scenes.py`); prop `falcon` (perched on a gloved fist); pose `red`/`red_reveal` (Babak's red face, wiped on from left to right) |
+| `chars.py` | the rig: `spec()` (looks; helmet colours `helm`/`plume`, cloak colours `cloak2`/`cloak_hi`, `pattern="scales"` for lamellar armour; `snakes=True`: Zahhak's two black snakes rising from the shoulders, posed with `snake_looks=(left, right)` -1 in … 1 out, `hisses=(l, r)` 0..1, `snake_rise` 0..1 to grow them), `pose()`, `person()` (heads with eyes, brows, lips and beards; hair; headwear helmet/fur_hat/turban/cap/scarf+diadem/kufiya (Arab head cloth with a black cord: `kufiya_col`, `kufiya_pat="check"`, `agal`)/crown (gold, five points); garments; arms with presets or `("ik", x, y)` (`("ik", x, y, "down")`: elbow down, for handing things over); props lantern, bread, baby, stick, brush, sack, purse, sword, spear, pike, bowl, milk_bowl, jug (a clay pitcher: turn it with the angle to pour), scroll, spear_red, banner_black, banner_red, tanbur, dagger, torch, shovel, pick, drumstick, or `(name, angle)`; `chains=True` or `"rope"` with `lead=(x, y)`), `lying_person()`, `horse()` (`packs`, `mule`), `elephant()` (`kneel` 0..1, riders move down by `kneel_drop()`), `dog()` (a saluki, `run`), `cow()`, `goat()` (`graze`, `walk`), `camel()` (a dromedary, pacing; a rider on the hump with `camel_rider` in `babak/p08_scenes.py`); prop `falcon` (perched on a gloved fist); pose `red`/`red_reveal` (Babak's red face, wiped on from left to right) |
 | `stage.py` | placing people: `at_feet`, `at_neck`, `lying_at`, `crowd_row`, `back_heads`, `rider`, `howdah`, `fire_svg`, `Glow` |
 | `film.py` | `Shot` (bg/mid/fg layers, camera, light, particles Snow/Motes/Embers, bloom, grade, fades), lip sync `mouth()`/`talk_pose()`, `render_scene()`, `stills()` |
 | `bgs.py`, `wallbg.py` | painted backgrounds, cached in `build/bg` (Samarra, village, stable, bazaar, blizzard, interior, fortress above clouds, battle fog, bedroom, courtyard, throne hall, fortress wall at sunrise; Babak 3–4: the pass `gorge_floor`+`gorge_walls`, `cliff_up`, `ridge_view`, `gorge_down`, `ledge_fg`, `village_square`, `snow_pass`+`snow_fg`, `camp_rocks`, `map_dirt`, `stream_bg`, `feast_night`, `tent_interior`, `gold_hall`, `night_plain`, `night_sky_wall`; Babak 5–6: `command_tent`, `fort_road`, `army_camp`, `ridges_dusk` (+`RIDGE_FIRES`), `war_room`, `table_map`, `forest_road("day"/"night")`, `leaves_fg`, `woods_night`, `ravine("night"/"dawn")`, `ravine_up`, `side_gate_night`, `wall_outside`, `forest_stream`, `field_dawn`, `armenia_gate`; Babak 7: `forest_road("autumn")`, `sahl_room`, `winter_road`, `palace_court` (Samarra palace, gate x 80-470, ground from y 1080); Babak 8: `court_dusk` (the caliph's raised seat, torches), `shadow_wall`, `samarra_dawn`, `tigris_dawn`, `tower_night`, `prison_cell`, `bazz_ruins` (Bazz today, with `cloud_sea`); `boulder()` rocks, `pine()`, `oak()`, `bare_tree()`, `oil_lamp()`) |
+| `zbg.py` | painted backgrounds of Zahhak & Fereydun (cache them as `bgs.cached("zh_<name>", zbg.<name>)`): `hall` and `hall_close` (Zahhak's black and gold throne hall at night, torch brackets, `serpent_emblem()`), `plain` (Mardas's palace on the plain, horizon y 900), `gate` (its tiled gate, a bench with milk jars), `yard` (horse yard at sunrise), `ride_strip` (3600 px wide plain for tracking shots: crop a moving window), `garden("night"/"predawn")` and `garden_close(...)` (the palace garden, cypresses, the path where the pit is dug), `window_room` + `window_wall(...)` (Zahhak's window: the wall is an fg layer, transparent in the window); helpers `palm()`, `cypress()` |
 | `voices.py`, `lips.py` | Piper voices → `build/<series>/voices/<id>.wav` + durations.json; lip-sync data (optional `SPEED` in `lines.py`: per-line length factors, e.g. slower takes for learners; optional `FX`: per-line ffmpeg filters, e.g. a trembling voice) |
 | `audio.py`, `mix.py` | synthesized music and sound effects; mixing a part's lines, music and effects |
 | `subs.py` | subtitle and caption events → .ass |
@@ -63,7 +64,7 @@ Engine (this folder):
 
 A series folder (`babak/`, `zahhak/` …): `parts.json` (names, hashtags, source, titles, registry of parts),
 `OUTLINE.md` (what happens in each part, characters, places; Babak: `SCRIPTS.md`), `cast.py` (looks),
-`lines.py` (`LINES` `(id, part, scene, speaker, english, persian, tts_text)` and `VOICES`), and per part
+`lines.py` (`LINES` `(id, part, scene, speaker, english, persian, tts_text)` and `VOICES`), Zahhak also `zsfx.py` (its sound effects: hiss, owl, crickets, bleat, grunt, pour, dig …), and per part
 `pNN_scenes.py`, `pNN_audio.py`, `pNN_subs.py`. **Read `babak/p01_scenes.py`, `babak/p02_scenes.py`,
 `babak/p02_audio.py` and `babak/p02_subs.py` before writing a new part**: they show how shots, timing, lip sync,
 light, sound and captions are done. Every command takes the series first: `python3 render.py zahhak p01 all 2`.
@@ -132,3 +133,4 @@ order, never before Rostam & Sohrab's part 40, never publish immediately; never 
 - Crowds: `crowd_row`/`back_heads`, darker and smaller in the back. Battles: two clear sides, a few big figures in
   front, fog and dust behind, motion in spears and banners; no blood.
 - Speed: ~0.5–1 s a frame per process; cache static layers (`bgs.cached`).
+- Ground-level action (a pit, a bowl, hands at work) must also sit above y≈1000: raise the horizon of the background (Zahhak's `plain` has it at y 900) or push the camera in on it (`bg_par=1.0` keeps the mid layer aligned with the background).

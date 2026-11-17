@@ -138,7 +138,7 @@ def face_shape(c, S, p):
     return out
 
 def ears(c, S, p):
-    if S["head"] in ("scarf",) or S["hair"] in ("long_curly",):
+    if S["head"] in ("scarf", "kufiya") or S["hair"] in ("long_curly",):
         return ""
     sk, sh, hi = SKINS[S["skin"]]
     o = ""
@@ -324,7 +324,7 @@ def beard(c, S, p, t):
 # ---------------------------------------------------------------- hair (top) & headwear
 def hair_top(c, S, p, t):
     st = S["hair"]; col = S["hair_col"]
-    if S["head"] in ("helmet", "fur_hat", "turban", "scarf"):
+    if S["head"] in ("helmet", "fur_hat", "turban", "scarf", "kufiya"):
         return ""
     if st in ("long_curly", "teen_curly", "boy_curly"):
         pts = [(-104, -236), (-112, -290), (-80, -336), (-30, -356), (30, -356), (80, -336), (112, -290), (104, -236), (70, -262), (20, -270), (-30, -268), (-74, -258)]
@@ -375,6 +375,46 @@ def headwear(c, S, p, t):
                         for k, y in enumerate([-250, -280, -310, -336]))
         tail = f'<path d="M 90 -300 C 130 -280, 136 -230, {fmt(150-14*wind)} -170 L {fmt(130-14*wind)} -168 C 120 -220, 110 -260, 84 -280 Z" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>' if S.get("turban_tail") else ""
         return tail + rimmed(c, dome, col, dx=3, dy=-2) + wraps
+    if h == "kufiya":       # an Arab head cloth over the head and shoulders, held by a double black cord (agal)
+        col = S.get("kufiya_col", "#f2eee6"); sh = S.get("kufiya_shade", "#cfc6b6")
+        outer = [(-176, 74), (-150, -30), (-130, -160), (-124, -262), (-104, -332), (-56, -374), (0, -384), (56, -374), (104, -332),
+                 (124, -262), (130, -160), (150, -30), (176, 74)]
+        inner = [(116, 70), (108, -30), (100, -120), (95, -200), (92, -236), (58, -252), (0, -260), (-58, -252), (-92, -236), (-95, -200),
+                 (-100, -120), (-108, -30), (-116, 70)]
+        d = smooth_path(outer + inner)
+        out = rimmed(c, d, col, dx=3, dy=-2)
+        cid = c.uid("kf")
+        pat = ""
+        if S.get("kufiya_pat") == "check":
+            pc = S.get("kufiya_pat_col", "#a8262a")
+            pat = "".join(f'<path d="M {x} -400 L {x} 120" stroke="{pc}" stroke-width="{c.sw(3)}" opacity="0.55"/>' for x in range(-180, 200, 24))
+            pat += "".join(f'<path d="M -200 {y} L 200 {y}" stroke="{pc}" stroke-width="{c.sw(3)}" opacity="0.55"/>' for y in range(-392, 120, 24))
+        folds = "".join(f'<path d="M {fmt(sd*x0)} {y0} C {fmt(sd*x1)} {y1}, {fmt(sd*x2)} {y2}, {fmt(sd*x3)} {y3}" stroke="{sh}" stroke-width="{c.sw(5)}" fill="none" opacity="0.8"/>'
+                        for sd in (-1, 1) for (x0, y0, x1, y1, x2, y2, x3, y3) in ((112, -230, 120, -150, 126, -60, 140, 50), (128, -300, 140, -200, 146, -90, 160, 30)))
+        out += f'<clipPath id="{cid}"><path d="{d}"/></clipPath><g clip-path="url(#{cid})">{pat}{folds}' \
+               f'<path d="M 60 -360 C 100 -330, 118 -280, 122 -230 L 132 -230 C 128 -290, 110 -340, 70 -372 Z" fill="#ffffff" opacity="0.25"/></g>'
+        agal = S.get("agal", "#17161a")
+        out += "".join(f'<path d="M -126 {y + 4} C -70 {y - 20}, 70 {y - 20}, 126 {y + 4}" stroke="{agal}" stroke-width="{c.sw(11)}" fill="none" stroke-linecap="round"/>'
+                       f'<path d="M -110 {y - 2} C -60 {y - 22}, 60 {y - 22}, 110 {y - 2}" stroke="#ffffff" stroke-width="{c.sw(2)}" fill="none" opacity="0.18"/>'
+                       for y in (-306, -288))
+        return out
+    if h == "crown":        # a gold crown with five points over the hair
+        g1, g2, g3 = S.get("crown_cols", ("#7a4a10", "#d29a2e", "#f6d77e"))
+        gid = c.uid("cr")
+        band = "M -106 -292 C -50 -306, 50 -306, 106 -292 L 110 -346 C 52 -360, -52 -360, -110 -346 Z"
+        pts = []
+        for i, x in enumerate((-92, -46, 0, 46, 92)):
+            top = -354 + abs(x) * 0.08
+            hgt = 64 if x == 0 else (52 if abs(x) < 60 else 40)
+            pts.append(f"M {x - 22} {fmt(top + 4)} L {x} {fmt(top - hgt)} L {x + 22} {fmt(top + 4)} Z")
+        spikes = "".join(rimmed(c, d_, f"url(#{gid})", dx=2, dy=-1, sw=2.2) for d_ in pts)
+        tips = "".join(f'<circle cx="{x}" cy="{fmt(-354 + abs(x) * 0.08 - (64 if x == 0 else (52 if abs(x) < 60 else 40)) - 6)}" r="9" fill="{g3}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                       for x in (-92, -46, 0, 46, 92))
+        jewels = "".join(f'<ellipse cx="{x}" cy="{fmt(-322 + abs(x) * 0.02)}" rx="{11 if x == 0 else 8}" ry="{13 if x == 0 else 9}" fill="{col_}" stroke="{OUT}" stroke-width="{c.sw(1.6)}"/>'
+                         for x, col_ in ((-66, S.get("jewel", "#a8121c")), (0, S.get("jewel2", "#1c3a8a")), (66, S.get("jewel", "#a8121c"))))
+        return (f'<defs><linearGradient id="{gid}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{g1}"/><stop offset="0.55" stop-color="{g2}"/>'
+                f'<stop offset="1" stop-color="{g3}"/></linearGradient></defs>' + spikes + tips + rimmed(c, band, f"url(#{gid})", dx=3, dy=-1) +
+                f'<path d="M -104 -300 C -50 -314, 50 -314, 104 -300" stroke="{g1}" stroke-width="{c.sw(3)}" fill="none" opacity="0.8"/>' + jewels)
     if h == "cap":
         col = S["head_col"]
         d = smooth_path([(-104, -240), (-108, -300), (-70, -346), (0, -360), (70, -346), (108, -300), (104, -240), (0, -252)])
@@ -390,6 +430,14 @@ def scarf_back(c, S, p, t):
     pts = [(-118, -250), (-124, -330), (-80, -382), (0, -398), (80, -382), (124, -330), (118, -250), (126, -150), (150, -40),
            (172 + w * 0.3, 60), (150, 120), (0, 130), (-150, 120), (-176 + w, 60), (-152, -40), (-128, -150)]
     return rimmed(c, smooth_path(pts), S["scarf_col"], dx=3, dy=-2)
+
+def kufiya_back(c, S, p, t):
+    if S["head"] != "kufiya":
+        return ""
+    w = 8 * p["wind"] * math.sin(t * 2.2)
+    pts = [(-124, -250), (-128, -330), (-84, -386), (0, -400), (84, -386), (128, -330), (124, -250), (138, -150), (162, -40),
+           (184 + w * 0.4, 70), (120, 100), (0, 92), (-120, 100), (-184 + w, 70), (-162, -40), (-138, -150)]
+    return rimmed(c, smooth_path(pts), S.get("kufiya_shade", "#cfc6b6"), dx=3, dy=-2)
 
 def scarf_front(c, S, p, t):
     if S["head"] != "scarf":
@@ -655,6 +703,17 @@ def prop(c, name, x, y, ang, t, S=None):
                 f'<path d="M 42 -222 C 62 -222, 70 -210, 62 -196 L 46 -206 Z" fill="#e0b040" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
                 f'<circle cx="26" cy="-222" r="8" fill="#120a06"/><circle cx="28" cy="-224" r="2.6" fill="#fff"/>'
                 f'<path d="M -12 -30 l -6 22 M 8 -30 l 4 22" stroke="#e0b040" stroke-width="{c.sw(5)}" stroke-linecap="round"/></g>')
+    if name == "jug":
+        return (g + f'<path d="M 26 -36 L 26 -18 C -6 4, -4 96, 62 116 C 128 96, 130 4, 98 -18 L 98 -36 Z" fill="#b5653a" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/>'
+                f'<path d="M 40 -10 C 18 20, 22 80, 52 102" stroke="#d68a5a" stroke-width="{c.sw(6)}" fill="none" opacity="0.6"/>'
+                f'<path d="M 8 32 C 40 46, 84 46, 116 32" stroke="#f0dcb0" stroke-width="{c.sw(4)}" fill="none"/>'
+                f'<path d="M 98 -34 L 132 -52 L 128 -40 L 100 -24 Z" fill="#a85a32" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<rect x="20" y="-48" width="84" height="14" rx="5" fill="#9a5230" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<path d="M 26 -26 C -14 -30, -14 34, 18 42" stroke="#8a4a28" stroke-width="{c.sw(11)}" fill="none" stroke-linecap="round"/></g>')
+    if name == "milk_bowl":
+        return (g + f'<path d="M -52 -10 L 52 -10 C 48 32, -48 32, -52 -10 Z" fill="#8a5a32" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+                f'<ellipse cx="0" cy="-10" rx="50" ry="9" fill="#f7f3ea" stroke="{OUT}" stroke-width="{c.sw(1.6)}"/>'
+                f'<path d="M -30 8 C -10 16, 10 16, 30 8" stroke="#c08a52" stroke-width="{c.sw(3)}" fill="none" opacity="0.7"/></g>')
     if name == "drumstick":
         return g + f'<path d="M 0 -20 L 0 170" stroke="#6a4424" stroke-width="{c.sw(9)}" stroke-linecap="round"/><circle cx="0" cy="176" r="15" fill="#d8c8a8" stroke="{OUT}" stroke-width="{c.sw(2)}"/></g>'
     return ""
@@ -727,6 +786,78 @@ def arm(c, S, p, t, side, preset, bs):
     out += cuff + hand(c, S, hx, hy, side * fa * 0.5, side)
     return out, (hx, hy), fa
 
+def _bez(p0, p1, p2, p3, u):
+    a = (1 - u) ** 3; b = 3 * (1 - u) ** 2 * u; c_ = 3 * (1 - u) * u * u; d = u ** 3
+    return (a * p0[0] + b * p1[0] + c_ * p2[0] + d * p3[0], a * p0[1] + b * p1[1] + c_ * p2[1] + d * p3[1])
+
+def snake(c, side, t, rise=1.0, hiss=0.0, look=1.0, seed=0, col="#18171d", hi="#55645a", belly="#6a6858", eye_col="#f0c419"):
+    """one black snake rising from a shoulder (body coords of person(): side -1 left of the picture, +1 right).
+    rise 0..1 grows it out of the shoulder; hiss 0..1 opens the mouth; look -1 (head turned in, towards the face) .. 1 (out)"""
+    if rise <= 0.01:
+        return ""
+    ph = seed * 1.7 + (0.0 if side < 0 else 2.1)
+    k = rise
+    lk = max(-1.0, min(1.0, look))
+    sw_ = lambda f, a: a * math.sin(t * f + ph)
+    # the spine: out of the shoulder, a wave up beside the head, the neck bent towards where the head looks
+    sp = [(140, 30), (205 + sw_(0.9, 6), -40), (214 + sw_(1.1, 10), -140), (262 + sw_(1.0, 12), -224 + sw_(1.3, 6)),
+          (300 + sw_(1.2, 12), -292 + sw_(1.4, 8))]
+    hx, hy = sp[-1]
+    tip = (hx + 64 * lk, hy - 34 * (1 - abs(lk)) + 18 * abs(lk))
+    sp.append(tip)
+    sp = [(side * x, y) for x, y in sp]
+    sp = [(sp[0][0] + (x - sp[0][0]) * k, sp[0][1] + (y - sp[0][1]) * k) for x, y in sp]
+    # Catmull-Rom through the spine
+    pts = []
+    for i in range(len(sp) - 1):
+        p0 = sp[max(0, i - 1)]; p1 = sp[i]; p2 = sp[i + 1]; p3 = sp[min(len(sp) - 1, i + 2)]
+        for j in range(6):
+            u = j / 6; u2 = u * u; u3 = u2 * u
+            pts.append(tuple(0.5 * ((2 * p1[d]) + (-p0[d] + p2[d]) * u + (2 * p0[d] - 5 * p1[d] + 4 * p2[d] - p3[d]) * u2 + (-p0[d] + 3 * p1[d] - 3 * p2[d] + p3[d]) * u3) for d in (0, 1)))
+    pts.append(sp[-1])
+    n = len(pts) - 1
+    L, R = [], []
+    for i, (x, y) in enumerate(pts):
+        u = i / n
+        (xa, ya), (xb, yb) = pts[max(0, i - 1)], pts[min(n, i + 1)]
+        dx, dy = xb - xa, yb - ya; ln = math.hypot(dx, dy) or 1
+        nx, ny = -dy / ln, dx / ln
+        w = (62 - 32 * u ** 0.7) * 0.5 * (0.6 + 0.4 * k)
+        L.append((x + nx * w, y + ny * w)); R.append((x - nx * w, y - ny * w))
+    body = smooth_path(L[:-2] + R[:-2][::-1])
+    out = rimmed(c, body, col, dx=2, dy=-2)
+    out += f'<path d="M {P_(L[2:-4])}" stroke="{hi}" stroke-width="{c.sw(7)}" fill="none" opacity="0.5" stroke-linecap="round" transform="translate({-side * 4},2)"/>'
+    for i in range(2, n - 4, 2):                                 # pale belly scales on the inner edge
+        (x0, y0), (x1, y1) = R[i], R[i + 1]
+        mx, my = (x0 + x1) / 2, (y0 + y1) / 2
+        cx_, cy_ = pts[i][0] * 0.3 + mx * 0.7, pts[i][1] * 0.3 + my * 0.7
+        out += f'<path d="M {fmt(x0)} {fmt(y0)} Q {fmt(cx_)} {fmt(cy_)} {fmt(x1)} {fmt(y1)}" stroke="{belly}" stroke-width="{c.sw(4)}" fill="none" opacity="0.45" stroke-linecap="round"/>'
+    # the head along the last stretch of the spine
+    (xa, ya), (xb, yb) = pts[-5], pts[-1]
+    ang = math.degrees(math.atan2(yb - ya, xb - xa))
+    flip = -1 if (xb - xa) < 0 else 1
+    hs_ = (0.75 + 0.55 * k)
+    jaw = 24 * hiss
+    fl = max(0.0, math.sin(t * 4.3 + ph * 3)) ** 6 if hiss < 0.05 else 0.6 + 0.4 * math.sin(t * 22)
+    tongue = ""
+    if fl > 0.05:
+        L_ = 26 + 30 * fl
+        tongue = (f'<path d="M 60 8 L {fmt(60 + L_)} 8 M {fmt(60 + L_)} 8 l 12 -8 M {fmt(60 + L_)} 8 l 12 8" stroke="#c2182a" stroke-width="{c.sw(4)}" '
+                  f'fill="none" stroke-linecap="round"/>')
+    head_d = "M -26 -24 C 10 -40, 50 -28, 68 -8 C 74 -2, 74 4, 70 8 C 52 14, 18 18, -26 22 Z"
+    jaw_d = f"M -14 10 C 20 16, 48 14, 66 10 L 64 {fmt(18 + jaw)} C 44 {fmt(26 + jaw)}, 14 {fmt(28 + jaw * 0.6)}, -16 22 Z"
+    mouth = (f'<path d="M 0 10 C 24 14, 48 12, 66 8 L 64 {fmt(14 + jaw)} C 44 {fmt(22 + jaw)}, 14 {fmt(22 + jaw * 0.6)}, 0 18 Z" fill="#8a2438"/>' if jaw > 1 else "")
+    out += (f'<g transform="translate({fmt(pts[-2][0] - math.cos(math.radians(ang)) * 6)},{fmt(pts[-2][1] - math.sin(math.radians(ang)) * 6)}) rotate({fmt(ang)}) scale({hs_:.3f},{hs_ * flip:.3f})">' + tongue + mouth +
+            rimmed(c, jaw_d, col, dx=1, dy=-1, sw=2.2) + rimmed(c, head_d, col, dx=2, dy=-2, sw=2.4) +
+            f'<path d="M -10 -24 C 20 -34, 46 -22, 60 -10" stroke="{hi}" stroke-width="{c.sw(5)}" fill="none" opacity="0.6"/>'
+            f'<path d="M 20 -21 C 28 -28, 44 -26, 50 -17" stroke="{OUT}" stroke-width="{c.sw(4)}" fill="none" stroke-linecap="round"/>'
+            f'<ellipse cx="36" cy="-11" rx="9.5" ry="8.5" fill="{eye_col}" stroke="{OUT}" stroke-width="{c.sw(1.6)}"/>'
+            f'<ellipse cx="37" cy="-11" rx="2.3" ry="7" fill="#100806"/><circle cx="39.5" cy="-14.5" r="1.9" fill="#fff"/>'
+            f'<circle cx="63" cy="-5" r="2.4" fill="#05040a"/></g>')
+    return out
+
+def P_(pts): return " L ".join(f"{fmt(x)} {fmt(y)}" for x, y in pts)
+
 def person(S, p, t, lw=1.0):
     """returns SVG with the feet at (0,0)"""
     c = Ctx(lw)
@@ -761,7 +892,7 @@ def person(S, p, t, lw=1.0):
     neck = (f'<path d="M -44 -110 L -46 30 C -20 40, 20 40, 46 30 L 44 -110 Z" fill="{sk[0]}" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
             f'<path d="M -44 -110 L -46 30 C -30 36, -10 38, 0 38 L 0 -60 C -20 -64, -36 -80, -44 -110 Z" fill="{sk[1]}" opacity="0.6"/>')
     headg = (f'<g transform="translate(0,{fmt(bob)})">' +
-             f'<g transform="{htr}">' + hair_back(c, S, p, t) + scarf_back(c, S, p, t) + neck + '</g>' +
+             f'<g transform="{htr}">' + hair_back(c, S, p, t) + scarf_back(c, S, p, t) + kufiya_back(c, S, p, t) + neck + '</g>' +
              '</g>')
     front = f'<g transform="translate(0,{fmt(bob)})"><g transform="{htr}">' + head(c, S, p, t) + '</g></g>'
     cf = f'<g transform="scale({bs:.3f})">' + cloak_front(c, S, p, t) + '</g>'
@@ -784,7 +915,13 @@ def person(S, p, t, lw=1.0):
                   f'<circle cx="{fmt(x1)}" cy="{fmt(y1)}" r="{fmt(30*bs)}" fill="none" stroke="#7a7e84" stroke-width="{c.sw(9)}"/>'
                   f'<circle cx="{fmt(x2)}" cy="{fmt(y2)}" r="{fmt(30*bs)}" fill="none" stroke="#7a7e84" stroke-width="{c.sw(9)}"/>')
     defs = ('<defs><filter id="glowf" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter></defs>')
-    whole = defs + headg + body + front + cf + arms + chains
+    sn = ""
+    if S.get("snakes"):
+        looks = p.get("snake_looks") or (p.get("snake_look", 1.0),) * 2       # (left snake, right snake) in the picture
+        hisses = p.get("hisses") or (p.get("hiss", 0.0),) * 2
+        sn = f'<g transform="scale({bs:.3f})">' + "".join(snake(c, sd, t, p.get("snake_rise", 1.0), hisses[i], looks[i], seed=i)
+                                                          for i, sd in enumerate((-1, 1))) + '</g>'
+    whole = defs + headg + body + front + cf + sn + arms + chains
     return f'<g transform="translate(0,{fmt(-FEET*bs)})">{whole}</g>'
 
 def lying_person(S, p, t, lw=1.0):
@@ -992,6 +1129,36 @@ def dog(c, col="#d8b888", dark="#a87848", phase=0.0, run=False, t=0.0, seed=0):
     out += (f'<circle cx="{fmt(206 + hx)}" cy="{fmt(-282 + bob + hy)}" r="6" fill="#120a06"/><circle cx="{fmt(207 + hx)}" cy="{fmt(-284 + bob + hy)}" r="2" fill="#fff"/>'
             f'<ellipse cx="{fmt(261 + hx)}" cy="{fmt(-263 + bob + hy)}" rx="7" ry="6" fill="#120a06"/>'
             f'<path d="M {fmt(258 + hx)} {fmt(-254 + bob + hy)} q -16 6 -34 2" stroke="{OUT}" stroke-width="{c.sw(2)}" fill="none"/>')
+    return out
+
+def goat(c, col="#e9e3d6", dark="#b9ae9a", horn="#8a7a62", t=0.0, graze=0.0, seed=0, walk=False, phase=0.0):
+    """a goat, side view facing left; origin at the ground under the belly; ~ 330 wide x 300 tall"""
+    out = ""
+    for i, (lx, ph) in enumerate(((-78, 0.0), (-54, math.pi), (74, math.pi), (98, 0.0))):
+        fill = dark if i in (1, 2) else col
+        a = (16 * math.sin(phase + ph) if walk else 2 * math.sin(t * 1.1 + i + seed))
+        r_ = math.radians(a)
+        knee = (lx + math.sin(r_) * 60, -126 + math.cos(r_) * 60)
+        foot = (knee[0] + math.sin(r_ * 0.6) * 58, min(-4, knee[1] + 58 - (8 * max(0, math.sin(phase + ph)) if walk else 0)))
+        out += (limb(c, (lx, -132), knee, 13, 9, fill, 2.2) + limb(c, knee, foot, 9, 7, fill, 2.2) +
+                f'<path d="M {fmt(foot[0]-9)} {fmt(foot[1]-2)} L {fmt(foot[0]+9)} {fmt(foot[1]-2)} L {fmt(foot[0]+10)} {fmt(foot[1]+5)} L {fmt(foot[0]-10)} {fmt(foot[1]+5)} Z" fill="#2a2018"/>')
+    bob = 3 * math.sin(phase * 2) if walk else 0
+    body = smooth_path([(-112, -196 + bob), (-20, -210 + bob), (80, -206 + bob), (128, -186 + bob), (134, -144 + bob), (110, -116 + bob),
+                        (-20, -112 + bob), (-96, -118 + bob), (-126, -150 + bob)])
+    out += rimmed(c, body, col, dx=3, dy=-2)
+    out += f'<path d="M -90 -126 C -20 -116, 60 -116, 120 -128" stroke="#000" stroke-width="{c.sw(10)}" opacity="0.10" fill="none"/>'
+    out += f'<path d="M 126 -190 C 140 -206, 150 -222, 146 -236 C 138 -222, 130 -210, 118 -200 Z" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+    hy = 70 * graze + bob
+    neck = smooth_path([(-90, -196 + bob), (-122, -236 + hy * 0.6), (-150, -262 + hy), (-168, -246 + hy), (-140, -196 + hy * 0.5), (-112, -150 + bob)])
+    headp = smooth_path([(-140, -262 + hy), (-164, -278 + hy), (-192, -268 + hy), (-212, -236 + hy), (-210, -220 + hy), (-190, -218 + hy),
+                         (-166, -232 + hy), (-146, -240 + hy)])
+    out += rimmed(c, neck, col, dx=2, dy=-2) + rimmed(c, headp, col, dx=2, dy=-2)
+    out += (f'<path d="M -160 {fmt(-272 + hy)} C -150 {fmt(-310 + hy)}, -118 {fmt(-318 + hy)}, -104 {fmt(-296 + hy)}" stroke="{horn}" stroke-width="{c.sw(9)}" fill="none" stroke-linecap="round"/>'
+            f'<path d="M -160 {fmt(-272 + hy)} C -150 {fmt(-310 + hy)}, -118 {fmt(-318 + hy)}, -104 {fmt(-296 + hy)}" stroke="{OUT}" stroke-width="{c.sw(1.6)}" fill="none"/>'
+            f'<ellipse cx="-150" cy="{fmt(-252 + hy)}" rx="20" ry="8" fill="{dark}" stroke="{OUT}" stroke-width="{c.sw(1.8)}" transform="rotate(28,-150,{fmt(-252 + hy)})"/>'
+            f'<path d="M -204 {fmt(-222 + hy)} L -198 {fmt(-190 + hy)} L -188 {fmt(-220 + hy)} Z" fill="{dark}" stroke="{OUT}" stroke-width="{c.sw(1.6)}"/>'
+            f'<circle cx="-180" cy="{fmt(-256 + hy)}" r="4.5" fill="#120a06"/><path d="M -186 {fmt(-258 + hy)} l 12 0" stroke="#e8c050" stroke-width="{c.sw(1.4)}"/>'
+            f'<ellipse cx="-208" cy="{fmt(-232 + hy)}" rx="3" ry="2.4" fill="#3a2418"/>')
     return out
 
 def cow(c, col="#7a5a3e", spots="#efe6d6", t=0.0, graze=0.0, seed=0):
