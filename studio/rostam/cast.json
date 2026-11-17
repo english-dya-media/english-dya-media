@@ -94,5 +94,9 @@
   "NOBLE": {
     "voice": "am_adam",
     "speed": 0.95
+  },
+  "BOY": {
+    "voice": "af_sky",
+    "speed": 1.0
   }
 }

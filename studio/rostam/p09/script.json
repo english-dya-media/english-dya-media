@@ -1,0 +1,245 @@
+{
+ "episode": 5,
+ "part": 9,
+ "title_en": "Whose Son Am I?",
+ "title_fa": "پسر کیستم؟",
+ "next_label": "NEXT PART",
+ "next_en": "Tahmineh's Secret",
+ "next_fa": "راز تهمینه",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "Mother, whose son am I? Tell me the truth!",
+     "fa": "مادر، من پسر کیستم؟ راستش را به من بگو!",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Sohrab... why are you asking me this?",
+     "fa": "سهراب... چرا این را از من می‌پرسی؟",
+     "pause": 1.0
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Ten years earlier, in Samangan, Tahmineh gave birth to a son.",
+     "fa": "ده سال پیش از آن، در سمنگان، تهمینه پسری به دنیا آورد.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "His father was Rostam, the great hero of Iran. His name was Sohrab.",
+     "fa": "پدرش رستم بود، پهلوان بزرگ ایران. نامش سهراب بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And he grew fast. At one month, he was as big as a one-year-old.",
+     "fa": "و تند بزرگ می‌شد. یک‌ماهه که شد، به اندازه‌ی کودکی یک‌ساله بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Slow down, my little lion! You are growing too fast.",
+     "fa": "آهسته‌تر، شیر کوچکم! خیلی تند بزرگ می‌شوی.",
+     "pause": 0.7
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "At three, he was riding on the training field.",
+     "fa": "سه‌ساله که شد، در میدان اسب می‌تاخت.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "At five, he could shoot an arrow like a warrior.",
+     "fa": "پنج‌ساله که شد، مانند جنگاوران تیر می‌انداخت.",
+     "pause": 0.8
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Look at my grandson! Five years old, and he never misses!",
+     "fa": "نوه‌ام را ببینید! پنج سال دارد و تیرش هرگز خطا نمی‌رود!",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "At ten, he was taller than all the boys of his age, and stronger than most men.",
+     "fa": "ده‌ساله که شد، از همه‌ی هم‌سالانش بلندتر بود و از بیشتر مردان نیرومندتر.",
+     "pause": 0.4
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Who will wrestle with my grandson today? Come, step forward!",
+     "fa": "امروز چه کسی با نوه‌ی من کشتی می‌گیرد؟ بیایید، پیش بیایید!",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "The strongest wrestler in Samangan stepped into the ring.",
+     "fa": "نیرومندترین کشتی‌گیر سمنگان پا به میدان گذاشت.",
+     "pause": 2.6
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "By God! Is there no one in Samangan who can stand against this boy?",
+     "fa": "به خدا سوگند! در همه‌ی سمنگان کسی حریف این پسر نیست؟",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "There was no one. In all that land, no one dared to fight Sohrab anymore.",
+     "fa": "کسی نبود. در همه‌ی آن سرزمین، دیگر هیچ‌کس جرئت نبرد با سهراب را نداشت.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "BOY",
+     "en": "Hey, Sohrab! You're strong, but who is your father?",
+     "fa": "آهای سهراب! زورت زیاد است، ولی پدرت کیست؟",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "My father? My father is...",
+     "fa": "پدرم؟ پدر من...",
+     "pause": 0.5
+    },
+    {
+     "role": "BOY",
+     "en": "You don't even know! Nobody knows!",
+     "fa": "خودت هم نمی‌دانی! هیچ‌کس نمی‌داند!",
+     "pause": 0.8
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab did not answer. For the first time in his life, he had no answer.",
+     "fa": "سهراب پاسخی نداد. برای نخستین بار در زندگی‌اش، پاسخی نداشت.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "That night, he went straight to his mother.",
+     "fa": "آن شب، یکراست نزد مادرش رفت.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Mother, I want to ask you something. And I want the truth.",
+     "fa": "مادر، می‌خواهم چیزی از تو بپرسم. و راستش را می‌خواهم.",
+     "pause": 0.3
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Ask, my son.",
+     "fa": "بپرس، پسرم.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "I am taller than all the boys of my age. My head reaches the sky.",
+     "fa": "من از همه‌ی هم‌سالانم بلندترم. سرم به آسمان می‌رسد.",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "So whose son am I? When people ask about my father, what do I say?",
+     "fa": "پس من پسر کیستم؟ وقتی کسی از پدرم بپرسد، چه بگویم؟",
+     "pause": 0.5
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Why are you asking this now, Sohrab?",
+     "fa": "چرا حالا این را می‌پرسی، سهراب؟",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Today the boys laughed at me, because I don't know my own father!",
+     "fa": "امروز پسرها به من خندیدند، چون پدر خودم را نمی‌شناسم!",
+     "pause": 0.5
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "You are my son, and the grandson of a king. Isn't that enough?",
+     "fa": "تو پسر منی و نوه‌ی یک شاه. همین بس نیست؟",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "No! Tell me the truth. If you hide it from me, I will not let you live!",
+     "fa": "نه! راستش را بگو. اگر آن را از من پنهان کنی، زنده‌ات نمی‌گذارم!",
+     "pause": 1.0
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Hard words, from a son to his mother.",
+     "fa": "سخنی سخت بود، از پسری به مادرش.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "For ten years, Tahmineh had kept one secret. Now, the time had come.",
+     "fa": "تهمینه ده سال رازی را نگه داشته بود. اکنون زمانش رسیده بود.",
+     "pause": 0.5
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Sit down, my son, and listen. And do not be angry.",
+     "fa": "بنشین پسرم و گوش کن. و خشمگین مباش.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Then she told him a name. A name that every warrior in the world knew.",
+     "fa": "آن‌گاه نامی را به او گفت. نامی که همه‌ی جنگاوران جهان می‌شناختند.",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}

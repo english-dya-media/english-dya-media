@@ -35,7 +35,7 @@ ROLE_FA = {"ROSTAM": "رستم", "SOHRAB": "سهراب", "TAHMINEH": "تهمین
            "HOJIR": "هجیر", "AFRASIAB": "افراسیاب", "HOOMAN": "هومان", "GUDARZ": "گودرز",
            "ZHENDEH": "ژنده‌رزم", "RIDER": "سوار تورانی", "RIDER2": "سوار تورانی",
            "HERDSMAN": "گله‌بان پیر", "GUARD": "نگهبان", "MAID": "ندیمه", "MOBED": "موبد",
-           "NOBLE": "یکی از بزرگان"}
+           "NOBLE": "یکی از بزرگان", "BOY": "پسربچه"}
 ROLE_EN = {"KING_SAMANGAN": "KING OF SAMANGAN", "RIDER": "TURANIAN RIDER",
            "RIDER2": "TURANIAN RIDER", "ZHENDEH": "ZHENDEH RAZM", "HERDSMAN": "OLD HERDSMAN"}
 FA_DIGITS = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")

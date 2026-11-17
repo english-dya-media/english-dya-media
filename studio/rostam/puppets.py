@@ -33,6 +33,9 @@ LOOKS = {
     "afrasiab": dict(b=1.1, head="crown", beard="long", garment="robe", cape=True),
     "mobed": dict(b=0.95, head="turban", beard="long", garment="robe"),
     "div": dict(b=1.35, heavy=True, head="horns", beard="long", garment="tunic"),
+    "young_sohrab": dict(b=1.0, head="bare", hair=True, beard="none", garment="tunic"),   # Sohrab as a boy
+    "boy": dict(b=0.95, head="bare", beard="none", garment="tunic"),
+    "wrestler": dict(b=1.15, heavy=True, head="bare", beard="short", garment="tunic"),
 }
 
 L1, L2 = 120, 106          # thigh, shin
@@ -455,6 +458,17 @@ def prop(c, kind, W, a2, P, t):
         for (kx, ky) in ((22, -120), (-22, -100), (16, -160), (-18, -150)):
             fillp(c, ppath([(kx - 5, ky - 4), (kx + 9 * (1 if kx > 0 else -1), ky), (kx - 5, ky + 4)]))
         c.restore()
+    elif kind == "bow":
+        # a bow held upright; the scene draws the string between the anchors bowtop/bowbot (and the draw hand)
+        c.save()
+        c.translate(hx, hy)
+        c.rotate(P.get("bow", 0.0))
+        for sy in (-1, 1):
+            taper(c, bez((0, 0), (10, 52 * sy), (-2, 104 * sy), (-22, 126 * sy), 10), 6.5, 2.0)
+        fillp(c, ppath([(-6, -18), (6, -18), (6, 18), (-6, 18)]))
+        anchor(c, "bowtop", -22, -126)
+        anchor(c, "bowbot", -22, 126)
+        c.restore()
     elif kind == "lasso":
         rr = P.get("loop", 46)
         ang = t * 7.5
@@ -708,6 +722,9 @@ def horse(c, X, Y, s, face, P, t, kind="horse"):
         c.translate(30, -306 + 250 - 6)
         c.translate(0, -250)
         c.rotate(-pitch * 0.5)
+        rs = P.get("rider_scale", 1.0)          # a child on a grown horse
+        if rs != 1.0:
+            c.scale(rs, rs)
         c.translate(0, 250)
         _inner_person(c, rp, t, P["rider"])
         c.restore()

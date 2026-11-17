@@ -36,6 +36,10 @@ Every part's title is in `parts.json` ("titles").
 - **Sohrab**: tall, beardless, long hair, pointed helmet with a tall plume, cape, spear (`sohrab`). Voice am_puck.
   As a child: `sohrab` at scale 0.6–0.75.
 - **Tahmineh**: veil with a small crown, long dress (`tahmineh`). Voice af_heart. The maid: `maid`, voice bf_isabella.
+- **Sohrab as a boy** (parts 9–10): `young_sohrab` (bare head, long hair, tunic), ~1.4 next to Tahmineh at 1.5;
+  the jewel glows on his upper arm (`gem_at(c, "s:hand_up", …)`). Other children: `boy` (voice af_sky, role BOY).
+  Part 10: Tahmineh told him he is Rostam's son, showed Rostam's letter and three rubies set in gold, and warned
+  him to hide it from Afrasiab; Rostam knows he has a son but thinks he is still a little child.
 - **King of Samangan**: crown with ribbons, long beard, robe, cape (`king`). Kavus and Afrasiab: `kavus`, `afrasiab`.
 - **Gordafarid**: `gordafarid` (female face, pointed helmet, plume, hair, armour). Hojir: `warrior_ir`.
   Turanians: `warrior_tu` / `rider`.

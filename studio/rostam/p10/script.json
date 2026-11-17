@@ -1,0 +1,263 @@
+{
+ "episode": 5,
+ "part": 10,
+ "title_en": "Tahmineh's Secret",
+ "title_fa": "راز تهمینه",
+ "next_label": "NEXT PART",
+ "next_en": "Sohrab's Dream",
+ "next_fa": "رؤیای سهراب",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "TAHMINEH",
+     "en": "Your father is Rostam, my son. Rostam, the son of Zal.",
+     "fa": "پدرت رستم است، پسرم. رستم، پسر زال.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Rostam? The great hero of Iran?",
+     "fa": "رستم؟ پهلوان بزرگ ایران؟",
+     "pause": 1.0
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab was ten years old, and no man in Samangan could stand against him.",
+     "fa": "سهراب ده ساله بود و هیچ مردی در سمنگان حریفش نبود.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "That night, he asked his mother the question she feared most.",
+     "fa": "آن شب، از مادرش همان را پرسید که بیش از همه از آن می‌ترسید.",
+     "pause": 0.5
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Listen to me, Sohrab. Be happy, and do not be angry.",
+     "fa": "به من گوش کن، سهراب. شاد باش و تندی مکن.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "You are the son of Rostam, the mightiest hero in the world.",
+     "fa": "تو پسر رستمی، نیرومندترین پهلوان جهان.",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Rostam... is my father?",
+     "fa": "رستم... پدر من است؟",
+     "pause": 0.5
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Your grandfather is Zal. Before him came Sam and Nariman, heroes of old.",
+     "fa": "پدربزرگت زال است. و پیش از او سام و نریمان، پهلوانان روزگار کهن.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "That is why your head reaches the sky.",
+     "fa": "از این روست که سرت به آسمان می‌رسد.",
+     "pause": 0.7
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "In the candlelight, Sohrab saw them all: Nariman, Sam, Zal... and Rostam.",
+     "fa": "در روشنای شمع، سهراب همه را دید: نریمان، سام، زال... و رستم.",
+     "pause": 0.5
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Since God made the world, there has never been a rider like your father.",
+     "fa": "از روزی که خدا جهان را آفرید، سواری چون پدرت پدید نیامده است.",
+     "pause": 0.5
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Rostam... the one from all the stories? The one who killed the White Div?",
+     "fa": "رستم... همان که در همه‌ی داستان‌هاست؟ همان که دیو سپید را کشت؟",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Yes, my son. The very same.",
+     "fa": "آری پسرم. خود اوست.",
+     "pause": 0.7
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Then she opened a small chest, and showed him what she had hidden.",
+     "fa": "آن‌گاه صندوقچه‌ای را گشود و آنچه را پنهان کرده بود به او نشان داد.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "A letter from Rostam, and three shining rubies set in gold, sent from Iran.",
+     "fa": "نامه‌ای از رستم، و سه یاقوت درخشان در زر، که از ایران فرستاده بود.",
+     "pause": 0.5
+    },
+    {
+     "role": "SOHRAB",
+     "en": "He knows about me?",
+     "fa": "او از من خبر دارد؟",
+     "pause": 0.3
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "He knows he has a son. But he thinks you are still a little child.",
+     "fa": "می‌داند که پسری دارد. اما گمان می‌کند هنوز کودکی خردسالی.",
+     "pause": 0.6
+    },
+    {
+     "role": "SOHRAB",
+     "en": "And this jewel on my arm... was it his too?",
+     "fa": "و این مهره‌ی روی بازویم... آن هم از اوست؟",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Yes. He gave it to me before he left. For you.",
+     "fa": "آری. پیش از رفتنش آن را به من داد. برای تو.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "TAHMINEH",
+     "en": "But listen carefully, Sohrab. This must stay a secret.",
+     "fa": "اما خوب گوش کن، سهراب. این باید راز بماند.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Afrasiab, the king of Turan, is your father's enemy.",
+     "fa": "افراسیاب، شاه توران، دشمن پدر توست.",
+     "pause": 0.3
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "He must never know whose son you are.",
+     "fa": "هرگز نباید بداند که تو پسر کیستی.",
+     "pause": 0.5
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Why, Mother? What would Afrasiab do?",
+     "fa": "چرا، مادر؟ افراسیاب چه می‌کند؟",
+     "pause": 0.3
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "He hates your father. He would use you against him.",
+     "fa": "از پدرت بیزار است. تو را در برابر او به کار می‌گیرد.",
+     "pause": 0.5
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "And if your father hears that you are a warrior, he will call you to Iran.",
+     "fa": "و اگر پدرت بشنود که جنگاوری شده‌ای، تو را نزد خود به ایران می‌خواند.",
+     "pause": 0.3
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "And my heart will break.",
+     "fa": "و دل مادرت از درد پاره می‌شود.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "A secret? Mother, every warrior in the world tells stories of Rostam!",
+     "fa": "راز؟ مادر، همه‌ی جنگاوران جهان از رستم داستان می‌گویند!",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "With a father like him, why should I hide who I am?",
+     "fa": "با پدری چون او، چرا باید پنهان کنم که کیستم؟",
+     "pause": 0.5
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Sohrab... please. Promise me.",
+     "fa": "سهراب... خواهش می‌کنم. به من قول بده.",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "But Sohrab promised nothing. That night, he could not sleep.",
+     "fa": "اما سهراب قولی نداد. آن شب، خواب به چشمش نیامد.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "He stood at the window, and looked toward Iran.",
+     "fa": "کنار پنجره ایستاد و به سوی ایران چشم دوخت.",
+     "pause": 0.5
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Rostam... my father. Somewhere out there, beyond those mountains.",
+     "fa": "رستم... پدر من. جایی آن‌جا، آن سوی آن کوه‌ها.",
+     "pause": 0.5
+    },
+    {
+     "role": "SOHRAB",
+     "en": "One day, the whole world will know my name too.",
+     "fa": "روزی همه‌ی جهان نام مرا هم خواهند دانست.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And in the heart of that boy, a great and dangerous dream was born.",
+     "fa": "و در دل آن پسر، رؤیایی بزرگ و خطرناک زاده شد.",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}
