@@ -108,6 +108,44 @@ LINES = [
  ("p3s6g",3,6,"NARRATOR","…were brought to the snake king's palace.","…به کاخ شاه ماردوش برده شدند.","were brought to the snake king's palace."),
  ("p3s6h",3,6,"ARNAVAZ","Stay close to me, Shahrnaz.","کنارم بمان، شهرناز.","Stay close to me, Shahrnaaz."),
  ("p3s6i",3,6,"ZAHHAK","Welcome… to my palace.","به کاخ من… خوش آمدید.","Welcome... to my palace."),
+ # ---- part 4 · The Two Cooks (Shahnameh, «ضحاک» sh1: a thousand years; two young men every night; Armayel and Garmayel become the
+ #      king's cooks and save one each night with a sheep's brain; the saved go to the mountains with goats; Zahhak's scream in the night)
+ ("p4s1a",4,1,"GARMAYEL_W","We can't save them all… but we can save one.","نمی‌توانیم همه را نجات بدهیم… اما یکی را می‌توانیم.",
+  "We can't save them all... but we can save one."),
+ ("p4s1b",4,1,"NARRATOR","Two cooks… and a dangerous secret.","دو آشپز… و یک رازِ خطرناک.","Two cooks... and a dangerous secret."),
+ ("p4s3a",4,3,"NARRATOR","Zahhak ruled the world for a thousand years.","ضحاک هزار سال بر جهان فرمان راند.","Zah-hawk ruled the world, for a thousand years."),
+ ("p4s3e",4,3,"NARRATOR","Truth went into hiding, and lies ruled the land.","راستی پنهان شد و دروغ بر سرزمین فرمان راند.",None),
+ ("p4s3b",4,3,"NARRATOR","And every night, his guards took two young men to the palace.","و هر شب، نگهبانانش دو مرد جوان را به کاخ می‌بردند.",None),
+ ("p4s3c",4,3,"MOTHER","My son! Where are you taking my son?","پسرم! پسرم را کجا می‌برید؟",None),
+ ("p4s3d",4,3,"NARRATOR","Their families waited… but they never came home.","خانواده‌هایشان منتظر ماندند… اما آن‌ها هرگز به خانه برنگشتند.",
+  "Their families waited... but they never came home."),
+ ("p4s4a",4,4,"NARRATOR","In the city lived two good men, Armayel and Garmayel.","در شهر دو مرد نیک زندگی می‌کردند: ارمایل و گرمایل.",
+  "In the city lived two good men, Armaa-yel, and Garmaa-yel."),
+ ("p4s4b",4,4,"ARMAYEL","Every night, two more. We can't just sit here!","هر شب، دو نفرِ دیگر. نمی‌توانیم فقط بنشینیم!",None),
+ ("p4s4c",4,4,"GARMAYEL","We are not soldiers, brother. But we can learn to cook.","ما سرباز نیستیم، برادر. اما می‌توانیم آشپزی یاد بگیریم.",None),
+ ("p4s4d",4,4,"ARMAYEL","Cook? For the snake king?","آشپزی؟ برای شاه ماردوش؟",None),
+ ("p4s4e",4,4,"GARMAYEL","Yes. In his kitchen, we can help them.","آره. در آشپزخانه‌اش، می‌توانیم کمکشان کنیم.",None),
+ ("p4s4g",4,4,"ARMAYEL","And if the king finds out?","و اگر شاه بفهمد؟",None),
+ ("p4s4h",4,4,"GARMAYEL","Then we must be brave, brother.","آن‌وقت باید شجاع باشیم، برادر.",None),
+ ("p4s4f",4,4,"NARRATOR","So they learned to cook… and became the king's cooks.","پس آشپزی یاد گرفتند… و آشپزهای شاه شدند.",
+  "So they learned to cook... and became the king's cooks."),
+ ("p4s5a",4,5,"NARRATOR","That night, the guards brought two young men to the kitchen.","آن شب، نگهبانان دو مرد جوان را به آشپزخانه آوردند.",None),
+ ("p4s5b",4,5,"GUARD","Two for the king. Be quick!","دو نفر برای شاه. زود باشید!",None),
+ ("p4s5c",4,5,"NARRATOR","The cooks could not save both of them. But they could save one.","آشپزها نمی‌توانستند هر دو را نجات بدهند. اما یکی را می‌توانستند.",None),
+ ("p4s5h",4,5,"NARRATOR","Their hearts were heavy, and their eyes were full of tears.","دل‌هایشان پر از درد بود و چشم‌هایشان پر از اشک.",None),
+ ("p4s5d",4,5,"GARMAYEL_W","Go out the back door… and never come back to the city.","از درِ پشتی برو… و دیگر هیچ‌وقت به شهر برنگرد.",
+  "Go out the back door... and never come back to the city."),
+ ("p4s5e",4,5,"YOUNG_MAN","Thank you… thank you!","ممنونم… ممنونم!","Thank you... thank you!"),
+ ("p4s5f",4,5,"NARRATOR","For the snakes, they used a sheep's brain instead.","و برای مارها، به جایش مغزِ گوسفند گذاشتند.",None),
+ ("p4s5g",4,5,"ARMAYEL","The king will never know.","شاه هرگز نمی‌فهمد.",None),
+ ("p4s6a",4,6,"NARRATOR","Night after night, they saved one young man.","شب به شب، یک جوان را نجات می‌دادند.",None),
+ ("p4s6b",4,6,"NARRATOR","When there were two hundred, they gave them goats and sheep…","وقتی دویست نفر شدند، به آن‌ها بز و گوسفند دادند…",
+  "When there were two hundred, they gave them goats and sheep..."),
+ ("p4s6c",4,6,"NARRATOR","…and sent them far away, into the mountains.","…و آن‌ها را به کوه‌های دوردست فرستادند.","and sent them far away, into the mountains."),
+ ("p4s6d",4,6,"NARRATOR","But one night, in the palace…","اما یک شب، در کاخ…","But one night, in the palace..."),
+ ("p4s6e",4,6,"ZAHHAK","No! Get away from me!","نه! از من دور شو!",None),
+ ("p4s6g",4,6,"NARRATOR","He screamed so loud that the whole palace shook.","چنان فریادی زد که همه‌ی کاخ لرزید.",None),
+ ("p4s6f",4,6,"ARNAVAZ","My king! What is it? What did you see?","سرورم! چه شده؟ چه دیدی؟",None),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -120,6 +158,9 @@ VOICES = {
  # part 3
  "DOCTOR_A": (480, 1.1, -1, 1.0), "DOCTOR_B": (700, 1.08, 0, 1.0), "JAMSHID": (750, 1.12, -1, 1.0), "NOBLE": (805, 1.05, 0, 1.0),
  "ARNAVAZ": (240, 1.1, 0, 0.85),
+ # part 4
+ "ARMAYEL": (330, 1.08, 0, 1.0), "GARMAYEL": (400, 1.1, 0, 1.0), "GARMAYEL_W": (400, 1.25, 0, 0.7), "MOTHER": (75, 1.05, 0, 1.0),
+ "GUARD": (350, 1.05, -1, 1.0), "YOUNG_MAN": (550, 1.05, 1, 1.0),
 }
 # slower takes for learners (per-line length factors, see voices.py)
 SPEED = {lid: 1.15 for lid, part, *_ in LINES if part in (1, 2)}
@@ -129,3 +170,6 @@ SPEED.update({lid: 1.12 for lid, part, *_ in LINES if part == 3})
 SPEED.update({"p3s1a": 1.35, "p3s1b": 1.25, "p3s3a": 1.2, "p3s3c": 1.2, "p3s3d": 1.35, "p3s3f": 1.2, "p3s3g": 1.25, "p3s4b": 1.3,
               "p3s4d": 1.35, "p3s4e": 1.1, "p3s4f": 1.2, "p3s4g": 1.2, "p3s4i": 1.4, "p3s5e": 1.35, "p3s5f": 1.5, "p3s5g": 1.2,
               "p3s6c": 1.25, "p3s6g": 1.2, "p3s6i": 1.3})
+SPEED.update({lid: 1.15 for lid, part, *_ in LINES if part == 4})
+SPEED.update({"p4s1a": 1.25, "p4s5d": 1.32, "p4s5c": 1.3, "p4s5a": 1.25, "p4s5e": 1.4, "p4s6e": 1.0, "p4s6d": 1.25, "p4s5b": 1.3, "p4s5g": 1.45, "p4s4d": 1.3})
+SPEED.update({"p4s4g": 1.5, "p4s4h": 1.4})

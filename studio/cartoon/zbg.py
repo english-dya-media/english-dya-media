@@ -684,3 +684,50 @@ def jamshid_hall_close():
     s += "".join(f'<circle cx="{x}" cy="{y}" r="13" fill="{c}" stroke="{GOLD_D}" stroke-width="3"/>' for x, y, c in
                  ((210, 900, "#b8121c"), (870, 900, "#b8121c"), (210, 1200, "#2a8a4a"), (870, 1200, "#2a8a4a"), (210, 1500, "#b8121c"), (870, 1500, "#b8121c")))
     return svg_render(s)
+
+
+# ------------------------------------------------------------------ part 4: Zahhak's bedchamber at night
+def bedchamber():
+    """Zahhak's bedchamber at night: black and purple walls, the gold serpent sign over a wide bed with a crimson canopy (posts at x 130
+    and 950, mattress top y 1190, front y 1190-1330, pillows at the left, x 150-400), a tall moonlit window at the right (x 800-960,
+    y 420-900) with its beam, a bronze lamp stand at x 70 (flame at about (70, 960), drawn by the scene); floor from y 1330"""
+    s = ("<defs>" + FILTERS + lg("bw", [(0, "#0c0910", 1), (0.5, "#1c1422", 1), (1, "#120d16", 1)]) + lg("bf", [(0, "#1e1620", 1), (1, "#07050a", 1)]) +
+         lg("cov", [(0, "#7a1220", 1), (1, "#3e0810", 1)]) + lg("moon", [(0, "#b8c8ff", 0.35), (1, "#b8c8ff", 0.0)]) +
+         rg("lampg", 70, 960, 520, [(0, "#ffae5a", 0.30), (0.5, "#a0502a", 0.08), (1, "#000", 0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#bw)"/>'
+    for x in range(0, W, 120):
+        s += f'<path d="M {x} 0 L {x} 1330" stroke="#241a2a" stroke-width="3" opacity="0.6"/>'
+    s += f'<rect x="0" y="250" width="{W}" height="16" fill="{GOLD_D}" opacity="0.7"/>'
+    s += serpent_emblem(540, 400, 1.15)
+    # the window and its moonbeam
+    s += ('<path d="M 800 900 L 800 520 Q 880 400, 960 520 L 960 900 Z" fill="#26304e" stroke="#7a5a22" stroke-width="8"/>'
+          '<path d="M 880 420 L 880 900 M 800 700 L 960 700" stroke="#3a2a1a" stroke-width="6"/>'
+          '<circle cx="920" cy="600" r="26" fill="#e8ecff" opacity="0.9"/>'
+          '<path d="M 800 900 L 960 900 L 700 1700 L 380 1700 Z" fill="url(#moon)"/>')
+    # canopy and curtains
+    s += ('<path d="M 100 560 L 980 560 L 980 610 L 100 610 Z" fill="#4a0a14" stroke="#1a0408" stroke-width="4"/>'
+          f'<path d="M 100 560 L 980 560" stroke="{GOLD}" stroke-width="8"/>')
+    for k in range(8):
+        x0 = 110 + k * 110
+        s += f'<path d="M {x0} 610 Q {x0 + 55} 660, {x0 + 110} 610" fill="#5a0c18" stroke="#1a0408" stroke-width="3"/>'
+    for sd, x in ((-1, 130), (1, 950)):
+        s += (f'<rect x="{x - 14}" y="560" width="28" height="770" fill="#2a1a12" stroke="#120806" stroke-width="3"/>'
+              f'<circle cx="{x}" cy="548" r="20" fill="{GOLD}" stroke="{GOLD_D}" stroke-width="3"/>'
+              f'<path d="M {x - sd * 10} 610 C {x - sd * 160} 760, {x - sd * 40} 900, {x - sd * 20} 1000 L {x + sd * 14} 1000 L {x + sd * 14} 610 Z" fill="#6a0e1c" stroke="#1a0408" stroke-width="3"/>'
+              f'<path d="M {x - sd * 30} 960 L {x + sd * 10} 960" stroke="{GOLD}" stroke-width="10"/>')
+    # the bed
+    s += ('<path d="M 120 1190 L 960 1190 L 960 1330 L 120 1330 Z" fill="#2a1a12" stroke="#120806" stroke-width="4"/>'
+          f'<path d="M 120 1200 L 960 1200" stroke="{GOLD}" stroke-width="6"/>'
+          '<path d="M 140 1150 C 400 1120, 700 1120, 950 1150 L 960 1200 L 130 1200 Z" fill="#e8dccc" stroke="#3a2a20" stroke-width="3"/>'
+          '<rect x="150" y="1080" width="250" height="90" rx="40" fill="#efe4d0" stroke="#3a2a20" stroke-width="4"/>'
+          '<path d="M 120 1330 L 960 1330 L 960 1270 C 700 1240, 400 1240, 120 1270 Z" fill="url(#cov)" stroke="#1a0408" stroke-width="3"/>')
+    # the lamp stand
+    s += ('<rect x="62" y="980" width="16" height="350" fill="#8a5a22" stroke="#3a2410" stroke-width="3"/>'
+          '<path d="M 20 1330 L 120 1330 L 100 1310 L 40 1310 Z" fill="#8a5a22" stroke="#3a2410" stroke-width="3"/>'
+          '<path d="M 30 970 L 110 970 C 100 1000, 40 1000, 30 970 Z" fill="#b8822e" stroke="#3a2410" stroke-width="3"/>')
+    s += f'<rect x="0" y="1330" width="{W}" height="{H - 1330}" fill="url(#bf)"/>'
+    for k in range(9):
+        y = 1330 + k * k * 7 + k * 14
+        s += f'<path d="M 0 {y} L {W} {y}" stroke="#2a2030" stroke-width="2" opacity="0.5"/>'
+    s += f'<rect width="{W}" height="{H}" fill="url(#lampg)"/>'
+    return svg_render(s)

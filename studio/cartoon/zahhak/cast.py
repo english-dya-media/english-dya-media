@@ -68,3 +68,18 @@ ZGUARD = spec(kind="man", skin="tan", hair="short", beard="short", beard_col="#1
 ARNAVAZ = spec(kind="woman", skin="light", hair="none", beard=None, head="scarf", scarf_col="#dfe6f2", scarf_edge="#c9a24a", diadem=True,
                garment="dress", col="#9fb4d6", col2="#7088b0", pattern="plain", hs=0.95, bs=0.95, belt=None, cuff="#c9a24a", trim="#c9a24a", iris="#3a2a1a")
 SHAHRNAZ = dict(ARNAVAZ, scarf_col="#f4e2e8", col="#d8a8b8", col2="#a87888", iris="#4a2a17")
+
+# ---- part 4: Armayel and Garmayel, two good men of the city (at home in their robes; in the king's kitchen with a white apron over the
+# robe: not all in white like Iblis the cook); two young men taken to the palace; the king at night without his crown
+ARMAYEL = spec(kind="man", skin="olive", hair="short", hair_col="#1a120c", beard="full", beard_col="#2a1a10", head="cap", head_col="#5a3a22",
+               garment="robe", col="#7a5a3a", col2="#5a4028", pattern="plain", belt="#3a2414", buckle=False, cuff="#a8946e", trim="#a8946e",
+               iris="#3a2214", build=1.05)
+GARMAYEL = spec(kind="man", skin="light", hair="short", hair_col="#3a2a1e", beard="short", beard_col="#4a3a2a", head="turban", head_col="#e8dcc0",
+                garment="robe", col="#3a5a6a", col2="#24404c", pattern="plain", belt="#2b190c", buckle=False, cuff="#8aa0aa", trim="#8aa0aa",
+                iris="#2a4a3a", build=0.95)
+ARMAYEL_COOK = dict(ARMAYEL, apron="#ece6da", head_col="#ece6da")
+GARMAYEL_COOK = dict(GARMAYEL, apron="#ece6da")
+YOUNG_MAN = spec(kind="man", skin="tan", hair="teen_curly", hair_col="#1a120c", beard="light", beard_col="#1a120c", head="none", garment="tunic",
+                 col="#6a7f8f", col2="#4a5a68", pattern="plain", belt="#5a4228", buckle=False, cuff="#8a9aa8", trim="#8a9aa8", trousers="#4a3a2a", iris="#3a2214")
+YOUNG_MAN_2 = dict(YOUNG_MAN, hair="short", skin="olive", col="#8a6a3a", col2="#6a4a2a", cuff="#b89a6a", trim="#b89a6a")
+ZAHHAK_NIGHT = dict(ZAHHAK_KING, head="none", cloak=None, col="#2a1e2a", col2="#1a121a", pattern="plain", sash="#6a0c14")

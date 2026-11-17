@@ -572,6 +572,12 @@ def garment(c, S, p, t):
         out += rimmed(c, smooth_path(fpts), S["fur"], dx=2, dy=-2)
         out += f'<path d="M -50 60 L -30 {hem_y} M 50 60 L 30 {hem_y}" stroke="{S["fur"]}" stroke-width="{c.sw(22)}" opacity="0.95"/>' if g == "coat" else ""
     belt_y = 380
+    if S.get("apron") and not sit:          # a cook's apron from the waist down, with a strap round the neck
+        aw = waist * 0.78
+        out += (f'<path d="M -42 6 L {fmt(-aw * 0.55)} {belt_y - 10} M 42 6 L {fmt(aw * 0.55)} {belt_y - 10}" stroke="{S.get("apron_strap", "#8a7a5a")}" stroke-width="{c.sw(8)}" fill="none"/>'
+                f'<path d="M {fmt(-aw * 0.6)} 150 L {fmt(aw * 0.6)} 150 L {fmt(aw * 0.62)} {belt_y} L {fmt(aw)} {belt_y + 20} L {fmt(aw * 0.95 + sway * 0.5)} {fmt(hem_y - 60)} '
+                f'L {fmt(-aw * 0.95 + sway * 0.5)} {fmt(hem_y - 60)} L {fmt(-aw)} {belt_y + 20} L {fmt(-aw * 0.62)} {belt_y} Z" fill="{S["apron"]}" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+                f'<path d="M {fmt(-aw * 0.5)} {fmt(hem_y - 200)} L {fmt(aw * 0.5)} {fmt(hem_y - 200)}" stroke="{S.get("apron_strap", "#8a7a5a")}" stroke-width="{c.sw(3)}" opacity="0.5"/>')
     if S["belt"] and not sit:
         out += f'<path d="M {fmt(-waist*1.02)} {belt_y} L {fmt(waist*1.02)} {belt_y} L {fmt(waist*1.02)} {belt_y+30} L {fmt(-waist*1.02)} {belt_y+30} Z" fill="{S["belt"]}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
         if S.get("buckle", True):
