@@ -146,6 +146,49 @@ LINES = [
  ("p4s6e",4,6,"ZAHHAK","No! Get away from me!","نه! از من دور شو!",None),
  ("p4s6g",4,6,"NARRATOR","He screamed so loud that the whole palace shook.","چنان فریادی زد که همه‌ی کاخ لرزید.",None),
  ("p4s6f",4,6,"ARNAVAZ","My king! What is it? What did you see?","سرورم! چه شده؟ چه دیدی؟",None),
+ # ---- part 5 · Zahhak's Dream (Shahnameh, «ضحاک» sh2: the dream of the three warriors and the ox-headed mace, Arnavaz's advice, the
+ #      mobeds silent for three days, Zirak's prophecy (Fereydun, his father, the cow Barmayeh), Zahhak falls from his throne and searches
+ #      the world; sh3: Fereydun is born to Faranak and Abtin; Abtin, of the royal line and in hiding, is caught by Zahhak's guards)
+ ("p5s1a",5,1,"ZIRAK","His name… will be Fereydun.","نامش… فریدون خواهد بود.","His name... will be Fereydoon."),
+ ("p5s1b",5,1,"NARRATOR","One dream… and the snake king never slept in peace again.","یک خواب… و شاه ماردوش دیگر هرگز آرام نخوابید.",
+  "One dream... and the snake king never slept in peace again."),
+ ("p5s3a",5,3,"ARNAVAZ","You are safe, my king. It was only a dream.","در امانی، سرورم. فقط یک خواب بود.",None),
+ ("p5s3b",5,3,"ZAHHAK","I saw three warriors… coming out of my palace.","سه جنگجو دیدم… که از کاخم بیرون می‌آمدند.",
+  "I saw three warriors... coming out of my palace."),
+ ("p5s3c",5,3,"ZAHHAK","The youngest walked in the middle, tall as a cypress.","جوان‌ترینشان در میان می‌آمد، بلندقامت مثل سرو.",None),
+ ("p5s3d",5,3,"ZAHHAK","In his hand was a mace… with the head of an ox.","در دستش گرزی بود… با سرِ گاو.","In his hand was a mace... with the head of an ox."),
+ ("p5s3e",5,3,"ZAHHAK","He struck me… and tied me up with a rope.","به من ضربه زد… و با طناب مرا بست.","He struck me... and tied me up with a rope."),
+ ("p5s3f",5,3,"ZAHHAK","Then he dragged me all the way to Mount Damavand…","بعد مرا کشان‌کشان تا کوه دماوند برد…",
+  "Then he dragged me, all the way to Mount Dama-vaand..."),
+ ("p5s3g",5,3,"ZAHHAK","…and the people ran after us.","…و مردم پشت سرمان می‌دویدند.","and the people ran after us."),
+ ("p5s3h",5,3,"ARNAVAZ","Then call the wise men from every land.","پس خردمندان را از هر سرزمینی فرا بخوان.",None),
+ ("p5s3i",5,3,"ARNAVAZ","Ask them who this young man is. Then you can stop him.","از آن‌ها بپرس این جوان کیست. آن‌وقت می‌توانی جلویش را بگیری.",None),
+ ("p5s4a",5,4,"NARRATOR","So the king called the wisest men of the land to his palace.","پس شاه داناترین مردانِ سرزمین را به کاخش فرا خواند.",None),
+ ("p5s4b",5,4,"ZAHHAK","Tell me what my dream means. Who is this young man?","بگویید خوابم چه معنایی دارد. این جوان کیست؟",None),
+ ("p5s4c",5,4,"NARRATOR","But they were afraid. For three days, no one said a word.","اما می‌ترسیدند. سه روز تمام، هیچ‌کس حرفی نزد.",None),
+ ("p5s4d",5,4,"ZAHHAK","Enough! Speak today… or I will hang you all!","بس است! همین امروز حرف بزنید… وگرنه همه‌تان را به دار می‌آویزم!",
+  "Enough! Speak today... or I will hang you all!"),
+ ("p5s5a",5,5,"NARRATOR","Then a wise old man named Zirak stepped forward.","آن‌وقت پیری دانا به نام زیرک پا پیش گذاشت.",
+  "Then a wise old man, named Zeerak, stepped forward."),
+ ("p5s5b",5,5,"ZIRAK","My king, no one lives forever. Not even you.","سرورم، هیچ‌کس تا ابد زنده نمی‌ماند. حتی تو.",None),
+ ("p5s5c",5,5,"ZIRAK","One day, a boy will be born. His name will be Fereydun.","روزی پسری به دنیا می‌آید. نامش فریدون خواهد بود.",
+  "One day, a boy will be born. His name will be Fereydoon."),
+ ("p5s5d",5,5,"ZIRAK","He is the young man in your dream. He will take your throne.","او همان جوانِ خوابِ توست. او تختت را می‌گیرد.",None),
+ ("p5s5e",5,5,"ZAHHAK","Why? What have I done to him?","چرا؟ مگر من با او چه کرده‌ام؟",None),
+ ("p5s5f",5,5,"ZIRAK","You will kill his father… and the cow that will feed him.","تو پدرش را می‌کشی… و گاوی را که دایه‌ی او می‌شود.",
+  "You will kill his father... and the cow that will feed him."),
+ ("p5s5g",5,5,"ZIRAK","And he will come for revenge.","و او برای انتقام می‌آید.",None),
+ ("p5s5h",5,5,"NARRATOR","When the king heard this, he fainted and fell from his throne.","شاه وقتی این را شنید، از هوش رفت و از تخت افتاد.",None),
+ ("p5s6a",5,6,"ZAHHAK","Find this Fereydun! Search every house!","این فریدون را پیدا کنید! همه‌ی خانه‌ها را بگردید!","Find this Fereydoon! Search every house!"),
+ ("p5s6b",5,6,"NARRATOR","From that day, the king had no rest, no sleep, no food.","از آن روز، شاه نه آرام داشت، نه خواب، نه خوراک.",None),
+ ("p5s6c",5,6,"NARRATOR","But far away, in a small house, a baby boy was born.","اما دور از آنجا، در خانه‌ای کوچک، پسری به دنیا آمد.",None),
+ ("p5s6d",5,6,"ABTIN","Look, Faranak… our son. Fereydun.","نگاه کن، فرانک… پسرمان. فریدون.","Look, Faraanak... our son. Fereydoon."),
+ ("p5s6e",5,6,"FARANAK","Shh… sleep now, my little king.","آرام… حالا بخواب، شاهِ کوچکِ من.","Shhh... sleep now... my little king."),
+ ("p5s6f",5,6,"NARRATOR","His father, Abtin, came from a family of kings… so he lived in hiding.","پدرش، آبتین، از خاندان شاهان بود… برای همین پنهانی زندگی می‌کرد.",
+  "His father, Aabteen, came from a family of kings... so he lived in hiding."),
+ ("p5s6g",5,6,"NARRATOR","One evening, on the road home…","یک غروب، در راهِ خانه…","One evening, on the road home..."),
+ ("p5s6h",5,6,"GUARD","You there! Stop!","آهای تو! بایست!",None),
+ ("p5s6i",5,6,"NARRATOR","That night… Abtin did not come home.","آن شب… آبتین به خانه برنگشت.","That night... Aabteen did not come home."),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -161,6 +204,8 @@ VOICES = {
  # part 4
  "ARMAYEL": (330, 1.08, 0, 1.0), "GARMAYEL": (400, 1.1, 0, 1.0), "GARMAYEL_W": (400, 1.25, 0, 0.7), "MOTHER": (75, 1.05, 0, 1.0),
  "GUARD": (350, 1.05, -1, 1.0), "YOUNG_MAN": (550, 1.05, 1, 1.0),
+ # part 5 (median pitch of the raw takes: 720 ≈ 95 Hz, slow and deep — the old mobed; 300 ≈ 133 Hz, gentle; 260 ≈ 176 Hz, a low warm woman)
+ "ZIRAK": (720, 1.12, 0, 1.0), "ABTIN": (300, 1.08, 0, 1.0), "FARANAK": (260, 1.08, 0, 0.9),
 }
 # slower takes for learners (per-line length factors, see voices.py)
 SPEED = {lid: 1.15 for lid, part, *_ in LINES if part in (1, 2)}
@@ -173,3 +218,8 @@ SPEED.update({"p3s1a": 1.35, "p3s1b": 1.25, "p3s3a": 1.2, "p3s3c": 1.2, "p3s3d":
 SPEED.update({lid: 1.15 for lid, part, *_ in LINES if part == 4})
 SPEED.update({"p4s1a": 1.25, "p4s5d": 1.32, "p4s5c": 1.3, "p4s5a": 1.25, "p4s5e": 1.4, "p4s6e": 1.0, "p4s6d": 1.25, "p4s5b": 1.3, "p4s5g": 1.45, "p4s4d": 1.3})
 SPEED.update({"p4s4g": 1.5, "p4s4h": 1.4})
+SPEED.update({lid: 1.15 for lid, part, *_ in LINES if part == 5})
+SPEED.update({"p5s1a": 1.3, "p5s3b": 1.2, "p5s3d": 1.2, "p5s3e": 1.2, "p5s3g": 1.3, "p5s4d": 1.05, "p5s5b": 1.25, "p5s5e": 1.35, "p5s5g": 1.3,
+              "p5s6a": 1.0, "p5s6e": 1.45, "p5s6h": 1.0, "p5s6i": 1.25})
+# per-line ffmpeg filters (voices.py): a slower lullaby
+FX = {"p5s6e": "atempo=0.8"}

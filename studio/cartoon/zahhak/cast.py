@@ -83,3 +83,28 @@ YOUNG_MAN = spec(kind="man", skin="tan", hair="teen_curly", hair_col="#1a120c", 
                  col="#6a7f8f", col2="#4a5a68", pattern="plain", belt="#5a4228", buckle=False, cuff="#8a9aa8", trim="#8a9aa8", trousers="#4a3a2a", iris="#3a2214")
 YOUNG_MAN_2 = dict(YOUNG_MAN, hair="short", skin="olive", col="#8a6a3a", col2="#6a4a2a", cuff="#b89a6a", trim="#b89a6a")
 ZAHHAK_NIGHT = dict(ZAHHAK_KING, head="none", cloak=None, col="#2a1e2a", col2="#1a121a", pattern="plain", sash="#6a0c14")
+
+# ---- part 5: Zirak, the old mobed who dares to speak, and the other wise men (white robes, white caps and turbans); Faranak (a dark
+# scarf, deep red) and Abtin (of the old royal line, in hiding: a plain green-grey robe and a brown travelling cloak); the three warriors
+# of the dream are drawn as glowing silhouettes, so only their outline matters (helmets, plumes, cloaks, the youngest taller)
+ZIRAK = spec(kind="old", skin="old", hair="short", hair_col="#e8e2d8", beard="white", head="turban", head_col="#f6f2ea", garment="robe",
+             col="#efe9dc", col2="#cfc5b0", pattern="plain", cloak="#e2dacb", cloak2="#bdb19a", cloak_hi="#fffaf0", belt=None, sash="#d8ccb0",
+             cuff="#d8cfbe", trim="#c9a24a", iris="#3a2a1a", build=0.95)
+MOBED_1 = spec(kind="old", skin="tan", hair="short", hair_col="#d8d2c8", beard="full", beard_col="#9a928a", head="cap", head_col="#f2eee6",
+               garment="robe", col="#e8e1d2", col2="#c4b9a2", pattern="plain", belt=None, sash="#c9b98e", cuff="#d8cfbe", trim="#b8a47a", iris="#3a2a1a")
+MOBED_2 = spec(kind="man", skin="olive", hair="short", hair_col="#2a1a10", beard="full", beard_col="#2a1a10", head="turban", head_col="#e8dcc0",
+               garment="robe", col="#e2d8c4", col2="#bfb196", pattern="plain", belt=None, sash="#b89a5a", cuff="#d0c4a8", trim="#b89a5a", iris="#2a1a10")
+MOBED_3 = spec(kind="old", skin="light", hair="short", hair_col="#cfc8be", beard="short", beard_col="#8a8278", head="cap", head_col="#ddd6c8",
+               garment="robe", col="#dcd5c6", col2="#b8ae9a", pattern="plain", belt=None, sash="#a8987a", cuff="#cfc6b4", trim="#a8987a", iris="#3a2a1a")
+MOBED_4 = dict(MOBED_2, skin="tan", beard="short", beard_col="#4a3a2a", head="cap", head_col="#f0ece2", col="#ece6d8", col2="#c8bea8")
+FARANAK = spec(kind="woman", skin="light", hair="none", beard=None, head="scarf", scarf_col="#23264a", scarf_edge="#c9a24a", garment="dress",
+               col="#7a2234", col2="#561424", pattern="plain", hs=0.95, bs=0.95, belt=None, cuff="#c9a24a", trim="#c9a24a", iris="#3a2a1a")
+ABTIN = spec(kind="man", skin="light", hair="long_curly", hair_col="#2a1a10", beard="full", beard_col="#2a1a10", head="none", garment="robe",
+             col="#3e5a4a", col2="#28402f", pattern="plain", cloak="#6a4a2e", cloak2="#4a3220", cloak_hi="#8a6a42", belt="#3a2414", buckle=False,
+             cuff="#a8946e", trim="#a8946e", iris="#3a2214", build=1.0)
+DREAM_ELDER = spec(kind="man", skin="tan", hair="long_curly", beard="full", head="helmet", helm=("#2a2a30", "#4a4a54", "#6a6a78"), plume="#6a0c14",
+                   garment="tunic", col="#2a2a30", col2="#141418", pattern="scales", cloak="#2a1a1a", cloak2="#140c0c", cloak_hi="#3a2a2a",
+                   belt="#2b190c", cuff="#3a3a44", trim="#3a3a44", build=1.08)
+DREAM_YOUNG = spec(kind="man", skin="light", hair="long_curly", beard="light", head="helmet", helm=("#2a2a30", "#4a4a54", "#6a6a78"), plume="#c9a24a",
+                   garment="tunic", col="#2a2a30", col2="#141418", pattern="scales", cloak="#2a1a1a", cloak2="#140c0c", cloak_hi="#3a2a2a",
+                   belt="#c9a24a", cuff="#3a3a44", trim="#3a3a44", build=1.0, bs=1.1)

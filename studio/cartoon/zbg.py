@@ -731,3 +731,184 @@ def bedchamber():
         s += f'<path d="M 0 {y} L {W} {y}" stroke="#2a2030" stroke-width="2" opacity="0.5"/>'
     s += f'<rect width="{W}" height="{H}" fill="url(#lampg)"/>'
     return svg_render(s)
+
+
+# ------------------------------------------------------------------ part 5: Mount Damavand (title, the dream, Abtin's road), the dream palace gate
+DAMA = {   # sky stops, mountain light/shadow, snow light/shadow, foothills (far, near), plain (top, bottom), mist
+    "night": dict(sky=[(0, "#060a1e", 1), (0.3, "#101a3e", 1), (0.52, "#24305e", 1), (0.58, "#3a4270", 1)],
+                  mt="#2a3050", mts="#161a30", snow="#dfe6f6", snows="#8a96b8", far="#1c2240", near="#11152a",
+                  plain=("#1c2238", "#07080e"), mist="#8a96c8"),
+    "dream": dict(sky=[(0, "#12061a", 1), (0.28, "#3a0e30", 1), (0.48, "#7a1e34", 1), (0.58, "#c0503a", 1)],
+                  mt="#4a1a3a", mts="#2a0c22", snow="#f2c8d4", snows="#a87088", far="#3a1230", near="#240a1e",
+                  plain=("#3a1428", "#0e040c"), mist="#e8a0b8"),
+    "dusk": dict(sky=[(0, "#1e2450", 1), (0.3, "#5a3a68", 1), (0.46, "#c06a5a", 1), (0.54, "#f0a060", 1), (0.58, "#ffd890", 1)],
+                 mt="#7a5a78", mts="#4a3450", snow="#ffe2cc", snows="#c09aa8", far="#5a4058", near="#3e2c3c",
+                 plain=("#8a6a4a", "#3a2a22"), mist="#ffc8a0"),
+}
+
+
+def _dama_mountain(p, seed=7):
+    """the cone of Damavand: summit (610, 525), feet beyond the frame at y 1110; light from the left"""
+    s = ('<path d="M -260 1110 Q 330 905, 560 548 Q 610 518, 666 550 Q 900 905, 1460 1110 Z" fill="{mt}"/>'.format(**p) +
+         '<path d="M 610 524 Q 640 528, 666 550 Q 900 905, 1460 1110 L 760 1110 Q 690 800, 610 524 Z" fill="{mts}" opacity="0.85"/>'.format(**p))
+    r = random.Random(seed)
+    # gullies
+    for k in range(9):
+        x0 = lerp_(470, 760, k / 8) + r.uniform(-12, 12)
+        y0 = _dama_slope(x0) + 230
+        x1 = x0 + (x0 - 610) * r.uniform(0.6, 1.0)
+        y1 = y0 + r.uniform(160, 300)
+        s += f'<path d="M {x0:.0f} {y0:.0f} Q {x0 + (x1 - x0) * 0.4:.0f} {y0 + (y1 - y0) * 0.5:.0f} {x1:.0f} {y1:.0f}" stroke="{p["mts"]}" stroke-width="{r.uniform(4, 9):.1f}" fill="none" opacity="0.55"/>'
+    # the snow cap: a soft edge with broad, uneven fingers running down the gullies (smoothed)
+    from chars import smooth_path
+    pts = [(560, 548), (610, 522), (666, 550)]
+    n = 22
+    for k in range(n + 1):
+        u = k / n
+        x = lerp_(850, 388, u) + r.uniform(-6, 6)
+        y_slope = _dama_slope(x)
+        kind = r.random()
+        finger = 170 + 70 * r.random() if kind < 0.3 else (90 + 40 * r.random() if kind < 0.6 else 30 + 30 * r.random())
+        depth = (50 + finger) * (0.3 + 0.7 * math.sin(math.pi * u) ** 0.6)
+        pts.append((x, min(1050, y_slope + depth)))
+    sd = smooth_path(pts)
+    s += f'<path d="{sd}" fill="{p["snow"]}"/><clipPath id="snowclip"><path d="{sd}"/></clipPath>'
+    s += f'<path d="M 612 520 L 1100 520 L 1100 1100 L 700 1100 Q 676 760, 612 520 Z" fill="{p["snows"]}" opacity="0.75" clip-path="url(#snowclip)"/>'
+    # a plume of cloud blown off the summit
+    s += (f'<ellipse cx="740" cy="512" rx="150" ry="26" fill="{p["mist"]}" opacity="0.45" filter="url(#b12)"/>'
+          f'<ellipse cx="880" cy="500" rx="190" ry="20" fill="{p["mist"]}" opacity="0.3" filter="url(#b20)"/>')
+    return s
+
+
+def _dama_slope(x):
+    """y of the mountain outline at x (the quadratic curves of _dama_mountain, approximated)"""
+    if x <= 560:
+        # Q from (-260,1110) ctrl (330,905) to (560,548): solve for u by bisection on x
+        P0, P1, P2 = (-260, 1110), (330, 905), (560, 548)
+    elif x <= 666:
+        P0, P1, P2 = (560, 548), (610, 518), (666, 550)
+    else:
+        P0, P1, P2 = (666, 550), (900, 905), (1460, 1110)
+    lo, hi = 0.0, 1.0
+    for _ in range(40):
+        u = (lo + hi) / 2
+        xx = (1 - u) ** 2 * P0[0] + 2 * (1 - u) * u * P1[0] + u * u * P2[0]
+        if xx < x:
+            lo = u
+        else:
+            hi = u
+    u = (lo + hi) / 2
+    return (1 - u) ** 2 * P0[1] + 2 * (1 - u) * u * P1[1] + u * u * P2[1]
+
+
+def _dama_x(x, side):
+    return x
+
+
+def lerp_(a, b, u):
+    return a + (b - a) * u
+
+
+def damavand(pal="night", road=False):
+    """Mount Damavand on the horizon: the snow-capped cone (summit (610, 525)) over two rows of foothills; the plain from y 1110;
+    pal "night" (a moon at the upper left, stars), "dream" (purple and crimson, mist; for the dream), "dusk" (a low sun at the left).
+    road=True: a dirt road winds from the bottom (x 330-790) to the horizon at x 600; people walk on it at y 1350-1800."""
+    p = DAMA[pal]
+    s = "<defs>" + FILTERS + lg("dsky", p["sky"]) + lg("dpl", [(0, p["plain"][0], 1), (1, p["plain"][1], 1)])
+    if pal == "dusk":
+        s += rg("dsun", 170, 1030, 700, [(0, "#fff4d0", 0.95), (0.1, "#ffd08a", 0.6), (1, "#ff9a5a", 0)])
+    elif pal == "night":
+        s += rg("dmoon", 250, 400, 420, [(0, "#e8f0ff", 0.5), (0.2, "#b8c8f0", 0.15), (1, "#000", 0)])
+    else:
+        s += rg("dmoon", 830, 430, 460, [(0, "#ffd0c0", 0.45), (0.3, "#d06070", 0.12), (1, "#000", 0)])
+    s += lg("droad", [(0, "#c8a070" if pal == "dusk" else "#3a3048", 1), (1, "#7a5a3a" if pal == "dusk" else "#1a1420", 1)]) + "</defs>"
+    s += f'<rect width="{W}" height="{H}" fill="url(#dsky)"/>'
+    if pal == "night":
+        s += stars(501, 160, 900) + '<rect width="1080" height="1920" fill="url(#dmoon)"/><circle cx="250" cy="400" r="40" fill="#f4f6ff"/>'
+    elif pal == "dream":
+        s += stars(502, 60, 700) + '<rect width="1080" height="1920" fill="url(#dmoon)"/><circle cx="830" cy="430" r="58" fill="#f6c8b8" opacity="0.9"/>'
+        s += clouds(W, 503, [640, 760, 880], col="#d86a7a", hi="#ffb0a0", op=0.35)
+    else:
+        s += clouds(W, 504, [560, 700, 820, 930], col="#f09a8a", hi="#ffd2a0", op=0.5)
+        s += '<rect width="1080" height="1920" fill="url(#dsun)"/><circle cx="170" cy="1030" r="54" fill="#fff6dc"/>'
+    s += _dama_mountain(p)
+    s += f'<path d="{ridge(W, 1075, 70, 505, rough=0.5)}" fill="{p["far"]}"/>'
+    s += f'<rect x="0" y="1040" width="{W}" height="70" fill="{p["mist"]}" opacity="0.18" filter="url(#b20)"/>'
+    s += f'<path d="{ridge(W, 1112, 40, 506, rough=0.6)}" fill="{p["near"]}"/>'
+    s += f'<rect x="0" y="1105" width="{W}" height="{H - 1105}" fill="url(#dpl)"/>'
+    r = random.Random(507)
+    if road:
+        cl = [(600, 1100), (575, 1180), (650, 1300), (520, 1480), (600, 1700), (560, 1960)]
+        def wd(y):
+            return 8 + (y - 1100) / 860 * 230
+        left, right = [], []
+        for i, (x, y) in enumerate(cl):
+            left.append((x - wd(y), y)); right.append((x + wd(y), y))
+        d = "M " + " L ".join(f"{x:.0f} {y:.0f}" for x, y in left) + " L " + " L ".join(f"{x:.0f} {y:.0f}" for x, y in reversed(right)) + " Z"
+        s += f'<path d="{d}" fill="url(#droad)" opacity="0.9" filter="url(#b3)"/>'
+        for k in range(26):
+            y = r.uniform(1150, 1900); i = max(0, min(len(cl) - 2, sum(1 for c in cl if c[1] < y) - 1))
+            (xa, ya), (xb, yb) = cl[i], cl[i + 1]
+            x = xa + (xb - xa) * (y - ya) / max(1, yb - ya) + r.uniform(-0.8, 0.8) * wd(y)
+            s += f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{3 + (y - 1100) / 90:.1f}" ry="{1.5 + (y - 1100) / 200:.1f}" fill="#5a4030" opacity="0.6"/>'
+    tuft = {"night": ("#1e2a30", "#3a4a58"), "dream": ("#2a0e22", "#5a2a44"), "dusk": ("#5a5a2a", "#a89a50")}[pal]
+    s += grass_tufts(508, 1130, 1900, 60, col=tuft[0], hi=tuft[1])
+    for _ in range(14):
+        x = r.uniform(0, W); y = r.uniform(1150, 1900); sc = 0.4 + (y - 1100) / 700
+        s += f'<path d="M {x - 26 * sc:.0f} {y:.0f} Q {x - 18 * sc:.0f} {y - 22 * sc:.0f} {x + 4 * sc:.0f} {y - 24 * sc:.0f} Q {x + 26 * sc:.0f} {y - 14 * sc:.0f} {x + 30 * sc:.0f} {y:.0f} Z" fill="{p["near"]}" opacity="0.8"/>'
+    if pal == "dusk":
+        for x, h in ((70, 330), (140, 260), (980, 300), (1040, 380)):
+            s += cypress(x, 1180, h, col="#2a1e2a", dark="#1a121c", rim="#ffb080", w=0.11)
+    if pal == "dream":
+        for k in range(5):
+            y = 1150 + k * 150
+            s += f'<ellipse cx="{r.uniform(200, 900):.0f}" cy="{y}" rx="{r.uniform(420, 700):.0f}" ry="{30 + 8 * k}" fill="{p["mist"]}" opacity="0.13" filter="url(#b20)"/>'
+    return svg_render(s)
+
+
+def dream_gate():
+    """the dream: Zahhak's palace as a black shape against a purple and crimson sky with a red moon; its arched gate (opening x 430-650,
+    apex y 960, sill y 1250) blazes with light that spills down a path to the bottom; mist on the ground. Figures come out of the gate at
+    feet y 1255 (scale ~0.15) and walk to y 1700 (scale ~0.55)"""
+    p = DAMA["dream"]
+    s = ("<defs>" + FILTERS + lg("gsky", p["sky"]) + lg("gpl", [(0, "#2a0e20", 1), (1, "#07020a", 1)]) +
+         rg("gmoon", 800, 470, 420, [(0, "#ffd0c0", 0.45), (0.3, "#d06070", 0.12), (1, "#000", 0)]) +
+         rg("glow", 540, 1120, 520, [(0, "#fff0c8", 0.9), (0.18, "#ffc070", 0.55), (0.5, "#c05a3a", 0.18), (1, "#000", 0)]) +
+         lg("gate", [(0, "#ffd890", 1), (0.6, "#fff6dc", 1), (1, "#ffe8b0", 1)]) +
+         lg("spill", [(0, "#ffe0a0", 0.55), (1, "#ffb070", 0.0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#gsky)"/>' + stars(511, 70, 650)
+    s += '<rect width="1080" height="1920" fill="url(#gmoon)"/><circle cx="800" cy="470" r="62" fill="#f2b8a8" opacity="0.92"/>'
+    s += clouds(W, 512, [560, 690, 800], col="#c85a6a", hi="#ffa090", op=0.35)
+    dark, edge = "#0b0610", "#2a1222"
+    # the palace: wall, towers, domes, banners
+    s += (f'<path d="M 40 1250 L 40 930 L 1040 930 L 1040 1250 Z" fill="{dark}"/>'
+          + "".join(f'<rect x="{x}" y="904" width="34" height="30" fill="{dark}"/>' for x in range(46, 1040, 62)))
+    for tx in (110, 970):
+        s += (f'<rect x="{tx - 70}" y="700" width="140" height="550" fill="{dark}"/>'
+              + "".join(f'<rect x="{tx - 70 + k * 40}" y="672" width="26" height="32" fill="{dark}"/>' for k in range(4)) +
+              f'<path d="M {tx} 690 L {tx} 520" stroke="{dark}" stroke-width="8"/>'
+              f'<path d="M {tx} 526 C {tx + 60} 540, {tx + 100} 520, {tx + 150} 548 L {tx + 140} 600 C {tx + 100} 580, {tx + 60} 600, {tx} 586 Z" fill="#14080e" stroke="{edge}" stroke-width="3"/>')
+    for cx, rr, top in ((300, 110, 820), (780, 110, 820)):
+        s += (f'<path d="M {cx - rr} 940 L {cx - rr} {top + 40} Q {cx - rr} {top - rr}, {cx} {top - rr - 40} Q {cx + rr} {top - rr}, {cx + rr} {top + 40} L {cx + rr} 940 Z" fill="{dark}"/>'
+              f'<path d="M {cx} {top - rr - 40} L {cx} {top - rr - 110}" stroke="{dark}" stroke-width="7"/>')
+    s += (f'<path d="M 360 940 L 360 760 Q 360 540, 540 470 Q 720 540, 720 760 L 720 940 Z" fill="{dark}"/>'
+          f'<path d="M 540 470 L 540 360" stroke="{dark}" stroke-width="10"/><circle cx="540" cy="350" r="14" fill="{dark}"/>'
+          f'<path d="M 390 760 Q 390 570, 540 500" stroke="{edge}" stroke-width="4" fill="none" opacity="0.8"/>')
+    for wx in (210, 380, 700, 870):
+        s += f'<path d="M {wx - 14} 1080 L {wx - 14} 1040 Q {wx} 1020, {wx + 14} 1040 L {wx + 14} 1080 Z" fill="#ff9a50" opacity="0.55"/>'
+    s += serpent_emblem(540, 860, 0.55, col="#6a4a1a", dark="#2a1a0a")
+    # the blazing gate
+    s += ('<rect width="1080" height="1920" fill="url(#glow)"/>'
+          '<path d="M 410 1250 L 410 1060 Q 410 950, 540 930 Q 670 950, 670 1060 L 670 1250 Z" fill="#3a1a14"/>'
+          '<path d="M 430 1250 L 430 1066 Q 430 972, 540 958 Q 650 972, 650 1066 L 650 1250 Z" fill="url(#gate)"/>')
+    # the ground, the path of light, mist
+    s += f'<rect x="0" y="1250" width="{W}" height="{H - 1250}" fill="url(#gpl)"/>'
+    s += '<path d="M 430 1250 L 650 1250 L 900 1920 L 180 1920 Z" fill="url(#spill)"/>'
+    r = random.Random(513)
+    for k in range(9):
+        y = 1260 + k * 80
+        s += f'<path d="M 0 {y} L {W} {y}" stroke="#3a1a2a" stroke-width="2" opacity="0.4"/>'
+    for k in range(6):
+        y = 1230 + k * 120
+        s += f'<ellipse cx="{r.uniform(150, 930):.0f}" cy="{y}" rx="{r.uniform(380, 640):.0f}" ry="{26 + 10 * k}" fill="{p["mist"]}" opacity="0.14" filter="url(#b20)"/>'
+    return svg_render(s)

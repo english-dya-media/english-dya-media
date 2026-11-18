@@ -699,6 +699,26 @@ def prop(c, name, x, y, ang, t, S=None):
                 f'<path d="M -30 -136 C -40 -170, {fmt(-14 + 8 * math.sin(t * 13))} {fmt(fl[0][1] + 40)}, {fmt(4 * math.sin(t * 9))} {fmt(fl[0][1])} '
                 f'C {fmt(14 + 8 * math.sin(t * 15))} {fmt(fl[0][1] + 40)}, 40 -170, 30 -136 Z" fill="#ff8a1a"/>'
                 f'<path d="M -16 -136 C -20 -160, -6 -190, {fmt(2 * math.sin(t * 9))} {fmt(fl[0][1] + 34)} C 6 -190, 20 -160, 16 -136 Z" fill="#ffd84a"/></g>')
+    if name == "mace":       # the ox-headed mace (gorz-e gavsar): a steel shaft, a bronze ox head with ivory horns above the fist
+        gold, dark, horn = "#c8922e", "#7a4e14", "#efe0b0"
+        out = (g + f'<rect x="-10" y="-150" width="20" height="320" rx="6" fill="#4a3a30" stroke="{OUT}" stroke-width="{c.sw(2.2)}"/>'
+               + "".join(f'<path d="M -10 {y} L 10 {y + 10}" stroke="#2a1e18" stroke-width="{c.sw(3)}"/>' for y in range(-20, 60, 16)) +
+               f'<circle cx="0" cy="172" r="15" fill="{gold}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+               f'<rect x="-17" y="-162" width="34" height="18" rx="5" fill="{gold}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>')
+        for sd in (-1, 1):
+            out += (f'<path d="M {sd * 34} -276 C {sd * 70} -292, {sd * 96} -300, {sd * 104} -342 C {sd * 88} -322, {sd * 66} -314, {sd * 30} -298 Z" '
+                    f'fill="{horn}" stroke="{OUT}" stroke-width="{c.sw(2.2)}"/>'
+                    f'<path d="M {sd * 44} -270 C {sd * 64} -268, {sd * 74} -258, {sd * 70} -250 C {sd * 58} -248, {sd * 46} -254, {sd * 40} -262 Z" '
+                    f'fill="{gold}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>')
+        out += (f'<path d="M -44 -284 C -52 -250, -40 -206, -26 -180 C -18 -164, 18 -164, 26 -180 C 40 -206, 52 -250, 44 -284 C 28 -300, -28 -300, -44 -284 Z" '
+                f'fill="{gold}" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/>'
+                f'<path d="M -30 -284 C -36 -258, -30 -226, -20 -206" stroke="#f0c870" stroke-width="{c.sw(5)}" fill="none" opacity="0.8"/>'
+                f'<path d="M 26 -282 C 34 -250, 28 -214, 16 -192 L 22 -180 C 40 -206, 50 -250, 44 -284 Z" fill="{dark}" opacity="0.45"/>'
+                f'<ellipse cx="0" cy="-182" rx="24" ry="15" fill="#a87024" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<ellipse cx="-9" cy="-182" rx="4" ry="6" fill="{OUT}"/><ellipse cx="9" cy="-182" rx="4" ry="6" fill="{OUT}"/>'
+                f'<path d="M -28 -248 Q -20 -256, -12 -248 Q -20 -243, -28 -248 Z M 28 -248 Q 20 -256, 12 -248 Q 20 -243, 28 -248 Z" fill="{OUT}"/>'
+                f'<path d="M -16 -290 Q 0 -300, 16 -290" stroke="{dark}" stroke-width="{c.sw(3)}" fill="none"/>')
+        return out + '</g>'
     if name == "shovel":     # held with the blade down; the hand grips the shaft
         return (g + f'<path d="M 0 -230 L 0 250" stroke="#6a4424" stroke-width="{c.sw(12)}"/><path d="M -30 -236 L 30 -236" stroke="#6a4424" stroke-width="{c.sw(12)}" stroke-linecap="round"/>'
                 f'<path d="M -46 250 L 46 250 L 40 360 C 20 400, -20 400, -40 360 Z" fill="#8e949e" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>')
