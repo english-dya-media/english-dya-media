@@ -574,10 +574,11 @@ def garment(c, S, p, t):
     belt_y = 380
     if S.get("apron") and not sit:          # a cook's apron from the waist down, with a strap round the neck
         aw = waist * 0.78
+        ah = S.get("apron_hem", hem_y - 60)  # where it ends (a blacksmith's leather apron hangs below a short tunic: apron_hem ~1000)
         out += (f'<path d="M -42 6 L {fmt(-aw * 0.55)} {belt_y - 10} M 42 6 L {fmt(aw * 0.55)} {belt_y - 10}" stroke="{S.get("apron_strap", "#8a7a5a")}" stroke-width="{c.sw(8)}" fill="none"/>'
-                f'<path d="M {fmt(-aw * 0.6)} 150 L {fmt(aw * 0.6)} 150 L {fmt(aw * 0.62)} {belt_y} L {fmt(aw)} {belt_y + 20} L {fmt(aw * 0.95 + sway * 0.5)} {fmt(hem_y - 60)} '
-                f'L {fmt(-aw * 0.95 + sway * 0.5)} {fmt(hem_y - 60)} L {fmt(-aw)} {belt_y + 20} L {fmt(-aw * 0.62)} {belt_y} Z" fill="{S["apron"]}" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
-                f'<path d="M {fmt(-aw * 0.5)} {fmt(hem_y - 200)} L {fmt(aw * 0.5)} {fmt(hem_y - 200)}" stroke="{S.get("apron_strap", "#8a7a5a")}" stroke-width="{c.sw(3)}" opacity="0.5"/>')
+                f'<path d="M {fmt(-aw * 0.6)} 150 L {fmt(aw * 0.6)} 150 L {fmt(aw * 0.62)} {belt_y} L {fmt(aw)} {belt_y + 20} L {fmt(aw * 0.95 + sway * 0.5)} {fmt(ah)} '
+                f'L {fmt(-aw * 0.95 + sway * 0.5)} {fmt(ah)} L {fmt(-aw)} {belt_y + 20} L {fmt(-aw * 0.62)} {belt_y} Z" fill="{S["apron"]}" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+                f'<path d="M {fmt(-aw * 0.5)} {fmt(ah - 140)} L {fmt(aw * 0.5)} {fmt(ah - 140)}" stroke="{S.get("apron_strap", "#8a7a5a")}" stroke-width="{c.sw(3)}" opacity="0.5"/>')
     if S["belt"] and not sit:
         out += f'<path d="M {fmt(-waist*1.02)} {belt_y} L {fmt(waist*1.02)} {belt_y} L {fmt(waist*1.02)} {belt_y+30} L {fmt(-waist*1.02)} {belt_y+30} Z" fill="{S["belt"]}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
         if S.get("buckle", True):
@@ -672,6 +673,34 @@ def prop(c, name, x, y, ang, t, S=None):
                 u = i / n; wv = (6 + 24 * u) * math.sin(t * 5.5 - u * 6)
                 top.append((-6 - 340 * u, -1180 + wv)); bot.append((-6 - 326 * u, -950 + wv * 1.1 + 14 * u))
             out += f'<path d="M {P(top + bot[::-1])} Z" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+        return out + '</g>'
+    if name == "hammer":       # a blacksmith's hammer: the handle runs up from the fist to the iron head
+        return (g + f'<path d="M 0 40 L 0 -196" stroke="#6a4424" stroke-width="{c.sw(13)}" stroke-linecap="round"/>'
+                f'<rect x="-58" y="-244" width="116" height="54" rx="8" fill="#4a4a52" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/>'
+                f'<path d="M -50 -236 L 50 -236" stroke="#8a8a96" stroke-width="{c.sw(4)}"/></g>')
+    if name == "apron_spear":   # Kaveh's banner: his leather apron tied by its straps to a crossbar under the head of a spear, waving
+        out = (g + f'<path d="M 0 -1000 L 0 300" stroke="#5a3a1c" stroke-width="{c.sw(11)}"/><path d="M 0 -1000 L 0 300" stroke="{OUT}" stroke-width="{c.sw(2)}" fill="none" opacity="0.6"/>'
+               f'<path d="M 0 -1100 L 15 -1010 L 0 -996 L -15 -1010 Z" fill="#cfd4da" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+               f'<path d="M -150 -974 L 150 -974" stroke="#4a3018" stroke-width="{c.sw(9)}" stroke-linecap="round"/>')
+        n = 8; left, right = [], []
+        for i in range(n + 1):
+            u = i / n; wv = (4 + 26 * u) * math.sin(t * 4.6 - u * 4.2); y = -968 + 360 * u
+            left.append((-128 - 24 * u + wv, y)); right.append((128 + 24 * u + wv * 0.8, y))
+        bl, br = left[-1], right[-1]
+        mid_ = ((bl[0] + br[0]) / 2, bl[1] + 34)
+        d = (f'M {fmt(left[0][0])} {fmt(left[0][1])} L ' + " L ".join(f'{fmt(x)} {fmt(y)}' for x, y in left[1:]) +
+             f' Q {fmt(bl[0] + 10)} {fmt(bl[1] + 30)}, {fmt(mid_[0])} {fmt(mid_[1])} Q {fmt(br[0] - 10)} {fmt(br[1] + 30)}, {fmt(br[0])} {fmt(br[1])} L ' +
+             " L ".join(f'{fmt(x)} {fmt(y)}' for x, y in right[::-1]) + ' Z')
+        out += (f'<path d="{d}" fill="#7a4524" stroke="{OUT}" stroke-width="{c.sw(2.8)}"/>'
+                f'<path d="M {fmt(left[1][0] + 18)} {fmt(left[1][1])} L ' + " L ".join(f'{fmt(x + 18)} {fmt(y)}' for x, y in left[2:]) + f'" stroke="#a8683a" stroke-width="{c.sw(5)}" fill="none" opacity="0.7"/>'
+                f'<path d="M {fmt(right[1][0] - 22)} {fmt(right[1][1])} L ' + " L ".join(f'{fmt(x - 22)} {fmt(y)}' for x, y in right[2:]) + f'" stroke="#4e2a14" stroke-width="{c.sw(8)}" fill="none" opacity="0.45"/>'
+                f'<path d="M {fmt(left[0][0] + 14)} -950 L {fmt(right[0][0] - 14)} -950" stroke="#d8a868" stroke-width="{c.sw(2.4)}" stroke-dasharray="{c.sw(10)} {c.sw(8)}" opacity="0.8"/>'
+                f'<path d="M {fmt(bl[0] + 16)} {fmt(bl[1] - 10)} Q {fmt(mid_[0])} {fmt(mid_[1] - 6)}, {fmt(br[0] - 16)} {fmt(br[1] - 10)}" stroke="#d8a868" stroke-width="{c.sw(2.4)}" '
+                f'stroke-dasharray="{c.sw(10)} {c.sw(8)}" fill="none" opacity="0.8"/>')
+        for sd in (-1, 1):       # the neck strap ends, knotted round the crossbar
+            sw_ = 10 * math.sin(t * 5 + sd)
+            out += (f'<path d="M {sd * 140} -974 C {sd * 150 + sw_:.1f} -930, {sd * 160 + sw_ * 1.5:.1f} -900, {sd * 150 + sw_ * 2:.1f} -860" stroke="#3a2414" stroke-width="{c.sw(7)}" fill="none" stroke-linecap="round"/>'
+                    f'<circle cx="{sd * 140}" cy="-974" r="13" fill="#3a2414" stroke="{OUT}" stroke-width="{c.sw(2)}"/>')
         return out + '</g>'
     if name == "pike":   # long spear held low (hand hanging at the side)
         return (g + f'<path d="M 0 -1080 L 0 320" stroke="#4a3018" stroke-width="{c.sw(10)}"/>'

@@ -3,7 +3,7 @@ Part 1: Zahhak's throne hall (hook), Mardas's palace on the plain, its gate, the
 the palace garden at night / before dawn, the palace wall with Zahhak's window."""
 import math, random
 from film import svg_render, W, H
-from bgs import FILTERS, lg, rg, ridge, hill, clouds, stars, grass_tufts, poplar, boulder, pine, _strata
+from bgs import FILTERS, lg, rg, ridge, hill, clouds, stars, grass_tufts, poplar, boulder, pine, _strata, flat_house
 
 GOLD, GOLD_D, GOLD_L = "#c9a24a", "#7a5a22", "#f0d48a"
 
@@ -1057,3 +1057,115 @@ def alborz(pal="dawn"):
     s += grass_tufts(615, 1300, 1900, 26, col="#4a5a32", hi="#7a8a4a")
     back.alpha_composite(svg_render(s))
     return back
+
+
+# ------------------------------------------------------------------ part 7: the city market with Kaveh's forge
+MARKET = {
+    "day": dict(sky=[(0, "#5f95cf", 1), (0.32, "#a9cbe6", 1), (0.5, "#f2e4c8", 1)], far="#8d7f8e", wall=("#d6b48a", "#b48e64", "#8a6844"),
+                ground=("#c9a77c", "#8f6e4c"), shade="#6a4a30", sun=(170, 520, "#fff6dc"), palace="#1c1820", glow=0.75),
+    "dawn": dict(sky=[(0, "#2c3566", 1), (0.3, "#a8708a", 1), (0.5, "#ffc894", 1)], far="#6a5670", wall=("#b88e78", "#946c5c", "#6c4c40"),
+                 ground=("#a8826c", "#6a4c3e"), shade="#4a3030", sun=(180, 900, "#fff0d0"), palace="#141018", glow=1.0),
+}
+
+
+def market(pal="day"):
+    """the market square of Zahhak's city: Zahhak's black palace on a hill far away (x 600-1000, towers up to y 520, a black serpent banner),
+    flat-roofed mud-brick houses with a wind tower; at the left Kaveh's forge: an open arch (x 40-330, top y 830, floor y 1180) with the fire
+    glowing inside (about (185, 1090)), tongs and hammers on the wall (the anvil is drawn by the scenes, at the scale of the people); at the
+    right stalls with striped awnings (x 640-1080), jars and baskets of pomegranates; the square from y 1180 down. People stand at y 1290-1760.
+    pal "day" | "dawn" (empty, the forge fire bright)"""
+    p = MARKET[pal]
+    r = random.Random(701)
+    sx, sy, sc = p["sun"]
+    s = ("<defs>" + FILTERS + lg("ksky", p["sky"]) + lg("kgr", [(0, p["ground"][0], 1), (1, p["ground"][1], 1)]) +
+         rg("ksun", sx, sy, 520, [(0, sc, 0.85), (0.18, sc, 0.35), (1, sc, 0)]) +
+         rg("forge", 185, 1090, 260, [(0, "#ffd27a", 1.0 * p["glow"]), (0.35, "#ff8a2a", 0.75 * p["glow"]), (1, "#ff5a10", 0)]) +
+         rg("fspill", 220, 1190, 420, [(0, "#ffa04a", 0.32 * p["glow"]), (1, "#ff7a2a", 0)]) +
+         lg("arch", [(0, "#1a100a", 1), (1, "#2a180e", 1)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#ksky)"/>'
+    s += clouds(W, 702, [300, 430, 560], col="#ffffff" if pal == "day" else "#ffc8b0", hi="#fff8ee", op=0.45)
+    s += f'<rect width="{W}" height="{H}" fill="url(#ksun)"/><circle cx="{sx}" cy="{sy}" r="40" fill="{sc}" opacity="0.95"/>'
+    # far hills and Zahhak's palace on its hill
+    s += f'<path d="{hill(W, 900, 70, 703)}" fill="{p["far"]}" opacity="0.75"/>'
+    pal_ = p["palace"]
+    s += (f'<path d="M 440 900 C 560 760, 660 700, 800 696 C 920 698, 1000 730, 1100 800 L 1100 980 L 440 980 Z" fill="{p["far"]}"/>'
+          f'<path d="M 440 900 C 560 760, 660 700, 800 696 C 920 698, 1000 730, 1100 800" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.18"/>')
+    body = ("M 630 712 L 630 560 L 660 560 L 660 470 L 720 470 L 720 560 L 770 560 L 770 420 L 830 420 L 830 560 L 880 560 L 880 470 "
+            "L 940 470 L 940 560 L 970 560 L 970 714 Z")
+    s += f'<path d="{body}" fill="{pal_}" stroke="#000000" stroke-width="2"/>'
+    for x0, x1, y in ((660, 720, 470), (770, 830, 420), (880, 940, 470), (630, 660, 560), (720, 770, 560), (830, 880, 560), (940, 970, 560)):
+        n = max(2, int((x1 - x0) / 15))
+        s += "".join(f'<rect x="{x0 + k * (x1 - x0) / n + 2:.0f}" y="{y - 12}" width="{(x1 - x0) / n - 5:.0f}" height="13" fill="{pal_}"/>' for k in range(n))
+    s += (f'<path d="M 630 600 L 970 600" stroke="{GOLD}" stroke-width="3" opacity="0.5"/>'
+          f'<path d="M 770 690 L 770 640 Q 800 610 830 640 L 830 712 L 770 712 Z" fill="#3a2a1a" opacity="0.9"/>'
+          + serpent_emblem(800, 520, 0.32) +
+          "".join(f'<rect x="{x}" y="{y}" width="10" height="16" rx="4" fill="#ffb24a" opacity="0.6"/>' for x, y in ((684, 510), (796, 460), (904, 510), (650, 630), (940, 630), (700, 640), (900, 650)))
+          + f'<path d="M 800 422 L 800 352" stroke="{pal_}" stroke-width="5"/>'
+          f'<path d="M 802 354 C 830 348, 850 362, 878 356 L 878 388 C 850 394, 830 380, 802 386 Z" fill="{pal_}"/>')
+    # back row of houses
+    xs = 0
+    while xs < W + 40:
+        w = r.uniform(110, 190); h = r.uniform(170, 260)
+        if not (560 < xs + w / 2 < 1000 and h > 200):
+            s += flat_house(xs, 1000, w, h, wall=p["wall"][1], shade=p["wall"][2], roof=p["wall"][2], door=False, window=r.random() < 0.7)
+        else:
+            s += flat_house(xs, 1000, w, 150, wall=p["wall"][1], shade=p["wall"][2], roof=p["wall"][2], door=False, window=True)
+        xs += w - 6
+    # a wind tower
+    s += (f'<rect x="470" y="700" width="70" height="200" fill="{p["wall"][0]}" stroke="#3a2418" stroke-width="3"/>'
+          + "".join(f'<rect x="{478 + k * 16}" y="716" width="9" height="70" fill="#3a2418"/>' for k in range(4)) +
+          f'<path d="M 462 700 L 548 700 L 548 690 L 462 690 Z" fill="{p["wall"][2]}" stroke="#3a2418" stroke-width="2"/>')
+    # front buildings: the forge at the left
+    s += (f'<rect x="0" y="760" width="420" height="440" fill="{p["wall"][0]}" stroke="#3a2418" stroke-width="4"/>'
+          f'<rect x="0" y="760" width="70" height="440" fill="{p["wall"][1]}" opacity="0.7"/>'
+          f'<rect x="-10" y="742" width="440" height="24" fill="{p["wall"][2]}" stroke="#3a2418" stroke-width="3"/>'
+          + "".join(f'<rect x="{12 + k * 36}" y="750" width="10" height="10" fill="#3a2418"/>' for k in range(12)) +
+          '<path d="M 40 1190 L 40 950 C 40 860, 120 830, 185 830 C 250 830, 330 860, 330 950 L 330 1190 Z" fill="url(#arch)" stroke="#3a2418" stroke-width="5"/>')
+    # inside the forge: the hearth, the glow, tools on the wall
+    s += ('<path d="M 110 1180 L 110 1100 L 260 1100 L 260 1180 Z" fill="#4a3428" stroke="#1a100a" stroke-width="3"/>'
+          '<path d="M 120 1100 C 140 1080, 230 1080, 250 1100 Z" fill="#ff9a3a"/>'
+          '<rect x="0" y="0" width="1080" height="1920" fill="url(#forge)"/>'
+          '<path d="M 150 1000 L 150 860 M 135 860 L 165 860" stroke="#3a2a22" stroke-width="10" stroke-linecap="round" opacity="0.8"/>')
+    for k, (x, ang) in enumerate(((84, -8), (290, 10), (268, 0))):
+        s += (f'<g transform="translate({x},900) rotate({ang})"><path d="M 0 0 L 0 120" stroke="#2a1e18" stroke-width="7"/>'
+              f'<rect x="-16" y="120" width="32" height="20" rx="4" fill="#3a3436"/></g>' if k != 2 else
+              f'<g transform="translate({x},880) rotate({ang})"><path d="M -10 0 L -14 130 M 10 0 L 14 130" stroke="#2a2426" stroke-width="7"/></g>')
+    # a hanging sign: an anvil cut in wood
+    s += ('<path d="M 352 830 L 400 830" stroke="#3a2418" stroke-width="6"/><path d="M 380 830 L 380 846" stroke="#3a2418" stroke-width="4"/>'
+          '<path d="M 350 846 L 412 846 L 412 896 L 350 896 Z" fill="#7a5032" stroke="#3a2418" stroke-width="3"/>'
+          '<path d="M 362 866 L 400 866 L 394 874 L 386 874 L 388 886 L 372 886 L 374 874 L 362 872 Z" fill="#2a2024"/>')
+    # stalls at the right with striped awnings
+    for k, (x0, w, cols) in enumerate(((640, 220, ("#b8342a", "#f0e2c4")), (850, 240, ("#2e6a8a", "#f0e2c4")))):
+        s += (f'<rect x="{x0}" y="820" width="{w}" height="380" fill="{p["wall"][0]}" stroke="#3a2418" stroke-width="4"/>'
+              f'<rect x="{x0 + 20}" y="960" width="{w - 40}" height="240" fill="#2a1a12"/>'
+              f'<rect x="{x0 - 8}" y="806" width="{w + 16}" height="20" fill="{p["wall"][2]}" stroke="#3a2418" stroke-width="3"/>')
+        n = 7
+        for j in range(n):
+            xa = x0 - 10 + j * (w + 20) / n; xb = xa + (w + 20) / n
+            s += (f'<path d="M {xa:.0f} 900 L {xb:.0f} 900 L {xb + 14:.0f} 990 L {xa + 14:.0f} 990 Z" fill="{cols[j % 2]}" stroke="#3a2418" stroke-width="2"/>'
+                  f'<path d="M {xa + 14:.0f} 990 Q {(xa + xb) / 2 + 14:.0f} 1012 {xb + 14:.0f} 990" fill="{cols[j % 2]}" stroke="#3a2418" stroke-width="2"/>')
+        s += f'<path d="M {x0 + 8} 994 L {x0 + 8} 1200 M {x0 + w + 4} 994 L {x0 + w + 4} 1200" stroke="#4a3020" stroke-width="7"/>'
+        # goods: a table with baskets / jars
+        s += f'<rect x="{x0 + 14}" y="1110" width="{w - 20}" height="22" fill="#7a5232" stroke="#3a2418" stroke-width="3"/>'
+        for j in range(4):
+            bx = x0 + 40 + j * (w - 60) / 3
+            if k == 0:
+                s += (f'<path d="M {bx - 26:.0f} 1110 L {bx + 26:.0f} 1110 L {bx + 20:.0f} 1080 L {bx - 20:.0f} 1080 Z" fill="#a87a3a" stroke="#3a2418" stroke-width="2"/>'
+                      + "".join(f'<circle cx="{bx + dx:.0f}" cy="{1072 + dy}" r="11" fill="#b8202a" stroke="#4a0e10" stroke-width="2"/>' for dx, dy in ((-12, 0), (8, 2), (-2, -12))))
+            else:
+                s += (f'<path d="M {bx - 20:.0f} 1110 C {bx - 30:.0f} 1080, {bx - 22:.0f} 1050, {bx - 10:.0f} 1046 L {bx - 10:.0f} 1036 L {bx + 10:.0f} 1036 L {bx + 10:.0f} 1046 '
+                      f'C {bx + 22:.0f} 1050, {bx + 30:.0f} 1080, {bx + 20:.0f} 1110 Z" fill="{["#b5653a", "#2f7a8a", "#c8a050", "#8a4a2a"][j]}" stroke="#3a2418" stroke-width="2"/>')
+    # the square
+    s += f'<rect x="0" y="1180" width="{W}" height="{H - 1180}" fill="url(#kgr)"/>'
+    s += f'<rect x="0" y="1180" width="{W}" height="26" fill="{p["shade"]}" opacity="0.35"/>'
+    s += '<rect x="0" y="1150" width="1080" height="1920" fill="url(#fspill)"/>'
+    for k in range(70):
+        x = r.uniform(0, W); y = r.uniform(1220, H - 10); sc_ = 0.5 + (y - 1180) / 600
+        s += f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{r.uniform(10, 26) * sc_:.0f}" ry="{r.uniform(4, 9) * sc_:.0f}" fill="{p["shade"]}" opacity="{r.uniform(0.15, 0.35):.2f}"/>'
+    # big jars by the stalls and a water trough by the forge
+    for x, y, sc_ in ((620, 1230, 1.0), (1040, 1260, 1.15)):
+        s += (f'<g transform="translate({x},{y}) scale({sc_})"><path d="M -40 0 C -64 -40, -56 -96, -26 -110 L -26 -126 L 26 -126 L 26 -110 C 56 -96, 64 -40, 40 0 Z" '
+              f'fill="#b5653a" stroke="#3a2418" stroke-width="3"/><path d="M -30 -90 C -10 -80, 10 -80, 30 -90" stroke="#e0b07a" stroke-width="5" fill="none"/></g>')
+    s += ('<path d="M 400 1250 L 560 1250 L 552 1196 L 408 1196 Z" fill="#6a4a30" stroke="#3a2418" stroke-width="3"/>'
+          '<rect x="414" y="1200" width="132" height="14" fill="#5a8aa0" opacity="0.8"/>')
+    return svg_render(s)

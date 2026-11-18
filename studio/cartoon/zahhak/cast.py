@@ -126,3 +126,16 @@ FEREYDUN = spec(kind="man", skin="light", hair="long_curly", hair_col="#1e140c",
                 belt="#c9a24a", cuff="#c9a24a", trim="#c9a24a", iris="#3a2214", build=1.05, bs=1.08)
 SPY = spec(kind="man", skin="olive", hair="short", hair_col="#120c09", beard="short", beard_col="#120c09", head="cap", head_col="#2a2a30",
            garment="robe", col="#4a4a52", col2="#2e2e36", pattern="plain", belt="#1a1a1e", buckle=False, cuff="#6a6a74", trim="#6a6a74", iris="#2a1a10")
+
+# ---- part 7: Kaveh the blacksmith (a big man, a grey-streaked beard, a soot-grey wool tunic, a long leather apron down to the shins: the apron
+# becomes his banner), his last son (a young man in a plain brown tunic), Zahhak's steward (thin, nervous, in plum; he carries the paper)
+KAVEH = spec(kind="man", skin="tan", hair="short", hair_col="#2a221c", beard="full", beard_col="#5e5650", head="cap", head_col="#3a302a",
+             garment="tunic", col="#4e4844", col2="#34302c", pattern="plain", apron="#7a4524", apron_strap="#3a2414", apron_hem=1010,
+             belt="#2b190c", buckle=False, cuff="#6a5a4a", trim="#6a5a4a", trousers="#3a2e26", boots="#24150c", iris="#3a2214", build=1.2, bs=1.04)
+KAVEH_NOAPRON = dict(KAVEH, apron=None)
+KAVEH_SON = spec(kind="man", skin="tan", hair="teen_curly", hair_col="#1a120c", beard="light", beard_col="#1a120c", head="none", garment="tunic",
+                 col="#8a6a46", col2="#634a30", pattern="plain", belt="#3a2414", buckle=False, cuff="#b0946a", trim="#b0946a", trousers="#4a3a2a",
+                 iris="#3a2214", build=0.95, bs=0.97)
+KONDROW = spec(kind="man", skin="light", hair="short", hair_col="#120c09", beard="short", beard_col="#120c09", head="turban", head_col="#2a1a2a",
+               garment="robe", col="#5a2a5a", col2="#3a1a3a", pattern="plain", belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#c9a24a",
+               iris="#2a1a10", build=0.88)

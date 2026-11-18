@@ -227,6 +227,45 @@ LINES = [
   "Sixteen years later, a tall young man came down from Mount Al-borz."),
  ("p6s6d",6,6,"FEREYDUN","Mother… tell me the truth.","مادر… حقیقت را به من بگو.","Mother... tell me the truth."),
  ("p6s6e",6,6,"FEREYDUN","Who was my father?","پدرم که بود؟",None),
+ # ---- part 7 · Kaveh the Blacksmith (Shahnameh, «ضحاک» sections 5-6: Faranak's answer, the testimonial, Kaveh, the apron on the spear)
+ ("p7s1a",7,1,"KAVEH","I will never sign your lies!","من هرگز پای دروغ‌هایت را امضا نمی‌کنم!",None),
+ ("p7s1b",7,1,"NARRATOR","One man said no… to the snake king.","یک مرد… به شاه ماردوش «نه» گفت.","One man said no... to the snake king."),
+ ("p7s3a",7,3,"NARRATOR","Faranak told her son the whole story.","فرانک همه‌ی ماجرا را برای پسرش گفت.","Faraanak told her son the whole story."),
+ ("p7s3b",7,3,"FARANAK","Your father was Abtin. A wise and gentle man…","پدرت آبتین بود. مردی دانا و مهربان…","Your father was Ab-teen. A wise and gentle man..."),
+ ("p7s3c",7,3,"FARANAK","…from the family of the old kings of Iran.","…از نژاد پادشاهان کهن ایران.","from the family of the old kings of Iran."),
+ ("p7s3d",7,3,"FARANAK","Zahhak's men took him away… and he never came back.","مردان ضحاک او را بردند… و دیگر هرگز برنگشت.",
+  "Zah-hawk's men took him away... and he never came back."),
+ ("p7s3e",7,3,"FARANAK","Then he came for the cow that fed you… and burned our home.","بعد سراغ گاوی آمد که به تو شیر داده بود… و خانه‌مان را سوزاند.",
+  "Then he came for the cow that fed you... and burned our home."),
+ ("p7s3f",7,3,"FEREYDUN","Then I'll take a sword and go to his palace. Today!","پس شمشیر برمی‌دارم و به کاخش می‌روم. همین امروز!",None),
+ ("p7s3g",7,3,"FARANAK","No, my son! He has a hundred thousand soldiers.","نه، پسرم! او صد هزار سرباز دارد.",None),
+ ("p7s3h",7,3,"FARANAK","You are alone. Be patient… your day will come.","تو تنهایی. صبور باش… روزِ تو هم می‌رسد.","You are alone. Be patient... your day will come."),
+ ("p7s3i",7,3,"FEREYDUN","I will wait… but not forever.","صبر می‌کنم… اما نه برای همیشه.","I will wait... but not forever."),
+ ("p7s4a",7,4,"NARRATOR","In his palace, Zahhak could not sleep.","در کاخش، ضحاک خواب نداشت.","In his palace, Zah-hawk could not sleep."),
+ ("p7s4b",7,4,"ZAHHAK_W","Fereydun… Fereydun…","فریدون… فریدون…","Fereydoon... Fereydoon..."),
+ ("p7s4c",7,4,"NARRATOR","So he called the great men of every land to his hall.","پس بزرگانِ همه‌ی سرزمین‌ها را به تالارش فراخواند.",None),
+ ("p7s4d",7,4,"ZAHHAK","Write that I am a good and just king.","بنویسید که من پادشاهی نیک و دادگرم.",None),
+ ("p7s4e",7,4,"ZAHHAK","Then sign it. All of you!","بعد امضایش کنید. همه‌تان!",None),
+ ("p7s4f",7,4,"NARRATOR","They were all afraid. So, one by one, they signed.","همه می‌ترسیدند. پس یکی‌یکی امضا کردند.",None),
+ ("p7s5a",7,5,"KAVEH","Justice! I want justice!","داد! من داد می‌خواهم!",None),
+ ("p7s5b",7,5,"ZAHHAK","Who is shouting at my door? Bring him in!","کیست که جلوی درِ کاخ من فریاد می‌زند؟ بیاوریدش!",None),
+ ("p7s5c",7,5,"ZAHHAK","Who has wronged you? Speak!","چه کسی به تو ستم کرده؟ بگو!",None),
+ ("p7s5d",7,5,"KAVEH","You have, my king! I am Kaveh, a blacksmith.","تو، ای شاه! من کاوه‌ام، یک آهنگر.","You have, my king! I am Kaa-veh, a blacksmith."),
+ ("p7s5e",7,5,"KAVEH","I had eighteen sons. Your snakes took seventeen!","هجده پسر داشتم. مارهای تو هفده‌تایشان را گرفتند!",None),
+ ("p7s5f",7,5,"KAVEH","Now your men took my last son. Give him back!","حالا مردانت آخرین پسرم را برده‌اند. او را به من پس بده!",None),
+ ("p7s5g",7,5,"ZAHHAK","Bring the boy. Give the blacksmith his son.","پسر را بیاورید. پسرِ آهنگر را به او بدهید.",None),
+ ("p7s5h",7,5,"KAVEH_SON","Father!","پدر!",None),
+ ("p7s5i",7,5,"ZAHHAK","There. Now, blacksmith… sign my paper.","بفرما. حالا، آهنگر… نامه‌ی مرا امضا کن.","There. Now, blacksmith... sign my paper."),
+ ("p7s5j",7,5,"KAVEH","“A good and just king”?","«پادشاهی نیک و دادگر»؟","A good, and just king?"),
+ ("p7s5k",7,5,"KAVEH","Shame on you all! You signed his lies because you are afraid!","شرمتان باد! از ترس، دروغ‌هایش را امضا کردید!",None),
+ ("p7s5l",7,5,"KAVEH","I will never sign it!","من هرگز امضایش نمی‌کنم!",None),
+ ("p7s5m",7,5,"NOBLE","My king… why did you let him go?","سرورم… چرا گذاشتید برود؟","My king... why did you let him go?"),
+ ("p7s5n",7,5,"ZAHHAK","When he shouted… it was like a mountain of iron rose between us.","وقتی فریاد زد… انگار کوهی از آهن میان ما برخاست.",
+  "When he shouted... it was like a mountain of iron, rose between us."),
+ ("p7s6a",7,6,"NARRATOR","In the market, people gathered around the blacksmith.","در بازار، مردم دورِ آهنگر جمع شدند.",None),
+ ("p7s6b",7,6,"NARRATOR","He took off his leather apron… and tied it to a spear.","پیش‌بندِ چرمی‌اش را باز کرد… و سرِ نیزه بست.",
+  "He took off his leather apron... and tied it to a spear."),
+ ("p7s6c",7,6,"KAVEH","Who wants to be free? Follow me!","کی آزادی می‌خواهد؟ دنبالم بیایید!",None),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -246,6 +285,8 @@ VOICES = {
  "ZIRAK": (720, 1.12, 0, 1.0), "ABTIN": (300, 1.08, 0, 1.0), "FARANAK": (260, 1.08, 0, 0.9),
  # part 6 (20 ≈ 111 Hz, the rough old keeper; 200 ≈ 112 Hz, quieter, the holy man; 620 ≈ 145 Hz, young and clear: Fereydun)
  "KEEPER": (20, 1.08, -1, 1.0), "HERMIT": (200, 1.15, -1, 0.85), "FEREYDUN": (620, 1.05, 0, 1.0), "SPY": (350, 1.0, 1, 1.0),
+ # part 7 (49 ≈ 98 Hz, deep, loud and lively: Kaveh the blacksmith; 519 ≈ 151 Hz, young: his son)
+ "KAVEH": (49, 1.05, -1, 1.0), "KAVEH_SON": (519, 1.05, 1, 0.95),
 }
 # slower takes for learners (per-line length factors, see voices.py)
 SPEED = {lid: 1.15 for lid, part, *_ in LINES if part in (1, 2)}
@@ -266,3 +307,8 @@ SPEED.update({"p6s1b": 1.2, "p6s3d": 1.25, "p6s3f": 1.2, "p6s4d": 1.1, "p6s5c": 
 # per-line ffmpeg filters (voices.py): a slower lullaby
 FX = {"p5s6e": "atempo=0.8"}
 FX.update({lid: "atempo=0.86" for lid in ("p6s1b", "p6s3d", "p6s3e", "p6s3g", "p6s5b", "p6s5e", "p6s5f", "p6s6d", "p6s6e")})
+SPEED.update({lid: 1.15 for lid, part, *_ in LINES if part == 7})
+SPEED.update({"p7s1a": 1.3, "p7s1b": 1.4, "p7s3a": 1.35, "p7s3b": 1.35, "p7s3c": 1.35, "p7s3d": 1.35, "p7s3e": 1.55, "p7s3f": 1.4, "p7s3g": 1.25,
+              "p7s3i": 1.35, "p7s4b": 1.5, "p7s4c": 1.4, "p7s4e": 1.3, "p7s4f": 1.4, "p7s5b": 1.4, "p7s5d": 1.3, "p7s5f": 1.45, "p7s5g": 1.35,
+              "p7s5j": 1.35, "p7s5k": 1.45, "p7s5l": 1.4, "p7s5m": 1.25, "p7s6b": 1.4, "p7s6c": 1.35})
+FX.update({"p7s4b": "atempo=0.85", "p7s3h": "atempo=0.92"})
