@@ -45,3 +45,12 @@ Every part's title is in `parts.json` ("titles").
   Turanians: `warrior_tu` / `rider`.
 - The jewel/armband (مهره): Rostam gives it in part 4; it is hidden under Sohrab's armour until part 18.
 - Part 15 starts with the same exchange as part 1's cold open (you can reuse `anim.cold_open`'s world).
+- **Parts 11–12**: Sohrab is still `young_sohrab` (the jewel glowing on his upper arm) until the army gathers; from
+  part 12's army shot (S07) on he is `sohrab` (armour; the jewel hidden under it until part 18). His horse: a wild
+  colt of Rakhsh's line from the high pastures (a `horse` at ~0.8 next to him, rose rim `COLT` in p11_scenes),
+  saddled from part 12 S04. The king of Samangan gave him gold, weapons and horses; when the war drums sounded,
+  Tahmineh, in tears, told him to keep the jewel on his arm ("a keepsake from your father... one day you will need
+  it"); he told her he is going to find his father. His plan (part 11): take Kavus's throne and crown for Rostam,
+  then Afrasiab's ("when the sun and the moon shine, why should the stars wear crowns?"). Part 12 ends in
+  Afrasiab's dark palace (`dark_hall`, `sit_throne`, red firelight): a messenger brings the news and Afrasiab says
+  "The son of Rostam... against Iran? Good. Very good." Part 13 can open there.

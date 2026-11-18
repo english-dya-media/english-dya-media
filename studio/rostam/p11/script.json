@@ -1,0 +1,239 @@
+{
+ "episode": 6,
+ "part": 11,
+ "title_en": "Sohrab's Dream",
+ "title_fa": "رؤیای سهراب",
+ "next_label": "NEXT PART",
+ "next_en": "Sohrab's Army",
+ "next_fa": "لشکر سهراب",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "I will drive King Kavus from his throne, and give his crown to my father!",
+     "fa": "کاووس‌شاه را از تختش پایین می‌کشم و تاجش را به پدرم می‌دهم!",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Sohrab... do you know what you are saying?",
+     "fa": "سهراب... می‌فهمی چه می‌گویی؟",
+     "pause": 1.0
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab was the son of Rostam, the great hero of Iran.",
+     "fa": "سهراب پسر رستم بود، پهلوان بزرگ ایران.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "But he had grown up far from his father, in Samangan, on the edge of Turan.",
+     "fa": "ولی دور از پدرش بزرگ شده بود، در سمنگان، در مرز توران.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "The night his mother told him the secret, he did not sleep at all.",
+     "fa": "شبی که مادرش راز را به او گفت، تا صبح چشم بر هم نگذاشت.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And by morning, the dream in his heart had become a plan.",
+     "fa": "و تا صبح، رؤیای دلش به یک نقشه تبدیل شده بود.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "Mother, I have decided. I will gather an army of brave warriors.",
+     "fa": "مادر، تصمیمم را گرفته‌ام. لشکری از جنگاوران دلیر جمع می‌کنم.",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "I will march on Iran, and drive King Kavus from his throne.",
+     "fa": "به ایران لشکر می‌کشم و کاووس‌شاه را از تختش پایین می‌کشم.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Kavus? The king of Iran? Sohrab, he has a great army!",
+     "fa": "کاووس؟ شاه ایران؟ سهراب، او لشکر بزرگی دارد!",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Then I will give his throne, his mace and his crown to Rostam.",
+     "fa": "بعد تخت و گرز و تاجش را به رستم می‌دهم.",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "My father will sit on the throne of Iran!",
+     "fa": "پدرم بر تخت ایران می‌نشیند!",
+     "pause": 0.5
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "But your father serves Kavus. He is the champion of Iran!",
+     "fa": "ولی پدرت در خدمت کاووس است. او جهان‌پهلوان ایران است!",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Then he will serve no one. He will be the king!",
+     "fa": "پس دیگر به هیچ‌کس خدمت نمی‌کند. خودش شاه می‌شود!",
+     "pause": 0.7
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "But that was not all. His dream was even bigger.",
+     "fa": "ولی این همه‌اش نبود. رؤیای او از این هم بزرگ‌تر بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Then I will ride to Turan, and take the throne of Afrasiab too.",
+     "fa": "بعد به توران می‌تازم و تخت افراسیاب را هم می‌گیرم.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "If Rostam is the father and I am the son, no one else should wear a crown.",
+     "fa": "وقتی رستم پدر باشد و من پسر، هیچ‌کس دیگری در جهان نباید تاج بر سر بگذارد.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "When the sun and the moon are shining, why should the stars wear crowns?",
+     "fa": "وقتی خورشید و ماه می‌درخشند، ستاره‌ها چرا تاج بر سر بگذارند؟",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "TAHMINEH",
+     "en": "My son, you are still so young. War is not a game.",
+     "fa": "پسرم، تو هنوز خیلی جوانی. جنگ بازی نیست.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Young? Mother, no man in Samangan can stand against me.",
+     "fa": "جوان؟ مادر، هیچ مردی در سمنگان حریف من نیست.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "But first, I need a horse. A horse strong enough to carry me.",
+     "fa": "ولی اول یک اسب لازم دارم. اسبی که آن‌قدر نیرومند باشد که مرا ببرد.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "I will not go to war on foot!",
+     "fa": "من پیاده به جنگ نمی‌روم!",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "So the herdsmen brought him the finest horses of Samangan.",
+     "fa": "پس گله‌بانان بهترین اسب‌های سمنگان را برایش آوردند.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab laid his hand on the back of the first one, and pressed.",
+     "fa": "سهراب دستش را روی پشت اولی گذاشت و فشار داد.",
+     "pause": 2.6
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "By God! That was the strongest horse in my stables!",
+     "fa": "به خدا سوگند! آن نیرومندترین اسب اصطبل من بود!",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "One after another, every horse bent under his hand, its belly on the ground.",
+     "fa": "یکی پس از دیگری، هر اسبی زیر دست او خم شد و شکمش به زمین رسید.",
+     "pause": 1.2
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Is there no horse in this whole land that can carry me?",
+     "fa": "در همه‌ی این سرزمین اسبی نیست که بتواند مرا ببرد؟",
+     "pause": 1.0
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "HERDSMAN",
+     "en": "My prince... there is one. A wild colt, up in the high pastures.",
+     "fa": "شاهزاده‌ی من... یکی هست. کره‌اسبی وحشی، آن بالا در چراگاه‌های کوهستان.",
+     "pause": 0.4
+    },
+    {
+     "role": "HERDSMAN",
+     "en": "No one has ever ridden him. He runs like the wind.",
+     "fa": "تا حالا هیچ‌کس سوارش نشده. مثل باد می‌دود.",
+     "pause": 0.4
+    },
+    {
+     "role": "HERDSMAN",
+     "en": "They say his father was Rakhsh... the horse of Rostam.",
+     "fa": "می‌گویند پدرش رخش بوده... اسب رستم.",
+     "pause": 0.6
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Rakhsh? My father's horse? Bring him to me!",
+     "fa": "رخش؟ اسب پدرم؟ بیاوریدش پیش من!",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}

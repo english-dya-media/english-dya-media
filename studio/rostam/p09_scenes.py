@@ -185,9 +185,9 @@ def chest_glow(c, x, y, s, lid, t):
 
 
 # ------------------------------------------------------------------ sets
-def meydan(an, c, t, cam, mood=0.0, key="md"):
+def meydan(an, c, t, cam, mood=0.0, key="md", behind=None):
     """The training field outside the palace of Samangan: far city and dome, a low wall, bright sand.
-    mood 0 = morning, 1 = late afternoon, 2 = sunset."""
+    mood 0 = morning, 1 = late afternoon, 2 = sunset; behind(cam) draws far hills between the sky and the city."""
     m1, m2 = clamp(mood), clamp(mood - 1)
     top = mixc(mixc((96, 130, 180), (100, 100, 156), m1), (60, 26, 64), m2)
     mid = mixc(mixc((200, 190, 180), (226, 166, 130), m1), (214, 84, 70), m2)
@@ -199,6 +199,8 @@ def meydan(an, c, t, cam, mood=0.0, key="md"):
         get(an, key + "cl", lambda: S.Clouds([(260, 14), (340, 10), (430, 16)], 91, 300, 600)).draw(
             c, t, mixc((150, 120, 140), (110, 30, 50), m2), 150)
     haze = mixc(mixc((150, 132, 140), (170, 120, 110), m1), (130, 50, 60), m2)
+    if behind:
+        behind(cam)
     img, _ = get(an, key + "city" + str(int(mood * 10)), lambda: S.city(1500, 900, 880, 93, haze, False, None))
     with cam(0.4):
         c.save()

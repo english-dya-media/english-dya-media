@@ -581,9 +581,13 @@ def _leg_angles(gait, ph, fore):
     return -20, 6
 
 
+LIE_F, LIE_H = (54.0, -100.0), (64.0, -108.0)      # leg angles of a horse lying on its belly (P["lie"] = 1)
+
+
 def horse(c, X, Y, s, face, P, t, kind="horse"):
     """Horse puppet. P: gait (stand/walk/gallop/rear/graze), phase, neck (deg),
-    rear (deg), saddle, bridle, rider (look), rider_pose, wind, tail."""
+    rear (deg), saddle, bridle, rider (look), rider_pose, wind, tail, sink (knees buckling, 0..1),
+    lie (0..1: folds the legs under the body and lowers it to the ground)."""
     gait = P.get("gait", "stand")
     ph = P.get("phase", 0.0)
     on = kind == "onager"
@@ -601,6 +605,10 @@ def horse(c, X, Y, s, face, P, t, kind="horse"):
         bob = -2.5 * abs(math.sin(TAU * ph * 2))
     bob += sink * 46
     pitch += sink * 3
+    lie = P.get("lie", 0.0) if gait != "rear" else 0.0
+    if lie:
+        bob += lie * 132 - sink * 46 * lie
+        pitch += -sink * 3 * lie - 1.5 * lie
     rear = P.get("rear", 0.0) if gait == "rear" else 0.0
     offs = {"gallop": (0.0, 0.1, 0.42, 0.52), "walk": (0.0, 0.5, 0.25, 0.75)}.get(gait, (0, 0, 0, 0))
     phases = [ph + o for o in offs]
@@ -615,6 +623,10 @@ def horse(c, X, Y, s, face, P, t, kind="horse"):
             u, l = _leg_angles(gait, p, fore)
             if sink:
                 u, l = (u + 34 * sink, l - 30 * sink) if fore else (u - 30 * sink, l + 46 * sink)
+            if lie:
+                lu, ll = LIE_F if fore else LIE_H
+                q = 1 - (1 - min(1.0, lie * 1.25)) ** 2          # legs fold ahead of the body coming down
+                u, l = mix(u, lu, q), mix(l, ll, q)
         l1, l2 = (95, 82) if fore else (90, 86)
         k = (x0 + l1 * math.sin(math.radians(u)), y0 + l1 * math.cos(math.radians(u)))
         f = (k[0] + l2 * math.sin(math.radians(l)), k[1] + l2 * math.cos(math.radians(l)))

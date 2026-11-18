@@ -1,0 +1,244 @@
+{
+ "episode": 6,
+ "part": 12,
+ "title_en": "Sohrab's Army",
+ "title_fa": "لشکر سهراب",
+ "next_label": "NEXT PART",
+ "next_en": "Afrasiab",
+ "next_fa": "افراسیاب",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "HERDSMAN",
+     "en": "Careful, my prince! No one has ever touched him!",
+     "fa": "مراقب باش، شاهزاده! تا حالا هیچ‌کس به او دست نزده!",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "He does not bend! At last... a horse worthy of me!",
+     "fa": "خم نمی‌شود! بالاخره... اسبی که شایسته‌ی من است!",
+     "pause": 1.0
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab, the young son of Rostam, wanted to march on Iran.",
+     "fa": "سهراب، پسر جوان رستم، می‌خواست به ایران لشکر بکشد.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "But every horse in Samangan bent under his hand.",
+     "fa": "ولی هر اسبی در سمنگان زیر دست او خم می‌شد.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Then an old herdsman led him to a wild colt in the high pastures.",
+     "fa": "تا اینکه یک گله‌بان پیر او را پیش کره‌اسبی وحشی در چراگاه‌های کوهستان برد.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "A colt of the line of Rakhsh, the horse of Rostam himself.",
+     "fa": "کره‌اسبی از نژاد رخش، اسب خود رستم.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "So, you are the son of Rakhsh... Let us see how strong you are.",
+     "fa": "پس تو پسر رخشی... ببینیم چقدر زور داری.",
+     "pause": 2.2
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab pressed with all his strength. But the colt stood like a mountain.",
+     "fa": "سهراب با همه‌ی زورش فشار داد. ولی کره‌اسب مثل کوه ایستاد.",
+     "pause": 0.5
+    },
+    {
+     "role": "HERDSMAN",
+     "en": "He holds! By God, he holds!",
+     "fa": "تاب می‌آورد! به خدا سوگند، تاب می‌آورد!",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "You are the one. From today, we ride together.",
+     "fa": "خودت هستی. از امروز، با هم می‌تازیم.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "He saddled the colt, leapt onto his back, and rode out like the wind.",
+     "fa": "کره‌اسب را زین کرد، روی پشتش پرید و مثل باد تاخت.",
+     "pause": 0.5
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Faster! Faster! King Kavus, get ready!",
+     "fa": "تندتر! تندتر! کاووس‌شاه، آماده باش!",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Now Sohrab had a horse. Next, he needed an army.",
+     "fa": "حالا سهراب اسب داشت. حالا نوبت لشکر بود.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "Grandfather, I am going to war against Kavus, the king of Iran.",
+     "fa": "پدربزرگ، می‌خواهم با کاووس، شاه ایران، بجنگم.",
+     "pause": 0.4
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Against Iran? You are only a boy, Sohrab!",
+     "fa": "با ایران؟ تو فقط یک پسربچه‌ای، سهراب!",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "A boy that no man in your kingdom can defeat. Help me, Grandfather.",
+     "fa": "پسربچه‌ای که هیچ مردی در سرزمینت حریفش نیست. کمکم کن، پدربزرگ.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "The old king looked at his grandson for a long time. Then he smiled.",
+     "fa": "شاه پیر مدتی طولانی به نوه‌اش نگاه کرد. بعد لبخند زد.",
+     "pause": 0.4
+    },
+    {
+     "role": "KING_SAMANGAN",
+     "en": "Then take my gold, my weapons and my horses. And may God be with you.",
+     "fa": "پس طلا و سلاح و اسب‌هایم مال تو. خدا یارت باشد.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "From every side, warriors came to join him, brave and wise.",
+     "fa": "از هر سو جنگاوران دلیر و کاردان به او پیوستند.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And when the war drums sounded, his mother came to him in tears.",
+     "fa": "و وقتی طبل‌های جنگ به صدا درآمد، مادرش گریان پیش او آمد.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "This jewel is a keepsake from your father. Keep it on your arm.",
+     "fa": "این مهره یادگار پدرت است. آن را روی بازویت نگه دار.",
+     "pause": 0.4
+    },
+    {
+     "role": "TAHMINEH",
+     "en": "Keep it safe, my son. One day, you will need it.",
+     "fa": "خوب نگهش دار، پسرم. یک روز به کارت می‌آید.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Don't cry, Mother. I am going to find my father.",
+     "fa": "گریه نکن، مادر. من می‌روم که پدرم را پیدا کنم.",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Soon a great army stood on the plain, waiting for its young commander.",
+     "fa": "طولی نکشید که لشکری بزرگ در دشت ایستاده بود و چشم به راه فرمانده‌ی جوانش.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Warriors! Tomorrow, we ride to Iran!",
+     "fa": "جنگاوران! فردا به سوی ایران می‌تازیم!",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Follow me, and no army in the world will stand against us!",
+     "fa": "به دنبال من بیایید؛ هیچ لشکری در جهان حریف ما نیست!",
+     "pause": 0.9
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "But news flies faster than any horse.",
+     "fa": "ولی خبر از هر اسبی تندتر می‌تازد.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Far away in Turan, in his dark palace, King Afrasiab heard about the boy.",
+     "fa": "دور از آنجا، در توران، در کاخ تاریکش، افراسیاب‌شاه خبر آن پسر را شنید.",
+     "pause": 0.5
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "A boy with milk still on his lips... going to war against Kavus?",
+     "fa": "پسری که هنوز بوی شیر از دهانش می‌آید... به جنگ کاووس می‌رود؟",
+     "pause": 0.5
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "The son of Rostam... against Iran? Good. Very good.",
+     "fa": "پسر رستم... به جنگ ایران؟ خوب است. خیلی خوب است.",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}
