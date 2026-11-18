@@ -108,3 +108,21 @@ DREAM_ELDER = spec(kind="man", skin="tan", hair="long_curly", beard="full", head
 DREAM_YOUNG = spec(kind="man", skin="light", hair="long_curly", beard="light", head="helmet", helm=("#2a2a30", "#4a4a54", "#6a6a78"), plume="#c9a24a",
                    garment="tunic", col="#2a2a30", col2="#141418", pattern="scales", cloak="#2a1a1a", cloak2="#140c0c", cloak_hi="#3a2a2a",
                    belt="#c9a24a", cuff="#3a3a44", trim="#3a3a44", build=1.0, bs=1.1)
+
+# ---- part 6: the old keeper of the meadow (a felt cap, a patched brown robe, a stick), the holy man of Mount Alborz (a long white beard,
+# rough undyed wool), little Fereydun at three, Fereydun at sixteen (tall; a steel-blue scale tunic, a gold belt, a red cloak: his look
+# from now on), Zahhak's spy (a sly man in grey)
+KEEPER = spec(kind="old", skin="tan", hair="short", hair_col="#cfc8be", beard="full", beard_col="#b8b0a6", head="cap", head_col="#7a5a3a",
+              garment="robe", col="#7a5a3a", col2="#5a4028", pattern="plain", cloak="#5a6a3a", cloak2="#3e4a28", cloak_hi="#7a8a52",
+              belt="#3a2414", buckle=False, cuff="#a8946e", trim="#a8946e", iris="#3a2a1a", build=1.05)
+HERMIT = spec(kind="old", skin="old", hair="short", hair_col="#e8e2d8", beard="white", head="turban", head_col="#bdb4a2", turban_tail=True,
+              garment="robe", col="#a89a82", col2="#7e715c", pattern="plain", cloak="#8a7e68", cloak2="#625846", cloak_hi="#b4a88e",
+              belt="#5a4a36", buckle=False, cuff="#c8bca4", trim="#c8bca4", iris="#3a2a1a", build=0.95)
+FEREYDUN_CHILD = spec(kind="boy", skin="light", hair="boy_curly", hair_col="#2a1a10", beard=None, head="none", garment="child", col="#e8dcc0",
+                      col2="#c8b898", pattern="plain", hs=1.2, bs=0.46, belt="#a8946e", buckle=False, cuff="#d8cba8", trim="#d8cba8", trousers="#8a7050",
+                      iris="#3a2214")
+FEREYDUN = spec(kind="man", skin="light", hair="long_curly", hair_col="#1e140c", beard="light", beard_col="#1e140c", head="none", garment="tunic",
+                col="#2a4a7a", col2="#1a3058", pattern="scales", scale_col="#8aa0c8", cloak="#8a1a1a", cloak2="#5a0e0e", cloak_hi="#b83a2a",
+                belt="#c9a24a", cuff="#c9a24a", trim="#c9a24a", iris="#3a2214", build=1.05, bs=1.08)
+SPY = spec(kind="man", skin="olive", hair="short", hair_col="#120c09", beard="short", beard_col="#120c09", head="cap", head_col="#2a2a30",
+           garment="robe", col="#4a4a52", col2="#2e2e36", pattern="plain", belt="#1a1a1e", buckle=False, cuff="#6a6a74", trim="#6a6a74", iris="#2a1a10")

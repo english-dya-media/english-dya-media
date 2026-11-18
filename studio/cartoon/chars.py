@@ -1202,21 +1202,58 @@ def goat(c, col="#e9e3d6", dark="#b9ae9a", horn="#8a7a62", t=0.0, graze=0.0, see
             f'<ellipse cx="-208" cy="{fmt(-232 + hy)}" rx="3" ry="2.4" fill="#3a2418"/>')
     return out
 
-def cow(c, col="#7a5a3e", spots="#efe6d6", t=0.0, graze=0.0, seed=0):
-    """side view facing left; origin at the ground"""
+def peacock_coat(c, body_d, seed=0, t=0.0):
+    """Barmayeh's hide: peacock eyes and bands of colour, clipped to the body path"""
+    import random
+    cid = c.uid("coat")
+    r = random.Random(seed)
+    o = f'<clipPath id="{cid}"><path d="{body_d}"/></clipPath><g clip-path="url(#{cid})">'
+    for k, col in enumerate(("#7a3a9a", "#d86a2a", "#2a9a6a", "#c9a23a", "#3a6ad8")):
+        y = -322 + k * 30
+        o += f'<path d="M -240 {y} C -100 {y - 18}, 60 {y + 22}, 240 {y - 6} L 240 {y + 16} C 60 {y + 38}, -100 {y}, -240 {y + 18} Z" fill="{col}" opacity="0.55"/>'
+    for k in range(13):
+        x = -150 + (k % 7) * 52 + r.uniform(-10, 10) + (24 if k >= 7 else 0)
+        y = -290 + (40 if k >= 7 else 0) + r.uniform(-10, 10)
+        sh = 0.9 + 0.1 * math.sin(t * 2.4 + k)
+        o += (f'<ellipse cx="{fmt(x)}" cy="{fmt(y)}" rx="22" ry="17" fill="#e8c048" opacity="{0.95 * sh:.2f}"/>'
+              f'<ellipse cx="{fmt(x + 2)}" cy="{fmt(y)}" rx="15" ry="12" fill="#2a9a6a"/>'
+              f'<ellipse cx="{fmt(x + 3)}" cy="{fmt(y)}" rx="9" ry="8" fill="#1a3aa8"/>'
+              f'<ellipse cx="{fmt(x + 4)}" cy="{fmt(y)}" rx="4" ry="4" fill="#0a1030"/>')
+    return o + '</g>'
+
+
+def cow(c, col="#7a5a3e", spots="#efe6d6", t=0.0, graze=0.0, seed=0, peacock=False):
+    """side view facing left; origin at the ground. peacock=True: Barmayeh, a hide with a new colour on every hair"""
+    if peacock:
+        col, spots = "#1f5a6a", None
     out = ""
     for i, lx in enumerate((-120, -80, 110, 150)):
-        fill = "#4a3626" if i in (1, 3) else col
-        out += limb(c, (lx, -200), (lx + 4 * math.sin(t + i), -6), 18, 14, fill) + f'<rect x="{lx-16}" y="-16" width="32" height="16" fill="#1e1410"/>'
+        fill = ("#16404a" if i in (1, 3) else col) if peacock else ("#4a3626" if i in (1, 3) else col)
+        w0, w1 = (27, 20) if peacock else (18, 14)
+        out += limb(c, (lx, -200), (lx + 4 * math.sin(t + i), -6), w0, w1, fill) + f'<rect x="{lx-16}" y="-16" width="32" height="16" fill="#1e1410"/>'
+        if peacock:
+            out += f'<path d="M {lx - 22} -4 L {lx + 22} -4 L {lx + 18} -24 L {lx - 18} -24 Z" fill="#c9a23a" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
     hy = 30 * graze
     body = smooth_path([(-170, -300), (40, -320), (190, -300), (220, -240), (190, -180), (-150, -170), (-190, -230)])
     out += rimmed(c, body, col, dx=3, dy=-2)
-    out += f'<ellipse cx="40" cy="-260" rx="50" ry="30" fill="{spots}" opacity="0.9"/><ellipse cx="140" cy="-250" rx="30" ry="22" fill="{spots}" opacity="0.9"/>'
+    if peacock:
+        out += peacock_coat(c, body, seed, t) + f'<path d="{body}" fill="none" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/>'
+    else:
+        out += f'<ellipse cx="40" cy="-260" rx="50" ry="30" fill="{spots}" opacity="0.9"/><ellipse cx="140" cy="-250" rx="30" ry="22" fill="{spots}" opacity="0.9"/>'
     out += f'<path d="M 200 -280 C 230 -300, 240 -200, 230 -180" stroke="{col}" stroke-width="{c.sw(10)}" fill="none"/>'
+    if peacock:      # a tufted tail and a soft dewlap
+        sw_ = 6 * math.sin(t * 1.7)
+        out += (f'<path d="M {222 + sw_:.1f} -196 C {214 + sw_:.1f} -170, {236 + sw_:.1f} -150, {226 + sw_:.1f} -132 C {250 + sw_:.1f} -150, {248 + sw_:.1f} -176, {236 + sw_:.1f} -196 Z" '
+                f'fill="#7a3a9a" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<path d="M -170 -250 C -160 -200, -140 -180, -120 -176 L -150 -176 C -168 -196, -176 -226, -176 -250 Z" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>')
     hd = smooth_path([(-168, -306 + hy), (-206, -318 + hy), (-236, -300 + hy), (-268, -236 + hy), (-276, -208 + hy), (-254, -194 + hy), (-226, -200 + hy), (-200, -240 + hy), (-176, -250)])
     out += rimmed(c, hd, col, dx=2, dy=-2)
     out += (f'<path d="M -214 {-312+hy} c -6 -16, -18 -24, -30 -26 M -192 {-314+hy} c 4 -16, 14 -24, 26 -26" stroke="#e8dcc0" stroke-width="{c.sw(7)}" stroke-linecap="round" fill="none"/>'
             f'<ellipse cx="{-176}" cy="{-296+hy}" rx="20" ry="9" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(2)}" transform="rotate(20,-176,{-296+hy})"/>'
             f'<circle cx="-226" cy="{-276+hy}" r="6" fill="#120a06"/><ellipse cx="-262" cy="{-210+hy}" rx="18" ry="13" fill="#e2b4a0" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
             f'<ellipse cx="-268" cy="{-212+hy}" rx="3" ry="4" fill="#5a3020"/>')
+    if peacock:     # a gold blaze on the forehead and a garland of flowers on the neck
+        out += (f'<path d="M -222 {-306+hy} C -232 {-290+hy}, -246 {-262+hy}, -252 {-236+hy} C -242 {-246+hy}, -230 {-270+hy}, -214 {-296+hy} Z" fill="#e8c048" opacity="0.9"/>'
+                + "".join(f'<circle cx="{fmt(-178 + 9 * math.cos(a))}" cy="{fmt(-262 + 34 * math.sin(a) + hy * 0.4)}" r="7" fill="{fc}" stroke="{OUT}" stroke-width="{c.sw(1.4)}"/>'
+                          for a, fc in zip([0.3 * k - 0.9 for k in range(7)], ["#f05a7a", "#f6d04a", "#ffffff", "#f05a7a", "#f6d04a", "#ffffff", "#f05a7a"])))
     return out

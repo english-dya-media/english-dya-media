@@ -189,6 +189,44 @@ LINES = [
  ("p5s6g",5,6,"NARRATOR","One evening, on the road home…","یک غروب، در راهِ خانه…","One evening, on the road home..."),
  ("p5s6h",5,6,"GUARD","You there! Stop!","آهای تو! بایست!",None),
  ("p5s6i",5,6,"NARRATOR","That night… Abtin did not come home.","آن شب… آبتین به خانه برنگشت.","That night... Aabteen did not come home."),
+ # ---- part 6 · The Cow Barmayeh (Shahnameh, «ضحاک» sh3: Faranak runs to the meadow of the cow Barmayeh, whose hide has a new colour on every
+ #      hair like a peacock; the keeper raises the boy on the cow's milk for three years; Zahhak hears of the cow; Faranak takes the boy to a holy
+ #      man on Mount Alborz; Zahhak comes to the meadow and the cow is no more (not shown); at sixteen Fereydun comes down: who was my father?)
+ ("p6s1a",6,1,"NARRATOR","In a hidden meadow, there lived a cow like no other…","در چمنزاری پنهان، گاوی زندگی می‌کرد که مانندش نبود…",
+  "In a hidden meadow, there lived a cow, like no other..."),
+ ("p6s1b",6,1,"FARANAK","Please… save my son!","خواهش می‌کنم… پسرم را نجات بده!","Please... save my son!"),
+ ("p6s3a",6,3,"NARRATOR","After Abtin was taken, Faranak ran from her home with the baby.","بعد از آنکه آبتین را بردند، فرانک با نوزادش از خانه گریخت.",
+  "After Aabteen was taken, Faraanak ran from her home with the baby."),
+ ("p6s3b",6,3,"NARRATOR","She ran to a far meadow, where an old keeper guarded a wonderful cow.","به چمنزاری دور دوید، جایی که نگهبانی پیر از گاوی شگفت‌انگیز نگهداری می‌کرد.",None),
+ ("p6s3c",6,3,"NARRATOR","Her name was Barmayeh, and her coat shone with the colours of a peacock.","نامش برمایه بود و پوستش به رنگ‌های طاووس می‌درخشید.",
+  "Her name was Barmaayeh, and her coat shone, with the colours of a peacock."),
+ ("p6s3d",6,3,"FARANAK","Please, good man… take my son.","خواهش می‌کنم، مرد نیک… پسرم را بگیر.","Please, good man... take my son."),
+ ("p6s3e",6,3,"FARANAK","Feed him with your cow's milk. Be a father to him.","با شیر گاوت سیرش کن. برایش پدری کن.",None),
+ ("p6s3f",6,3,"KEEPER","I will, my lady. I will guard him with my life.","چشم، بانوی من. با جانم از او نگهبانی می‌کنم.",None),
+ ("p6s3g",6,3,"FARANAK","His name is Fereydun. Keep him secret.","نامش فریدون است. او را پنهان نگه دار.","His name is Fereydoon. Keep him secret."),
+ ("p6s4a",6,4,"NARRATOR","For three years, the wonderful cow fed the little boy.","سه سال، آن گاو شگفت‌انگیز پسرک را شیر داد.",None),
+ ("p6s4e",6,4,"KEEPER","Gently, little one. She is like a mother to you.","آرام، کوچولو. او برایت مثل مادر است.",None),
+ ("p6s4b",6,4,"NARRATOR","But the snake king had eyes everywhere.","اما شاه ماردوش همه‌جا جاسوس داشت.",None),
+ ("p6s4c",6,4,"SPY","My king! In a far meadow, there is a strange cow… and a little boy.","سرورم! در چمنزاری دور، گاوی عجیب هست… و پسری کوچک.",
+  "My king! In a far meadow, there is a strange cow... and a little boy."),
+ ("p6s4d",6,4,"ZAHHAK","A cow… and a boy? It's him! Bring him to me!","یک گاو… و یک پسر؟ خودش است! بیاوریدش پیش من!","A cow... and a boy? It's him! Bring him to me!"),
+ ("p6s5a",6,5,"NARRATOR","But Faranak's heart told her that danger was coming.","اما دلِ فرانک به او گفت که خطر نزدیک است.","But Faraanak's heart told her that danger was coming."),
+ ("p6s5b",6,5,"FARANAK","They know about him. I must take him far away.","از او باخبر شده‌اند. باید او را به جای دوری ببرم.",None),
+ ("p6s5c",6,5,"KEEPER","Then go, my lady. Go now!","پس برو، بانوی من. همین حالا برو!",None),
+ ("p6s5d",6,5,"NARRATOR","She carried the boy up Mount Alborz, to a holy man who lived alone.","پسر را به کوه البرز برد، نزد مردی پاک‌دین که تنها زندگی می‌کرد.",
+  "She carried the boy up Mount Al-borz, to a holy man who lived alone."),
+ ("p6s5e",6,5,"FARANAK","This is my son, Fereydun. One day, he will be king.","این پسر من است، فریدون. روزی پادشاه خواهد شد.","This is my son, Fereydoon. One day, he will be king."),
+ ("p6s5f",6,5,"FARANAK","Please… be a father to him.","خواهش می‌کنم… برایش پدری کن.","Please... be a father to him."),
+ ("p6s5g",6,5,"HERMIT","I will. No cold wind will ever touch him.","حتماً. هیچ بادِ سردی به او نخواهد خورد.",None),
+ ("p6s6a",6,6,"NARRATOR","Then the snake king came to the meadow, like a storm.","آن‌وقت شاه ماردوش مثل طوفان به چمنزار آمد.",None),
+ ("p6s6b",6,6,"NARRATOR","But the boy was gone… and the wonderful cow was never seen again.","اما پسر رفته بود… و آن گاو شگفت‌انگیز را دیگر هیچ‌کس ندید.",
+  "But the boy was gone... and the wonderful cow, was never seen again."),
+ ("p6s6g",6,6,"NARRATOR","Then, in his anger, he burned Faranak's empty house.","بعد، از خشم، خانه‌ی خالیِ فرانک را به آتش کشید.",
+  "Then, in his anger, he burned Faraanak's empty house."),
+ ("p6s6c",6,6,"NARRATOR","Sixteen years later, a tall young man came down from Mount Alborz.","شانزده سال بعد، جوانی بلندقامت از کوه البرز پایین آمد.",
+  "Sixteen years later, a tall young man came down from Mount Al-borz."),
+ ("p6s6d",6,6,"FEREYDUN","Mother… tell me the truth.","مادر… حقیقت را به من بگو.","Mother... tell me the truth."),
+ ("p6s6e",6,6,"FEREYDUN","Who was my father?","پدرم که بود؟",None),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -206,6 +244,8 @@ VOICES = {
  "GUARD": (350, 1.05, -1, 1.0), "YOUNG_MAN": (550, 1.05, 1, 1.0),
  # part 5 (median pitch of the raw takes: 720 ≈ 95 Hz, slow and deep — the old mobed; 300 ≈ 133 Hz, gentle; 260 ≈ 176 Hz, a low warm woman)
  "ZIRAK": (720, 1.12, 0, 1.0), "ABTIN": (300, 1.08, 0, 1.0), "FARANAK": (260, 1.08, 0, 0.9),
+ # part 6 (20 ≈ 111 Hz, the rough old keeper; 200 ≈ 112 Hz, quieter, the holy man; 620 ≈ 145 Hz, young and clear: Fereydun)
+ "KEEPER": (20, 1.08, -1, 1.0), "HERMIT": (200, 1.15, -1, 0.85), "FEREYDUN": (620, 1.05, 0, 1.0), "SPY": (350, 1.0, 1, 1.0),
 }
 # slower takes for learners (per-line length factors, see voices.py)
 SPEED = {lid: 1.15 for lid, part, *_ in LINES if part in (1, 2)}
@@ -221,5 +261,8 @@ SPEED.update({"p4s4g": 1.5, "p4s4h": 1.4})
 SPEED.update({lid: 1.15 for lid, part, *_ in LINES if part == 5})
 SPEED.update({"p5s1a": 1.3, "p5s3b": 1.2, "p5s3d": 1.2, "p5s3e": 1.2, "p5s3g": 1.3, "p5s4d": 1.05, "p5s5b": 1.25, "p5s5e": 1.35, "p5s5g": 1.3,
               "p5s6a": 1.0, "p5s6e": 1.45, "p5s6h": 1.0, "p5s6i": 1.25})
+SPEED.update({lid: 1.15 for lid, part, *_ in LINES if part == 6})
+SPEED.update({"p6s1b": 1.2, "p6s3d": 1.25, "p6s3f": 1.2, "p6s4d": 1.1, "p6s5c": 1.15, "p6s5f": 1.3, "p6s5g": 1.3, "p6s6d": 1.3, "p6s6e": 1.4})
 # per-line ffmpeg filters (voices.py): a slower lullaby
 FX = {"p5s6e": "atempo=0.8"}
+FX.update({lid: "atempo=0.86" for lid in ("p6s1b", "p6s3d", "p6s3e", "p6s3g", "p6s5b", "p6s5e", "p6s5f", "p6s6d", "p6s6e")})

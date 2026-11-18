@@ -3,7 +3,7 @@ Part 1: Zahhak's throne hall (hook), Mardas's palace on the plain, its gate, the
 the palace garden at night / before dawn, the palace wall with Zahhak's window."""
 import math, random
 from film import svg_render, W, H
-from bgs import FILTERS, lg, rg, ridge, clouds, stars, grass_tufts
+from bgs import FILTERS, lg, rg, ridge, hill, clouds, stars, grass_tufts, poplar, boulder, pine, _strata
 
 GOLD, GOLD_D, GOLD_L = "#c9a24a", "#7a5a22", "#f0d48a"
 
@@ -912,3 +912,148 @@ def dream_gate():
         y = 1230 + k * 120
         s += f'<ellipse cx="{r.uniform(150, 930):.0f}" cy="{y}" rx="{r.uniform(380, 640):.0f}" ry="{26 + 10 * k}" fill="{p["mist"]}" opacity="0.14" filter="url(#b20)"/>'
     return svg_render(s)
+
+
+# ------------------------------------------------------------------ part 6: the meadow of the cow Barmayeh, Mount Alborz and the holy man's cave
+MEAD = {   # sky stops, far mountains, hills (far, near), meadow (top, bottom), light
+    "dusk": dict(sky=[(0, "#2a2a5a", 1), (0.3, "#7a4a6a", 1), (0.45, "#e08a5a", 1), (0.5, "#ffc888", 1)], mts="#6a5a7a", snow="#f0d8d0",
+                 hills=("#5a6a4a", "#3e5a36"), grass=("#5e7a3a", "#2e4422"), sun=(880, 900, "#fff0c8")),
+    "dawn": dict(sky=[(0, "#5a7ab0", 1), (0.32, "#c8b8c8", 1), (0.46, "#ffd8a8", 1), (0.5, "#fff0d0", 1)], mts="#8a9ab8", snow="#ffffff",
+                 hills=("#7a9a5a", "#5a8a42"), grass=("#7aa04a", "#3e6a2a"), sun=(200, 880, "#fffaf0")),
+    "day": dict(sky=[(0, "#4a86c8", 1), (0.35, "#9ac4e8", 1), (0.5, "#e0f0f4", 1)], mts="#8aa0c0", snow="#ffffff",
+                hills=("#7aa456", "#5a8e40"), grass=("#86ae4e", "#4a7a30"), sun=None),
+    "night": dict(sky=[(0, "#060a1e", 1), (0.35, "#141e44", 1), (0.5, "#28305a", 1)], mts="#2a3456", snow="#a8b4d8",
+                  hills=("#1e2a30", "#152024"), grass=("#1c2a24", "#0a120e"), sun=None),
+}
+
+
+def _fence(y, broken=False, seed=0, col="#8a6a42", dark="#4a3420"):
+    """a split-rail fence across the meadow at feet y (posts every 130 px, a gap for the gate at x 470-610)"""
+    r = random.Random(seed)
+    s = ""
+    posts = [x for x in range(20, W + 60, 130) if not 470 < x < 610]
+    for i, x in enumerate(posts):
+        lean = r.uniform(-16, 16) if broken and i % 2 == 0 else 0
+        s += (f'<path d="M {x - 9} {y} L {x - 9 + lean:.0f} {y - 150} L {x + 9 + lean:.0f} {y - 150} L {x + 9} {y} Z" fill="{col}" stroke="{dark}" stroke-width="3"/>')
+    for i in range(len(posts) - 1):
+        xa, xb = posts[i], posts[i + 1]
+        if xb - xa > 200:
+            continue
+        for k, h in enumerate((112, 60)):
+            if broken and (i + k) % 3 == 0:
+                s += (f'<path d="M {xa + 10} {y - 4} L {xb - 30} {y - 34 - 10 * k} L {xb - 30} {y - 22 - 10 * k} L {xa + 10} {y + 6} Z" fill="{col}" stroke="{dark}" stroke-width="3"/>')
+            else:
+                s += f'<path d="M {xa} {y - h} L {xb} {y - h + 4} L {xb} {y - h + 18} L {xa} {y - h + 14} Z" fill="{col}" stroke="{dark}" stroke-width="3"/>'
+    return s
+
+
+def _hut(x, y, s=1.0, door_lit=False):
+    """the keeper's hut: mud walls and a thatched roof, base centre (x, y)"""
+    g = (f'<g transform="translate({x},{y}) scale({s})">'
+         '<path d="M -120 0 L -120 -150 L 120 -150 L 120 0 Z" fill="#a8845a" stroke="#4a3420" stroke-width="4"/>'
+         '<path d="M -150 -140 L 0 -250 L 150 -140 Z" fill="#c8a85a" stroke="#6a4a20" stroke-width="4"/>'
+         + "".join(f'<path d="M {-140 + k * 28} -146 L {-6 + k * 5} -238" stroke="#9a7a3a" stroke-width="3" opacity="0.7"/>' for k in range(11)) +
+         f'<path d="M -34 0 L -34 -96 Q 0 -122, 34 -96 L 34 0 Z" fill="{"#ffb060" if door_lit else "#2a1a10"}"/>'
+         '<path d="M 60 -110 L 96 -110 L 96 -76 L 60 -76 Z" fill="#2a1a10"/></g>')
+    return g
+
+
+def meadow(pal="dusk", broken=False, tall=False):
+    """the hidden meadow of the cow Barmayeh: snowy Alborz far away, green hills, a plane tree at the left (trunk x 150), the keeper's hut at
+    the right (x 880, base y 1180), a split-rail fence across at feet y 1260 with a gap at x 470-610; wild flowers. People and the cow stand
+    at y 1300-1750. pal "dusk" | "dawn" | "day" | "night"; broken=True: after the soldiers came (fence down, trampled grass);
+    tall=True: 2400 px high (more meadow below), for shots that lift the camera's view (py < 0, bg_par 1.0) to keep ground action above y 1000"""
+    p = MEAD[pal]
+    HH = 2400 if tall else H
+    s = "<defs>" + FILTERS + lg("msky", p["sky"]) + lg("mgr", [(0, p["grass"][0], 1), (1, p["grass"][1], 1)])
+    if p["sun"]:
+        sx, sy, sc = p["sun"]
+        s += rg("msun", sx, sy, 600, [(0, sc, 0.9), (0.15, sc, 0.45), (1, sc, 0)])
+    s += "</defs>"
+    s += f'<rect width="{W}" height="{H}" fill="url(#msky)"/>'
+    if pal == "night":
+        s += stars(601, 140, 850) + '<circle cx="820" cy="380" r="34" fill="#eef2ff"/>'
+    else:
+        s += clouds(W, 602, [420, 560, 700], col="#ffffff" if pal == "day" else "#ffd8c0", hi="#fff6e8", op=0.45)
+    if p["sun"]:
+        s += f'<rect width="{W}" height="{H}" fill="url(#msun)"/><circle cx="{p["sun"][0]}" cy="{p["sun"][1]}" r="44" fill="{p["sun"][2]}"/>'
+    # far Alborz: a row of snowy peaks
+    r = random.Random(603)
+    pk = [(-60, 900), (90, 760), (230, 860), (380, 700), (540, 830), (700, 680), (860, 820), (1000, 740), (1140, 900)]
+    d = "M -80 1000 " + " ".join(f"L {x} {y}" for x, y in pk) + " L 1160 1000 Z"
+    s += f'<path d="{d}" fill="{p["mts"]}"/>'
+    for (xa, ya), (xb, yb), (xc, yc) in zip(pk, pk[1:], pk[2:]):
+        if yb < ya and yb < yc:
+            s += (f'<path d="M {xb} {yb} L {xb - (xb - xa) * 0.35:.0f} {yb + (ya - yb) * 0.35:.0f} L {xb - 10} {yb + (ya - yb) * 0.28:.0f} '
+                  f'L {xb + 6} {yb + (ya - yb) * 0.38:.0f} L {xb + (xc - xb) * 0.3:.0f} {yb + (yc - yb) * 0.3:.0f} Z" fill="{p["snow"]}" opacity="0.92"/>')
+    s += f'<rect x="0" y="930" width="{W}" height="90" fill="#ffffff" opacity="0.12" filter="url(#b20)"/>'
+    s += f'<path d="{hill(W, 1040, 90, 604)}" fill="{p["hills"][0]}"/>'
+    s += f'<path d="{hill(W, 1110, 60, 605)}" fill="{p["hills"][1]}"/>'
+    s += f'<rect x="0" y="1100" width="{W}" height="{HH - 1100}" fill="url(#mgr)"/>'
+    for x, h in ((330, 220), (420, 180), (700, 200)):
+        s += poplar(x, 1110, h, col=p["hills"][1], dark=p["grass"][1])
+    s += _hut(880, 1180, 0.95, door_lit=(pal in ("dusk", "night")))
+    # the plane tree at the left
+    s += ('<path d="M 110 1250 C 120 1100, 100 980, 130 860 L 170 860 C 196 980, 180 1100, 200 1250 Z" fill="#5a3e2a" stroke="#2a1a10" stroke-width="4"/>')
+    for k in range(14):
+        cx, cy = 150 + r.uniform(-180, 180), 760 + r.uniform(-140, 110)
+        s += f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{r.uniform(70, 120):.0f}" fill="{p["hills"][1] if k % 3 else p["grass"][1]}"/>'
+    for k in range(10):
+        cx, cy = 150 + r.uniform(-150, 150), 720 + r.uniform(-120, 80)
+        s += f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{r.uniform(30, 60):.0f}" fill="{p["grass"][0]}" opacity="0.6"/>'
+    s += _fence(1260, broken, 606)
+    s += grass_tufts(607, 1140, HH - 20, 80 if not tall else 110, col=p["grass"][1], hi=p["grass"][0])
+    fl = ["#f05a7a", "#f6d04a", "#ffffff", "#b07ae0", "#f08a3a"]
+    for k in range(120 if not tall else 160):
+        x = r.uniform(0, W); y = r.uniform(1150, HH - 20); sc = 0.5 + (y - 1100) / 700
+        if broken and r.random() < 0.6:
+            continue
+        s += f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{3.2 * sc:.1f}" fill="{fl[k % 5]}" opacity="{0.55 if pal == "night" else 0.9}"/>'
+    if broken:
+        for k in range(8):
+            s += f'<ellipse cx="{r.uniform(100, 1000):.0f}" cy="{r.uniform(1300, HH - 100):.0f}" rx="{r.uniform(60, 140):.0f}" ry="{r.uniform(10, 24):.0f}" fill="#6a5434" opacity="0.5"/>'
+    return svg_render(s, W, HH)
+
+
+def alborz(pal="dawn"):
+    """high on Mount Alborz: a rocky ledge above a sea of clouds; the holy man's cave at the right (mouth x 640-920, top y 860, floor y 1290)
+    with a warm glow inside; a path climbs from the bottom left to the ledge (feet y 1290-1700); pines. pal "dawn" | "day" """
+    from bgs import cloud_sea
+    from PIL import Image
+    sky = ([(0, "#5a7ab8", 1), (0.35, "#d8b8c8", 1), (0.55, "#ffd8a0", 1)] if pal == "dawn" else
+           [(0, "#3a7ac8", 1), (0.4, "#9ac8ec", 1), (0.6, "#e8f4f8", 1)])
+    s = ("<defs>" + FILTERS + lg("asky", sky) +
+         rg("asun", 220, 900, 620, [(0, "#fff4d8", 0.9), (0.15, "#ffe0a8", 0.4), (1, "#ffd090", 0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#asky)"/>'
+    s += clouds(W, 611, [380, 520, 640], col="#ffffff", hi="#fff6e8", op=0.5)
+    if pal == "dawn":
+        s += '<rect width="1080" height="1920" fill="url(#asun)"/><circle cx="220" cy="900" r="46" fill="#fffaf0"/>'
+    for (x, y, w, col) in ((140, 760, 300, "#9aa6c8"), (470, 640, 360, "#a8b2d0"), (900, 720, 320, "#98a4c4")):
+        s += (f'<path d="M {x - w} 1040 L {x} {y} L {x + w} 1040 Z" fill="{col}"/>'
+              f'<path d="M {x} {y} L {x - w * 0.28:.0f} {y + (1040 - y) * 0.28:.0f} L {x - 8} {y + (1040 - y) * 0.2:.0f} L {x + 10} {y + (1040 - y) * 0.3:.0f} '
+              f'L {x + w * 0.25:.0f} {y + (1040 - y) * 0.25:.0f} Z" fill="#ffffff" opacity="0.9"/>')
+    back = svg_render(s)
+    if pal == "dawn":
+        sea = cloud_sea(990, 616, w=W, hi="#fff4ea", mid="#f2d8d0", lo="#d8c0c8")
+    else:
+        sea = cloud_sea(990, 616, w=W, hi="#ffffff", mid="#eef2f8", lo="#cfd8e6")
+    back.alpha_composite(sea)
+    s = ("<defs>" + FILTERS + lg("rock", [(0, "#8a7a6e", 1), (1, "#4a4038", 1)]) +
+         rg("cave", 780, 1180, 300, [(0, "#ffb060", 0.85), (0.4, "#c86a30", 0.35), (1, "#000", 0)]) + "</defs>")
+    r = random.Random(617)
+    edge = [(600, 1100), (612, 980), (650, 900), (700, 800), (760, 700), (820, 640), (880, 560), (960, 520), (1020, 470), (1100, 450)]
+    edge = [(x + r.uniform(-14, 14), y + r.uniform(-14, 14)) for x, y in edge]
+    d = "M 520 1920 L 520 1400 C 540 1300, 590 1240, 600 1100 " + " ".join(f"L {x:.0f} {y:.0f}" for x, y in edge) + " L 1100 1920 Z"
+    s += f'<path d="{d}" fill="url(#rock)" stroke="#3a3028" stroke-width="4"/>'
+    s += _strata(612, 620, 1080, 520, 1260, 30, "#3a3028", 0.45, 4, 0.25)
+    s += ('<path d="M -20 1920 L -20 1560 C 120 1480, 260 1420, 420 1380 C 520 1350, 580 1310, 640 1292 L 1100 1292 L 1100 1920 Z" fill="#6a5a4e"/>'
+          '<path d="M -20 1560 C 120 1480, 260 1420, 420 1380 C 520 1350, 580 1310, 640 1292 L 1100 1292" stroke="#a8988a" stroke-width="8" fill="none"/>')
+    s += ('<path d="M 640 1292 L 640 1000 C 650 900, 720 860, 780 858 C 850 860, 912 900, 920 1000 L 920 1292 Z" fill="#1a120c"/>'
+          '<path d="M 640 1292 L 640 1000 C 650 900, 720 860, 780 858 C 850 860, 912 900, 920 1000 L 920 1292 Z" fill="url(#cave)"/>'
+          '<path d="M 620 1292 L 620 990 C 634 880, 714 832, 780 830 C 856 832, 930 880, 940 990 L 940 1292" stroke="#4a3e34" stroke-width="22" fill="none"/>')
+    s += boulder(420, 1400, 70, 613, col="#7a6a5e", dark="#4a3e34", lit="#a8988a") + boulder(1010, 1330, 60, 614, col="#7a6a5e", dark="#4a3e34", lit="#a8988a")
+    for x, y, h in ((560, 1300, 260), (980, 1240, 230), (90, 1560, 300)):
+        s += pine(x, y, h)
+    s += grass_tufts(615, 1300, 1900, 26, col="#4a5a32", hi="#7a8a4a")
+    back.alpha_composite(svg_render(s))
+    return back
