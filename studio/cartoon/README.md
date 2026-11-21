@@ -115,7 +115,7 @@ The scheduled job "Story series: next part" runs this twice a day. Work in `stud
    date, info = item info). Expect PENDING on both networks (Instagram reel + YouTube Short) with the media copied to
    static.metricool.com. Commit.
 4. **Clean up**: delete `media-<series>-*` branches whose parts are all published.
-5. **Report** (short, English): parts made, parts scheduled with dates and slots, anything that failed.
+5. **Final reply** (goes to Salar's phone; English): He wants no reports or analysis of Instagram or YouTube unless he asks. If nothing failed and nothing needs him, reply only "No action needed." Otherwise one or two short lines: what failed and what he has to do. When all 48 parts are scheduled, say this job can be turned off.
 
 If you can't finish a part, schedule nothing half-done and report what's missing. Never schedule a part twice or out of
 order, never before Rostam & Sohrab's part 40, never publish immediately; never edit or delete existing Metricool posts.

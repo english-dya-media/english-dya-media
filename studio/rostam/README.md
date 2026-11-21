@@ -58,7 +58,8 @@ The scheduled job "Rostam & Sohrab: next part" runs this every morning and makes
 1. **Buffer check**: Metricool `getScheduledPosts` (brand 7830959, Europe/Rome) from now to 10 days ahead. Count
    PENDING **Instagram** posts whose caption starts with «🎬 قسمت … از داستان رستم و سهراب» (ignore YouTube-only
    copies: parts 1–4 also have separate YouTube posts at the same times). If the next 4 slots (18:00 and 20:00
-   Tehran) are all filled, or part 40 is scheduled, stop and report. The next part number is the highest in
+   Tehran) are all filled, stop (final reply "No action needed."); if part 40 is scheduled, stop and say this job
+   can be turned off. The next part number is the highest in
    `parts.json` + 1; parts go into the free slots after the last scheduled part, in order (never a slot less than
    2 hours away).
 2. **Setup**: `bash setup.sh`.
@@ -93,7 +94,7 @@ The scheduled job "Rostam & Sohrab: next part" runs this every morning and makes
 10. **Save**: commit `parts.json`, `pNN/script.json`, `pNN_scenes.py`, `cast.json` and any engine changes to `main`
     (`git pull --rebase origin main` first). Never commit audio, renders or the voice model (see .gitignore).
     Delete `media-rostam-*` branches whose part is already published.
-11. **Report** (short, English): the two parts' titles, their dates and slots, anything that failed.
+11. **Final reply** (goes to Salar's phone; English): He wants no reports or analysis of Instagram or YouTube unless he asks. If nothing failed and nothing needs him, reply only "No action needed." Otherwise one or two short lines: what failed and what he has to do.
 
 If you can't finish a part (time, errors), schedule nothing half-done; report what's missing so the next run or the
 owner can pick it up. Never schedule the same part twice; never edit or delete existing Metricool posts.

@@ -47,7 +47,7 @@ Two scheduled jobs use this file: the **weekly run** (Thursdays, makes and sched
   its tags: pronunciation (no matching tag), mistakes & vocab (`english mistakes`), quotes (`english quotes`), Rostam &
   Sohrab (`rostam and sohrab`), and one playlist per cartoon series (its own tag, e.g. `babak khorramdin`; made when
   the series' first part is out). Keep those tags in `youtube.py` / `cartoon/<series>/parts.json`. A new kind of video
-  or series needs a row in the script, which only the owner's browser can change: ask for it in the report.
+  or series needs a row in the script, which only the owner's browser can change: ask for it in the final reply.
 - Captions are **Persian only**, informal spoken style (می‌گن، نمیشه، خونده نمیشه), with hashtags (added automatically).
 - Reels and trial reels carry Instagram's AI label (the voice is synthetic); quote reels don't. `plan.py` sets this.
 - The 7-part story series (`make_story.py`, `story_render.py`) is **paused by the owner**. Don't make or post episodes.
@@ -61,7 +61,7 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
 2. **Which days**: the last `content/dayNN.json` is the last day made. On 14 Nov 2026 the owner asked for three months
    at once: weeks 4–16 (days 19–109, 21 Nov 2026 – 19 Feb 2027) were made and scheduled in one batch. So first check
    whether the coming Saturday–Friday already has its day files and its posts in Metricool (`getScheduledPosts` for
-   that week): if it does, there is nothing to do; report "already scheduled through <last made date>" and stop.
+   that week): if it does, there is nothing to do; stop (final reply: "No action needed.").
    Make a new week only when the last made day is less than 9 days away: days N+1 … N+7, the first one a Saturday
    (`python3 -c "from daygen import *; print(day_date(N+1))"`). If those day files exist but the posts are not in
    Metricool (a rerun), skip to step 6 and check Metricool for existing posts before scheduling anything.
@@ -161,8 +161,7 @@ Work in `studio/`. Run each step, read its output, fix problems before moving on
     Leave `media-rostam-*` branches and the cartoon series' `media-<series>-p*` branches (babak, zahhak, arash, leyli,
     khosrow, hasan, mahpishani) alone: their own jobs clean them up.
 
-13. **Report** (short, English): the 7 themes with their words, the trial reel topics, the 7 quotes, first post date/time,
-    anything that failed.
+13. **Final reply** (goes to Salar's phone; English): He wants no reports or analysis of Instagram or YouTube unless he asks. If nothing failed and nothing needs him, reply only "No action needed." Otherwise one or two short lines: what failed and what he has to do.
 
 ## Daily check
 
@@ -211,9 +210,9 @@ Monitoring only: no new content. Work in `studio/` (no setup needed). "Now" is t
 
 4. **Save**: commit `growth/` to `main` (`git pull --rebase origin main` first) and push.
 
-5. **Message** (the final reply goes to Salar's phone; English, at most 5 short lines): followers and yesterday's change,
-   month-to-date vs +5,000 and the daily pace needed, yesterday's best reel (views, view rate), YouTube subscribers
-   and their change with the best recent Short (views), and any post that failed or was re-scheduled.
+5. **Final reply** (goes to Salar's phone; English): no numbers — he wants no reports or analysis of Instagram or YouTube unless he asks. If nothing failed and nothing needs him, reply only "No action needed." Otherwise one or two short lines: what failed and what he has to do.
+   A post that failed and was re-scheduled needs nothing from him. The numbers stay in `growth/` for the weekly run
+   and for when he asks.
 
 ## Rules
 
