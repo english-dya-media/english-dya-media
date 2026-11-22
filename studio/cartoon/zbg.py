@@ -1457,3 +1457,134 @@ def dezh(pal="dusk"):
 
 
 DEZH_TOP = (540, 312)     # where the talisman stands on the great tower
+
+
+# ---------------------------------------------------------------- part 10
+WALL_TOP = 560          # the foot of the merlons on dezh_wall(); the rope's hook bites on the merlon at x 560-620
+ROPE_X = 590
+WALL_FOOT = 1420
+
+
+def dezh_wall():
+    """part 10: the black wall of Gang Dezhhukht seen from its foot at night: crenellations at y 500-560, a gold band, black stone
+    blocks lit by the moon (upper right), a warm arched window of the hall high at the left (x 120-250, y 690-900); the ground from
+    y 1420 (WALL_FOOT; a climber's rope hangs from the merlon at x 560-620, see ROPE_X)"""
+    r = random.Random(1001)
+    s = ("<defs>" + FILTERS + lg("wsky", [(0, "#04060f", 1), (0.2, "#0e1430", 1), (0.32, "#262a52", 1)]) +
+         lg("wface", [(0, "#2a2838", 1), (0.5, "#1c1a26", 1), (1, "#0e0c12", 1)]) +
+         rg("wmoon", 850, 380, 360, [(0, "#dfe8ff", 0.55), (0.25, "#9aa8d8", 0.18), (1, "#000", 0)]) +
+         rg("wwin", 185, 800, 330, [(0, "#ffb860", 0.55), (0.4, "#c0642a", 0.16), (1, "#000", 0)]) +
+         lg("wmoonlit", [(0, "#8a96c8", 0.0), (1, "#8a96c8", 0.16)], vertical=False) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#wsky)"/>' + stars(1002, 140, 560)
+    s += '<rect width="1080" height="1920" fill="url(#wmoon)"/><circle cx="850" cy="380" r="46" fill="#f4f6ff"/>'
+    s += clouds(W, 1003, [430], col="#3a3e66", hi="#6a70a0", op=0.45)
+    # the wall face
+    s += f'<rect x="-20" y="{WALL_TOP}" width="1120" height="{H - WALL_TOP}" fill="url(#wface)"/>'
+    for x in range(-20, 1100, 120):                       # merlons
+        s += f'<rect x="{x}" y="{WALL_TOP - 62}" width="66" height="64" fill="#1e1c28" stroke="#08070c" stroke-width="3"/>'
+        s += f'<rect x="{x + 46}" y="{WALL_TOP - 62}" width="20" height="64" fill="#3a3a52" opacity="0.6"/>'
+    s += f'<rect x="-20" y="{WALL_TOP}" width="1120" height="14" fill="#0c0b10"/>'
+    s += f'<path d="M -20 {WALL_TOP + 60} L 1100 {WALL_TOP + 60}" stroke="{GOLD}" stroke-width="9" opacity="0.75"/>'
+    s += f'<path d="M -20 {WALL_TOP + 74} L 1100 {WALL_TOP + 74}" stroke="{GOLD_D}" stroke-width="3" opacity="0.6"/>'
+    # stone blocks
+    y = WALL_TOP + 90; row = 0
+    while y < WALL_FOOT + 20:
+        h = 58 + r.uniform(-4, 6)
+        x = -40 + (60 if row % 2 else 0)
+        s += f'<path d="M -20 {y:.0f} L 1100 {y:.0f}" stroke="#08070c" stroke-width="3" opacity="0.8"/>'
+        while x < 1100:
+            w = r.uniform(110, 150)
+            s += f'<path d="M {x:.0f} {y:.0f} L {x:.0f} {y + h:.0f}" stroke="#08070c" stroke-width="3" opacity="0.8"/>'
+            if r.random() < 0.35:
+                s += f'<rect x="{x + 4:.0f}" y="{y + 4:.0f}" width="{w - 8:.0f}" height="{h - 8:.0f}" fill="#34324a" opacity="{r.uniform(0.08, 0.2):.2f}"/>'
+            s += f'<path d="M {x + 6:.0f} {y + 5:.0f} L {x + w - 8:.0f} {y + 5:.0f}" stroke="#4a4a66" stroke-width="2" opacity="0.35"/>'
+            x += w
+        y += h; row += 1
+    s += f'<rect x="0" y="{WALL_TOP}" width="1080" height="{H - WALL_TOP}" fill="url(#wmoonlit)"/>'
+    # the hall's window, high at the left
+    s += ('<rect width="1080" height="1920" fill="url(#wwin)"/>'
+          '<path d="M 120 900 L 120 760 Q 185 660, 250 760 L 250 900 Z" fill="#ffc070" stroke="#08070c" stroke-width="5"/>'
+          '<path d="M 136 900 L 136 768 Q 185 690, 234 768 L 234 900 Z" fill="#ffd690"/>'
+          f'<path d="M 185 690 L 185 900 M 136 800 L 234 800" stroke="#3a2a1a" stroke-width="7"/>'
+          f'<path d="M 108 906 L 262 906" stroke="{GOLD}" stroke-width="8"/>')
+    # a serpent emblem on the wall, faint
+    s += f'<g opacity="0.45">{serpent_emblem(860, 900, 0.55)}</g>'
+    # the ground at the foot of the wall
+    s += (f'<defs>{lg("wgr", [(0, "#1e1a24", 1), (1, "#08060a", 1)])}</defs>'
+          f'<path d="M -20 {WALL_FOOT} L 1100 {WALL_FOOT} L 1100 1920 L -20 1920 Z" fill="url(#wgr)"/>'
+          f'<path d="M -20 {WALL_FOOT} L 1100 {WALL_FOOT}" stroke="#2a2636" stroke-width="6"/>')
+    s += grass_tufts(1004, WALL_FOOT + 20, 1900, 40, col="#1a1e22", hi="#2e3a40")
+    for x, y_, rr in ((70, WALL_FOOT + 70, 60), (980, WALL_FOOT + 90, 80), (880, WALL_FOOT + 40, 46), (260, 1800, 90), (760, 1840, 110)):
+        s += boulder(x, y_, rr, seed=x, col="#2a2632", dark="#16121c", lit="#4a4a62")
+    return svg_render(s)
+
+
+CAVE_MOUTH = [(300, 1310), (292, 1180), (318, 1040), (336, 900), (372, 790), (420, 700), (480, 640), (548, 620), (610, 640), (672, 700),
+              (716, 790), (752, 900), (770, 1040), (796, 1180), (800, 1310)]
+
+
+def cave_in():
+    """part 10: inside the cave on Damavand, looking out: dark rock all round, the mouth (CAVE_MOUTH, x 300-800, top y 620, floor y 1310)
+    open on a dusk sky, far snowy peaks and the white slope below; a pool of light on the floor from the mouth (people stand in the mouth
+    at feet y 1310-1330, deeper inside at y 1400-1700); the left wall (x 0-260) is where the iron rings are (drawn by the scenes)"""
+    r = random.Random(1101)
+    s = ("<defs>" + FILTERS + lg("csky", [(0, "#232a5a", 1), (0.42, "#7a5a7a", 1), (0.56, "#e8906a", 1), (0.64, "#ffd09a", 1)]) +
+         lg("crock", [(0, "#100e14", 1), (0.6, "#1a161e", 1), (1, "#0a080c", 1)]) +
+         rg("cpool", 550, 1340, 520, [(0, "#ffb070", 0.42), (0.5, "#b06a40", 0.12), (1, "#000", 0)]) +
+         rg("cbeam", 550, 1000, 640, [(0, "#ffd0a0", 0.16), (1, "#000", 0)]) + "</defs>")
+    # the view through the mouth
+    s += f'<rect width="{W}" height="{H}" fill="url(#csky)"/>' + stars(1102, 30, 760)
+    s += clouds(W, 1103, [840, 930], col="#f0a080", hi="#ffd8a8", op=0.5)
+    for x0, top, w, col, snow in ((180, 960, 420, "#6a5a7a", "#f6dcd0"), (560, 900, 520, "#7a6080", "#ffe6d8"), (380, 1010, 380, "#5a4a68", "#e8ccc8")):
+        s += f'<path d="M {x0 - w / 2:.0f} 1160 L {x0:.0f} {top} L {x0 + w / 2:.0f} 1160 Z" fill="{col}"/>'
+        s += f'<path d="M {x0 - w * 0.12:.0f} {top + w * 0.16:.0f} L {x0:.0f} {top} L {x0 + w * 0.12:.0f} {top + w * 0.16:.0f} L {x0 + w * 0.05:.0f} {top + w * 0.12:.0f} L {x0 - w * 0.04:.0f} {top + w * 0.17:.0f} Z" fill="{snow}"/>'
+    s += '<path d="M 180 1360 C 320 1170, 600 1140, 900 1190 L 900 1360 Z" fill="#f2e2e6"/><path d="M 180 1360 C 320 1200, 560 1180, 900 1220 L 900 1360 Z" fill="#c8b4c8" opacity="0.5"/>'
+    # the rock, with the mouth cut out
+    mouth = "M " + " L ".join(f"{x:.0f} {y:.0f}" for x, y in CAVE_MOUTH) + " Z"
+    outer = f"M -20 -20 L 1100 -20 L 1100 1940 L -20 1940 Z"
+    s += f'<path d="{outer} {mouth}" fill="url(#crock)" fill-rule="evenodd"/>'
+    # a warm rim on the edge of the mouth
+    s += f'<path d="{mouth}" fill="none" stroke="#c07a50" stroke-width="10" opacity="0.55" filter="url(#b3)"/>'
+    s += f'<path d="{mouth}" fill="none" stroke="#08060a" stroke-width="5"/>'
+    # rough rock: cracks and lumps
+    for k in range(46):
+        x = r.uniform(-20, 1100); y = r.uniform(300, 1900)
+        inside = 290 < x < 810 and 600 < y < 1320
+        if inside:
+            continue
+        L = r.uniform(40, 160); a = r.uniform(-0.6, 0.6)
+        s += f'<path d="M {x:.0f} {y:.0f} q {L * 0.5:.0f} {L * a:.0f} {L:.0f} {L * a * 0.3:.0f}" stroke="#060408" stroke-width="{r.uniform(2, 5):.1f}" fill="none" opacity="0.7"/>'
+        s += f'<path d="M {x:.0f} {y + 4:.0f} q {L * 0.5:.0f} {L * a:.0f} {L:.0f} {L * a * 0.3:.0f}" stroke="#2e2830" stroke-width="2" fill="none" opacity="0.5"/>'
+    from chars import smooth_path
+    for x, y, w_ in ((80, 380, 260), (1000, 440, 280), (560, 360, 320), (250, 540, 170), (860, 580, 190)):     # hanging rock
+        pts = [(x - w_ / 2, y - 240), (x + w_ / 2, y - 240)]
+        for k in range(7):
+            u = k / 6
+            pts.append((x + w_ / 2 - w_ * u + r.uniform(-10, 10), y - 120 + 150 * math.sin(math.pi * u) ** 0.8 + r.uniform(-30, 20)))
+        s += f'<path d="{smooth_path(pts)}" fill="#0b090e" opacity="0.3" filter="url(#b6)"/>'
+    s += ('<defs>' + rg("cspill", 550, 1000, 560, [(0, "#d08050", 0.26), (0.5, "#c07048", 0.2), (1, "#000", 0)]) + '</defs>'
+          f'<path d="{outer} {mouth}" fill="url(#cspill)" fill-rule="evenodd"/>')
+    # the floor and the light from the mouth
+    s += '<path d="M -20 1330 C 200 1300, 880 1300, 1100 1330 L 1100 1940 L -20 1940 Z" fill="#141018"/>'
+    s += '<path d="M -20 1330 C 200 1300, 880 1300, 1100 1330" stroke="#2a2228" stroke-width="5" fill="none"/>'
+    s += '<rect width="1080" height="1920" fill="url(#cpool)"/><rect width="1080" height="1920" fill="url(#cbeam)"/>'
+    for x, y, rr in ((140, 1560, 70), (930, 1520, 90), (760, 1760, 60), (330, 1820, 80)):
+        s += boulder(x, y, rr, seed=x + 1, col="#2a2430", dark="#141018", lit="#5a4a52")
+    return svg_render(s)
+
+
+HALL_WIN = "M 125 700 L 125 380 Q 180 270, 235 380 L 235 700 Z"      # the opening of the high window in hall_window()
+
+
+def hall_window():
+    """part 10: Zahhak's throne hall (hall()) with a tall arched window high on the left wall instead of the left banner (opening HALL_WIN,
+    x 125-235, y 290-700): the night sky in it; the scenes draw who looks in and clip him to the opening"""
+    im = hall().copy()
+    s = ("<defs>" + lg("hwsky", [(0, "#0a0e26", 1), (1, "#2a3060", 1)]) + "</defs>"
+         '<rect x="120" y="240" width="110" height="530" fill="#0e0c12"/>'
+         f'<path d="{HALL_WIN}" fill="url(#hwsky)"/>' + stars(1201, 12, 700, w=240).replace("<circle", '<circle clip-path="url(#hwc)"') +
+         f'<clipPath id="hwc"><path d="{HALL_WIN}"/></clipPath>'
+         f'<path d="{HALL_WIN}" fill="none" stroke="{GOLD}" stroke-width="8"/>'
+         f'<path d="M 112 706 L 248 706" stroke="{GOLD}" stroke-width="10"/><path d="M 112 718 L 248 718" stroke="{GOLD_D}" stroke-width="4"/>')
+    im.alpha_composite(svg_render(s))
+    return im

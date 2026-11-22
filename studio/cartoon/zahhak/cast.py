@@ -166,3 +166,13 @@ FSOLDIER = spec(kind="man", skin="tan", hair="short", beard="short", beard_col="
                 cuff="#8a7a5a", trim="#8a7a5a", iris="#2a1a10")
 FSOLDIER_2 = dict(FSOLDIER, skin="light", beard="full", col="#4a5a6a", col2="#2e3a46", plume="#c9a24a")
 FSOLDIER_3 = dict(FSOLDIER, skin="olive", beard="light", col="#7a4a3a", col2="#5a3226", helm=("#5a5a62", "#8a8a96", "#c8c8d0"))
+
+# ---- part 10: Zahhak in iron (he covers himself in iron so no one will know him: a dark iron helmet with a black plume, black scale armour,
+# a black cloak; his snakes stay under the cloak until he shows them), Zahhak bare-headed after the mace breaks his helmet, Fereydun crowned
+# (his own look with a gold crown and a deep red royal cloak)
+ZAHHAK_IRON = spec(kind="man", skin="tan", hair="long_curly", hair_col="#120c09", beard="full", beard_col="#120c09", head="helmet",
+                   helm=("#2a2a34", "#4e4e5c", "#8a8a9a"), plume="#141218", garment="tunic", col="#34343f", col2="#1e1e26", pattern="scales",
+                   scale_col="#8a8a9a", cloak="#1e1c26", cloak2="#0e0d12", cloak_hi="#4a4658", belt="#2b190c", buckle=False, cuff="#5a5a66",
+                   trim="#8a1420", iris="#3a2214", snakes=True, build=1.05)
+ZAHHAK_BARE = dict(ZAHHAK_IRON, head="none")
+FEREYDUN_KING = dict(FEREYDUN, head="crown", cloak="#7a1020", cloak2="#4a0812", cloak_hi="#c9a24a")

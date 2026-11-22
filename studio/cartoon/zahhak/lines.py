@@ -360,6 +360,49 @@ LINES = [
  ("p9s7a",9,7,"KONDROW","My king! A young man with an ox-headed mace… sits on your throne!","سرورم! جوانی با گرزی گاوسر… بر تختِ تو نشسته است!",
   "My king! A young man with an ox-headed mace... sits on your throne!"),
  ("p9s7b",9,7,"ZAHHAK","What?!","چه؟!",None),
+ # ---- part 10 · Damavand (Shahnameh, «ضحاک» sh 11-12: Kondrow's news, the city rises, Zahhak climbs in by a rope, the mace, Sorush,
+ # Damavand; «فریدون» sh 1: the crown on the first of Mehr, the fires of Mehregan)
+ ("p10s1a",10,1,"ZAHHAK_W","My palace… my throne…","کاخِ من… تختِ من…","My palace... my throne..."),
+ ("p10s1b",10,1,"NARRATOR","Tonight, the snake king comes home… in secret.","امشب شاهِ ماردوش به خانه برمی‌گردد… پنهانی.",
+  "Tonight, the snake king comes home... in secret."),
+ ("p10s3a",10,3,"ZAHHAK","Calm down, Kondrow. Maybe he is only a guest.","آرام باش، کندرو. شاید فقط یک مهمان باشد.",
+  "Calm down, Kon-drow. Maybe he is only a guest."),
+ ("p10s3b",10,3,"KONDROW","A guest? With an ox-headed mace… on your throne?","مهمان؟ با گرزِ گاوسر… روی تختِ تو؟",
+  "A guest? With an ox-headed mace... on your throne?"),
+ ("p10s3c",10,3,"KONDROW","He has your crown now, my king… and your palace.","حالا تاجت دستِ اوست، سرورم… و کاخت.",
+  "He has your crown now, my king... and your palace."),
+ ("p10s3d",10,3,"ZAHHAK","Enough! Get the horses ready. We ride home tonight!","بس است! اسب‌ها را آماده کنید. امشب برمی‌گردیم!",None),
+ ("p10s3e",10,3,"NARRATOR","Zahhak rode back with his army… but the whole city stood with Fereydun.","ضحاک با سپاهش برگشت… اما همه‌ی شهر پشتِ فریدون ایستاد.",
+  "Zah-hawk rode back with his army... but the whole city stood with Fereydoon."),
+ ("p10s3f",10,3,"KAVEH","Not one step closer, snake king! This city is free now!","یک قدم هم جلوتر نیا، شاهِ ماردوش! این شهر حالا آزاد است!",None),
+ ("p10s4a",10,4,"NARRATOR","So Zahhak covered himself in iron, so that no one would know him.","پس ضحاک سرتاپا آهن پوشید تا کسی او را نشناسد.",
+  "So Zah-hawk covered himself in iron, so that no one would know him."),
+ ("p10s4b",10,4,"NARRATOR","And in the dark, he climbed the palace wall with a long rope.","و در تاریکی، با کمندی بلند از دیوارِ کاخ بالا رفت.",None),
+ ("p10s4c",10,4,"SHAHRNAZ","For a thousand years we lived in fear. Now we are free.","هزار سال در ترس زندگی کردیم. حالا آزادیم.",None),
+ ("p10s4d",10,4,"FEREYDUN","No more young men for the snakes. Never again.","دیگر هیچ جوانی خوراکِ ماران نمی‌شود. هرگز.",None),
+ ("p10s4e",10,4,"ZAHHAK_W","Free? In my palace?","آزاد؟ در کاخِ من؟",None),
+ ("p10s5a",10,5,"SHAHRNAZ","Zahhak!","ضحاک!","Zah-hawk!"),
+ ("p10s5b",10,5,"NARRATOR","Fereydun struck with the ox-headed mace… and broke his helmet.","فریدون با گرزِ گاوسر کوبید… و کلاه‌خودش را شکست.",
+  "Fereydoon struck with the ox-headed mace... and broke his helmet."),
+ ("p10s5c",10,5,"SORUSH","Do not strike again! His time has not come.","دوباره نزن! هنوز زمانش نرسیده است.",None),
+ ("p10s5d",10,5,"SORUSH","Bind him, and take him to the mountains, where no one can reach him.","دربندش کن و به کوه ببر، جایی که هیچ‌کس به او نرسد.",None),
+ ("p10s5e",10,5,"FEREYDUN","As you say.","هرچه تو بگویی.",None),
+ ("p10s6a",10,6,"NARRATOR","Fereydun tied him with a rope of lion skin, and took him to Mount Damavand.","فریدون او را با کمندی از چرمِ شیر بست و به کوهِ دماوند برد.",
+  "Fereydoon tied him with a rope of lion skin, and took him to Mount Dama-vaand."),
+ ("p10s6b",10,6,"NARRATOR","There, deep inside the mountain, he chained Zahhak to the rock.","آنجا، در دلِ کوه، ضحاک را به سنگ زنجیر کرد.",
+  "There, deep inside the mountain, he chained Zah-hawk to the rock."),
+ ("p10s6c",10,6,"FEREYDUN","Here you will stay, far from the people you hurt.","همین‌جا می‌مانی، دور از مردمی که آزارشان دادی.",None),
+ ("p10s6d",10,6,"NARRATOR","And the snake king stayed there… in the dark, deep in the mountain.","و شاهِ ماردوش همان‌جا ماند… در تاریکی، در دلِ کوه.",
+  "And the snake king stayed there... in the dark, deep in the mountain."),
+ ("p10s7a",10,7,"NARRATOR","On the first day of the month of Mehr, Fereydun put on the crown.","در روزِ نخستِ مهرماه، فریدون تاج بر سر گذاشت.",
+  "On the first day of the month of Mehr, Fereydoon put on the crown."),
+ ("p10s7b",10,7,"FARANAK","My son… your father would be so proud of you.","پسرم… پدرت چقدر به تو افتخار می‌کرد.","My son. Your father, would be so proud of you."),
+ ("p10s7c",10,7,"FEREYDUN","From today, no one in this land will live in fear.","از امروز، هیچ‌کس در این سرزمین با ترس زندگی نمی‌کند.",None),
+ ("p10s7d",10,7,"NARRATOR","People lit fires everywhere. And so the festival of Mehregan began.","مردم همه‌جا آتش افروختند. و این‌چنین جشنِ مهرگان آغاز شد.",
+  "People lit fires everywhere. And so, the festival of Mehregaan began."),
+ ("p10s7e",10,7,"KAVEH","The snake king is gone! We are free!","شاهِ ماردوش رفت! ما آزادیم!",None),
+ ("p10s7f",10,7,"NARRATOR","And the Kaviani banner flew high over a free land.","و درفشِ کاویانی بر فرازِ سرزمینی آزاد برافراشته شد.",
+  "And the Kaaviani banner flew high, over a free land."),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -420,3 +463,10 @@ FX.update({lid: "aecho=0.8:0.6:70|140:0.22|0.12" for lid in ("p8s6b", "p8s6c")})
 SPEED.update({lid: 1.15 for lid, part, *_ in LINES if part == 9})
 SPEED.update({"p9s1a": 1.2, "p9s1b": 1.3, "p9s3b": 1.1, "p9s3c": 1.2, "p9s3e": 1.3, "p9s4b": 1.25, "p9s5b": 1.2, "p9s5c": 1.3, "p9s5d": 1.35,
               "p9s5e": 1.25, "p9s5f": 1.3, "p9s6b": 1.2, "p9s6d": 1.25, "p9s7a": 1.15, "p9s7b": 1.0})
+SPEED.update({lid: 1.15 for lid, part, *_ in LINES if part == 10})
+SPEED.update({"p10s1a": 1.35, "p10s1b": 1.3, "p10s3b": 1.2, "p10s3c": 1.25, "p10s3d": 1.35, "p10s3e": 1.25, "p10s3f": 1.3, "p10s4b": 1.45,
+              "p10s4c": 1.5, "p10s4d": 1.4, "p10s4e": 1.3, "p10s5a": 1.0, "p10s5b": 1.25, "p10s5c": 1.2, "p10s5d": 1.4, "p10s5e": 1.35,
+              "p10s6a": 1.45, "p10s6b": 1.25, "p10s6c": 1.5, "p10s6d": 1.5, "p10s7a": 1.45, "p10s7b": 1.5, "p10s7c": 1.5, "p10s7e": 1.45,
+              "p10s7f": 1.3})
+FX.update({lid: "aecho=0.8:0.6:70|140:0.22|0.12" for lid in ("p10s5c", "p10s5d")})
+FX.update({"p10s7b": "atempo=0.85"})
