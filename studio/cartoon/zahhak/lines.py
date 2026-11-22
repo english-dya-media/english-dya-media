@@ -319,6 +319,47 @@ LINES = [
  ("p8s7c",8,7,"FEREYDUN","Ferryman! Send your boats over to us!","آهای قایقران! کشتی‌هایت را به این سو بفرست!",None),
  ("p8s7d",8,7,"FERRYMAN","No! The king told me: no one crosses without his seal.","نه! شاه به من گفته: هیچ‌کس بی‌مُهرِ او از رود نمی‌گذرد.",None),
  ("p8s7e",8,7,"FERRYMAN","Not even a fly!","حتی یک مگس!",None),
+ # ---- part 9 · Crossing the Arvand (Shahnameh, «ضحاک» sections 8-10: Fereydun, angry, rides Golrang into the deep river and the army follows;
+ #      they reach Gang Dezhhukht, Zahhak's palace higher than Saturn; he rides in, brings down Zahhak's talisman, overcomes the palace's guards
+ #      (not shown) and sits on the throne; Jamshid's sisters Arnavaz and Shahrnaz: "who are you, in the lion's den?" — "the son of Abtin";
+ #      Zahhak has gone to India; the steward Kondrow bows to the new king and is told to prepare a feast; at dawn he rides to Zahhak)
+ ("p9s1a",9,1,"FEREYDUN","We don't need his boats!","ما به کشتی‌هایش نیازی نداریم!",None),
+ ("p9s1b",9,1,"NARRATOR","And he rode straight into the deep river…","و یک‌راست با اسبش به دلِ رودِ ژرف زد…","And he rode straight into the deep river..."),
+ ("p9s3a",9,3,"NARRATOR","Fereydun was not afraid of the deep, fast water.","فریدون از آبِ ژرف و تند نمی‌ترسید.",
+  "Fereydoon was not afraid of the deep, fast water."),
+ ("p9s3b",9,3,"FEREYDUN","Follow me! Don't be afraid!","دنبالم بیایید! نترسید!",None),
+ ("p9s3c",9,3,"NARRATOR","He rode his horse, Golrang, into the river… and his whole army followed him.",
+  "با اسبش، گلرنگ، به رود زد… و همه‌ی سپاهش به دنبالش آمدند.","He rode his horse, Gol-rang, into the river... and his whole army followed him."),
+ ("p9s3d",9,3,"KAVEH","Hold on to your horses! Keep going!","اسب‌هایتان را محکم بگیرید! ادامه بدهید!",None),
+ ("p9s3e",9,3,"NARRATOR","The horses swam and swam… until they reached the other side.","اسب‌ها شنا کردند و شنا کردند… تا به آن سوی رود رسیدند.",
+  "The horses swam and swam... until they reached the other side."),
+ ("p9s4a",9,4,"NARRATOR","Soon they saw Zahhak's palace, rising higher than the clouds.","طولی نکشید که کاخِ ضحاک را دیدند که سر به ابرها می‌سایید.",
+  "Soon they saw Zah-hawk's palace, rising higher than the clouds."),
+ ("p9s4b",9,4,"FEREYDUN","This palace is full of dark magic. But we will not wait.","این کاخ پر از جادوی سیاه است. اما ما صبر نمی‌کنیم.",None),
+ ("p9s4c",9,4,"NARRATOR","Fereydun rode through the gate, and no guard could stop him.","فریدون از دروازه گذشت و هیچ نگهبانی نتوانست جلویش را بگیرد.",
+  "Fereydoon rode through the gate, and no guard could stop him."),
+ ("p9s4d",9,4,"NARRATOR","On the roof stood Zahhak's magic sign. Fereydun pulled it down.","بر بامِ کاخ طلسمِ ضحاک ایستاده بود. فریدون آن را فرو انداخت.",
+  "On the roof stood Zah-hawk's magic sign. Fereydoon pulled it down."),
+ ("p9s4e",9,4,"NARRATOR","Then he sat on the snake king's throne.","سپس بر تختِ شاهِ ماردوش نشست.",None),
+ ("p9s5a",9,5,"NARRATOR","He set free Arnavaz and Shahrnaz, the sisters of Jamshid.","ارنواز و شهرناز، خواهرانِ جمشید را آزاد کرد.",
+  "He set free Arnavaaz, and Shahrnaaz, the sisters of Jamsheed."),
+ ("p9s5b",9,5,"ARNAVAZ","Who are you? How did you dare to come into the lion's den?","تو کیستی؟ چطور جرئت کردی به لانه‌ی شیر بیایی؟",None),
+ ("p9s5c",9,5,"FEREYDUN","I am Fereydun, the son of Abtin.","من فریدونم، پسرِ آبتین.","I am Fereydoon, the son of Aabteen."),
+ ("p9s5d",9,5,"FEREYDUN","Zahhak killed my father… and the cow that fed me.","ضحاک پدرم را کشت… و گاوی را که به من شیر داد.",
+  "Zah-hawk killed my father... and the cow that fed me."),
+ ("p9s5e",9,5,"ARNAVAZ","Then you are the young man from his dream!","پس تو همان جوانِ خوابِ اویی!",None),
+ ("p9s5f",9,5,"SHAHRNAZ","He is not here. He has gone to India.","او اینجا نیست. به هندوستان رفته است.",None),
+ ("p9s6a",9,6,"NARRATOR","Zahhak's steward, Kondrow, came into the hall… and saw a new king on the throne.",
+  "کندرو، پیشکارِ ضحاک، وارد تالار شد… و شاهی تازه بر تخت دید.","Zah-hawk's steward, Kon-drow, came into the hall... and saw a new king on the throne."),
+ ("p9s6b",9,6,"KONDROW","Long live the king!","زنده باد پادشاه!",None),
+ ("p9s6c",9,6,"FEREYDUN","Prepare a feast. Bring music, and the best food.","جشنی آماده کن. نوازندگان و بهترین خوراک‌ها را بیاور.",None),
+ ("p9s6d",9,6,"KONDROW","At once, my king.","همین حالا، سرورم.",None),
+ ("p9s6e",9,6,"NARRATOR","But before dawn, Kondrow quietly took a fast horse… and rode to Zahhak.",
+  "اما پیش از سپیده‌دم، کندرو آرام بر اسبی تیزرو نشست… و به سوی ضحاک تاخت.",
+  "But before dawn, Kon-drow quietly took a fast horse... and rode to Zah-hawk."),
+ ("p9s7a",9,7,"KONDROW","My king! A young man with an ox-headed mace… sits on your throne!","سرورم! جوانی با گرزی گاوسر… بر تختِ تو نشسته است!",
+  "My king! A young man with an ox-headed mace... sits on your throne!"),
+ ("p9s7b",9,7,"ZAHHAK","What?!","چه؟!",None),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -344,6 +385,8 @@ VOICES = {
  # calm: Sorush, with an echo (FX); 660 ≈ 123 Hz, two semitones down: the ferryman)
  "KAYANUSH": (360, 1.08, 0, 1.0), "PURMAYEH": (690, 1.05, 0, 1.0), "SMITH": (380, 1.05, 0, 1.0), "SORUSH": (170, 1.15, 0, 0.95),
  "FERRYMAN": (660, 1.02, -2, 1.0),
+ # part 9 (270 ≈ 149 Hz, quick: Kondrow the steward; 880 ≈ 179 Hz, soft: Shahrnaz)
+ "KONDROW": (270, 1.0, 0, 1.0), "SHAHRNAZ": (880, 1.1, 0, 0.85),
 }
 # slower takes for learners (per-line length factors, see voices.py)
 SPEED = {lid: 1.15 for lid, part, *_ in LINES if part in (1, 2)}
@@ -374,3 +417,6 @@ SPEED.update({"p8s1b": 1.3, "p8s3b": 1.35, "p8s3e": 1.35, "p8s3f": 1.3, "p8s3j":
               "p8s4h": 1.35, "p8s5a": 1.3, "p8s5b": 1.45, "p8s6e": 1.3, "p8s6f": 1.25, "p8s6i": 1.25, "p8s6j": 1.3, "p8s7b": 1.25,
               "p8s7e": 1.2})
 FX.update({lid: "aecho=0.8:0.6:70|140:0.22|0.12" for lid in ("p8s6b", "p8s6c")})
+SPEED.update({lid: 1.15 for lid, part, *_ in LINES if part == 9})
+SPEED.update({"p9s1a": 1.2, "p9s1b": 1.3, "p9s3b": 1.1, "p9s3c": 1.2, "p9s3e": 1.3, "p9s4b": 1.25, "p9s5b": 1.2, "p9s5c": 1.3, "p9s5d": 1.35,
+              "p9s5e": 1.25, "p9s5f": 1.3, "p9s6b": 1.2, "p9s6d": 1.25, "p9s7a": 1.15, "p9s7b": 1.0})

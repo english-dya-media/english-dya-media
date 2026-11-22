@@ -1405,3 +1405,55 @@ def arvand_far():
     s += "".join(f'<rect x="{x}" y="1296" width="22" height="150" fill="#5a3a20" stroke="#2a1a10" stroke-width="3"/>' for x in (90, 420, 760, 1010))
     return svg_render(s)
 
+
+# ------------------------------------------------------------------ part 9: Gang Dezhhukht, Zahhak's palace "higher than Saturn"
+def dezh(pal="dusk"):
+    """Zahhak's palace in Gang Dezhhukht at dusk: a black fortress-palace on a rocky rise, gold trim, a great central tower whose top
+    (x 470-610, y 330) rises above a band of cloud (y 560-700); the talisman on that tower top is drawn by the scenes (DEZH_TOP);
+    the gate (arch x 470-610, sill y 1250) with torches; a road from the bottom to the gate (riders and people at y 1320-1750)"""
+    r = random.Random(901)
+    sky = ([(0, "#2a2050", 1), (0.32, "#7a4a70", 1), (0.48, "#e8906a", 1), (0.56, "#ffd0a0", 1)] if pal == "dusk" else
+           [(0, "#060a1e", 1), (0.4, "#1a1e44", 1), (0.56, "#3a305a", 1)])
+    s = ("<defs>" + FILTERS + lg("dsky", sky) + lg("drock", [(0, "#5a4a4a", 1), (1, "#2a2224", 1)]) + lg("droad", [(0, "#a8866a", 1), (1, "#6a5040", 1)]) +
+         rg("dglow", 540, 1180, 300, [(0, "#ffae5a", 0.5), (1, "#ffae5a", 0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#dsky)"/>'
+    if pal == "night":
+        s += stars(902, 160, 900)
+    s += f'<path d="{hill(W, 1060, 60, 903)}" fill="#4a3a4e" opacity="0.9"/>'
+    for x, h in ((60, 160), (160, 120), (900, 170), (1020, 130)):
+        s += palm(x, 1120, h, col="#2a2a30", lean=r.uniform(-0.15, 0.15))
+    # the rocky rise
+    s += '<path d="M 60 1330 C 160 1160, 300 1110, 440 1100 L 660 1100 C 800 1110, 930 1170, 1040 1330 Z" fill="url(#drock)" stroke="#1a1416" stroke-width="4"/>'
+    s += _strata(904, 120, 980, 1130, 1320, 26, "#1a1416", 0.45, 3, 0.1)
+    # walls and towers (black stone, gold trim)
+    blk, blk2, gold = "#16121a", "#241e2a", GOLD
+    s += f'<path d="M 170 1250 L 170 900 L 910 900 L 910 1250 Z" fill="{blk}" stroke="#000" stroke-width="3"/>'
+    s += "".join(f'<rect x="{x}" y="882" width="26" height="22" fill="{blk}"/>' for x in range(172, 900, 44))
+    s += f'<path d="M 170 930 L 910 930" stroke="{gold}" stroke-width="5" opacity="0.7"/>'
+    for x, top in ((170, 760), (330, 700), (750, 700), (910, 760)):
+        s += (f'<rect x="{x - 45}" y="{top}" width="90" height="{1250 - top}" fill="{blk2}" stroke="#000" stroke-width="3"/>'
+              + "".join(f'<rect x="{x - 45 + k * 22}" y="{top - 18}" width="14" height="20" fill="{blk2}"/>' for k in range(5)) +
+              f'<path d="M {x - 45} {top + 30} L {x + 45} {top + 30}" stroke="{gold}" stroke-width="4" opacity="0.7"/>'
+              f'<rect x="{x - 8}" y="{top + 70}" width="16" height="30" rx="6" fill="#ffb24a" opacity="0.75"/>')
+    # the great central tower, its top above the clouds
+    s += (f'<path d="M 440 1250 L 440 600 L 470 600 L 470 330 L 610 330 L 610 600 L 640 600 L 640 1250 Z" fill="{blk}" stroke="#000" stroke-width="3"/>'
+          f'<rect x="470" y="330" width="40" height="270" fill="{blk2}" opacity="0.8"/>'
+          + "".join(f'<rect x="{472 + k * 28}" y="312" width="18" height="20" fill="{blk}"/>' for k in range(5)) +
+          f'<path d="M 470 360 L 610 360 M 440 630 L 640 630" stroke="{gold}" stroke-width="5" opacity="0.75"/>'
+          + serpent_emblem(540, 760, 0.5) +
+          "".join(f'<rect x="{x}" y="{y}" width="12" height="24" rx="5" fill="#ffb24a" opacity="0.65"/>' for x, y in ((500, 420), (560, 470), (520, 980), (580, 860))))
+    # the cloud band across the tower
+    s += clouds(W, 905, [600, 640, 690], col="#f6c8b8" if pal == "dusk" else "#4a4a70", hi="#fff0e0" if pal == "dusk" else "#6a6a90", op=0.75)
+    s += f'<rect x="0" y="560" width="{W}" height="140" fill="{"#f0b8a8" if pal == "dusk" else "#30305a"}" opacity="0.35" filter="url(#b20)"/>'
+    # the gate
+    s += (f'<path d="M 470 1250 L 470 1120 Q 540 1040, 610 1120 L 610 1250 Z" fill="#0a0608" stroke="{gold}" stroke-width="6"/>'
+          '<rect width="1080" height="1920" fill="url(#dglow)"/>'
+          f'<path d="M 440 1260 L 640 1260 L 700 1340 L 380 1340 Z" fill="#3a2e30" stroke="#120c0e" stroke-width="3"/>')
+    # the road
+    s += '<path d="M 380 1340 L 700 1340 L 1000 1920 L 80 1920 Z" fill="url(#droad)"/>'
+    s += '<path d="M -40 1330 L 380 1340 L 80 1920 L -40 1920 Z" fill="#4a3a30"/><path d="M 700 1340 L 1120 1330 L 1120 1920 L 1000 1920 Z" fill="#4a3a30"/>'
+    s += grass_tufts(906, 1360, 1900, 30, col="#3a3a2a", hi="#5a5a3a")
+    return svg_render(s)
+
+
+DEZH_TOP = (540, 312)     # where the talisman stands on the great tower
