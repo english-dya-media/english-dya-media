@@ -139,3 +139,30 @@ KAVEH_SON = spec(kind="man", skin="tan", hair="teen_curly", hair_col="#1a120c", 
 KONDROW = spec(kind="man", skin="light", hair="short", hair_col="#120c09", beard="short", beard_col="#120c09", head="turban", head_col="#2a1a2a",
                garment="robe", col="#5a2a5a", col2="#3a1a3a", pattern="plain", belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#c9a24a",
                iris="#2a1a10", build=0.88)
+
+# ---- part 8: Fereydun's two older brothers (Abtin's sons too: the same light skin and dark hair; Kayanush the eldest in green scale armour and a
+# brown cloak, Purmayeh in rust-brown scales, a red cap and a dark blue cloak), two blacksmiths who forge the mace (leather aprons), Sorush (a
+# figure of light: white and gold, a diadem; soft wings and a glow are drawn by the scenes), the river keeper of the Arvand (a black beard,
+# a sand-coloured turban, a blue-grey robe), Fereydun's soldiers (bronze helmets, red plumes)
+KAYANUSH = spec(kind="man", skin="light", hair="long_curly", hair_col="#241810", beard="full", beard_col="#241810", head="none", garment="tunic",
+                col="#3a5a3a", col2="#24402a", pattern="scales", scale_col="#9ab89a", cloak="#5a4630", cloak2="#3a2c1e", cloak_hi="#7a6446",
+                belt="#8a6a3a", cuff="#8a6a3a", trim="#8a6a3a", iris="#3a2214", build=1.1, bs=1.04)
+PURMAYEH = spec(kind="man", skin="light", hair="short", hair_col="#241810", beard="short", beard_col="#241810", head="cap", head_col="#7a2a20",
+                garment="tunic", col="#7a4a2a", col2="#5a321c", pattern="scales", scale_col="#d0a070", cloak="#2a3a5a", cloak2="#1a2640",
+                cloak_hi="#3e5480", belt="#3a2414", cuff="#a8946e", trim="#a8946e", iris="#3a2214", build=1.02, bs=1.02)
+SMITH = spec(kind="man", skin="tan", hair="short", hair_col="#1a120c", beard="short", beard_col="#1a120c", head="cap", head_col="#5a4030",
+             garment="tunic", col="#5a6470", col2="#3e4650", pattern="plain", apron="#5a3418", apron_strap="#2a180c", apron_hem=1010, belt="#2b190c",
+             buckle=False, cuff="#7a6a5a", trim="#7a6a5a", trousers="#3a2e26", boots="#24150c", iris="#2a1a10", build=1.12, bs=1.0)
+SMITH_2 = dict(SMITH, skin="olive", beard="full", beard_col="#4a3a30", head="none", hair_col="#2a1e16", col="#6a4a3a", col2="#4a3226",
+               apron="#6a3e1e", build=1.05)
+SORUSH = spec(kind="woman", skin="light", hair="none", beard=None, head="scarf", scarf_col="#fff8ea", scarf_edge="#e8c060", diadem=True,
+              garment="dress", col="#fbf4e2", col2="#e6d6b0", pattern="plain", hs=0.95, bs=1.0, belt=None, cuff="#e8c060", trim="#e8c060",
+              iris="#3a6a8a")
+FERRYMAN = spec(kind="man", skin="olive", hair="short", hair_col="#120c09", beard="full", beard_col="#16100c", head="turban", head_col="#d8c49a",
+                garment="robe", col="#4a6a7a", col2="#304a58", pattern="plain", belt="#3a2414", buckle=False, sash=None, cuff="#8aa0aa",
+                trim="#8aa0aa", iris="#2a1a10", build=1.08)
+FSOLDIER = spec(kind="man", skin="tan", hair="short", beard="short", beard_col="#1a120c", head="helmet", helm=("#6a4a22", "#a8782a", "#e0b25a"),
+                plume="#9a1a1a", garment="tunic", col="#6a5a46", col2="#4a3e30", pattern="scales", scale_col="#c8b490", belt="#2b190c", buckle=False,
+                cuff="#8a7a5a", trim="#8a7a5a", iris="#2a1a10")
+FSOLDIER_2 = dict(FSOLDIER, skin="light", beard="full", col="#4a5a6a", col2="#2e3a46", plume="#c9a24a")
+FSOLDIER_3 = dict(FSOLDIER, skin="olive", beard="light", col="#7a4a3a", col2="#5a3226", helm=("#5a5a62", "#8a8a96", "#c8c8d0"))

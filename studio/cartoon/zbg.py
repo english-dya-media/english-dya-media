@@ -1169,3 +1169,239 @@ def market(pal="day"):
     s += ('<path d="M 400 1250 L 560 1250 L 552 1196 L 408 1196 Z" fill="#6a4a30" stroke="#3a2418" stroke-width="3"/>'
           '<rect x="414" y="1200" width="132" height="14" fill="#5a8aa0" opacity="0.8"/>')
     return svg_render(s)
+
+
+# ------------------------------------------------------------------ part 8: Fereydun's camp below a rocky hill, the hilltop at night, the Arvand
+CAMP = {   # sky stops, far mountains (fill, snow), hills (far, near), ground (top, bottom), rock (fill, dark, lit), tent (cloth, shade, trim)
+    "day": dict(sky=[(0, "#4a86c8", 1), (0.35, "#9ac4e8", 1), (0.5, "#eef2ea", 1)], mts=("#8aa0c0", "#ffffff"), hills=("#a2ac72", "#86965a"),
+                ground=("#c2ac78", "#8a7450"), rock=("#a08e7a", "#665848", "#d2c0a6"), tent=("#f2e8d2", "#cbb998", "#a8302a"), pine=("#3e5a3a", "#2a4028")),
+    "dawn": dict(sky=[(0, "#4e6aa6", 1), (0.3, "#c4b0c4", 1), (0.44, "#ffd2a0", 1), (0.5, "#fff0d6", 1)], mts=("#8a92b4", "#fff4ec"),
+                 hills=("#98a074", "#7a8a5c"), ground=("#b8a07a", "#76604a"), rock=("#94807a", "#56484a", "#e0b8a0"), tent=("#f6e2cc", "#caa890", "#a8302a"),
+                 pine=("#3a4e3e", "#26362c")),
+    "night": dict(sky=[(0, "#060a1e", 1), (0.35, "#141e44", 1), (0.5, "#2a325c", 1)], mts=("#2a3456", "#a8b4d8"), hills=("#20283a", "#1a2230"),
+                  ground=("#2c2c34", "#16161c"), rock=("#3e4050", "#22222e", "#6a7088"), tent=("#9a98a8", "#66647a", "#5e1e22"), pine=("#141e1e", "#0c1414")),
+}
+CAMP_FLANK = [(905, 612), (858, 668), (812, 744), (770, 830), (734, 916), (700, 1010), (668, 1100), (640, 1180), (622, 1236)]   # the hill's left flank
+CAMP_TENT = (360, 1292)       # Fereydun's tent: base centre (door at x 330-390)
+CAMP_FIRE = (640, 1392)       # the stone ring of the campfire
+
+
+def _tent(x, y, w, h, cloth, shade, trim, door=True, lit=False, pennant=None, sc=1.0):
+    """a round pavilion: walls with a scalloped valance, a cone roof, a pole with a pennant; base centre (x, y)"""
+    wy = y - h * 0.42
+    s = (f'<path d="M {x - w * 0.46:.0f} {y} L {x - w * 0.46:.0f} {wy:.0f} L {x + w * 0.46:.0f} {wy:.0f} L {x + w * 0.46:.0f} {y} Z" fill="{cloth}" stroke="#3a2418" stroke-width="{3 * sc:.1f}"/>'
+         f'<path d="M {x - w * 0.46:.0f} {y} L {x - w * 0.46:.0f} {wy:.0f} L {x - w * 0.2:.0f} {wy:.0f} L {x - w * 0.24:.0f} {y} Z" fill="{shade}" opacity="0.7"/>')
+    for k in range(1, 6):
+        xx = x - w * 0.46 + k * w * 0.92 / 6
+        s += f'<path d="M {xx:.0f} {wy:.0f} L {xx:.0f} {y}" stroke="{shade}" stroke-width="{2 * sc:.1f}" opacity="0.8"/>'
+    if door:
+        dc = "#ffb45a" if lit else "#2a1a12"
+        s += (f'<path d="M {x - w * 0.09:.0f} {y} L {x:.0f} {wy + h * 0.05:.0f} L {x + w * 0.09:.0f} {y} Z" fill="{dc}"/>'
+              f'<path d="M {x - w * 0.09:.0f} {y} L {x:.0f} {wy + h * 0.05:.0f} L {x - w * 0.15:.0f} {y} Z" fill="{shade}" stroke="#3a2418" stroke-width="{2 * sc:.1f}"/>'
+              f'<path d="M {x + w * 0.09:.0f} {y} L {x:.0f} {wy + h * 0.05:.0f} L {x + w * 0.15:.0f} {y} Z" fill="{shade}" stroke="#3a2418" stroke-width="{2 * sc:.1f}"/>')
+    s += (f'<path d="M {x - w * 0.52:.0f} {wy + 4:.0f} L {x:.0f} {y - h:.0f} L {x + w * 0.52:.0f} {wy + 4:.0f} Z" fill="{cloth}" stroke="#3a2418" stroke-width="{3 * sc:.1f}"/>'
+          f'<path d="M {x - w * 0.52:.0f} {wy + 4:.0f} L {x:.0f} {y - h:.0f} L {x - w * 0.12:.0f} {wy + 4:.0f} Z" fill="{shade}" opacity="0.6"/>')
+    n = 9
+    for k in range(n):
+        xa = x - w * 0.52 + k * w * 1.04 / n; xb = xa + w * 1.04 / n
+        s += (f'<path d="M {xa:.0f} {wy:.0f} L {xb:.0f} {wy:.0f} Q {(xa + xb) / 2:.0f} {wy + h * 0.09:.0f} {xa:.0f} {wy:.0f} Z" fill="{trim}" stroke="#3a2418" stroke-width="{1.6 * sc:.1f}"/>')
+    s += f'<path d="M {x - w * 0.52:.0f} {wy:.0f} L {x + w * 0.52:.0f} {wy:.0f}" stroke="{trim}" stroke-width="{6 * sc:.1f}"/>'
+    s += f'<path d="M {x:.0f} {y - h:.0f} L {x:.0f} {y - h - h * 0.16:.0f}" stroke="#4a3018" stroke-width="{5 * sc:.1f}"/><circle cx="{x:.0f}" cy="{y - h - h * 0.16:.0f}" r="{6 * sc:.1f}" fill="#c9a24a"/>'
+    if pennant:
+        py = y - h - h * 0.14
+        s += f'<path d="M {x + 2:.0f} {py:.0f} L {x + 2 + h * 0.2:.0f} {py + h * 0.03:.0f} L {x + 2:.0f} {py + h * 0.07:.0f} Z" fill="{pennant}" stroke="#3a2418" stroke-width="{1.5 * sc:.1f}"/>'
+    return s
+
+
+def camp(pal="day"):
+    """Fereydun's camp in a valley below a rocky hill: snowy Alborz far away; at the right the steep hill (summit plateau x 860-1080, y ~600;
+    its left flank CAMP_FLANK runs down to the valley floor at about (620, 1240)); at the left Fereydun's big tent (base centre CAMP_TENT,
+    door at x 330-390) with smaller tents behind it; a stone ring for the campfire at CAMP_FIRE. People stand at y 1300-1800.
+    pal "day" | "dawn" | "night" (moon at the upper left, the tent door lit)"""
+    p = CAMP[pal]
+    r = random.Random(801)
+    s = ("<defs>" + FILTERS + lg("csky", p["sky"]) + lg("cgr", [(0, p["ground"][0], 1), (1, p["ground"][1], 1)]) +
+         lg("crock", [(0, p["rock"][0], 1), (1, p["rock"][1], 1)]) +
+         rg("csun", 200, 860, 600, [(0, "#fff4dc", 0.9), (0.15, "#ffe0b0", 0.4), (1, "#ffd8a0", 0)]) +
+         rg("cmoon", 230, 380, 260, [(0, "#dfe6ff", 0.5), (1, "#dfe6ff", 0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#csky)"/>'
+    if pal == "night":
+        s += stars(802, 160, 900) + '<rect width="1080" height="1920" fill="url(#cmoon)"/><circle cx="230" cy="380" r="36" fill="#eef2ff"/>'
+    else:
+        s += clouds(W, 803, [380, 520, 660], col="#ffffff" if pal == "day" else "#ffd8c4", hi="#fff6e8", op=0.45)
+    if pal == "dawn":
+        s += '<rect width="1080" height="1920" fill="url(#csun)"/><circle cx="200" cy="860" r="44" fill="#fffaf0"/>'
+    pk = [(-60, 960), (80, 800), (220, 900), (360, 760), (520, 880), (640, 780), (760, 900), (900, 820), (1140, 960)]
+    s += f'<path d="M -80 1040 ' + " ".join(f"L {x} {y}" for x, y in pk) + f' L 1160 1040 Z" fill="{p["mts"][0]}"/>'
+    for (xa, ya), (xb, yb), (xc, yc) in zip(pk, pk[1:], pk[2:]):
+        if yb < ya and yb < yc:
+            s += (f'<path d="M {xb} {yb} L {xb - (xb - xa) * 0.35:.0f} {yb + (ya - yb) * 0.35:.0f} L {xb - 10} {yb + (ya - yb) * 0.28:.0f} '
+                  f'L {xb + 6} {yb + (ya - yb) * 0.38:.0f} L {xb + (xc - xb) * 0.3:.0f} {yb + (yc - yb) * 0.3:.0f} Z" fill="{p["mts"][1]}" opacity="0.9"/>')
+    s += f'<rect x="0" y="960" width="{W}" height="90" fill="#ffffff" opacity="{0.05 if pal == "night" else 0.14}" filter="url(#b20)"/>'
+    s += f'<path d="{hill(W, 1070, 80, 804)}" fill="{p["hills"][0]}"/>'
+    s += f'<path d="{hill(W, 1130, 50, 805)}" fill="{p["hills"][1]}"/>'
+    s += f'<rect x="0" y="1120" width="{W}" height="{H - 1120}" fill="url(#cgr)"/>'
+    for x, h in ((470, 150), (520, 120), (90, 130)):
+        s += poplar(x, 1130, h, col=p["hills"][1], dark=p["pine"][1])
+    # small tents of the army behind
+    for x, y, w, h in ((70, 1150, 120, 110), (215, 1128, 100, 92), (560, 1150, 110, 100), (150, 1196, 170, 150)):
+        s += _tent(x, y, w, h, p["tent"][0], p["tent"][1], p["tent"][2], door=True, lit=(pal == "night"), sc=0.6)
+    # the rocky hill at the right
+    fl = CAMP_FLANK
+    d = (f"M 560 1320 C 590 1290, 610 1262, {fl[-1][0]} {fl[-1][1]} " + " ".join(f"L {x} {y}" for x, y in reversed(fl[:-1])) +
+         " C 940 590, 1000 584, 1100 578 L 1100 1320 Z")
+    s += f'<path d="{d}" fill="url(#crock)" stroke="#2a221c" stroke-width="4"/>'
+    s += (f'<path d="M 905 612 C 940 590, 1000 584, 1100 578 L 1100 610 C 1000 616, 950 622, 905 640 Z" fill="{p["hills"][1]}" opacity="0.9"/>')
+    s += _strata(806, 700, 1080, 640, 1280, 34, p["rock"][1], 0.5, 4, 0.35)
+    s += _strata(807, 640, 1060, 700, 1260, 16, p["rock"][2], 0.35, 3, 0.3)
+    s += f'<path d="M {fl[0][0]} {fl[0][1]} ' + " ".join(f"L {x + 10} {y + 6}" for x, y in fl[1:]) + f'" stroke="{p["rock"][2]}" stroke-width="6" fill="none" opacity="0.55"/>'
+    s += boulder(1020, 590, 44, 808, col=p["rock"][0], dark=p["rock"][1], lit=p["rock"][2]) + boulder(960, 1200, 60, 809, col=p["rock"][0], dark=p["rock"][1], lit=p["rock"][2])
+    s += pine(1050, 590, 190, col=p["pine"][0], dark=p["pine"][1]) + pine(990, 600, 140, col=p["pine"][0], dark=p["pine"][1])
+    # Fereydun's tent
+    tx, ty = CAMP_TENT
+    s += _tent(tx, ty, 380, 360, p["tent"][0], p["tent"][1], p["tent"][2], door=True, lit=(pal == "night"), pennant="#8a1a1a")
+    # the stone ring of the campfire
+    fx, fy = CAMP_FIRE
+    s += f'<ellipse cx="{fx}" cy="{fy}" rx="74" ry="20" fill="#2a2420" opacity="0.6"/>'
+    for k in range(11):
+        a = 2 * math.pi * k / 11
+        s += boulder(fx + 72 * math.cos(a), fy + 18 * math.sin(a), 12, 810 + k, col=p["rock"][0], dark=p["rock"][1], lit=p["rock"][2])
+    s += grass_tufts(811, 1160, 1900, 60, col=p["hills"][1], hi=p["hills"][0])
+    for k in range(60):
+        x = r.uniform(0, W); y = r.uniform(1220, H - 10); sc = 0.5 + (y - 1180) / 600
+        s += f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{r.uniform(8, 20) * sc:.0f}" ry="{r.uniform(3, 7) * sc:.0f}" fill="{p["ground"][1]}" opacity="{r.uniform(0.2, 0.4):.2f}"/>'
+    if pal == "night":
+        s += '<rect x="0" y="0" width="1080" height="1920" fill="#0a0e24" opacity="0.18"/>'
+    return svg_render(s)
+
+
+def hilltop(pal="night"):
+    """the top of the rocky hill above the camp at night: the camp far below (small tents and fires at y 1150-1230, x 140-620), mountains,
+    stars and the moon; the bare rock of the summit in front from y ~1300 (people stand at feet y 1450-1700; the rock to push is drawn by the scenes)"""
+    p = CAMP["night"]
+    s = ("<defs>" + FILTERS + lg("hsky", p["sky"]) + lg("hrock", [(0, "#4a4a58", 1), (1, "#1c1c24", 1)]) +
+         rg("hmoon", 860, 330, 300, [(0, "#dfe6ff", 0.55), (1, "#dfe6ff", 0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#hsky)"/>' + stars(821, 200, 1000)
+    s += '<rect width="1080" height="1920" fill="url(#hmoon)"/><circle cx="860" cy="330" r="40" fill="#eef2ff"/>'
+    pk = [(-60, 1000), (100, 860), (260, 960), (420, 820), (600, 940), (760, 860), (920, 980), (1140, 900)]
+    s += f'<path d="M -80 1100 ' + " ".join(f"L {x} {y}" for x, y in pk) + f' L 1160 1100 Z" fill="{p["mts"][0]}"/>'
+    s += f'<path d="{hill(W, 1110, 50, 822)}" fill="{p["hills"][0]}"/>'
+    s += f'<rect x="0" y="1100" width="{W}" height="300" fill="{p["hills"][1]}"/>'
+    # the camp far below
+    for k, (x, y, w) in enumerate(((160, 1196, 54), (250, 1182, 40), (330, 1210, 70), (470, 1190, 46), (560, 1214, 40), (90, 1220, 36))):
+        s += _tent(x, y, w, w * 0.9, p["tent"][0], p["tent"][1], p["tent"][2], door=True, lit=True, sc=0.3)
+    for x, y in ((380, 1236), (520, 1240), (210, 1232)):
+        s += f'<circle cx="{x}" cy="{y}" r="30" fill="#ff9a4a" opacity="0.35" filter="url(#b6)"/><circle cx="{x}" cy="{y}" r="5" fill="#ffd27a"/>'
+    # the summit rock in front
+    d = "M -40 1320 C 160 1290, 360 1300, 560 1286 C 760 1272, 920 1300, 1120 1290 L 1120 1920 L -40 1920 Z"
+    s += f'<path d="{d}" fill="url(#hrock)" stroke="#121218" stroke-width="4"/>'
+    s += '<path d="M -40 1320 C 160 1290, 360 1300, 560 1286 C 760 1272, 920 1300, 1120 1290" stroke="#7a80a0" stroke-width="5" fill="none" opacity="0.6"/>'
+    s += _strata(823, -20, 1080, 1340, 1880, 40, "#101016", 0.5, 4, 0.1)
+    s += boulder(120, 1420, 56, 824, col="#3e4050", dark="#22222e", lit="#6a7088") + boulder(980, 1460, 70, 825, col="#3e4050", dark="#22222e", lit="#6a7088")
+    s += pine(1030, 1330, 300, col="#121a1c", dark="#0a1012") + pine(60, 1310, 240, col="#121a1c", dark="#0a1012")
+    return svg_render(s)
+
+
+ARV = dict(sky=[(0, "#5a86c4", 1), (0.36, "#a8c6de", 1), (0.5, "#f6e4c6", 1)], far="#9aa29a", far2="#7e8a78", water=("#6a9aa8", "#3a6a7a"),
+           sand=("#d2b88a", "#9a7e56"), reed=("#6a7a3a", "#4a5a2a"), palm="#3e5a34")
+
+
+def _boat(x, y, s=1.0, col="#6a4424", flip=False):
+    """a flat river boat (seen from the side), waterline centre (x, y)"""
+    f = -1 if flip else 1
+    return (f'<g transform="translate({x:.0f},{y:.0f}) scale({f * s:.3f},{s:.3f})">'
+            f'<path d="M -150 -40 L 150 -40 C 170 -40, 196 -60, 206 -82 L 190 -20 C 170 10, 120 16, 60 16 L -110 16 C -150 16, -176 -10, -186 -50 Z" fill="{col}" stroke="#2a1a10" stroke-width="4"/>'
+            f'<path d="M -170 -40 L 196 -40" stroke="#8a5a32" stroke-width="7"/><path d="M -120 -36 L -120 10 M 0 -36 L 0 14 M 110 -36 L 110 12" stroke="#3a2414" stroke-width="3" opacity="0.6"/>'
+            f'<path d="M -40 -40 L 60 -140" stroke="#4a3018" stroke-width="6"/><path d="M 60 -140 L 80 -160" stroke="#4a3018" stroke-width="10"/></g>')
+
+
+def _reeds(seed, x0, x1, y, n, h=120, col="#6a7a3a", dark="#4a5a2a"):
+    r = random.Random(seed); out = ""
+    for _ in range(n):
+        x = r.uniform(x0, x1); hh = h * r.uniform(0.6, 1.2); lean = r.uniform(-0.25, 0.25) * hh
+        out += f'<path d="M {x:.0f} {y + r.uniform(-6, 6):.0f} q {lean * 0.3:.0f} {-hh * 0.5:.0f} {lean:.0f} {-hh:.0f}" stroke="{r.choice((col, dark))}" stroke-width="{r.uniform(3, 5):.1f}" fill="none" stroke-linecap="round"/>'
+        if r.random() < 0.3:
+            out += f'<ellipse cx="{x + lean:.0f}" cy="{y - hh:.0f}" rx="5" ry="16" fill="#7a5a32" transform="rotate({lean / hh * 50:.0f},{x + lean:.0f},{y - hh:.0f})"/>'
+    return out
+
+
+def arvand():
+    """the Arvand (Tigris) in the afternoon, seen from the near bank: low hills and palms far away; on the far bank (y ~980) the river keeper's
+    hut and his jetty with three boats (x 640-900); the wide river from y 990 to 1350; the near bank of sand and reeds from y 1340
+    (people and riders stand at y 1420-1800)"""
+    p = ARV
+    r = random.Random(831)
+    s = ("<defs>" + FILTERS + lg("vsky", p["sky"]) + lg("vwat", [(0, p["water"][0], 1), (1, p["water"][1], 1)]) +
+         lg("vsand", [(0, p["sand"][0], 1), (1, p["sand"][1], 1)]) +
+         rg("vsun", 860, 700, 520, [(0, "#fff6dc", 0.8), (0.2, "#ffe8b8", 0.3), (1, "#ffd8a0", 0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#vsky)"/>' + clouds(W, 832, [420, 560, 700], col="#ffffff", hi="#fff6e8", op=0.45)
+    s += '<rect width="1080" height="1920" fill="url(#vsun)"/><circle cx="860" cy="700" r="42" fill="#fffaf0" opacity="0.95"/>'
+    s += f'<path d="{hill(W, 930, 60, 833)}" fill="{p["far"]}" opacity="0.8"/>'
+    s += f'<path d="{hill(W, 965, 30, 834)}" fill="{p["far2"]}"/>'
+    for x, h in ((60, 150), (150, 120), (300, 170), (420, 110), (560, 140), (980, 160), (1050, 120)):
+        s += palm(x, 985, h, col=p["palm"], lean=r.uniform(-0.2, 0.2))
+    s += f'<rect x="0" y="975" width="{W}" height="22" fill="{p["sand"][1]}"/>'
+    # the river keeper's hut and his jetty with the boats (far bank)
+    s += ('<g transform="translate(770,985) scale(0.42)"><path d="M -120 0 L -120 -150 L 120 -150 L 120 0 Z" fill="#b8946a" stroke="#4a3420" stroke-width="5"/>'
+          '<path d="M -150 -140 C -60 -230, 60 -230, 150 -140 Z" fill="#c8a85a" stroke="#6a4a20" stroke-width="5"/>'
+          '<path d="M -30 0 L -30 -90 L 30 -90 L 30 0 Z" fill="#2a1a10"/></g>')
+    s += '<path d="M 640 996 L 900 996 L 900 1004 L 640 1004 Z" fill="#6a4a2a"/>' + "".join(f'<path d="M {x} 1000 L {x} 1016" stroke="#4a3018" stroke-width="3"/>' for x in range(650, 900, 40))
+    for k, x in enumerate((690, 780, 860)):
+        s += _boat(x, 1020 + 4 * k, 0.17, col=("#6a4424", "#5a3a20", "#7a4e2a")[k])
+    s += _reeds(835, -20, 600, 992, 50, 40, p["reed"][0], p["reed"][1]) + _reeds(836, 920, 1100, 992, 20, 40, p["reed"][0], p["reed"][1])
+    # the river
+    s += f'<rect x="0" y="996" width="{W}" height="380" fill="url(#vwat)"/>'
+    for k in range(90):
+        y = r.uniform(1004, 1360); w = r.uniform(20, 90) * (0.5 + (y - 1000) / 360)
+        x = r.uniform(-40, W)
+        s += f'<path d="M {x:.0f} {y:.0f} L {x + w:.0f} {y:.0f}" stroke="#e8f4f4" stroke-width="{1.5 + (y - 1000) / 180:.1f}" opacity="{r.uniform(0.25, 0.6):.2f}"/>'
+    for k in range(40):
+        y = r.uniform(1010, 1200); x = 860 + r.uniform(-70, 70) * (1 + (y - 1000) / 150)
+        s += f'<path d="M {x:.0f} {y:.0f} L {x + r.uniform(10, 30):.0f} {y:.0f}" stroke="#fff8e0" stroke-width="3" opacity="{r.uniform(0.4, 0.9):.2f}"/>'
+    # the near bank
+    s += f'<path d="M -40 1372 C 200 1340, 420 1356, 640 1340 C 820 1328, 960 1346, 1120 1336 L 1120 1920 L -40 1920 Z" fill="url(#vsand)"/>'
+    s += f'<path d="M -40 1372 C 200 1340, 420 1356, 640 1340 C 820 1328, 960 1346, 1120 1336" stroke="#efe0c0" stroke-width="5" fill="none" opacity="0.7"/>'
+    s += _reeds(837, -30, 230, 1380, 40, 170, p["reed"][0], p["reed"][1]) + _reeds(838, 880, 1110, 1370, 36, 160, p["reed"][0], p["reed"][1])
+    s += grass_tufts(839, 1400, 1900, 34, col=p["reed"][1], hi=p["reed"][0])
+    for k in range(50):
+        x = r.uniform(0, W); y = r.uniform(1400, H - 10); sc = 0.5 + (y - 1380) / 600
+        s += f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{r.uniform(8, 20) * sc:.0f}" ry="{r.uniform(3, 7) * sc:.0f}" fill="{p["sand"][1]}" opacity="{r.uniform(0.2, 0.4):.2f}"/>'
+    return svg_render(s)
+
+
+def arvand_far():
+    """the river keeper's jetty, close: his reed-and-mud hut at the right (x 600-1080, base y 1250), palms behind, the jetty of planks across
+    the picture (the keeper stands on it at feet y ~1270), boats moored below it, the water from y 1290 down"""
+    p = ARV
+    r = random.Random(841)
+    s = ("<defs>" + FILTERS + lg("fsky", p["sky"]) + lg("fwat", [(0, p["water"][0], 1), (1, p["water"][1], 1)]) +
+         rg("fsun", 200, 760, 520, [(0, "#fff6dc", 0.7), (1, "#ffd8a0", 0)]) + "</defs>")
+    s += f'<rect width="{W}" height="{H}" fill="url(#fsky)"/>' + clouds(W, 842, [360, 520], col="#ffffff", hi="#fff6e8", op=0.45)
+    s += '<rect width="1080" height="1920" fill="url(#fsun)"/>'
+    s += f'<path d="{hill(W, 1000, 70, 843)}" fill="{p["far"]}" opacity="0.8"/>'
+    for x, h in ((80, 520), (250, 420), (430, 560), (980, 470)):
+        s += palm(x, 1180, h, col=p["palm"], lean=r.uniform(-0.15, 0.15))
+    s += f'<rect x="0" y="1100" width="{W}" height="200" fill="{p["sand"][0]}"/>'
+    s += _reeds(844, -20, 1100, 1180, 60, 110, p["reed"][0], p["reed"][1])
+    # the hut
+    s += ('<g transform="translate(840,1250) scale(1.6)"><path d="M -150 0 L -150 -190 L 150 -190 L 150 0 Z" fill="#b8946a" stroke="#4a3420" stroke-width="4"/>'
+          '<path d="M -150 0 L -150 -190 L -90 -190 L -96 0 Z" fill="#8a6a46" opacity="0.6"/>'
+          '<path d="M -190 -176 C -80 -300, 80 -300, 190 -176 Z" fill="#c8a85a" stroke="#6a4a20" stroke-width="4"/>'
+          + "".join(f'<path d="M {-180 + k * 30} -180 C {-150 + k * 25} -240, {-100 + k * 22} -270, {-20 + k * 4} -286" stroke="#9a7a3a" stroke-width="3" fill="none" opacity="0.6"/>' for k in range(12)) +
+          '<path d="M -40 0 L -40 -120 Q 0 -150 40 -120 L 40 0 Z" fill="#2a1a10"/>'
+          '<path d="M 70 -130 L 120 -130 L 120 -90 L 70 -90 Z" fill="#2a1a10"/>'
+          '<path d="M -130 -60 L -70 -60 M -126 -40 L -76 -40" stroke="#6a4a2a" stroke-width="5"/></g>')
+    # coils of rope and a pole leaning on the hut
+    s += ('<path d="M 600 1250 L 680 900" stroke="#6a4424" stroke-width="12"/>'
+          '<ellipse cx="560" cy="1250" rx="40" ry="14" fill="none" stroke="#a8844a" stroke-width="8"/><ellipse cx="560" cy="1240" rx="32" ry="10" fill="none" stroke="#a8844a" stroke-width="8"/>')
+    # the water and the jetty
+    s += f'<rect x="0" y="1290" width="{W}" height="{H - 1290}" fill="url(#fwat)"/>'
+    for k in range(70):
+        y = r.uniform(1300, 1900); w = r.uniform(30, 120); x = r.uniform(-40, W)
+        s += f'<path d="M {x:.0f} {y:.0f} L {x + w:.0f} {y:.0f}" stroke="#e8f4f4" stroke-width="{2 + (y - 1300) / 200:.1f}" opacity="{r.uniform(0.2, 0.5):.2f}"/>'
+    s += _boat(260, 1460, 1.25, col="#6a4424") + _boat(780, 1560, 1.1, col="#5a3a20", flip=True)
+    s += '<path d="M -20 1250 L 1100 1250 L 1100 1296 L -20 1296 Z" fill="#8a6038" stroke="#2a1a10" stroke-width="4"/>'
+    s += "".join(f'<path d="M {x} 1252 L {x} 1294" stroke="#4a3018" stroke-width="3" opacity="0.7"/>' for x in range(40, 1100, 70))
+    s += "".join(f'<rect x="{x}" y="1296" width="22" height="150" fill="#5a3a20" stroke="#2a1a10" stroke-width="3"/>' for x in (90, 420, 760, 1010))
+    return svg_render(s)
+

@@ -266,6 +266,59 @@ LINES = [
  ("p7s6b",7,6,"NARRATOR","He took off his leather apron… and tied it to a spear.","پیش‌بندِ چرمی‌اش را باز کرد… و سرِ نیزه بست.",
   "He took off his leather apron... and tied it to a spear."),
  ("p7s6c",7,6,"KAVEH","Who wants to be free? Follow me!","کی آزادی می‌خواهد؟ دنبالم بیایید!",None),
+ # ---- part 8 · The Blacksmith's Banner (Shahnameh, «ضحاک» sections 7-8: Kaveh goes to Fereydun, the apron dressed in Roman brocade, gold
+ #      and jewels with red, yellow and violet ribbons, every later king adds jewels; the ox-headed mace drawn in the dust and forged; Fereydun
+ #      leaves his mother; the march; Sorush teaches him secret words; the jealous brothers roll a rock at night and he binds it with a spell;
+ #      the Arvand (Tigris): the river keeper will not send the boats without Zahhak's seal, "not even a gnat")
+ ("p8s1a",8,1,"FEREYDUN","Stop!","بایست!",None),
+ ("p8s1b",8,1,"NARRATOR","But who sent that rock… in the middle of the night?","اما چه کسی آن سنگ را… در دلِ شب فرستاده بود؟",
+  "But who sent that rock... in the middle of the night?"),
+ ("p8s3a",8,3,"NARRATOR","Kaveh marched out of the city, and the people followed him.","کاوه از شهر بیرون رفت و مردم به دنبالش راه افتادند.",
+  "Kaa-veh marched out of the city, and the people followed him."),
+ ("p8s3b",8,3,"NARRATOR","He knew where to go… to Fereydun.","می‌دانست کجا باید برود… پیش فریدون.","He knew where to go... to Fereydoon."),
+ ("p8s3c",8,3,"KAVEH","Fereydun, son of Abtin! The people are with you.","فریدون، پسرِ آبتین! مردم با تو هستند.",
+  "Fereydoon, son of Ab-teen! The people are with you."),
+ ("p8s3d",8,3,"KAVEH","Lead us against the snake king!","ما را به جنگِ شاهِ ماردوش ببر!",None),
+ ("p8s3e",8,3,"FEREYDUN","A blacksmith's apron… on a spear?","پیش‌بندِ یک آهنگر… سرِ نیزه؟","A blacksmith's apron... on a spear?"),
+ ("p8s3f",8,3,"FEREYDUN","This is a good sign.","این نشانه‌ی خوبی است.",None),
+ ("p8s3g",8,3,"FEREYDUN","Bring silk, gold and jewels! This will be our banner.","ابریشم و طلا و گوهر بیاورید! این درفشِ ما خواهد بود.",None),
+ ("p8s3h",8,3,"NARRATOR","He covered it with Roman silk, gold and jewels…","آن را با دیبای رومی، طلا و گوهر آراست…",
+  "He covered it with Roman silk, gold, and jewels..."),
+ ("p8s3i",8,3,"NARRATOR","…and hung ribbons of red, yellow and violet from it.","…و نوارهایی سرخ و زرد و بنفش از آن آویخت.",
+  "and hung ribbons of red, yellow, and violet from it."),
+ ("p8s3j",8,3,"NARRATOR","He called it the Kaviani banner: the banner of Kaveh.","نامش را درفشِ کاویانی گذاشت: درفشِ کاوه.",
+  "He called it the Kaavi-aani banner. The banner of Kaa-veh."),
+ ("p8s3k",8,3,"NARRATOR","And every king after him added new jewels to it.","و هر شاهی که پس از او آمد، گوهرهای تازه‌ای بر آن آویخت.",None),
+ ("p8s4a",8,4,"NARRATOR","Fereydun had two older brothers, Kayanush and Purmayeh.","فریدون دو برادرِ بزرگ‌تر داشت: کیانوش و پُرمایه.",
+  "Fereydoon had two older brothers, Kayaa-noosh, and Poor-maa-yeh."),
+ ("p8s4b",8,4,"FEREYDUN","Brothers, bring me the best blacksmiths. I need a heavy mace.","برادرها، بهترین آهنگرها را بیاورید. یک گرزِ سنگین می‌خواهم.",None),
+ ("p8s4c",8,4,"KAYANUSH","Right away, brother.","همین حالا، برادر.",None),
+ ("p8s4d",8,4,"NARRATOR","Fereydun drew its shape in the dust.","فریدون شکلش را روی خاک کشید.","Fereydoon drew its shape in the dust."),
+ ("p8s4e",8,4,"FEREYDUN","Like this… with the head of an ox.","این‌طوری… با سرِ گاو.","Like this... with the head of an ox."),
+ ("p8s4f",8,4,"SMITH","An ox head? We'll make it, my lord!","سرِ گاو؟ می‌سازیمش، سرورم!",None),
+ ("p8s4g",8,4,"NARRATOR","When it was ready, the mace shone like the sun.","وقتی آماده شد، گرز مثلِ خورشید می‌درخشید.",None),
+ ("p8s4h",8,4,"NARRATOR","Just like the mace… in Zahhak's dream.","درست مثلِ گرزی… که ضحاک در خواب دیده بود.","Just like the mace... in Zah-hawk's dream."),
+ ("p8s4i",8,4,"FEREYDUN","Thank you, my friends. Better days are coming.","ممنونم، دوستانِ من. روزهای بهتری در راه است.",None),
+ ("p8s5a",8,5,"FEREYDUN","Mother, I am going to war. Pray for me.","مادر، به جنگ می‌روم. برایم دعا کن.",None),
+ ("p8s5b",8,5,"FARANAK","God be with you, my son.","خدا پشت و پناهت باشد، پسرم.",None),
+ ("p8s5c",8,5,"NARRATOR","On a bright morning, the army set out, with the banner in front.","صبحی روشن، سپاه به راه افتاد و درفش پیشاپیشِ آن بود.",None),
+ ("p8s6a",8,6,"NARRATOR","One night, a figure of light came to Fereydun.","یک شب، پیکری از نور نزد فریدون آمد.","One night, a figure of light came to Fereydoon."),
+ ("p8s6b",8,6,"SORUSH","Do not be afraid. I am Sorush, sent by God.","نترس. من سروشم، فرستاده‌ی خداوند.","Do not be afraid. I am Soroosh, sent by God."),
+ ("p8s6c",8,6,"SORUSH","I will teach you secret words, to open every lock.","به تو افسون‌هایی پنهان می‌آموزم، تا هر بندی را بگشایی.",None),
+ ("p8s6d",8,6,"NARRATOR","But his two brothers were jealous of him.","اما دو برادرش به او حسادت می‌کردند.",None),
+ ("p8s6e",8,6,"KAYANUSH","The whole army follows him now. Not us.","حالا همه‌ی سپاه دنبالِ اوست. نه ما.",None),
+ ("p8s6f",8,6,"PURMAYEH","Then help me push this rock. Quietly!","پس کمکم کن این سنگ را هل بدهیم. آرام!",None),
+ ("p8s6g",8,6,"NARRATOR","But the noise of the rock woke Fereydun.","اما صدای سنگ فریدون را بیدار کرد.","But the noise of the rock woke Fereydoon."),
+ ("p8s6h",8,6,"FEREYDUN","Stop!","بایست!",None),
+ ("p8s6i",8,6,"NARRATOR","With one secret word, the rock stopped… and did not move again.","با یک افسون، سنگ ایستاد… و دیگر تکان نخورد.",
+  "With one secret word, the rock stopped... and did not move again."),
+ ("p8s6j",8,6,"NARRATOR","Fereydun knew who had done it… but he said nothing.","فریدون فهمید کارِ کیست… اما چیزی نگفت.",
+  "Fereydoon knew who had done it... but he said nothing."),
+ ("p8s7a",8,7,"NARRATOR","At last, the army reached the great river Arvand.","سرانجام، سپاه به رودِ بزرگِ اروند رسید.","At last, the army reached the great river, Arvand."),
+ ("p8s7b",8,7,"NARRATOR","Today, we call it the Tigris.","که امروز به آن دجله می‌گوییم.",None),
+ ("p8s7c",8,7,"FEREYDUN","Ferryman! Send your boats over to us!","آهای قایقران! کشتی‌هایت را به این سو بفرست!",None),
+ ("p8s7d",8,7,"FERRYMAN","No! The king told me: no one crosses without his seal.","نه! شاه به من گفته: هیچ‌کس بی‌مُهرِ او از رود نمی‌گذرد.",None),
+ ("p8s7e",8,7,"FERRYMAN","Not even a fly!","حتی یک مگس!",None),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -287,6 +340,10 @@ VOICES = {
  "KEEPER": (20, 1.08, -1, 1.0), "HERMIT": (200, 1.15, -1, 0.85), "FEREYDUN": (620, 1.05, 0, 1.0), "SPY": (350, 1.0, 1, 1.0),
  # part 7 (49 ≈ 98 Hz, deep, loud and lively: Kaveh the blacksmith; 519 ≈ 151 Hz, young: his son)
  "KAVEH": (49, 1.05, -1, 1.0), "KAVEH_SON": (519, 1.05, 1, 0.95),
+ # part 8 (360 ≈ 122 Hz: Kayanush, the elder brother; 690 ≈ 134 Hz: Purmayeh; 380 ≈ 89 Hz, deep: a blacksmith; 170 ≈ 185 Hz, slow and
+ # calm: Sorush, with an echo (FX); 660 ≈ 123 Hz, two semitones down: the ferryman)
+ "KAYANUSH": (360, 1.08, 0, 1.0), "PURMAYEH": (690, 1.05, 0, 1.0), "SMITH": (380, 1.05, 0, 1.0), "SORUSH": (170, 1.15, 0, 0.95),
+ "FERRYMAN": (660, 1.02, -2, 1.0),
 }
 # slower takes for learners (per-line length factors, see voices.py)
 SPEED = {lid: 1.15 for lid, part, *_ in LINES if part in (1, 2)}
@@ -312,3 +369,8 @@ SPEED.update({"p7s1a": 1.3, "p7s1b": 1.4, "p7s3a": 1.35, "p7s3b": 1.35, "p7s3c":
               "p7s3i": 1.35, "p7s4b": 1.5, "p7s4c": 1.4, "p7s4e": 1.3, "p7s4f": 1.4, "p7s5b": 1.4, "p7s5d": 1.3, "p7s5f": 1.45, "p7s5g": 1.35,
               "p7s5j": 1.35, "p7s5k": 1.45, "p7s5l": 1.4, "p7s5m": 1.25, "p7s6b": 1.4, "p7s6c": 1.35})
 FX.update({"p7s4b": "atempo=0.85", "p7s3h": "atempo=0.92"})
+SPEED.update({lid: 1.15 for lid, part, *_ in LINES if part == 8})
+SPEED.update({"p8s1b": 1.3, "p8s3b": 1.35, "p8s3e": 1.35, "p8s3f": 1.3, "p8s3j": 1.25, "p8s4c": 1.3, "p8s4e": 1.35, "p8s4f": 1.25,
+              "p8s4h": 1.35, "p8s5a": 1.3, "p8s5b": 1.45, "p8s6e": 1.3, "p8s6f": 1.25, "p8s6i": 1.25, "p8s6j": 1.3, "p8s7b": 1.25,
+              "p8s7e": 1.2})
+FX.update({lid: "aecho=0.8:0.6:70|140:0.22|0.12" for lid in ("p8s6b", "p8s6c")})

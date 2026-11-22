@@ -517,6 +517,17 @@ def limb(c, a, b, w0, w1, fill, sw=2.6):
 def hand(c, S, x, y, ang, side, closed=True):
     sk, sh, hi = SKINS[S["skin"]]
     r = 24
+    if not closed:      # an open palm, fingers up (a "stop" sign, a blessing): pose openR / openL
+        out = f'<path d="M {fmt(x - 22)} {fmt(y - 14)} C {fmt(x - 26)} {fmt(y + 22)}, {fmt(x + 26)} {fmt(y + 22)}, {fmt(x + 22)} {fmt(y - 14)} Z" fill="{sk}" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+        for k, (dx, ln, a) in enumerate(((-16, 30, -10), (-5, 38, -3), (6, 36, 3), (16, 28, 10))):
+            bx, by = x + dx, y - 10
+            ex, ey = bx + math.sin(math.radians(a)) * ln, by - math.cos(math.radians(a)) * ln
+            out += (f'<path d="M {fmt(bx)} {fmt(by)} L {fmt(ex)} {fmt(ey)}" stroke="{OUT}" stroke-width="{c.sw(14)}" stroke-linecap="round"/>'
+                    f'<path d="M {fmt(bx)} {fmt(by)} L {fmt(ex)} {fmt(ey)}" stroke="{sk}" stroke-width="{c.sw(9.6)}" stroke-linecap="round"/>')
+        tx = x - side * 24
+        out += (f'<path d="M {fmt(x - side * 14)} {fmt(y + 6)} L {fmt(tx - side * 8)} {fmt(y - 16)}" stroke="{OUT}" stroke-width="{c.sw(14)}" stroke-linecap="round"/>'
+                f'<path d="M {fmt(x - side * 14)} {fmt(y + 6)} L {fmt(tx - side * 8)} {fmt(y - 16)}" stroke="{sk}" stroke-width="{c.sw(9.6)}" stroke-linecap="round"/>')
+        return out + f'<path d="M {fmt(x - 18)} {fmt(y - 10)} C {fmt(x - 20)} {fmt(y + 16)}, {fmt(x + 20)} {fmt(y + 16)}, {fmt(x + 18)} {fmt(y - 10)} Z" fill="{sk}"/>'
     d = (f"M {fmt(x-r*0.9)} {fmt(y-r*0.4)} C {fmt(x-r)} {fmt(y+r*0.9)}, {fmt(x+r)} {fmt(y+r*0.9)}, {fmt(x+r*0.9)} {fmt(y-r*0.4)} "
          f"C {fmt(x+r*0.6)} {fmt(y-r)}, {fmt(x-r*0.6)} {fmt(y-r)}, {fmt(x-r*0.9)} {fmt(y-r*0.4)} Z")
     thumb = f'<ellipse cx="{fmt(x+side*-r*0.9)}" cy="{fmt(y-r*0.1)}" rx="{fmt(r*0.35)}" ry="{fmt(r*0.5)}" fill="{sk}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
@@ -702,6 +713,8 @@ def prop(c, name, x, y, ang, t, S=None):
             out += (f'<path d="M {sd * 140} -974 C {sd * 150 + sw_:.1f} -930, {sd * 160 + sw_ * 1.5:.1f} -900, {sd * 150 + sw_ * 2:.1f} -860" stroke="#3a2414" stroke-width="{c.sw(7)}" fill="none" stroke-linecap="round"/>'
                     f'<circle cx="{sd * 140}" cy="-974" r="13" fill="#3a2414" stroke="{OUT}" stroke-width="{c.sw(2)}"/>')
         return out + '</g>'
+    if name == "kaviani":   # the Kaviani banner on its spear (see kaviani())
+        return g + kaviani(c, t) + '</g>'
     if name == "pike":   # long spear held low (hand hanging at the side)
         return (g + f'<path d="M 0 -1080 L 0 320" stroke="#4a3018" stroke-width="{c.sw(10)}"/>'
                 f'<path d="M 0 -1170 L 17 -1080 L -17 -1080 Z" fill="#cfd4da" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>')
@@ -783,6 +796,99 @@ def prop(c, name, x, y, ang, t, S=None):
         return g + f'<path d="M 0 -20 L 0 170" stroke="#6a4424" stroke-width="{c.sw(9)}" stroke-linecap="round"/><circle cx="0" cy="176" r="15" fill="#d8c8a8" stroke="{OUT}" stroke-width="{c.sw(2)}"/></g>'
     return ""
 
+def _kav_edges(t, n=8):
+    left, right = [], []
+    for i in range(n + 1):
+        u = i / n; wv = (4 + 26 * u) * math.sin(t * 4.6 - u * 4.2); y = -968 + 360 * u
+        left.append((-132 - 24 * u + wv, y)); right.append((132 + 24 * u + wv * 0.8, y))
+    return left, right
+
+
+def kaviani(c, t, silk=1.0, star=1.0, jewels=7, ribbons=(1.0, 1.0, 1.0, 1.0, 1.0)):
+    """the Kaviani banner on its spear, grip at (0, 0) (the frame of prop "apron_spear"): Kaveh's apron dressed in violet Roman silk with a
+    gold border, a gold four-pointed star with a red jewel, small jewels, red, yellow and violet ribbons hanging below.
+    silk 0..1 covers the leather apron from the top down; star 0..1 sets the star; jewels = how many small jewels are set (0-7);
+    ribbons = how far each of the five ribbons has unrolled (0..1)"""
+    out = ""
+    if silk < 1:
+        out += prop(c, "apron_spear", 0, 0, 0, t)
+    out += (f'<path d="M 0 -1000 L 0 300" stroke="#5a3a1c" stroke-width="{c.sw(11)}"/><path d="M 0 -1000 L 0 300" stroke="{OUT}" stroke-width="{c.sw(2)}" fill="none" opacity="0.6"/>'
+            f'<path d="M 0 -1110 L 17 -1012 L 0 -996 L -17 -1012 Z" fill="#e8c060" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+            f'<circle cx="0" cy="-1000" r="13" fill="#c9a24a" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+            f'<path d="M -158 -974 L 158 -974" stroke="#c9a24a" stroke-width="{c.sw(10)}" stroke-linecap="round"/>'
+            f'<circle cx="-160" cy="-974" r="12" fill="#e8c060" stroke="{OUT}" stroke-width="{c.sw(2)}"/><circle cx="160" cy="-974" r="12" fill="#e8c060" stroke="{OUT}" stroke-width="{c.sw(2)}"/>')
+    left, right = _kav_edges(t)
+    bl, br = left[-1], right[-1]
+    mid_ = ((bl[0] + br[0]) / 2, bl[1] + 34)
+    d = (f'M {fmt(left[0][0])} {fmt(left[0][1])} L ' + " L ".join(f'{fmt(x)} {fmt(y)}' for x, y in left[1:]) +
+         f' Q {fmt(bl[0] + 10)} {fmt(bl[1] + 30)}, {fmt(mid_[0])} {fmt(mid_[1])} Q {fmt(br[0] - 10)} {fmt(br[1] + 30)}, {fmt(br[0])} {fmt(br[1])} L ' +
+         " L ".join(f'{fmt(x)} {fmt(y)}' for x, y in right[::-1]) + ' Z')
+    for k, (u, col) in enumerate(((0.12, "#c4161c"), (0.3, "#f0c020"), (0.5, "#7a3aa8"), (0.7, "#c4161c"), (0.88, "#f0c020"))):
+        ln = ribbons[k] if k < len(ribbons) else 0.0
+        if ln <= 0.02:
+            continue
+        x0 = lerp(bl[0], br[0], u); y0 = bl[1] + 28 * math.sin(math.pi * u) + 6
+        pts = []
+        for j in range(7):
+            v = j / 6; sw_ = (6 + 22 * v) * math.sin(t * 5.2 - v * 3.6 + k * 1.3) * ln
+            pts.append((x0 + sw_ + 8 * v * ln, y0 + 250 * v * ln))
+        rib = " L ".join(f"{fmt(px)} {fmt(py)}" for px, py in pts)
+        out += (f'<path d="M {rib}" stroke="{OUT}" stroke-width="{c.sw(26)}" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+                f'<path d="M {rib}" stroke="{col}" stroke-width="{c.sw(20)}" fill="none" stroke-linecap="round" stroke-linejoin="round"/>')
+    if silk <= 0.01:
+        return out
+    cid = c.uid("kv"); rid = c.uid("kr")
+    reveal = -1000 + 470 * min(1.0, silk) / 0.999 if silk < 1 else 400
+    silk_svg = f'<path d="{d}" fill="#4e2470" stroke="{OUT}" stroke-width="{c.sw(2.8)}"/><clipPath id="{cid}"><path d="{d}"/></clipPath><g clip-path="url(#{cid})">'
+    for rr in range(9):          # the brocade: rows of small gold lozenges, moving with the cloth
+        for cc in range(-4, 5):
+            u = rr / 8; wv = (4 + 26 * u) * math.sin(t * 4.6 - u * 4.2) * 0.9
+            x = cc * 34 + (17 if rr % 2 else 0) + wv; y = -950 + rr * 42
+            silk_svg += f'<path d="M {fmt(x)} {fmt(y - 7)} L {fmt(x + 6)} {fmt(y)} L {fmt(x)} {fmt(y + 7)} L {fmt(x - 6)} {fmt(y)} Z" fill="#d8a64a" opacity="0.45"/>'
+    silk_svg += (f'<path d="M {fmt(left[1][0] + 30)} {fmt(left[1][1])} L ' + " L ".join(f'{fmt(x + 30)} {fmt(y)}' for x, y in left[2:]) +
+                 f'" stroke="#8a52b8" stroke-width="{c.sw(10)}" fill="none" opacity="0.45"/></g>')
+    silk_svg += f'<path d="{d}" fill="none" stroke="#e0b24a" stroke-width="{c.sw(9)}" opacity="0.95"/>'
+    if silk < 1:
+        out += (f'<clipPath id="{rid}"><rect x="-260" y="-1010" width="520" height="{fmt(reveal + 1010)}"/></clipPath>'
+                f'<g clip-path="url(#{rid})">{silk_svg}</g>'
+                f'<path d="M -190 {fmt(reveal)} L 190 {fmt(reveal)}" stroke="#e0b24a" stroke-width="{c.sw(7)}" opacity="0.9"/>')
+    else:
+        out += silk_svg
+    if star > 0.01:
+        su = 0.45; wv = (4 + 26 * su) * math.sin(t * 4.6 - su * 4.2) * 0.9
+        sx_, sy_ = wv, -968 + 360 * su
+        R1, R2 = 118 * ease_(star), 34 * ease_(star)
+        pts = []
+        for k in range(8):
+            a = -math.pi / 2 + k * math.pi / 4; rad = R1 if k % 2 == 0 else R2
+            pts.append((sx_ + rad * math.cos(a) * 0.86, sy_ + rad * math.sin(a)))
+        out += (f'<path d="M {P(pts)} Z" fill="#f0c45a" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/>'
+                f'<path d="M {fmt(sx_)} {fmt(sy_ - R1)} L {fmt(sx_ + R2 * 0.6)} {fmt(sy_ - R2 * 0.6)} L {fmt(sx_)} {fmt(sy_)} Z M {fmt(sx_ + R1 * 0.86)} {fmt(sy_)} '
+                f'L {fmt(sx_ + R2 * 0.6)} {fmt(sy_ + R2 * 0.6)} L {fmt(sx_)} {fmt(sy_)} Z" fill="#b8862a" opacity="0.6"/>'
+                f'<circle cx="{fmt(sx_)}" cy="{fmt(sy_)}" r="{fmt(22 * ease_(star))}" fill="#c8102a" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
+                f'<circle cx="{fmt(sx_ - 7)}" cy="{fmt(sy_ - 7)}" r="{fmt(6 * ease_(star))}" fill="#ffd0d8" opacity="0.9"/>')
+    for k, (u, v, col) in enumerate(KAV_JEWELS[:max(0, int(jewels))]):
+        y = -968 + 360 * v; wv = (4 + 26 * v) * math.sin(t * 4.6 - v * 4.2)
+        x = lerp(-132 - 24 * v, 132 + 24 * v, u) + wv * (0.8 + 0.2 * (1 - u))
+        out += (f'<circle cx="{fmt(x)}" cy="{fmt(y)}" r="13" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<circle cx="{fmt(x - 4)}" cy="{fmt(y - 4)}" r="4" fill="#ffffff" opacity="0.8"/>')
+    return out
+
+
+KAV_JEWELS = ((0.22, 0.12, "#1c5ac8"), (0.78, 0.12, "#1c9a5a"), (0.12, 0.62, "#1c9a5a"), (0.88, 0.62, "#1c5ac8"),
+              (0.5, 0.9, "#c8102a"), (0.3, 0.86, "#1c5ac8"), (0.7, 0.86, "#1c9a5a"))
+
+
+def kav_point(t, u, v):
+    """where a point (u across, v down) of the Kaviani cloth is, relative to the grip (for glints)"""
+    y = -968 + 360 * v; wv = (4 + 26 * v) * math.sin(t * 4.6 - v * 4.2)
+    return lerp(-132 - 24 * v, 132 + 24 * v, u) + wv * (0.8 + 0.2 * (1 - u)), y
+
+
+def ease_(u):
+    u = min(1.0, max(0.0, u)); return u * u * (3 - 2 * u)
+
+
 def tanbur(c, x, y, ang, t):
     return (f'<g transform="translate({fmt(x)},{fmt(y)}) rotate({fmt(ang)})">'
             f'<path d="M 0 0 C -40 -6, -70 -40, -60 -76 C -50 -110, 20 -110, 40 -80 C 56 -56, 40 -10, 0 0 Z" fill="#a4652e" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/>'
@@ -853,7 +959,7 @@ def arm(c, S, p, t, side, preset, bs):
     cuff = f'<circle cx="{fmt(h[0])}" cy="{fmt(h[1])}" r="34" fill="{S.get("cuff","#d8a64a")}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
     fa = a1 - a2
     hx, hy = h[0] + side * math.sin(math.radians(fa)) * 26, h[1] + math.cos(math.radians(fa)) * 26
-    out += cuff + hand(c, S, hx, hy, side * fa * 0.5, side)
+    out += cuff + hand(c, S, hx, hy, side * fa * 0.5, side, closed=not p.get("openR" if side < 0 else "openL", False))
     return out, (hx, hy), fa
 
 def _bez(p0, p1, p2, p3, u):
