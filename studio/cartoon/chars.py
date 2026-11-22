@@ -741,6 +741,19 @@ def prop(c, name, x, y, ang, t, S=None):
                 f'<path d="M -30 -136 C -40 -170, {fmt(-14 + 8 * math.sin(t * 13))} {fmt(fl[0][1] + 40)}, {fmt(4 * math.sin(t * 9))} {fmt(fl[0][1])} '
                 f'C {fmt(14 + 8 * math.sin(t * 15))} {fmt(fl[0][1] + 40)}, 40 -170, 30 -136 Z" fill="#ff8a1a"/>'
                 f'<path d="M -16 -136 C -20 -160, -6 -190, {fmt(2 * math.sin(t * 9))} {fmt(fl[0][1] + 34)} C 6 -190, 20 -160, 16 -136 Z" fill="#ffd84a"/></g>')
+    if name == "bow":        # a great recurve bow held upright by its grip, the string on the far side (+x); the tips curl forward
+        wood, dark, light = "#6a4422", "#3a2412", "#a8743e"
+        limb = "M 26 -352 C 34 -364, 44 -366, 52 -360 M 52 -360 C 4 -300, -40 -180, -22 -26 L -22 26 C -40 180, 4 300, 52 360 M 52 360 C 44 366, 34 364, 26 352"
+        return (g + f'<path d="M 40 -354 L 40 354" stroke="#efe6cc" stroke-width="{c.sw(3)}"/>'
+                f'<path d="{limb}" stroke="{OUT}" stroke-width="{c.sw(19)}" fill="none" stroke-linecap="round"/>'
+                f'<path d="{limb}" stroke="{wood}" stroke-width="{c.sw(13)}" fill="none" stroke-linecap="round"/>'
+                f'<path d="M 46 -352 C 0 -290, -34 -180, -18 -40 M -18 40 C -34 180, 0 290, 46 352" stroke="{light}" stroke-width="{c.sw(4)}" fill="none" opacity="0.8"/>'
+                f'<rect x="-34" y="-34" width="26" height="68" rx="8" fill="{dark}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<path d="M -34 -16 L -8 -10 M -34 0 L -8 6 M -34 16 L -8 22" stroke="#7a5a3a" stroke-width="{c.sw(3)}"/></g>')
+    if name == "arrow":      # a long arrow held by the shaft, point up: steel head, eagle feathers below the fist
+        return (g + f'<path d="M 0 -330 L 0 300" stroke="{OUT}" stroke-width="{c.sw(9)}"/><path d="M 0 -330 L 0 300" stroke="#c8a46a" stroke-width="{c.sw(5)}"/>'
+                f'<path d="M 0 -390 L 14 -330 L -14 -330 Z" fill="#c8ccd4" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+                f'<path d="M 0 210 L -22 250 L -22 300 L 0 270 Z M 0 210 L 22 250 L 22 300 L 0 270 Z" fill="#7a5a3a" stroke="{OUT}" stroke-width="{c.sw(2)}"/></g>')
     if name == "mace":       # the ox-headed mace (gorz-e gavsar): a steel shaft, a bronze ox head with ivory horns above the fist
         gold, dark, horn = "#c8922e", "#7a4e14", "#efe0b0"
         out = (g + f'<rect x="-10" y="-150" width="20" height="320" rx="6" fill="#4a3a30" stroke="{OUT}" stroke-width="{c.sw(2.2)}"/>'
