@@ -69,7 +69,9 @@
     "Sam": "Saam",
     "mobed": "mowbed",
     "Zabol": "Zaabol",
-    "Nariman": "Naareemaan"
+    "Nariman": "Naareemaan",
+    "Hooman": "Hoomaan",
+    "Barman": "Baarmaan"
   },
   "HERDSMAN": {
     "voice": "bm_fable",
@@ -98,5 +100,9 @@
   "BOY": {
     "voice": "af_sky",
     "speed": 1.0
+  },
+  "BARMAN": {
+    "voice": "am_santa",
+    "speed": 0.95
   }
 }

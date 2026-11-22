@@ -1,0 +1,262 @@
+{
+ "episode": 7,
+ "part": 14,
+ "title_en": "The Trap",
+ "title_fa": "نیرنگ",
+ "next_label": "NEXT PART",
+ "next_en": "The White Fortress",
+ "next_fa": "دژ سپید",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "AFRASIAB",
+     "en": "The son must never know his father... and the father must never know his son.",
+     "fa": "پسر هرگز نباید پدرش را بشناسد... و پدر هرگز نباید پسرش را بشناسد.",
+     "pause": 1.2
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Afrasiab, the king of Turan, was sending Hooman and Barman to help Sohrab against Iran.",
+     "fa": "افراسیاب، شاه توران، هومان و بارمان را می‌فرستاد تا سهراب را در جنگ با ایران یاری کنند.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "But that night, by the fire, he gave them a secret order.",
+     "fa": "ولی آن شب، کنار آتش، فرمانی پنهانی به آن‌ها داد.",
+     "pause": 0.5
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "Sooner or later, Rostam will come to fight this boy.",
+     "fa": "دیر یا زود، رستم به جنگ این پسر می‌آید.",
+     "pause": 0.4
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "Keep them apart. They must never find out that they are father and son.",
+     "fa": "نگذارید به هم نزدیک شوند. هرگز نباید بفهمند که پدر و پسرند.",
+     "pause": 0.4
+    },
+    {
+     "role": "HOOMAN",
+     "en": "Why, my king?",
+     "fa": "چرا، شاه من؟",
+     "pause": 0.4
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "Because a son's heart always goes to his father. If they know, there will be no war.",
+     "fa": "چون دلِ پسر همیشه به سوی پدرش می‌رود. اگر بفهمند، جنگی در کار نخواهد بود.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "AFRASIAB",
+     "en": "Let them fight. Perhaps the old lion will die by the young lion's hand.",
+     "fa": "بگذارید بجنگند. شاید شیر پیر به دست شیر جوان کشته شود.",
+     "pause": 0.4
+    },
+    {
+     "role": "BARMAN",
+     "en": "And then, my king? What about Sohrab?",
+     "fa": "و بعد، شاه من؟ سهراب چه؟",
+     "pause": 0.5
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "Then one night, while he sleeps...",
+     "fa": "بعد یک شب، وقتی خواب است...",
+     "pause": 0.3
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "make sure he never wakes up.",
+     "fa": "کاری کنید که دیگر هرگز بیدار نشود.",
+     "pause": 0.5
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "Without Rostam, Iran will be ours.",
+     "fa": "بی رستم، ایران مال ما خواهد بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "HOOMAN",
+     "en": "It will be done, my king.",
+     "fa": "انجام می‌شود، شاه من.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "At dawn, Hooman and Barman rode out with twelve thousand warriors,",
+     "fa": "سپیده‌دم، هومان و بارمان با دوازده هزار جنگاور به راه افتادند،",
+     "pause": 0.2
+    },
+    {
+     "role": "NARRATOR",
+     "en": "the king's gifts, the king's letter... and the king's secret.",
+     "fa": "با هدیه‌های شاه، نامه‌ی شاه... و راز شاه.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Their spears and banners covered the plain like a forest.",
+     "fa": "نیزه‌ها و پرچم‌هایشان دشت را مثل جنگل پوشانده بود.",
+     "pause": 0.5
+    },
+    {
+     "role": "HOOMAN",
+     "en": "Remember, Barman. Not a word to the boy.",
+     "fa": "یادت باشد، بارمان. یک کلمه هم به آن پسر نمی‌گوییم.",
+     "pause": 0.3
+    },
+    {
+     "role": "BARMAN",
+     "en": "Not a word.",
+     "fa": "یک کلمه هم نه.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "GUARD",
+     "en": "Riders! Turanian banners, coming this way!",
+     "fa": "سوار! پرچم‌های تورانی، دارند به این طرف می‌آیند!",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Turanians? Let us see what they want.",
+     "fa": "تورانی‌ها؟ ببینیم چه می‌خواهند.",
+     "pause": 0.5
+    },
+    {
+     "role": "HOOMAN",
+     "en": "Greetings, young hero! King Afrasiab sends you friends... and gifts.",
+     "fa": "درود، پهلوان جوان! افراسیاب‌شاه برایت دوستانی فرستاده... و هدیه‌هایی.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Friends of Afrasiab? Then you are welcome in my camp.",
+     "fa": "دوستان افراسیاب؟ پس به اردوی من خوش آمدید.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "When Hooman saw Sohrab's arms and shoulders, he could not believe his eyes.",
+     "fa": "هومان وقتی بازو و یال سهراب را دید، چشم‌هایش را باور نکرد.",
+     "pause": 0.4
+    },
+    {
+     "role": "HOOMAN",
+     "en": "Look at those arms, Barman. This boy could lift a mountain.",
+     "fa": "آن بازوها را ببین، بارمان. این پسر می‌تواند کوه را از جا بکند.",
+     "pause": 0.4
+    },
+    {
+     "role": "BARMAN",
+     "en": "Then Rostam will finally meet his match.",
+     "fa": "پس رستم بالاخره حریفش را پیدا می‌کند.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "HOOMAN",
+     "en": "Our king writes: 'Take the throne of Iran, and the world will be at peace.'",
+     "fa": "شاه ما می‌نویسد: «تخت ایران را بگیر تا جهان آرام بگیرد.»",
+     "pause": 0.4
+    },
+    {
+     "role": "HOOMAN",
+     "en": "'Samangan, Iran and Turan will be one. Hooman and Barman are yours to command.'",
+     "fa": "«سمنگان و ایران و توران یکی خواهند شد. هومان و بارمان گوش به فرمان تواند.»",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Tell your king I thank him. With an army like this, Iran is already mine!",
+     "fa": "به شاهتان بگویید از او سپاسگزارم. با چنین لشکری، ایران از همین حالا مال من است!",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab was young, and his heart was pure. He did not see the trap.",
+     "fa": "سهراب جوان بود و دلش پاک. نیرنگ را نمی‌دید.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "Warriors! Tomorrow, we march to the border of Iran!",
+     "fa": "جنگاوران! فردا به سوی مرز ایران می‌تازیم!",
+     "pause": 0.5
+    },
+    {
+     "role": "BARMAN",
+     "en": "He trusts us, Hooman.",
+     "fa": "به ما اعتماد دارد، هومان.",
+     "pause": 0.3
+    },
+    {
+     "role": "HOOMAN",
+     "en": "Good. Let him trust us.",
+     "fa": "خوب است. بگذار اعتماد کند.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And on the border of Iran, the White Fortress was waiting.",
+     "fa": "و در مرز ایران، دژ سپید چشم به راه بود.",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}

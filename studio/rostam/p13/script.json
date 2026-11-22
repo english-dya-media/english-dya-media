@@ -1,0 +1,256 @@
+{
+ "episode": 7,
+ "part": 13,
+ "title_en": "Afrasiab",
+ "title_fa": "افراسیاب",
+ "next_label": "NEXT PART",
+ "next_en": "The Trap",
+ "next_fa": "نیرنگ",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "HOOMAN",
+     "en": "A weapon that can kill Rostam? What weapon, my king?",
+     "fa": "سلاحی که بتواند رستم را بکشد؟ چه سلاحی، شاه من؟",
+     "pause": 0.5
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "His own son.",
+     "fa": "پسر خودش.",
+     "pause": 1.2
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Beyond the great river lay Turan, and its king was Afrasiab.",
+     "fa": "آن سوی رود بزرگ، سرزمین توران بود و شاهش افراسیاب.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "For years he had fought against Iran. And every time, one man stood in his way.",
+     "fa": "سال‌ها با ایران جنگیده بود. و هر بار، یک مرد سر راهش ایستاده بود.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Rostam.",
+     "fa": "رستم.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Once, in battle, the young Rostam rode straight at him on Rakhsh.",
+     "fa": "یک بار در میدان جنگ، رستمِ جوان سوار بر رخش یک‌راست به سوی او تاخت.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "He grabbed Afrasiab by the belt and lifted him out of the saddle like a child.",
+     "fa": "کمربند افراسیاب را گرفت و او را مثل یک بچه از روی زین بلند کرد.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "The belt broke. The king of Turan fell in the dust, and his men barely saved him.",
+     "fa": "کمربند پاره شد. شاه توران در خاک افتاد و سپاهیانش به‌زحمت نجاتش دادند.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "AFRASIAB",
+     "en": "In front of my whole army... he threw me in the dust like a child.",
+     "fa": "جلوی چشم همه‌ی سپاهم... مثل یک بچه مرا به خاک انداخت.",
+     "pause": 0.4
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "I have never forgotten that day. Never.",
+     "fa": "هیچ‌وقت آن روز را فراموش نکرده‌ام. هرگز.",
+     "pause": 0.6
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And now the news had come: Sohrab, the son of Rostam, was marching on Iran.",
+     "fa": "و حالا خبر رسیده بود: سهراب، پسر رستم، به ایران لشکر می‌کشید.",
+     "pause": 0.4
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "Call Hooman and Barman!",
+     "fa": "هومان و بارمان را صدا کنید!",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Hooman and Barman were the bravest commanders of Turan.",
+     "fa": "هومان و بارمان دلیرترین سرداران توران بودند.",
+     "pause": 0.3
+    },
+    {
+     "role": "HOOMAN",
+     "en": "We are here, my king.",
+     "fa": "در خدمتیم، شاه من.",
+     "pause": 0.4
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "You have heard of this boy, Sohrab?",
+     "fa": "درباره‌ی این پسر، سهراب، شنیده‌اید؟",
+     "pause": 0.4
+    },
+    {
+     "role": "BARMAN",
+     "en": "Everyone has, my king. They say no man can stand against him.",
+     "fa": "همه شنیده‌اند، شاه من. می‌گویند هیچ مردی حریفش نیست.",
+     "pause": 0.5
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "Choose twelve thousand of our best warriors, and ride to Sohrab.",
+     "fa": "دوازده هزار تن از بهترین جنگاورانمان را برگزینید و پیش سهراب بروید.",
+     "pause": 0.4
+    },
+    {
+     "role": "BARMAN",
+     "en": "To fight him, my king?",
+     "fa": "که با او بجنگیم، شاه من؟",
+     "pause": 0.5
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "No. To help him.",
+     "fa": "نه. که کمکش کنید.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "AFRASIAB",
+     "en": "Help him take Iran. Let him fight King Kavus... and let him fight Rostam.",
+     "fa": "کمکش کنید ایران را بگیرد. بگذارید با کاووس‌شاه بجنگد... و بگذارید با رستم بجنگد.",
+     "pause": 0.4
+    },
+    {
+     "role": "HOOMAN",
+     "en": "Sohrab against Rostam? The son against his own father?",
+     "fa": "سهراب در برابر رستم؟ پسر در برابر پدر خودش؟",
+     "pause": 0.4
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "Yes. And whoever dies... Turan wins.",
+     "fa": "بله. و هر کدام که بمیرد... توران برنده است.",
+     "pause": 0.5
+    },
+    {
+     "role": "HOOMAN",
+     "en": "But my king, what if this boy becomes too strong?",
+     "fa": "ولی شاه من، اگر این پسر بیش از حد قوی شود چه؟",
+     "pause": 0.4
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "Leave that to me.",
+     "fa": "آن را به من بسپار.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Then Afrasiab prepared rich gifts for Sohrab: gold, fine horses, a throne and a crown.",
+     "fa": "بعد افراسیاب هدیه‌هایی گران‌بها برای سهراب آماده کرد: طلا، اسب‌های خوب، تخت و تاج.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And he wrote him a letter, as sweet as honey.",
+     "fa": "و نامه‌ای برایش نوشت، شیرین مثل عسل.",
+     "pause": 0.4
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "Young hero, take the throne of Iran, and the world will be at peace.",
+     "fa": "پهلوان جوان، تخت ایران را بگیر تا جهان آرام بگیرد.",
+     "pause": 0.4
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "Samangan, Iran and Turan will be one. I am sending you my best warriors.",
+     "fa": "سمنگان و ایران و توران یکی خواهند شد. بهترین جنگاورانم را برایت می‌فرستم.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Every word of it was a lie.",
+     "fa": "و همه‌ی آن دروغ بود.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "lines": [
+    {
+     "role": "AFRASIAB",
+     "en": "Everyone, leave us!",
+     "fa": "همه بیرون بروید!",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "When the hall was empty, the king called the two commanders close.",
+     "fa": "وقتی تالار خالی شد، شاه دو سردار را نزدیک خودش خواند.",
+     "pause": 0.4
+    },
+    {
+     "role": "AFRASIAB",
+     "en": "Now listen carefully. What I tell you now... no one must ever know.",
+     "fa": "حالا خوب گوش کنید. چیزی که الان به شما می‌گویم... هیچ‌کس نباید هرگز بفهمد.",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}

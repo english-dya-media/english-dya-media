@@ -54,3 +54,12 @@ Every part's title is in `parts.json` ("titles").
   then Afrasiab's ("when the sun and the moon shine, why should the stars wear crowns?"). Part 12 ends in
   Afrasiab's dark palace (`dark_hall`, `sit_throne`, red firelight): a messenger brings the news and Afrasiab says
   "The son of Rostam... against Iran? Good. Very good." Part 13 can open there.
+- **Parts 13-14** (`p13_scenes.py`): Hooman (`HOOMAN`: fur cap, long beard, cape, mace; voice am_eric) and Barman
+  (`BARMAN`: fur cap, short beard, spear; voice am_santa) are Afrasiab's commanders. Part 13: the backstory (young
+  Rostam once lifted Afrasiab out of the saddle by the belt; the belt broke and his men saved him), Afrasiab sends them
+  with 12,000 riders, gifts (gold, horses, a throne and a crown) and a sweet, lying letter ("take the throne of Iran...
+  Samangan, Iran and Turan will be one"). Part 14: his secret order (father and son must never know each other; if
+  Rostam dies, kill Sohrab in his sleep), the march at dawn, Sohrab's welcome in his camp (Hooman amazed at his arms and
+  shoulders), the letter read aloud; Sohrab trusts them. It ends at sunset ("Tomorrow, we march to the border of
+  Iran!") and on the White Fortress under the moon (`white_fortress()`): part 15 can open there. No verses (Ganjoor
+  fetch refused in the scheduled run).
