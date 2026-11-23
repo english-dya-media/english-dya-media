@@ -60,3 +60,13 @@ WITNESS_A = dict(TURAN_SOLDIER, beard="full", beard_col="#2a1a12", cloak="#5a0e1
 WITNESS_B = dict(TURAN_SOLDIER_2, skin="light", beard="short", beard_col="#120c09", plume="#b3181d", cloak="#3a3a44", cloak2="#1e1e26",
                  cloak_hi="#5a5a68")
 ARASH_BARE = dict(ARASH, cloak=None)
+
+# ---- part 3: Tirgan, an early summer day in a village: a girl of about ten (a light green scarf with flowers, a red dress) and her little
+# brother (curly hair, a yellow shirt); the village children who splash water at the stream
+GIRL = spec(kind="boy", skin="tan", hair="none", beard=None, head="scarf", scarf_col="#7ac08a", scarf_edge="#f4e8a0", garment="dress",
+            col="#c8323a", col2="#8a1e26", pattern="plain", hs=1.08, bs=0.64, belt=None, cuff="#f4e8a0", trim="#f4e8a0", iris="#3a2214")
+KID = spec(kind="boy", skin="tan", hair="boy_curly", hair_col="#1a120c", beard=None, head="none", garment="child", col="#e8b830", col2="#b88a1a",
+           pattern="plain", hs=1.14, bs=0.54, belt="#6a4a2a", buckle=False, cuff="#f4dc80", trim="#f4dc80", trousers="#3a4a6a", iris="#3a2214")
+CHILD_A = dict(KID, skin="olive", hair="short", col="#3a8ac8", col2="#2a6a9a", cuff="#a8d4f0", trim="#a8d4f0", trousers="#5a4a3a", bs=0.58, hs=1.1)
+CHILD_B = dict(GIRL, skin="light", scarf_col="#f0a8c0", scarf_edge="#ffffff", col="#6a4aa8", col2="#4a3080", cuff="#d8c8f0", trim="#d8c8f0", bs=0.6)
+CHILD_C = dict(KID, skin="olive", hair="boy_curly", col="#4aa86a", col2="#2e7a48", cuff="#c8eed0", trim="#c8eed0", trousers="#4a3a2a", bs=0.56)

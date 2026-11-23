@@ -277,3 +277,48 @@ def flap(amp=0.1, seed=0, dur=0.9):
     x = bandpass(r.standard_normal(n).astype(np.float32), 300, 2600)
     e = (0.55 + 0.45 * np.sign(np.sin(2 * np.pi * (14 - 6 * t / dur) * t))) * np.exp(-t * 2.4) * np.minimum(1, t / 0.02)
     return (x * e * amp * 2).astype(np.float32)
+
+
+# ---- part 3: the shot, the flight, the river, Tirgan
+def splash(amp=0.1, seed=0, dur=0.7):
+    """water thrown by hand: a bright wet burst, then droplets falling back"""
+    r = np.random.default_rng(seed)
+    n = int(dur * SR); t = np.arange(n) / SR
+    x = bandpass(r.standard_normal(n).astype(np.float32), 700, 7000) * np.exp(-t * 9) * np.minimum(1, t / 0.01)
+    drops = np.zeros(n, np.float32)
+    for k in range(14):
+        i = int(r.uniform(0.12, dur - 0.08) * SR); m = int(0.03 * SR); tt = np.arange(m) / SR
+        f = r.uniform(900, 2600)
+        drops[i:i + m] += (np.sin(2 * np.pi * f * tt * (1 + 2.5 * tt)) * np.exp(-tt * 140) * r.uniform(0.2, 0.6)).astype(np.float32)
+    return ((x * 1.4 + drops) * amp).astype(np.float32)
+
+
+def kids_laugh(dur=2.0, amp=0.06, seed=0, voices=3):
+    """children laughing and shrieking with joy: quick high bursts"""
+    r = np.random.default_rng(seed)
+    n = int(dur * SR); t = np.arange(n) / SR
+    out = np.zeros(n, np.float32)
+    for v in range(voices):
+        rate = r.uniform(5.0, 7.0); f0 = r.uniform(300, 430); ph = r.uniform(0, 6.3)
+        gate = np.maximum(0.0, np.sin(2 * np.pi * rate * t + ph)) ** 2 * np.exp(-t * r.uniform(0.4, 1.0))
+        f = f0 * (1 + 0.08 * np.sin(2 * np.pi * 1.3 * t + ph))
+        voice = np.sin(2 * np.pi * np.cumsum(f) / SR) + 0.4 * np.sin(4 * np.pi * np.cumsum(f) / SR)
+        breath = bandpass(r.standard_normal(n).astype(np.float32), 1200, 4500)
+        out += (voice * 0.4 + breath * 0.6) * gate
+    out = bandpass(out.astype(np.float32), 250, 5000)
+    return (out / (np.abs(out).max() + 1e-6) * amp).astype(np.float32)
+
+
+def river(dur, amp=0.04, seed=0):
+    """a wide river flowing: a low rush with small lapping waves"""
+    return noise_bed(dur, amp=amp, lo=120, hi=1400, lfo=0.25, seed=seed)
+
+
+def thunk(amp=0.25, seed=0):
+    """an arrow striking deep into a tree: a hard wooden knock and a short quiver"""
+    r = np.random.default_rng(seed)
+    n = int(0.8 * SR); t = np.arange(n) / SR
+    knock = np.sin(2 * np.pi * 210 * t * (1 + 0.3 * np.exp(-t * 60))) * np.exp(-t * 28)
+    crack = highpass(r.standard_normal(n).astype(np.float32), 1800) * np.exp(-t * 70)
+    quiver = np.sin(2 * np.pi * 34 * t) * np.sin(2 * np.pi * 420 * t) * np.exp(-t * 6) * 0.25
+    return ((knock + 0.5 * crack + quiver) * amp).astype(np.float32)

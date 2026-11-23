@@ -73,6 +73,53 @@ LINES = [
  ("p2s8a",2,8,"ARASH","People of Iran! People of Turan!","ای مردمِ ایران! ای مردمِ توران!","People of Eeraan! People of Tooraan!"),
  ("p2s8b",2,8,"ARASH","Look at me. I am healthy and strong.","به من نگاه کنید. تنم سالم و نیرومند است.",None),
  ("p2s8c",2,8,"ARASH","After this shot… I will not be.","پس از این تیر… دیگر نخواهم بود.","After this shot... I will not be."),
+ # ---- part 3 · Arash's Arrow (Biruni: at sunrise Arash draws the bow with all his strength and gives his life to the shot; the arrow flies
+ # all morning and falls in a great walnut tree at the far edge of Khorasan (later tellings: the bank of the Jeyhun/Oxus); the river becomes the
+ # border; Tirgan: water and coloured threads)
+ ("p3s1a",3,1,"NARRATOR","Over mountains, over deserts, over rivers…","از فرازِ کوه‌ها، بیابان‌ها و رودها…",
+  "Over mountains... over deserts... over rivers..."),
+ ("p3s1b",3,1,"NARRATOR","…and no one knew where it would fall.","…و هیچ‌کس نمی‌دانست کجا فرود می‌آید.","and no one knew, where it would fall."),
+ ("p3s3a",3,3,"NARRATOR","The sun came up. Everyone looked at the mountain.","خورشید بالا آمد. همه به کوه نگاه می‌کردند.",
+  "The sun came up. Everyone looked at the mountain."),
+ ("p3s3b",3,3,"GENERAL","My king… he is ready.","سرورم… او آماده است.","My king... he is ready."),
+ ("p3s3c",3,3,"MANUCHEHR","Then all of Iran is with him.","پس همه‌ی ایران با اوست.","Then all of Eeraan, is with him."),
+ ("p3s3d",3,3,"ARASH","All my strength… into this one arrow.","همه‌ی نیرویم… در همین یک تیر.","All my strength... into this one arrow."),
+ ("p3s3e",3,3,"ARASH","Fly far… for the children of Iran.","دور برو… برای بچه‌های ایران.","Fly far... for the children of Eeraan."),
+ ("p3s3f",3,3,"NARRATOR","Arash drew the bow with all his strength…","آرش کمان را با همه‌ی نیرویش کشید…",
+  "Aarash drew the bow, with all his strength..."),
+ ("p3s3g",3,3,"NARRATOR","…and with all his life.","…و با همه‌ی جانش.","and with all his life."),
+ ("p3s3h",3,3,"NARRATOR","He gave everything to that arrow.","او همه‌چیزش را به آن تیر داد.",None),
+ ("p3s3i",3,3,"NARRATOR","On the mountain, only the wind was left.","بر فرازِ کوه، فقط باد ماند.","On the mountain, only the wind was left."),
+ ("p3s3j",3,3,"BOY","Mother… where is Arash?","مادر… آرش کجاست؟","Mother... where is Aarash?"),
+ ("p3s3k",3,3,"MOTHER","He is the wind now, my son.","او حالا باد است، پسرم.",None),
+ ("p3s3l",3,3,"ARASH_MOTHER","My brave son…","پسرِ دلیرم…","My brave son..."),
+ ("p3s4a",3,4,"WITNESS_A","Ride! Don't lose it!","بتاز! گمش نکن!",None),
+ ("p3s4b",3,4,"WITNESS_B","It is still flying!","هنوز دارد پرواز می‌کند!",None),
+ ("p3s4c",3,4,"NARRATOR","The arrow flew all morning…","تیر تمامِ صبح پرواز کرد…","The arrow flew all morning..."),
+ ("p3s4d",3,4,"NARRATOR","…over mountains and deserts, to a great river.","…از فرازِ کوه‌ها و بیابان‌ها، تا رودی بزرگ.",
+  "over mountains and deserts, to a great river."),
+ ("p3s4e",3,4,"WITNESS_A","There! In that walnut tree!","آن‌جا! در آن درختِ گردو!",None),
+ ("p3s4f",3,4,"WITNESS_B","On the other side of the river…","آن سوی رود…","On the other side of the river..."),
+ ("p3s5a",3,5,"NARRATOR","Days later, the witnesses came back to Afrasiab.","چند روز بعد، شاهدان نزدِ افراسیاب برگشتند.",
+  "Days later, the witnesses came back to Afraaseeyaab."),
+ ("p3s5b",3,5,"WITNESS_A","Great king, the arrow fell beyond the Jeyhun River.","شاهِ بزرگ، تیر آن سوی رودِ جیحون افتاد.",
+  "Great king, the arrow fell beyond the Jay-hoon River."),
+ ("p3s5c",3,5,"AFRASIAB","Beyond the Jeyhun?!","آن سوی جیحون؟!","Beyond the Jay-hoon?"),
+ ("p3s5d",3,5,"ADVISOR","My king… you gave your word.","سرورم… شما قول دادید.","My king... you gave your word."),
+ ("p3s5e",3,5,"AFRASIAB","I did. Then the river is the border.","دادم. پس آن رود مرز است.",None),
+ ("p3s5f",3,5,"AFRASIAB","Fold the tents. We are going home.","چادرها را جمع کنید. به خانه برمی‌گردیم.",None),
+ ("p3s5g",3,5,"TURAN_SOLDIER","Home…","خانه…","Home..."),
+ ("p3s6a",3,6,"NARRATOR","Afrasiab kept his word, and the war was over.","افراسیاب به قولش وفا کرد، و جنگ تمام شد.",
+  "Afraaseeyaab kept his word, and the war was over."),
+ ("p3s6b",3,6,"BOY","Mother! Bread!","مادر! نان!",None),
+ ("p3s6c",3,6,"MOTHER","Yes, my son. Thanks to Arash.","بله، پسرم. به لطفِ آرش.","Yes, my son. Thanks to Aarash."),
+ ("p3s6d",3,6,"NARRATOR","Every year on Tirgan, people splash water… and remember Arash.","هر سال در جشنِ تیرگان، مردم آب می‌پاشند… و آرش را به یاد می‌آورند.",
+  "Every year on Teergaan, people splash water... and remember Aarash."),
+ ("p3s6e",3,6,"GIRL","Make a wish… and give it to the wind.","آرزو کن… و آن را به باد بسپار.","Make a wish... and give it to the wind."),
+ ("p3s6f",3,6,"KID","Like Arash?","مثلِ آرش؟","Like Aarash?"),
+ ("p3s6g",3,6,"GIRL","Like Arash.","مثلِ آرش.","Like Aarash."),
+ ("p3s6h",3,6,"NARRATOR","And some say… the arrow is still flying.","و بعضی‌ها می‌گویند… آن تیر هنوز در پرواز است.",
+  "And some say... the arrow is still flying."),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -88,6 +135,8 @@ VOICES = {
  # 260 ≈ 176 Hz, a low warm woman: Arash's mother; 660 two semitones down and 270, quick: the two witnesses of Turan)
  "SPANDARMAD": (880, 1.15, 0, 0.9), "BOWYER": (200, 1.1, -1, 1.0), "SMITH": (380, 1.05, 0, 1.0), "ARASH_MOTHER": (260, 1.08, 0, 0.9),
  "WITNESS_A": (660, 1.05, -2, 1.0), "WITNESS_B": (270, 1.05, 0, 1.0),
+ # part 3 (165 four semitones up ≈ 230 Hz: the girl at Tirgan; 519 five semitones up ≈ 250 Hz: her little brother)
+ "GIRL": (165, 1.05, 4, 0.95), "KID": (519, 1.0, 5, 0.95),
 }
 # slower takes for learners (per-line length factors, see voices.py)
 SPEED = {lid: 1.15 for lid, part, *_ in LINES if part == 1}
@@ -106,3 +155,11 @@ SPEED.update({"p2s1a": 1.35, "p2s1b": 1.35, "p2s3a": 1.3, "p2s3b": 1.3, "p2s3c":
 FX.update({lid: "aecho=0.8:0.6:70|140:0.22|0.12" for lid in ("p2s3d", "p2s3e", "p2s3f", "p2s3g", "p2s3h", "p2s3j")})
 FX.update({lid: "atempo=0.92,aecho=0.8:0.6:70|140:0.22|0.12" for lid in ("p2s3g", "p2s3h")})
 FX.update({"p2s4d": "atempo=0.9", "p2s5c": "atempo=0.88", "p2s6c": "atempo=0.9", "p2s8c": "atempo=0.9", "p2s8a": "aecho=0.8:0.5:240:0.18"})
+# part 3
+SPEED.update({lid: 1.15 for lid, part, *_ in LINES if part == 3})
+SPEED.update({"p3s1a": 1.4, "p3s1b": 1.35, "p3s3a": 1.3, "p3s3b": 1.35, "p3s3c": 1.35, "p3s3d": 1.5, "p3s3e": 1.45, "p3s3f": 1.35, "p3s3g": 1.45,
+              "p3s3h": 1.35, "p3s3i": 1.4, "p3s3j": 1.3, "p3s3k": 1.4, "p3s3l": 1.5, "p3s4a": 1.1, "p3s4b": 1.2, "p3s4c": 1.35, "p3s4d": 1.35,
+              "p3s4e": 1.2, "p3s4f": 1.35, "p3s5a": 1.25, "p3s5b": 1.3, "p3s5c": 1.3, "p3s5d": 1.35, "p3s5e": 1.35, "p3s5f": 1.3, "p3s5g": 1.6,
+              "p3s6a": 1.3, "p3s6b": 1.15, "p3s6c": 1.35, "p3s6d": 1.3, "p3s6e": 1.35, "p3s6f": 1.3, "p3s6g": 1.3, "p3s6h": 1.45})
+FX.update({"p3s3d": "atempo=0.92", "p3s3e": "atempo=0.92", "p3s3l": "atempo=0.9", "p3s5c": "atempo=0.92", "p3s5g": "atempo=0.85",
+           "p3s4a": "aecho=0.8:0.5:120:0.15"})

@@ -3,7 +3,7 @@ Part 1: the besieged fortress in the green mountains of Tabaristan, with the ten
 its walls (fort_yard)."""
 import math, random
 from film import svg_render, W, H
-from bgs import FILTERS, lg, rg, ridge, hill, clouds, stars, grass_tufts, boulder, pine, _strata
+from bgs import FILTERS, lg, rg, ridge, hill, clouds, stars, grass_tufts, boulder, pine, _strata, poplar
 
 GOLD, GOLD_D = "#c9a24a", "#7a5a22"
 SKY = {
@@ -61,10 +61,11 @@ def _fortress(pal):
     return o
 
 
-def siege(pal="dawn"):
+def siege(pal="dawn", tents=True):
     """Tabaristan: misty green mountains; the Iranian fortress on a wooded hill in the middle (walls y 700-900, keep top FORT_TOP); the dark
     tents of Turan with red stripes and black-red pennants all round its foot (y 1000-1300, campfires at night); a meadow in front
-    (people stand at y 1380-1750). pal: dawn / day / dusk / night"""
+    (people stand at y 1380-1750). pal: dawn / day / dusk / night. tents=False (part 3): the camp is gone, only trampled rings and the
+    ashes of its fires are left"""
     r = random.Random(1501)
     g1, g2, g3 = GREEN[pal]
     s = "<defs>" + FILTERS + lg("ssky", SKY[pal]) + lg("smead", [(0, g2, 1), (1, g3, 1)]) + "</defs>"
@@ -89,14 +90,20 @@ def siege(pal="dawn"):
         s += pine(x, y, r.uniform(60, 120), col=g2, dark=g3)
     s += _fortress(pal)
     # Turan's camp round the foot of the hill
-    tents = []
+    tents_ = []
     for k in range(34):
         x = r.uniform(-40, 1120); y = r.uniform(1040, 1300)
         if 260 < x < 820 and y < 1110:
             continue
-        tents.append((y, x))
-    for y, x in sorted(tents):
+        tents_.append((y, x))
+    for y, x in sorted(tents_):
         sc = 0.5 + (y - 1040) / 260 * 0.7
+        if not tents:          # where a tent stood: a ring of flattened, paler grass; now and then the ashes of a fire
+            s += f'<ellipse cx="{x:.0f}" cy="{y - 4:.0f}" rx="{38 * sc:.0f}" ry="{9 * sc:.0f}" fill="#b8b08a" opacity="0.35"/>'
+            if r.random() < 0.3:
+                s += f'<ellipse cx="{x + 40 * sc:.0f}" cy="{y - 2:.0f}" rx="{10 * sc:.0f}" ry="{4 * sc:.0f}" fill="#3a3430" opacity="0.6"/>'
+            r.random()
+            continue
         s += _tent(x, y, 70 * sc, 56 * sc, TENT_COLS[int(x) % 3], lit=(pal == "night" and r.random() < 0.6))
         if pal == "night" and r.random() < 0.35:
             s += (f'<circle cx="{x + 40 * sc:.0f}" cy="{y - 6:.0f}" r="{16 * sc:.0f}" fill="#ffb060" opacity="0.35" filter="url(#b6)"/>'
@@ -370,3 +377,239 @@ def forge():
     # the light of the fire on everything
     s += f'<rect width="{W}" height="{H}" fill="url(#kglow)"/>'
     return svg_render(s)
+
+
+# ---------------------------------------------------------------- part 3: the desert, the great river Jeyhun and its walnut tree, Tirgan
+def _dune_row(seed, base, amp, wmin, wmax, lit, shade, crest="#fff0c8"):
+    """a row of dunes across the frame as one continuous surface (no seams): sharp crests, rounded valleys; the sun is at the right, so
+    the face left of each crest is in shade"""
+    r = random.Random(seed)
+    pts = []                                   # alternating valley, crest, valley, …
+    x = r.uniform(-400, -150)
+    pts.append((x - 300, base + r.uniform(-10, 20)))
+    while x < W + 300:
+        w = r.uniform(wmin, wmax)
+        pts.append((x, base + r.uniform(-10, 25)))
+        pts.append((x + w * r.uniform(0.5, 0.66), base - amp * r.uniform(0.7, 1.1)))
+        x += w
+    pts.append((x, base + r.uniform(-10, 20)))
+    d = f"M {pts[0][0]:.0f} {base + 900:.0f} L {pts[0][0]:.0f} {pts[0][1]:.0f}"
+    for i in range(1, len(pts)):
+        (xa, ya), (xb, yb) = pts[i - 1], pts[i]
+        if yb < ya:      # up to a crest: steep at the end (sharp crest)
+            d += f" C {xa + (xb - xa) * 0.5:.0f} {ya:.0f}, {xb - (xb - xa) * 0.2:.0f} {yb + (ya - yb) * 0.15:.0f}, {xb:.0f} {yb:.0f}"
+        else:            # down from a crest into the valley: rounded
+            d += f" C {xa + (xb - xa) * 0.25:.0f} {ya + (yb - ya) * 0.2:.0f}, {xb - (xb - xa) * 0.45:.0f} {yb:.0f}, {xb:.0f} {yb:.0f}"
+    d += f" L {pts[-1][0]:.0f} {base + 900:.0f} Z"
+    o = f'<path d="{d}" fill="{lit}"/>'
+    for i in range(2, len(pts) - 1, 2):       # the shaded face left of each crest
+        (vx, vy), (cx, cy) = pts[i - 1], pts[i]
+        fx, fy = cx - (cx - vx) * 0.12, base + amp * 0.35 + 50
+        o += (f'<path d="M {cx:.0f} {cy:.0f} C {cx - (cx - vx) * 0.2:.0f} {cy + (vy - cy) * 0.15:.0f}, {vx + (cx - vx) * 0.5:.0f} {vy:.0f}, {vx:.0f} {vy:.0f} '
+              f'C {vx + (fx - vx) * 0.45:.0f} {vy + 10:.0f}, {fx - 40:.0f} {fy:.0f}, {fx:.0f} {fy:.0f} C {cx - 20:.0f} {cy + (fy - cy) * 0.5:.0f}, '
+              f'{cx - 6:.0f} {cy + 30:.0f}, {cx:.0f} {cy:.0f} Z" fill="{shade}" opacity="0.8"/>')
+        o += (f'<path d="M {cx - (cx - vx) * 0.3:.0f} {cy + (vy - cy) * 0.08:.0f} Q {cx - 12:.0f} {cy:.0f} {cx:.0f} {cy:.0f} Q {cx + 40:.0f} {cy + 8:.0f} '
+              f'{cx + 120:.0f} {cy + 40:.0f}" stroke="{crest}" stroke-width="3" fill="none" opacity="0.7"/>')
+    return o
+
+
+DESERT_SUN = (850, 430)
+
+
+def desert():
+    """the deserts on the way to Khorasan in the late morning: a hot pale sky with the sun high at the right (DESERT_SUN), far blue
+    mountains on the horizon (y 960), golden dunes with sharp crests, their left slopes in shade, from y 980 to the bottom; a tiny caravan
+    on a far crest; the arrow flies over it in the scenes (y 400-900)"""
+    r = random.Random(3101)
+    s = "<defs>" + FILTERS + lg("dsky", [(0, "#3e74b4", 1), (0.32, "#8cb6d6", 1), (0.48, "#e8e0c4", 1), (0.52, "#f4dcae", 1)])
+    s += rg("dsun", DESERT_SUN[0], DESERT_SUN[1], 700, [(0, "#fffbe8", 0.9), (0.12, "#fff0c0", 0.45), (1, "#ffe0a0", 0)]) + "</defs>"
+    s += f'<rect width="{W}" height="{H}" fill="url(#dsky)"/><rect width="{W}" height="{H}" fill="url(#dsun)"/>'
+    s += f'<circle cx="{DESERT_SUN[0]}" cy="{DESERT_SUN[1]}" r="46" fill="#fffdf2"/>'
+    s += clouds(W, 3102, [300, 520], col="#ffffff", hi="#ffffff", op=0.35)
+    s += f'<path d="{ridge(W, 980, 120, 3103, rough=0.4)}" fill="#8a96b8" opacity="0.75"/>'
+    s += f'<rect x="0" y="930" width="{W}" height="80" fill="#f8ecd0" opacity="0.4" filter="url(#b20)"/>'
+    layers = [(990, 40, ("#e8c48a", "#c89a68")), (1060, 70, ("#e6b878", "#c08a58")), (1180, 110, ("#e2ac68", "#b47a48")),
+              (1340, 150, ("#dca05a", "#a86c3c")), (1540, 190, ("#d6964e", "#9a6032")), (1760, 220, ("#d08c44", "#8a542a"))]
+    for i, (base, amp, (lit, shade)) in enumerate(layers):
+        s += _dune_row(3110 + i, base, amp, 380 * (1 + i * 0.25), 700 * (1 + i * 0.25), lit, shade)
+        if i == 1:      # a tiny caravan on a far dune: camels and their drivers, dark in the haze
+            for k in range(6):
+                cx, cy = 300 + k * 26, 1030 + k * 1.5
+                s += (f'<path d="M {cx - 9} {cy} L {cx - 8} {cy - 9} C {cx - 6} {cy - 16}, {cx + 2} {cy - 16}, {cx + 4} {cy - 10} L {cx + 9} {cy - 14} L {cx + 11} {cy - 12} '
+                      f'L {cx + 7} {cy - 7} L {cx + 7} {cy} M {cx - 6} {cy} L {cx - 6} {cy - 5} M {cx + 4} {cy} L {cx + 4} {cy - 5}" stroke="#6a5a50" stroke-width="2" fill="#6a5a50"/>')
+        for k in range(int(10 + 6 * i)):          # wind ripples on the sand
+            xx = r.uniform(-20, W); yy = base + r.uniform(20, 200 + 40 * i)
+            s += f'<path d="M {xx:.0f} {yy:.0f} q {20 + 8 * i:.0f} {-4 - i:.0f} {40 + 16 * i:.0f} 0" stroke="#fff0c8" stroke-width="{1.5 + 0.5 * i:.1f}" fill="none" opacity="0.35"/>'
+    s += f'<rect x="0" y="960" width="{W}" height="200" fill="#fff4dc" opacity="0.18" filter="url(#b20)"/>'
+    return svg_render(s)
+
+
+WALNUT = (730, 985)          # the foot of the great walnut tree's trunk on the far bank in jeyhun()
+WALNUT_HIT = (741, 912)      # where the arrow strikes its trunk
+
+
+def walnut_tree(x, y, h, seed=0, leaf=("#2e4a22", "#3e5e2a", "#5a7a36"), bark=("#8a8074", "#5a5248", "#b0a698")):
+    """a great walnut tree: a short thick pale trunk forking into big limbs, a wide round crown of dark leaves; foot of the trunk at (x, y)"""
+    r = random.Random(seed)
+    tw = h * 0.07
+    o = (f'<path d="M {x - tw * 1.4:.0f} {y:.0f} C {x - tw:.0f} {y - h * 0.15:.0f}, {x - tw * 0.9:.0f} {y - h * 0.3:.0f}, {x - tw * 1.3:.0f} {y - h * 0.42:.0f} '
+         f'L {x - tw * 3.2:.0f} {y - h * 0.62:.0f} L {x - tw * 2.4:.0f} {y - h * 0.66:.0f} L {x - tw * 0.3:.0f} {y - h * 0.46:.0f} L {x + tw * 0.2:.0f} {y - h * 0.7:.0f} '
+         f'L {x + tw * 1.0:.0f} {y - h * 0.7:.0f} L {x + tw * 0.8:.0f} {y - h * 0.46:.0f} L {x + tw * 2.8:.0f} {y - h * 0.64:.0f} L {x + tw * 3.4:.0f} {y - h * 0.58:.0f} '
+         f'L {x + tw * 1.2:.0f} {y - h * 0.4:.0f} C {x + tw * 0.9:.0f} {y - h * 0.3:.0f}, {x + tw:.0f} {y - h * 0.15:.0f}, {x + tw * 1.5:.0f} {y:.0f} Z" '
+         f'fill="{bark[0]}" stroke="#2a241e" stroke-width="{max(2, h * 0.006):.1f}"/>'
+         f'<path d="M {x - tw * 0.4:.0f} {y:.0f} C {x - tw * 0.2:.0f} {y - h * 0.2:.0f}, {x - tw * 0.6:.0f} {y - h * 0.3:.0f}, {x - tw * 0.9:.0f} {y - h * 0.4:.0f}" '
+         f'stroke="{bark[1]}" stroke-width="{max(2, h * 0.012):.1f}" fill="none" opacity="0.6"/>'
+         f'<path d="M {x + tw * 0.5:.0f} {y:.0f} C {x + tw * 0.6:.0f} {y - h * 0.2:.0f}, {x + tw * 0.5:.0f} {y - h * 0.3:.0f}, {x + tw * 0.7:.0f} {y - h * 0.4:.0f}" '
+         f'stroke="{bark[2]}" stroke-width="{max(2, h * 0.01):.1f}" fill="none" opacity="0.6"/>')
+    blobs = []
+    for k in range(26):
+        a = r.uniform(0, 2 * math.pi); d = r.uniform(0, 1) ** 0.6
+        bx = x + math.cos(a) * d * h * 0.5; by = y - h * 0.74 + math.sin(a) * d * h * 0.22
+        blobs.append((by, bx, h * r.uniform(0.1, 0.17)))
+    for by, bx, rr in sorted(blobs):
+        o += f'<circle cx="{bx:.0f}" cy="{by:.0f}" r="{rr:.0f}" fill="{leaf[0]}"/>'
+    for by, bx, rr in sorted(blobs)[:16]:
+        o += f'<circle cx="{bx + rr * 0.2:.0f}" cy="{by - rr * 0.25:.0f}" r="{rr * 0.75:.0f}" fill="{leaf[1]}"/>'
+    for by, bx, rr in sorted(blobs)[:9]:
+        o += f'<circle cx="{bx + rr * 0.35:.0f}" cy="{by - rr * 0.4:.0f}" r="{rr * 0.45:.0f}" fill="{leaf[2]}" opacity="0.8"/>'
+    o += f'<ellipse cx="{x:.0f}" cy="{y - h * 0.5:.0f}" rx="{h * 0.36:.0f}" ry="{h * 0.07:.0f}" fill="#16220e" opacity="0.35"/>'
+    return o
+
+
+def jeyhun(pal="noon"):
+    """the great river Jeyhun (the Oxus) at the far edge of Khorasan, at noon, from the near bank: pale mountains far away, the far bank
+    (y 900-1000) with poplars and the great walnut tree (trunk foot WALNUT; its crown x 520-940, y 610-900), the wide river (y 1000-1400)
+    glittering under the sun, the near bank of sand and grass with reeds at both sides (riders and people at y 1450-1800)"""
+    r = random.Random(3201)
+    s = "<defs>" + FILTERS + lg("jsky", [(0, "#3a72b8", 1), (0.35, "#8ec0e0", 1), (0.5, "#e4eedc", 1)])
+    s += lg("jriv", [(0, "#a8c8c0", 1), (0.25, "#5a9098", 1), (1, "#2e5a66", 1)]) + lg("jbank", [(0, "#c8b080", 1), (1, "#8a7048", 1)]) + "</defs>"
+    s += f'<rect width="{W}" height="{H}" fill="url(#jsky)"/>'
+    s += clouds(W, 3202, [260, 420, 560], col="#ffffff", hi="#ffffff", op=0.55)
+    s += f'<path d="{ridge(W, 900, 150, 3203, rough=0.45)}" fill="#a8b4cc" opacity="0.8"/>'
+    s += f'<path d="{ridge(W, 930, 80, 3204, rough=0.35)}" fill="#8aa0a8" opacity="0.8"/>'
+    s += f'<rect x="0" y="860" width="{W}" height="90" fill="#ffffff" opacity="0.25" filter="url(#b20)"/>'
+    # the far bank: a strip of green steppe, poplars, the great walnut tree
+    s += f'<path d="M -40 1004 C 200 990, 500 996, 760 990 C 900 986, 1000 992, 1120 988 L 1120 920 C 900 930, 600 914, 300 924 C 150 928, 40 920, -40 926 Z" fill="#7a9a52"/>'
+    s += f'<path d="M -40 1004 C 200 990, 500 996, 760 990 C 900 986, 1000 992, 1120 988 L 1120 1004 Z" fill="#a89a6a"/>'
+    for px in (60, 110, 170, 980, 1030):
+        s += poplar(px, 960 + r.uniform(-6, 6), r.uniform(110, 160), col="#4a6a36", dark="#33502a")
+    for k in range(8):
+        bx = r.uniform(250, 520) if k < 4 else r.uniform(920, 1060)
+        s += f'<circle cx="{bx:.0f}" cy="{962 + r.uniform(-6, 6):.0f}" r="{r.uniform(14, 26):.0f}" fill="#4e6a34"/>'
+    s += walnut_tree(WALNUT[0], WALNUT[1], 400, seed=3205)
+    # the river
+    s += f'<rect x="-20" y="1000" width="1120" height="420" fill="url(#jriv)"/>'
+    for k in range(90):                      # the sun on the water, a glittering path, and small waves everywhere
+        y = r.uniform(1004, 1400); w = r.uniform(16, 90) * (0.5 + (y - 1000) / 400)
+        x = 820 + r.gauss(0, 40 + (y - 1000) * 0.35)
+        s += f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{w:.0f}" ry="{1.5 + (y - 1000) / 160:.1f}" fill="#fffbe8" opacity="{r.uniform(0.3, 0.75):.2f}"/>'
+    for k in range(60):
+        y = r.uniform(1010, 1400); x = r.uniform(-20, W)
+        s += f'<path d="M {x:.0f} {y:.0f} q {20 + (y - 1000) / 8:.0f} {-3 - (y - 1000) / 120:.0f} {40 + (y - 1000) / 4:.0f} 0" stroke="#d8ecec" stroke-width="{1.5 + (y - 1000) / 200:.1f}" fill="none" opacity="0.35"/>'
+    s += '<rect x="0" y="996" width="1080" height="24" fill="#e8f0e0" opacity="0.35" filter="url(#b6)"/>'
+    # the near bank
+    s += f'<path d="M -40 1420 C 200 1396, 500 1410, 760 1400 C 900 1394, 1020 1404, 1120 1398 L 1120 1940 L -40 1940 Z" fill="url(#jbank)"/>'
+    s += f'<path d="M -40 1420 C 200 1396, 500 1410, 760 1400 C 900 1394, 1020 1404, 1120 1398" stroke="#e8dcb8" stroke-width="6" fill="none" opacity="0.6"/>'
+    s += grass_tufts(3206, 1440, 1900, 40, col="#6a7a3a", hi="#9aaa5a")
+    for side in (-1, 1):                      # reeds at both edges
+        for k in range(26):
+            x = (r.uniform(-30, 160) if side < 0 else r.uniform(920, 1110)); h = r.uniform(160, 360)
+            yb = r.uniform(1400, 1560); lean = r.uniform(-30, 30)
+            s += f'<path d="M {x:.0f} {yb:.0f} q {lean * 0.4:.0f} {-h * 0.5:.0f} {lean:.0f} {-h:.0f}" stroke="{r.choice(["#5a6a2e", "#6a7a38", "#4a5a26"])}" stroke-width="{r.uniform(4, 8):.1f}" fill="none" stroke-linecap="round"/>'
+            if k % 3 == 0:
+                s += f'<ellipse cx="{x + lean:.0f}" cy="{yb - h - 14:.0f}" rx="7" ry="22" fill="#7a5a32" transform="rotate({lean * 0.6:.0f},{x + lean:.0f},{yb - h - 14:.0f})"/>'
+    return svg_render(s)
+
+
+WALNUT_ARROW = (600, 760)    # where the arrow's head is buried in the trunk in walnut_close()
+
+
+def walnut_close():
+    """close on the great walnut tree's trunk (x 430-760) at noon: pale grey bark with long furrows, a big limb forking up at the left,
+    pinnate leaves and green walnuts hanging from the top; behind, the bright river and the far bank, soft; the arrow is drawn by the
+    scenes at WALNUT_ARROW"""
+    r = random.Random(3301)
+    s = "<defs>" + FILTERS + lg("wsky", [(0, "#5a8ec4", 1), (0.45, "#b8d4e4", 1), (0.6, "#e8eedc", 1)])
+    s += lg("wbark", [(0, "#5e564c", 1), (0.35, "#8a8276", 1), (0.7, "#a8a092", 1), (1, "#6a6258", 1)], vertical=False) + "</defs>"
+    # the soft background: sky, the far plain, the bright river
+    back = f'<rect width="{W}" height="{H}" fill="url(#wsky)"/>'
+    back += f'<rect x="0" y="1150" width="{W}" height="120" fill="#8aa868"/>'
+    back += f'<rect x="0" y="1270" width="{W}" height="700" fill="#4a8890"/>'
+    for k in range(40):
+        y = r.uniform(1280, 1900); x = r.uniform(0, W)
+        back += f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{r.uniform(30, 120):.0f}" ry="4" fill="#f8f4e0" opacity="{r.uniform(0.3, 0.7):.2f}"/>'
+    s += f'<g filter="url(#b12)">{back}</g>'
+    # the trunk and a big limb
+    s += ('<path d="M 430 1960 C 450 1500, 470 1100, 440 760 C 420 560, 300 380, 180 200 L 300 150 C 400 300, 480 460, 520 600 '
+          'C 560 420, 600 220, 620 -40 L 760 -40 C 740 300, 720 700, 760 1100 C 780 1500, 770 1800, 790 1960 Z" fill="url(#wbark)" stroke="#2a241e" stroke-width="6"/>')
+    for k in range(16):                     # long furrows in the bark
+        x0 = r.uniform(460, 740)
+        s += (f'<path d="M {x0:.0f} {r.uniform(1500, 1940):.0f} C {x0 + r.uniform(-20, 20):.0f} 1300, {x0 + r.uniform(-30, 30):.0f} 1000, {x0 + r.uniform(-20, 40):.0f} {r.uniform(200, 800):.0f}" '
+              f'stroke="#4a443c" stroke-width="{r.uniform(3, 7):.1f}" fill="none" opacity="0.55"/>')
+    for k in range(10):
+        x0 = r.uniform(470, 730); y0 = r.uniform(300, 1800)
+        s += f'<path d="M {x0:.0f} {y0:.0f} l {r.uniform(-8, 8):.0f} {r.uniform(60, 160):.0f}" stroke="#c8c0b2" stroke-width="3" opacity="0.5"/>'
+    s += '<ellipse cx="660" cy="1240" rx="22" ry="34" fill="#4a443c" stroke="#2a241e" stroke-width="4"/>'
+    # leaves: pinnate leaves hanging from above, green walnuts
+    def leaf(x, y, ang, sc, col):
+        o = f'<g transform="translate({x:.0f},{y:.0f}) rotate({ang:.0f}) scale({sc:.2f})"><path d="M 0 0 L 0 260" stroke="#4a5a2a" stroke-width="5"/>'
+        for j in range(4):
+            for sd in (-1, 1):
+                yy = 40 + j * 60
+                o += f'<ellipse cx="{sd * 46}" cy="{yy}" rx="44" ry="20" fill="{col}" stroke="#1e2a12" stroke-width="3" transform="rotate({sd * 25},{sd * 46},{yy})"/>'
+        o += f'<ellipse cx="0" cy="290" rx="22" ry="44" fill="{col}" stroke="#1e2a12" stroke-width="3"/></g>'
+        return o
+    for k in range(18):
+        x = r.uniform(-60, 1140); y = r.uniform(-80, 240)
+        s += leaf(x, y, r.uniform(-50, 50), r.uniform(0.7, 1.1), r.choice(["#3e6a2a", "#4e7a32", "#2e5a22"]))
+    for x, y in ((140, 300), (210, 330), (880, 280), (930, 320)):
+        s += f'<circle cx="{x}" cy="{y}" r="30" fill="#6a8a3a" stroke="#1e2a12" stroke-width="3"/><circle cx="{x - 9}" cy="{y - 10}" r="9" fill="#9ab85a" opacity="0.7"/>'
+    s += f'<rect width="{W}" height="{H}" fill="#fff8e0" opacity="0.06"/>'
+    return svg_render(s)
+
+
+def tirgan():
+    """a village stream on Tirgan, in early summer: mud-brick houses with flat roofs and poplars on the far side, a willow at the left, the
+    stream across the middle (water y 1190-1330, stones), green grass in front (children stand at y 1400-1560)"""
+    r = random.Random(3401)
+    s = "<defs>" + FILTERS + lg("tsky", [(0, "#3a7ac4", 1), (0.4, "#9cc8e4", 1), (0.55, "#eef2dc", 1)])
+    s += lg("twat", [(0, "#8ac0c8", 1), (1, "#3a7a86", 1)]) + lg("tgrass", [(0, "#7aa846", 1), (1, "#4a7a2a", 1)]) + "</defs>"
+    s += f'<rect width="{W}" height="{H}" fill="url(#tsky)"/>'
+    s += clouds(W, 3402, [300, 460], col="#ffffff", hi="#ffffff", op=0.6)
+    s += f'<path d="{ridge(W, 930, 130, 3403, rough=0.4)}" fill="#9ab0b8" opacity="0.8"/>'
+    s += f'<path d="{hill(W, 1010, 90, 3404)}" fill="#8aa860"/>'
+    # the village on the far side
+    for k, (x, w, h) in enumerate(((120, 170, 110), (300, 150, 130), (470, 190, 100), (690, 160, 120), (880, 200, 105))):
+        s += bgs_flat_house(x, 1090, w, h)
+    for px in (40, 230, 410, 640, 820, 1040):
+        s += poplar(px, 1100, r.uniform(200, 280), col="#4a7a36", dark="#33602a")
+    s += f'<path d="M -40 1110 C 300 1100, 700 1120, 1120 1104 L 1120 1200 L -40 1200 Z" fill="#6a9a40"/>'
+    # the stream
+    s += ('<path d="M -40 1196 C 200 1186, 500 1200, 760 1190 C 900 1186, 1020 1196, 1120 1190 L 1120 1336 C 900 1346, 600 1330, 300 1342 '
+          'C 150 1346, 40 1338, -40 1342 Z" fill="url(#twat)"/>')
+    for k in range(70):
+        y = r.uniform(1200, 1330); x = r.uniform(-20, W)
+        s += f'<path d="M {x:.0f} {y:.0f} q 20 -4 40 0" stroke="#e8f8f8" stroke-width="2.5" fill="none" opacity="{r.uniform(0.3, 0.7):.2f}"/>'
+    for k in range(12):
+        x = r.uniform(0, W); y = r.uniform(1220, 1330)
+        s += boulder(x, y, r.uniform(14, 30), seed=3410 + k, col="#8a8a80", dark="#5a5a52", lit="#b8b8aa")
+    # the grass in front
+    s += ('<path d="M -40 1338 C 150 1346, 300 1336, 600 1330 C 900 1344, 1020 1336, 1120 1336 L 1120 1940 L -40 1940 Z" fill="url(#tgrass)"/>')
+    s += grass_tufts(3405, 1350, 1900, 70, col="#4a7a2a", hi="#8ab84a")
+    for k in range(30):          # little flowers
+        x = r.uniform(0, W); y = r.uniform(1360, 1900)
+        s += f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r.uniform(4, 8):.0f}" fill="{r.choice(["#ffffff", "#ffd84a", "#f08aa8"])}"/>'
+    # the willow at the left, its branches hanging over the water
+    s += '<path d="M 60 1360 C 70 1200, 40 1000, 90 820 L 130 820 C 120 1000, 150 1200, 150 1360 Z" fill="#5a4a3a" stroke="#2a2018" stroke-width="4"/>'
+    for k in range(34):
+        x0 = r.uniform(-60, 360); y0 = r.uniform(640, 860); L = r.uniform(240, 520)
+        s += f'<path d="M {x0:.0f} {y0:.0f} q {r.uniform(-20, 30):.0f} {L * 0.5:.0f} {r.uniform(-10, 40):.0f} {L:.0f}" stroke="{r.choice(["#5a8a36", "#6a9a3e", "#4a7a2e"])}" stroke-width="{r.uniform(6, 12):.1f}" fill="none" stroke-linecap="round"/>'
+    for k in range(14):
+        s += f'<circle cx="{r.uniform(-40, 320):.0f}" cy="{r.uniform(600, 800):.0f}" r="{r.uniform(50, 90):.0f}" fill="{r.choice(["#5a8a36", "#4a7a2e"])}"/>'
+    return svg_render(s)
+
+
+def bgs_flat_house(x, y, w, h):
+    """a mud-brick house with a flat roof (bgs.flat_house), its walls warmed by the summer sun"""
+    from bgs import flat_house
+    return flat_house(x, y, w, h, wall="#c8a478", shade="#a07e58", roof="#7a5a3e")
