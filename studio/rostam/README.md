@@ -96,7 +96,8 @@ The scheduled job "Rostam & Sohrab: next part" runs this every morning and makes
    media copied to static.metricool.com.
 10. **Save**: commit `parts.json`, `pNN/script.json`, `pNN_scenes.py`, `cast.json` and any engine changes to `main`
     (`git pull --rebase origin main` first). Never commit audio, renders or the voice model (see .gitignore).
-    Delete `media-rostam-*` branches whose part is already published.
+    Delete `media-rostam-*` branches whose part is already published (in scheduled runs the permission check
+    refuses `git push --delete`; then leave them for the owner, Metricool keeps its own copy of the media).
 11. **Final reply** (goes to Salar's phone; English): He wants no reports or analysis of Instagram or YouTube unless he asks. If nothing failed and nothing needs him, reply only "No action needed." Otherwise one or two short lines: what failed and what he has to do.
 
 If you can't finish a part (time, errors), schedule nothing half-done; report what's missing so the next run or the
