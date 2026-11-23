@@ -44,7 +44,7 @@ Every part's title is in `parts.json` ("titles").
 - **Gordafarid**: `gordafarid` (female face, pointed helmet, plume, hair, armour). Hojir: `warrior_ir`.
   Turanians: `warrior_tu` / `rider`.
 - The jewel/armband (مهره): Rostam gives it in part 4; it is hidden under Sohrab's armour until part 18.
-- Part 15 starts with the same exchange as part 1's cold open (you can reuse `anim.cold_open`'s world).
+- Part 29 (row 15, "Are You Rostam?") starts with the same exchange as part 1's cold open (you can reuse `anim.cold_open`'s world).
 - **Parts 11–12**: Sohrab is still `young_sohrab` (the jewel glowing on his upper arm) until the army gathers; from
   part 12's army shot (S07) on he is `sohrab` (armour; the jewel hidden under it until part 18). His horse: a wild
   colt of Rakhsh's line from the high pastures (a `horse` at ~0.8 next to him, rose rim `COLT` in p11_scenes),
@@ -63,3 +63,4 @@ Every part's title is in `parts.json` ("titles").
   shoulders), the letter read aloud; Sohrab trusts them. It ends at sunset ("Tomorrow, we march to the border of
   Iran!") and on the White Fortress under the moon (`white_fortress()`): part 15 can open there. No verses (Ganjoor
   fetch refused in the scheduled run).
+- **Parts 15-16** (`p15_scenes.py`, `p16_scenes.py`): the White Fortress on its hill on Iran's border (`fortress_far`, `wall_top`, `gate_court`, `plain_below`/`field`). Its keeper Hojir (`HOJIR` = warrior_ir, spear; voice am_michael); old Gazhdaham (`GAZH`: turban, long beard, cape, staff; voice bm_lewis at 0.84, role GAZHDAHAM) and his daughter Gordafarid (`GORD`, dress and veil; voice bf_emma) live there. Part 15: the host arrives at dawn; Hojir rides out alone; face to face ("Who are you...?" -- "I am Hojir... I will send your head to King Kavus!"); Sohrab laughs; they charge. Part 16: Hojir's lance hits Sohrab's belt and he does not move; Sohrab turns his lance and throws him from the saddle with its butt, kneels on his chest with a dagger; Hojir begs for mercy; Sohrab spares him ("never boast before a battle") and sends him bound to Hooman (Barman: "a prisoner who knows Iran can be useful" -- he is kept for part 28). The fortress laments; Gordafarid, ashamed and angry: "I will, Father... Bring me my armour and my horse." Part 16 ends on her putting on her helmet (`GORD_ARM`, the "gordafarid" look): part 17 can open there. No verses (Ganjoor fetch refused in the scheduled run).

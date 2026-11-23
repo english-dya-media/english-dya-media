@@ -1,0 +1,273 @@
+{
+ "episode": 8,
+ "part": 16,
+ "title_en": "The Prisoner",
+ "title_fa": "اسیر",
+ "next_label": "NEXT PART",
+ "next_en": "Gordafarid",
+ "next_fa": "گردآفرید",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "You wanted my head, Hojir? Now I will take yours!",
+     "fa": "سر مرا می‌خواستی، هجیر؟ حالا من سر تو را می‌برم!",
+     "pause": 0.4
+    },
+    {
+     "role": "HOJIR",
+     "en": "Mercy! Spare my life!",
+     "fa": "امان! جانم را ببخش!",
+     "pause": 1.2
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Hojir, the keeper of the White Fortress, had ridden out alone to fight Sohrab.",
+     "fa": "هجیر، نگهبان دژ سپید، تنها به جنگ سهراب آمده بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab was the young son of Rostam, and he had come with the army of Turan.",
+     "fa": "سهراب پسر جوان رستم بود و با لشکر توران آمده بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Now the two riders charged.",
+     "fa": "حالا دو سوار به هم تاختند.",
+     "pause": 0.6
+    },
+    {
+     "role": "HOJIR",
+     "en": "For Iran!",
+     "fa": "برای ایران!",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Hojir struck first. His spear hit Sohrab's belt with all his strength...",
+     "fa": "هجیر اول ضربه زد. نیزه‌اش با همه‌ی زورش به کمربند سهراب خورد...",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "but Sohrab did not even move in the saddle.",
+     "fa": "اما سهراب روی زین تکان هم نخورد.",
+     "pause": 0.5
+    },
+    {
+     "role": "HOJIR",
+     "en": "What?! What kind of man are you?",
+     "fa": "چه؟! تو دیگر چه جور مردی هستی؟",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Is that all, hero of Iran? Now it is my turn.",
+     "fa": "همین بود، پهلوان ایران؟ حالا نوبت من است.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab turned his spear around and struck Hojir with its end.",
+     "fa": "سهراب نیزه‌اش را برگرداند و با ته نیزه به هجیر زد.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Hojir flew out of the saddle and fell to the ground like a stone.",
+     "fa": "هجیر از روی زین پرت شد و مثل سنگ به زمین افتاد.",
+     "pause": 0.5
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Get up, Hojir... get up!",
+     "fa": "بلند شو، هجیر... بلند شو!",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "In a moment, Sohrab jumped down and sat on his chest.",
+     "fa": "سهراب در یک چشم بر هم زدن پایین پرید و روی سینه‌اش نشست.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "You wanted my head, Hojir? Now I will take yours!",
+     "fa": "سر مرا می‌خواستی، هجیر؟ حالا من سر تو را می‌برم!",
+     "pause": 0.4
+    },
+    {
+     "role": "HOJIR",
+     "en": "Wait! Mercy... I beg you, spare my life!",
+     "fa": "صبر کن! امان... التماست می‌کنم، جانم را ببخش!",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Mercy? A moment ago you wanted to send my head to Kavus!",
+     "fa": "امان؟ یک لحظه پیش می‌خواستی سرم را برای کاووس بفرستی!",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab looked at him for a long moment... then he put away his dagger.",
+     "fa": "سهراب لحظه‌ای طولانی نگاهش کرد... بعد خنجرش را کنار گذاشت.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab was young and proud, but his heart was not cruel.",
+     "fa": "سهراب جوان و مغرور بود، ولی دلش بی‌رحم نبود.",
+     "pause": 0.4
+    },
+    {
+     "role": "HOJIR",
+     "en": "You... you will let me live?",
+     "fa": "تو... می‌گذاری زنده بمانم؟",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Live, Hojir. But remember this: never boast before a battle.",
+     "fa": "زنده بمان، هجیر. ولی این را یادت باشد: هیچ‌وقت پیش از جنگ لاف نزن.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Tie his hands, and take him to Hooman!",
+     "fa": "دست‌هایش را ببندید و پیش هومان ببریدش!",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "And so the keeper of the White Fortress was led into the enemy camp... a prisoner.",
+     "fa": "و این‌چنین نگهبان دژ سپید را به اردوی دشمن بردند... اسیر.",
+     "pause": 0.4
+    },
+    {
+     "role": "HOOMAN",
+     "en": "Welcome to our camp, keeper of the White Fortress!",
+     "fa": "به اردوی ما خوش آمدی، نگهبان دژ سپید!",
+     "pause": 0.3
+    },
+    {
+     "role": "HOOMAN",
+     "en": "Beaten by a boy, with one blow.",
+     "fa": "با یک ضربه از یک پسر شکست خوردی.",
+     "pause": 0.4
+    },
+    {
+     "role": "HOJIR",
+     "en": "Kill me if you want. The fortress will never open its gate to you.",
+     "fa": "اگر می‌خواهی مرا بکش. دژ هرگز دروازه‌اش را به رویتان باز نمی‌کند.",
+     "pause": 0.4
+    },
+    {
+     "role": "BARMAN",
+     "en": "Keep him alive, Hooman. A prisoner who knows Iran can be useful.",
+     "fa": "زنده نگهش دار، هومان. اسیری که ایران را می‌شناسد به کار می‌آید.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "In the fortress, when the people saw Hojir taken away, a great cry went up.",
+     "fa": "در دژ، مردم که دیدند هجیر را بردند، فریاد و ناله بلند شد.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "Hojir is taken... Who will defend us now?",
+     "fa": "هجیر اسیر شد... حالا چه کسی از ما دفاع می‌کند؟",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "Not one of our warriors can stand against that boy.",
+     "fa": "هیچ‌کدام از جنگاوران ما حریف آن پسر نیست.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S09",
+   "lines": [
+    {
+     "role": "GORDAFARID",
+     "en": "I will, Father.",
+     "fa": "من، پدر.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "You? My daughter, he has just defeated Hojir!",
+     "fa": "تو؟ دخترم، او همین حالا هجیر را شکست داد!",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Then he has not met me yet. Bring me my armour... and my horse.",
+     "fa": "پس هنوز با من روبه‌رو نشده. زرهم را بیاورید... و اسبم را.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And Sohrab did not know that the next warrior to face him... would be a woman.",
+     "fa": "و سهراب نمی‌دانست که جنگاور بعدی که با او روبه‌رو می‌شود... یک زن است.",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}

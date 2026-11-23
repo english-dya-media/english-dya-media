@@ -71,7 +71,8 @@
     "Zabol": "Zaabol",
     "Nariman": "Naareemaan",
     "Hooman": "Hoomaan",
-    "Barman": "Baarmaan"
+    "Barman": "Baarmaan",
+    "Gazhdaham": "Gazhdahaam"
   },
   "HERDSMAN": {
     "voice": "bm_fable",
@@ -104,5 +105,9 @@
   "BARMAN": {
     "voice": "am_santa",
     "speed": 0.95
+  },
+  "GAZHDAHAM": {
+    "voice": "bm_lewis",
+    "speed": 0.84
   }
 }

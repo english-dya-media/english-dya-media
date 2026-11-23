@@ -1,0 +1,286 @@
+{
+ "episode": 8,
+ "part": 15,
+ "title_en": "The White Fortress",
+ "title_fa": "دژ سپید",
+ "next_label": "NEXT PART",
+ "next_en": "The Prisoner",
+ "next_fa": "اسیر",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "Who are you, to ride out alone against my army?",
+     "fa": "تو کیستی که تنها به جنگ لشکر من آمده‌ای؟",
+     "pause": 0.4
+    },
+    {
+     "role": "HOJIR",
+     "en": "I am Hojir... and I will send your head to King Kavus!",
+     "fa": "من هجیرم... و سرت را برای کاووس‌شاه می‌فرستم!",
+     "pause": 1.2
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "On the border of Iran stood the White Fortress.",
+     "fa": "در مرز ایران، دژ سپید ایستاده بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "It was the hope of the Iranians.",
+     "fa": "امید ایرانیان به آن دژ بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Whoever wanted to attack Iran had to pass this fortress first.",
+     "fa": "هر کس می‌خواست به ایران حمله کند، اول باید از این دژ می‌گذشت.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Its keeper was Hojir, a brave warrior who had seen many battles.",
+     "fa": "نگهبانش هجیر بود، جنگاوری دلیر که جنگ‌های بسیاری دیده بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Old Gazhdaham lived there too, with his daughter, Gordafarid.",
+     "fa": "گژدهمِ پیر هم با دخترش، گردآفرید، آن‌جا زندگی می‌کرد.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "HOJIR",
+     "en": "Gazhdaham, look! Dust, all along the road.",
+     "fa": "گژدهم، نگاه کن! گرد و خاک، سرتاسر جاده را گرفته.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "That is no caravan, Hojir. Those are banners... the banners of Turan.",
+     "fa": "این کاروان نیست، هجیر. آن‌ها پرچم‌اند... پرچم‌های توران.",
+     "pause": 0.4
+    },
+    {
+     "role": "HOJIR",
+     "en": "Thousands of riders. And the one riding in front... who is he?",
+     "fa": "هزاران سوار. و آن که پیشاپیش همه می‌تازد... او کیست؟",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "I don't know. But look at him... tall as a cypress, and so young!",
+     "fa": "نمی‌دانم. ولی نگاهش کن... بلند مثل سرو، و این‌قدر جوان!",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "Close the gate! Archers, to the walls!",
+     "fa": "دروازه را ببندید! کمانداران، روی دیوارها!",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "It was Sohrab, the young son of Rostam.",
+     "fa": "سهراب بود، پسر جوان رستم.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "He was marching on Iran to find his father.",
+     "fa": "به ایران لشکر می‌کشید تا پدرش را پیدا کند.",
+     "pause": 0.5
+    },
+    {
+     "role": "SOHRAB",
+     "en": "So this is the White Fortress.",
+     "fa": "پس این است دژ سپید.",
+     "pause": 0.4
+    },
+    {
+     "role": "HOOMAN",
+     "en": "The gate of Iran, young hero. Take it, and the road is open.",
+     "fa": "دروازه‌ی ایران است، پهلوان جوان. آن را بگیر تا راه باز شود.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Today, the White Fortress. Tomorrow, the throne of Kavus!",
+     "fa": "امروز دژ سپید. فردا تخت کاووس!",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "HOJIR",
+     "en": "Bring me my armour, my spear and my horse!",
+     "fa": "زره و نیزه و اسبم را بیاورید!",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "Hojir, wait! You cannot fight a whole army alone.",
+     "fa": "هجیر، صبر کن! تنهایی نمی‌توانی با یک لشکر بجنگی.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "They say this boy fights like a lion.",
+     "fa": "می‌گویند این پسر مثل شیر می‌جنگد.",
+     "pause": 0.4
+    },
+    {
+     "role": "HOJIR",
+     "en": "I have hunted lions before.",
+     "fa": "من قبلاً شیر شکار کرده‌ام.",
+     "pause": 0.5
+    },
+    {
+     "role": "HOJIR",
+     "en": "I don't need to fight the army. Only their leader.",
+     "fa": "لازم نیست با لشکر بجنگم. فقط با سردارشان.",
+     "pause": 0.3
+    },
+    {
+     "role": "HOJIR",
+     "en": "Cut off the head, and the body falls.",
+     "fa": "سر را که بزنی، تن می‌افتد.",
+     "pause": 0.5
+    },
+    {
+     "role": "HOJIR",
+     "en": "If I don't come back, keep the gate closed.",
+     "fa": "اگر برنگشتم، دروازه را بسته نگه دارید.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Go, Hojir! Show them what an Iranian can do.",
+     "fa": "برو، هجیر! نشانشان بده یک ایرانی چه می‌کند.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "The great gate opened, and Hojir rode out alone onto the plain.",
+     "fa": "دروازه‌ی بزرگ باز شد و هجیر تنها به دشت تاخت.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "From the walls, and from the enemy camp, thousands of eyes were watching him.",
+     "fa": "از روی دیوارها و از اردوی دشمن، هزاران چشم او را تماشا می‌کردند.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "When Sohrab saw him, his blood boiled.",
+     "fa": "سهراب که او را دید، خونش به جوش آمد.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "He spurred his horse and rode out to meet him.",
+     "fa": "اسبش را هی کرد و به پیشواز او تاخت.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "Who are you, to ride out alone against my army?",
+     "fa": "تو کیستی که تنها به جنگ لشکر من آمده‌ای؟",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Tell me your name. Tonight, your mother will weep for you.",
+     "fa": "نامت را بگو. امشب مادرت برایت گریه خواهد کرد.",
+     "pause": 0.5
+    },
+    {
+     "role": "HOJIR",
+     "en": "Don't be so proud, boy. I am Hojir, the hero of Iran!",
+     "fa": "این‌قدر مغرور نباش، پسر. من هجیرم، پهلوان ایران!",
+     "pause": 0.3
+    },
+    {
+     "role": "HOJIR",
+     "en": "I will cut off your head and send it to King Kavus!",
+     "fa": "سرت را می‌بُرم و برای کاووس‌شاه می‌فرستم!",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab only laughed.",
+     "fa": "سهراب فقط خندید.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "My head? Then come and take it, Hojir!",
+     "fa": "سر من؟ پس بیا و بگیرش، هجیر!",
+     "pause": 0.5
+    },
+    {
+     "role": "HOJIR",
+     "en": "For Iran!",
+     "fa": "برای ایران!",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And the two riders charged at each other.",
+     "fa": "و دو سوار به سوی هم تاختند.",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}
