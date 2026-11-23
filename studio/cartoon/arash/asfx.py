@@ -223,3 +223,57 @@ def laugh(dur=2.4, amp=0.1, seed=0, voices=5):
         out += (voice * 0.35 + breath * 0.8) * gate
     out = bandpass(out.astype(np.float32), 150, 3200)
     return (out / (np.abs(out).max() + 1e-6) * amp).astype(np.float32)
+
+
+# ---- part 2: the forge, the bowstring, the eagle, the light of Spandarmad
+def clang(amp=0.12, seed=0, f0=1900):
+    """a hammer on hot iron at the anvil: a short metal ring with a hard knock"""
+    r = np.random.default_rng(seed)
+    n = int(0.9 * SR); t = np.arange(n) / SR
+    f = f0 * (1 + 0.06 * r.random())
+    ring = sum(w * np.sin(2 * np.pi * f * m * t) * np.exp(-t * d) for m, w, d in ((1, 1.0, 7), (2.32, 0.5, 9), (3.9, 0.3, 13), (5.6, 0.15, 18)))
+    k = int(0.03 * SR)
+    knock = np.zeros(n, np.float32)
+    knock[:k] = highpass(r.standard_normal(k).astype(np.float32), 1500) * np.exp(-np.arange(k) / SR * 120)
+    low = np.sin(2 * np.pi * 180 * t) * np.exp(-t * 30)
+    return ((ring * 0.5 + knock * 1.2 + low * 0.4) * amp).astype(np.float32)
+
+
+def twang(amp=0.2, f0=98.0, seed=0):
+    """a big bowstring plucked: a low string that drops a little in pitch, with a buzz"""
+    n = int(1.4 * SR); t = np.arange(n) / SR
+    f = f0 * (1 + 0.12 * np.exp(-t * 18))
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    x = (np.sin(ph) + 0.45 * np.sin(2 * ph) + 0.25 * np.sin(3 * ph) + 0.12 * np.sign(np.sin(ph)) * np.exp(-t * 20)) * np.exp(-t * 3.2)
+    x *= np.minimum(1, t / 0.004)
+    return lowpass((x * amp).astype(np.float32), 2400)
+
+
+def eagle_cry(amp=0.06, seed=0):
+    """the high, thin scream of an eagle far up: a falling whistle with a rough edge, twice"""
+    r = np.random.default_rng(seed)
+    out = np.zeros(int(1.6 * SR), np.float32)
+    for k, (t0, dur, fa, fb) in enumerate(((0.0, 0.55, 3400, 2300), (0.7, 0.75, 3600, 2100))):
+        n = int(dur * SR); t = np.arange(n) / SR
+        f = fa + (fb - fa) * (t / dur) ** 0.7 + 90 * np.sin(2 * np.pi * 38 * t)
+        x = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.sin(np.pi * t / dur) ** 0.6
+        x += 0.3 * bandpass(r.standard_normal(n).astype(np.float32), 2000, 5000) * np.sin(np.pi * t / dur)
+        i = int(t0 * SR); out[i:i + n] += x.astype(np.float32)
+    return (out * amp).astype(np.float32)
+
+
+def shimmer(m, t0, dur=3.0, amp=0.03, seed=0, base=880.0, pan=0.3):
+    """the soft sparkle of a light from another world: many small high bells"""
+    r = np.random.default_rng(seed)
+    for k in range(int(dur * 5)):
+        f = base * 2 ** (r.integers(0, 12) / 12) * (2 if r.random() < 0.3 else 1)
+        place(m, bell(f, 2.0, amp * r.uniform(0.5, 1.0)), t0 + r.uniform(0, dur), pan=r.uniform(-pan, pan))
+
+
+def flap(amp=0.1, seed=0, dur=0.9):
+    """a cloak snatched by the wind: cloth flapping fast, then gone"""
+    r = np.random.default_rng(seed)
+    n = int(dur * SR); t = np.arange(n) / SR
+    x = bandpass(r.standard_normal(n).astype(np.float32), 300, 2600)
+    e = (0.55 + 0.45 * np.sign(np.sin(2 * np.pi * (14 - 6 * t / dur) * t))) * np.exp(-t * 2.4) * np.minimum(1, t / 0.02)
+    return (x * e * amp * 2).astype(np.float32)

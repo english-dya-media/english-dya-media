@@ -40,3 +40,23 @@ TURAN_SOLDIER_2 = dict(TURAN_SOLDIER, skin="tan", beard="full", col="#1c1c22", c
 ADVISOR = spec(kind="old", skin="old", hair="short", hair_col="#d8d2c8", beard="white", head="cap", head_col="#1e1618", garment="robe",
                col="#5a1a1a", col2="#3a0e0e", pattern="plain", cloak="#1c1a20", cloak2="#0e0d12", cloak_hi="#3a3640", belt=None, sash="#c9a24a",
                cuff="#8a6a3a", trim="#8a6a3a", iris="#3a2a1a", build=0.95)
+
+# ---- part 2: Spandarmad (the guardian of the earth: a woman of soft green light, a pale green veil with a diadem), the old bowyer (white
+# beard, a brown cap, a leather apron), the smith (strong, short beard, a dark cap, a long leather apron), Arash's mother (an older village
+# woman in a blue scarf), two witnesses of Turan (Afrasiab's officers: black helmets, red plumes), and Arash without his cloak (on the summit)
+SPANDARMAD = spec(kind="woman", skin="light", hair="none", beard=None, head="scarf", scarf_col="#cfeecb", scarf_edge="#5ab46a", diadem=True,
+                  garment="dress", col="#8fd49a", col2="#5aa86a", pattern="plain", hs=0.95, bs=1.0, belt=None, cuff="#e8f8d8", trim="#e8f8d8",
+                  iris="#2a6a4a")
+BOWYER = spec(kind="old", skin="old", hair="short", hair_col="#d8d2c8", beard="white", head="cap", head_col="#6a4a2a", garment="robe",
+              col="#5a6a4a", col2="#3a4a2e", pattern="plain", apron="#8a6a44", belt="#3a2414", buckle=False, cuff="#8a7a5a", trim="#8a7a5a",
+              iris="#3a2a1a", build=0.95)
+SMITH = spec(kind="man", skin="olive", hair="short", hair_col="#140e0a", beard="short", beard_col="#140e0a", head="cap", head_col="#2a2420",
+             garment="tunic", col="#6a4a3a", col2="#4a3226", pattern="plain", apron="#5a3a22", apron_hem=1010, belt="#2b190c", buckle=False,
+             cuff="#4a3226", trim="#4a3226", trousers="#3a2a22", iris="#2a1a10", build=1.12)
+ARASH_MOTHER = spec(kind="woman", skin="tan", hair="none", beard=None, head="scarf", scarf_col="#2f4a8a", scarf_edge="#c8d4e8", garment="dress",
+                    col="#5a4a6a", col2="#3a3048", pattern="plain", hs=0.95, bs=0.95, belt=None, cuff="#c8d4e8", trim="#c8d4e8", iris="#3a2214",
+                    grey=0.4)
+WITNESS_A = dict(TURAN_SOLDIER, beard="full", beard_col="#2a1a12", cloak="#5a0e10", cloak2="#3a080a", cloak_hi="#8a1a1a", scale_col="#8a2a2a")
+WITNESS_B = dict(TURAN_SOLDIER_2, skin="light", beard="short", beard_col="#120c09", plume="#b3181d", cloak="#3a3a44", cloak2="#1e1e26",
+                 cloak_hi="#5a5a68")
+ARASH_BARE = dict(ARASH, cloak=None)

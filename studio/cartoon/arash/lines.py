@@ -36,6 +36,43 @@ LINES = [
  ("p1s6h",1,6,"ARASH","I know, my king.","می‌دانم، سرورم.",None),
  ("p1s6d",1,6,"NARRATOR","His name was Arash.","نامش آرش بود.","His name was, Aarash."),
  ("p1s6f",1,6,"NARRATOR","And he knew what this arrow would cost him.","و می‌دانست این تیر برایش چه بهایی دارد.",None),
+ # ---- part 2 · The Bow (Biruni: Spandarmad tells how the bow and arrow must be made; Arash shows himself to both armies before the shot)
+ ("p2s1a",2,1,"NARRATOR","To shoot that arrow, Iran needed a bow like no other…","برای انداختنِ آن تیر، ایران کمانی بی‌همتا لازم داشت…",
+  "To shoot that arrow, Eeraan needed a bow, like no other..."),
+ ("p2s1b",2,1,"NARRATOR","…and a man like no other.","…و مردی بی‌همتا.","and a man, like no other."),
+ ("p2s3a",2,3,"NARRATOR","That night, King Manuchehr could not sleep.","آن شب، منوچهر شاه خوابش نمی‌برد.","That night, King Manoochehr could not sleep."),
+ ("p2s3b",2,3,"MANUCHEHR","No bow in Iran can shoot that far…","هیچ کمانی در ایران تیری به آن دوری نمی‌اندازد…","No bow in Eeraan can shoot that far..."),
+ ("p2s3c",2,3,"MANUCHEHR","Who is there?","چه کسی آن‌جاست؟",None),
+ ("p2s3d",2,3,"SPANDARMAD","Do not be afraid, King of Iran.","نترس، شاهِ ایران.","Do not be afraid, King of Eeraan."),
+ ("p2s3e",2,3,"SPANDARMAD","I am Spandarmad, the guardian of this earth.","من سپندارمذم، نگهبانِ این زمین.","I am Spandaarmad, the guardian of this earth."),
+ ("p2s3f",2,3,"SPANDARMAD","Cut wood from the oldest tree in the forest.","از کهن‌ترین درختِ جنگل چوب ببُرید.",None),
+ ("p2s3g",2,3,"SPANDARMAD","Take feathers from the wing of an eagle.","از بالِ عقاب پَر بگیرید.",None),
+ ("p2s3h",2,3,"SPANDARMAD","And make the point from the finest iron.","و نوکِ تیر را از بهترین آهن بسازید.",None),
+ ("p2s3i",2,3,"MANUCHEHR","And who will shoot it?","و چه کسی آن را می‌اندازد؟",None),
+ ("p2s3j",2,3,"SPANDARMAD","He has already stepped forward.","او خودش پا پیش گذاشته است.",None),
+ ("p2s4a",2,4,"NARRATOR","For days and nights, the best craftsmen of Iran worked.","روزها و شب‌ها، بهترین استادکارانِ ایران کار کردند.",
+  "For days and nights, the best craftsmen of Eeraan worked."),
+ ("p2s4b",2,4,"BOWYER","This tree is older than any king.","این درخت از هر پادشاهی پیرتر است.",None),
+ ("p2s4c",2,4,"SMITH","The finest iron… for one arrow.","بهترین آهن… برای یک تیر.","The finest iron... for one arrow."),
+ ("p2s4d",2,4,"BOWYER","It is ready. But who can draw a bow like this?","آماده است. اما چه کسی می‌تواند چنین کمانی را بکشد؟",None),
+ ("p2s5a",2,5,"MANUCHEHR","Arash. This bow is yours.","آرش. این کمان مالِ توست.","Aarash. This bow is yours."),
+ ("p2s5b",2,5,"MANUCHEHR","You know what this shot will cost you.","می‌دانی این تیر برایت چه بهایی دارد.",None),
+ ("p2s5c",2,5,"ARASH","I have seen the children in our streets, my king.","من بچه‌های کوچه‌هایمان را دیده‌ام، سرورم.",None),
+ ("p2s5d",2,5,"ARASH","They are hungry. And I am an archer.","آن‌ها گرسنه‌اند. و من کمان‌دارم.",None),
+ ("p2s5e",2,5,"MANUCHEHR","Iran will never forget your name.","ایران هرگز نامت را فراموش نمی‌کند.","Eeraan will never forget your name."),
+ ("p2s6a",2,6,"ARASH_MOTHER","Arash… is it true?","آرش… راست است؟","Aarash... is it true?"),
+ ("p2s6b",2,6,"ARASH","It is true, Mother. At sunrise.","راست است، مادر. سپیده‌دم.",None),
+ ("p2s6c",2,6,"ARASH_MOTHER","My son… you were always brave.","پسرم… تو همیشه شجاع بودی.","My son... you were always brave."),
+ ("p2s6d",2,6,"ARASH_MOTHER","Go. And let your arrow fly far.","برو. و بگذار تیرت تا دوردست‌ها برود.",None),
+ ("p2s7a",2,7,"NARRATOR","Before dawn, Arash climbed the mountain.","پیش از سپیده، آرش از کوه بالا رفت.","Before dawn, Aarash climbed the mountain."),
+ ("p2s7b",2,7,"NARRATOR","Below, both armies waited.","پایینِ کوه، هر دو سپاه منتظر ماندند.",None),
+ ("p2s7c",2,7,"WITNESS_A","Look. A light, near the top.","نگاه کن. یک روشنایی، نزدیکِ قله.","Look. A light, near the top."),
+ ("p2s7d",2,7,"WITNESS_B","Let him climb. It is only one arrow.","بگذار بالا برود. فقط یک تیر است.",None),
+ ("p2s7e",2,7,"BOY","Mother, will Arash come back?","مادر، آرش برمی‌گردد؟","Mother, will Aarash come back?"),
+ ("p2s7f",2,7,"MOTHER","Watch the mountain, my son.","به کوه نگاه کن، پسرم.",None),
+ ("p2s8a",2,8,"ARASH","People of Iran! People of Turan!","ای مردمِ ایران! ای مردمِ توران!","People of Eeraan! People of Tooraan!"),
+ ("p2s8b",2,8,"ARASH","Look at me. I am healthy and strong.","به من نگاه کنید. تنم سالم و نیرومند است.",None),
+ ("p2s8c",2,8,"ARASH","After this shot… I will not be.","پس از این تیر… دیگر نخواهم بود.","After this shot... I will not be."),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -47,6 +84,10 @@ VOICES = {
  "ARASH": (300, 1.1, -1, 1.0), "MOTHER": (75, 1.05, 0, 1.0), "BOY": (765, 1.0, 4, 1.0),
  # (350 one semitone down: a tired soldier of Turan; 680 one semitone down, an old warm voice: Afrasiab's advisor; 400 whispering: a soldier of Iran)
  "TURAN_SOLDIER": (350, 1.1, -1, 1.0), "ADVISOR": (680, 1.12, -1, 1.0), "SOLDIER_W": (400, 1.25, 0, 0.7),
+ # part 2 (880 ≈ 179 Hz, soft, with an echo (FX): Spandarmad; 200 ≈ 112 Hz, quiet and old: the bowyer; 380 ≈ 89 Hz, deep: the smith;
+ # 260 ≈ 176 Hz, a low warm woman: Arash's mother; 660 two semitones down and 270, quick: the two witnesses of Turan)
+ "SPANDARMAD": (880, 1.15, 0, 0.9), "BOWYER": (200, 1.1, -1, 1.0), "SMITH": (380, 1.05, 0, 1.0), "ARASH_MOTHER": (260, 1.08, 0, 0.9),
+ "WITNESS_A": (660, 1.05, -2, 1.0), "WITNESS_B": (270, 1.05, 0, 1.0),
 }
 # slower takes for learners (per-line length factors, see voices.py)
 SPEED = {lid: 1.15 for lid, part, *_ in LINES if part == 1}
@@ -56,3 +97,12 @@ SPEED.update({"p1s1a": 1.5, "p1s1b": 1.3, "p1s3c": 1.4, "p1s3d": 1.35, "p1s3e": 
 # per-line ffmpeg filters (voices.py)
 FX = {lid: "atempo=0.88" for lid in ("p1s5c", "p1s5d", "p1s5e", "p1s5f")}
 FX.update({"p1s4b": "atempo=0.9"})
+# part 2
+SPEED.update({lid: 1.15 for lid, part, *_ in LINES if part == 2})
+SPEED.update({"p2s1a": 1.35, "p2s1b": 1.35, "p2s3a": 1.3, "p2s3b": 1.3, "p2s3c": 1.3, "p2s3d": 1.35, "p2s3e": 1.3, "p2s3f": 1.4,
+              "p2s3g": 1.5, "p2s3h": 1.45, "p2s3i": 1.5, "p2s3j": 1.45, "p2s4a": 1.25, "p2s4b": 1.45, "p2s4c": 1.5, "p2s4d": 1.5,
+              "p2s5a": 1.3, "p2s5b": 1.35, "p2s5c": 1.5, "p2s5d": 1.45, "p2s5e": 1.35, "p2s6a": 1.5, "p2s6b": 1.3, "p2s6c": 1.5, "p2s6d": 1.4,
+              "p2s7a": 1.3, "p2s7b": 1.45, "p2s7c": 1.35, "p2s7d": 1.25, "p2s7e": 1.3, "p2s7f": 1.35, "p2s8a": 1.2, "p2s8b": 1.5, "p2s8c": 1.55})
+FX.update({lid: "aecho=0.8:0.6:70|140:0.22|0.12" for lid in ("p2s3d", "p2s3e", "p2s3f", "p2s3g", "p2s3h", "p2s3j")})
+FX.update({lid: "atempo=0.92,aecho=0.8:0.6:70|140:0.22|0.12" for lid in ("p2s3g", "p2s3h")})
+FX.update({"p2s4d": "atempo=0.9", "p2s5c": "atempo=0.88", "p2s6c": "atempo=0.9", "p2s8c": "atempo=0.9", "p2s8a": "aecho=0.8:0.5:240:0.18"})
