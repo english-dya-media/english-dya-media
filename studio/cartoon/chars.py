@@ -706,6 +706,10 @@ def prop(c, name, x, y, ang, t, S=None):
                 f'<ellipse cx="-50" cy="-28" rx="6" ry="3" fill="#c76a5a"/></g>')
     if name == "stick":
         return g + f'<path d="M 0 -260 L 0 220" stroke="#5a3a1c" stroke-width="{c.sw(12)}" stroke-linecap="round"/><path d="M 0 -260 L 0 220" stroke="{OUT}" stroke-width="{c.sw(2)}" fill="none"/></g>'
+    if name == "staff":     # an old man's long walking stick with a crooked top: held at the hip, its foot on the ground (Leyli & Majnun part 4)
+        return (g + f'<path d="M 0 -150 L 0 760" stroke="#5a3a1c" stroke-width="{c.sw(12)}" stroke-linecap="round"/>'
+                f'<path d="M 0 -150 C 0 -214, 64 -226, 76 -172" stroke="#5a3a1c" stroke-width="{c.sw(12)}" fill="none" stroke-linecap="round"/>'
+                f'<path d="M 0 -150 L 0 760" stroke="{OUT}" stroke-width="{c.sw(2)}" fill="none"/></g>')
     if name == "brush":
         return (g + f'<rect x="-34" y="-14" width="68" height="28" rx="10" fill="#7a5130" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
                 f'<path d="M -30 14 L 30 14 L 30 30 L -30 30 Z" fill="#c9b07a" stroke="{OUT}" stroke-width="{c.sw(2)}"/></g>')

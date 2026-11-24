@@ -2,7 +2,8 @@
 Part 1: the open desert at dusk with its dunes (dunes), a close view of the sand where Majnun writes (sand_close), the camp of the Banu
 Amir among its palms (camp), the front of the chief's big black tent (chief_tent), the tent school under its awning (school) and the
 inside of Leyli's family tent at night (tent_night). Part 2: Leyli's father's tent (leyli_tent), the Kaaba (kaaba, kaaba_close).
-Part 3: the open sand plain of the battles (plain, with Leyli's tribe's tents far away when tents=True)."""
+Part 3: the open sand plain of the battles (plain, with Leyli's tribe's tents far away when tents=True). Part 4: the wedding at
+night (wedding) and inside Ibn Salam's great tent (rich_tent)."""
 import math, random
 from film import svg_render, W, H
 from bgs import FILTERS, lg, rg, ridge, clouds, stars
@@ -619,4 +620,125 @@ def plain(pal="day", tents=False):
         s += date_palm(x1 + 10, PLAIN_Y + 30, 230, lean=0.04, seed=4311)
     if pal == "dusk":
         s += f'<rect width="{W}" height="{H}" fill="#4a2a5a" opacity="0.12"/>'
+    return svg_render(s)
+
+
+# ------------------------------------------------------------------ part 4: the wedding at night; Ibn Salam's tent
+WED_GROUND = 1330        # wedding(): the ground at the tent's front; guests sit on the carpets at y 1450-1650, people stand at feet y 1450-1720
+WED_SEAT = (540, 1180)   # wedding(): the bride's and groom's cushions inside the tent (centre x, floor y)
+
+
+def lamp_string(x0, y0, x1, y1, n, sag=40, seed=0):
+    """a string of small lamps hanging between two points (drawn with their own glow)"""
+    o = f'<path d="M {x0} {y0} Q {(x0 + x1) / 2} {(y0 + y1) / 2 + sag * 2} {x1} {y1}" stroke="#2a1a10" stroke-width="2.5" fill="none"/>'
+    for k in range(1, n):
+        u = k / n
+        x = (1 - u) ** 2 * x0 + 2 * u * (1 - u) * (x0 + x1) / 2 + u * u * x1
+        y = (1 - u) ** 2 * y0 + 2 * u * (1 - u) * ((y0 + y1) / 2 + sag * 2) + u * u * y1
+        o += (f'<circle cx="{x:.0f}" cy="{y + 10:.0f}" r="18" fill="#ffb050" opacity="0.35" filter="url(#b6)"/>'
+              f'<path d="M {x:.0f} {y:.0f} l 0 6" stroke="#2a1a10" stroke-width="2"/>'
+              f'<ellipse cx="{x:.0f}" cy="{y + 12:.0f}" rx="7" ry="9" fill="#ffd27a" stroke="#6a3a10" stroke-width="1.5"/>')
+    return o
+
+
+def wedding():
+    """the wedding at night in Leyli's tribe: stars and a moon over dark dunes, the big black tent open and lit from inside (rugs, cushions,
+    the bride's and groom's seat WED_SEAT under a gold-edged canopy), strings of lamps along its front and between tall poles, lamp stands
+    at the sides, carpets laid on the sand in front for the guests (WED_GROUND)"""
+    s = "<defs>" + FILTERS + _sky("night")
+    gdefs, gs = _ground(WED_GROUND - 80, "night", 4400)
+    s += gdefs + rg("warm", 540, 1250, 900, [(0, "#ffb060", 0.45), (0.5, "#a05a28", 0.15), (1, "#000", 0)]) + "</defs>"
+    s += _sky_draw("night")
+    s += _dune_row(4401, 1080, 70, 420, 760, SAND["night"][1][0], SAND["night"][1][1], crest="#8a8aa8")
+    r = random.Random(4402)
+    for k in range(8):
+        s += palm_silhouette(r.uniform(-40, W + 40), 1170, r.uniform(160, 240), col="#0c0e18", lean=r.uniform(-0.1, 0.1), n=8)
+    s += gs
+    s += black_tent(40, 1040, WED_GROUND, 470, depth=120, poles=3, lit=True, curtain=("#1e2450", "#e8dcc8", "#8a1a14"))
+    # the canopy over the bride's and groom's cushions
+    cx, fy = WED_SEAT
+    s += (f'<path d="M {cx - 220} {fy - 330} L {cx + 220} {fy - 330} L {cx + 200} {fy - 280} L {cx - 200} {fy - 280} Z" fill="#9a1420" stroke="#3a0608" stroke-width="3"/>'
+          f'<path d="M {cx - 220} {fy - 330} L {cx + 220} {fy - 330}" stroke="#e8c060" stroke-width="6"/>'
+          + "".join(f'<path d="M {cx - 200 + k * 40} {fy - 280} l 20 22 l 20 -22" fill="#e8c060" opacity="0.9"/>' for k in range(10))
+          + f'<path d="M {cx - 210} {fy - 280} L {cx - 210} {fy} M {cx + 210} {fy - 280} L {cx + 210} {fy}" stroke="#c9a24a" stroke-width="7"/>'
+          f'<rect x="{cx - 230}" y="{fy - 40}" width="460" height="50" rx="20" fill="#7a1420" stroke="#2a0608" stroke-width="3"/>'
+          f'<path d="M {cx - 220} {fy - 20} L {cx + 220} {fy - 20}" stroke="#e8c060" stroke-width="4"/>')
+    # strings of lamps along the front edge of the tent and out to two poles
+    s += lamp_string(40, 880, 540, 880, 9, sag=20) + lamp_string(540, 880, 1040, 880, 9, sag=20)
+    for px in (20, 1060):
+        s += f'<path d="M {px} {WED_GROUND + 60} L {px} 760" stroke="#4a3018" stroke-width="9"/>'
+    s += lamp_string(20, 770, 300, 860, 6, sag=30) + lamp_string(780, 860, 1060, 770, 6, sag=30)
+    # lamp stands at the sides
+    for lx in (120, 960):
+        s += (f'<path d="M {lx} 1150 L {lx} {WED_GROUND + 40} M {lx - 40} {WED_GROUND + 40} L {lx + 40} {WED_GROUND + 40}" stroke="#8a6a2a" stroke-width="8"/>'
+              f'<path d="M {lx - 40} 1140 C {lx - 36} 1170, {lx + 36} 1170, {lx + 46} 1136 L {lx + 64} 1128 L {lx + 36} 1134 Z" fill="#c8922e" stroke="#1b0f0a" stroke-width="3"/>'
+              f'<circle cx="{lx + 50}" cy="1110" r="60" fill="#ffb050" opacity="0.35" filter="url(#b20)"/>'
+              f'<path d="M {lx + 44} 1128 Q {lx + 54} 1090 {lx + 64} 1128 Z" fill="#ffd060"/>')
+    # carpets for the guests
+    for k, (x0, x1, y0, col) in enumerate(((-40, 520, 1420, "#7a2018"), (560, 1120, 1430, "#22306a"), (120, 960, 1560, "#8a4a18"))):
+        s += (f'<path d="M {x0} {y0} L {x1} {y0 - 10} L {x1 + 40} {y0 + 110} L {x0 - 40} {y0 + 120} Z" fill="{col}" stroke="#140806" stroke-width="3"/>'
+              f'<path d="M {x0 + 20} {y0 + 14} L {x1 - 10} {y0 + 4} L {x1 + 20} {y0 + 96} L {x0} {y0 + 104} Z" fill="none" stroke="#e0b060" stroke-width="4" opacity="0.8"/>')
+    s += f'<rect width="{W}" height="{H}" fill="url(#warm)"/>'
+    return svg_render(s)
+
+
+RICH_DOOR = (740, 1060)      # rich_tent(): the opening onto the night (moon at the top), x 740-1060
+RICH_LAMP = (300, 640)       # rich_tent(): the hanging brass lantern (its flame)
+
+
+def rich_tent():
+    """inside Ibn Salam's great tent at night: a back hanging of deep blue silk with gold lozenges, a hanging brass lantern (RICH_LAMP), a
+    brass lamp stand, silk cushions, a carved chest with gold, a big red and blue rug; the opening at the right (RICH_DOOR) shows the night,
+    the moon and far tents; floor y 1300"""
+    s = "<defs>" + FILTERS + _sky("night", "ns") + lg("tw", [(0, "#16121a", 1), (1, "#261e22", 1)]) + lg("rugr", [(0, "#8a1a1e", 1), (1, "#4a0e12", 1)])
+    s += rg("lamp", RICH_LAMP[0], RICH_LAMP[1] + 200, 1000, [(0, "#ffb060", 0.5), (0.45, "#a0502a", 0.16), (1, "#000", 0)]) + "</defs>"
+    s += f'<rect width="{W}" height="{H}" fill="url(#tw)"/>'
+    x0, x1 = RICH_DOOR
+    s += f'<clipPath id="rdoor"><path d="M {x0} 360 L {x1} 320 L {x1} 1300 L {x0} 1300 Z"/></clipPath><g clip-path="url(#rdoor)">'
+    s += f'<rect x="{x0}" y="300" width="{x1 - x0}" height="1000" fill="url(#ns)"/><rect x="{x0}" y="300" width="{x1 - x0}" height="1000" fill="url(#nsg)"/>'
+    rr = random.Random(4410)
+    s += "".join(f'<circle cx="{rr.uniform(x0, x1):.0f}" cy="{rr.uniform(330, 950):.0f}" r="{rr.uniform(0.8, 2.2):.1f}" fill="#fff" opacity="{rr.uniform(0.4, 1):.2f}"/>' for _ in range(50))
+    s += f'<circle cx="{x0 + 170}" cy="500" r="34" fill="#f4f0e0"/><circle cx="{x0 + 170}" cy="500" r="80" fill="#f4f0e0" opacity="0.15" filter="url(#b12)"/>'
+    s += f'<path d="{ridge(W, 1110, 40, 4411, rough=0.3)}" fill="#34344e"/>'
+    s += f'<rect x="{x0}" y="1140" width="{x1 - x0}" height="170" fill="#26243c"/>'
+    s += black_tent(x0 + 110, x0 + 300, 1150, 56, depth=22, poles=1, rugs=False, back_pat=False, lit=True)
+    s += '</g>'
+    s += f'<path d="M -40 -40 L 1120 -40 L 1120 310 L {x1} 320 L {x0} 360 L -40 450 Z" fill="#1e1820"/>'
+    for k in range(10):
+        yy = -10 + k * 46
+        s += f'<path d="M -40 {yy + 40} L 1120 {yy}" stroke="#2e2630" stroke-width="8" opacity="0.7"/>'
+    s += f'<path d="M {x0} 360 L {x0} 1300" stroke="#6a4a1e" stroke-width="14"/><path d="M {x0 - 6} 360 L {x0 - 6} 1300" stroke="#1b0f0a" stroke-width="3"/>'
+    s += f'<path d="M {x0 - 50} 360 C {x0 - 24} 700, {x0 - 36} 1000, {x0 - 12} 1300 L {x0 + 46} 1300 C {x0 + 24} 1000, {x0 + 34} 700, {x0 + 12} 360 Z" fill="#1c2a5a" stroke="#0a0a14" stroke-width="3"/>'
+    # the silk hanging: deep blue with gold lozenges and a red border
+    by0, by1 = 480, 1190
+    s += f'<rect x="-40" y="{by0}" width="{x0 - 40 + 40}" height="{by1 - by0}" fill="#1c2658"/>'
+    for row in range(7):
+        for col in range(9):
+            cx = -10 + col * 90 + (45 if row % 2 else 0); cy = by0 + 60 + row * 96
+            if cx < x0 - 60:
+                s += (f'<path d="M {cx} {cy - 34} L {cx + 26} {cy} L {cx} {cy + 34} L {cx - 26} {cy} Z" fill="none" stroke="#c9a24a" stroke-width="4" opacity="0.85"/>'
+                      f'<circle cx="{cx}" cy="{cy}" r="6" fill="#e8c060"/>')
+    s += (f'<rect x="-40" y="{by0}" width="{x0}" height="26" fill="#8a1a1e"/><rect x="-40" y="{by1 - 26}" width="{x0}" height="26" fill="#8a1a1e"/>'
+          f'<path d="M -40 {by0 + 26} L {x0 - 40} {by0 + 26} M -40 {by1 - 26} L {x0 - 40} {by1 - 26}" stroke="#e8c060" stroke-width="4"/>')
+    # floor, rug, cushions, a carved chest
+    s += f'<rect x="-40" y="1290" width="1160" height="{H - 1290}" fill="#2e2018"/>'
+    s += (f'<path d="M -40 1320 L {x0 + 80} 1320 L {x0 + 200} {H} L -40 {H} Z" fill="url(#rugr)" stroke="#1a0806" stroke-width="3"/>'
+          f'<path d="M -40 1356 L {x0 + 92} 1356" stroke="#e0b060" stroke-width="5" opacity="0.7"/>')
+    for k in range(7):
+        x = 30 + k * 105
+        s += f'<path d="M {x} 1420 l 28 32 l -28 32 l -28 -32 Z" fill="#22306a" opacity="0.7"/><circle cx="{x}" cy="1452" r="6" fill="#e8c060" opacity="0.8"/>'
+    for k, (cx, col) in enumerate(((80, "#2a6a6a"), (250, "#a8642a"), (420, "#6a2a5a"))):
+        s += (f'<ellipse cx="{cx}" cy="1250" rx="92" ry="56" fill="{col}" stroke="#140a08" stroke-width="3"/>'
+              f'<path d="M {cx - 60} 1240 Q {cx} 1220 {cx + 60} 1240" stroke="#e0b060" stroke-width="4" fill="none" opacity="0.8"/>')
+    s += ('<rect x="540" y="1140" width="150" height="110" rx="8" fill="#6a3a1a" stroke="#1b0f0a" stroke-width="3"/>'
+          '<path d="M 540 1176 L 690 1176" stroke="#e8c060" stroke-width="5"/><rect x="600" y="1186" width="30" height="34" rx="4" fill="#e8c060" stroke="#1b0f0a" stroke-width="2"/>'
+          '<path d="M 556 1150 l 14 14 l 14 -14 M 646 1150 l 14 14 l 14 -14" stroke="#c9a24a" stroke-width="3" fill="none"/>')
+    # the hanging brass lantern
+    lx, ly = RICH_LAMP
+    s += (f'<path d="M {lx} 300 L {lx} {ly - 60}" stroke="#3a2414" stroke-width="4"/>'
+          f'<path d="M {lx - 34} {ly - 60} L {lx + 34} {ly - 60} L {lx + 44} {ly + 30} L {lx} {ly + 70} L {lx - 44} {ly + 30} Z" fill="#c8922e" stroke="#1b0f0a" stroke-width="3"/>'
+          f'<path d="M {lx - 20} {ly - 40} L {lx + 20} {ly - 40} L {lx + 26} {ly + 24} L {lx - 26} {ly + 24} Z" fill="#ffd27a" opacity="0.9"/>'
+          + "".join(f'<circle cx="{lx - 16 + 16 * k}" cy="{ly - 10 + 12 * (k % 2)}" r="4" fill="#8a5a1a"/>' for k in range(3))
+          + f'<circle cx="{lx}" cy="{ly}" r="90" fill="#ffb050" opacity="0.3" filter="url(#b20)"/>')
+    s += f'<rect width="{W}" height="{H}" fill="url(#lamp)"/>'
     return svg_render(s)

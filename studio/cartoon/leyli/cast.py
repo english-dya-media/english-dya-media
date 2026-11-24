@@ -103,3 +103,19 @@ LEYLI_FATHER_DUST = dict(LEYLI_FATHER, kufiya_col="#6a625c", kufiya_shade="#4a44
 IBN_SALAM = spec(kind="man", skin="light", hair="short", hair_col="#140e0a", beard="light", beard_col="#140e0a", head="turban",
                  head_col="#f6f0e2", turban_tail=True, garment="robe", col="#d0802a", col2="#9a5414", pattern="brocade", cloak="#22407a",
                  cloak2="#162a52", cloak_hi="#c9a24a", belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#c9a24a", iris="#2a1a10", build=0.98)
+
+# ---- part 4: Leyli as a bride (a deep red veil with a gold edge and silver coins, her braids, a red dress with gold cuffs), a traveller (a
+# sun-browned man with a short beard, a sand-coloured head cloth with a black cord, a brown robe), the wedding musicians (a drummer with a
+# frame drum in a white cap and a blue tunic; a tanbur player in a dark red cap), and Majnun's old father with a walking stick (the chief,
+# greyer)
+LEYLI_BRIDE = dict(LEYLI_W, scarf_col="#8a1018", scarf_edge="#e8c060", col="#b01c24", col2="#7a1018", cuff="#e8c060", trim="#e8c060")
+TRAVELLER = spec(kind="man", skin="tan", hair="short", hair_col="#1a120c", beard="short", beard_col="#2a1e14", head="kufiya", kufiya_col="#d8c8a8",
+                 kufiya_shade="#b4a284", agal="#17161a", garment="robe", col="#7a5232", col2="#5a3a22", pattern="plain", belt=None, sash="#3a2a1a",
+                 cuff="#c8b088", trim="#c8b088", iris="#2a170c", build=1.0)
+DRUMMER = spec(kind="man", skin="olive", hair="short", hair_col="#140e0a", beard="short", beard_col="#140e0a", head="cap", head_col="#f0ead8",
+               garment="tunic", col="#2a4a7a", col2="#1a3256", pattern="plain", belt="#5a3a1e", buckle=False, cuff="#e8dcc0", trim="#e8dcc0",
+               trousers="#3a2e24", boots="#3a2414", iris="#2a170c")
+PLAYER = spec(kind="man", skin="tan", hair="short", hair_col="#1a120c", beard="full", beard_col="#2a1a10", head="cap", head_col="#7a1a1e",
+              garment="robe", col="#c8a878", col2="#a08458", pattern="plain", belt=None, sash="#7a1a1e", cuff="#7a1a1e", trim="#7a1a1e",
+              iris="#2a170c")
+CHIEF_OLD = dict(CHIEF, grey=0.35, beard_col="#c8c2b8", hair_col="#a8a29a")

@@ -130,6 +130,41 @@ LINES = [
   "Soon after, a rich young man came to Laylee's father: Ibn Salaam."),
  ("p3s7b",3,7,"IBN_SALAM","I ask for your daughter's hand. She will have everything.","دستِ دخترتان را از شما می‌خواهم. او همه‌چیز خواهد داشت.",None),
  ("p3s7c",3,7,"LEYLI_FATHER","Then Leyli is yours, Ibn Salam.","پس لیلی از آنِ توست، ابن‌سلام.","Then Laylee is yours, Ibn Salaam."),
+ # ---- part 4 · Leyli's Wedding (Nizami: Leyli is married to Ibn Salam with a great feast; in his house she tells him she will never be
+ # his and he must keep away, and he, who loves her, agrees just to be near her; she weeps for Majnun in secret; a rider in the desert
+ # tells Majnun that Leyli is married; Majnun answers him in verse and goes deeper into the wild; then his old father comes looking for him)
+ ("p4s1a",4,1,"TRAVELLER","Haven't you heard? Leyli is married now!","مگر نشنیده‌ای؟ لیلی حالا شوهر کرده!","Haven't you heard? Laylee is married now!"),
+ ("p4s1b",4,1,"MAJNUN","Married…?","شوهر کرده…؟","Married...?"),
+ ("p4s3a",4,3,"NARRATOR","Leyli's father kept his word. She was married to Ibn Salam.","پدرِ لیلی سرِ حرفش ماند. لیلی را به ابن‌سلام دادند.",
+  "Laylee's father kept his word. She was married to Ibn Salaam."),
+ ("p4s3b",4,3,"NARRATOR","There was music and feasting for seven days.","هفت روز ساز زدند و جشن گرفتند.",None),
+ ("p4s3c",4,3,"WOMAN_A","Look at the bride! She is as beautiful as the moon!","عروس را ببین! مثلِ ماه زیباست!",None),
+ ("p4s3d",4,3,"WOMAN_B","Then why are her eyes so sad?","پس چرا چشم‌هایش این‌قدر غمگین است؟",None),
+ ("p4s3e",4,3,"NARRATOR","Everyone was happy… except the bride.","همه شاد بودند… جز عروس.",None),
+ ("p4s4a",4,4,"IBN_SALAM","Leyli, this house is yours now. Everything I have is yours.","لیلی، این خانه حالا مالِ توست. هرچه دارم مالِ توست.",
+  "Laylee, this house is yours now. Everything I have is yours."),
+ ("p4s4b",4,4,"LEYLI_WOMAN","Ibn Salam, you are a kind man. So I will tell you the truth.","ابن‌سلام، تو مردِ مهربانی هستی. پس حقیقت را به تو می‌گویم.",
+  "Ibn Salaam, you are a kind man. So I will tell you the truth."),
+ ("p4s4c",4,4,"LEYLI_WOMAN","My heart belongs to another. I can never be your wife in truth.","دلِ من مالِ کسِ دیگری است. هرگز همسرِ واقعیِ تو نمی‌شوم.",None),
+ ("p4s4d",4,4,"LEYLI_WOMAN","Please… stay away from me.","خواهش می‌کنم… از من دور بمان.",None),
+ ("p4s4e",4,4,"IBN_SALAM","I will not force you, Leyli. I will wait.","مجبورت نمی‌کنم، لیلی. صبر می‌کنم.","I will not force you, Laylee. I will wait."),
+ ("p4s4f",4,4,"IBN_SALAM","Maybe one day, your heart will change.","شاید یک روز، دلت عوض شود.",None),
+ ("p4s5a",4,5,"NARRATOR","But her heart never changed. At night, when the house was asleep, she cried for Majnun.",
+  "اما دلش هرگز عوض نشد. شب‌ها، وقتی همه‌ی خانه خواب بودند، برای مجنون گریه می‌کرد.",
+  "But her heart never changed. At night, when the house was asleep, she cried for Majnoon."),
+ ("p4s5b",4,5,"LEYLI_WOMAN_W","Majnun… wherever you are… I am still yours.","مجنون… هر جا که هستی… من هنوز مالِ تو هستم.",
+  "Majnoon... wherever you are... I am still yours."),
+ ("p4s6a",4,6,"NARRATOR","Far away, a traveller crossed the desert and met Majnun.","دور از آن‌جا، مسافری از بیابان می‌گذشت و به مجنون رسید.",
+  "Far away, a traveller crossed the desert, and met Majnoon."),
+ ("p4s6b",4,6,"TRAVELLER","Are you Majnun, the one who loves Leyli?","تو مجنونی؟ همان که عاشقِ لیلی است؟","Are you Majnoon, the one who loves Laylee?"),
+ ("p4s6c",4,6,"TRAVELLER","Yes. To a rich man, Ibn Salam. Forget her, my friend.","آره. با یک مردِ پولدار، ابن‌سلام. فراموشش کن، رفیق.",
+  "Yes. To a rich man, Ibn Salaam. Forget her, my friend."),
+ ("p4s6d",4,6,"MAJNUN","Forget her? Can the desert forget the rain?","فراموشش کنم؟ مگر بیابان باران را فراموش می‌کند؟",None),
+ ("p4s6e",4,6,"MAJNUN","Let her be happy. The moon is far away… but its light still finds me.","بگذار شاد باشد. ماه دور است… اما نورش هنوز به من می‌رسد.",None),
+ ("p4s6f",4,6,"NARRATOR","And Majnun went deeper into the wild, where only the animals could find him.",
+  "و مجنون بیشتر در دلِ بیابان رفت، جایی که فقط حیوان‌ها پیدایش می‌کردند.","And Majnoon went deeper into the wild, where only the animals could find him."),
+ ("p4s7a",4,7,"NARRATOR","Then one day, an old man came into the desert, leaning on a stick…","تا این‌که یک روز، پیرمردی عصا‌زنان به بیابان آمد…",None),
+ ("p4s7b",4,7,"CHIEF","Qays! My son! Where are you?","قیس! پسرم! کجایی؟","Kayss! My son! Where are you?"),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -150,6 +185,10 @@ VOICES = {
  # part 3 (49 ≈ 98 Hz, deep, loud and lively: Nawfal; 430 one semitone down, rough: his warrior; 620 ≈ 145 Hz, young, clear and
  # polite: Ibn Salam)
  "NAWFAL": (49, 1.05, 0, 1.0), "WARRIOR": (430, 1.05, -1, 1.0), "IBN_SALAM": (620, 1.08, 0, 0.95),
+ # part 4 (849 one semitone up: Leyli as a young woman, and a whisper of it; 690 ≈ 134 Hz: the traveller; 240 and 260 ≈ 176 Hz: two women
+ # at the wedding)
+ "LEYLI_WOMAN": (849, 1.12, 1, 0.95), "LEYLI_WOMAN_W": (849, 1.25, 1, 0.7), "TRAVELLER": (690, 1.05, 0, 1.0),
+ "WOMAN_A": (240, 1.05, 0, 0.95), "WOMAN_B": (260, 1.08, 0, 0.9),
 }
 # slower takes for learners (per-line length factors, see voices.py)
 SPEED = {lid: 1.15 for lid, part, *_ in LINES if part == 1}
@@ -169,3 +208,6 @@ SPEED.update({lid: 1.2 for lid, part, *_ in LINES if part == 3})
 FX.update({lid: "aecho=0.8:0.4:90:0.18" for lid in ("p3s1a", "p3s1b", "p3s5b")})
 SPEED.update({"p3s6b": 1.4, "p3s5c": 1.35, "p3s3i": 1.45, "p3s6d": 1.35, "p3s6e": 1.45, "p3s5d": 1.4, "p3s3e": 1.3, "p3s5a": 1.3,
               "p3s3f": 1.3, "p3s7c": 1.3, "p3s4b": 1.3})
+# part 4: slower takes for learners; the whisper at night is slower still
+SPEED.update({lid: 1.2 for lid, part, *_ in LINES if part == 4})
+SPEED.update({"p4s1b": 1.6, "p4s5b": 1.45, "p4s4d": 1.4, "p4s6d": 1.35, "p4s6e": 1.35, "p4s3e": 1.3, "p4s7b": 1.1})
