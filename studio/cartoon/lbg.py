@@ -104,7 +104,7 @@ def date_palm(x, y, h, lean=0.0, seed=0, trunk=("#7a5a3a", "#5a3e26", "#a08058")
     return o
 
 
-def black_tent(x0, x1, y, h, depth=90, open_front=True, lit=False, poles=3, rugs=True, back_pat=True, light=None):
+def black_tent(x0, x1, y, h, depth=90, open_front=True, lit=False, poles=3, rugs=True, back_pat=True, light=None, curtain=("#5a1a14", "#e8dcc8", "#1a1210")):
     """a long Bedouin tent of black goat hair seen from the front: the roof sags between its poles, the front is raised on poles
     (open: the inside shows a woven back curtain, rugs and cushions), the ends slope to the ground, guy ropes run out to stakes.
     Base (ground) at y from x0 to x1; the front edge is h above the ground."""
@@ -137,12 +137,12 @@ def black_tent(x0, x1, y, h, depth=90, open_front=True, lit=False, poles=3, rugs
         o += f'<path d="M {x0 + 10:.0f} {inner_top:.0f} L {x1 - 10:.0f} {inner_top:.0f} L {x1 - 30:.0f} {y:.0f} L {x0 + 30:.0f} {y:.0f} Z" fill="{dark}"/>'
         if back_pat:                 # the woven back curtain (sahah): bands of red, white and black triangles
             by0, by1 = inner_top + (y - inner_top) * 0.18, inner_top + (y - inner_top) * 0.5
-            o += f'<rect x="{x0 + 24:.0f}" y="{by0:.0f}" width="{w - 48:.0f}" height="{by1 - by0:.0f}" fill="#5a1a14" opacity="0.85"/>'
+            o += f'<rect x="{x0 + 24:.0f}" y="{by0:.0f}" width="{w - 48:.0f}" height="{by1 - by0:.0f}" fill="{curtain[0]}" opacity="0.85"/>'
             step = 26
             for k in range(int((w - 48) / step)):
                 xx = x0 + 24 + k * step
-                o += (f'<path d="M {xx:.0f} {by0 + 6:.0f} l {step / 2:.0f} {(by1 - by0) * 0.4:.0f} l {step / 2:.0f} {-(by1 - by0) * 0.4:.0f} Z" fill="#e8dcc8" opacity="0.8"/>'
-                      f'<path d="M {xx:.0f} {by1 - 6:.0f} l {step / 2:.0f} {-(by1 - by0) * 0.35:.0f} l {step / 2:.0f} {(by1 - by0) * 0.35:.0f} Z" fill="#1a1210" opacity="0.8"/>')
+                o += (f'<path d="M {xx:.0f} {by0 + 6:.0f} l {step / 2:.0f} {(by1 - by0) * 0.4:.0f} l {step / 2:.0f} {-(by1 - by0) * 0.4:.0f} Z" fill="{curtain[1]}" opacity="0.8"/>'
+                      f'<path d="M {xx:.0f} {by1 - 6:.0f} l {step / 2:.0f} {-(by1 - by0) * 0.35:.0f} l {step / 2:.0f} {(by1 - by0) * 0.35:.0f} Z" fill="{curtain[2]}" opacity="0.8"/>')
             o += f'<path d="M {x0 + 24:.0f} {by0:.0f} L {x1 - 24:.0f} {by0:.0f} M {x0 + 24:.0f} {by1:.0f} L {x1 - 24:.0f} {by1:.0f}" stroke="#c9a24a" stroke-width="3" opacity="0.7"/>'
         if rugs:
             ry = y - (y - inner_top) * 0.16
@@ -422,4 +422,142 @@ def tent_night():
     s += (f'<path d="M {lx} {ly + 30} L {lx} 1300 M {lx - 40} 1300 L {lx + 40} 1300" stroke="#6a4a2a" stroke-width="9"/>'
           f'<path d="M {lx - 44} {ly + 10} C {lx - 40} {ly + 40}, {lx + 40} {ly + 40}, {lx + 50} {ly + 6} L {lx + 70} {ly - 2} L {lx + 40} {ly + 4} Z" fill="#b8822e" stroke="#1b0f0a" stroke-width="3"/>')
     s += f'<rect width="{W}" height="{H}" fill="url(#lamp)"/>'
+    return svg_render(s)
+
+
+# ------------------------------------------------------------------ part 2: Leyli's father's tent; the Kaaba
+def leyli_tent(pal="dusk"):
+    """the front of Leyli's father's big tent (her tribe): like chief_tent() but with an indigo and red back curtain, a palm at the left and
+    a tethered horse's post at the right; ground y 1330, people stand at feet y 1450-1720"""
+    s = "<defs>" + FILTERS + _sky(pal)
+    gdefs, gs = _ground(GROUND_Y["chief_tent"] - 80, pal, 4210)
+    s += gdefs + "</defs>"
+    s += _sky_draw(pal)
+    lit, shade = SAND[pal][1]
+    s += _dune_row(4211, 1070, 80, 420, 760, lit, shade, crest="#fff0d8")
+    hz = {"dawn": "#3a3a4a", "day": "#3a5a3a", "dusk": "#2a2a3a", "night": "#10121c"}[pal]
+    r = random.Random(4212)
+    for k in range(8):
+        s += palm_silhouette(r.uniform(-40, W + 40), 1165, r.uniform(160, 240), col=hz, lean=r.uniform(-0.1, 0.1), n=8)
+    s += gs
+    light = {"dawn": "#ffb88a", "day": None, "dusk": "#ffa070", "night": None}[pal]
+    s += black_tent(60, 1060, GROUND_Y["chief_tent"], 470, depth=120, poles=3, light=light, curtain=("#1e2450", "#e8dcc8", "#8a1a14"))
+    s += date_palm(40, 1520, 1150, lean=0.06, seed=4213)
+    s += ('<path d="M 960 1340 L 960 1190" stroke="#5a3a1e" stroke-width="10"/><circle cx="960" cy="1190" r="9" fill="#5a3a1e"/>'
+          '<path d="M 960 1200 Q 990 1260 1030 1250" stroke="#8a6a3a" stroke-width="4" fill="none"/>')
+    if pal == "dusk":
+        s += f'<rect width="{W}" height="{H}" fill="#4a2a5a" opacity="0.12"/>'
+    return svg_render(s)
+
+
+KAABA = (250, 830, 520, 1250)      # the Kaaba's front face in kaaba(): x0, x1, top, bottom (the courtyard floor from y 1250)
+KAABA_DOOR = (440, 560, 830, 1120) # its golden door (raised above the floor, as it is)
+
+
+def _arabesque(x0, x1, y, h, col="#e0b24a", dark="#8a6420", seed=0):
+    """a band of gold ornament (scrolls and knots, not letters) between x0 and x1, centred on y, h high"""
+    r = random.Random(seed)
+    o = f'<rect x="{x0}" y="{y - h / 2:.0f}" width="{x1 - x0}" height="{h}" fill="#141114"/>'
+    o += f'<path d="M {x0} {y - h / 2 + 4:.0f} L {x1} {y - h / 2 + 4:.0f} M {x0} {y + h / 2 - 4:.0f} L {x1} {y + h / 2 - 4:.0f}" stroke="{col}" stroke-width="3"/>'
+    x = x0 + 14
+    while x < x1 - 30:
+        w = r.uniform(30, 52)
+        o += (f'<path d="M {x:.0f} {y + 6:.0f} C {x + w * 0.2:.0f} {y - h * 0.32:.0f}, {x + w * 0.6:.0f} {y - h * 0.32:.0f}, {x + w * 0.5:.0f} {y:.0f} '
+              f'C {x + w * 0.4:.0f} {y + h * 0.3:.0f}, {x + w * 0.9:.0f} {y + h * 0.25:.0f}, {x + w:.0f} {y - 4:.0f}" stroke="{col}" stroke-width="3.2" fill="none"/>'
+              f'<circle cx="{x + w * 0.5:.0f}" cy="{y - h * 0.18:.0f}" r="3" fill="{col}"/>')
+        x += w
+    return o
+
+
+def kaaba():
+    """the Kaaba at night, shown simply from outside: the black cube under its cloth with the gold band and the golden door (KAABA,
+    KAABA_DOOR), its right side in shade, the white courtyard (floor from y 1250) with lamps on tall posts, small far pilgrims in white,
+    a starry sky with a thin moon; people stand at y 1280-1750"""
+    x0, x1, top, bot = KAABA
+    s = "<defs>" + FILTERS + _sky("night", "ks") + lg("kf", [(0, "#dcdce4", 1), (1, "#8a8a9a", 1)]) + lg("kb", [(0, "#1a181c", 1), (1, "#0e0d10", 1)])
+    s += rg("klamp", 540, 900, 1100, [(0, "#ffd8a0", 0.3), (0.5, "#a06a3a", 0.08), (1, "#000", 0)]) + "</defs>"
+    s += f'<rect width="{W}" height="{H}" fill="url(#ks)"/>' + stars(4220, 220, 900)
+    s += '<path d="M 846 236 A 30 30 0 1 0 880 290 A 24 24 0 1 1 846 236 Z" fill="#f4f0e0"/>'
+    # far colonnade
+    s += f'<rect x="0" y="1010" width="{W}" height="240" fill="#2a2a38"/>'
+    for k in range(14):
+        x = -20 + k * 82
+        s += (f'<path d="M {x} 1250 L {x} 1080 Q {x + 41} 1030 {x + 82} 1080 L {x + 82} 1250" stroke="#3e3e50" stroke-width="10" fill="none"/>'
+              f'<circle cx="{x + 41}" cy="1120" r="6" fill="#ffd890" opacity="0.8"/>')
+    s += f'<rect x="0" y="996" width="{W}" height="22" fill="#3e3e50"/>'
+    # the courtyard floor
+    s += f'<rect x="0" y="{bot}" width="{W}" height="{H - bot}" fill="url(#kf)"/>'
+    for k in range(9):
+        yy = bot + 30 + k * k * 9
+        s += f'<path d="M 0 {yy} L {W} {yy}" stroke="#ffffff" stroke-width="2" opacity="0.25"/>'
+    # far pilgrims walking round (small white figures)
+    r = random.Random(4221)
+    for k in range(40):
+        x = r.uniform(-20, W + 20); y = r.uniform(bot + 10, bot + 60); hh = r.uniform(26, 36) * (1 + (y - bot) / 120)
+        s += (f'<path d="M {x - hh * 0.18:.1f} {y:.1f} L {x - hh * 0.14:.1f} {y - hh * 0.75:.1f} Q {x:.1f} {y - hh * 0.85:.1f} {x + hh * 0.14:.1f} {y - hh * 0.75:.1f} '
+              f'L {x + hh * 0.18:.1f} {y:.1f} Z" fill="#eeeef2" opacity="0.9"/><circle cx="{x:.1f}" cy="{y - hh * 0.88:.1f}" r="{hh * 0.11:.1f}" fill="#c89a72"/>')
+    # the Kaaba: right side in shade, then the front face
+    s += f'<path d="M {x1} {top} L {x1 + 150} {top + 40} L {x1 + 150} {bot - 30} L {x1} {bot} Z" fill="#0a090b" stroke="#000" stroke-width="2"/>'
+    s += f'<rect x="{x0}" y="{top}" width="{x1 - x0}" height="{bot - top}" fill="url(#kb)" stroke="#000" stroke-width="3"/>'
+    for k in range(1, 8):          # the folds of the cloth
+        x = x0 + k * (x1 - x0) / 8
+        s += f'<path d="M {x:.0f} {top + 10} L {x:.0f} {bot}" stroke="#2a2830" stroke-width="3" opacity="0.6"/>'
+    s += _arabesque(x0, x1, top + 150, 64, seed=4222)
+    s += f'<path d="M {x1} {top + 118} L {x1 + 150} {top + 150} L {x1 + 150} {top + 210} L {x1} {top + 182} Z" fill="#6a5020" opacity="0.6"/>'
+    # the golden door with a small ornamented frame
+    dx0, dx1, dy0, dy1 = KAABA_DOOR
+    s += (f'<rect x="{dx0 - 16}" y="{dy0 - 16}" width="{dx1 - dx0 + 32}" height="{dy1 - dy0 + 16}" fill="#141114" stroke="#c9a24a" stroke-width="3"/>'
+          f'<rect x="{dx0}" y="{dy0}" width="{dx1 - dx0}" height="{dy1 - dy0}" rx="6" fill="#c9a24a" stroke="#6a4a18" stroke-width="3"/>'
+          f'<path d="M {(dx0 + dx1) / 2:.0f} {dy0} L {(dx0 + dx1) / 2:.0f} {dy1}" stroke="#6a4a18" stroke-width="3"/>')
+    for k in range(4):
+        yy = dy0 + 30 + k * (dy1 - dy0 - 60) / 3
+        for xx in (dx0 + 28, dx1 - 28):
+            s += f'<circle cx="{xx}" cy="{yy:.0f}" r="10" fill="none" stroke="#f0d48a" stroke-width="3"/><circle cx="{xx}" cy="{yy:.0f}" r="3" fill="#f0d48a"/>'
+    s += f'<rect x="{dx0 - 30}" y="{dy1}" width="{dx1 - dx0 + 60}" height="14" fill="#8a8a96"/>'
+    s += f'<path d="M {x0} {bot} L {x1} {bot} L {x1 + 150} {bot - 30}" stroke="#c8c8d4" stroke-width="8" fill="none"/>'
+    # lamps on tall posts
+    for lx, ly in ((90, 1160), (1000, 1150), (170, 1300), (940, 1290)):
+        s += (f'<path d="M {lx} {ly + 140} L {lx} {ly}" stroke="#4a4a58" stroke-width="8"/>'
+              f'<circle cx="{lx}" cy="{ly - 14}" r="60" fill="#ffd090" opacity="0.25" filter="url(#b12)"/>'
+              f'<path d="M {lx - 14} {ly} L {lx + 14} {ly} L {lx + 10} {ly - 30} L {lx - 10} {ly - 30} Z" fill="#ffe2a8" stroke="#6a5a3a" stroke-width="2"/>')
+    s += f'<rect width="{W}" height="{H}" fill="url(#klamp)"/>'
+    return svg_render(s)
+
+
+KAABA_SILL = 560        # kaaba_close(): the golden threshold of the door at the top left (x 60-520); hands raised to it reach y 540-600
+
+
+def kaaba_close():
+    """close to the Kaaba's wall at night: the black cloth with its folds fills the frame down to the white floor (y 1420), the lower part of
+    the golden door with its threshold at the top left (x 60-520, sill KAABA_SILL), a lamp's warm light from the right; a man stands at the
+    wall at feet y ~1560 with his raised hands at the threshold"""
+    s = "<defs>" + FILTERS + lg("kc", [(0, "#1c1a1e", 1), (1, "#0c0b0e", 1)]) + lg("kfl", [(0, "#d8d8e2", 1), (1, "#9a9aa8", 1)])
+    s += rg("kl", 1000, 700, 1100, [(0, "#ffd8a0", 0.22), (0.5, "#a06a3a", 0.06), (1, "#000", 0)]) + "</defs>"
+    s += f'<rect width="{W}" height="{H}" fill="url(#kc)"/>'
+    r = random.Random(4230)
+    for k in range(14):            # deep folds of the cloth
+        x = -40 + k * 84 + r.uniform(-10, 10)
+        s += (f'<path d="M {x} -20 C {x + 10} 400, {x - 8} 900, {x + 6} 1420" stroke="#2c2a32" stroke-width="10" fill="none" opacity="0.7"/>'
+              f'<path d="M {x + 22} -20 C {x + 32} 400, {x + 14} 900, {x + 28} 1420" stroke="#060508" stroke-width="8" fill="none" opacity="0.7"/>')
+    # a faint woven pattern in the black cloth
+    for k in range(60):
+        x, y = r.uniform(0, W), r.uniform(600, 1400)
+        s += f'<path d="M {x:.0f} {y:.0f} c 8 -10, 18 -2, 12 8 c -6 8, -16 6, -12 -4" stroke="#26242a" stroke-width="3" fill="none" opacity="0.8"/>'
+    # the golden door's lower part with its threshold
+    s += ('<rect x="40" y="-40" width="500" height="580" fill="#141114" stroke="#c9a24a" stroke-width="4"/>'
+          '<rect x="70" y="-40" width="440" height="560" rx="6" fill="#c9a24a" stroke="#6a4a18" stroke-width="4"/>'
+          '<path d="M 290 -40 L 290 520" stroke="#6a4a18" stroke-width="4"/>')
+    for row in range(3):
+        for xx in (150, 230, 350, 430):
+            yy = 120 + row * 150
+            s += (f'<circle cx="{xx}" cy="{yy}" r="26" fill="none" stroke="#f0d48a" stroke-width="4"/><circle cx="{xx}" cy="{yy}" r="8" fill="#f0d48a"/>'
+                  f'<path d="M {xx - 26} {yy} L {xx + 26} {yy} M {xx} {yy - 26} L {xx} {yy + 26}" stroke="#8a6a28" stroke-width="2"/>')
+    s += (f'<rect x="20" y="{KAABA_SILL - 30}" width="540" height="36" fill="#b8bcc8" stroke="#3a3a44" stroke-width="3"/>'
+          f'<path d="M 30 {KAABA_SILL - 22} L 550 {KAABA_SILL - 22}" stroke="#ffffff" stroke-width="3" opacity="0.6"/>')
+    # the floor
+    s += f'<rect x="0" y="1420" width="{W}" height="{H - 1420}" fill="url(#kfl)"/><path d="M 0 1420 L {W} 1420" stroke="#ffffff" stroke-width="5" opacity="0.6"/>'
+    for k in range(6):
+        yy = 1460 + k * k * 14
+        s += f'<path d="M 0 {yy} L {W} {yy}" stroke="#ffffff" stroke-width="2" opacity="0.25"/>'
+    s += f'<rect width="{W}" height="{H}" fill="url(#kl)"/>'
     return svg_render(s)
