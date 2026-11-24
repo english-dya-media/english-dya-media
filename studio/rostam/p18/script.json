@@ -1,0 +1,286 @@
+{
+ "episode": 9,
+ "part": 18,
+ "title_en": "Gordafarid's Trick",
+ "title_fa": "نیرنگ گردآفرید",
+ "next_label": "NEXT PART",
+ "next_en": "Gazhdaham's Letter",
+ "next_fa": "نامه‌ی گژدهم",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "You cannot escape me, moon-face.",
+     "fa": "نمی‌توانی از دست من فرار کنی، ماه‌رو.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Escape? Who said I want to escape?",
+     "fa": "فرار؟ چه کسی گفت می‌خواهم فرار کنم؟",
+     "pause": 1.2
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Gordafarid had fought Sohrab like a lion.",
+     "fa": "گردآفرید مثل شیر با سهراب جنگیده بود.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "But when her helmet came off, he saw that she was a girl.",
+     "fa": "اما وقتی کلاه‌خودش افتاد، سهراب دید که او یک دختر است.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "If the girls of Iran fight like this...",
+     "fa": "اگر دختران ایران این‌طور می‌جنگند...",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "then what are its men like?",
+     "fa": "پس مردانش چگونه‌اند؟",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab could not take his eyes off her.",
+     "fa": "سهراب نمی‌توانست چشم از او بردارد.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Gordafarid turned to flee. But Sohrab untied the lasso from his saddle...",
+     "fa": "گردآفرید برگشت که بگریزد. اما سهراب کمند را از زینش باز کرد...",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "and threw it. The rope caught her around the waist.",
+     "fa": "و پرتابش کرد. کمند دور کمر او افتاد.",
+     "pause": 0.5
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Let me go!",
+     "fa": "رهایم کن!",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "You cannot escape me, moon-face.",
+     "fa": "نمی‌توانی از دست من فرار کنی، ماه‌رو.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Why do you fight? No prey like you has ever come into my trap.",
+     "fa": "چرا می‌جنگی؟ هیچ شکاری مثل تو تا حالا به دامم نیفتاده.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Gordafarid knew she was caught. Only a trick could save her now.",
+     "fa": "گردآفرید فهمید که گرفتار شده. حالا فقط یک نیرنگ می‌توانست نجاتش دهد.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "GORDAFARID",
+     "en": "Escape? Who said I want to escape?",
+     "fa": "فرار؟ چه کسی گفت می‌خواهم فرار کنم؟",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Brave hero, look around you. Two armies are watching us.",
+     "fa": "پهلوان دلیر، به دورت نگاه کن. دو لشکر دارند ما را تماشا می‌کنند.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "If your men see you fighting a girl, they will laugh at you.",
+     "fa": "اگر مردانت ببینند با یک دختر می‌جنگی، به تو می‌خندند.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Let us make peace quietly, just the two of us.",
+     "fa": "بیا پنهانی، فقط میان خودمان، آشتی کنیم.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "The fortress and all its treasure will be yours.",
+     "fa": "دژ و همه‌ی گنجش مال تو خواهد بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Come with me to the gate. It will open for you.",
+     "fa": "با من تا دروازه بیا. به رویت باز می‌شود.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Then she smiled... and Sohrab's heart was lost.",
+     "fa": "آن‌وقت لبخند زد... و دل سهراب رفت.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "She was tall as a cypress, with eyes like a deer's.",
+     "fa": "قدش مثل سرو بود و چشمانش مثل چشم آهو.",
+     "pause": 0.5
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Very well. But do not break your promise.",
+     "fa": "باشد. اما قولت را نشکن.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "You have seen how I fight.",
+     "fa": "دیدی که چطور می‌جنگم.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "And don't trust those walls. They are not higher than the clouds.",
+     "fa": "و به آن دیوارها دل نبند. از ابرها بلندتر نیستند.",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "One blow of my mace, and they fall.",
+     "fa": "یک ضربه‌ی گرز من، و فرو می‌ریزند.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Gordafarid rode back to the fortress, and Sohrab rode beside her.",
+     "fa": "گردآفرید به سوی دژ برگشت و سهراب کنارش اسب راند.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "At the gate, the doors opened, just a little...",
+     "fa": "دم دروازه، درها کمی باز شد...",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "and Gordafarid slipped inside.",
+     "fa": "و گردآفرید به درون خزید.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Then, with a great crash, the gate closed... in Sohrab's face!",
+     "fa": "آن‌وقت، با صدایی بلند، دروازه بسته شد... درست جلوی چشم سهراب!",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "What...? Open the gate! You promised me!",
+     "fa": "چه...؟ دروازه را باز کن! تو به من قول دادی!",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Inside, the people of the fortress ran to her, laughing and weeping.",
+     "fa": "درون دژ، مردم خندان و گریان به سویش دویدند.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "My daughter! My brave lioness, you are alive!",
+     "fa": "دخترم! شیرزن دلیرم، تو زنده‌ای!",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "You fought him... and you tricked him too!",
+     "fa": "با او جنگیدی... و فریبش هم دادی!",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "A lion's strength was not enough, Father. So I used a fox's trick.",
+     "fa": "زور شیر کافی نبود، پدر. پس از نیرنگ روباه استفاده کردم.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Outside, Sohrab waited at the closed gate.",
+     "fa": "بیرون، سهراب پشت دروازه‌ی بسته منتظر ماند.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Then, from high on the wall, he heard someone laughing.",
+     "fa": "آن‌وقت، از بالای بارو، صدای خنده‌ی کسی را شنید.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "He looked up... and there stood Gordafarid.",
+     "fa": "سرش را بالا گرفت... و آنجا گردآفرید ایستاده بود.",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}

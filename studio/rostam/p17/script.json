@@ -1,0 +1,67 @@
+{
+ "episode": 9,
+ "part": 17,
+ "title_en": "Gordafarid",
+ "title_fa": "گردآفرید",
+ "next_label": "NEXT PART",
+ "next_en": "Gordafarid's Trick",
+ "next_fa": "نیرنگ گردآفرید",
+ "handle": "@english_dya",
+ "scenes": [
+  {"id": "S01", "lines": [
+   {"role": "GORDAFARID", "en": "Turanians! Where are your heroes? Who will fight me?", "fa": "تورانیان! پهلوانانتان کجا هستند؟ چه کسی با من می‌جنگد؟", "pause": 0.4},
+   {"role": "SOHRAB", "en": "Ha! Another prey walks into my trap.", "fa": "ها! یک شکار دیگر به دام من آمد.", "pause": 1.2}
+  ]},
+  {"id": "TITLE", "card": "title", "dur": 4.0, "lines": []},
+  {"id": "S02", "lines": [
+   {"role": "NARRATOR", "en": "Hojir, the keeper of the White Fortress, was now Sohrab's prisoner.", "fa": "هجیر، نگهبان دژ سپید، حالا اسیر سهراب بود.", "pause": 0.4},
+   {"role": "NARRATOR", "en": "Sohrab, the young son of Rostam, had beaten him with one blow.", "fa": "سهراب، پسر جوان رستم، با یک ضربه شکستش داده بود.", "pause": 0.4},
+   {"role": "NARRATOR", "en": "But one warrior in the fortress was not afraid: Gazhdaham's daughter, Gordafarid.", "fa": "اما یک جنگاور در دژ نمی‌ترسید: دختر گژدهم، گردآفرید.", "pause": 0.4},
+   {"role": "NARRATOR", "en": "She hid her long hair under her armour, and tied on her helmet.", "fa": "گیسوی بلندش را زیر زره پنهان کرد و کلاه‌خود را بر سر بست.", "pause": 0.5},
+   {"role": "GAZHDAHAM", "en": "Be careful, my daughter. He is a young giant.", "fa": "مراقب باش، دخترم. او یک غول جوان است.", "pause": 0.4},
+   {"role": "GORDAFARID", "en": "Then let the giant meet me. Open the gate!", "fa": "پس بگذار آن غول با من روبه‌رو شود. دروازه را باز کنید!", "pause": 0.6}
+  ]},
+  {"id": "S03", "lines": [
+   {"role": "NARRATOR", "en": "The gate opened, and she rode down from the fortress like a lioness.", "fa": "دروازه باز شد و او مثل یک شیر ماده از دژ پایین تاخت.", "pause": 0.5},
+   {"role": "GORDAFARID", "en": "Turanians! Where are your heroes?", "fa": "تورانیان! پهلوانانتان کجا هستند؟", "pause": 0.3},
+   {"role": "GORDAFARID", "en": "Who is brave enough to fight me?", "fa": "چه کسی آن‌قدر دلیر است که با من بجنگد؟", "pause": 0.5},
+   {"role": "RIDER", "en": "Another rider from the fortress!", "fa": "یک سوار دیگر از دژ!", "pause": 0.3},
+   {"role": "RIDER2", "en": "Look at him. So small... and so bold!", "fa": "نگاهش کن. این‌قدر کوچک... و این‌قدر گستاخ!", "pause": 0.6}
+  ]},
+  {"id": "S04", "lines": [
+   {"role": "NARRATOR", "en": "When Sohrab saw the rider, he laughed and bit his lip.", "fa": "سهراب که آن سوار را دید، خندید و لبش را به دندان گزید.", "pause": 0.4},
+   {"role": "SOHRAB", "en": "Ha! Another prey walks into my trap.", "fa": "ها! یک شکار دیگر به دام من آمد.", "pause": 0.4},
+   {"role": "HOOMAN", "en": "Shall I send one of our men, Sohrab?", "fa": "یکی از مردانمان را بفرستم، سهراب؟", "pause": 0.3},
+   {"role": "SOHRAB", "en": "No, Hooman. This one is mine.", "fa": "نه، هومان. این یکی مال من است.", "pause": 0.6}
+  ]},
+  {"id": "S05", "lines": [
+   {"role": "NARRATOR", "en": "But Gordafarid was a great archer. No bird could fly past her arrows.", "fa": "اما گردآفرید کمانداری بزرگ بود. هیچ پرنده‌ای از تیرش جان به در نمی‌برد.", "pause": 0.4},
+   {"role": "GORDAFARID", "en": "Take this, Turanian!", "fa": "بگیر، تورانی!", "pause": 0.3},
+   {"role": "NARRATOR", "en": "Arrow after arrow flew at Sohrab, from the left and from the right.", "fa": "تیر پشت تیر از چپ و راست به سوی سهراب پرید.", "pause": 0.4},
+   {"role": "SOHRAB", "en": "Arrows?! You will pay for this!", "fa": "تیر؟! تاوانش را می‌دهی!", "pause": 0.4},
+   {"role": "NARRATOR", "en": "Ashamed and furious, Sohrab raised his shield over his head and charged.", "fa": "سهراب، شرمگین و خشمگین، سپر را بالای سرش گرفت و حمله کرد.", "pause": 0.6}
+  ]},
+  {"id": "S06", "lines": [
+   {"role": "NARRATOR", "en": "Gordafarid hung her bow on her arm and lowered her spear.", "fa": "گردآفرید کمان را به بازو انداخت و نیزه‌اش را پایین آورد.", "pause": 0.4},
+   {"role": "NARRATOR", "en": "But Sohrab came at her like a leopard.", "fa": "اما سهراب مثل پلنگ به او حمله کرد.", "pause": 0.3},
+   {"role": "NARRATOR", "en": "His spear struck her belt, tore her armour...", "fa": "نیزه‌اش به کمربند او خورد، زرهش را درید...", "pause": 0.2},
+   {"role": "NARRATOR", "en": "and lifted her out of the saddle like a ball!", "fa": "و او را مثل یک گوی از روی زین بلند کرد!", "pause": 0.5},
+   {"role": "GORDAFARID", "en": "Not yet!", "fa": "هنوز نه!", "pause": 0.3},
+   {"role": "NARRATOR", "en": "She drew her sword, cut his spear in two, and dropped back into the saddle.", "fa": "شمشیرش را کشید، نیزه‌ی او را دو نیم کرد و دوباره روی زین نشست.", "pause": 0.4},
+   {"role": "SOHRAB", "en": "What?!", "fa": "چه؟!", "pause": 0.6}
+  ]},
+  {"id": "S07", "lines": [
+   {"role": "NARRATOR", "en": "But she knew she could not beat him. She turned and raced for the fortress.", "fa": "اما می‌دانست که حریفش نیست. اسب را برگرداند و به سوی دژ تاخت.", "pause": 0.4},
+   {"role": "SOHRAB", "en": "Run if you can! You will not escape me!", "fa": "اگر می‌توانی فرار کن! از دست من در نمی‌روی!", "pause": 0.4},
+   {"role": "NARRATOR", "en": "Sohrab flew after her. Closer... and closer...", "fa": "سهراب به دنبالش پرواز کرد. نزدیک‌تر... و نزدیک‌تر...", "pause": 0.3},
+   {"role": "NARRATOR", "en": "He reached out, and pulled the helmet from her head.", "fa": "دستش را دراز کرد و کلاه‌خود را از سرش برداشت.", "pause": 0.6}
+  ]},
+  {"id": "S08", "lines": [
+   {"role": "NARRATOR", "en": "Her long hair fell loose, and her face shone like the sun.", "fa": "گیسوی بلندش رها شد و رویش مثل خورشید درخشید.", "pause": 0.6},
+   {"role": "SOHRAB", "en": "A girl?!", "fa": "یک دختر؟!", "pause": 0.5},
+   {"role": "SOHRAB", "en": "The warrior who fought me like a lion... is a girl?", "fa": "جنگاوری که مثل شیر با من جنگید... یک دختر است؟", "pause": 0.5},
+   {"role": "NARRATOR", "en": "And now she was alone on the plain... face to face with Sohrab.", "fa": "و حالا او در دشت تنها بود... رو در روی سهراب.", "pause": 1.6}
+  ]},
+  {"id": "END", "card": "end", "dur": 6.0, "lines": []}
+ ]
+}
