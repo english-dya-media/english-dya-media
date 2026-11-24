@@ -73,3 +73,33 @@ SERVANT_A = spec(kind="man", skin="tan", hair="short", hair_col="#1a120c", beard
                  garment="tunic", col="#6a7a8a", col2="#4a5a6a", pattern="plain", belt="#3a2a1a", buckle=False, cuff="#c8c0b0", trim="#c8c0b0",
                  trousers="#4a3a2a", boots="#3a2414", iris="#2a170c")
 SERVANT_B = dict(SERVANT_A, skin="olive", beard="full", col="#8a5a3a", col2="#6a4028", head_col="#c8b08a")
+
+# ---- part 3: Nawfal (a big, broad Arab chief with a full brown beard: a steel helmet with a green plume, steel scale armour over a green
+# tunic, a white cloak with gold edges; he rides a big grey horse with a green blanket), his warriors (steel helmets, green plumes, green
+# and white tunics), the warrior who speaks to Majnun (a short beard, a brown cloak), the men of Leyli's tribe (black head cloths with a
+# dark red check, black and dark red robes), Leyli's father after the defeat (the same, his head cloth and cloak grey with dust), and Ibn
+# Salam (a rich young man: a neat black beard, a white turban, a saffron silk robe with gold, a deep blue cloak)
+STEEL = ("#2a2c34", "#5c606c", "#a8aebb")
+NAWFAL = spec(kind="man", skin="olive", hair="short", hair_col="#2a1a10", beard="full", beard_col="#3a2414", head="helmet", helm=STEEL,
+              plume="#1e7a44", garment="tunic", col="#2a6a42", col2="#1a4a2c", pattern="scales", scale_col="#b4bcc4", cloak="#ece6d8",
+              cloak2="#c4bca8", cloak_hi="#c9a24a", belt="#5a3a1e", buckle=True, cuff="#c9a24a", trim="#c9a24a", trousers="#3a2e24",
+              boots="#3a2414", iris="#2a1a10", build=1.18)
+NAWFAL_MAN = spec(kind="man", skin="tan", hair="short", beard="short", beard_col="#1a120c", head="helmet", helm=STEEL, plume="#1e7a44",
+                  garment="tunic", col="#2a6a42", col2="#1a4a2c", pattern="scales", scale_col="#a8b0b8", belt="#3a2a1a", buckle=False,
+                  cuff="#e8e0cc", trim="#e8e0cc", trousers="#4a3a2a", boots="#3a2414", iris="#2a1a10")
+NAWFAL_MAN_2 = dict(NAWFAL_MAN, skin="olive", beard="full", col="#e4dcc8", col2="#bcb29c", scale_col="#8a9aa4", trim="#2a6a42", cuff="#2a6a42")
+NAWFAL_MAN_3 = dict(NAWFAL_MAN, skin="light", beard="light", col="#3a7a52", col2="#24543a", plume="#e8e0cc")
+WARRIOR = dict(NAWFAL_MAN, skin="tan", beard="short", beard_col="#20160e", cloak="#6a4a2a", cloak2="#4a3018", cloak_hi="#8a6a3a",
+               col="#2a6a42", col2="#1a4a2c", build=1.05)
+TRIBE_MAN = spec(kind="man", skin="olive", hair="short", hair_col="#120c08", beard="short", beard_col="#120c08", head="kufiya",
+                 kufiya_col="#26242c", kufiya_shade="#141318", kufiya_pat="check", kufiya_pat_col="#6a1a1e", agal="#0a0a0c", garment="tunic",
+                 col="#3a1416", col2="#220a0c", pattern="plain", belt="#1a1210", buckle=False, cuff="#6a1a1e", trim="#6a1a1e", trousers="#2a2224",
+                 boots="#1e1410", iris="#1a0e08")
+TRIBE_MAN_2 = dict(TRIBE_MAN, skin="tan", beard="full", col="#26262c", col2="#141418", kufiya_col="#5a1416", kufiya_shade="#360a0c",
+                   kufiya_pat=None)
+TRIBE_MAN_3 = dict(TRIBE_MAN, skin="light", beard="light", col="#5a1a1c", col2="#3a0e10")
+LEYLI_FATHER_DUST = dict(LEYLI_FATHER, kufiya_col="#6a625c", kufiya_shade="#4a4440", kufiya_pat_col="#7a5a50", col="#4e4a48", col2="#2e2c2c",
+                         cloak="#6a4a42", cloak2="#4a322e", cloak_hi="#9a8a6a", grey=0.25)
+IBN_SALAM = spec(kind="man", skin="light", hair="short", hair_col="#140e0a", beard="light", beard_col="#140e0a", head="turban",
+                 head_col="#f6f0e2", turban_tail=True, garment="robe", col="#d0802a", col2="#9a5414", pattern="brocade", cloak="#22407a",
+                 cloak2="#162a52", cloak_hi="#c9a24a", belt=None, sash="#c9a24a", cuff="#c9a24a", trim="#c9a24a", iris="#2a1a10", build=0.98)

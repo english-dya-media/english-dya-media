@@ -360,3 +360,67 @@ def thunk(amp=0.25, seed=0):
     crack = highpass(r.standard_normal(n).astype(np.float32), 1800) * np.exp(-t * 70)
     quiver = np.sin(2 * np.pi * 34 * t) * np.sin(2 * np.pi * 420 * t) * np.exp(-t * 6) * 0.25
     return ((knock + 0.5 * crack + quiver) * amp).astype(np.float32)
+
+
+# ---- Leyli part 3: the battles of Nawfal (a war horn, men shouting, metal clashing, the din of a battle far away)
+def horn(dur=2.4, amp=0.1, f0=73.4, seed=0):
+    """a long low war horn: a brassy tone that swells, bends up a little at the start and fades"""
+    r = np.random.default_rng(seed)
+    n = int(dur * SR); t = np.arange(n) / SR
+    f = f0 * (1 - 0.04 * np.exp(-t * 6)) * (1 + 0.003 * np.sin(2 * np.pi * 4.6 * t))
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    x = sum(w * np.sin(m * ph) for m, w in ((1, 1.0), (2, 0.7), (3, 0.5), (4, 0.32), (5, 0.2), (6, 0.12), (7, 0.07)))
+    x = lowpass(x.astype(np.float32), 1600) + 0.05 * bandpass(r.standard_normal(n).astype(np.float32), 300, 2000)
+    e = np.minimum(1, t / 0.35) * np.minimum(1, (dur - t) / 0.8).clip(0, 1)
+    return (x * e * amp / 2.2).astype(np.float32)
+
+
+def war_cry(dur=2.0, amp=0.1, seed=0, voices=8):
+    """many men shouting together as they charge: rising open vowels and breath"""
+    r = np.random.default_rng(seed)
+    n = int(dur * SR); t = np.arange(n) / SR
+    out = np.zeros(n, np.float32)
+    for v in range(voices):
+        f0 = r.uniform(120, 210); st = r.uniform(0, 0.4)
+        f = f0 * (1 + 0.18 * np.clip((t - st) / 0.6, 0, 1)) * (1 + 0.02 * np.sin(2 * np.pi * r.uniform(4, 7) * t))
+        ph = 2 * np.pi * np.cumsum(f) / SR
+        voice = np.sin(ph) + 0.6 * np.sin(2 * ph) + 0.45 * np.sin(3 * ph) + 0.25 * np.sin(4 * ph)
+        g = np.clip((t - st) / 0.15, 0, 1) * np.clip((dur - t) / 0.5, 0, 1)
+        out += voice.astype(np.float32) * g * r.uniform(0.6, 1.0)
+    out = bandpass(out, 200, 2600) + 0.5 * bandpass(r.standard_normal(n).astype(np.float32), 500, 3000) * np.clip(t / 0.3, 0, 1)
+    return (out / (np.abs(out).max() + 1e-6) * amp).astype(np.float32)
+
+
+def clash(amp=0.1, seed=0):
+    """metal striking metal (lance on shield, sword on helmet): a bright knock and a short ring"""
+    r = np.random.default_rng(seed)
+    n = int(0.7 * SR); t = np.arange(n) / SR
+    f = 2100 + 500 * r.random()
+    ring = sum(w * np.sin(2 * np.pi * f * m * t) * np.exp(-t * d) for m, w, d in ((1, 1.0, 9), (1.48, 0.6, 12), (2.73, 0.35, 16)))
+    k = int(0.02 * SR)
+    hit = np.zeros(n, np.float32)
+    hit[:k] = highpass(r.standard_normal(k).astype(np.float32), 2500) * np.exp(-np.arange(k) / SR * 150)
+    return ((ring * 0.45 + hit * 1.3) * amp).astype(np.float32)
+
+
+def battle(m, t0, t1, amp=1.0, seed=0, far=False):
+    """the din of a battle from t0 to t1: a roar of men and hooves, clashes at random, shouts now and then; far=True: muffled"""
+    r = np.random.default_rng(seed)
+    dur = t1 - t0
+    roar = noise_bed(dur, amp=0.05 * amp, lo=150, hi=1100 if not far else 600, lfo=1.2, seed=seed)
+    place(m, roar, t0)
+    hooves(m, t0, t1, step=0.33, amp=(0.05 if not far else 0.02) * amp, pan=0.0, seed=seed + 1, gallop=True)
+    t = t0 + r.uniform(0.1, 0.4)
+    while t < t1 - 0.3:
+        c = clash(amp=(0.07 if not far else 0.02) * amp * r.uniform(0.5, 1.0), seed=int(t * 10) + seed)
+        if far:
+            c = lowpass(c, 1800)
+        place(m, c, t, pan=r.uniform(-0.6, 0.6))
+        t += r.uniform(0.25, 0.7) if not far else r.uniform(0.5, 1.2)
+    t = t0 + 0.5
+    while t < t1 - 1.0:
+        w = war_cry(r.uniform(1.0, 1.6), amp=(0.05 if not far else 0.018) * amp, seed=int(t * 7) + seed, voices=5)
+        if far:
+            w = lowpass(w, 900)
+        place(m, w, t, pan=r.uniform(-0.5, 0.5))
+        t += r.uniform(1.6, 3.0)

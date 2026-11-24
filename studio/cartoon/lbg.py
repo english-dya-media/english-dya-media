@@ -1,7 +1,8 @@
 """Painted backgrounds of Leyli & Majnun (SVG -> PNG; cache them with bgs.cached("ly_<name>", lbg.<name>)).
 Part 1: the open desert at dusk with its dunes (dunes), a close view of the sand where Majnun writes (sand_close), the camp of the Banu
 Amir among its palms (camp), the front of the chief's big black tent (chief_tent), the tent school under its awning (school) and the
-inside of Leyli's family tent at night (tent_night)."""
+inside of Leyli's family tent at night (tent_night). Part 2: Leyli's father's tent (leyli_tent), the Kaaba (kaaba, kaaba_close).
+Part 3: the open sand plain of the battles (plain, with Leyli's tribe's tents far away when tents=True)."""
 import math, random
 from film import svg_render, W, H
 from bgs import FILTERS, lg, rg, ridge, clouds, stars
@@ -560,4 +561,62 @@ def kaaba_close():
         yy = 1460 + k * k * 14
         s += f'<path d="M 0 {yy} L {W} {yy}" stroke="#ffffff" stroke-width="2" opacity="0.25"/>'
     s += f'<rect width="{W}" height="{H}" fill="url(#kl)"/>'
+    return svg_render(s)
+
+
+# ------------------------------------------------------------------ part 3: the plain where Nawfal fights Leyli's tribe
+PLAIN_Y = 1060           # plain(): the far edge of the flat sand; people stand at feet y 1250-1800, riders at 1350-1750
+TRIBE_TENTS = (600, 1060)     # plain(tents=True): Leyli's tribe's black tents far away on the right, x 600-1060, ground y 1075
+
+
+def acacia(x, y, h, seed=0, col="#3a4a24", trunk="#4a3422"):
+    """a flat-topped desert acacia: a thin forked trunk and a wide umbrella of leaves; base at (x, y)"""
+    r = random.Random(seed)
+    o = (f'<path d="M {x:.0f} {y:.0f} L {x - 6:.0f} {y - h * 0.55:.0f} L {x - h * 0.3:.0f} {y - h * 0.85:.0f} M {x - 6:.0f} {y - h * 0.55:.0f} '
+         f'L {x + h * 0.25:.0f} {y - h * 0.88:.0f}" stroke="{trunk}" stroke-width="{max(2, h * 0.04):.1f}" fill="none" stroke-linecap="round"/>')
+    for k in range(7):
+        cx = x - h * 0.55 + k * h * 0.18 + r.uniform(-8, 8); cy = y - h * 0.9 + r.uniform(-8, 8)
+        o += f'<ellipse cx="{cx:.0f}" cy="{cy:.0f}" rx="{h * 0.2:.0f}" ry="{h * 0.08:.0f}" fill="{col}"/>'
+    o += f'<ellipse cx="{x:.0f}" cy="{y - h * 0.95:.0f}" rx="{h * 0.6:.0f}" ry="{h * 0.07:.0f}" fill="#ffffff" opacity="0.08"/>'
+    return o
+
+
+def plain(pal="day", tents=False):
+    """the open sand plain between low dunes: far dunes on a low horizon (y 960-1040), a hazy band, the flat ground from PLAIN_Y with
+    tracks, pebbles and dry tufts, a few far acacias and rocks; tents=True: Leyli's tribe's black tents with dark red banners far away on
+    the right (TRIBE_TENTS)"""
+    s = "<defs>" + FILTERS + _sky(pal)
+    gdefs, gs = _ground(PLAIN_Y, pal, 4300)
+    s += gdefs + "</defs>"
+    s += _sky_draw(pal)
+    s += f'<path d="{ridge(W, 965, 30, 4301, rough=0.3)}" fill="{SAND[pal][0][1]}" opacity="0.7"/>'
+    for i, (base, amp) in enumerate(((990, 40), (1030, 50))):
+        lit, shade = SAND[pal][i]
+        s += _dune_row(4302 + i, base, amp, 420 * (1 + i * 0.3), 760 * (1 + i * 0.3), lit, shade, crest="#fff0d8")
+    s += gs
+    haze = {"dawn": "#ffe0c0", "day": "#fff4dc", "dusk": "#ffc890"}[pal]
+    s += f'<rect x="0" y="{PLAIN_Y - 40}" width="{W}" height="90" fill="{haze}" opacity="0.35" filter="url(#b20)"/>'
+    hz = {"dawn": "#5a4a5a", "day": "#5a6a4a", "dusk": "#3a2a3a"}[pal]
+    r = random.Random(4305)
+    for k in range(5):
+        x = r.choice((r.uniform(40, 520), r.uniform(560, 1040)))
+        s += acacia(x, PLAIN_Y + r.uniform(0, 20), r.uniform(50, 80), seed=4306 + k, col=hz, trunk=hz)
+    for k in range(6):                       # a few rocks on the plain
+        x = r.uniform(0, W); y = r.uniform(PLAIN_Y + 60, 1500); rr = 8 + (y - PLAIN_Y) * 0.05
+        s += (f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{rr * 1.6:.0f}" ry="{rr:.0f}" fill="#8a6a4a" stroke="#3a2a1a" stroke-width="2"/>'
+              f'<ellipse cx="{x - rr * 0.3:.0f}" cy="{y - rr * 0.3:.0f}" rx="{rr * 0.8:.0f}" ry="{rr * 0.4:.0f}" fill="#c8a882" opacity="0.6"/>')
+    if tents:
+        x0, x1 = TRIBE_TENTS
+        light = {"dawn": "#ffb88a", "day": None, "dusk": "#ffa070"}[pal]
+        s += black_tent(x0 + 160, x1 + 40, PLAIN_Y + 5, 70, depth=30, poles=2, rugs=False, back_pat=False, light=light)
+        s += black_tent(x0, x0 + 260, PLAIN_Y + 15, 60, depth=26, poles=1, open_front=False, light=light)
+        for k, bx in enumerate((x0 + 120, x0 + 330, x1 - 40)):
+            yb = PLAIN_Y + 10
+            wv = 8 * (k % 2)
+            s += (f'<path d="M {bx} {yb} L {bx} {yb - 150}" stroke="#3a2414" stroke-width="4"/>'
+                  f'<path d="M {bx} {yb - 150} L {bx - 60} {yb - 140 + wv} L {bx - 56} {yb - 110 + wv} L {bx} {yb - 118} Z" fill="#7a1418" stroke="#1a0606" stroke-width="2"/>')
+        s += date_palm(x0 + 40, PLAIN_Y + 25, 200, lean=-0.05, seed=4310)
+        s += date_palm(x1 + 10, PLAIN_Y + 30, 230, lean=0.04, seed=4311)
+    if pal == "dusk":
+        s += f'<rect width="{W}" height="{H}" fill="#4a2a5a" opacity="0.12"/>'
     return svg_render(s)

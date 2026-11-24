@@ -727,18 +727,18 @@ def prop(c, name, x, y, ang, t, S=None):
                 f'<path d="M -8 -50 L 8 -50 M -8 -26 L 8 -26 M -8 -2 L 6 -2 M -8 22 L 8 22" stroke="#8a6a3a" stroke-width="{c.sw(2)}"/>'
                 f'<rect x="-20" y="-86" width="40" height="17" rx="6" fill="#8a5a2a" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
                 f'<rect x="-20" y="69" width="40" height="17" rx="6" fill="#8a5a2a" stroke="{OUT}" stroke-width="{c.sw(2)}"/></g>')
-    if name in ("spear_red", "banner_black", "banner_red"):
-        tall = name != "spear_red"
+    if name in ("spear_red", "spear_green", "banner_black", "banner_red", "banner_green"):
+        tall = name not in ("spear_red", "spear_green")
         out = g + f'<path d="M 0 {-1190 if tall else -560} L 0 {320 if tall else 380}" stroke="#4a3018" stroke-width="{c.sw(10)}"/>'
-        if name == "spear_red":
+        if not tall:
             out += f'<path d="M 0 -640 L 16 -560 L -16 -560 Z" fill="#cfd4da" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
             n = 7; top, bot = [], []
             for i in range(n + 1):
                 u = i / n; wv = 16 * u * math.sin(t * 7 - u * 5)
                 top.append((-6 - 120 * u, -548 + wv)); bot.append((-6 - 112 * u, -520 + wv * 1.1 + 6 * u))
-            out += f'<path d="M {P(top + bot[::-1])} Z" fill="#c4161c" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+            out += f'<path d="M {P(top + bot[::-1])} Z" fill="{"#c4161c" if name == "spear_red" else "#1e7a44"}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
         else:
-            col = "#121216" if name == "banner_black" else "#b5161b"
+            col = {"banner_black": "#121216", "banner_red": "#b5161b", "banner_green": "#1e6e3e"}[name]
             out += f'<circle cx="0" cy="-1200" r="14" fill="#c9a24a" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
             n = 10; top, bot = [], []
             for i in range(n + 1):
@@ -776,6 +776,15 @@ def prop(c, name, x, y, ang, t, S=None):
         return out + '</g>'
     if name == "kaviani":   # the Kaviani banner on its spear (see kaviani())
         return g + kaviani(c, t) + '</g>'
+    if name in ("lance_green", "lance_red"):   # a horseman's long lance with a small pennant under the point (Leyli & Majnun part 3)
+        col = "#1e7a44" if name == "lance_green" else "#c4161c"
+        out = (g + f'<path d="M 0 -1150 L 0 330" stroke="#4a3018" stroke-width="{c.sw(11)}"/>'
+               f'<path d="M 0 -1250 L 18 -1150 L -18 -1150 Z" fill="#cfd4da" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>')
+        n = 7; top, bot = [], []
+        for i in range(n + 1):
+            u = i / n; wv = 22 * u * math.sin(t * 7 - u * 5)
+            top.append((-6 - 170 * u, -1130 + wv)); bot.append((-6 - 160 * u, -1080 + wv * 1.1 + 8 * u))
+        return out + f'<path d="M {P(top + bot[::-1])} Z" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(2)}"/></g>'
     if name == "pike":   # long spear held low (hand hanging at the side)
         return (g + f'<path d="M 0 -1080 L 0 320" stroke="#4a3018" stroke-width="{c.sw(10)}"/>'
                 f'<path d="M 0 -1170 L 17 -1080 L -17 -1080 Z" fill="#cfd4da" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/></g>')
