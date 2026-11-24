@@ -173,7 +173,7 @@ def eye(c, S, cx, cy, w, blink, gx, gy, side, sad=0.0):
            f'</g>'
            f'<path d="M {fmt(cx-hw-2)} {fmt(cy+2)} C {fmt(cx-hw*0.55)} {fmt(top-1)}, {fmt(cx+hw*0.45)} {fmt(top-2)}, {fmt(cx+hw+3)} {fmt(cy-2)}" '
            f'stroke="{OUT}" stroke-width="{c.sw(4.6)}" fill="none" stroke-linecap="round"/>')
-    if k == "woman":
+    if k == "woman" or S.get("lashes"):
         out += f'<path d="M {fmt(cx+side*(hw+1))} {fmt(cy-2)} l {fmt(side*9)} -6 M {fmt(cx+side*(hw-4))} {fmt(top+3)} l {fmt(side*6)} -7" stroke="{OUT}" stroke-width="{c.sw(2.8)}" stroke-linecap="round"/>'
     else:
         out += f'<path d="M {fmt(cx+side*(hw+1))} {fmt(cy-1)} l {fmt(side*6)} -4" stroke="{OUT}" stroke-width="{c.sw(3)}" stroke-linecap="round"/>'
@@ -473,6 +473,48 @@ def red_face(c, S, p):
     return (f'<defs><clipPath id="{fid}"><path d="{face_d(S, p)}"/></clipPath><clipPath id="{wid}"><rect x="-200" y="-400" width="{fmt(xr+200)}" height="500"/></clipPath></defs>'
             f'<g clip-path="url(#{fid})"><g clip-path="url(#{wid})"><g opacity="{a:.2f}">{body}</g></g></g>')
 
+def coin_band(c, S, p, t):
+    """a row of small silver coins hanging from the scarf's edge over the forehead (Leyli)"""
+    col = S.get("coin_col", "#e4e6ea"); dark = S.get("coin_dark", "#8a8e98")
+    o = f'<path d="M -84 -268 C -50 -290, 50 -290, 84 -268" stroke="{dark}" stroke-width="{c.sw(3)}" fill="none"/>'
+    for i in range(9):
+        u = i / 8
+        x = -76 + 152 * u
+        y = -276 - 16 * math.sin(math.pi * u) + 14
+        sw_ = 2.2 * math.sin(t * 3.1 + i * 0.9) * p.get("wind", 0.4)
+        o += (f'<path d="M {fmt(x)} {fmt(y - 10)} L {fmt(x + sw_)} {fmt(y - 2)}" stroke="{dark}" stroke-width="{c.sw(1.6)}"/>'
+              f'<circle cx="{fmt(x + sw_)}" cy="{fmt(y + 4)}" r="7.5" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(1.4)}"/>'
+              f'<circle cx="{fmt(x + sw_ - 2)}" cy="{fmt(y + 2)}" r="2.4" fill="#ffffff" opacity="0.8"/>')
+    return o
+
+
+def braids(c, S, p, t):
+    """two plaits that come out under the scarf at the jaw and fall over the chest (Leyli); they sway with the wind and the turn"""
+    col = S["hair_col"]; hi = S.get("hair_hi", "#3b2a1f"); tie = S.get("braid_tie", "#c4202a")
+    s = p["turn"]; wind = p.get("wind", 0.4)
+    o = ""
+    for side in (-1, 1):
+        x0, y0 = side * 56 + 10 * s, -64
+        sway = 8 * wind * math.sin(t * 1.9 + side) + 18 * s
+        ctrl = [(x0, y0), (side * 62 + 6 * s, 40), (side * 66 + sway * 0.6, 170), (side * 58 + sway, 290)]
+        pts = [_bez(*ctrl, k / 16) for k in range(17)]
+        for k in range(len(pts) - 1, 0, -1):          # plaits from the end up, so the upper ones overlap the lower ones
+            (xa, ya), (xb, yb) = pts[k - 1], pts[k]
+            ang = math.degrees(math.atan2(yb - ya, xb - xa))
+            off = 6 if k % 2 else -6
+            mx, my = (xa + xb) / 2 + off * math.cos(math.radians(ang + 90)), (ya + yb) / 2 + off * math.sin(math.radians(ang + 90))
+            w = 12 - 3 * (k / 16)
+            o += (f'<ellipse cx="{fmt(mx)}" cy="{fmt(my)}" rx="{fmt(math.hypot(xb - xa, yb - ya) * 0.95)}" ry="{fmt(w)}" '
+                  f'transform="rotate({fmt(ang + (32 if k % 2 else -32))},{fmt(mx)},{fmt(my)})" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(1.6)}"/>'
+                  f'<path d="M {fmt(mx - 5)} {fmt(my - 3)} q 5 -3 10 0" stroke="{hi}" stroke-width="{c.sw(2)}" fill="none" opacity="0.85"/>')
+        ex, ey = pts[-1]
+        o += (f'<rect x="{fmt(ex - 12)}" y="{fmt(ey - 4)}" width="24" height="14" rx="5" fill="{tie}" stroke="{OUT}" stroke-width="{c.sw(1.6)}"/>'
+              f'<path d="M {fmt(ex - 10)} {fmt(ey + 10)} Q {fmt(ex - 4)} {fmt(ey + 40)} {fmt(ex - 12 + sway * 0.3)} {fmt(ey + 52)} '
+              f'M {fmt(ex)} {fmt(ey + 10)} L {fmt(ex + sway * 0.3)} {fmt(ey + 56)} M {fmt(ex + 10)} {fmt(ey + 10)} Q {fmt(ex + 6)} {fmt(ey + 40)} {fmt(ex + 12 + sway * 0.3)} {fmt(ey + 50)}" '
+              f'stroke="{col}" stroke-width="{c.sw(6)}" fill="none" stroke-linecap="round"/>')
+    return o
+
+
 def head(c, S, p, t):
     turn = p["turn"]
     face_x = 12 * turn
@@ -490,6 +532,10 @@ def head(c, S, p, t):
     o += eye(c, S, 40 + face_x, -178, 1 - 0.18 * turn, p["blink"], p["gx"], p["gy"], 1, p["sad"])
     o += brow(c, S, -40 + face_x, -206, -1, p["brow"], p["furrow"], p["sad"]) + brow(c, S, 40 + face_x, -206, 1, p["brow"], p["furrow"], p["sad"])
     o += hair_top(c, S, p, t) + headwear(c, S, p, t) + scarf_front(c, S, p, t)
+    if S.get("coins"):
+        o += coin_band(c, S, p, t)
+    if S.get("braids"):
+        o += braids(c, S, p, t)
     if p["glow"] > 0:   # the omen: blood-red glow at the roots of the hair
         g = p["glow"]
         o += (f'<path d="M -104 -236 C -112 -290, -80 -336, 0 -356 C 80 -336, 112 -290, 104 -236" stroke="#ff2a1a" stroke-width="{c.sw(14)}" fill="none" opacity="{0.55*g:.2f}" filter="url(#glowf)"/>'
@@ -547,8 +593,13 @@ def garment(c, S, p, t):
         hem_y = 560; hem_w = 330 * b
     if p["legs"] == "none":
         hem_y = min(hem_y, 760); hem_w = min(hem_w, 200 * b)
-    pts = [(-40, 2), (-shw * 0.55, 10), (-shw, 50), (-shw * 1.02, 160), (-waist, 400),
-           (-hem_w + sway, hem_y), (-hem_w * 0.5 + sway, hem_y + 10), (hem_w * 0.5 + sway, hem_y + 10), (hem_w + sway, hem_y),
+    hem = [(-hem_w + sway, hem_y), (-hem_w * 0.5 + sway, hem_y + 10), (hem_w * 0.5 + sway, hem_y + 10), (hem_w + sway, hem_y)]
+    if S.get("rags") and not sit:          # a torn hem: points that hang down unevenly
+        hem = [(-hem_w + sway, hem_y)]
+        for i, (u, dy) in enumerate(((0.16, 46), (0.3, -6), (0.42, 58), (0.55, 4), (0.68, 70), (0.8, -4), (0.9, 40))):
+            hem.append((-hem_w + 2 * hem_w * u + sway * (1.1 + 0.2 * math.sin(t * 2 + i)), hem_y + dy))
+        hem.append((hem_w + sway, hem_y))
+    pts = [(-40, 2), (-shw * 0.55, 10), (-shw, 50), (-shw * 1.02, 160), (-waist, 400)] + hem + [
            (waist, 400), (shw * 1.02, 160), (shw, 50), (shw * 0.55, 10), (40, 2)]
     d = smooth_path(pts)
     out = rimmed(c, d, col, dx=3, dy=-1)
@@ -574,6 +625,10 @@ def garment(c, S, p, t):
         for fx in (-0.5, 0.0, 0.45):
             folds += f'<path d="M {fmt(fx*waist)} 420 C {fmt(fx*waist+sway*0.3)} 700, {fmt(fx*hem_w*0.9+sway*0.6)} 900, {fmt(fx*hem_w+sway)} {fmt(hem_y)}" stroke="{col2}" stroke-width="{c.sw(5)}" fill="none" opacity="0.55"/>'
     out += f'<clipPath id="{cid}"><path d="{d}"/></clipPath><g clip-path="url(#{cid})">{pat}<path d="{shade}" fill="{col2}" opacity="0.55"/>{folds}</g>'
+    if S.get("rags") and not sit:          # tears and a patch
+        out += (f'<path d="M {fmt(-waist * 0.5)} 520 l 18 40 l -10 30 M {fmt(waist * 0.3)} 700 l -14 50 l 12 34 M {fmt(-shw * 0.6)} 160 l 20 30" '
+                f'stroke="{col2}" stroke-width="{c.sw(4)}" fill="none" stroke-linecap="round"/>'
+                f'<path d="M {fmt(waist * 0.2)} 300 l 60 -6 l 4 52 l -58 6 Z" fill="{S.get("patch", "#b8a888")}" stroke="{OUT}" stroke-width="{c.sw(1.8)}" opacity="0.9"/>')
     # collar / front opening
     if g in ("robe", "coat"):
         out += f'<path d="M -40 4 L 30 400 L {fmt(30+sway*0.6)} {fmt(hem_y)}" stroke="{col2}" stroke-width="{c.sw(4)}" fill="none"/>'
@@ -632,6 +687,12 @@ def prop(c, name, x, y, ang, t, S=None):
                 f'<path d="M -36 20 L 36 20 L 24 4 L -24 4 Z M -34 100 L 34 100 L 30 112 L -30 112 Z" fill="#3a2a1a" stroke="{OUT}" stroke-width="{c.sw(2.4)}"/>'
                 f'<path d="M -10 20 L -10 100 M 10 20 L 10 100" stroke="#3a2a1a" stroke-width="{c.sw(3)}"/>'
                 f'<ellipse cx="0" cy="62" rx="8" ry="{fmt(14*fl)}" fill="#fff8e0"/></g>')
+    if name == "tablet":       # a small wooden writing board with letters on it, held at its lower edge
+        return (g + f'<rect x="-62" y="-190" width="124" height="190" rx="14" fill="#c8a46a" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/>'
+                f'<rect x="-50" y="-178" width="100" height="166" rx="10" fill="#e8d4a4"/>'
+                f'<path d="M -34 -150 q 10 -16 20 0 q 10 16 22 0 M 34 -150 L 34 -118 M -30 -96 q 18 10 36 0 l 0 -14 M 20 -96 l 14 0 M -34 -50 q 30 14 64 0 M -10 -64 l 0 -10" '
+                f'stroke="#3a2a1a" stroke-width="{c.sw(4)}" fill="none" stroke-linecap="round"/>'
+                f'<circle cx="0" cy="-200" r="10" fill="none" stroke="#8a6a3a" stroke-width="{c.sw(4)}"/></g>')
     if name == "bread":
         return (g + f'<ellipse cx="0" cy="0" rx="70" ry="30" fill="#d39a52" stroke="{OUT}" stroke-width="{c.sw(2.6)}"/>'
                 f'<path d="M -40 -6 C -20 -16, 20 -16, 40 -6" stroke="#9a6a30" stroke-width="{c.sw(3)}" fill="none"/>'
@@ -1348,6 +1409,65 @@ def goat(c, col="#e9e3d6", dark="#b9ae9a", horn="#8a7a62", t=0.0, graze=0.0, see
             f'<path d="M -204 {fmt(-222 + hy)} L -198 {fmt(-190 + hy)} L -188 {fmt(-220 + hy)} Z" fill="{dark}" stroke="{OUT}" stroke-width="{c.sw(1.6)}"/>'
             f'<circle cx="-180" cy="{fmt(-256 + hy)}" r="4.5" fill="#120a06"/><path d="M -186 {fmt(-258 + hy)} l 12 0" stroke="#e8c050" stroke-width="{c.sw(1.4)}"/>'
             f'<ellipse cx="-208" cy="{fmt(-232 + hy)}" rx="3" ry="2.4" fill="#3a2418"/>')
+    return out
+
+def gazelle(c, col="#c99358", belly="#f6eedc", stripe="#5a3420", t=0.0, graze=0.0, look=0.0, seed=0, walk=False, phase=0.0, ear=0.0):
+    """a gazelle, side view facing left; origin at the ground under the belly; ~ 330 wide x 470 tall (head up).
+    graze 0..1 lowers the head to the ground; look -1..1 turns the face a little towards the camera (1); ear: an ear twitch 0..1"""
+    out = ""
+    bob = 4 * math.sin(phase * 2) if walk else 1.5 * math.sin(t * 1.3 + seed)
+    for i, (lx, ph) in enumerate(((-70, 0.0), (-50, math.pi), (62, math.pi), (84, 0.0))):
+        fill = belly if i in (1, 2) else col
+        a = (20 * math.sin(phase + ph) if walk else 1.5 * math.sin(t * 1.1 + i + seed))
+        r_ = math.radians(a)
+        hind = lx > 0
+        knee = (lx + math.sin(r_) * 96 + (10 if hind else 0), -196 + math.cos(r_) * 96)
+        foot = (knee[0] + math.sin(r_ * 0.6) * 96 - (12 if hind else 0), min(-4, knee[1] + 96 - (10 * max(0, math.sin(phase + ph)) if walk else 0)))
+        out += (limb(c, (lx, -214 + bob), knee, 13 if hind else 11, 6, fill, 2.0) + limb(c, knee, foot, 6, 5, fill, 2.0) +
+                f'<path d="M {fmt(foot[0]-7)} {fmt(foot[1]-4)} L {fmt(foot[0]+7)} {fmt(foot[1]-4)} L {fmt(foot[0]+8)} {fmt(foot[1]+4)} L {fmt(foot[0]-8)} {fmt(foot[1]+4)} Z" fill="#1e1612"/>')
+    body = smooth_path([(-104, -268 + bob), (-30, -282 + bob), (60, -280 + bob), (112, -262 + bob), (120, -226 + bob), (98, -200 + bob),
+                        (10, -196 + bob), (-80, -200 + bob), (-114, -230 + bob)])
+    out += rimmed(c, body, col, dx=3, dy=-2)
+    cid = c.uid("gz")
+    out += (f'<clipPath id="{cid}"><path d="{body}"/></clipPath><g clip-path="url(#{cid})">'
+            f'<path d="M -130 {fmt(-214 + bob)} C -40 {fmt(-226 + bob)}, 60 {fmt(-226 + bob)}, 130 {fmt(-214 + bob)} L 130 -150 L -130 -150 Z" fill="{belly}"/>'
+            f'<path d="M -110 {fmt(-226 + bob)} C -40 {fmt(-240 + bob)}, 60 {fmt(-240 + bob)}, 120 {fmt(-228 + bob)}" stroke="{stripe}" stroke-width="{c.sw(9)}" fill="none" opacity="0.85"/>'
+            f'<ellipse cx="112" cy="{fmt(-236 + bob)}" rx="22" ry="30" fill="{belly}"/></g>')
+    wag = 10 * math.sin(t * 6 + seed) * (0.5 + 0.5 * math.sin(t * 0.7 + seed))
+    out += f'<path d="M 116 {fmt(-262 + bob)} q {fmt(14 + wag * 0.3)} 10 {fmt(8 + wag)} 34" stroke="#1e1612" stroke-width="{c.sw(7)}" fill="none" stroke-linecap="round"/>'
+    # neck and head: the neck turns down about the chest when grazing
+    na = math.radians(-18 + 108 * graze)
+    bx, by = -92, -258 + bob
+    L = 150
+    hx, hy = bx - math.cos(na) * L * 0.55, by - math.sin(-na) * 0 - L * math.cos(na) + 160 * graze
+    hx = bx - 40 - 70 * graze - 60 * math.sin(na) * 0.5
+    hy = by - 150 * math.cos(na) + 20 * graze
+    neck = smooth_path([(bx + 44, by - 8), (bx + 14, by - 46), ((bx + hx) / 2 + 14, (by + hy) / 2 - 8), (hx + 22, hy + 4), (hx - 12, hy + 22),
+                        ((bx + hx) / 2 - 26, (by + hy) / 2 + 24), (bx - 26, by + 44)])
+    out += rimmed(c, neck, col, dx=2, dy=-2)
+    out += f'<path d="M {fmt(hx - 4)} {fmt(hy + 22)} Q {fmt((bx + hx) / 2 - 14)} {fmt((by + hy) / 2 + 18)} {fmt(bx - 14)} {fmt(by + 26)}" stroke="{belly}" stroke-width="{c.sw(10)}" fill="none" opacity="0.9"/>'
+    tilt = -30 * graze + 4 * math.sin(t * 0.9 + seed)
+    lk = look
+    g = f'<g transform="translate({fmt(hx)},{fmt(hy)}) rotate({fmt(tilt)})">'
+    # horns (lyre-shaped, ringed), ears, then the head
+    horns = ""
+    for k, dx in enumerate((6 + 8 * lk, -6 + 4 * lk)):
+        hp = f"M {fmt(dx)} -30 C {fmt(dx + 26)} -80, {fmt(dx + 40)} -120, {fmt(dx + 22)} -168 C {fmt(dx + 14)} -186, {fmt(dx + 20)} -200, {fmt(dx + 30)} -206"
+        shade = "#2a2018" if k == 0 else "#46382c"
+        horns += (f'<path d="{hp}" stroke="{OUT}" stroke-width="{c.sw(11)}" fill="none" stroke-linecap="round"/>'
+                  f'<path d="{hp}" stroke="{shade}" stroke-width="{c.sw(7)}" fill="none" stroke-linecap="round"/>' +
+                  "".join(f'<path d="M {fmt(dx + 14 + 2 * j)} {fmt(-60 - 16 * j)} l 9 -2" stroke="#8a7a66" stroke-width="{c.sw(2)}"/>' for j in range(6)))
+    ew = 14 * ear * max(0.0, math.sin(t * 18))
+    ears = (f'<path d="M 22 -26 C 52 -40, 78 -44, {fmt(92 + ew)} -38 C 74 -26, 52 -16, 26 -12 Z" fill="{col}" stroke="{OUT}" stroke-width="{c.sw(2)}"/>'
+            f'<path d="M 30 -24 C 52 -32, 70 -36, {fmt(84 + ew)} -36" stroke="#f0d8c8" stroke-width="{c.sw(4)}" fill="none" opacity="0.8"/>')
+    headp = smooth_path([(26, -34), (4, -44), (-24, -40), (-62, -22), (-86, 2), (-88, 16), (-70, 22), (-36, 16), (0, 10), (24, -4)])
+    face = (rimmed(c, headp, col, dx=2, dy=-2) +
+            f'<path d="M -8 -32 C -30 -22, -56 -8, -80 8" stroke="{belly}" stroke-width="{c.sw(7)}" fill="none" opacity="0.95"/>'
+            f'<path d="M -10 -22 C -32 -12, -54 0, -76 14" stroke="{stripe}" stroke-width="{c.sw(5)}" fill="none" opacity="0.8"/>'
+            f'<ellipse cx="{fmt(-18 + 6 * lk)}" cy="-26" rx="12" ry="9" fill="#120a06" transform="rotate(-12,{fmt(-18 + 6 * lk)},-26)"/>'
+            f'<circle cx="{fmt(-21 + 6 * lk)}" cy="-29" r="3" fill="#ffffff"/>'
+            f'<ellipse cx="-84" cy="10" rx="5" ry="4" fill="#1e1612"/>')
+    out += g + ears + horns + face + '</g>'
     return out
 
 def peacock_coat(c, body_d, seed=0, t=0.0):
