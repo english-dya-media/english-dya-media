@@ -742,3 +742,119 @@ def rich_tent():
           + f'<circle cx="{lx}" cy="{ly}" r="90" fill="#ffb050" opacity="0.3" filter="url(#b20)"/>')
     s += f'<rect width="{W}" height="{H}" fill="url(#lamp)"/>'
     return svg_render(s)
+
+
+# ------------------------------------------------------------------ part 5: the father's grave outside the camp
+GRAVE_HZ = 830           # grave_close(): the horizon (far dunes, the camp's tents small at the left)
+GRAVE = (150, 910, 1062, 112)  # the father's new grave (grave_mound(), drawn by the scenes): x0, x1, base y, height (its top at y ~950)
+GRAVE_HEAD = (228, 838)  # the top of its headstone (the head of the grave, at the left)
+GRAVE_SEAT = (470, 1030) # a mourner sits behind the mound here (x, floor y) at scale ~0.52: hands on the mound at y 955-975
+GRAVE_FRONT = 978        # grave_mound(part="front") is the mound below this line: drawn over the mourner, it hides the legs
+
+
+def _mix(a, b, u):
+    """a colour between two hex colours"""
+    a = [int(a[i:i + 2], 16) for i in (1, 3, 5)]; b = [int(b[i:i + 2], 16) for i in (1, 3, 5)]
+    return "#" + "".join(f"{round(x + (y - x) * u):02x}" for x, y in zip(a, b))
+
+
+def old_grave(x, y, s, sand=("#d8a878", "#a87050"), stone=("#9a8a80", "#4a3a34")):
+    """a small old grave: a low oval mound edged with stones, an upright stone at its head (left); base centre (x, y), scale s"""
+    o = f'<ellipse cx="{x:.0f}" cy="{y + 4 * s:.0f}" rx="{180 * s:.0f}" ry="{20 * s:.0f}" fill="#000" opacity="0.16"/>'
+    o += (f'<path d="M {x - 165 * s:.0f} {y:.0f} C {x - 120 * s:.0f} {y - 46 * s:.0f}, {x + 120 * s:.0f} {y - 46 * s:.0f}, {x + 165 * s:.0f} {y:.0f} Z" '
+          f'fill="{sand[0]}" stroke="{stone[1]}" stroke-width="{max(1.0, 2.4 * s):.1f}"/>'
+          f'<path d="M {x - 120 * s:.0f} {y - 22 * s:.0f} C {x - 60 * s:.0f} {y - 36 * s:.0f}, {x + 60 * s:.0f} {y - 36 * s:.0f}, {x + 120 * s:.0f} {y - 22 * s:.0f}" '
+          f'stroke="#fff0d8" stroke-width="{max(1.0, 3 * s):.1f}" fill="none" opacity="0.35"/>')
+    for k in range(9):
+        u = k / 8
+        sx = x - 160 * s + 320 * s * u
+        sy = y - 4 * s * math.sin(math.pi * u)
+        o += f'<ellipse cx="{sx:.0f}" cy="{sy:.0f}" rx="{16 * s:.1f}" ry="{10 * s:.1f}" fill="{stone[0]}" stroke="{stone[1]}" stroke-width="{max(0.8, 2 * s):.1f}"/>'
+    o += (f'<path d="M {x - 168 * s:.0f} {y:.0f} L {x - 172 * s:.0f} {y - 100 * s:.0f} Q {x - 156 * s:.0f} {y - 124 * s:.0f} {x - 134 * s:.0f} {y - 108 * s:.0f} '
+          f'L {x - 128 * s:.0f} {y:.0f} Z" fill="{stone[0]}" stroke="{stone[1]}" stroke-width="{max(1.0, 2.4 * s):.1f}"/>')
+    return o
+
+
+def grave_close(pal="dusk"):
+    """the burial ground of the Banu Amir on a low rise outside the camp, close, with a high horizon (GRAVE_HZ): the sky (dusk: the sun just
+    gone down at the left; night: the moon and the stars), far dunes, the camp's tents small on the horizon at the left, a few old graves,
+    a lone date palm at the right (trunk x ~950). The father's new grave is drawn by the scenes (grave_mound), so that a mourner can sit
+    behind it."""
+    night = pal == "night"
+    s = "<defs>" + FILTERS + _sky(pal)
+    gdefs, gs = _ground(GRAVE_HZ + 40, pal, 4500)
+    s += gdefs + "</defs>"
+    s += _sky_draw(pal)
+    s += f'<path d="{ridge(W, GRAVE_HZ - 10, 30, 4501, rough=0.3)}" fill="{SAND[pal][0][1]}" opacity="0.8"/>'
+    for i, (base, amp) in enumerate(((GRAVE_HZ + 10, 34), (GRAVE_HZ + 40, 44))):
+        lit, shade = SAND[pal][i]
+        s += _dune_row(4502 + i, base, amp, 380, 700, lit, shade, crest="#fff0d8" if not night else "#8a8aa8")
+    hz = {"dawn": "#3a3a4a", "day": "#3a5a3a", "dusk": "#2a2232", "night": "#0c0e18"}[pal]
+    r = random.Random(4504)
+    for k in range(6):            # the camp far away at the left: palms and two small tents
+        s += palm_silhouette(r.uniform(-20, 360), GRAVE_HZ + 36, r.uniform(60, 96), col=hz, lean=r.uniform(-0.1, 0.1), n=7)
+    for tx0, tx1, th in ((30, 190, 30), (160, 300, 24), (300, 380, 18)):       # far black tents: low dark shapes with sagging roofs
+        ty = GRAVE_HZ + 42
+        s += (f'<path d="M {tx0} {ty} L {tx0 + 14} {ty - th} Q {(tx0 + tx1) / 2 - 20:.0f} {ty - th + 7} {(tx0 + tx1) / 2:.0f} {ty - th - 2} '
+              f'Q {(tx0 + tx1) / 2 + 20:.0f} {ty - th + 7} {tx1 - 14} {ty - th} L {tx1} {ty} Z" fill="{hz}" opacity="0.9"/>')
+    s += gs
+    haze = {"dusk": "#ffc890", "night": "#4a4a70", "day": "#fff4dc", "dawn": "#ffe0c0"}[pal]
+    s += f'<rect x="0" y="{GRAVE_HZ + 10}" width="{W}" height="70" fill="{haze}" opacity="{0.3 if not night else 0.2}" filter="url(#b20)"/>'
+    sand = (SAND[pal][2][0], SAND[pal][3][1])
+    stone = ("#9a8a80", "#4a3a34") if not night else ("#52526a", "#24242e")
+    for x, y, sc in ((150, 912, 0.42), (395, 892, 0.3), (720, 896, 0.32), (860, 930, 0.44), (70, 968, 0.56), (1040, 985, 0.6)):
+        s += old_grave(x, y, sc, sand=sand, stone=stone)
+    trunk = ("#7a5a3a", "#5a3e26", "#a08058") if not night else ("#3a3444", "#262230", "#4e4858")
+    leaf = ("#3e5a2a", "#2a4220", "#6a8a42") if not night else ("#232c34", "#171d24", "#34424c")
+    s += date_palm(955, 1005, 760, lean=-0.07, seed=4505, trunk=trunk, leaf=leaf)
+    if pal == "dusk":
+        s += f'<rect width="{W}" height="{H}" fill="#4a2a5a" opacity="0.12"/>'
+    return svg_render(s)
+
+
+def grave_mound(u=0.0, part="all"):
+    """the father's new grave: a long low mound of sand edged with stones, an upright headstone at the left (GRAVE_HEAD), a small stone at
+    the foot, a few desert flowers by the headstone. u 0..1: dusk to night colours. part "front": only the mound below GRAVE_FRONT (draw it
+    over a person sitting behind the grave, so that the legs are hidden and the hands stay on top)."""
+    x0, x1, yb, hh = GRAVE
+    m = lambda a, b: _mix(a, b, u)
+    lit, shade, dark = m("#c88c62", "#64627e"), m("#8a5442", "#42405a"), m("#4a2a20", "#22202c")
+    st, st_d, st_hi = m("#a0928a", "#5a5a6c"), m("#4a3a34", "#22222c"), m("#e8d4c4", "#8a8aa4")
+    mound = (f"M {x0} {yb} C {x0 + 50} {yb - 0.6 * hh:.0f}, {x0 + 180} {yb - 0.95 * hh:.0f}, {(x0 + x1) / 2:.0f} {yb - hh} "
+             f"C {x1 - 180} {yb - 0.97 * hh:.0f}, {x1 - 50} {yb - 0.6 * hh:.0f}, {x1} {yb} Z")
+    o = f'<defs><linearGradient id="gm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{lit}"/><stop offset="1" stop-color="{shade}"/></linearGradient></defs>'
+    body = f'<path d="{mound}" fill="url(#gm)" stroke="{dark}" stroke-width="3"/>'
+    body += (f'<path d="M {x0 + 80} {yb - 0.62 * hh:.0f} C {x0 + 200} {yb - 0.92 * hh:.0f}, {x1 - 200} {yb - 0.94 * hh:.0f}, {x1 - 80} {yb - 0.62 * hh:.0f}" '
+             f'stroke="{m("#fff0d8", "#a8a8c8")}" stroke-width="5" fill="none" opacity="0.45"/>')
+    r = random.Random(4520)
+    for k in range(60):           # little lumps and pebbles in the fresh earth
+        px = r.uniform(x0 + 60, x1 - 60); py = r.uniform(yb - 0.8 * hh, yb - 14)
+        body += f'<ellipse cx="{px:.0f}" cy="{py:.0f}" rx="{r.uniform(2, 6):.1f}" ry="{r.uniform(1.5, 3.5):.1f}" fill="{dark}" opacity="0.35"/>'
+    stones = ""
+    for k in range(23):           # stones along the foot of the mound
+        v = k / 22
+        sx = x0 + 6 + (x1 - x0 - 12) * v
+        sy = yb - 6 + 10 * math.sin(math.pi * v) * 0.3 + r.uniform(-3, 3)
+        rx = r.uniform(20, 28)
+        stones += (f'<ellipse cx="{sx:.0f}" cy="{sy:.0f}" rx="{rx:.0f}" ry="{rx * 0.6:.0f}" fill="{st}" stroke="{st_d}" stroke-width="2.4"/>'
+                   f'<ellipse cx="{sx - rx * 0.3:.0f}" cy="{sy - rx * 0.25:.0f}" rx="{rx * 0.45:.0f}" ry="{rx * 0.2:.0f}" fill="{st_hi}" opacity="0.45"/>')
+    hx, hy = GRAVE_HEAD
+    head = (f'<path d="M {hx - 44} {yb - 8} L {hx - 52} {hy + 34} Q {hx - 40} {hy - 8} {hx} {hy} Q {hx + 40} {hy + 2} {hx + 50} {hy + 40} '
+            f'L {hx + 44} {yb - 4} Z" fill="{st}" stroke="{st_d}" stroke-width="3.4"/>'
+            f'<path d="M {hx - 40} {hy + 40} Q {hx - 30} {hy + 6} {hx} {hy + 8}" stroke="{st_hi}" stroke-width="5" fill="none" opacity="0.6"/>'
+            f'<path d="M {hx + 28} {hy + 50} L {hx + 30} {yb - 24}" stroke="{st_d}" stroke-width="3.4" opacity="0.5"/>')
+    foot = (f'<path d="M {x1 - 70} {yb - 6} L {x1 - 72} {yb - 80} Q {x1 - 52} {yb - 100} {x1 - 32} {yb - 80} L {x1 - 30} {yb - 4} Z" '
+            f'fill="{st}" stroke="{st_d}" stroke-width="3"/>')
+    flowers = ""
+    for k, (fx, fy) in enumerate(((hx + 66, yb - 60), (hx + 88, yb - 40), (hx + 56, yb - 30))):
+        flowers += (f'<path d="M {fx} {fy} q 2 -14 -2 -26" stroke="{m("#5a7a3a", "#2e3e34")}" stroke-width="3" fill="none"/>'
+                    + "".join(f'<ellipse cx="{fx - 2 + 7 * math.cos(a):.1f}" cy="{fy - 28 + 7 * math.sin(a):.1f}" rx="5" ry="3.4" '
+                              f'transform="rotate({math.degrees(a):.0f},{fx - 2 + 7 * math.cos(a):.1f},{fy - 28 + 7 * math.sin(a):.1f})" fill="{m("#f4f0e4", "#b8b8cc")}"/>'
+                              for a in [j * math.pi * 2 / 5 for j in range(5)])
+                    + f'<circle cx="{fx - 2}" cy="{fy - 28}" r="3.4" fill="{m("#e8c040", "#8a8060")}"/>')
+    shadow = f'<ellipse cx="{(x0 + x1) / 2:.0f}" cy="{yb + 4}" rx="{(x1 - x0) / 2 + 30:.0f}" ry="16" fill="#000" opacity="0.22"/>'
+    if part == "front":
+        cid = "gmf"
+        return (o + f'<clipPath id="{cid}"><rect x="0" y="{GRAVE_FRONT}" width="{W}" height="{H - GRAVE_FRONT}"/></clipPath>'
+                f'<g clip-path="url(#{cid})">{body}</g>' + stones)
+    return o + shadow + body + stones + foot + head + flowers

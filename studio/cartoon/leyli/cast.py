@@ -119,3 +119,13 @@ PLAYER = spec(kind="man", skin="tan", hair="short", hair_col="#1a120c", beard="f
               garment="robe", col="#c8a878", col2="#a08458", pattern="plain", belt=None, sash="#7a1a1e", cuff="#7a1a1e", trim="#7a1a1e",
               iris="#2a170c")
 CHIEF_OLD = dict(CHIEF, grey=0.35, beard_col="#c8c2b8", hair_col="#a8a29a")
+
+# ---- part 5: the hunter (a lean, sun-browned man with a short black beard, a dull brown head wrap, a short brown tunic with a leather
+# belt), the old messenger who brings Leyli's letter (white beard, a sand-coloured head cloth with a brown cord, a grey-brown robe and a
+# dark brown travelling cloak), and the people of the tribe at the funeral (seen far away against the sunset)
+HUNTER = spec(kind="man", skin="tan", hair="short", hair_col="#1a120c", beard="short", beard_col="#1e140c", head="turban", head_col="#8a6a46",
+              garment="tunic", col="#7a5634", col2="#563a20", pattern="plain", belt="#3a2414", buckle=False, cuff="#a88a62", trim="#a88a62",
+              trousers="#5a4a38", boots="#3a2818", iris="#2a170c", build=0.98)
+OLD_MSG = spec(kind="old", skin="old", hair="short", hair_col="#d8d2c8", beard="white", head="kufiya", kufiya_col="#e6d8bc", kufiya_shade="#c2b090",
+               agal="#4a3420", garment="robe", col="#8a7c66", col2="#665a48", pattern="plain", cloak="#4e3a28", cloak2="#36281a", cloak_hi="#8a6a42",
+               belt=None, sash="#5a3a22", cuff="#c8b896", trim="#c8b896", iris="#3a2a1a", build=0.94, grey=0.15)

@@ -165,6 +165,48 @@ LINES = [
   "و مجنون بیشتر در دلِ بیابان رفت، جایی که فقط حیوان‌ها پیدایش می‌کردند.","And Majnoon went deeper into the wild, where only the animals could find him."),
  ("p4s7a",4,7,"NARRATOR","Then one day, an old man came into the desert, leaning on a stick…","تا این‌که یک روز، پیرمردی عصا‌زنان به بیابان آمد…",None),
  ("p4s7b",4,7,"CHIEF","Qays! My son! Where are you?","قیس! پسرم! کجایی؟","Kayss! My son! Where are you?"),
+ # ---- part 5 · The Father (Nizami: the old chief finds Majnun in the wild, puts clothes on him and begs him to come home and take his
+ # place before he dies; Majnun answers that he is no longer himself, his heart is Leyli's; the father says a last goodbye, goes home and
+ # dies; a man of the tribe brings Majnun the news and he weeps on his father's grave; a hunter has caught a gazelle and Majnun pays him to
+ # free it, because its eyes are like Leyli's; he lives among the wild animals; then an old man comes with a letter from Leyli)
+ ("p5s1a",5,1,"MAJNUN","Father… forgive me.","پدر… مرا ببخش.","Father. Forgive me."),
+ ("p5s1b",5,1,"MAJNUN","I never came home.","هیچ‌وقت به خانه برنگشتم.",None),
+ ("p5s3a",5,3,"NARRATOR","For many days, the old chief searched the desert for his son.","رئیسِ پیر روزهای زیادی بیابان را به دنبالِ پسرش گشت.",None),
+ ("p5s3b",5,3,"CHIEF","Qays… my son!","قیس… پسرم!","Kayss... my son!"),
+ ("p5s3c",5,3,"MAJNUN","Father…? You came all this way?","پدر…؟ این‌همه راه آمدی؟","Father...? You came all this way?"),
+ ("p5s3d",5,3,"CHIEF","Look at you… so thin, and your clothes are torn.","نگاهت کن… این‌قدر لاغر، با لباس‌های پاره.",
+  "Look at you. So thin, and your clothes are torn."),
+ ("p5s3e",5,3,"CHIEF","Come home with me. I am old… I don't have much time.","با من به خانه بیا. من پیرم… وقتِ زیادی ندارم.",
+  "Come home with me. I am old. I don't have much time."),
+ ("p5s3f",5,3,"MAJNUN","Father, I love you. But I am not Qays anymore.","پدر، دوستت دارم. اما من دیگر قیس نیستم.",
+  "Father, I love you. But I am not Kayss anymore."),
+ ("p5s3g",5,3,"MAJNUN","My heart went with Leyli… and it never came back.","دلم با لیلی رفت… و دیگر برنگشت.",
+  "My heart went with Laylee. And it never came back."),
+ ("p5s3h",5,3,"CHIEF","Then take this, at least… for bread.","پس دست‌کم این را بگیر… برای نان.","Then take this, at least. For bread."),
+ ("p5s3i",5,3,"CHIEF","Goodbye, my son. I don't think we will meet again.","خداحافظ، پسرم. فکر نمی‌کنم دیگر همدیگر را ببینیم.",None),
+ ("p5s3j",5,3,"MAJNUN","Goodbye… Father.","خداحافظ… پدر.","Goodbye... Father."),
+ ("p5s4a",5,4,"NARRATOR","The old chief went home. A few days later… he died.","رئیسِ پیر به خانه برگشت. چند روز بعد… از دنیا رفت.",
+  "The old chief went home. A few days later, he died."),
+ ("p5s4b",5,4,"NARRATOR","The whole tribe cried for their chief.","همه‌ی قبیله برای رئیسشان گریه کردند.",None),
+ ("p5s5a",5,5,"MESSENGER","Majnun… your father has died.","مجنون… پدرت از دنیا رفت.","Majnoon. Your father, has died."),
+ ("p5s5b",5,5,"MESSENGER","Until the end, he called your name.","تا آخرین لحظه، اسمِ تو را صدا می‌زد.",None),
+ ("p5s5c",5,5,"MAJNUN","You looked for me everywhere… and I let you go home alone.","همه‌جا دنبالم گشتی… و من گذاشتم تنها برگردی.",
+  "You looked for me everywhere. And I let you go home alone."),
+ ("p5s5d",5,5,"NARRATOR","He cried on his father's grave until the stars came out.","روی مزارِ پدرش گریه کرد تا ستاره‌ها درآمدند.",None),
+ ("p5s6a",5,6,"NARRATOR","Back in the desert, Majnun met a hunter. A gazelle was caught in his trap.",
+  "در بیابان، مجنون به شکارچی‌ای رسید. آهویی در دامش افتاده بود.","Back in the desert, Majnoon met a hunter. A gazelle was caught in his trap."),
+ ("p5s6b",5,6,"MAJNUN","Wait! Please… don't hurt her!","صبر کن! خواهش می‌کنم… آزارش نده!","Wait! Please, don't hurt her!"),
+ ("p5s6c",5,6,"HUNTER","I'm a poor man, friend. My children need to eat.","من مردِ فقیری هستم، رفیق. بچه‌هایم باید غذا بخورند.",None),
+ ("p5s6d",5,6,"MAJNUN","Then take this gold… and let her go.","پس این طلا را بگیر… و رهایش کن.","Then take this gold. And let her go."),
+ ("p5s6e",5,6,"HUNTER","All this gold… for one gazelle?","این‌همه طلا… برای یک آهو؟","All this gold? For one gazelle?"),
+ ("p5s6f",5,6,"MAJNUN","Look at her eyes. They are Leyli's eyes.","به چشم‌هایش نگاه کن. چشم‌های لیلی است.","Look at her eyes. They are Laylee's eyes."),
+ ("p5s6g",5,6,"NARRATOR","Majnun set her free… but she did not run away.","مجنون آزادش کرد… اما آهو فرار نکرد.",
+  "Majnoon set her free. But she did not run away."),
+ ("p5s6h",5,6,"NARRATOR","From that day, the animals of the desert were his only family.","از آن روز، حیوان‌های بیابان تنها خانواده‌ی او بودند.",None),
+ ("p5s7a",5,7,"NARRATOR","Then one evening, an old man came over the dunes…","تا این‌که یک غروب، پیرمردی از پشتِ تپه‌های شن پیدا شد…",
+  "Then one evening, an old man came over the dunes..."),
+ ("p5s7b",5,7,"OLD_MESSENGER","Are you Majnun? I have a letter for you…","تو مجنونی؟ برایت نامه‌ای دارم…","Are you Majnoon? I have a letter for you..."),
+ ("p5s7c",5,7,"OLD_MESSENGER","…from Leyli.","…از طرفِ لیلی.","from Laylee."),
 ]
 # speaker -> (libritts speaker id, length_scale, semitone shift, volume). The narrator is the same in every series.
 # Pick ids that fit each role and differ from the other roles of the same part; "_W" roles are whispers.
@@ -189,6 +231,9 @@ VOICES = {
  # at the wedding)
  "LEYLI_WOMAN": (849, 1.12, 1, 0.95), "LEYLI_WOMAN_W": (849, 1.25, 1, 0.7), "TRAVELLER": (690, 1.05, 0, 1.0),
  "WOMAN_A": (240, 1.05, 0, 0.95), "WOMAN_B": (260, 1.08, 0, 0.9),
+ # part 5 (median pitch of the raw takes: 380 ≈ 98 Hz, deep and plain: the hunter; 740 ≈ 129 Hz, flat and tired, one semitone down and
+ # slowed: the old messenger with Leyli's letter; the young messenger of part 2 brings the news of the chief's death)
+ "HUNTER": (380, 1.05, 0, 1.0), "OLD_MESSENGER": (740, 1.18, -1, 0.95),
 }
 # slower takes for learners (per-line length factors, see voices.py)
 SPEED = {lid: 1.15 for lid, part, *_ in LINES if part == 1}
@@ -211,3 +256,8 @@ SPEED.update({"p3s6b": 1.4, "p3s5c": 1.35, "p3s3i": 1.45, "p3s6d": 1.35, "p3s6e"
 # part 4: slower takes for learners; the whisper at night is slower still
 SPEED.update({lid: 1.2 for lid, part, *_ in LINES if part == 4})
 SPEED.update({"p4s1b": 1.6, "p4s5b": 1.45, "p4s4d": 1.4, "p4s6d": 1.35, "p4s6e": 1.35, "p4s3e": 1.3, "p4s7b": 1.1})
+# part 5: slower takes for learners; Majnun at the grave and the goodbyes slower still
+SPEED.update({lid: 1.2 for lid, part, *_ in LINES if part == 5})
+SPEED.update({"p5s1a": 1.5, "p5s1b": 1.5, "p5s3b": 1.35, "p5s3j": 1.5, "p5s3i": 1.3, "p5s5c": 1.4, "p5s6f": 1.4, "p5s7c": 1.4,
+              "p5s4a": 1.3, "p5s3f": 1.4, "p5s3g": 1.4, "p5s6d": 1.35, "p5s5a": 1.45, "p5s5b": 1.3, "p5s6e": 1.4, "p5s6c": 1.3,
+              "p5s3d": 1.3, "p5s3e": 1.3, "p5s3h": 1.35, "p5s7b": 1.25, "p5s6b": 1.3})
