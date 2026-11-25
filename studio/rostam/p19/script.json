@@ -1,0 +1,268 @@
+{
+ "episode": 10,
+ "part": 19,
+ "title_en": "Gazhdaham's Letter",
+ "title_fa": "نامه‌ی گژدهم",
+ "next_label": "NEXT PART",
+ "next_en": "The Empty Fortress",
+ "next_fa": "دژ خالی",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "GORDAFARID",
+     "en": "Why so sad, Turk? Did you think a girl of Iran would be yours?",
+     "fa": "چرا این‌قدر غمگینی، ترک؟ خیال کردی یک دختر ایرانی مال تو می‌شود؟",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Laugh, moon-face. Laugh while you can.",
+     "fa": "بخند، ماه‌رو. تا می‌توانی بخند.",
+     "pause": 1.2
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Gordafarid had tricked Sohrab and escaped into the White Fortress.",
+     "fa": "گردآفرید سهراب را فریب داده و به درون دژ سپید گریخته بود.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Now the gate was shut in his face.",
+     "fa": "حالا دروازه جلوی رویش بسته بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And high on the wall, she laughed down at him.",
+     "fa": "و بالای بارو، گردآفرید از آن بالا به او می‌خندید.",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "GORDAFARID",
+     "en": "Why so sad, Turk? Did you think a girl of Iran would be yours?",
+     "fa": "چرا این‌قدر غمگینی، ترک؟ خیال کردی یک دختر ایرانی مال تو می‌شود؟",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Don't be sad. It was not meant to be.",
+     "fa": "غصه نخور. قسمت نبود.",
+     "pause": 0.5
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "But listen to me, young hero. I don't think you are a Turk at all.",
+     "fa": "اما گوش کن، پهلوان جوان. فکر نمی‌کنم اصلاً ترک باشی.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "With those arms and shoulders, no hero in the world is your equal.",
+     "fa": "با این بازوها و این شانه‌ها، هیچ پهلوانی در دنیا هم‌تای تو نیست.",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "GORDAFARID",
+     "en": "But when our king hears that an army has come from Turan...",
+     "fa": "اما وقتی شاه ما بشنود که لشکری از توران آمده...",
+     "pause": 0.3
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "he will send Rostam. And no one can stand against Rostam.",
+     "fa": "رستم را می‌فرستد. و هیچ‌کس نمی‌تواند جلوی رستم بایستد.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Not one of your men will go home alive.",
+     "fa": "یک نفر از سپاهت هم زنده به خانه برنمی‌گردد.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Don't trust your strength too much. Go back to Turan, while you can.",
+     "fa": "به زورت زیاد مغرور نشو. تا می‌توانی به توران برگرد.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Sohrab's face burned with shame.",
+     "fa": "صورت سهراب از شرم سرخ شد.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Laugh, moon-face. Laugh while you can.",
+     "fa": "بخند، ماه‌رو. تا می‌توانی بخند.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Tomorrow I will tear down these walls, stone by stone.",
+     "fa": "فردا این دیوارها را سنگ به سنگ خراب می‌کنم.",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "And then we will see who laughs.",
+     "fa": "آن‌وقت می‌بینیم چه کسی می‌خندد.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "He turned his horse and rode back to his camp.",
+     "fa": "اسبش را برگرداند و به اردوگاهش بازگشت.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "That evening, the fires of the Turanian army burned all over the plain.",
+     "fa": "آن شب، آتش‌های سپاه توران سراسر دشت را روشن کرده بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "You made him angry, my daughter. Tomorrow he will come with his whole army.",
+     "fa": "خشمگینش کردی، دخترم. فردا با همه‌ی سپاهش می‌آید.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Our walls are high, Father.",
+     "fa": "دیوارهای ما بلندند، پدر.",
+     "pause": 0.3
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "Not high enough. Not for him.",
+     "fa": "به اندازه‌ی کافی بلند نیستند. نه برای او.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "Bring me a scribe. King Kavus must know who has come to Iran.",
+     "fa": "یک دبیر بیاورید. شاه کاووس باید بداند چه کسی به ایران آمده.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "GAZHDAHAM",
+     "en": "To Kavus, the great King of Iran.",
+     "fa": "به کاووس، شاه بزرگ ایران.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "An army has come to us from Turan. Its leader is young, almost a boy...",
+     "fa": "سپاهی از توران به سوی ما آمده. سردارش جوان است، تقریباً یک پسر...",
+     "pause": 0.3
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "but he is taller than a cypress, and his face shines like the sun.",
+     "fa": "اما از سرو بلندتر است و چهره‌اش مثل خورشید می‌درخشد.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "His name is Sohrab. Hojir fought him, and now Hojir is his prisoner.",
+     "fa": "نامش سهراب است. هجیر با او جنگید و حالا اسیر اوست.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "When he rides, you would think he is Sam, Rostam's grandfather, come back to life.",
+     "fa": "وقتی اسب می‌تازد، خیال می‌کنی سام، پدربزرگ رستم، دوباره زنده شده.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "If the king waits, Iran is lost. Send help, and send it fast.",
+     "fa": "اگر شاه درنگ کند، ایران از دست می‌رود. کمک بفرست، و زود بفرست.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "At midnight, a rider took the letter and galloped into the dark.",
+     "fa": "نیمه‌شب، سواری نامه را گرفت و در تاریکی تاخت.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "And us, Father? What will we do?",
+     "fa": "و ما، پدر؟ ما چه کنیم؟",
+     "pause": 0.3
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "We cannot stay here. Tonight, we leave the fortress.",
+     "fa": "نمی‌توانیم اینجا بمانیم. همین امشب دژ را ترک می‌کنیم.",
+     "pause": 0.3
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Leave? But the Turks are all around us!",
+     "fa": "ترک کنیم؟ اما ترک‌ها از همه طرف دورمان را گرفته‌اند!",
+     "pause": 0.3
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "There is a secret way... under the fortress.",
+     "fa": "یک راه مخفی هست... زیر دژ.",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}
