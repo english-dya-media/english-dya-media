@@ -1,0 +1,280 @@
+{
+ "episode": 10,
+ "part": 20,
+ "title_en": "The Empty Fortress",
+ "title_fa": "دژ خالی",
+ "next_label": "NEXT PART",
+ "next_en": "A Letter to the King",
+ "next_fa": "نامه به کاووس",
+ "handle": "@english_dya",
+ "scenes": [
+  {
+   "id": "S01",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "Gordafarid! Where are you?!",
+     "fa": "گردآفرید! کجایی؟!",
+     "pause": 0.5
+    },
+    {
+     "role": "RIDER",
+     "en": "They are gone, my lord. All of them.",
+     "fa": "رفته‌اند، سرورم. همه‌شان.",
+     "pause": 1.2
+    }
+   ]
+  },
+  {
+   "id": "TITLE",
+   "card": "title",
+   "dur": 4.0,
+   "lines": []
+  },
+  {
+   "id": "S02",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "That night, the White Fortress was dark and silent.",
+     "fa": "آن شب، دژ سپید تاریک و خاموش بود.",
+     "pause": 0.3
+    },
+    {
+     "role": "NARRATOR",
+     "en": "But no one inside was asleep.",
+     "fa": "اما هیچ‌کس در آن نخوابیده بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "Take only what you can carry. And not a sound.",
+     "fa": "فقط چیزی را بردارید که می‌توانید با خود ببرید. و هیچ صدایی نباشد.",
+     "pause": 0.4
+    },
+    {
+     "role": "GUARD",
+     "en": "And the fortress, my lord? Do we leave it to the Turks?",
+     "fa": "و دژ، سرورم؟ آن را به ترک‌ها بسپاریم؟",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "Walls can be built again. People cannot.",
+     "fa": "دیوار را می‌شود دوباره ساخت. آدم‌ها را نه.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Under the fortress was a secret passage, as old as its walls.",
+     "fa": "زیر دژ یک راه مخفی بود، به قدمت دیوارهایش.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "One by one, the people went down into the dark.",
+     "fa": "مردم یکی‌یکی به درون تاریکی رفتند.",
+     "pause": 0.4
+    },
+    {
+     "role": "BOY",
+     "en": "I'm scared. It's so dark.",
+     "fa": "می‌ترسم. خیلی تاریک است.",
+     "pause": 0.3
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Don't be afraid. Hold my hand, and walk with me.",
+     "fa": "نترس. دستم را بگیر و با من بیا.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Keep the lamps low. The Turks must not see any light.",
+     "fa": "چراغ‌ها را پایین نگه دارید. ترک‌ها نباید هیچ نوری ببینند.",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "Before dawn, they came out far away, in the hills behind the fortress.",
+     "fa": "پیش از سپیده، آن‌ها دورتر، در تپه‌های پشت دژ، بیرون آمدند.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "Below them, the Turanian army was still asleep.",
+     "fa": "پایین‌تر، سپاه توران هنوز در خواب بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "In the morning he will come for us, Father...",
+     "fa": "صبح به سراغمان می‌آید، پدر...",
+     "pause": 0.3
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "And he will find nothing but empty walls.",
+     "fa": "و جز دیوارهای خالی چیزی پیدا نمی‌کند.",
+     "pause": 0.3
+    },
+    {
+     "role": "GORDAFARID",
+     "en": "Goodbye, White Fortress.",
+     "fa": "خداحافظ، دژ سپید.",
+     "pause": 0.4
+    },
+    {
+     "role": "GAZHDAHAM",
+     "en": "Come. The road to Iran is long.",
+     "fa": "بیا. راه ایران دراز است.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "At sunrise, the war drums woke the Turanian camp.",
+     "fa": "با طلوع آفتاب، طبل‌های جنگ اردوی توران را بیدار کرد.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Today, that fortress falls!",
+     "fa": "امروز آن دژ فرو می‌ریزد!",
+     "pause": 0.4
+    },
+    {
+     "role": "HOOMAN",
+     "en": "The men are ready, Sohrab.",
+     "fa": "مردان آماده‌اند، سهراب.",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Good. And remember: the girl is mine. Bring her to me alive.",
+     "fa": "خوب است. و یادت باشد: آن دختر مال من است. زنده نزد من بیاوریدش.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "lines": [
+    {
+     "role": "NARRATOR",
+     "en": "The army marched to the fortress... but the walls were silent.",
+     "fa": "سپاه به سوی دژ رفت... اما دیوارها خاموش بودند.",
+     "pause": 0.4
+    },
+    {
+     "role": "HOOMAN",
+     "en": "No guards on the walls... no arrows... Strange.",
+     "fa": "نه نگهبانی روی دیوارها... نه تیری... عجیب است.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Another trick. I know her tricks now.",
+     "fa": "یک نیرنگ دیگر. حالا دیگر نیرنگ‌هایش را می‌شناسم.",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Break the gate!",
+     "fa": "دروازه را بشکنید!",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "With one blow of his mace, Sohrab smashed the gate open.",
+     "fa": "سهراب با یک ضربه‌ی گرزش دروازه را شکست.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "Gordafarid! Where are you?!",
+     "fa": "گردآفرید! کجایی؟!",
+     "pause": 0.5
+    },
+    {
+     "role": "RIDER",
+     "en": "They are gone, my lord. All of them.",
+     "fa": "رفته‌اند، سرورم. همه‌شان.",
+     "pause": 0.4
+    },
+    {
+     "role": "SOHRAB",
+     "en": "She promised me this fortress... and she kept her word.",
+     "fa": "او این دژ را به من قول داده بود... و سر قولش ماند.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "The fortress was empty. Gordafarid was gone.",
+     "fa": "دژ خالی بود. گردآفرید رفته بود.",
+     "pause": 0.4
+    },
+    {
+     "role": "NARRATOR",
+     "en": "And Sohrab felt a pain in his heart that no sword had ever given him.",
+     "fa": "و سهراب در دلش دردی حس کرد که هیچ شمشیری به او نداده بود.",
+     "pause": 0.5
+    },
+    {
+     "role": "SOHRAB",
+     "en": "Who are you, Gordafarid... and why can't I forget your face?",
+     "fa": "تو کیستی، گردآفرید... و چرا نمی‌توانم چهره‌ات را فراموش کنم؟",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "S08",
+   "lines": [
+    {
+     "role": "SOHRAB",
+     "en": "Run, Gordafarid. Run to your king.",
+     "fa": "برو، گردآفرید. به سوی شاهت بدو.",
+     "pause": 0.3
+    },
+    {
+     "role": "SOHRAB",
+     "en": "I am coming. All the way to his throne.",
+     "fa": "من می‌آیم. تا پای تخت او.",
+     "pause": 0.5
+    },
+    {
+     "role": "NARRATOR",
+     "en": "But far away, Gazhdaham's letter was racing toward King Kavus...",
+     "fa": "اما در دوردست، نامه‌ی گژدهم شتابان به سوی شاه کاووس می‌رفت...",
+     "pause": 1.6
+    }
+   ]
+  },
+  {
+   "id": "END",
+   "card": "end",
+   "dur": 6.0,
+   "lines": []
+  }
+ ]
+}
